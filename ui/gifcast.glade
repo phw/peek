@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.19.0 -->
+<interface>
+  <requires lib="gtk+" version="3.16"/>
+  <object class="GtkApplicationWindow" id="application_window">
+    <property name="width_request">60</property>
+    <property name="height_request">60</property>
+    <property name="app_paintable">True</property>
+    <property name="can_focus">False</property>
+    <property name="border_width">0</property>
+    <property name="default_width">440</property>
+    <property name="default_height">250</property>
+    <property name="show_menubar">False</property>
+    <signal name="delete-event" handler="on_application_window_delete_event" swapped="no"/>
+    <signal name="screen-changed" handler="on_application_window_screen_changed" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="cast_view_wrapper">
+        <property name="visible">True</property>
+        <property name="app_paintable">True</property>
+        <property name="can_focus">False</property>
+        <property name="resize_mode">immediate</property>
+        <property name="orientation">vertical</property>
+        <signal name="draw" handler="on_cast_view_wrapper_draw" swapped="no"/>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="has_subtitle">False</property>
+        <child>
+          <object class="GtkButton" id="cancel_button">
+            <property name="label" translatable="yes">Cancel</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="relief">half</property>
+            <signal name="clicked" handler="on_cancel_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="record_button">
+            <property name="label" translatable="yes">Record screen area</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_record_button_clicked" swapped="no"/>
+            <style>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
