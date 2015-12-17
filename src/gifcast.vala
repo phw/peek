@@ -22,6 +22,8 @@ using Gdk;
 using Cairo;
 
 Widget castView;
+Button recordButton;
+Button stopButton;
 bool supportsAlpha = true;
 
 public void on_application_window_screen_changed (Widget widget, Screen oldScreen) {
@@ -65,12 +67,20 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
+  recordButton.hide();
+  stopButton.show();
   var castViewWindow = castView.get_window ();
   int left, top;
   castViewWindow.get_origin (out left, out top);
   var width = castView.get_allocated_width ();
   var height = castView.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
+}
+
+public void on_stop_button_clicked (Button source) {
+  stopButton.hide();
+  recordButton.show();
+  stdout.printf ("Recording stopped\n");
 }
 
 int main (string[] args) {
@@ -85,6 +95,8 @@ int main (string[] args) {
     window.set_keep_above (true);
 
     castView = builder.get_object("cast_view") as Widget;
+    recordButton = builder.get_object("record_button") as Button;
+    stopButton = builder.get_object("stop_button") as Button;
 
     window.show_all ();
     Gtk.main ();
