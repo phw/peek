@@ -12,11 +12,12 @@ A simple tool that allows you to record short animated Gifs from your screen.
 ### Development
 
  * Vala compiler
+ * CMake >= 2.6
 
 ## Building
-For now just:
+You can build GifCast using CMake:
 
-    valac --pkg gtk+-3.0 --pkg gmodule-2.0 src/gifcast.vala
+    cmake . && make
 
 ## License
 GifCast Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
