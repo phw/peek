@@ -78,7 +78,7 @@ int main (string[] args) {
 
   try {
     var builder = new Builder ();
-    builder.add_from_file("ui/gifcast.ui");
+    builder.add_from_resource("/de/uploadedlobster/gifcast/ui/gifcast.ui");
     builder.connect_signals (null);
 
     var window = builder.get_object ("application_window") as Gtk.Window;
