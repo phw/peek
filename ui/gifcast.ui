@@ -14,13 +14,32 @@
     <signal name="delete-event" handler="on_application_window_delete_event" swapped="no"/>
     <signal name="screen-changed" handler="on_application_window_screen_changed" swapped="no"/>
     <child>
-      <object class="GtkBox" id="cast_view_wrapper">
+      <object class="GtkBox" id="content_area">
         <property name="visible">True</property>
-        <property name="app_paintable">True</property>
         <property name="can_focus">False</property>
-        <property name="resize_mode">immediate</property>
         <property name="orientation">vertical</property>
-        <signal name="draw" handler="on_cast_view_wrapper_draw" swapped="no"/>
+        <child>
+          <object class="GtkDrawingArea" id="cast_view">
+            <property name="width_request">60</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="app_paintable">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">4</property>
+            <property name="margin_right">4</property>
+            <property name="margin_top">4</property>
+            <property name="margin_bottom">4</property>
+            <signal name="draw" handler="on_cast_view_draw" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <style>
+          <class name="background"/>
+        </style>
       </object>
     </child>
     <child type="titlebar">

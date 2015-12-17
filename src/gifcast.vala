@@ -22,7 +22,6 @@ using Gdk;
 using Cairo;
 
 Widget castView;
-const int border = 4;
 bool supportsAlpha = true;
 
 public void on_application_window_screen_changed (Widget widget, Screen oldScreen) {
@@ -41,13 +40,7 @@ public void on_application_window_screen_changed (Widget widget, Screen oldScree
   widget.set_visual (visual);
 }
 
-public bool on_cast_view_wrapper_draw (Widget widget, Context ctx) {
-  // Fill the background
-  // FIXME: This should use the theme color
-  ctx.set_source_rgb (0.9, 0.9, 0.9);
-  ctx.set_operator (Operator.SOURCE);
-  ctx.paint ();
-
+public bool on_cast_view_draw (Widget widget, Context ctx) {
   if (supportsAlpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
   }
@@ -57,9 +50,7 @@ public bool on_cast_view_wrapper_draw (Widget widget, Context ctx) {
 
   // Stance out the transparent inner part
   ctx.set_operator (Operator.CLEAR);
-  var width = castView.get_allocated_width () - 2*border;
-  var height = castView.get_allocated_height () - 2*border;
-  ctx.rectangle (border, border, width, height);
+  ctx.paint ();
   ctx.fill ();
 
   return false;
@@ -77,10 +68,8 @@ public void on_record_button_clicked (Button source) {
   var castViewWindow = castView.get_window ();
   int left, top;
   castViewWindow.get_origin (out left, out top);
-  left += border;
-  top += border;
-  var width = castView.get_allocated_width () - 2*border;
-  var height = castView.get_allocated_height () - 2*border;
+  var width = castView.get_allocated_width ();
+  var height = castView.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
 }
 
@@ -89,13 +78,13 @@ int main (string[] args) {
 
   try {
     var builder = new Builder ();
-    builder.add_from_file("ui/gifcast.glade");
+    builder.add_from_file("ui/gifcast.ui");
     builder.connect_signals (null);
 
     var window = builder.get_object ("application_window") as Gtk.Window;
     window.set_keep_above (true);
 
-    castView = builder.get_object("cast_view_wrapper") as Widget;
+    castView = builder.get_object("cast_view") as Widget;
 
     window.show_all ();
     Gtk.main ();
