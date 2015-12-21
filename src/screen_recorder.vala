@@ -21,10 +21,12 @@ using GLib;
 
 public class ScreenRecorder {
   private IOChannel input;
-  private string temp_file = "/tmp/gifcast.avi";
+  private string temp_file;
 
   public bool record (int left, int top, int width, int height) {
     try {
+      create_temp_file ();
+
       string[] args = {
         "ffmpeg", "-y",
         "-f", "x11grab",
@@ -54,7 +56,10 @@ public class ScreenRecorder {
 
       return true;
     } catch (SpawnError e) {
-      stdout.printf ("Error: %s\n", e.message);
+      stderr.printf ("Error: %s\n", e.message);
+      return false;
+    } catch (FileError e) {
+      stderr.printf ("Error: %s\n", e.message);
       return false;
     }
   }
@@ -66,18 +71,22 @@ public class ScreenRecorder {
       size_t bytes_written;
       input.write_chars (command, out bytes_written);
       input.flush ();
-      convert_to_gif();
-      return true;
+      return convert_to_gif();
     } catch (ConvertError e) {
-      stdout.printf ("Error: %s\n", e.message);
+      stderr.printf ("Error: %s\n", e.message);
       return false;
     } catch (IOChannelError e) {
-      stdout.printf ("Error: %s\n", e.message);
+      stderr.printf ("Error: %s\n", e.message);
       return false;
     }
   }
 
-  private void convert_to_gif() {
+  private void create_temp_file() throws FileError {
+    var fd = FileUtils.open_tmp ("gifcastXXXXXX.avi", out temp_file);
+    FileUtils.close (fd);
+  }
+
+  private bool convert_to_gif() {
     string[] argv = {
       "convert",
       "-set", "delay", "10",
@@ -86,7 +95,15 @@ public class ScreenRecorder {
       "/tmp/gifcast.gif"
     };
 
-    Process.spawn_sync(null, argv, null,
-      SpawnFlags.SEARCH_PATH, null);
+    try {
+      Process.spawn_sync (null, argv, null,
+        SpawnFlags.SEARCH_PATH, null);
+      FileUtils.remove (temp_file);
+      return true;
+    }
+    catch (SpawnError e) {
+     stdout.printf ("Error: %s\n", e.message);
+     return false;
+    }
   }
 }
