@@ -75,6 +75,8 @@ public void on_cancel_button_clicked (Button source) {
 public void on_record_button_clicked (Button source) {
   recordButton.hide ();
   stopButton.show ();
+  freeze_window_size ();
+
   var recordingViewWindow = recordingView.get_window ();
   int left, top;
   recordingViewWindow.get_origin (out left, out top);
@@ -86,10 +88,18 @@ public void on_record_button_clicked (Button source) {
 public void on_stop_button_clicked (Button source) {
   stopButton.hide();
   recordButton.show();
+  window.resizable = true;
   stdout.printf ("Recording stopped\n");
 }
 
-public Region create_region_from_widget(Widget widget) {
+private void freeze_window_size () {
+  var width = window.get_allocated_width ();
+  var height = window.get_allocated_height ();
+  window.set_size_request (width, height);
+  window.resizable = false;
+}
+
+private Region create_region_from_widget(Widget widget) {
   var rectangle = Cairo.RectangleInt () {
     width = widget.get_allocated_width (),
     height = widget.get_allocated_height ()
