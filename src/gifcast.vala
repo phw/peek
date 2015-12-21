@@ -18,16 +18,15 @@ along with GifCast.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 using Gtk;
-using Gdk;
 using Cairo;
 
-Gtk.Window window;
-Widget castView;
+Window window;
+Widget recordingView;
 Button recordButton;
 Button stopButton;
 bool supportsAlpha = true;
 
-public void on_application_window_screen_changed (Widget widget, Screen oldScreen) {
+public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldScreen) {
   var screen = widget.get_screen ();
   var visual = screen.get_rgba_visual ();
 
@@ -43,7 +42,7 @@ public void on_application_window_screen_changed (Widget widget, Screen oldScree
   widget.set_visual (visual);
 }
 
-public bool on_cast_view_draw (Widget widget, Context ctx) {
+public bool on_recording_view_draw (Widget widget, Context ctx) {
   if (supportsAlpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
   }
@@ -56,10 +55,10 @@ public bool on_cast_view_draw (Widget widget, Context ctx) {
   ctx.paint ();
   ctx.fill ();
 
-  // Set an input shape so that the cast view is not clickable
+  // Set an input shape so that the recording view is not clickable
   var windowRegion = create_region_from_widget (widget.get_toplevel());
-  var castViewRegion = create_region_from_widget (widget);
-  windowRegion.subtract (castViewRegion);
+  var recordingViewRegion = create_region_from_widget (widget);
+  windowRegion.subtract (recordingViewRegion);
   window.input_shape_combine_region (windowRegion);
 
   return false;
@@ -76,11 +75,11 @@ public void on_cancel_button_clicked (Button source) {
 public void on_record_button_clicked (Button source) {
   recordButton.hide ();
   stopButton.show ();
-  var castViewWindow = castView.get_window ();
+  var recordingViewWindow = recordingView.get_window ();
   int left, top;
-  castViewWindow.get_origin (out left, out top);
-  var width = castView.get_allocated_width ();
-  var height = castView.get_allocated_height ();
+  recordingViewWindow.get_origin (out left, out top);
+  var width = recordingView.get_allocated_width ();
+  var height = recordingView.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
 }
 
@@ -113,7 +112,7 @@ int main (string[] args) {
     window = builder.get_object ("application_window") as Gtk.Window;
     window.set_keep_above (true);
 
-    castView = builder.get_object ("cast_view") as Widget;
+    recordingView = builder.get_object ("recording_view") as Widget;
     recordButton = builder.get_object ("record_button") as Button;
     stopButton = builder.get_object ("stop_button") as Button;
 
