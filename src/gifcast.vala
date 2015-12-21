@@ -25,6 +25,7 @@ Widget recordingView;
 Button recordButton;
 Button stopButton;
 bool supportsAlpha = true;
+ScreenRecorder recorder;
 
 public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldScreen) {
   var screen = widget.get_screen ();
@@ -83,9 +84,11 @@ public void on_record_button_clicked (Button source) {
   var width = recordingView.get_allocated_width ();
   var height = recordingView.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
+  recorder.record(left, top, width, height);
 }
 
 public void on_stop_button_clicked (Button source) {
+  recorder.stop();
   stopButton.hide();
   recordButton.show();
   window.resizable = true;
@@ -125,6 +128,8 @@ int main (string[] args) {
     recordingView = builder.get_object ("recording_view") as Widget;
     recordButton = builder.get_object ("record_button") as Button;
     stopButton = builder.get_object ("stop_button") as Button;
+
+    recorder = new ScreenRecorder();
 
     window.show_all ();
     Gtk.main ();

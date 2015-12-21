@@ -29,6 +29,7 @@ gresource(${CMAKE_CURRENT_SOURCE_DIR}/ ${PROJECT_NAME}.gresource.xml
 # Compile Vala to C
 vala_precompile(VALA_C
     src/gifcast.vala
+    src/screen_recorder.vala
 PACKAGES
     gtk+-3.0
     gmodule-2.0
