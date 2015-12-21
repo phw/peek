@@ -21,6 +21,7 @@ using Gtk;
 using Gdk;
 using Cairo;
 
+Gtk.Window window;
 Widget castView;
 Button recordButton;
 Button stopButton;
@@ -55,6 +56,12 @@ public bool on_cast_view_draw (Widget widget, Context ctx) {
   ctx.paint ();
   ctx.fill ();
 
+  // Set an input shape so that the cast view is not clickable
+  var windowRegion = create_region_from_widget (widget.get_toplevel());
+  var castViewRegion = create_region_from_widget (widget);
+  windowRegion.subtract (castViewRegion);
+  window.input_shape_combine_region (windowRegion);
+
   return false;
 }
 
@@ -67,8 +74,8 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  recordButton.hide();
-  stopButton.show();
+  recordButton.hide ();
+  stopButton.show ();
   var castViewWindow = castView.get_window ();
   int left, top;
   castViewWindow.get_origin (out left, out top);
@@ -83,20 +90,32 @@ public void on_stop_button_clicked (Button source) {
   stdout.printf ("Recording stopped\n");
 }
 
+public Region create_region_from_widget(Widget widget) {
+  var rectangle = Cairo.RectangleInt () {
+    width = widget.get_allocated_width (),
+    height = widget.get_allocated_height ()
+  };
+
+  widget.translate_coordinates (widget.get_toplevel(), 0, 0, out rectangle.x, out rectangle.y);
+  var region = new Region.rectangle (rectangle);
+
+  return region;
+}
+
 int main (string[] args) {
   Gtk.init (ref args);
 
   try {
     var builder = new Builder ();
-    builder.add_from_resource("/de/uploadedlobster/gifcast/ui/gifcast.ui");
+    builder.add_from_resource ("/de/uploadedlobster/gifcast/ui/gifcast.ui");
     builder.connect_signals (null);
 
-    var window = builder.get_object ("application_window") as Gtk.Window;
+    window = builder.get_object ("application_window") as Gtk.Window;
     window.set_keep_above (true);
 
-    castView = builder.get_object("cast_view") as Widget;
-    recordButton = builder.get_object("record_button") as Button;
-    stopButton = builder.get_object("stop_button") as Button;
+    castView = builder.get_object ("cast_view") as Widget;
+    recordButton = builder.get_object ("record_button") as Button;
+    stopButton = builder.get_object ("stop_button") as Button;
 
     window.show_all ();
     Gtk.main ();
