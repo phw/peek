@@ -25,7 +25,7 @@ public class ScreenRecorder {
 
   public bool record (int left, int top, int width, int height) {
     try {
-      create_temp_file ();
+      temp_file = create_temp_file ("avi");
 
       string[] args = {
         "ffmpeg", "-y",
@@ -64,7 +64,7 @@ public class ScreenRecorder {
     }
   }
 
-  public bool stop() {
+  public string stop () {
     stdout.printf ("Recording stopped\n");
     try {
       char[] command = { 'q' };
@@ -74,36 +74,41 @@ public class ScreenRecorder {
       return convert_to_gif();
     } catch (ConvertError e) {
       stderr.printf ("Error: %s\n", e.message);
-      return false;
+      return "";
     } catch (IOChannelError e) {
       stderr.printf ("Error: %s\n", e.message);
-      return false;
+      return "";
     }
   }
 
-  private void create_temp_file() throws FileError {
-    var fd = FileUtils.open_tmp ("gifcastXXXXXX.avi", out temp_file);
+  private static string create_temp_file (string extension) throws FileError {
+    string file_name;
+    var fd = FileUtils.open_tmp ("gifcastXXXXXX." + extension, out file_name);
     FileUtils.close (fd);
+    return file_name;
   }
 
-  private bool convert_to_gif() {
-    string[] argv = {
-      "convert",
-      "-set", "delay", "10",
-      "-layers", "Optimize",
-      temp_file,
-      "/tmp/gifcast.gif"
-    };
-
+  private string convert_to_gif () {
     try {
+      var output_file = create_temp_file ("gif");
+      string[] argv = {
+        "convert",
+        "-set", "delay", "10",
+        "-layers", "Optimize",
+        temp_file,
+        output_file
+      };
+
       Process.spawn_sync (null, argv, null,
         SpawnFlags.SEARCH_PATH, null);
       FileUtils.remove (temp_file);
-      return true;
-    }
-    catch (SpawnError e) {
+      return output_file;
+    } catch (SpawnError e) {
      stdout.printf ("Error: %s\n", e.message);
-     return false;
+     return "";
+    } catch (FileError e) {
+     stdout.printf ("Error: %s\n", e.message);
+     return "";
     }
   }
 }

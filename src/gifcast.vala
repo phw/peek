@@ -88,11 +88,12 @@ public void on_record_button_clicked (Button source) {
 }
 
 public void on_stop_button_clicked (Button source) {
-  recorder.stop();
-  stopButton.hide();
-  recordButton.show();
-  window.resizable = true;
+  var temp_file = recorder.stop ();
   stdout.printf ("Recording stopped\n");
+  save_output (temp_file);
+  stopButton.hide ();
+  recordButton.show ();
+  window.resizable = true;
 }
 
 private void freeze_window_size () {
@@ -102,7 +103,7 @@ private void freeze_window_size () {
   window.resizable = false;
 }
 
-private Region create_region_from_widget(Widget widget) {
+private Region create_region_from_widget (Widget widget) {
   var rectangle = Cairo.RectangleInt () {
     width = widget.get_allocated_width (),
     height = widget.get_allocated_height ()
@@ -112,6 +113,54 @@ private Region create_region_from_widget(Widget widget) {
   var region = new Region.rectangle (rectangle);
 
   return region;
+}
+
+private void save_output (string temp_file) {
+  var chooser = new Gtk.FileChooserDialog (
+    "Select your favorite file", null, Gtk.FileChooserAction.SAVE,
+    "_Cancel",
+    Gtk.ResponseType.CANCEL,
+    "_Save",
+    Gtk.ResponseType.ACCEPT);
+
+  var filter = new Gtk.FileFilter ();
+  chooser.set_filter (filter);
+  filter.add_mime_type ("image/gif");
+
+  var folder = get_video_folder ();
+  chooser.set_current_folder (folder);
+  chooser.set_current_name ("gifcast.gif");
+
+  if (chooser.run () == Gtk.ResponseType.ACCEPT) {
+    var in_file = GLib.File.new_for_path (temp_file);
+    var out_file = chooser.get_file ();
+
+    try {
+      in_file.copy (out_file, GLib.FileCopyFlags.OVERWRITE);
+      FileUtils.remove (temp_file);
+      stdout.printf ("File saved: %s\n", out_file.get_uri ());
+    } catch (GLib.Error e) {
+     stdout.printf ("Error: %s\n", e.message);
+    }
+  }
+
+  // Close the FileChooserDialog:
+  chooser.close ();
+}
+
+private string get_video_folder () {
+  string folder;
+  folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.VIDEOS);
+
+  if (folder == null) {
+    folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.PICTURES);
+  }
+
+  if (folder == null) {
+    folder = GLib.Environment.get_home_dir ();
+  }
+
+  return folder;
 }
 
 int main (string[] args) {
