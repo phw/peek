@@ -34,7 +34,9 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala
+    src/peek-application.vala
     src/peek-application-window.vala
+    src/peek-about-dialog.vala
     src/screen-recorder.vala
   PACKAGES
     gtk+-3.0

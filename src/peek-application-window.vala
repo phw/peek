@@ -27,17 +27,18 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private uint size_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
-  private ScreenRecorder recorder = null;
+  private ScreenRecorder recorder;
 
-  public PeekApplicationWindow () {
-    Object ();
+  public PeekApplicationWindow (Gtk.Application application,
+    ScreenRecorder recorder) {
+    Object (application: application);
 
-    recorder = new ScreenRecorder ();
-    recorder.recording_started.connect (() => {
+    this.recorder = recorder;
+    this.recorder.recording_started.connect (() => {
       enter_recording_state ();
     });
 
-    recorder.recording_finished.connect ((file) => {
+    this.recorder.recording_finished.connect ((file) => {
       leave_recording_state ();
 
       if (file != null) {
@@ -45,7 +46,7 @@ class PeekApplicationWindow : ApplicationWindow {
       }
     });
 
-    recorder.recording_aborted.connect ((status) => {
+    this.recorder.recording_aborted.connect ((status) => {
       stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
       leave_recording_state ();
     });
@@ -53,9 +54,8 @@ class PeekApplicationWindow : ApplicationWindow {
     this.set_keep_above (true);
   }
 
-  [GtkCallback]
-  private void on_application_window_screen_changed (Widget widget, Gdk.Screen oldScreen) {
-    var screen = widget.get_screen ();
+  public override void screen_changed (Gdk.Screen previous_screen) {
+    var screen = this.get_screen ();
     var visual = screen.get_rgba_visual ();
 
     if (visual == null) {
@@ -67,22 +67,14 @@ class PeekApplicationWindow : ApplicationWindow {
       screen_supports_alpha = true;
     }
 
-    widget.set_visual (visual);
+    this.set_visual (visual);
   }
 
-  [GtkCallback]
-  private bool on_application_window_configure_event (Gdk.EventConfigure event) {
+  public override bool configure_event (Gdk.EventConfigure event) {
     if (recorder.is_recording) {
       recorder.cancel ();
     }
 
-    return false;
-  }
-
-  [GtkCallback]
-  private bool on_application_window_delete_event (Gdk.EventAny event) {
-    recorder.cancel ();
-    Gtk.main_quit ();
     return false;
   }
 
@@ -112,29 +104,31 @@ class PeekApplicationWindow : ApplicationWindow {
   [GtkCallback]
   private void on_recording_view_size_allocate (Allocation allocation) {
     // Show the size
-    var size_label = new StringBuilder ();
-    var area = get_recording_area ();
-    size_label.printf ("%i x %i", area.width, area.height);
-    size_indicator.set_text (size_label.str);
-    size_indicator.show ();
+    if (this.get_realized ()) {
+      var size_label = new StringBuilder ();
+      var area = get_recording_area ();
+      size_label.printf ("%i x %i", area.width, area.height);
+      size_indicator.set_text (size_label.str);
+      size_indicator.show ();
 
-    if (size_indicator_timeout != 0) {
-      Source.remove (size_indicator_timeout);
-    }
+      if (size_indicator_timeout != 0) {
+        Source.remove (size_indicator_timeout);
+      }
 
-    if (!recorder.is_recording) {
-      size_indicator.opacity = 1.0;
-      size_indicator_timeout = Timeout.add (800, () => {
-        size_indicator.opacity = 0.0;
-        return false;
-      });
+      if (!recorder.is_recording) {
+        size_indicator.opacity = 1.0;
+        size_indicator_timeout = Timeout.add (800, () => {
+          size_indicator_timeout = 0;
+          size_indicator.opacity = 0.0;
+          return false;
+        });
+      }
     }
   }
 
   [GtkCallback]
   private void on_cancel_button_clicked (Button source) {
-    recorder.cancel ();
-    Gtk.main_quit ();
+    this.close ();
   }
 
   [GtkCallback]

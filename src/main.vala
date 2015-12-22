@@ -9,11 +9,6 @@ This software is licensed under the GNU General Public License
 
 int main (string[] args) {
 
-  Gtk.init (ref args);
-	var window = new PeekApplicationWindow ();
-	window.show_all ();
-
-	Gtk.main ();
-
-  return 0;
+  var app = new PeekApplication ();
+  return app.run (args);
 }
