@@ -22,9 +22,13 @@ using GLib;
 public class ScreenRecorder : Object {
   private IOChannel input;
   private string temp_file;
+  private bool recording = false;
 
   public bool record (int left, int top, int width, int height) {
     try {
+      // Cancel running recording
+      cancel ();
+
       temp_file = create_temp_file ("avi");
 
       string[] args = {
@@ -54,6 +58,7 @@ public class ScreenRecorder : Object {
         Process.close_pid (pid);
       });
 
+      recording = true;
       return true;
     } catch (SpawnError e) {
       stderr.printf ("Error: %s\n", e.message);
@@ -66,18 +71,31 @@ public class ScreenRecorder : Object {
 
   public string stop () {
     stdout.printf ("Recording stopped\n");
+    stop_command ();
+    var file = convert_to_gif();
+    FileUtils.remove (temp_file);
+    recording = false;
+    return file;
+  }
+
+  public void cancel () {
+    if (recording) {
+      stop_command ();
+      FileUtils.remove (temp_file);
+      recording = false;
+    }
+  }
+
+  private void stop_command () {
     try {
       char[] command = { 'q' };
       size_t bytes_written;
       input.write_chars (command, out bytes_written);
       input.flush ();
-      return convert_to_gif();
     } catch (ConvertError e) {
       stderr.printf ("Error: %s\n", e.message);
-      return "";
     } catch (IOChannelError e) {
       stderr.printf ("Error: %s\n", e.message);
-      return "";
     }
   }
 
@@ -101,7 +119,6 @@ public class ScreenRecorder : Object {
 
       Process.spawn_sync (null, argv, null,
         SpawnFlags.SEARCH_PATH, null);
-      FileUtils.remove (temp_file);
       return output_file;
     } catch (SpawnError e) {
      stdout.printf ("Error: %s\n", e.message);

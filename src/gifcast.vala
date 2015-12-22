@@ -92,10 +92,12 @@ public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle)
 }
 
 public void on_application_window_delete_event (string[] args) {
+  recorder.cancel ();
   Gtk.main_quit ();
 }
 
 public void on_cancel_button_clicked (Button source) {
+  recorder.cancel ();
   Gtk.main_quit ();
 }
 
@@ -111,7 +113,7 @@ public void on_record_button_clicked (Button source) {
   var width = recording_view.get_allocated_width ();
   var height = recording_view.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
-  recorder.record(left, top, width, height);
+  recorder.record (left, top, width, height);
 }
 
 public void on_stop_button_clicked (Button source) {
