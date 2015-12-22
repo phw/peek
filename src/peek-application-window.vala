@@ -10,7 +10,7 @@ This software is licensed under the GNU General Public License
 using Gtk;
 using Cairo;
 
-[GtkTemplate (ui = "/de/uploadedlobster/peek/peek.ui")]
+[GtkTemplate (ui = "/de/uploadedlobster/peek/application-window.ui")]
 class PeekApplicationWindow : ApplicationWindow {
 
   [GtkChild]
