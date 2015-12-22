@@ -69,7 +69,7 @@ public class ScreenRecorder : Object {
     }
   }
 
-  public string stop () {
+  public File? stop () {
     stdout.printf ("Recording stopped\n");
     stop_command ();
     var file = convert_to_gif();
@@ -106,7 +106,7 @@ public class ScreenRecorder : Object {
     return file_name;
   }
 
-  private string convert_to_gif () {
+  private File? convert_to_gif () {
     try {
       var output_file = create_temp_file ("gif");
       string[] argv = {
@@ -119,13 +119,13 @@ public class ScreenRecorder : Object {
 
       Process.spawn_sync (null, argv, null,
         SpawnFlags.SEARCH_PATH, null);
-      return output_file;
+      return File.new_for_path (output_file);
     } catch (SpawnError e) {
      stdout.printf ("Error: %s\n", e.message);
-     return "";
+     return null;
     } catch (FileError e) {
      stdout.printf ("Error: %s\n", e.message);
-     return "";
+     return null;
     }
   }
 }

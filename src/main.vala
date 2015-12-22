@@ -159,15 +159,15 @@ private RecordingArea get_recording_area () {
   return area;
 }
 
-private void save_output (string temp_file) {
-  var chooser = new Gtk.FileChooserDialog (
-    "Select your favorite file", null, Gtk.FileChooserAction.SAVE,
+private void save_output (File in_file) {
+  var chooser = new FileChooserDialog (
+    "Select your favorite file", null, FileChooserAction.SAVE,
     "_Cancel",
-    Gtk.ResponseType.CANCEL,
+    ResponseType.CANCEL,
     "_Save",
-    Gtk.ResponseType.ACCEPT);
+    ResponseType.ACCEPT);
 
-  var filter = new Gtk.FileFilter ();
+  var filter = new FileFilter ();
   chooser.do_overwrite_confirmation = true;
   chooser.filter = filter;
   filter.add_mime_type ("image/gif");
@@ -179,17 +179,31 @@ private void save_output (string temp_file) {
   var default_name = now.format ("Peek %Y-%m-%d %H-%M.gif");
   chooser.set_current_name (default_name);
 
-  if (chooser.run () == Gtk.ResponseType.ACCEPT) {
-    var in_file = GLib.File.new_for_path (temp_file);
+  if (chooser.run () == ResponseType.ACCEPT) {
     var out_file = chooser.get_file ();
 
-    try {
-      in_file.copy (out_file, GLib.FileCopyFlags.OVERWRITE);
-      FileUtils.remove (temp_file);
-      stdout.printf ("File saved: %s\n", out_file.get_uri ());
-    } catch (GLib.Error e) {
-     stdout.printf ("Error: %s\n", e.message);
-    }
+    in_file.copy_async.begin (out_file, FileCopyFlags.OVERWRITE,
+      Priority.DEFAULT, null, null, (obj, res) => {
+        try {
+          bool copy_success = in_file.copy_async.end (res);
+          stdout.printf ("File saved %s: %s\n",
+            copy_success.to_string (),
+            out_file.get_uri ());
+
+          in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
+            try {
+              bool delete_success = in_file.delete_async.end (res);
+              stdout.printf ("Temp file deleted: %s\n",
+                delete_success.to_string ());
+            } catch (Error e) {
+              stderr.printf ("Temp file delete error: %s\n", e.message);
+            }
+          });
+        }
+        catch (GLib.Error e) {
+          stderr.printf ("File save error: %s\n", e.message);
+         }
+      });
   }
 
   // Close the FileChooserDialog:
