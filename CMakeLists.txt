@@ -1,4 +1,4 @@
-project("gifcast" C)
+project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 # Include Vala macros
@@ -28,11 +28,11 @@ gresource(${CMAKE_CURRENT_SOURCE_DIR}/ ${PROJECT_NAME}.gresource.xml
 
 # Compile Vala to C
 vala_precompile(VALA_C
-    src/gifcast.vala src/screen-recorder.vala
+    src/main.vala src/screen-recorder.vala
 PACKAGES
     gtk+-3.0
     gmodule-2.0
 )
 
 # Compile C code
-add_executable("gifcast" ${VALA_C} ${RESOURCE_FILE})
+add_executable(${PROJECT_NAME} ${VALA_C} ${RESOURCE_FILE})

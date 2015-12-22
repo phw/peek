@@ -1,20 +1,10 @@
 /*
-GifCast Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
 
-This file is part of GifCast.
+This file is part of Peek.
 
-GifCast is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-GifCast is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with GifCast.  If not, see <http://www.gnu.org/licenses/>.
+This software is licensed under the GNU General Public License
+(version 3 or later). See the LICENSE file in this distribution.
 */
 
 using GLib;
@@ -101,7 +91,7 @@ public class ScreenRecorder : Object {
 
   private static string create_temp_file (string extension) throws FileError {
     string file_name;
-    var fd = FileUtils.open_tmp ("gifcastXXXXXX." + extension, out file_name);
+    var fd = FileUtils.open_tmp ("peekXXXXXX." + extension, out file_name);
     FileUtils.close (fd);
     return file_name;
   }

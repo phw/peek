@@ -1,20 +1,10 @@
 /*
-GifCast Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
 
-This file is part of GifCast.
+This file is part of Peek.
 
-GifCast is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-GifCast is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with GifCast.  If not, see <http://www.gnu.org/licenses/>.
+This software is licensed under the GNU General Public License
+(version 3 or later). See the LICENSE file in this distribution.
 */
 
 using Gtk;
@@ -46,7 +36,6 @@ public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldS
 }
 
 public bool on_recording_view_draw (Widget widget, Context ctx) {
-  stdout.printf ("on_recording_view_draw\n");
   if (supports_alpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
   }
@@ -69,8 +58,6 @@ public bool on_recording_view_draw (Widget widget, Context ctx) {
 }
 
 public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle) {
-  stdout.printf ("on_recording_view_size_allocate\n");
-
   // Show the size
   var size_label = new StringBuilder();
   size_label.printf ("%i x %i",
@@ -85,7 +72,6 @@ public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle)
   }
 
   size_indicator_timeout = Timeout.add (800, () => {
-      stdout.printf ("Timeout\n");
       size_indicator.set_opacity (0.0);
       return false;
     });
@@ -158,7 +144,7 @@ private void save_output (string temp_file) {
 
   var folder = get_video_folder ();
   chooser.set_current_folder (folder);
-  chooser.set_current_name ("gifcast.gif");
+  chooser.set_current_name ("peek.gif");
 
   if (chooser.run () == Gtk.ResponseType.ACCEPT) {
     var in_file = GLib.File.new_for_path (temp_file);
@@ -197,7 +183,7 @@ int main (string[] args) {
 
   try {
     var builder = new Builder ();
-    builder.add_from_resource ("/de/uploadedlobster/gifcast/ui/gifcast.ui");
+    builder.add_from_resource ("/de/uploadedlobster/peek/ui/peek.ui");
     builder.connect_signals (null);
 
     window = builder.get_object ("application_window") as Gtk.Window;
