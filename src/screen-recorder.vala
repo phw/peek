@@ -19,7 +19,7 @@ along with GifCast.  If not, see <http://www.gnu.org/licenses/>.
 
 using GLib;
 
-public class ScreenRecorder {
+public class ScreenRecorder : Object {
   private IOChannel input;
   private string temp_file;
 

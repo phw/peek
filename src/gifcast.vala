@@ -21,10 +21,10 @@ using Gtk;
 using Cairo;
 
 Window window;
-Widget recordingView;
-Button recordButton;
-Button stopButton;
-bool supportsAlpha = true;
+Widget recording_view;
+Button record_button;
+Button stop_button;
+bool supports_alpha = true;
 ScreenRecorder recorder;
 
 public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldScreen) {
@@ -34,17 +34,17 @@ public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldS
   if (visual == null) {
     stderr.printf ("Screen does not support alpha channels!");
     visual = screen.get_system_visual ();
-    supportsAlpha = false;
+    supports_alpha = false;
   }
   else {
-    supportsAlpha = true;
+    supports_alpha = true;
   }
 
   widget.set_visual (visual);
 }
 
 public bool on_recording_view_draw (Widget widget, Context ctx) {
-  if (supportsAlpha) {
+  if (supports_alpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
   }
   else {
@@ -57,10 +57,10 @@ public bool on_recording_view_draw (Widget widget, Context ctx) {
   ctx.fill ();
 
   // Set an input shape so that the recording view is not clickable
-  var windowRegion = create_region_from_widget (widget.get_toplevel());
-  var recordingViewRegion = create_region_from_widget (widget);
-  windowRegion.subtract (recordingViewRegion);
-  window.input_shape_combine_region (windowRegion);
+  var window_region = create_region_from_widget (widget.get_toplevel());
+  var recording_viewRegion = create_region_from_widget (widget);
+  window_region.subtract (recording_viewRegion);
+  window.input_shape_combine_region (window_region);
 
   return false;
 }
@@ -74,15 +74,15 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  recordButton.hide ();
-  stopButton.show ();
+  record_button.hide ();
+  stop_button.show ();
   freeze_window_size ();
 
-  var recordingViewWindow = recordingView.get_window ();
+  var recording_view_window = recording_view.get_window ();
   int left, top;
-  recordingViewWindow.get_origin (out left, out top);
-  var width = recordingView.get_allocated_width ();
-  var height = recordingView.get_allocated_height ();
+  recording_view_window.get_origin (out left, out top);
+  var width = recording_view.get_allocated_width ();
+  var height = recording_view.get_allocated_height ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
   recorder.record(left, top, width, height);
 }
@@ -91,8 +91,8 @@ public void on_stop_button_clicked (Button source) {
   var temp_file = recorder.stop ();
   stdout.printf ("Recording stopped\n");
   save_output (temp_file);
-  stopButton.hide ();
-  recordButton.show ();
+  stop_button.hide ();
+  record_button.show ();
   window.resizable = true;
 }
 
@@ -174,9 +174,9 @@ int main (string[] args) {
     window = builder.get_object ("application_window") as Gtk.Window;
     window.set_keep_above (true);
 
-    recordingView = builder.get_object ("recording_view") as Widget;
-    recordButton = builder.get_object ("record_button") as Button;
-    stopButton = builder.get_object ("stop_button") as Button;
+    recording_view = builder.get_object ("recording_view") as Widget;
+    record_button = builder.get_object ("record_button") as Button;
+    stop_button = builder.get_object ("stop_button") as Button;
 
     recorder = new ScreenRecorder();
 
