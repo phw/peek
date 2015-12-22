@@ -11,6 +11,7 @@ list(APPEND CMAKE_MODULE_PATH
 include(FindVala)
 include(UseVala)
 include(GResource)
+include(GSettings)
 
 # Check dependencies
 find_package(Vala 0.22 REQUIRED)
@@ -31,12 +32,19 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
     ui/${PROJECT_NAME}.gresource.xml
 )
 
+# GSettings
+#set (GSETTINGS_DIR "${PREFIX}/share/glib-2.0/schemas/" CACHE INTERNAL "")
+#set (GSETTINGS_DIR ${CMAKE_SOURCE_DIR})
+#add_schemas(peek ${GSETTINGS_DIR} ${CMAKE_INSTALL_PREFIX})
+add_schema ("de.uploadedlobster.peek.gschema.xml")
+
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala
     src/peek-application.vala
     src/peek-application-window.vala
     src/peek-about-dialog.vala
+    src/peek-preferences-dialog.vala
     src/screen-recorder.vala
   PACKAGES
     gtk+-3.0

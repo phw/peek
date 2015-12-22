@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/de/uploadedlobster/peek/" id="de.uploadedlobster.peek">
+    <key name="record-start-delay" type="i">
+      <range min="0" max="100"/>
+      <default>5</default>
+    </key>
+  </schema>
+</schemalist>

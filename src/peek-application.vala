@@ -27,9 +27,9 @@ public class PeekApplication : Gtk.Application {
 
     GLib.SimpleAction action;
 
-    /*var action = new GLib.SimpleAction ("preferences", null);
-    action.activate.connect (preferences);
-    add_action (action);*/
+    action = new GLib.SimpleAction ("preferences", null);
+    action.activate.connect (show_preferences);
+    add_action (action);
 
     action = new GLib.SimpleAction ("about", null);
     action.activate.connect (show_about);
@@ -43,6 +43,11 @@ public class PeekApplication : Gtk.Application {
   public override void shutdown () {
     recorder.cancel ();
     base.shutdown ();
+  }
+
+  private void show_preferences () {
+    var dialog = new PeekPreferencesDialog (main_window);
+    dialog.show ();
   }
 
   private void show_about () {

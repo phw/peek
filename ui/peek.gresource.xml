@@ -2,6 +2,7 @@
 <gresources>
   <gresource prefix="/de/uploadedlobster/peek">
     <file preprocess="xml-stripblanks">peek.ui</file>
+    <file preprocess="xml-stripblanks">preferences.ui</file>
     <file preprocess="xml-stripblanks">about.ui</file>
     <file preprocess="xml-stripblanks">gtk/menus.ui</file>
   </gresource>
