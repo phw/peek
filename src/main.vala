@@ -183,7 +183,7 @@ int main (string[] args) {
 
   try {
     var builder = new Builder ();
-    builder.add_from_resource ("/de/uploadedlobster/peek/ui/peek.ui");
+    builder.add_from_resource ("/de/uploadedlobster/peek/peek.ui");
     builder.connect_signals (null);
 
     window = builder.get_object ("application_window") as Gtk.Window;

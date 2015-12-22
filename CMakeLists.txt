@@ -1,14 +1,14 @@
 project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
-# Include Vala macros
+# Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
-    ${CMAKE_SOURCE_DIR}/cmake
-    ${CMAKE_SOURCE_DIR}/cmake/vala
+  ${CMAKE_SOURCE_DIR}/cmake
 )
 
 include(FindVala)
 include(UseVala)
+include(GResource)
 
 # Check dependencies
 find_package(Vala REQUIRED)
@@ -21,18 +21,19 @@ link_directories(${GTK_LIBRARY_DIRS})
 
 pkg_check_modules(REQUIRED cairo gmodule-2.0)
 
-# GResource
-include(GResource)
-gresource(${CMAKE_CURRENT_SOURCE_DIR}/ ${PROJECT_NAME}.gresource.xml
-	${CMAKE_BINARY_DIR}/ RESOURCE_FILE)
-
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala src/screen-recorder.vala
-PACKAGES
+  PACKAGES
     gtk+-3.0
     gmodule-2.0
 )
 
+# compile glib resource files to c code
+GLIB_COMPILE_RESOURCES( GLIB_RESOURCES
+  SOURCE
+    ui/${PROJECT_NAME}.gresource.xml
+)
+
 # Compile C code
-add_executable(${PROJECT_NAME} ${VALA_C} ${RESOURCE_FILE})
+add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
