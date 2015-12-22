@@ -11,28 +11,35 @@ include(UseVala)
 include(GResource)
 
 # Check dependencies
-find_package(Vala REQUIRED)
+find_package(Vala "0.22" REQUIRED)
 
 find_package(PkgConfig)
-pkg_check_modules(GTK REQUIRED gtk+-3.0)
+pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.10)
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
 
-pkg_check_modules(REQUIRED cairo gmodule-2.0)
+pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
+pkg_check_modules(CAIRO REQUIRED cairo)
+pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
+
+# compile glib resource files to c code
+GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
+  SOURCE
+    ui/${PROJECT_NAME}.gresource.xml
+)
 
 # Compile Vala to C
 vala_precompile(VALA_C
-    src/main.vala src/screen-recorder.vala
+    src/main.vala
+    src/peek-application-window.vala
+    src/screen-recorder.vala
   PACKAGES
     gtk+-3.0
     gmodule-2.0
-)
-
-# compile glib resource files to c code
-GLIB_COMPILE_RESOURCES( GLIB_RESOURCES
-  SOURCE
-    ui/${PROJECT_NAME}.gresource.xml
+  OPTIONS
+    --target-glib=2.38
+    --gresources=../ui/${PROJECT_NAME}.gresource.xml
 )
 
 # Compile C code

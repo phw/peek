@@ -6,8 +6,9 @@ A simple tool that allows you to record short animated Gifs from your screen.
 ## Requirements
 ### Runtime
 
-  * Gtk 3.?
-  * ffmpeg or byzanz?
+  * Gtk 3.10 or higher
+  * ffmpeg
+  * ImageMagick
 
 ### Development
 
