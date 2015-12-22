@@ -59,7 +59,7 @@ public bool on_recording_view_draw (Widget widget, Context ctx) {
 
 public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle) {
   // Show the size
-  var size_label = new StringBuilder();
+  var size_label = new StringBuilder ();
   var area = get_recording_area ();
   size_label.printf ("%i x %i", area.width, area.height);
   size_indicator.set_text (size_label.str);
@@ -70,9 +70,9 @@ public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle)
   }
 
   if (!recorder.is_recording) {
-    size_indicator.set_opacity (1.0);
+    size_indicator.opacity = 1.0;
     size_indicator_timeout = Timeout.add (800, () => {
-      size_indicator.set_opacity (0.0);
+      size_indicator.opacity = 0.0;
       return false;
     });
   }
@@ -89,7 +89,7 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  size_indicator.set_opacity (0.0);
+  size_indicator.opacity = 0.0;
   record_button.hide ();
   stop_button.show ();
   freeze_window_size ();
@@ -104,7 +104,6 @@ public void on_stop_button_clicked (Button source) {
   var temp_file = recorder.stop ();
   stdout.printf ("Recording stopped\n");
   save_output (temp_file);
-  recorder = null;
   stop_button.hide ();
   record_button.show ();
   unfreeze_window_size ();
@@ -169,12 +168,16 @@ private void save_output (string temp_file) {
     Gtk.ResponseType.ACCEPT);
 
   var filter = new Gtk.FileFilter ();
-  chooser.set_filter (filter);
+  chooser.do_overwrite_confirmation = true;
+  chooser.filter = filter;
   filter.add_mime_type ("image/gif");
 
   var folder = get_video_folder ();
   chooser.set_current_folder (folder);
-  chooser.set_current_name ("peek.gif");
+
+  var now = new DateTime.now_local ();
+  var default_name = now.format ("Peek %Y-%m-%d %H-%M.gif");
+  chooser.set_current_name (default_name);
 
   if (chooser.run () == Gtk.ResponseType.ACCEPT) {
     var in_file = GLib.File.new_for_path (temp_file);
