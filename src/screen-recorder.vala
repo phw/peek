@@ -22,6 +22,8 @@ public class ScreenRecorder : Object {
 
   public bool is_recording { get; private set; default = false; }
 
+  public signal void recording_aborted (int status);
+
   ~ScreenRecorder () {
     cancel ();
   }
@@ -32,6 +34,10 @@ public class ScreenRecorder : Object {
       cancel ();
 
       temp_file = create_temp_file ("avi");
+      string display = Environment.get_variable ("DISPLAY");
+      if (display == null) {
+        display = ":0";
+      }
 
       string[] args = {
         "ffmpeg", "-y",
@@ -39,7 +45,7 @@ public class ScreenRecorder : Object {
         "-show_region", "0",
         "-framerate", "15",
         "-video_size", area.width.to_string () + "x" + area.height.to_string (),
-        "-i", ":0+" + area.left.to_string () + "," + area.top.to_string (),
+        "-i", display + "+" + area.left.to_string () + "," + area.top.to_string (),
         "-codec:v", "huffyuv",
         "-vf", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2)",
         temp_file
@@ -56,6 +62,10 @@ public class ScreenRecorder : Object {
       ChildWatch.add (pid, (pid, status) => {
         // Triggered when the child indicated by pid exits
         Process.close_pid (pid);
+
+        if (status != 0) {
+          recording_aborted (status);
+        }
       });
 
       is_recording = true;
@@ -121,10 +131,10 @@ public class ScreenRecorder : Object {
         SpawnFlags.SEARCH_PATH, null);
       return File.new_for_path (output_file);
     } catch (SpawnError e) {
-     stdout.printf ("Error: %s\n", e.message);
+     stderr.printf ("Error: %s\n", e.message);
      return null;
     } catch (FileError e) {
-     stdout.printf ("Error: %s\n", e.message);
+     stderr.printf ("Error: %s\n", e.message);
      return null;
     }
   }

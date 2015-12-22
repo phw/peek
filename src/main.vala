@@ -89,21 +89,33 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  size_indicator.opacity = 0.0;
-  record_button.hide ();
-  stop_button.show ();
-  freeze_window_size ();
+  enter_recording_state ();
 
   var area = get_recording_area ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n",
     area.left, area.top, area.width, area.height);
-  recorder.record (area);
+  if (!recorder.record (area)) {
+    leave_recording_state ();
+  }
 }
 
 public void on_stop_button_clicked (Button source) {
   var temp_file = recorder.stop ();
-  stdout.printf ("Recording stopped\n");
-  save_output (temp_file);
+  if (temp_file != null) {
+    save_output (temp_file);
+  }
+
+  leave_recording_state ();
+}
+
+private void enter_recording_state () {
+  size_indicator.opacity = 0.0;
+  record_button.hide ();
+  stop_button.show ();
+  freeze_window_size ();
+}
+
+private void leave_recording_state () {
   stop_button.hide ();
   record_button.show ();
   unfreeze_window_size ();
@@ -230,6 +242,10 @@ int main (string[] args) {
 
   try {
     recorder = new ScreenRecorder();
+    recorder.recording_aborted.connect ((status) => {
+      stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
+      leave_recording_state();
+    });
 
     var builder = new Builder ();
     builder.add_from_resource ("/de/uploadedlobster/peek/peek.ui");
