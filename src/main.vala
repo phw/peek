@@ -35,6 +35,14 @@ public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldS
   widget.set_visual (visual);
 }
 
+public bool on_application_window_configure_event (Gdk.EventConfigure event) {
+  if (recorder.is_recording) {
+    recorder.cancel ();
+  }
+
+  return false;
+}
+
 public bool on_recording_view_draw (Widget widget, Context ctx) {
   if (supports_alpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
@@ -89,23 +97,14 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  enter_recording_state ();
-
   var area = get_recording_area ();
   stdout.printf ("Recording area: %i, %i, %i, %i\n",
     area.left, area.top, area.width, area.height);
-  if (!recorder.record (area)) {
-    leave_recording_state ();
-  }
+  recorder.record (area);
 }
 
 public void on_stop_button_clicked (Button source) {
-  var temp_file = recorder.stop ();
-  if (temp_file != null) {
-    save_output (temp_file);
-  }
-
-  leave_recording_state ();
+  recorder.stop ();
 }
 
 private void enter_recording_state () {
@@ -242,9 +241,19 @@ int main (string[] args) {
 
   try {
     recorder = new ScreenRecorder();
+    recorder.recording_started.connect (() => {
+      enter_recording_state ();
+    });
+    recorder.recording_finished.connect ((file) => {
+      leave_recording_state ();
+
+      if (file != null) {
+        save_output (file);
+      }
+    });
     recorder.recording_aborted.connect ((status) => {
       stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
-      leave_recording_state();
+      leave_recording_state ();
     });
 
     var builder = new Builder ();

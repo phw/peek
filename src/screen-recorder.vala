@@ -22,6 +22,10 @@ public class ScreenRecorder : Object {
 
   public bool is_recording { get; private set; default = false; }
 
+  public signal void recording_started ();
+
+  public signal void recording_finished (File file);
+
   public signal void recording_aborted (int status);
 
   ~ScreenRecorder () {
@@ -69,6 +73,7 @@ public class ScreenRecorder : Object {
       });
 
       is_recording = true;
+      recording_started ();
       return true;
     } catch (SpawnError e) {
       stderr.printf ("Error: %s\n", e.message);
@@ -85,6 +90,7 @@ public class ScreenRecorder : Object {
     var file = convert_to_gif();
     FileUtils.remove (temp_file);
     is_recording = false;
+    recording_finished (file);
     return file;
   }
 
@@ -93,6 +99,7 @@ public class ScreenRecorder : Object {
       stop_command ();
       FileUtils.remove (temp_file);
       is_recording = false;
+      recording_aborted (0);
     }
   }
 
