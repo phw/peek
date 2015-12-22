@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Peek
+Exec=peek
+Comment=An animated GIF recorder
+Icon=applets-screenshooter
+Type=Application
+Categories=GTK;GNOME;Utility;
+StartupNotify=true
+Terminal=false
