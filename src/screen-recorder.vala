@@ -9,12 +9,24 @@ This software is licensed under the GNU General Public License
 
 using GLib;
 
+public struct RecordingArea {
+  public int left;
+  public int top;
+  public int width;
+  public int height;
+}
+
 public class ScreenRecorder : Object {
   private IOChannel input;
   private string temp_file;
-  private bool recording = false;
 
-  public bool record (int left, int top, int width, int height) {
+  public bool is_recording { get; private set; default = false; }
+
+  ~ScreenRecorder () {
+    cancel ();
+  }
+
+  public bool record (RecordingArea area) {
     try {
       // Cancel running recording
       cancel ();
@@ -26,14 +38,12 @@ public class ScreenRecorder : Object {
         "-f", "x11grab",
         "-show_region", "0",
         "-framerate", "15",
-        "-video_size", width.to_string () + "x" + height.to_string (),
-        "-i", ":0+" + left.to_string () + "," + top.to_string (),
+        "-video_size", area.width.to_string () + "x" + area.height.to_string (),
+        "-i", ":0+" + area.left.to_string () + "," + area.top.to_string (),
         "-codec:v", "huffyuv",
         "-vf", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2)",
         temp_file
       };
-
-      stdout.printf("crop=\"iw-mod(iw,2):ih-mod(ih,2)\"\n");
 
       Pid pid;
       int standard_input;
@@ -48,7 +58,7 @@ public class ScreenRecorder : Object {
         Process.close_pid (pid);
       });
 
-      recording = true;
+      is_recording = true;
       return true;
     } catch (SpawnError e) {
       stderr.printf ("Error: %s\n", e.message);
@@ -64,15 +74,15 @@ public class ScreenRecorder : Object {
     stop_command ();
     var file = convert_to_gif();
     FileUtils.remove (temp_file);
-    recording = false;
+    is_recording = false;
     return file;
   }
 
   public void cancel () {
-    if (recording) {
+    if (is_recording) {
       stop_command ();
       FileUtils.remove (temp_file);
-      recording = false;
+      is_recording = false;
     }
   }
 

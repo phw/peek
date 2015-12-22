@@ -17,7 +17,7 @@ Button stop_button;
 Label size_indicator;
 uint size_indicator_timeout = 0;
 bool supports_alpha = true;
-ScreenRecorder recorder;
+ScreenRecorder recorder = null;
 
 public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldScreen) {
   var screen = widget.get_screen ();
@@ -60,21 +60,22 @@ public bool on_recording_view_draw (Widget widget, Context ctx) {
 public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle) {
   // Show the size
   var size_label = new StringBuilder();
-  size_label.printf ("%i x %i",
-    widget.get_allocated_width (),
-    widget.get_allocated_height ());
+  var area = get_recording_area ();
+  size_label.printf ("%i x %i", area.width, area.height);
   size_indicator.set_text (size_label.str);
   size_indicator.show ();
-  size_indicator.set_opacity (1.0);
 
   if (size_indicator_timeout != 0) {
     Source.remove (size_indicator_timeout);
   }
 
-  size_indicator_timeout = Timeout.add (800, () => {
+  if (!recorder.is_recording) {
+    size_indicator.set_opacity (1.0);
+    size_indicator_timeout = Timeout.add (800, () => {
       size_indicator.set_opacity (0.0);
       return false;
     });
+  }
 }
 
 public void on_application_window_delete_event (string[] args) {
@@ -88,27 +89,25 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
-  size_indicator.hide ();
+  size_indicator.set_opacity (0.0);
   record_button.hide ();
   stop_button.show ();
   freeze_window_size ();
 
-  var recording_view_window = recording_view.get_window ();
-  int left, top;
-  recording_view_window.get_origin (out left, out top);
-  var width = recording_view.get_allocated_width ();
-  var height = recording_view.get_allocated_height ();
-  stdout.printf ("Recording area: %i, %i, %i, %i\n", left, top, width, height);
-  recorder.record (left, top, width, height);
+  var area = get_recording_area ();
+  stdout.printf ("Recording area: %i, %i, %i, %i\n",
+    area.left, area.top, area.width, area.height);
+  recorder.record (area);
 }
 
 public void on_stop_button_clicked (Button source) {
   var temp_file = recorder.stop ();
   stdout.printf ("Recording stopped\n");
   save_output (temp_file);
+  recorder = null;
   stop_button.hide ();
   record_button.show ();
-  window.resizable = true;
+  unfreeze_window_size ();
 }
 
 private void freeze_window_size () {
@@ -116,6 +115,14 @@ private void freeze_window_size () {
   var height = window.get_allocated_height ();
   window.set_size_request (width, height);
   window.resizable = false;
+}
+
+private void unfreeze_window_size () {
+  var width = window.get_allocated_width ();
+  var height = window.get_allocated_height ();
+  window.set_size_request (0, 0);
+  window.set_default_size (width, height);
+  window.resizable = true;
 }
 
 private Region create_region_from_widget (Widget widget) {
@@ -128,6 +135,29 @@ private Region create_region_from_widget (Widget widget) {
   var region = new Region.rectangle (rectangle);
 
   return region;
+}
+
+private RecordingArea get_recording_area () {
+  var area = RecordingArea() {
+    width = recording_view.get_allocated_width (),
+    height = recording_view.get_allocated_height ()
+  };
+
+  // Get absoulte window coordinates
+  var recording_view_window = recording_view.get_window ();
+  recording_view_window.get_origin (out area.left, out area.top);
+
+  // FIXME: This is necessary for an exact position, not sure why.
+  area.top -= 1;
+
+  // Add relative widget coordinates
+  int relative_left, relative_top;
+  recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
+    out relative_left, out relative_top);
+  area.left += relative_left;
+  area.top += relative_top;
+
+  return area;
 }
 
 private void save_output (string temp_file) {
@@ -182,6 +212,8 @@ int main (string[] args) {
   Gtk.init (ref args);
 
   try {
+    recorder = new ScreenRecorder();
+
     var builder = new Builder ();
     builder.add_from_resource ("/de/uploadedlobster/peek/peek.ui");
     builder.connect_signals (null);
@@ -193,8 +225,6 @@ int main (string[] args) {
     record_button = builder.get_object ("record_button") as Button;
     stop_button = builder.get_object ("stop_button") as Button;
     size_indicator = builder.get_object ("size_indicator") as Label;
-
-    recorder = new ScreenRecorder();
 
     window.show_all ();
     Gtk.main ();
