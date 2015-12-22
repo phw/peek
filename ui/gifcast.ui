@@ -19,17 +19,33 @@
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkDrawingArea" id="recording_view">
+          <object class="GtkBox" id="recording_view">
             <property name="width_request">60</property>
             <property name="height_request">60</property>
             <property name="visible">True</property>
-            <property name="app_paintable">True</property>
             <property name="can_focus">False</property>
             <property name="margin_left">4</property>
             <property name="margin_right">4</property>
             <property name="margin_top">4</property>
             <property name="margin_bottom">4</property>
+            <property name="orientation">vertical</property>
             <signal name="draw" handler="on_recording_view_draw" swapped="no"/>
+            <signal name="size-allocate" handler="on_recording_view_size_allocate" swapped="no"/>
+            <child>
+              <object class="GtkLabel" id="size_indicator">
+                <property name="can_focus">False</property>
+                <property name="no_show_all">True</property>
+                <property name="label" translatable="yes">0 x 0</property>
+                <style>
+                  <class name="osd"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">True</property>

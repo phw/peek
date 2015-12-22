@@ -24,6 +24,8 @@ Window window;
 Widget recording_view;
 Button record_button;
 Button stop_button;
+Label size_indicator;
+uint size_indicator_timeout = 0;
 bool supports_alpha = true;
 ScreenRecorder recorder;
 
@@ -44,6 +46,7 @@ public void on_application_window_screen_changed (Widget widget, Gdk.Screen oldS
 }
 
 public bool on_recording_view_draw (Widget widget, Context ctx) {
+  stdout.printf ("on_recording_view_draw\n");
   if (supports_alpha) {
     ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
   }
@@ -65,6 +68,29 @@ public bool on_recording_view_draw (Widget widget, Context ctx) {
   return false;
 }
 
+public void on_recording_view_size_allocate (Widget widget, Rectangle rectangle) {
+  stdout.printf ("on_recording_view_size_allocate\n");
+
+  // Show the size
+  var size_label = new StringBuilder();
+  size_label.printf ("%i x %i",
+    widget.get_allocated_width (),
+    widget.get_allocated_height ());
+  size_indicator.set_text (size_label.str);
+  size_indicator.show ();
+  size_indicator.set_opacity (1.0);
+
+  if (size_indicator_timeout != 0) {
+    Source.remove (size_indicator_timeout);
+  }
+
+  size_indicator_timeout = Timeout.add (800, () => {
+      stdout.printf ("Timeout\n");
+      size_indicator.set_opacity (0.0);
+      return false;
+    });
+}
+
 public void on_application_window_delete_event (string[] args) {
   Gtk.main_quit ();
 }
@@ -74,6 +100,7 @@ public void on_cancel_button_clicked (Button source) {
 }
 
 public void on_record_button_clicked (Button source) {
+  size_indicator.hide ();
   record_button.hide ();
   stop_button.show ();
   freeze_window_size ();
@@ -177,6 +204,7 @@ int main (string[] args) {
     recording_view = builder.get_object ("recording_view") as Widget;
     record_button = builder.get_object ("record_button") as Button;
     stop_button = builder.get_object ("stop_button") as Button;
+    size_indicator = builder.get_object ("size_indicator") as Label;
 
     recorder = new ScreenRecorder();
 
