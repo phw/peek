@@ -150,6 +150,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                         <property name="can_focus">True</property>
                         <property name="halign">start</property>
                         <property name="hexpand">True</property>
+                        <property name="editable">False</property>
                         <property name="adjustment">recording_start_delay</property>
                         <property name="numeric">True</property>
                         <property name="value">1</property>

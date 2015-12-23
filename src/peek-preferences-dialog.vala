@@ -64,5 +64,7 @@ class PeekPreferencesDialog : Dialog {
     settings.bind ("recording-framerate",
       recording_framerate, "value",
       SettingsBindFlags.DEFAULT);
+
+    interface_auto_save.set_sensitive (false);
   }
 }
