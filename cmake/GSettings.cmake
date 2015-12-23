@@ -36,11 +36,20 @@ macro(add_schema SCHEMA_NAME)
     install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/${SCHEMA_NAME} DESTINATION ${GSETTINGS_DIR} OPTIONAL)
 
     if (GSETTINGS_COMPILE)
-        install (CODE "
-if(\"\$ENV{DESTDIR}\" STREQUAL \"\")
-    message (STATUS \"Compiling GSettings schemas\")
-    execute_process (COMMAND ${_glib_comple_schemas} ${GSETTINGS_DIR})
-endif()
-")
+        install (CODE "message (STATUS \"Compiling GSettings schemas\")")
+        install (CODE "execute_process (COMMAND ${_glib_comple_schemas} ${GSETTINGS_DIR})")
     endif ()
+
+    build_schema(${SCHEMA_NAME})
+endmacro()
+
+
+macro(build_schema SCHEMA_NAME)
+  message (STATUS "Copying schema to build directory ${CMAKE_BINARY_DIR}/schemas")
+  configure_file(${SCHEMA_NAME} schemas/${SCHEMA_NAME} COPYONLY)
+
+  set(PKG_CONFIG_EXECUTABLE pkg-config)
+  message (STATUS "Building development schema in ${CMAKE_BINARY_DIR}/schemas")
+  execute_process (COMMAND ${PKG_CONFIG_EXECUTABLE} gio-2.0 --variable glib_compile_schemas  OUTPUT_VARIABLE _glib_comple_schemas OUTPUT_STRIP_TRAILING_WHITESPACE)
+  execute_process (COMMAND ${_glib_comple_schemas} ${CMAKE_BINARY_DIR}/schemas)
 endmacro()

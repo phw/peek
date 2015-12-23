@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema path="/de/uploadedlobster/peek/" id="de.uploadedlobster.peek">
-    <key name="record-start-delay" type="i">
-      <range min="0" max="100"/>
+    <key name="interface-open-file-manager" type="b">
+      <default>true</default>
+      <summary>Open file manager after saving</summary>
+    </key>
+    <key name="interface-auto-save" type="b">
+      <default>false</default>
+      <summary>Automatically save files when recording stops</summary>
+    </key>
+
+    <key name="recording-start-delay" type="i">
+      <range min="0" max="60"/>
       <default>5</default>
+      <summary>Delay in seconds before recording starts</summary>
+    </key>
+    <key name="recording-framerate" type="i">
+      <range min="1" max="30"/>
+      <default>15</default>
+      <summary>Framerate</summary>
+    </key>
+    <key name="recording-loop" type="b">
+      <default>true</default>
+      <summary>Loop animation</summary>
     </key>
   </schema>
 </schemalist>

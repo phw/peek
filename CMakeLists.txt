@@ -33,9 +33,6 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 )
 
 # GSettings
-#set (GSETTINGS_DIR "${PREFIX}/share/glib-2.0/schemas/" CACHE INTERNAL "")
-#set (GSETTINGS_DIR ${CMAKE_SOURCE_DIR})
-#add_schemas(peek ${GSETTINGS_DIR} ${CMAKE_INSTALL_PREFIX})
 add_schema ("de.uploadedlobster.peek.gschema.xml")
 
 # Compile Vala to C

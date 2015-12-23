@@ -9,10 +9,29 @@ This software is licensed under the GNU General Public License
 
 public class PeekApplication : Gtk.Application {
 
+  const string APP_ID = "de.uploadedlobster.peek";
+
   private Gtk.Window main_window;
 
+  public static Settings get_app_settings () {
+    Settings settings;
+
+    try {
+      var settings_dir = "./schemas/";
+      var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
+      SettingsSchema schema = schema_source.lookup (APP_ID, false);
+      settings = new Settings.full (schema, null, null);
+    }
+    catch (GLib.Error e) {
+      stderr.printf ("Loading local settings failed: %s", e.message);
+      settings = new Settings (APP_ID);
+    }
+
+    return settings;
+  }
+
   public PeekApplication () {
-    Object (application_id: "de.uploadedlobster.peek",
+    Object (application_id: APP_ID,
       flags: ApplicationFlags.FLAGS_NONE);
   }
 

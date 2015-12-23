@@ -27,12 +27,23 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   <!-- interface-name Peek -->
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
   <!-- interface-authors Philipp Wolfer <ph.wolfer@gmail.com> -->
+  <object class="GtkAdjustment" id="recording_framerate">
+    <property name="lower">1</property>
+    <property name="upper">30</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="recording_start_delay">
+    <property name="upper">60</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <template class="PeekPreferencesDialog" parent="GtkDialog">
     <property name="can_focus">False</property>
     <property name="resizable">False</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox2">
+      <object class="GtkBox" id="dialog-vbox1">
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
@@ -58,14 +69,14 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child>
-              <object class="GtkBox" id="box2">
+              <object class="GtkBox" id="tab_1_content">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="border_width">12</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkCheckButton" id="checkbutton2">
+                  <object class="GtkCheckButton" id="interface_open_file_manager">
                     <property name="label" translatable="yes">Open file manager after saving</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -80,7 +91,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="checkbutton3">
+                  <object class="GtkCheckButton" id="interface_auto_save">
                     <property name="label" translatable="yes">Automatically save files when recording stops</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -97,30 +108,30 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               </object>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label3">
+              <object class="GtkLabel" id="tab_1_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Interface</property>
+                <property name="label" translatable="yes">User interface</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
               </packing>
             </child>
             <child>
-              <object class="GtkBox" id="box4">
+              <object class="GtkBox" id="tab_2_content">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="border_width">12</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">6</property>
                 <child>
-                  <object class="GtkBox" id="box5">
+                  <object class="GtkBox" id="recording_start_delay_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">12</property>
                     <property name="homogeneous">True</property>
                     <child>
-                      <object class="GtkLabel" id="label5">
+                      <object class="GtkLabel" id="recording_start_delay_label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="halign">end</property>
@@ -134,12 +145,14 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkSpinButton" id="recording_delay">
+                      <object class="GtkSpinButton" id="recording_start_delay_spinner">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">start</property>
                         <property name="hexpand">True</property>
+                        <property name="adjustment">recording_start_delay</property>
                         <property name="numeric">True</property>
+                        <property name="value">1</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -155,13 +168,13 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="box6">
+                  <object class="GtkBox" id="recording_framerate_box">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">12</property>
                     <property name="homogeneous">True</property>
                     <child>
-                      <object class="GtkLabel" id="label6">
+                      <object class="GtkLabel" id="recording_framerate_label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="halign">end</property>
@@ -175,11 +188,12 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkSpinButton" id="recording_delay1">
+                      <object class="GtkSpinButton" id="recording_framerate_spinner">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="halign">start</property>
                         <property name="hexpand">True</property>
+                        <property name="adjustment">recording_framerate</property>
                         <property name="numeric">True</property>
                       </object>
                       <packing>
@@ -196,7 +210,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="checkbutton1">
+                  <object class="GtkCheckButton" id="recording_loop">
                     <property name="label" translatable="yes">Loop animation</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -216,7 +230,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               </packing>
             </child>
             <child type="tab">
-              <object class="GtkLabel" id="label4">
+              <object class="GtkLabel" id="tab_2_label">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">Recording</property>

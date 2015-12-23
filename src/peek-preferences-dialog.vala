@@ -29,4 +29,47 @@ class PeekPreferencesDialog : Dialog {
     instance.present ();
     return instance;
   }
+
+  private GLib.Settings settings;
+
+  [GtkChild]
+  private Gtk.CheckButton interface_open_file_manager;
+
+  [GtkChild]
+  private Gtk.CheckButton interface_auto_save;
+
+  [GtkChild]
+  private Gtk.Adjustment recording_start_delay;
+
+  [GtkChild]
+  private Gtk.Adjustment recording_framerate;
+
+  [GtkChild]
+  private Gtk.CheckButton recording_loop;
+
+  public PeekPreferencesDialog () {
+    Object (use_header_bar: 1);
+
+    settings = PeekApplication.get_app_settings ();
+
+    settings.bind ("interface-open-file-manager",
+      interface_open_file_manager, "active",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("interface-auto-save",
+      interface_auto_save, "active",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("recording-start-delay",
+      recording_start_delay, "value",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("recording-framerate",
+      recording_framerate, "value",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("recording-loop",
+      recording_loop, "active",
+      SettingsBindFlags.DEFAULT);
+  }
 }
