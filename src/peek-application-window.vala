@@ -12,6 +12,7 @@ using Cairo;
 
 [GtkTemplate (ui = "/de/uploadedlobster/peek/application-window.ui")]
 class PeekApplicationWindow : ApplicationWindow {
+  public ScreenRecorder recorder { get; private set; }
 
   [GtkChild]
   private Widget recording_view;
@@ -27,7 +28,6 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private uint size_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
-  private ScreenRecorder recorder;
 
   public PeekApplicationWindow (Gtk.Application application,
     ScreenRecorder recorder) {
@@ -71,6 +71,14 @@ class PeekApplicationWindow : ApplicationWindow {
   }
 
   public override bool configure_event (Gdk.EventConfigure event) {
+    if (recorder.is_recording) {
+      recorder.cancel ();
+    }
+
+    return false;
+  }
+
+  public override bool delete_event (Gdk.EventAny event) {
     if (recorder.is_recording) {
       recorder.cancel ();
     }

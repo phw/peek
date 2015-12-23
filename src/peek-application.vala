@@ -9,7 +9,6 @@ This software is licensed under the GNU General Public License
 
 public class PeekApplication : Gtk.Application {
   private Gtk.Window main_window;
-  private ScreenRecorder recorder;
 
   public PeekApplication () {
     Object (application_id: "de.uploadedlobster.peek",
@@ -17,7 +16,7 @@ public class PeekApplication : Gtk.Application {
   }
 
   public override void activate () {
-    recorder = new ScreenRecorder ();
+    var recorder = new ScreenRecorder ();
     main_window = new PeekApplicationWindow (this, recorder);
     main_window.present ();
   }
@@ -41,7 +40,11 @@ public class PeekApplication : Gtk.Application {
   }
 
   public override void shutdown () {
-    recorder.cancel ();
+    foreach (var window in this.get_windows ()) {
+      var recorder = (window as PeekApplicationWindow).recorder;
+      recorder.cancel ();
+    }
+
     base.shutdown ();
   }
 
