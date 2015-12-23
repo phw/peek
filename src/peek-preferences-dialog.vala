@@ -44,9 +44,6 @@ class PeekPreferencesDialog : Dialog {
   [GtkChild]
   private Gtk.Adjustment recording_framerate;
 
-  [GtkChild]
-  private Gtk.CheckButton recording_loop;
-
   public PeekPreferencesDialog () {
     Object (use_header_bar: 1);
 
@@ -66,10 +63,6 @@ class PeekPreferencesDialog : Dialog {
 
     settings.bind ("recording-framerate",
       recording_framerate, "value",
-      SettingsBindFlags.DEFAULT);
-
-    settings.bind ("recording-loop",
-      recording_loop, "active",
       SettingsBindFlags.DEFAULT);
   }
 }

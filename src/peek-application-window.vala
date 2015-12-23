@@ -29,9 +29,12 @@ class PeekApplicationWindow : ApplicationWindow {
   private uint size_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
 
+  private GLib.Settings settings;
+
   public PeekApplicationWindow (Gtk.Application application,
     ScreenRecorder recorder) {
     Object (application: application);
+    this.set_keep_above (true);
 
     this.recorder = recorder;
     this.recorder.recording_started.connect (() => {
@@ -51,7 +54,10 @@ class PeekApplicationWindow : ApplicationWindow {
       leave_recording_state ();
     });
 
-    this.set_keep_above (true);
+    settings = PeekApplication.get_app_settings ();
+    settings.bind ("recording-framerate",
+      this.recorder, "framerate",
+      SettingsBindFlags.DEFAULT);
   }
 
   public override void screen_changed (Gdk.Screen previous_screen) {
@@ -157,6 +163,7 @@ class PeekApplicationWindow : ApplicationWindow {
     record_button.hide ();
     stop_button.show ();
     freeze_window_size ();
+    set_keep_above (true);
   }
 
   private void leave_recording_state () {

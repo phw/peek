@@ -16,13 +16,9 @@
       <summary>Delay in seconds before recording starts</summary>
     </key>
     <key name="recording-framerate" type="i">
-      <range min="1" max="30"/>
+      <range min="5" max="60"/>
       <default>15</default>
       <summary>Framerate</summary>
-    </key>
-    <key name="recording-loop" type="b">
-      <default>true</default>
-      <summary>Loop animation</summary>
     </key>
   </schema>
 </schemalist>

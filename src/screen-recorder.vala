@@ -22,6 +22,8 @@ public class ScreenRecorder : Object {
 
   public bool is_recording { get; private set; default = false; }
 
+  public int framerate { get; set; default = 15; }
+
   public signal void recording_started ();
 
   public signal void recording_finished (File file);
@@ -47,7 +49,7 @@ public class ScreenRecorder : Object {
         "ffmpeg", "-y",
         "-f", "x11grab",
         "-show_region", "0",
-        "-framerate", "15",
+        "-framerate", framerate.to_string (),
         "-video_size", area.width.to_string () + "x" + area.height.to_string (),
         "-i", display + "+" + area.left.to_string () + "," + area.top.to_string (),
         "-codec:v", "huffyuv",
@@ -125,10 +127,11 @@ public class ScreenRecorder : Object {
 
   private File? convert_to_gif () {
     try {
+      double delay = (100.0 / framerate);
       var output_file = create_temp_file ("gif");
       string[] argv = {
         "convert",
-        "-set", "delay", "10",
+        "-set", "delay", delay.to_string(),
         "-layers", "Optimize",
         temp_file,
         output_file

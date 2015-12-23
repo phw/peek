@@ -28,8 +28,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
   <!-- interface-authors Philipp Wolfer <ph.wolfer@gmail.com> -->
   <object class="GtkAdjustment" id="recording_framerate">
-    <property name="lower">1</property>
-    <property name="upper">30</property>
+    <property name="lower">5</property>
+    <property name="upper">60</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>
@@ -207,21 +207,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkCheckButton" id="recording_loop">
-                    <property name="label" translatable="yes">Loop animation</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">False</property>
-                    <property name="xalign">0</property>
-                    <property name="draw_indicator">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">2</property>
                   </packing>
                 </child>
               </object>
