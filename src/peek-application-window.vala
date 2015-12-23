@@ -14,6 +14,8 @@ using Cairo;
 class PeekApplicationWindow : ApplicationWindow {
   public ScreenRecorder recorder { get; private set; }
 
+  public bool open_file_manager { get; set; }
+
   [GtkChild]
   private Widget recording_view;
 
@@ -55,6 +57,11 @@ class PeekApplicationWindow : ApplicationWindow {
     });
 
     settings = PeekApplication.get_app_settings ();
+
+    settings.bind ("interface-open-file-manager",
+      this, "open_file_manager",
+      SettingsBindFlags.DEFAULT);
+
     settings.bind ("recording-framerate",
       this.recorder, "framerate",
       SettingsBindFlags.DEFAULT);
@@ -235,7 +242,7 @@ class PeekApplicationWindow : ApplicationWindow {
     chooser.filter = filter;
     filter.add_mime_type ("image/gif");
 
-    var folder = get_video_folder ();
+    var folder = DesktopIntegration.get_video_folder ();
     chooser.set_current_folder (folder);
 
     var now = new DateTime.now_local ();
@@ -252,6 +259,10 @@ class PeekApplicationWindow : ApplicationWindow {
             stdout.printf ("File saved %s: %s\n",
               copy_success.to_string (),
               out_file.get_uri ());
+
+            if (copy_success && open_file_manager) {
+              DesktopIntegration.launch_file_manager (out_file);
+            }
 
             in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
               try {
@@ -271,20 +282,5 @@ class PeekApplicationWindow : ApplicationWindow {
 
     // Close the FileChooserDialog:
     chooser.close ();
-  }
-
-  private string get_video_folder () {
-    string folder;
-    folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.VIDEOS);
-
-    if (folder == null) {
-      folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.PICTURES);
-    }
-
-    if (folder == null) {
-      folder = GLib.Environment.get_home_dir ();
-    }
-
-    return folder;
   }
 }

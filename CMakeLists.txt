@@ -42,6 +42,7 @@ vala_precompile(VALA_C
     src/peek-application-window.vala
     src/peek-about-dialog.vala
     src/peek-preferences-dialog.vala
+    src/desktop-integration.vala
     src/screen-recorder.vala
   PACKAGES
     gtk+-3.0
