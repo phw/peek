@@ -8,6 +8,7 @@ This software is licensed under the GNU General Public License
 */
 
 public class PeekApplication : Gtk.Application {
+
   private Gtk.Window main_window;
 
   public PeekApplication () {
@@ -49,12 +50,10 @@ public class PeekApplication : Gtk.Application {
   }
 
   private void show_preferences () {
-    var dialog = new PeekPreferencesDialog (main_window);
-    dialog.show ();
+    PeekPreferencesDialog.present_single_instance (main_window);
   }
 
   private void show_about () {
-    var dialog = new PeekAboutDialog (main_window);
-    dialog.show ();
+    PeekAboutDialog.present_single_instance (main_window);
   }
 }
