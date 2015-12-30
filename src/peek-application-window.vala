@@ -79,6 +79,8 @@ class PeekApplicationWindow : ApplicationWindow {
   }
 
   public override void screen_changed (Gdk.Screen previous_screen) {
+    base.screen_changed (previous_screen);
+
     var screen = this.get_screen ();
     var visual = screen.get_rgba_visual ();
 
@@ -99,7 +101,7 @@ class PeekApplicationWindow : ApplicationWindow {
       recorder.cancel ();
     }
 
-    return false;
+    return base.configure_event (event);
   }
 
   public override bool delete_event (Gdk.EventAny event) {
