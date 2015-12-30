@@ -46,7 +46,8 @@ endmacro()
 
 macro(build_schema SCHEMA_NAME)
   message (STATUS "Copying schema to build directory ${CMAKE_BINARY_DIR}/schemas")
-  configure_file(${SCHEMA_NAME} schemas/${SCHEMA_NAME} COPYONLY)
+  get_filename_component (SCHEMA_FILE_NAME ${SCHEMA_NAME} NAME)
+  configure_file(${SCHEMA_NAME} schemas/${SCHEMA_FILE_NAME} COPYONLY)
 
   set(PKG_CONFIG_EXECUTABLE pkg-config)
   message (STATUS "Building development schema in ${CMAKE_BINARY_DIR}/schemas")

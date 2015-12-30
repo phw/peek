@@ -1,2 +1,12 @@
 *~
 build/*
+
+CMakeCache.txt
+CMakeFiles/*
+cmake_install.cmake
+Makefile
+
+peek
+src/*.c
+ui/*.c
+schemas/gschemas.compiled

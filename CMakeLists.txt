@@ -33,7 +33,7 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 )
 
 # GSettings
-add_schema ("de.uploadedlobster.peek.gschema.xml")
+add_schema (schemas/de.uploadedlobster.peek.gschema.xml)
 
 # Compile Vala to C
 vala_precompile(VALA_C
@@ -48,7 +48,7 @@ vala_precompile(VALA_C
     gtk+-3.0
   OPTIONS
     --target-glib=2.38
-    --gresources=../ui/${PROJECT_NAME}.gresource.xml
+    --gresources=${CMAKE_SOURCE_DIR}/ui/${PROJECT_NAME}.gresource.xml
 )
 
 # Compile C code
