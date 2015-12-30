@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.19.0
+<!-- Generated with glade 3.19.0 
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -67,6 +67,24 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
                 <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="delay_indicator">
+                <property name="can_focus">False</property>
+                <property name="no_show_all">True</property>
+                <property name="label" translatable="yes">0</property>
+                <attributes>
+                  <attribute name="scale" value="4"/>
+                </attributes>
+                <style>
+                  <class name="osd"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>

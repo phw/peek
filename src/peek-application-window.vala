@@ -16,6 +16,8 @@ class PeekApplicationWindow : ApplicationWindow {
 
   public bool open_file_manager { get; set; }
 
+  public int recording_start_delay { get; set; }
+
   [GtkChild]
   private Widget recording_view;
 
@@ -28,8 +30,13 @@ class PeekApplicationWindow : ApplicationWindow {
   [GtkChild]
   private Label size_indicator;
 
+  [GtkChild]
+  private Label delay_indicator;
+
   private uint size_indicator_timeout = 0;
+  private uint delay_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
+  private bool is_recording = false;
 
   private GLib.Settings settings;
 
@@ -64,6 +71,10 @@ class PeekApplicationWindow : ApplicationWindow {
 
     settings.bind ("recording-framerate",
       this.recorder, "framerate",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("recording-start-delay",
+      this, "recording_start_delay",
       SettingsBindFlags.DEFAULT);
   }
 
@@ -125,7 +136,7 @@ class PeekApplicationWindow : ApplicationWindow {
   [GtkCallback]
   private void on_recording_view_size_allocate (Allocation allocation) {
     // Show the size
-    if (this.get_realized ()) {
+    if (this.get_realized () && !is_recording) {
       var size_label = new StringBuilder ();
       var area = get_recording_area ();
       size_label.printf ("%i x %i", area.width, area.height);
@@ -154,18 +165,54 @@ class PeekApplicationWindow : ApplicationWindow {
 
   [GtkCallback]
   private void on_record_button_clicked (Button source) {
+    enter_recording_state ();
+    var delay = this.recording_start_delay;
+
+    if (delay > 0) {
+      delay_indicator.set_text (delay.to_string ());
+      delay_indicator.show ();
+      size_indicator.hide ();
+      delay_indicator_timeout = Timeout.add (1000, () => {
+        delay -= 1;
+
+        if (delay == 0) {
+          delay_indicator_timeout = 0;
+          delay_indicator.hide ();
+          start_recording ();
+          return false;
+        }
+        else {
+          delay_indicator.set_text (delay.to_string ());
+          return true;
+        }
+      });
+    }
+    else {
+      start_recording ();
+    }
+  }
+
+  [GtkCallback]
+  private void on_stop_button_clicked (Button source) {
+    if (delay_indicator_timeout != 0) {
+      Source.remove (delay_indicator_timeout);
+      delay_indicator_timeout = 0;
+      leave_recording_state ();
+    }
+    else {
+      recorder.stop ();
+    }
+  }
+
+  private void start_recording () {
     var area = get_recording_area ();
     stdout.printf ("Recording area: %i, %i, %i, %i\n",
       area.left, area.top, area.width, area.height);
     recorder.record (area);
   }
 
-  [GtkCallback]
-  private void on_stop_button_clicked (Button source) {
-    recorder.stop ();
-  }
-
   private void enter_recording_state () {
+    is_recording = true;
     size_indicator.opacity = 0.0;
     record_button.hide ();
     stop_button.show ();
@@ -174,6 +221,8 @@ class PeekApplicationWindow : ApplicationWindow {
   }
 
   private void leave_recording_state () {
+    delay_indicator.hide ();
+    is_recording = false;
     stop_button.hide ();
     record_button.show ();
     unfreeze_window_size ();
