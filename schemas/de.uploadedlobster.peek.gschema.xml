@@ -12,7 +12,7 @@
 
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
-      <default>5</default>
+      <default>3</default>
       <summary>Delay in seconds before recording starts</summary>
     </key>
     <key name="recording-framerate" type="i">
