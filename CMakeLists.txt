@@ -13,6 +13,9 @@ include(UseVala)
 include(GResource)
 include(GSettings)
 
+# Variables
+set(GETTEXT_PACKAGE ${PROJECT_NAME})
+
 # Check dependencies
 find_package(Vala 0.22 REQUIRED)
 
@@ -52,6 +55,7 @@ vala_precompile(VALA_C
 )
 
 # Compile C code
+add_definitions(-DGETTEXT_PACKAGE="${GETTEXT_PACKAGE}")
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 
 # Installation

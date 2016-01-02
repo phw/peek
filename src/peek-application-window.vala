@@ -7,6 +7,7 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using GLib;
 using Gtk;
 using Cairo;
 
@@ -282,10 +283,10 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private void save_output (File in_file) {
     var chooser = new FileChooserDialog (
-      "Select your favorite file", null, FileChooserAction.SAVE,
-      "_Cancel",
+      null, null, FileChooserAction.SAVE,
+      _ ("_Cancel"),
       ResponseType.CANCEL,
-      "_Save",
+      _ ("_Save"),
       ResponseType.ACCEPT);
 
     var filter = new FileFilter ();

@@ -58,7 +58,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <object class="GtkLabel" id="size_indicator">
                 <property name="can_focus">False</property>
                 <property name="no_show_all">True</property>
-                <property name="label" translatable="yes">0 x 0</property>
+                <property name="label">0 x 0</property>
                 <style>
                   <class name="osd"/>
                 </style>
@@ -73,7 +73,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <object class="GtkLabel" id="delay_indicator">
                 <property name="can_focus">False</property>
                 <property name="no_show_all">True</property>
-                <property name="label" translatable="yes">0</property>
+                <property name="label">0</property>
                 <attributes>
                   <attribute name="scale" value="4"/>
                 </attributes>
