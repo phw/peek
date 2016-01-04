@@ -268,9 +268,6 @@ class PeekApplicationWindow : ApplicationWindow {
     var recording_view_window = recording_view.get_window ();
     recording_view_window.get_origin (out area.left, out area.top);
 
-    // FIXME: This is necessary for an exact position, not sure why.
-    area.top -= 1;
-
     // Add relative widget coordinates
     int relative_left, relative_top;
     recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
