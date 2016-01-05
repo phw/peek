@@ -12,7 +12,7 @@ using Cairo;
 
 [GtkTemplate (ui = "/de/uploadedlobster/peek/application-window.ui")]
 class PeekApplicationWindow : ApplicationWindow {
-  public ScreenRecorder recorder { get; private set; }
+  public ScreenRecorder recorder { get; construct set; }
 
   public bool open_file_manager { get; set; }
 
