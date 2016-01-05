@@ -63,3 +63,5 @@ add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 # Installation
 install (TARGETS ${PROJECT_NAME} DESTINATION bin)
 install (PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+
+add_subdirectory(assets)

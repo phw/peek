@@ -1,0 +1,6 @@
+install(FILES "16x16/peek.png" DESTINATION share/icons/hicolor/16x16/apps)
+install(FILES "24x24/peek.png" DESTINATION share/icons/hicolor/24x24/apps)
+install(FILES "32x32/peek.png" DESTINATION share/icons/hicolor/32x32/apps)
+install(FILES "48x48/peek.png" DESTINATION share/icons/hicolor/48x48/apps)
+install(FILES "256x256/peek.png" DESTINATION share/icons/hicolor/256x256/apps)
+install(FILES "512x512/peek.png" DESTINATION share/icons/hicolor/512x512/apps)
