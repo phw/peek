@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -15,6 +15,8 @@ class PeekApplicationWindow : ApplicationWindow {
   public ScreenRecorder recorder { get; construct set; }
 
   public bool open_file_manager { get; set; }
+
+  public int size_indicator_delay { get; set; }
 
   public int recording_start_delay { get; set; }
 
@@ -69,6 +71,10 @@ class PeekApplicationWindow : ApplicationWindow {
     settings.bind ("interface-open-file-manager",
       this, "open_file_manager",
       SettingsBindFlags.DEFAULT);
+
+      settings.bind ("interface-size-indicator-delay",
+        this, "size_indicator_delay",
+        SettingsBindFlags.DEFAULT);
 
     settings.bind ("recording-framerate",
       this.recorder, "framerate",
@@ -155,7 +161,7 @@ class PeekApplicationWindow : ApplicationWindow {
 
       if (!recorder.is_recording) {
         size_indicator.opacity = 1.0;
-        size_indicator_timeout = Timeout.add (800, () => {
+        size_indicator_timeout = Timeout.add (size_indicator_delay, () => {
           size_indicator_timeout = 0;
           size_indicator.opacity = 0.0;
           return false;
