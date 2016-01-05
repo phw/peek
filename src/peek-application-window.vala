@@ -162,11 +162,6 @@ class PeekApplicationWindow : ApplicationWindow {
   }
 
   [GtkCallback]
-  private void on_cancel_button_clicked (Button source) {
-    this.close ();
-  }
-
-  [GtkCallback]
   private void on_record_button_clicked (Button source) {
     enter_recording_state ();
     var delay = this.recording_start_delay;

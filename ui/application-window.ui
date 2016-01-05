@@ -27,6 +27,16 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   <!-- interface-name Peek -->
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
   <!-- interface-authors Philipp Wolfer <ph.wolfer@gmail.com> -->
+  <object class="GtkImage" id="icon_record_button">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">media-playback-start</property>
+  </object>
+  <object class="GtkImage" id="icon_stop_button">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">media-playback-stop</property>
+  </object>
   <template class="PeekApplicationWindow" parent="GtkApplicationWindow">
     <property name="width_request">60</property>
     <property name="height_request">60</property>
@@ -47,10 +57,10 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="height_request">20</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_left">4</property>
-            <property name="margin_right">4</property>
-            <property name="margin_top">4</property>
-            <property name="margin_bottom">4</property>
+            <property name="margin_left">6</property>
+            <property name="margin_right">6</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
             <property name="orientation">vertical</property>
             <signal name="draw" handler="on_recording_view_draw" swapped="no"/>
             <signal name="size-allocate" handler="on_recording_view_size_allocate" swapped="no"/>
@@ -94,40 +104,23 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="position">0</property>
           </packing>
         </child>
-        <style>
-          <class name="background"/>
-        </style>
-      </object>
-    </child>
-    <child type="titlebar">
-      <object class="GtkHeaderBar" id="headerbar">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="has_subtitle">False</property>
-        <child>
-          <object class="GtkButton" id="cancel_button">
-            <property name="label">gtk-cancel</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="use_stock">True</property>
-            <signal name="clicked" handler="on_cancel_button_clicked" swapped="no"/>
-          </object>
-          <packing>
-            <property name="position">1</property>
-          </packing>
-        </child>
         <child>
           <object class="GtkButtonBox" id="action_button_box">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="layout_style">start</property>
+            <property name="margin_bottom">6</property>
+            <property name="layout_style">center</property>
             <child>
               <object class="GtkButton" id="record_button">
-                <property name="label" translatable="yes">Record screen area</property>
+                <property name="label" translatable="yes">_Record</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Start recording</property>
+                <property name="halign">center</property>
+                <property name="image">icon_record_button</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_record_button_clicked" swapped="no"/>
                 <style>
                   <class name="suggested-action"/>
@@ -141,11 +134,15 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             </child>
             <child>
               <object class="GtkButton" id="stop_button">
-                <property name="label">gtk-media-stop</property>
+                <property name="label">_Stop</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="no_show_all">True</property>
-                <property name="use_stock">True</property>
+                <property name="tooltip_text" translatable="yes">Stop recording</property>
+                <property name="halign">center</property>
+                <property name="image">icon_stop_button</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_stop_button_clicked" swapped="no"/>
                 <style>
                   <class name="destructive-action"/>
@@ -159,10 +156,24 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             </child>
           </object>
           <packing>
-            <property name="pack_type">end</property>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>
+        <style>
+          <class name="background"/>
+          <class name="header-bar"/>
+        </style>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="has_subtitle">False</property>
+        <property name="show_close_button">True</property>
+        <property name="decoration_layout">menu:close</property>
       </object>
     </child>
   </template>
