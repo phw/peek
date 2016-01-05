@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -36,7 +36,7 @@ public class PeekApplication : Gtk.Application {
   }
 
   public override void activate () {
-    var recorder = new ScreenRecorder ();
+    var recorder = new FfmpegScreenRecorder ();
     main_window = new PeekApplicationWindow (this, recorder);
     main_window.present ();
   }

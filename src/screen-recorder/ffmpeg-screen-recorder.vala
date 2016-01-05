@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -7,41 +7,15 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-using GLib;
-
-public struct RecordingArea {
-  public int left;
-  public int top;
-  public int width;
-  public int height;
-
-  public bool equals (RecordingArea? other) {
-    if (other == null) {
-      return false;
-    }
-
-    return this.left == other.left
-      && this.top == other.top
-      && this.width == other.width
-      && this.height == other.height;
-  }
-}
-
-public class ScreenRecorder : Object {
+public class FfmpegScreenRecorder : Object, ScreenRecorder {
   private IOChannel input;
   private string temp_file;
 
-  public bool is_recording { get; private set; default = false; }
+  public bool is_recording { get; protected set; default = false; }
 
   public int framerate { get; set; default = 15; }
 
-  public signal void recording_started ();
-
-  public signal void recording_finished (File file);
-
-  public signal void recording_aborted (int status);
-
-  ~ScreenRecorder () {
+  ~FfmpegScreenRecorder () {
     cancel ();
   }
 

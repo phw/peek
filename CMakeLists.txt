@@ -46,7 +46,9 @@ vala_precompile(VALA_C
     src/peek-about-dialog.vala
     src/peek-preferences-dialog.vala
     src/desktop-integration.vala
-    src/screen-recorder.vala
+    src/screen-recorder/screen-recorder.vala
+    src/screen-recorder/ffmpeg-screen-recorder.vala
+    src/screen-recorder/recording-area.vala
   PACKAGES
     gtk+-3.0
   OPTIONS

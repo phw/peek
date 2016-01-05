@@ -7,7 +7,6 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-using GLib;
 using Gtk;
 using Cairo;
 
