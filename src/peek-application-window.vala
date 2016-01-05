@@ -279,7 +279,7 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private void save_output (File in_file) {
     var chooser = new FileChooserDialog (
-      null, null, FileChooserAction.SAVE,
+      null, this, FileChooserAction.SAVE,
       _ ("_Cancel"),
       ResponseType.CANCEL,
       _ ("_Save"),
