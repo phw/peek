@@ -38,6 +38,7 @@ class PeekApplicationWindow : ApplicationWindow {
   private uint delay_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
   private bool is_recording = false;
+  private RecordingArea active_recording_area;
 
   private GLib.Settings settings;
 
@@ -99,7 +100,10 @@ class PeekApplicationWindow : ApplicationWindow {
 
   public override bool configure_event (Gdk.EventConfigure event) {
     if (recorder.is_recording) {
-      recorder.cancel ();
+      var new_recording_area = get_recording_area ();
+      if (!new_recording_area.equals (active_recording_area)) {
+        recorder.cancel ();
+      }
     }
 
     return base.configure_event (event);
@@ -206,6 +210,7 @@ class PeekApplicationWindow : ApplicationWindow {
     var area = get_recording_area ();
     stdout.printf ("Recording area: %i, %i, %i, %i\n",
       area.left, area.top, area.width, area.height);
+    active_recording_area = area;
     recorder.record (area);
   }
 
