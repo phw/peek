@@ -116,7 +116,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="tooltip_text" translatable="yes">Start recording</property>
                 <property name="halign">center</property>
                 <property name="image">icon_record_button</property>
                 <property name="use_underline">True</property>
@@ -138,7 +137,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="no_show_all">True</property>
-                <property name="tooltip_text" translatable="yes">Stop recording</property>
                 <property name="halign">center</property>
                 <property name="image">icon_stop_button</property>
                 <property name="use_underline">True</property>
