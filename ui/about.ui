@@ -40,6 +40,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="artists">ElBablo</property>
     <property name="logo_icon_name">peek</property>
     <property name="license_type">gpl-3-0</property>
+    <signal name="response" handler="on_response" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
         <property name="can_focus">False</property>

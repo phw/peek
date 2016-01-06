@@ -7,10 +7,8 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-using Gtk;
-
 [GtkTemplate (ui = "/de/uploadedlobster/peek/about.ui")]
-class PeekAboutDialog : AboutDialog {
+class PeekAboutDialog : Gtk.AboutDialog {
 
   private static Gtk.Dialog? instance;
 
@@ -28,5 +26,13 @@ class PeekAboutDialog : AboutDialog {
     main_window.set_keep_above (false);
     instance.present ();
     return instance;
+  }
+
+  [GtkCallback]
+  private void on_response (int response_id) {
+    if (response_id == Gtk.ResponseType.CANCEL
+      || response_id == Gtk.ResponseType.DELETE_EVENT) {
+      this.hide_on_delete ();
+    }
   }
 }
