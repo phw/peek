@@ -66,6 +66,8 @@ class PeekApplicationWindow : ApplicationWindow {
       leave_recording_state ();
     });
 
+    this.on_window_screen_changed (null);
+
     settings = PeekApplication.get_app_settings ();
 
     settings.bind ("interface-open-file-manager",
@@ -85,24 +87,6 @@ class PeekApplicationWindow : ApplicationWindow {
       SettingsBindFlags.DEFAULT);
   }
 
-  public override void screen_changed (Gdk.Screen previous_screen) {
-    base.screen_changed (previous_screen);
-
-    var screen = this.get_screen ();
-    var visual = screen.get_rgba_visual ();
-
-    if (visual == null) {
-      stderr.printf ("Screen does not support alpha channels!");
-      visual = screen.get_system_visual ();
-      screen_supports_alpha = false;
-    }
-    else {
-      screen_supports_alpha = true;
-    }
-
-    this.set_visual (visual);
-  }
-
   public override bool configure_event (Gdk.EventConfigure event) {
     if (recorder.is_recording) {
       var new_recording_area = get_recording_area ();
@@ -120,6 +104,23 @@ class PeekApplicationWindow : ApplicationWindow {
     }
 
     return false;
+  }
+
+  [GtkCallback]
+  public void on_window_screen_changed (Gdk.Screen? previous_screen) {
+    var screen = this.get_screen ();
+    var visual = screen.get_rgba_visual ();
+
+    if (visual == null) {
+      stderr.printf ("Screen does not support alpha channels!");
+      visual = screen.get_system_visual ();
+      screen_supports_alpha = false;
+    }
+    else {
+      screen_supports_alpha = true;
+    }
+
+    this.set_visual (visual);
   }
 
   [GtkCallback]
