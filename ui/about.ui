@@ -37,7 +37,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="comments" translatable="yes">Animated GIF recorder</property>
     <property name="website">https://github.com/phw/peek</property>
     <property name="authors">Philipp Wolfer</property>
-    <property name="logo_icon_name">image-missing</property>
+    <property name="artists">ElBablo</property>
+    <property name="logo_icon_name">peek</property>
     <property name="license_type">gpl-3-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
