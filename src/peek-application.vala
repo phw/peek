@@ -47,6 +47,10 @@ public class PeekApplication : Gtk.Application {
     // Setup app menu
     GLib.SimpleAction action;
 
+    action = new GLib.SimpleAction ("new_window", null);
+    action.activate.connect (new_window);
+    add_action (action);
+
     action = new GLib.SimpleAction ("preferences", null);
     action.activate.connect (show_preferences);
     add_action (action);
@@ -67,6 +71,10 @@ public class PeekApplication : Gtk.Application {
     }
 
     base.shutdown ();
+  }
+
+  private void new_window () {
+    this.activate ();
   }
 
   private void show_preferences () {
