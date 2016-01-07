@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[peek.peekpot]
+source_file = po/peek.pot
+source_lang = en
+type = PO
+file_filter = po/<lang>.po

@@ -1,20 +1,22 @@
-# Translation file for peek - an animated GIF recorder
-# Copyright (C) 2016 Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: peek \n"
+"Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-07 10:44+0100\n"
-"PO-Revision-Date: 2016-01-07 10:41+0100\n"
+"POT-Creation-Date: 2016-01-07 11:38+0100\n"
+"PO-Revision-Date: 2016-01-07 10:40+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: GERMAN\n"
-"Language: de\n"
+"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/peek-application-window.vala:290
 msgid "_Cancel"
@@ -30,7 +32,7 @@ msgstr "Recorder für animierte GIFs"
 
 #: ui/application-window.ui:117
 msgid "_Record"
-msgstr "_Auf_nehmen"
+msgstr "Auf_nehmen"
 
 #: ui/preferences.ui:78
 msgid "User interface"
