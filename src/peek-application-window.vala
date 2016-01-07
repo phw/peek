@@ -35,6 +35,8 @@ class PeekApplicationWindow : ApplicationWindow {
   [GtkChild]
   private Label delay_indicator;
 
+  private Popover? fallback_app_menu;
+
   private uint size_indicator_timeout = 0;
   private uint delay_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
@@ -85,6 +87,17 @@ class PeekApplicationWindow : ApplicationWindow {
     settings.bind ("recording-start-delay",
       this, "recording_start_delay",
       SettingsBindFlags.DEFAULT);
+
+    // Find the fallback app menu popover, if used.
+    // We need it to include it in the input mask.
+    this.map.connect (() => {
+      this.forall ((child)  => {
+        if (child is Gtk.Popover) {
+          debug ("Fallback app menu found.\n");
+          fallback_app_menu = child as Popover;
+        }
+      });
+    });
   }
 
   public override bool configure_event (Gdk.EventConfigure event) {
@@ -146,9 +159,15 @@ class PeekApplicationWindow : ApplicationWindow {
     ctx.fill ();
 
     // Set an input shape so that the recording view is not clickable
-    var window_region = create_region_from_widget (widget.get_toplevel());
-    var recording_viewRegion = create_region_from_widget (widget);
-    window_region.subtract (recording_viewRegion);
+    var window_region = create_region_from_widget (widget.get_toplevel ());
+    var recording_view_region = create_region_from_widget (widget);
+    window_region.subtract (recording_view_region);
+
+    if (fallback_app_menu != null && fallback_app_menu.visible) {
+      var app_menu_region = create_region_from_widget (fallback_app_menu);
+      window_region.union (app_menu_region);
+    }
+
     this.input_shape_combine_region (window_region);
 
     return false;

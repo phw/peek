@@ -1,5 +1,6 @@
 Version 0.3.0 - 2016.??.??
  * ui: Added a "New window" action to app menu
+ * bugfix: If fallback app menu was used it was not clickable
  * bugfix: Fixed warning and crash if indicators where shown when closing a window
  * i18n: App menu and preferences title are now localized
 
