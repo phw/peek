@@ -44,6 +44,8 @@ public class PeekApplication : Gtk.Application {
   public override void startup () {
     base.startup ();
 
+    GLib.Environment.set_application_name (_ ("Peek"));
+
     // Setup app menu
     GLib.SimpleAction action;
 
