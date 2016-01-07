@@ -265,7 +265,7 @@ macro(GettextTranslate)
     add_custom_target(${GMO_TARGET}
       COMMAND ${GettextTranslate_MSGFMT_EXECUTABLE} -c --statistics --verbose
         -o ${GMO_FILE_NAME} ${PO_FILE_NAME}
-        DEPENDS ${PO_TARGET}
+        #DEPENDS ${PO_TARGET}
     )
 
     add_dependencies(${PO_TARGET} ${MAKEVAR_DOMAIN}.pot-update)

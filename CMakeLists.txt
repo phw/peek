@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 2.6)
 set (XDG_APPS_INSTALL_DIR share/applications)
 set (GettextTranslate_GMO_BINARY TRUE)
 set (GettextTranslate_ALL TRUE)
+set (LOCALEDIR ${CMAKE_INSTALL_PREFIX}/locale)
 
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
