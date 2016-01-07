@@ -241,7 +241,7 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private void start_recording () {
     var area = get_recording_area ();
-    stdout.printf ("Recording area: %i, %i, %i, %i\n",
+    debug ("Recording area: %i, %i, %i, %i\n",
       area.left, area.top, area.width, area.height);
     active_recording_area = area;
     recorder.record (area);
@@ -349,7 +349,7 @@ class PeekApplicationWindow : ApplicationWindow {
             in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
               try {
                 bool delete_success = in_file.delete_async.end (res);
-                stdout.printf ("Temp file deleted: %s\n",
+                debug ("Temp file deleted: %s\n",
                   delete_success.to_string ());
               } catch (Error e) {
                 stderr.printf ("Temp file delete error: %s\n", e.message);
