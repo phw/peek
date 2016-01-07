@@ -1,18 +1,20 @@
 Version 0.3.0 - 2016.??.??
  * ui: Added a "New window" action to app menu
- * bugfix: If fallback app menu was used it was not clickable
- * bugfix: Fixed warning and crash if indicators where shown when closing a window
+ * fix: If fallback app menu was used it was not clickable
+ * fix: Fixed warning and crash if indicators where shown when closing a window
+ * fix: Delay indicator no longer resizes small windows
+ * fix: App menu on Unity showed "Unknown application name"
  * i18n: App menu and preferences title are now localized
 
 Version 0.2.1 - 2016.01.07
  * i18n: Setup gettext
- * bugfix: Fixed installation directory for locale files
+ * fix: Fixed installation directory for locale files
 
 Version 0.2.0 - 2016.01.07
  * ui: Application logo
  * ui: Size indicator is shown longer after resizing stops
- * bugfix: Fixed window transparency not properly set on some systems
- * bugfix: About dialog could not be closed with close button
+ * fix: Fixed window transparency not properly set on some systems
+ * fix: About dialog could not be closed with close button
  * i18n: Integrated translation extraction into build
  * i18n: German translation
 
