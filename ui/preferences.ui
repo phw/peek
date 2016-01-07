@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.19.0
+<!-- Generated with glade 3.19.0 
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -245,8 +245,18 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
       <object class="GtkHeaderBar" id="headerbar1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="title">Peek preferences</property>
         <property name="show_close_button">True</property>
+        <child type="title">
+          <object class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Peek preferences</property>
+            <style>
+              <class name="label"/>
+              <class name="title"/>
+            </style>
+          </object>
+        </child>
       </object>
     </child>
   </template>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-07 11:38+0100\n"
+"POT-Creation-Date: 2016-01-07 13:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,6 +55,10 @@ msgstr ""
 
 #: ui/preferences.ui:205
 msgid "Framerate"
+msgstr ""
+
+#: ui/preferences.ui:253
+msgid "Peek preferences"
 msgstr ""
 
 #: ui/gtk/menus.ui:7

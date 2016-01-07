@@ -7,8 +7,6 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-[CCode(cname="GETTEXT_PACKAGE")] extern const string GETTEXT_PACKAGE;
-
 public class PeekApplication : Gtk.Application {
 
   const string APP_ID = "de.uploadedlobster.peek";
@@ -45,12 +43,6 @@ public class PeekApplication : Gtk.Application {
 
   public override void startup () {
     base.startup ();
-
-    // Setup gettext
-    GLib.Intl.setlocale(GLib.LocaleCategory.ALL, "");
-    GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, null);
-    GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-    GLib.Intl.textdomain (GETTEXT_PACKAGE);
 
     // Setup app menu
     GLib.SimpleAction action;
