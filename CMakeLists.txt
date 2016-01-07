@@ -1,6 +1,10 @@
 project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
+set (PEEK_VERSION_MAJOR 0)
+set (PEEK_VERSION_MINOR 1)
+set (PEEK_VERSION_PATCH 0)
+
 set (XDG_APPS_INSTALL_DIR share/applications)
 set (GettextTranslate_GMO_BINARY TRUE)
 set (GettextTranslate_ALL TRUE)
@@ -31,13 +35,18 @@ pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
 
 # compile glib resource files to c code
+configure_file (
+  "${PROJECT_SOURCE_DIR}/ui/about.ui.in"
+  "${PROJECT_SOURCE_DIR}/ui/about.ui"
+  )
+
 GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
   SOURCE
     ui/${PROJECT_NAME}.gresource.xml
 )
 
 # GSettings
-add_schema (schemas/de.uploadedlobster.peek.gschema.xml)
+add_schema(schemas/de.uploadedlobster.peek.gschema.xml)
 
 # Compile Vala to C
 vala_precompile(VALA_C
@@ -62,8 +71,8 @@ add_definitions(-DGETTEXT_PACKAGE="${GETTEXT_PACKAGE}")
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 
 # Installation
-install (TARGETS ${PROJECT_NAME} DESTINATION bin)
-install (PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 add_subdirectory(assets)
 add_subdirectory(po)

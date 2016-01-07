@@ -9,4 +9,5 @@ Makefile
 peek
 src/*.c
 ui/*.c
+ui/about.ui
 schemas/gschemas.compiled
