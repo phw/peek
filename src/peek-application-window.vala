@@ -221,7 +221,9 @@ class PeekApplicationWindow : ApplicationWindow {
     debug ("Recording area: %i, %i, %i, %i\n",
       area.left, area.top, area.width, area.height);
     active_recording_area = area;
-    recorder.record (area);
+    if (!recorder.record (area)) {
+      leave_recording_state ();
+    }
   }
 
   private void enter_recording_state () {
