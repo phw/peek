@@ -23,7 +23,7 @@ public class PeekApplication : Gtk.Application {
       settings = new Settings.full (schema, null, null);
     }
     catch (GLib.Error e) {
-      stderr.printf ("Loading local settings failed: %s", e.message);
+      debug ("Loading local settings failed: %s", e.message);
       settings = new Settings (APP_ID);
     }
 
