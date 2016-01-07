@@ -3,15 +3,14 @@
 # This file is distributed under the same license as the peek package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-07 10:38+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2016-01-07 10:44+0100\n"
+"PO-Revision-Date: 2016-01-07 10:41+0100\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: GERMAN\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,52 +18,52 @@ msgstr ""
 
 #: src/peek-application-window.vala:290
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrechen"
 
 #: src/peek-application-window.vala:292
 msgid "_Save"
-msgstr ""
+msgstr "_Speichern"
 
 #: ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "Recorder für animierte GIFs"
 
 #: ui/application-window.ui:117
 msgid "_Record"
-msgstr ""
+msgstr "_Auf_nehmen"
 
 #: ui/preferences.ui:78
 msgid "User interface"
-msgstr ""
+msgstr "Benutzeroberfläche"
 
 #: ui/preferences.ui:92
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Dateimanager nach dem Speichern öffnen"
 
 #: ui/preferences.ui:107
 msgid "Automatically save files when recording stops"
-msgstr ""
+msgstr "Dateien nach der Aufnahme automatisch speichern"
 
 #: ui/preferences.ui:138
 msgid "Recording"
-msgstr ""
+msgstr "Aufnahme"
 
 #: ui/preferences.ui:162
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
 
 #: ui/preferences.ui:205
 msgid "Framerate"
-msgstr ""
+msgstr "Bildwiederholrate"
 
 #: ui/gtk/menus.ui:7
 msgid "_Preferences"
-msgstr ""
+msgstr "_Einstellungen"
 
 #: ui/gtk/menus.ui:13
 msgid "_About"
-msgstr ""
+msgstr "_Info"
 
 #: ui/gtk/menus.ui:17
 msgid "_Quit"
-msgstr ""
+msgstr "_Beenden"
