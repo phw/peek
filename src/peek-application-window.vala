@@ -103,6 +103,14 @@ class PeekApplicationWindow : ApplicationWindow {
       recorder.cancel ();
     }
 
+    if (size_indicator_timeout != 0) {
+      Source.remove (size_indicator_timeout);
+    }
+
+    if (delay_indicator_timeout != 0) {
+      Source.remove (delay_indicator_timeout);
+    }
+
     return false;
   }
 
