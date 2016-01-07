@@ -1,7 +1,11 @@
 # Peek - animated GIF recorder
 
 ## About
-A simple tool that allows you to record short animated Gifs from your screen.
+A simple tool that allows you to record short animated GIF images from your screen.
+
+Currently only Linux with X is supported. Other Unix like systems using X
+should work as well. It is planned to also support Wayland and maybe Other
+operating systems in the future.
 
 ## Requirements
 ### Runtime
@@ -14,14 +18,16 @@ A simple tool that allows you to record short animated Gifs from your screen.
 
  * Vala compiler
  * CMake >= 2.6
+ * Gettext
 
 ## Building
-You can build Peek using CMake:
+You can build and install Peek using CMake:
 
     cmake . && make
+    make install
 
 ## License
-Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 Peek is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

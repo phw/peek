@@ -1,0 +1,10 @@
+Version 0.2.0 - 2016.01.07
+ * ui: Application logo
+ * ui: Size indicator is shown longer after resizing stops
+ * bugfix: Fixed window transparency not properly set on some systems
+ * bugfix: About dialog could not be closed with close button
+ * i18n: Integrated translation extraction into build
+ * i18n: German translation
+
+Version 0.1.0 - 2016.01.05
+ * Initial public release with basic functionality working
