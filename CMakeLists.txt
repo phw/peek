@@ -67,7 +67,7 @@ vala_precompile(VALA_C
 )
 
 # Compile C code
-add_definitions(-DGETTEXT_PACKAGE="${GETTEXT_PACKAGE}")
+add_definitions(-DGETTEXT_PACKAGE="${PROJECT_NAME}")
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 
 # Installation
