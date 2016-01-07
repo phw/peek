@@ -56,7 +56,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         <child>
           <object class="GtkBox" id="recording_view">
             <property name="width_request">20</property>
-            <property name="height_request">20</property>
+            <property name="height_request">40</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="margin_left">6</property>
@@ -87,7 +87,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="no_show_all">True</property>
                 <property name="label">0</property>
                 <attributes>
-                  <attribute name="scale" value="4"/>
+                  <attribute name="scale" value="2"/>
                 </attributes>
                 <style>
                   <class name="osd"/>
