@@ -1,6 +1,7 @@
 Version 0.3.0 - 2016.??.??
  * ui: Added a "New window" action to app menu
  * bugfix: Fixed warning and crash if indicators where shown when closing a window
+ * i18n: App menu and preferences title are now localized
 
 Version 0.2.1 - 2016.01.07
  * i18n: Setup gettext
