@@ -35,13 +35,12 @@ class PeekApplicationWindow : ApplicationWindow {
   [GtkChild]
   private Label delay_indicator;
 
-  private Popover? fallback_app_menu;
-
   private uint size_indicator_timeout = 0;
   private uint delay_indicator_timeout = 0;
   private bool screen_supports_alpha = true;
   private bool is_recording = false;
   private RecordingArea active_recording_area;
+  private bool has_fallback_app_menu = false;
 
   private GLib.Settings settings;
 
@@ -88,15 +87,10 @@ class PeekApplicationWindow : ApplicationWindow {
       this, "recording_start_delay",
       SettingsBindFlags.DEFAULT);
 
-    // Find the fallback app menu popover, if used.
-    // We need it to include it in the input mask.
+    // Test whether the fallback app menu is used.
     this.map.connect (() => {
-      this.forall ((child)  => {
-        if (child is Gtk.Popover) {
-          debug ("Fallback app menu found.\n");
-          fallback_app_menu = child as Popover;
-        }
-      });
+      has_fallback_app_menu = get_fallback_app_menu () != null;
+      debug ("Using fallback app menu: %s\n", has_fallback_app_menu.to_string());
     });
   }
 
@@ -158,17 +152,7 @@ class PeekApplicationWindow : ApplicationWindow {
     ctx.paint ();
     ctx.fill ();
 
-    // Set an input shape so that the recording view is not clickable
-    var window_region = create_region_from_widget (widget.get_toplevel ());
-    var recording_view_region = create_region_from_widget (widget);
-    window_region.subtract (recording_view_region);
-
-    if (fallback_app_menu != null && fallback_app_menu.visible) {
-      var app_menu_region = create_region_from_widget (fallback_app_menu);
-      window_region.union (app_menu_region);
-    }
-
-    this.input_shape_combine_region (window_region);
+    update_input_shape ();
 
     return false;
   }
@@ -262,6 +246,36 @@ class PeekApplicationWindow : ApplicationWindow {
     stop_button.hide ();
     record_button.show ();
     unfreeze_window_size ();
+  }
+
+  private void update_input_shape () {
+    // Set an input shape so that the recording view is not clickable
+    var window_region = create_region_from_widget (recording_view.get_toplevel ());
+    var recording_view_region = create_region_from_widget (recording_view);
+    window_region.subtract (recording_view_region);
+
+    // The fallback app menu overlaps the recording area
+    if (has_fallback_app_menu) {
+      var fallback_app_menu = get_fallback_app_menu ();
+      if (fallback_app_menu != null && fallback_app_menu.visible) {
+        var app_menu_region = create_region_from_widget (fallback_app_menu);
+        window_region.union (app_menu_region);
+      }
+    }
+
+    this.input_shape_combine_region (window_region);
+  }
+
+  private Widget? get_fallback_app_menu () {
+    Widget fallback_app_menu = null;
+
+    this.forall ((child)  => {
+        if (child is Gtk.Popover) {
+	  fallback_app_menu = child;
+	}
+    });
+
+    return fallback_app_menu;
   }
 
   private void freeze_window_size () {
