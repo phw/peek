@@ -57,10 +57,13 @@ vala_precompile(VALA_C
     src/peek-preferences-dialog.vala
     src/desktop-integration.vala
     src/screen-recorder/screen-recorder.vala
-    src/screen-recorder/ffmpeg-screen-recorder.vala
     src/screen-recorder/recording-area.vala
+    src/screen-recorder/abstract-command-screen-recorder.vala
+    src/screen-recorder/avconv-screen-recorder.vala
+    src/screen-recorder/ffmpeg-screen-recorder.vala
   PACKAGES
     gtk+-3.0
+    posix
   OPTIONS
     --target-glib=2.38
     --gresources=${CMAKE_SOURCE_DIR}/ui/${PROJECT_NAME}.gresource.xml

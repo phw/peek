@@ -7,8 +7,8 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-public class FfmpegScreenRecorder : AbstractCommandScreenRecorder {
-  ~FfmpegScreenRecorder () {
+public class AvconvScreenRecorder : AbstractCommandScreenRecorder {
+  ~AvconvScreenRecorder () {
     cancel ();
   }
 
@@ -24,7 +24,7 @@ public class FfmpegScreenRecorder : AbstractCommandScreenRecorder {
       }
 
       string[] args = {
-        "ffmpeg", "-y",
+        "avconv", "-y",
         "-f", "x11grab",
         "-show_region", "0",
         "-framerate", framerate.to_string (),
@@ -43,27 +43,12 @@ public class FfmpegScreenRecorder : AbstractCommandScreenRecorder {
   }
 
   protected override void handle_process_exit (int status) {
-    try {
-      if (!Process.check_exit_status (status)) {
-        recording_aborted (status);
-      }
-    }
-    catch (Error e) {
-      stderr.printf ("Error: %s\n", e.message);
+    if (Process.term_sig (status) != ProcessSignal.INT) {
       recording_aborted (status);
     }
   }
 
   protected override void stop_command () {
-    try {
-      char[] command = { 'q' };
-      size_t bytes_written;
-      input.write_chars (command, out bytes_written);
-      input.flush ();
-    } catch (ConvertError e) {
-      stderr.printf ("Error: %s\n", e.message);
-    } catch (IOChannelError e) {
-      stderr.printf ("Error: %s\n", e.message);
-    }
+    Posix.kill (pid, Posix.SIGINT);
   }
 }
