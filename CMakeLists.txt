@@ -2,6 +2,8 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (XDG_APPS_INSTALL_DIR share/applications)
+set (GettextTranslate_GMO_BINARY TRUE)
+set (GettextTranslate_ALL TRUE)
 
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
@@ -12,9 +14,7 @@ include(FindVala)
 include(UseVala)
 include(GResource)
 include(GSettings)
-
-# Variables
-set(GETTEXT_PACKAGE ${PROJECT_NAME})
+include(GettextTranslate)
 
 # Check dependencies
 find_package(Vala 0.22 REQUIRED)
@@ -65,3 +65,4 @@ install (TARGETS ${PROJECT_NAME} DESTINATION bin)
 install (PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 add_subdirectory(assets)
+add_subdirectory(po)

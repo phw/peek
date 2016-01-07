@@ -1,0 +1,5 @@
+src/peek-application-window.vala
+ui/about.ui
+ui/application-window.ui
+ui/preferences.ui
+ui/gtk/menus.ui

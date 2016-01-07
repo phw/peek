@@ -1,0 +1,70 @@
+# Translation file for peek - an animated GIF recorder
+# Copyright (C) 2016 Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# This file is distributed under the same license as the peek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: peek \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
+"POT-Creation-Date: 2016-01-07 10:38+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/peek-application-window.vala:290
+msgid "_Cancel"
+msgstr ""
+
+#: src/peek-application-window.vala:292
+msgid "_Save"
+msgstr ""
+
+#: ui/about.ui:37
+msgid "Animated GIF recorder"
+msgstr ""
+
+#: ui/application-window.ui:117
+msgid "_Record"
+msgstr ""
+
+#: ui/preferences.ui:78
+msgid "User interface"
+msgstr ""
+
+#: ui/preferences.ui:92
+msgid "Open file manager after saving"
+msgstr ""
+
+#: ui/preferences.ui:107
+msgid "Automatically save files when recording stops"
+msgstr ""
+
+#: ui/preferences.ui:138
+msgid "Recording"
+msgstr ""
+
+#: ui/preferences.ui:162
+msgid "Delay in seconds before recording starts"
+msgstr ""
+
+#: ui/preferences.ui:205
+msgid "Framerate"
+msgstr ""
+
+#: ui/gtk/menus.ui:7
+msgid "_Preferences"
+msgstr ""
+
+#: ui/gtk/menus.ui:13
+msgid "_About"
+msgstr ""
+
+#: ui/gtk/menus.ui:17
+msgid "_Quit"
+msgstr ""
