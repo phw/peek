@@ -47,7 +47,7 @@ public class PeekApplication : Gtk.Application {
     // Setup app menu
     GLib.SimpleAction action;
 
-    action = new GLib.SimpleAction ("new_window", null);
+    action = new GLib.SimpleAction ("new-window", null);
     action.activate.connect (new_window);
     add_action (action);
 

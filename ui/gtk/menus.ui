@@ -4,8 +4,8 @@
   <menu id="app-menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_New window</attribute>
-        <attribute name="action">app.new_window</attribute>
+        <attribute name="label" translatable="yes">New _window</attribute>
+        <attribute name="action">app.new-window</attribute>
       </item>
     </section>
     <section>

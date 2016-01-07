@@ -63,8 +63,8 @@ msgid "Peek preferences"
 msgstr "Einstellungen für Peek"
 
 #: ui/gtk/menus.ui:7
-msgid "_New window"
-msgstr "_Neues Fenster"
+msgid "New _window"
+msgstr "Neues _Fenster"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
