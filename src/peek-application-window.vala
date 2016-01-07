@@ -40,7 +40,6 @@ class PeekApplicationWindow : ApplicationWindow {
   private bool screen_supports_alpha = true;
   private bool is_recording = false;
   private RecordingArea active_recording_area;
-  private bool has_fallback_app_menu = false;
 
   private GLib.Settings settings;
 
@@ -86,12 +85,6 @@ class PeekApplicationWindow : ApplicationWindow {
     settings.bind ("recording-start-delay",
       this, "recording_start_delay",
       SettingsBindFlags.DEFAULT);
-
-    // Test whether the fallback app menu is used.
-    this.map.connect (() => {
-      has_fallback_app_menu = get_fallback_app_menu () != null;
-      debug ("Using fallback app menu: %s\n", has_fallback_app_menu.to_string());
-    });
   }
 
   public override bool configure_event (Gdk.EventConfigure event) {
@@ -255,24 +248,26 @@ class PeekApplicationWindow : ApplicationWindow {
     window_region.subtract (recording_view_region);
 
     // The fallback app menu overlaps the recording area
-    if (has_fallback_app_menu) {
-      var fallback_app_menu = get_fallback_app_menu ();
-      if (fallback_app_menu != null && fallback_app_menu.visible) {
-        var app_menu_region = create_region_from_widget (fallback_app_menu);
-        window_region.union (app_menu_region);
-      }
+    var fallback_app_menu = get_fallback_app_menu ();
+    if (fallback_app_menu != null && fallback_app_menu.visible) {
+      var app_menu_region = create_region_from_widget (fallback_app_menu);
+      window_region.union (app_menu_region);
     }
 
     this.input_shape_combine_region (window_region);
   }
 
   private Widget? get_fallback_app_menu () {
+    if (this.application.prefers_app_menu ()) {
+      return null;
+    }
+
     Widget fallback_app_menu = null;
 
     this.forall ((child)  => {
-        if (child is Gtk.Popover) {
-	  fallback_app_menu = child;
-	}
+      if (child is Gtk.Popover) {
+        fallback_app_menu = child;
+      }
     });
 
     return fallback_app_menu;
