@@ -222,6 +222,7 @@ class PeekApplicationWindow : ApplicationWindow {
       leave_recording_state ();
     }
     else {
+      stop_button.sensitive = false;
       recorder.stop ();
     }
   }
@@ -240,6 +241,7 @@ class PeekApplicationWindow : ApplicationWindow {
     is_recording = true;
     size_indicator.opacity = 0.0;
     record_button.hide ();
+    stop_button.sensitive = true;
     stop_button.show ();
     freeze_window_size ();
     set_keep_above (true);

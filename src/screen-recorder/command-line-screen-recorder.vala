@@ -48,13 +48,12 @@ public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
   public void stop () {
     stdout.printf ("Recording stopped\n");
     stop_command ();
+    is_recording = false;
     convert_to_gif_async.begin ((obj, res) => {
       var file = convert_to_gif_async.end (res);
       remove_temp_file ();
-      is_recording = false;
       recording_finished (file);
     });
-
   }
 
   public void cancel () {
