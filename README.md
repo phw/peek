@@ -21,7 +21,7 @@ operating systems in the future.
  * CMake >= 2.6
  * Gettext
 
-## Building
+## Installation
 You can build and install Peek using CMake:
 
     cmake . && make
@@ -29,6 +29,10 @@ You can build and install Peek using CMake:
 
 For Arch Linux there is also a
 [PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
+
+## Translations
+You can help translate Peek into your language. Please visit the [Peek localization project](https://www.transifex.com/projects/p/Android_PwdHash/)
+on Transifex.
 
 ## License
 Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
