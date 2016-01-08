@@ -1,8 +1,9 @@
-Version 0.3.0 - 2016.??.??
+Version 0.3.0 - 2016.01.08
  * ui: Added a "New window" action to app menu
  * fix: If fallback app menu was used it was not clickable
  * fix: Fixed warning and crash if indicators where shown when closing a window
  * fix: Delay indicator no longer resizes small windows
+ * fix: Leave recording state if ffmpeg cannot be started
  * fix: App menu on Unity showed "Unknown application name"
  * i18n: App menu and preferences title are now localized
 

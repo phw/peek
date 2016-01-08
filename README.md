@@ -1,4 +1,4 @@
-# Peek - animated GIF recorder
+# Peek - an animated GIF recorder
 
 ## About
 A simple tool that allows you to record short animated GIF images from your screen.
@@ -10,9 +10,10 @@ operating systems in the future.
 ## Requirements
 ### Runtime
 
-  * Gtk 3.10 or higher
-  * ffmpeg
+  * GTK+ >= 3.10
+  * FFmpeg
   * ImageMagick
+  * Window manager with compositing enabled
 
 ### Development
 
@@ -25,6 +26,9 @@ You can build and install Peek using CMake:
 
     cmake . && make
     make install
+
+For Arch Linux there is also a
+[PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
 
 ## License
 Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
