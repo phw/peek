@@ -1,3 +1,6 @@
+Version 0.3.1 - 2016.01.??
+ * ui: Prefer dark theme, removed custom window background hack
+
 Version 0.3.0 - 2016.01.08
  * ui: Added a "New window" action to app menu
  * fix: If fallback app menu was used it was not clickable

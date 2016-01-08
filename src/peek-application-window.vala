@@ -47,7 +47,10 @@ class PeekApplicationWindow : ApplicationWindow {
     ScreenRecorder recorder) {
     Object (application: application);
     this.set_keep_above (true);
+    this.get_settings ().gtk_application_prefer_dark_theme = true;
+    this.on_window_screen_changed (null);
 
+    // Connect recorder signals
     this.recorder = recorder;
     this.recorder.recording_started.connect (() => {
       enter_recording_state ();
@@ -66,8 +69,7 @@ class PeekApplicationWindow : ApplicationWindow {
       leave_recording_state ();
     });
 
-    this.on_window_screen_changed (null);
-
+    // Bind settings
     settings = PeekApplication.get_app_settings ();
 
     settings.bind ("interface-open-file-manager",

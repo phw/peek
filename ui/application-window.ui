@@ -163,7 +163,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         </child>
         <style>
           <class name="background"/>
-          <class name="header-bar"/>
         </style>
       </object>
     </child>
