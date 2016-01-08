@@ -45,14 +45,16 @@ public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
     }
   }
 
-  public File? stop () {
+  public void stop () {
     stdout.printf ("Recording stopped\n");
     stop_command ();
-    var file = convert_to_gif();
-    remove_temp_file ();
-    is_recording = false;
-    recording_finished (file);
-    return file;
+    convert_to_gif_async.begin ((obj, res) => {
+      var file = convert_to_gif_async.end (res);
+      remove_temp_file ();
+      is_recording = false;
+      recording_finished (file);
+    });
+
   }
 
   public void cancel () {
@@ -93,8 +95,10 @@ public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
     }
   }
 
-  private File? convert_to_gif () {
+  private async File? convert_to_gif_async () {
     try {
+      SourceFunc callback = convert_to_gif_async.callback;
+
       double delay = (100.0 / framerate);
       var output_file = create_temp_file ("gif");
       string[] argv = {
@@ -105,8 +109,17 @@ public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
         output_file
       };
 
-      Process.spawn_sync (null, argv, null,
-        SpawnFlags.SEARCH_PATH, null);
+      Pid pid;
+      Process.spawn_async (null, argv, null,
+        SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
+
+      ChildWatch.add (pid, (pid, status) => {
+        // Triggered when the child indicated by pid exits
+        Process.close_pid (pid);
+        Idle.add((owned) callback);
+      });
+
+      yield;
       return File.new_for_path (output_file);
     } catch (SpawnError e) {
      stderr.printf ("Error: %s\n", e.message);

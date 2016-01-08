@@ -18,7 +18,7 @@ public interface ScreenRecorder : Object {
 
   public abstract bool record (RecordingArea area);
 
-  public abstract File? stop ();
+  public abstract void stop ();
 
   public abstract void cancel ();
 }
