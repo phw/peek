@@ -1,6 +1,7 @@
 Version 0.4.0 - 2016.01.??
  * ui: Prefer dark theme, removed custom window background hack
  * ui: Persist window position and size
+ * recording: Do not block UI during GIF post processing
 
 Version 0.3.0 - 2016.01.08
  * ui: Added a "New window" action to app menu
