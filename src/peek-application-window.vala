@@ -5,6 +5,9 @@ This file is part of Peek.
 
 This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
+
+This file contains GPL 3 code taken from corebird, a Gtk+ linux Twitter client.
+Copyright (C) 2013 Timm Bäder, https://github.com/baedert/corebird/
 */
 
 using Gtk;
@@ -46,9 +49,6 @@ class PeekApplicationWindow : ApplicationWindow {
   public PeekApplicationWindow (Gtk.Application application,
     ScreenRecorder recorder) {
     Object (application: application);
-    this.set_keep_above (true);
-    this.get_settings ().gtk_application_prefer_dark_theme = true;
-    this.on_window_screen_changed (null);
 
     // Connect recorder signals
     this.recorder = recorder;
@@ -87,6 +87,12 @@ class PeekApplicationWindow : ApplicationWindow {
     settings.bind ("recording-start-delay",
       this, "recording_start_delay",
       SettingsBindFlags.DEFAULT);
+
+    // Configure window
+    this.set_keep_above (true);
+    this.load_geometry ();
+    this.get_settings ().gtk_application_prefer_dark_theme = true;
+    this.on_window_screen_changed (null);
   }
 
   public override bool configure_event (Gdk.EventConfigure event) {
@@ -112,6 +118,8 @@ class PeekApplicationWindow : ApplicationWindow {
     if (delay_indicator_timeout != 0) {
       Source.remove (delay_indicator_timeout);
     }
+
+    this.save_geometry ();
 
     return false;
   }
@@ -377,5 +385,41 @@ class PeekApplicationWindow : ApplicationWindow {
 
     // Close the FileChooserDialog:
     chooser.close ();
+  }
+
+  private void load_geometry () {
+    GLib.Variant geom = settings.get_value ("persist-window-geometry");
+    int x = 0,
+        y = 0,
+        w = 0,
+        h = 0;
+    x = geom.get_child_value (0).get_int32 ();
+    y = geom.get_child_value (1).get_int32 ();
+    w = geom.get_child_value (2).get_int32 ();
+    h = geom.get_child_value (3).get_int32 ();
+    if (w == 0 || h == 0)
+      return;
+
+    if (x >= 0 && y >= 0) {
+      move (x, y);
+    }
+
+    resize (w, h);
+  }
+
+  private void save_geometry () {
+    var builder = new GLib.VariantBuilder (GLib.VariantType.TUPLE);
+    int x = 0,
+        y = 0,
+        w = 0,
+        h = 0;
+    get_position (out x, out y);
+    w = get_allocated_width ();
+    h = get_allocated_height ();
+    builder.add_value (new GLib.Variant.int32(x));
+    builder.add_value (new GLib.Variant.int32(y));
+    builder.add_value (new GLib.Variant.int32(w));
+    builder.add_value (new GLib.Variant.int32(h));
+    settings.set_value ("persist-window-geometry", builder.end ());
   }
 }
