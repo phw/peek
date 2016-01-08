@@ -2,7 +2,7 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 0)
-set (PEEK_VERSION_MINOR 3)
+set (PEEK_VERSION_MINOR 4)
 set (PEEK_VERSION_PATCH 0)
 
 set (XDG_APPS_INSTALL_DIR share/applications)
@@ -82,7 +82,7 @@ install(PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 add_subdirectory(assets)
 add_subdirectory(po)
 
-if(BUILD_TESTS) 
+if(BUILD_TESTS)
   add_subdirectory(tests)
 else()
   add_subdirectory(tests EXCLUDE_FROM_ALL)
