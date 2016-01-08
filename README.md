@@ -3,8 +3,8 @@
 ## About
 A simple tool that allows you to record short animated GIF images from your screen.
 
-Currently only Linux with X is supported. Other Unix like systems using X
-should work as well. It is planned to also support Wayland and maybe Other
+Currently only Linux with X11 is supported. Other Unix like systems using X11
+should work as well. It is planned to also support Wayland and maybe other
 operating systems in the future.
 
 ## Requirements

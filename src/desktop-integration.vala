@@ -11,7 +11,7 @@ public class DesktopIntegration {
   public static bool launch_file_manager (File file) {
     try {
       var uri = file.get_uri ();
-      stdout.printf("URI: %s\n", uri);
+      debug ("File URI: %s\n", uri);
 
       if (file.has_uri_scheme ("file")) {
         AppInfo app_info = AppInfo.get_default_for_type (

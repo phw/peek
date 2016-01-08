@@ -15,6 +15,7 @@ list(APPEND CMAKE_MODULE_PATH
   ${CMAKE_SOURCE_DIR}/cmake
 )
 
+include(CTest)
 include(FindVala)
 include(UseVala)
 include(GResource)
@@ -80,3 +81,9 @@ install(PROGRAMS peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 add_subdirectory(assets)
 add_subdirectory(po)
+
+if(BUILD_TESTS) 
+  add_subdirectory(tests)
+else()
+  add_subdirectory(tests EXCLUDE_FROM_ALL)
+endif()
