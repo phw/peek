@@ -58,7 +58,7 @@ vala_precompile(VALA_C
     src/desktop-integration.vala
     src/screen-recorder/screen-recorder.vala
     src/screen-recorder/recording-area.vala
-    src/screen-recorder/abstract-command-screen-recorder.vala
+    src/screen-recorder/command-line-screen-recorder.vala
     src/screen-recorder/avconv-screen-recorder.vala
     src/screen-recorder/ffmpeg-screen-recorder.vala
   PACKAGES

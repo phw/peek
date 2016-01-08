@@ -7,7 +7,7 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-public class FfmpegScreenRecorder : AbstractCommandScreenRecorder {
+public class FfmpegScreenRecorder : CommandLineScreenRecorder {
   ~FfmpegScreenRecorder () {
     cancel ();
   }
@@ -39,18 +39,6 @@ public class FfmpegScreenRecorder : AbstractCommandScreenRecorder {
     } catch (FileError e) {
       stderr.printf ("Error: %s\n", e.message);
       return false;
-    }
-  }
-
-  protected override void handle_process_exit (int status) {
-    try {
-      if (!Process.check_exit_status (status)) {
-        recording_aborted (status);
-      }
-    }
-    catch (Error e) {
-      stderr.printf ("Error: %s\n", e.message);
-      recording_aborted (status);
     }
   }
 

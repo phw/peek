@@ -7,7 +7,7 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-public abstract class AbstractCommandScreenRecorder : Object, ScreenRecorder {
+public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
   protected Pid pid;
   protected IOChannel input;
   protected string temp_file;
@@ -30,7 +30,10 @@ public abstract class AbstractCommandScreenRecorder : Object, ScreenRecorder {
       ChildWatch.add (pid, (pid, status) => {
         // Triggered when the child indicated by pid exits
         Process.close_pid (pid);
-        handle_process_exit (status);
+
+        if (!is_exit_status_success (status)) {
+          recording_aborted (status);
+        }
       });
 
       is_recording = true;
@@ -46,7 +49,7 @@ public abstract class AbstractCommandScreenRecorder : Object, ScreenRecorder {
     stdout.printf ("Recording stopped\n");
     stop_command ();
     var file = convert_to_gif();
-    FileUtils.remove (temp_file);
+    remove_temp_file ();
     is_recording = false;
     recording_finished (file);
     return file;
@@ -55,13 +58,24 @@ public abstract class AbstractCommandScreenRecorder : Object, ScreenRecorder {
   public void cancel () {
     if (is_recording) {
       stop_command ();
-      FileUtils.remove (temp_file);
+      remove_temp_file ();
       is_recording = false;
       recording_aborted (0);
     }
   }
 
-  protected abstract void handle_process_exit (int status);
+  protected virtual bool is_exit_status_success (int status) {
+    try {
+      if (Process.check_exit_status (status)) {
+        return true;
+      }
+    }
+    catch (Error e) {
+      stderr.printf ("Error: %s\n", e.message);
+    }
+
+    return false;
+  }
 
   protected abstract void stop_command ();
 
@@ -70,6 +84,13 @@ public abstract class AbstractCommandScreenRecorder : Object, ScreenRecorder {
     var fd = FileUtils.open_tmp ("peekXXXXXX." + extension, out file_name);
     FileUtils.close (fd);
     return file_name;
+  }
+
+  private void remove_temp_file () {
+    if (temp_file != null) {
+      FileUtils.remove (temp_file);
+      temp_file = null;
+    }
   }
 
   private File? convert_to_gif () {

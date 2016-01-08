@@ -7,7 +7,7 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-public class AvconvScreenRecorder : AbstractCommandScreenRecorder {
+public class AvconvScreenRecorder : CommandLineScreenRecorder {
   ~AvconvScreenRecorder () {
     cancel ();
   }
@@ -42,10 +42,8 @@ public class AvconvScreenRecorder : AbstractCommandScreenRecorder {
     }
   }
 
-  protected override void handle_process_exit (int status) {
-    if (Process.term_sig (status) != ProcessSignal.INT) {
-      recording_aborted (status);
-    }
+  protected override bool is_exit_status_success (int status) {
+    return Process.term_sig (status) == ProcessSignal.INT;
   }
 
   protected override void stop_command () {
