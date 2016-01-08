@@ -59,7 +59,7 @@ vala_precompile(VALA_C
     src/screen-recorder/screen-recorder.vala
     src/screen-recorder/recording-area.vala
     src/screen-recorder/command-line-screen-recorder.vala
-    src/screen-recorder/avconv-screen-recorder.vala
+    #src/screen-recorder/avconv-screen-recorder.vala
     src/screen-recorder/ffmpeg-screen-recorder.vala
   PACKAGES
     gtk+-3.0
