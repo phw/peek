@@ -23,13 +23,20 @@ operating systems in the future.
  * Gettext
 
 ## Installation
+### Arch Linux
+For Arch Linux there is a
+[PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
+
+### Ubuntu / Debian
+A AMD64 DEB package is provided for download for the [latest release](https://github.com/phw/peek/releases).
+
+In theory this package should also work on Debian. In practice you will miss the ffmpeg package. libav is currently not directly usable as a replacement, but I am working on it ;)
+
+### From source
 You can build and install Peek using CMake:
 
     cmake . && make
     make install
-
-For Arch Linux there is also a
-[PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
 
 ## Translations
 You can help translate Peek into your language. Please visit the
