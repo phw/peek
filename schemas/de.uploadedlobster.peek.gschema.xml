@@ -14,6 +14,10 @@
       <default>1600</default>
       <summary>Time in milliseconds for which the recording area size is displayed after resizing stops</summary>
     </key>
+    <key name="interface-prefer-dark-theme" type="b">
+      <default>true</default>
+      <summary>Prefer dark theme</summary>
+    </key>
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
       <default>3</default>

@@ -78,9 +78,13 @@ class PeekApplicationWindow : ApplicationWindow {
       this, "open_file_manager",
       SettingsBindFlags.DEFAULT);
 
-      settings.bind ("interface-size-indicator-delay",
-        this, "size_indicator_delay",
-        SettingsBindFlags.DEFAULT);
+    settings.bind ("interface-size-indicator-delay",
+      this, "size_indicator_delay",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("interface-prefer-dark-theme",
+      this.get_settings (), "gtk_application_prefer_dark_theme",
+      SettingsBindFlags.DEFAULT);
 
     settings.bind ("recording-framerate",
       this.recorder, "framerate",
@@ -97,7 +101,6 @@ class PeekApplicationWindow : ApplicationWindow {
     // Configure window
     this.set_keep_above (true);
     this.load_geometry ();
-    this.get_settings ().gtk_application_prefer_dark_theme = true;
     this.on_window_screen_changed (null);
   }
 
