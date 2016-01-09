@@ -11,6 +11,7 @@ operating systems in the future.
 ### Runtime
 
   * GTK+ >= 3.10
+  * GLib >= 2.38
   * FFmpeg
   * ImageMagick
   * Window manager with compositing enabled
