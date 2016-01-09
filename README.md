@@ -32,7 +32,8 @@ For Arch Linux there is also a
 [PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
 
 ## Translations
-You can help translate Peek into your language. Please visit the [Peek localization project](https://www.transifex.com/projects/p/Android_PwdHash/)
+You can help translate Peek into your language. Please visit the
+[Peek localization project](https://www.transifex.com/phwolfer/peek/)
 on Transifex.
 
 ## License
