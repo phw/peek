@@ -23,6 +23,8 @@ class PeekApplicationWindow : ApplicationWindow {
 
   public int recording_start_delay { get; set; }
 
+  public string default_file_name_format { get; set; }
+
   public string save_folder { get; set; }
 
   [GtkChild]
@@ -80,6 +82,10 @@ class PeekApplicationWindow : ApplicationWindow {
 
     settings.bind ("interface-size-indicator-delay",
       this, "size_indicator_delay",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("interface-default-file-name-format",
+      this, "default_file_name_format",
       SettingsBindFlags.DEFAULT);
 
     settings.bind ("interface-prefer-dark-theme",
@@ -360,7 +366,7 @@ class PeekApplicationWindow : ApplicationWindow {
     chooser.set_current_folder (folder);
 
     var now = new DateTime.now_local ();
-    var default_name = now.format ("Peek %Y-%m-%d %H-%M.gif");
+    var default_name = now.format (default_file_name_format);
     chooser.set_current_name (default_name);
 
     if (chooser.run () == ResponseType.ACCEPT) {

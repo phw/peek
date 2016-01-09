@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-07 17:32+0100\n"
+"POT-Creation-Date: 2016-01-09 17:03+0100\n"
 "PO-Revision-Date: 2016-01-07 10:40+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
@@ -18,15 +18,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/peek-application.vala:47
+#: schemas/de.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:92
+msgid "Open file manager after saving"
+msgstr "Dateimanager nach dem Speichern öffnen"
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:11 ui/preferences.ui:107
+msgid "Automatically save files when recording stops"
+msgstr "Dateien nach der Aufnahme automatisch speichern"
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:15
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:18
+msgid "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:19
+msgid "Default file name used. Can include date format specifiers."
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:23
+msgid "Prefer dark theme"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
+msgid "Delay in seconds before recording starts"
+msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:33 ui/preferences.ui:205
+msgid "Framerate"
+msgstr "Bildwiederholrate"
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:37
+msgid "Size and position of the last open main window"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:41
+msgid "Path where last video got saved"
+msgstr ""
+
+#: src/peek-application.vala:51
 msgid "Peek"
 msgstr "Peek"
 
-#: src/peek-application-window.vala:326
+#: src/peek-application-window.vala:355
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/peek-application-window.vala:328
+#: src/peek-application-window.vala:357
 msgid "_Save"
 msgstr "_Speichern"
 
@@ -42,25 +84,9 @@ msgstr "Auf_nehmen"
 msgid "User interface"
 msgstr "Benutzeroberfläche"
 
-#: ui/preferences.ui:92
-msgid "Open file manager after saving"
-msgstr "Dateimanager nach dem Speichern öffnen"
-
-#: ui/preferences.ui:107
-msgid "Automatically save files when recording stops"
-msgstr "Dateien nach der Aufnahme automatisch speichern"
-
 #: ui/preferences.ui:138
 msgid "Recording"
 msgstr "Aufnahme"
-
-#: ui/preferences.ui:162
-msgid "Delay in seconds before recording starts"
-msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
-
-#: ui/preferences.ui:205
-msgid "Framerate"
-msgstr "Bildwiederholrate"
 
 #: ui/preferences.ui:253
 msgid "Peek preferences"

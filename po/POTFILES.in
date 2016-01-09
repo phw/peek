@@ -1,3 +1,4 @@
+schemas/de.uploadedlobster.peek.gschema.xml
 src/peek-application.vala
 src/peek-application-window.vala
 ui/about.ui

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-07 17:32+0100\n"
+"POT-Creation-Date: 2016-01-09 17:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,57 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/peek-application.vala:47
+#: schemas/de.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:92
+msgid "Open file manager after saving"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:11 ui/preferences.ui:107
+msgid "Automatically save files when recording stops"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:15
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:18
+msgid "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:19
+msgid "Default file name used. Can include date format specifiers."
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:23
+msgid "Prefer dark theme"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
+msgid "Delay in seconds before recording starts"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:33 ui/preferences.ui:205
+msgid "Framerate"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:37
+msgid "Size and position of the last open main window"
+msgstr ""
+
+#: schemas/de.uploadedlobster.peek.gschema.xml:41
+msgid "Path where last video got saved"
+msgstr ""
+
+#: src/peek-application.vala:51
 msgid "Peek"
 msgstr ""
 
-#: src/peek-application-window.vala:326
+#: src/peek-application-window.vala:355
 msgid "_Cancel"
 msgstr ""
 
-#: src/peek-application-window.vala:328
+#: src/peek-application-window.vala:357
 msgid "_Save"
 msgstr ""
 
@@ -41,24 +83,8 @@ msgstr ""
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:92
-msgid "Open file manager after saving"
-msgstr ""
-
-#: ui/preferences.ui:107
-msgid "Automatically save files when recording stops"
-msgstr ""
-
 #: ui/preferences.ui:138
 msgid "Recording"
-msgstr ""
-
-#: ui/preferences.ui:162
-msgid "Delay in seconds before recording starts"
-msgstr ""
-
-#: ui/preferences.ui:205
-msgid "Framerate"
 msgstr ""
 
 #: ui/preferences.ui:253
