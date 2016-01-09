@@ -23,6 +23,8 @@ class PeekApplicationWindow : ApplicationWindow {
 
   public int recording_start_delay { get; set; }
 
+  public string save_folder { get; set; }
+
   [GtkChild]
   private Widget recording_view;
 
@@ -86,6 +88,10 @@ class PeekApplicationWindow : ApplicationWindow {
 
     settings.bind ("recording-start-delay",
       this, "recording_start_delay",
+      SettingsBindFlags.DEFAULT);
+
+    settings.bind ("persist-save-folder",
+      this, "save_folder",
       SettingsBindFlags.DEFAULT);
 
     // Configure window
@@ -347,7 +353,7 @@ class PeekApplicationWindow : ApplicationWindow {
     chooser.filter = filter;
     filter.add_mime_type ("image/gif");
 
-    var folder = DesktopIntegration.get_video_folder ();
+    var folder = load_preferred_save_folder ();
     chooser.set_current_folder (folder);
 
     var now = new DateTime.now_local ();
@@ -361,12 +367,16 @@ class PeekApplicationWindow : ApplicationWindow {
         Priority.DEFAULT, null, null, (obj, res) => {
           try {
             bool copy_success = in_file.copy_async.end (res);
-            stdout.printf ("File saved %s: %s\n",
+            debug ("File saved %s: %s\n",
               copy_success.to_string (),
               out_file.get_uri ());
 
             if (copy_success && open_file_manager) {
               DesktopIntegration.launch_file_manager (out_file);
+              save_preferred_save_folder (out_file);
+            }
+            else if (!copy_success) {
+              stderr.printf ("Saving file %s failed.", out_file.get_uri ());
             }
 
             in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
@@ -387,6 +397,29 @@ class PeekApplicationWindow : ApplicationWindow {
 
     // Close the FileChooserDialog:
     chooser.close ();
+  }
+
+  private string load_preferred_save_folder () {
+    var folder = save_folder;
+
+    if (folder == null || folder == ""
+      || !FileUtils.test (folder, FileTest.IS_DIR)) {
+        folder = DesktopIntegration.get_video_folder ();
+      }
+
+    return folder;
+  }
+
+  private void save_preferred_save_folder (File out_file) {
+    if (out_file.has_uri_scheme ("file")) {
+      var parent = out_file.get_parent ();
+      var new_folder = parent.get_path ();
+      var default_folder = DesktopIntegration.get_video_folder ();
+
+      if (new_folder != default_folder) {
+        save_folder = new_folder;
+      }
+    }
   }
 
   private void load_geometry () {

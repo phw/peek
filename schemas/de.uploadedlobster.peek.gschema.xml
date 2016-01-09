@@ -28,5 +28,9 @@
       <default>(-1,-1,500,300)</default>
       <summary>Size and position of the last open main window</summary>
     </key>
+    <key name="persist-save-folder" type="s">
+      <default>""</default>
+      <summary>Path where last video got saved</summary>
+    </key>
   </schema>
 </schemalist>
