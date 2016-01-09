@@ -1,4 +1,4 @@
-Version 0.5.0 - 2016.01.??
+Version 0.5.0 - 2016.01.09
  * ui: Remember last used save folder
  * ui: The default file name used is now a localized hidden setting
  * ui: If dark theme is preferred is now a hidden setting
