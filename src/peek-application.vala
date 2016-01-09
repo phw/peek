@@ -13,8 +13,12 @@ public class PeekApplication : Gtk.Application {
 
   private Gtk.Window main_window;
 
+  private static Settings? settings = null;
+
   public static Settings get_app_settings () {
-    Settings settings;
+    if (settings != null) {
+      return settings;
+    }
 
     try {
       var settings_dir = "./schemas/";
