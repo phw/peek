@@ -1,6 +1,7 @@
 language: c
 compiler: gcc
-sudo: true
+sudo: required
+dist: trusty
 cache:
   - apt
 before_install:
