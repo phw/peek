@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema path="/de/uploadedlobster/peek/" id="de.uploadedlobster.peek"
+  <schema path="/com/uploadedlobster/peek/" id="com.uploadedlobster.peek"
     gettext-domain="peek">
     <key name="interface-open-file-manager" type="b">
       <default>true</default>

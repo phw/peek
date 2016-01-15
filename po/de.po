@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 msgid ""
@@ -18,45 +18,45 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:92
+#: schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:92
 msgid "Open file manager after saving"
 msgstr "Dateimanager nach dem Speichern öffnen"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:11 ui/preferences.ui:107
+#: schemas/com.uploadedlobster.peek.gschema.xml:11 ui/preferences.ui:107
 msgid "Automatically save files when recording stops"
 msgstr "Dateien nach der Aufnahme automatisch speichern"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:15
+#: schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der Größenänderung angezeigt wird"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:18
+#: schemas/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
 msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:19
+#: schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Default file name used. Can include date format specifiers."
 msgstr "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für Datumsangaben enthalten."
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:23
+#: schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
 msgstr "Dunkles Thema bevorzugen"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
+#: schemas/com.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
 msgid "Delay in seconds before recording starts"
 msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:33 ui/preferences.ui:205
+#: schemas/com.uploadedlobster.peek.gschema.xml:33 ui/preferences.ui:205
 msgid "Framerate"
 msgstr "Bildwiederholrate"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:37
+#: schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Size and position of the last open main window"
 msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
 
-#: schemas/de.uploadedlobster.peek.gschema.xml:41
+#: schemas/com.uploadedlobster.peek.gschema.xml:41
 msgid "Path where last video got saved"
 msgstr "Pfad, in dem das letzte Video gespeichert wurde"
 

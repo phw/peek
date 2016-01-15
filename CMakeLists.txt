@@ -47,7 +47,7 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 )
 
 # GSettings
-add_schema(schemas/de.uploadedlobster.peek.gschema.xml)
+add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 # Compile Vala to C
 vala_precompile(VALA_C

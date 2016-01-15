@@ -7,7 +7,7 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
-[GtkTemplate (ui = "/de/uploadedlobster/peek/about.ui")]
+[GtkTemplate (ui = "/com/uploadedlobster/peek/about.ui")]
 class PeekAboutDialog : Gtk.AboutDialog {
 
   private static Gtk.Dialog? instance;

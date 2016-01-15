@@ -9,7 +9,7 @@ This software is licensed under the GNU General Public License
 
 using Gtk;
 
-[GtkTemplate (ui = "/de/uploadedlobster/peek/preferences.ui")]
+[GtkTemplate (ui = "/com/uploadedlobster/peek/preferences.ui")]
 class PeekPreferencesDialog : Dialog {
 
   private static Gtk.Dialog? instance;

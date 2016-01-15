@@ -13,7 +13,7 @@ Copyright (C) 2013 Timm Bäder, https://github.com/baedert/corebird/
 using Gtk;
 using Cairo;
 
-[GtkTemplate (ui = "/de/uploadedlobster/peek/application-window.ui")]
+[GtkTemplate (ui = "/com/uploadedlobster/peek/application-window.ui")]
 class PeekApplicationWindow : ApplicationWindow {
   public ScreenRecorder recorder { get; construct set; }
 

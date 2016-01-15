@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/de/uploadedlobster/peek">
+  <gresource prefix="/com/uploadedlobster/peek">
     <file preprocess="xml-stripblanks">application-window.ui</file>
     <file preprocess="xml-stripblanks">preferences.ui</file>
     <file preprocess="xml-stripblanks">about.ui</file>

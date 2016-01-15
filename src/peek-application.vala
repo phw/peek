@@ -9,7 +9,7 @@ This software is licensed under the GNU General Public License
 
 public class PeekApplication : Gtk.Application {
 
-  const string APP_ID = "de.uploadedlobster.peek";
+  const string APP_ID = "com.uploadedlobster.peek";
 
   private Gtk.Window main_window;
 
