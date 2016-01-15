@@ -9,6 +9,10 @@ before_install:
   - sudo add-apt-repository ppa:ricotz/testing -y
   - sudo apt-get -qq update
   - sudo apt-get install -y cmake valac libgtk-3-dev libxml2-utils gettext
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
 script:
   - cmake -DBUILD_TESTS=ON .
   - make
