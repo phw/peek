@@ -1,4 +1,5 @@
 # Peek - an animated GIF recorder
+[![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 
 ## About
 A simple tool that allows you to record short animated GIF images from your screen.
