@@ -2,6 +2,8 @@ language: c
 compiler: gcc
 addons:
   apt:
+    sources:
+    - debian-sid
     packages:
     - cmake
     - valac
