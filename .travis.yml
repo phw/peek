@@ -1,16 +1,12 @@
 language: c
 compiler: gcc
-addons:
-  apt:
-    sources:
-    - debian-sid
-    packages:
-    - cmake
-    - valac
-    - libgtk-3-dev
-    - libxml2-utils
-    - gettext
-sudo: false
+sudo: true
+cache:
+  - apt
+before_install:
+  - sudo add-apt-repository ppa:vala-team -y
+  - sudo apt-get -qq update
+  - sudo apt-get install -y cmake valac libgtk-3-dev libxml2-utils gettext
 script:
   - cmake -DBUILD_TESTS=ON .
   - make
