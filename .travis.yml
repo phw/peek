@@ -1,0 +1,15 @@
+language: c
+compiler: gcc
+addons:
+  apt:
+    packages:
+    - cmake
+    - valac
+    - libgtk-3-dev
+    - libxml2-utils
+    - gettext
+sudo: false
+script:
+  - cmake -DBUILD_TESTS=ON .
+  - make
+  - make test
