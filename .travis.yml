@@ -5,6 +5,7 @@ cache:
   - apt
 before_install:
   - sudo add-apt-repository ppa:vala-team -y
+  - sudo add-apt-repository ppa:gnome3-team/gnome3 -y
   - sudo apt-get -qq update
   - sudo apt-get install -y cmake valac libgtk-3-dev libxml2-utils gettext
 script:
