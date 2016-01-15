@@ -28,7 +28,7 @@ For Arch Linux there is a
 [PKGBUILD](https://aur4.archlinux.org/packages/peek/) available in the AUR.
 
 ### Ubuntu / Debian
-A AMD64 DEB package is provided for download for the [latest release](https://github.com/phw/peek/releases).
+A x86_64 DEB package is provided for download for the [latest release](https://github.com/phw/peek/releases).
 
 In theory this package should also work on Debian. In practice you will miss the ffmpeg package. libav is currently not directly usable as a replacement, but I am working on it ;)
 

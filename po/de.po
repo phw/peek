@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 msgid ""
@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-01-09 17:03+0100\n"
-"PO-Revision-Date: 2016-01-07 10:40+0000\n"
+"PO-Revision-Date: 2016-01-15 10:27+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:92
@@ -30,7 +30,7 @@ msgstr "Dateien nach der Aufnahme automatisch speichern"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr ""
+msgstr "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der Größenänderung angezeigt wird"
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -38,11 +38,11 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:19
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
+msgstr "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für Datumsangaben enthalten."
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Dunkles Thema bevorzugen"
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
 msgid "Delay in seconds before recording starts"
@@ -54,11 +54,11 @@ msgstr "Bildwiederholrate"
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:37
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
 
 #: schemas/de.uploadedlobster.peek.gschema.xml:41
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Pfad, in dem das letzte Video gespeichert wurde"
 
 #: src/peek-application.vala:51
 msgid "Peek"
