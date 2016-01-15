@@ -26,7 +26,7 @@ include(GettextTranslate)
 find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
-pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.10)
+pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.14)
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
@@ -101,7 +101,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.10), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.14), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 

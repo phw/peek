@@ -10,7 +10,7 @@ operating systems in the future.
 ## Requirements
 ### Runtime
 
-  * GTK+ >= 3.10
+  * GTK+ >= 3.14
   * GLib >= 2.38
   * FFmpeg
   * ImageMagick
