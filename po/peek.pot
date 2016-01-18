@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-01-09 17:03+0100\n"
+"POT-Creation-Date: 2016-01-18 10:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,41 +21,37 @@ msgstr ""
 msgid "Open file manager after saving"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:11 ui/preferences.ui:107
-msgid "Automatically save files when recording stops"
-msgstr ""
-
-#: schemas/com.uploadedlobster.peek.gschema.xml:15
+#: schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:18
+#: schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:19
+#: schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:23
+#: schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:28 ui/preferences.ui:162
+#: schemas/com.uploadedlobster.peek.gschema.xml:24 ui/preferences.ui:147
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:33 ui/preferences.ui:205
+#: schemas/com.uploadedlobster.peek.gschema.xml:29 ui/preferences.ui:190
 msgid "Framerate"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:37
+#: schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: schemas/com.uploadedlobster.peek.gschema.xml:41
+#: schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
 msgstr ""
 
@@ -83,11 +79,11 @@ msgstr ""
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:138
+#: ui/preferences.ui:123
 msgid "Recording"
 msgstr ""
 
-#: ui/preferences.ui:253
+#: ui/preferences.ui:238
 msgid "Peek preferences"
 msgstr ""
 

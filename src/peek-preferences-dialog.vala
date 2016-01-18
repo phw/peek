@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -36,9 +36,6 @@ class PeekPreferencesDialog : Dialog {
   private Gtk.CheckButton interface_open_file_manager;
 
   [GtkChild]
-  private Gtk.CheckButton interface_auto_save;
-
-  [GtkChild]
   private Gtk.Adjustment recording_start_delay;
 
   [GtkChild]
@@ -53,10 +50,6 @@ class PeekPreferencesDialog : Dialog {
       interface_open_file_manager, "active",
       SettingsBindFlags.DEFAULT);
 
-    settings.bind ("interface-auto-save",
-      interface_auto_save, "active",
-      SettingsBindFlags.DEFAULT);
-
     settings.bind ("recording-start-delay",
       recording_start_delay, "value",
       SettingsBindFlags.DEFAULT);
@@ -64,7 +57,5 @@ class PeekPreferencesDialog : Dialog {
     settings.bind ("recording-framerate",
       recording_framerate, "value",
       SettingsBindFlags.DEFAULT);
-
-    interface_auto_save.set_sensitive (false);
   }
 }

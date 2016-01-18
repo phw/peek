@@ -6,10 +6,6 @@
       <default>true</default>
       <summary>Open file manager after saving</summary>
     </key>
-    <key name="interface-auto-save" type="b">
-      <default>false</default>
-      <summary>Automatically save files when recording stops</summary>
-    </key>
     <key name="interface-size-indicator-delay" type="i">
       <default>1600</default>
       <summary>Time in milliseconds for which the recording area size is displayed after resizing stops</summary>
