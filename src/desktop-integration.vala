@@ -11,17 +11,38 @@ public class DesktopIntegration {
   public static bool launch_file_manager (File file) {
     try {
       var uri = file.get_uri ();
+      var parent = file.get_parent ();
       debug ("File URI: %s\n", uri);
 
+      AppInfo app_info = null;
       if (file.has_uri_scheme ("file")) {
-        AppInfo app_info = AppInfo.get_default_for_type (
+        app_info = AppInfo.get_default_for_type (
           "inode/directory", true);
-        if (app_info != null) {
-          var uri_list = new List<string> ();
-          uri_list.append (uri);
-          app_info.launch_uris (uri_list, null);
-          return true;
+      }
+
+      if (app_info == null && parent != null) {
+	try {
+          app_info = parent.query_default_handler ();
         }
+	catch (Error e) {
+          stderr.printf ("Unable to get AppInfo for parent folder: %s\n", parent.get_uri ());
+        }
+      }
+
+      if (app_info != null) {
+        if (parent != null && (!app_info.supports_files () ||
+	  !file_manager_highlights_file (app_info))) {
+	  uri = parent.get_uri ();
+        }
+
+	var uri_list = new List<string> ();
+        uri_list.append (uri);
+        app_info.launch_uris (uri_list, null);
+        return true;
+      }
+
+      if (parent != null) {
+        uri = parent.get_uri ();
       }
 
       AppInfo.launch_default_for_uri (uri, null);
@@ -46,5 +67,10 @@ public class DesktopIntegration {
     }
 
     return folder;
+  }
+
+  private static bool file_manager_highlights_file (AppInfo app_info) {
+    var exe = app_info.get_executable ();
+    return exe == "nautilus" || exe == "nemo";
   }
 }
