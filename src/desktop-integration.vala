@@ -21,21 +21,21 @@ public class DesktopIntegration {
       }
 
       if (app_info == null && parent != null) {
-	try {
+        try {
           app_info = parent.query_default_handler ();
         }
-	catch (Error e) {
+        catch (Error e) {
           stderr.printf ("Unable to get AppInfo for parent folder: %s\n", parent.get_uri ());
         }
       }
 
       if (app_info != null) {
-        if (parent != null && (!app_info.supports_files () ||
-	  !file_manager_highlights_file (app_info))) {
-	  uri = parent.get_uri ();
+        if (parent != null && !file_manager_highlights_file (app_info)) {
+          uri = parent.get_uri ();
         }
 
-	var uri_list = new List<string> ();
+        debug("Launching \"%s\" for URI: %s\n", app_info.get_display_name (), uri);
+        var uri_list = new List<string> ();
         uri_list.append (uri);
         app_info.launch_uris (uri_list, null);
         return true;
@@ -45,6 +45,7 @@ public class DesktopIntegration {
         uri = parent.get_uri ();
       }
 
+      debug("Launching default for URI: %s\n", uri);
       AppInfo.launch_default_for_uri (uri, null);
       return true;
     }
