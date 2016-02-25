@@ -19,7 +19,6 @@ include(CTest)
 include(FindVala)
 include(UseVala)
 include(GResource)
-include(GSettings)
 include(GettextTranslate)
 
 # Check dependencies
@@ -45,9 +44,6 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
   SOURCE
     ui/${PROJECT_NAME}.gresource.xml
 )
-
-# GSettings
-add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 # Compile Vala to C
 vala_precompile(VALA_C
@@ -77,9 +73,8 @@ add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 
 # Installation
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
-install(PROGRAMS com.uploadedlobster.peek.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
-add_subdirectory(assets)
+add_subdirectory(data)
 add_subdirectory(po)
 
 if(BUILD_TESTS)
