@@ -26,3 +26,6 @@ install(FILES "icons/32x32/peek.png" DESTINATION share/icons/hicolor/32x32/apps)
 install(FILES "icons/48x48/peek.png" DESTINATION share/icons/hicolor/48x48/apps)
 install(FILES "icons/256x256/peek.png" DESTINATION share/icons/hicolor/256x256/apps)
 install(FILES "icons/512x512/peek.png" DESTINATION share/icons/hicolor/512x512/apps)
+
+# Install DBus service
+install(FILES "dbus/com.uploadedlobster.peek.service" DESTINATION share/dbus-1/services)

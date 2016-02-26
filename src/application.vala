@@ -76,6 +76,10 @@ namespace Peek {
       action = new GLib.SimpleAction ("quit", null);
       action.activate.connect (quit);
       add_action (action);
+
+      action = new GLib.SimpleAction ("open-file-manager", VariantType.STRING);
+      action.activate.connect (show_about);
+      add_action (action);
     }
 
     public override void shutdown () {
@@ -105,6 +109,11 @@ namespace Peek {
       var screen = Gdk.Screen.get_default ();
       Gtk.StyleContext.add_provider_for_screen (screen, provider,
         GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+    }
+
+    private void open_file_manager (string uri) {
+      var file = File.new_for_uri (uri);
+      DesktopIntegration.launch_file_manager (file);
     }
   }
 

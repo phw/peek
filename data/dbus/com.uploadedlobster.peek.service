@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.uploadedlobster.peek
+Exec=/usr/bin/peek --gapplication-service

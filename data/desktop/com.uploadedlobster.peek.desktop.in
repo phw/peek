@@ -7,3 +7,4 @@ Type=Application
 Categories=GTK;GNOME;Utility;
 StartupNotify=true
 Terminal=false
+DBusActivatable=true
