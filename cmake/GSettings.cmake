@@ -45,12 +45,12 @@ endmacro()
 
 
 macro(build_schema SCHEMA_NAME)
-  message (STATUS "Copying schema to build directory ${CMAKE_BINARY_DIR}/schemas")
+  message (STATUS "Copying schema to build directory ${CMAKE_BINARY_DIR}/data/schemas")
   get_filename_component (SCHEMA_FILE_NAME ${SCHEMA_NAME} NAME)
   configure_file(${SCHEMA_NAME} schemas/${SCHEMA_FILE_NAME} COPYONLY)
 
   set(PKG_CONFIG_EXECUTABLE pkg-config)
-  message (STATUS "Building development schema in ${CMAKE_BINARY_DIR}/schemas")
+  message (STATUS "Building development schema in ${CMAKE_BINARY_DIR}/data/schemas")
   execute_process (COMMAND ${PKG_CONFIG_EXECUTABLE} gio-2.0 --variable glib_compile_schemas  OUTPUT_VARIABLE _glib_comple_schemas OUTPUT_STRIP_TRAILING_WHITESPACE)
-  execute_process (COMMAND ${_glib_comple_schemas} ${CMAKE_BINARY_DIR}/schemas)
+  execute_process (COMMAND ${_glib_comple_schemas} ${CMAKE_BINARY_DIR}/data/schemas)
 endmacro()

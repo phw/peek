@@ -27,7 +27,7 @@ namespace Peek {
       }
 
       try {
-        var settings_dir = "./data/gsettings/";
+        var settings_dir = "./data/schemas/";
         var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
         SettingsSchema schema = schema_source.lookup (APP_ID, false);
         settings = new Settings.full (schema, null, null);
