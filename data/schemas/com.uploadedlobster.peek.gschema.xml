@@ -3,7 +3,7 @@
   <schema path="/com/uploadedlobster/peek/" id="com.uploadedlobster.peek"
     gettext-domain="peek">
     <key name="interface-open-file-manager" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Open file manager after saving</summary>
     </key>
     <key name="interface-size-indicator-delay" type="i">

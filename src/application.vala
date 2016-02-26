@@ -77,8 +77,8 @@ namespace Peek {
       action.activate.connect (quit);
       add_action (action);
 
-      action = new GLib.SimpleAction ("open-file-manager", VariantType.STRING);
-      action.activate.connect (show_about);
+      action = new GLib.SimpleAction ("show-file", VariantType.STRING);
+      action.activate.connect (show_file);
       add_action (action);
     }
 
@@ -111,8 +111,10 @@ namespace Peek {
         GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
     }
 
-    private void open_file_manager (string uri) {
-      var file = File.new_for_uri (uri);
+    private void show_file (Variant? uri) {
+      var uri_str = uri.get_string ();
+      debug ("Action show-file called with URI %s", uri_str);
+      var file = File.new_for_uri (uri_str);
       DesktopIntegration.launch_file_manager (file);
     }
   }

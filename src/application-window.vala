@@ -383,9 +383,8 @@ namespace Peek {
                 copy_success.to_string (),
                 out_file.get_uri ());
 
-              if (copy_success && open_file_manager) {
-                DesktopIntegration.launch_file_manager (out_file);
-                save_preferred_save_folder (out_file);
+              if (copy_success) {
+                handle_saved_file (out_file);
               }
               else if (!copy_success) {
                 stderr.printf ("Saving file %s failed.", out_file.get_uri ());
@@ -409,6 +408,33 @@ namespace Peek {
 
       // Close the FileChooserDialog:
       chooser.close ();
+    }
+
+    private void handle_saved_file (File file) {
+      save_preferred_save_folder (file);
+
+      if (open_file_manager) {
+        DesktopIntegration.launch_file_manager (file);
+      }
+      else {
+        show_file_saved_notification (file);
+      }
+    }
+
+    private void show_file_saved_notification (File file) {
+      var message = new StringBuilder ("");
+      message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
+      var parameter = new Variant.string (file.get_uri ());
+      var notification = new GLib.Notification (message.str);
+      notification.set_body (_ ("Click here to show the saved file in your file manager."));
+      notification.add_button_with_target_value (
+        _ ("Open in file manager"),
+        "app.show-file",
+        parameter);
+      notification.set_default_action_and_target_value (
+        "app.show-file",
+        parameter);
+      this.application.send_notification (null, notification);
     }
 
     private string load_preferred_save_folder () {
