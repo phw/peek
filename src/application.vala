@@ -105,10 +105,16 @@ namespace Peek {
 
     private void load_stylesheet () {
       var provider = new Gtk.CssProvider ();
-      provider.load_from_resource ("/com/uploadedlobster/peek/css/peek.css");
-      var screen = Gdk.Screen.get_default ();
-      Gtk.StyleContext.add_provider_for_screen (screen, provider,
-        GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+      try {
+        var file = File.new_for_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
+        provider.load_from_file (file);
+        var screen = Gdk.Screen.get_default ();
+        Gtk.StyleContext.add_provider_for_screen (screen, provider,
+          GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+      }
+      catch (GLib.Error e) {
+        stderr.printf ("Loading application stylesheet failed: %s", e.message);
+      }
     }
 
     private void show_file (Variant? uri) {
