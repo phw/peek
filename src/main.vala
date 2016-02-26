@@ -16,6 +16,6 @@ int main (string[] args) {
   GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   GLib.Intl.textdomain (GETTEXT_PACKAGE);
 
-  var app = new PeekApplication ();
+  var app = new Peek.Application ();
   return app.run (args);
 }

@@ -48,16 +48,16 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala
-    src/peek-application.vala
-    src/peek-application-window.vala
-    src/peek-about-dialog.vala
-    src/peek-preferences-dialog.vala
+    src/application.vala
+    src/application-window.vala
+    src/about-dialog.vala
+    src/preferences-dialog.vala
     src/desktop-integration.vala
-    src/screen-recorder/screen-recorder.vala
-    src/screen-recorder/recording-area.vala
-    src/screen-recorder/command-line-screen-recorder.vala
-    #src/screen-recorder/avconv-screen-recorder.vala
-    src/screen-recorder/ffmpeg-screen-recorder.vala
+    src/recording/screen-recorder.vala
+    src/recording/recording-area.vala
+    src/recording/command-line-screen-recorder.vala
+    #src/recording/avconv-screen-recorder.vala
+    src/recording/ffmpeg-screen-recorder.vala
   PACKAGES
     gtk+-3.0
     posix
