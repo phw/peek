@@ -2,7 +2,7 @@ include(GSettings)
 include(FindGettext)
 
 # GSettings
-add_schema(gsettings/com.uploadedlobster.peek.gschema.xml)
+add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 # Translate the desktop file
 add_custom_command(
