@@ -351,11 +351,11 @@ class PeekApplicationWindow : ApplicationWindow {
 
   private void save_output (File in_file) {
     var chooser = new FileChooserDialog (
-      null, this, FileChooserAction.SAVE,
+      _ ("Save animation"), this, FileChooserAction.SAVE,
       _ ("_Cancel"),
-      ResponseType.CANCEL,
-      _ ("_Save"),
-      ResponseType.ACCEPT);
+      ResponseType.CANCEL);
+    var ok_button = chooser.add_button (_ ("_Save"), ResponseType.OK);
+    ok_button.get_style_context ().add_class ("suggested-action");
 
     var filter = new FileFilter ();
     chooser.do_overwrite_confirmation = true;
@@ -369,7 +369,7 @@ class PeekApplicationWindow : ApplicationWindow {
     var default_name = now.format (default_file_name_format);
     chooser.set_current_name (default_name);
 
-    if (chooser.run () == ResponseType.ACCEPT) {
+    if (chooser.run () == ResponseType.OK) {
       var out_file = chooser.get_file ();
 
       in_file.copy_async.begin (out_file, FileCopyFlags.OVERWRITE,
