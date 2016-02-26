@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 07:53+0100\n"
+"POT-Creation-Date: 2016-02-26 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3
-#: src/peek-application.vala:51
+#: src/peek-application.vala:55
 msgid "Peek"
 msgstr ""
 
@@ -28,6 +28,10 @@ msgstr ""
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "peek"
+msgstr ""
+
+#: src/peek-application-window.vala:354
+msgid "Save animation"
 msgstr ""
 
 #: src/peek-application-window.vala:355
@@ -42,15 +46,27 @@ msgstr ""
 msgid "Animated GIF recorder"
 msgstr ""
 
-#: ui/application-window.ui:117
+#: ui/application-window.ui:33
+msgid "Start recording"
+msgstr ""
+
+#: ui/application-window.ui:128
 msgid "_Record"
+msgstr ""
+
+#: ui/application-window.ui:149
+msgid "_Stop"
+msgstr ""
+
+#: ui/application-window.ui:153
+msgid "Stop recording"
 msgstr ""
 
 #: ui/preferences.ui:78
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:92 data/gsettings/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr ""
 
@@ -58,11 +74,11 @@ msgstr ""
 msgid "Recording"
 msgstr ""
 
-#: ui/preferences.ui:147 data/gsettings/com.uploadedlobster.peek.gschema.xml:24
+#: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: ui/preferences.ui:190 data/gsettings/com.uploadedlobster.peek.gschema.xml:29
+#: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
 msgstr ""
 
@@ -86,28 +102,28 @@ msgstr ""
 msgid "_Quit"
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:11
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:14
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:15
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:19
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:33
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:37
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
 msgstr ""

@@ -8,29 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 07:53+0100\n"
-"PO-Revision-Date: 2016-01-18 09:30+0000\n"
+"POT-Creation-Date: 2016-02-26 10:54+0100\n"
+"PO-Revision-Date: 2016-02-26 10:55+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/"
+"de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3
-#: src/peek-application.vala:51
+#: src/peek-application.vala:55
 msgid "Peek"
 msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5
-#, fuzzy
 msgid "An animated GIF recorder"
 msgstr "Recorder für animierte GIFs"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "peek"
-msgstr ""
+msgstr "peek"
+
+#: src/peek-application-window.vala:354
+msgid "Save animation"
+msgstr "Animation speichern"
 
 #: src/peek-application-window.vala:355
 msgid "_Cancel"
@@ -44,15 +49,27 @@ msgstr "_Speichern"
 msgid "Animated GIF recorder"
 msgstr "Recorder für animierte GIFs"
 
-#: ui/application-window.ui:117
+#: ui/application-window.ui:33
+msgid "Start recording"
+msgstr "Aufnahme starten"
+
+#: ui/application-window.ui:128
 msgid "_Record"
 msgstr "Auf_nehmen"
+
+#: ui/application-window.ui:149
+msgid "_Stop"
+msgstr "_Stopp"
+
+#: ui/application-window.ui:153
+msgid "Stop recording"
+msgstr "Aufnahme beenden"
 
 #: ui/preferences.ui:78
 msgid "User interface"
 msgstr "Benutzeroberfläche"
 
-#: ui/preferences.ui:92 data/gsettings/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Dateimanager nach dem Speichern öffnen"
 
@@ -60,11 +77,11 @@ msgstr "Dateimanager nach dem Speichern öffnen"
 msgid "Recording"
 msgstr "Aufnahme"
 
-#: ui/preferences.ui:147 data/gsettings/com.uploadedlobster.peek.gschema.xml:24
+#: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
 msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
 
-#: ui/preferences.ui:190 data/gsettings/com.uploadedlobster.peek.gschema.xml:29
+#: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
 msgstr "Bildwiederholrate"
 
@@ -88,7 +105,7 @@ msgstr "_Info"
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:11
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
@@ -96,24 +113,24 @@ msgstr ""
 "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der "
 "Größenänderung angezeigt wird"
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:14
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
 msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:15
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
 msgstr ""
 "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für "
 "Datumsangaben enthalten."
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:19
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
 msgstr "Dunkles Thema bevorzugen"
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:33
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
 msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
 
-#: data/gsettings/com.uploadedlobster.peek.gschema.xml:37
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
 msgstr "Pfad, in dem das letzte Video gespeichert wurde"

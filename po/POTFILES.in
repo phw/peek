@@ -5,4 +5,4 @@ ui/about.ui
 ui/application-window.ui
 ui/preferences.ui
 ui/gtk/menus.ui
-data/gsettings/com.uploadedlobster.peek.gschema.xml
+data/schemas/com.uploadedlobster.peek.gschema.xml
