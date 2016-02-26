@@ -72,7 +72,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="no_show_all">True</property>
                 <property name="label">0 x 0</property>
                 <style>
-                  <class name="osd"/>
+                  <class name="peek-recording-view-overlay"/>
                 </style>
               </object>
               <packing>
@@ -90,7 +90,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                   <attribute name="scale" value="2"/>
                 </attributes>
                 <style>
-                  <class name="osd"/>
+                  <class name="peek-recording-view-overlay"/>
                 </style>
               </object>
               <packing>

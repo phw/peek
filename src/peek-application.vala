@@ -11,6 +11,8 @@ public class PeekApplication : Gtk.Application {
 
   const string APP_ID = "com.uploadedlobster.peek";
 
+  const uint GTK_STYLE_PROVIDER_PRIORITY_APPLICATION = 600;
+
   private Gtk.Window main_window;
 
   private static Settings? settings = null;
@@ -47,6 +49,8 @@ public class PeekApplication : Gtk.Application {
 
   public override void startup () {
     base.startup ();
+
+    load_stylesheet ();
 
     GLib.Environment.set_application_name (_ ("Peek"));
 
@@ -89,5 +93,13 @@ public class PeekApplication : Gtk.Application {
 
   private void show_about () {
     PeekAboutDialog.present_single_instance (main_window);
+  }
+
+  private void load_stylesheet () {
+    var provider = new Gtk.CssProvider ();
+    provider.load_from_resource ("/com/uploadedlobster/peek/css/peek.css");
+    var screen = Gdk.Screen.get_default ();
+    Gtk.StyleContext.add_provider_for_screen (screen, provider,
+      GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
   }
 }
