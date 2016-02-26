@@ -4,23 +4,28 @@ add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 # Translate the desktop file
 include(FindGettext)
-if(GETTEXT_VERSION_STRING VERSION_LESS 0.19)
-  message(FATAL_ERROR "Gettext >= 0.19 required")
+set (GETTEXT_REQUIRED_VERSION 0.19)
+if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERSION_STRING VERSION_GREATER GETTEXT_REQUIRED_VERSION)
+  add_custom_command(
+      OUTPUT com.uploadedlobster.peek.desktop
+      COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
+        --desktop
+        --template=data/desktop/com.uploadedlobster.peek.desktop.in
+        -d po
+        -o ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.desktop
+      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+  add_custom_target(build-desktop-file ALL DEPENDS com.uploadedlobster.peek.desktop)
+  install(
+    FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.desktop
+    DESTINATION ${XDG_APPS_INSTALL_DIR})
+else()
+  message(WARNING "Gettext >= ${GETTEXT_REQUIRED_VERSION} required for .desktop file translation")
+  install(
+    FILES desktop/com.uploadedlobster.peek.desktop.in
+    DESTINATION ${XDG_APPS_INSTALL_DIR}
+    RENAME com.uploadedlobster.peek.desktop)
 endif()
-
-add_custom_command(
-    OUTPUT com.uploadedlobster.peek.desktop
-    COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
-      --desktop
-      --template=data/desktop/com.uploadedlobster.peek.desktop.in
-      -d po
-      -o ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.desktop
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-  )
-add_custom_target(build-desktop-file ALL DEPENDS com.uploadedlobster.peek.desktop)
-install(
-  FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.desktop
-  DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 # Install application icons
 install(FILES "icons/16x16/peek.png" DESTINATION share/icons/hicolor/16x16/apps)
