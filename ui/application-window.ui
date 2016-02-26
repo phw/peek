@@ -134,6 +134,11 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="use_underline">True</property>
                 <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_record_button_clicked" swapped="no"/>
+                <child internal-child="accessible">
+                  <object class="AtkObject" id="record_button-atkobject">
+                    <property name="AtkObject::accessible-name" translatable="yes">Start recording</property>
+                  </object>
+                </child>
                 <style>
                   <class name="suggested-action"/>
                 </style>
@@ -150,12 +155,16 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="no_show_all">True</property>
-                <property name="tooltip_text" translatable="yes">Stop recording</property>
                 <property name="image">icon_stop_button</property>
                 <property name="relief">half</property>
                 <property name="use_underline">True</property>
                 <property name="always_show_image">True</property>
                 <signal name="clicked" handler="on_stop_button_clicked" swapped="no"/>
+                <child internal-child="accessible">
+                  <object class="AtkObject" id="stop_button-atkobject">
+                    <property name="AtkObject::accessible-name" translatable="yes">Stop recording</property>
+                  </object>
+                </child>
                 <style>
                   <class name="destructive-action"/>
                 </style>
