@@ -19,7 +19,7 @@ add_test(
 # /screen-recorder/recording-area/
 vala_precompile(VALA_TEST_RECORDING_AREA_C
     screen-recorder/test-recording-area.vala
-    ../src/screen-recorder/recording-area.vala
+    ../src/recording/recording-area.vala
   PACKAGES
     gtk+-3.0
 )
@@ -35,9 +35,9 @@ add_test(
 # /screen-recorder/command-line-screen-recorder/
 vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     screen-recorder/test-command-line-screen-recorder.vala
-    ../src/screen-recorder/recording-area.vala
-    ../src/screen-recorder/screen-recorder.vala
-    ../src/screen-recorder/command-line-screen-recorder.vala
+    ../src/recording/recording-area.vala
+    ../src/recording/screen-recorder.vala
+    ../src/recording/command-line-screen-recorder.vala
   PACKAGES
     gtk+-3.0
 )

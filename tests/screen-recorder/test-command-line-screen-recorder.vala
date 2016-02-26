@@ -1,3 +1,5 @@
+using Peek.Recording;
+
 class TestCommandLineScreenRecorder : CommandLineScreenRecorder {
   public bool stop_command_called { get; set; default = false; }
 

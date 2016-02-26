@@ -1,3 +1,5 @@
+using Peek.Recording;
+
 void test_equals () {
   var area = RecordingArea () {
     left = 100,

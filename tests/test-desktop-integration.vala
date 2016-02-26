@@ -1,3 +1,5 @@
+using Peek;
+
 void test_get_video_folder () {
   var folder = DesktopIntegration.get_video_folder ();
   assert_nonnull (folder);
