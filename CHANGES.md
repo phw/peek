@@ -1,3 +1,10 @@
+# Version 0.7.0 - 2016-02-26
+ * ui: Moved record / stop button to header
+ * ui: Show desktop notification after saving, with ability
+   to open the file manager from there
+ * ui: Use custom styling for recording area overlay
+ * i18n: .desktop file gets translated
+
 # Version 0.6.0 - 2016-01-28
  * ui: Removed unused auto save option from preferences dialog
  * fix: Try to always open the file manager, not the image viewer
