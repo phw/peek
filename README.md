@@ -20,8 +20,8 @@ operating systems in the future.
 ### Development
 
  * Vala compiler
- * CMake >= 2.6
- * Gettext
+ * CMake >= 2.8.8
+ * Gettext >= 0.19
 
 ## Installation
 ### Arch Linux

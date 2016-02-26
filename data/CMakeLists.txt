@@ -1,10 +1,13 @@
-include(GSettings)
-include(FindGettext)
-
 # GSettings
+include(GSettings)
 add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 # Translate the desktop file
+include(FindGettext)
+if(GETTEXT_VERSION_STRING VERSION_LESS 0.19)
+  message(FATAL_ERROR "Gettext >= 0.19 required")
+endif()
+
 add_custom_command(
     OUTPUT com.uploadedlobster.peek.desktop
     COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
