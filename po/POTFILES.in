@@ -1,6 +1,6 @@
 data/desktop/com.uploadedlobster.peek.desktop.in
-src/peek-application.vala
-src/peek-application-window.vala
+src/application.vala
+src/application-window.vala
 ui/about.ui
 ui/application-window.ui
 ui/preferences.ui

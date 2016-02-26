@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 10:54+0100\n"
-"PO-Revision-Date: 2016-02-26 10:55+0100\n"
+"POT-Creation-Date: 2016-02-26 13:50+0100\n"
+"PO-Revision-Date: 2016-02-26 13:54+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/"
 "de/)\n"
@@ -20,8 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3
-#: src/peek-application.vala:55
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
 msgid "Peek"
 msgstr "Peek"
 
@@ -33,23 +32,36 @@ msgstr "Recorder für animierte GIFs"
 msgid "peek"
 msgstr "peek"
 
-#: src/peek-application-window.vala:354
+#: src/application-window.vala:357
 msgid "Save animation"
 msgstr "Animation speichern"
 
-#: src/peek-application-window.vala:355
+#: src/application-window.vala:358
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/peek-application-window.vala:357
+#: src/application-window.vala:360
 msgid "_Save"
 msgstr "_Speichern"
+
+#: src/application-window.vala:426
+#, c-format
+msgid "Animation saved as “%s”"
+msgstr "Animation als »%s« gespeichert"
+
+#: src/application-window.vala:429
+msgid "Click here to show the saved file in your file manager."
+msgstr "Hier klicken, um die Datei in der  Dateiverwaltung anzuzeigen."
+
+#: src/application-window.vala:431
+msgid "Show in file manager"
+msgstr "In Dateiverwaltung anzeigen"
 
 #: ui/about.ui:37
 msgid "Animated GIF recorder"
 msgstr "Recorder für animierte GIFs"
 
-#: ui/application-window.ui:33
+#: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
 msgstr "Aufnahme starten"
 
@@ -57,11 +69,11 @@ msgstr "Aufnahme starten"
 msgid "_Record"
 msgstr "Auf_nehmen"
 
-#: ui/application-window.ui:149
+#: ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Stopp"
 
-#: ui/application-window.ui:153
+#: ui/application-window.ui:165
 msgid "Stop recording"
 msgstr "Aufnahme beenden"
 
@@ -71,7 +83,7 @@ msgstr "Benutzeroberfläche"
 
 #: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Dateimanager nach dem Speichern öffnen"
+msgstr "Dateiverwaltung nach dem Speichern öffnen"
 
 #: ui/preferences.ui:123
 msgid "Recording"

@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 10:54+0100\n"
+"POT-Creation-Date: 2016-02-26 13:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3
-#: src/peek-application.vala:55
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
 msgid "Peek"
 msgstr ""
 
@@ -30,23 +29,36 @@ msgstr ""
 msgid "peek"
 msgstr ""
 
-#: src/peek-application-window.vala:354
+#: src/application-window.vala:357
 msgid "Save animation"
 msgstr ""
 
-#: src/peek-application-window.vala:355
+#: src/application-window.vala:358
 msgid "_Cancel"
 msgstr ""
 
-#: src/peek-application-window.vala:357
+#: src/application-window.vala:360
 msgid "_Save"
+msgstr ""
+
+#: src/application-window.vala:426
+#, c-format
+msgid "Animation saved as “%s”"
+msgstr ""
+
+#: src/application-window.vala:429
+msgid "Click here to show the saved file in your file manager."
+msgstr ""
+
+#: src/application-window.vala:431
+msgid "Show in file manager"
 msgstr ""
 
 #: ui/about.ui:37
 msgid "Animated GIF recorder"
 msgstr ""
 
-#: ui/application-window.ui:33
+#: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
 msgstr ""
 
@@ -54,11 +66,11 @@ msgstr ""
 msgid "_Record"
 msgstr ""
 
-#: ui/application-window.ui:149
+#: ui/application-window.ui:154
 msgid "_Stop"
 msgstr ""
 
-#: ui/application-window.ui:153
+#: ui/application-window.ui:165
 msgid "Stop recording"
 msgstr ""
 

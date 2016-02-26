@@ -428,7 +428,7 @@ namespace Peek {
       var notification = new GLib.Notification (message.str);
       notification.set_body (_ ("Click here to show the saved file in your file manager."));
       notification.add_button_with_target_value (
-        _ ("Open in file manager"),
+        _ ("Show in file manager"),
         "app.show-file",
         parameter);
       notification.set_default_action_and_target_value (
