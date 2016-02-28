@@ -21,7 +21,7 @@ operating systems in the future.
 
  * Vala compiler
  * CMake >= 2.8.8
- * Gettext >= 0.19
+ * Gettext (>= 0.19 for localized .desktop entry)
 
 ## Installation
 ### Arch Linux

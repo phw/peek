@@ -1,5 +1,6 @@
-# Version 0.7.1 - 2016-02-26
- * buil: Fixed building with Gtk 3.14
+# Version 0.7.1 - 2016-02-28
+ * build: Fixed building with Gtk 3.14
+ * build: Allow building with Gettext < 0.19 (disables localized .desktop file)
 
 # Version 0.7.0 - 2016-02-26
  * ui: Moved record / stop button to header
