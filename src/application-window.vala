@@ -487,8 +487,7 @@ namespace Peek {
           w = 0,
           h = 0;
       get_position (out x, out y);
-      w = get_allocated_width ();
-      h = get_allocated_height ();
+      get_size (out w, out h);
       builder.add_value (new GLib.Variant.int32(x));
       builder.add_value (new GLib.Variant.int32(y));
       builder.add_value (new GLib.Variant.int32(w));
