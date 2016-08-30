@@ -35,6 +35,14 @@ In theory this package should also work on Debian. In practice you will miss the
 ffmpeg package. libav is currently not directly usable as a replacement, but I
 am working on it ;)
 
+On Ubuntu 16.04 Xenial:
+```
+$ wget https://github.com/phw/peek/releases/download/v0.7.2/peek-0.7.2-Linux.deb
+$ sudo apt install libsdl1.2debian ffmpeg libavdevice-ffmpeg56
+$ sudo dpkg -i peek-0.7.2-Linux.deb
+$ peek
+```
+
 ### From source
 You can build and install Peek using CMake:
 
