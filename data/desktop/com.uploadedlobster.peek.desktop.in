@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Peek
 Exec=peek
-Comment=An animated GIF recorder
+GenericName=Animated GIF recorder
+Comment=Record short animated GIF images from your screen
 Icon=peek
 Type=Application
 Categories=GTK;GNOME;Utility;DesktopUtility;
