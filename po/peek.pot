@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 13:50+0100\n"
+"POT-Creation-Date: 2016-09-06 10:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
 msgstr ""
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:5
-msgid "An animated GIF recorder"
+#: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
+msgid "Animated GIF recorder"
 msgstr ""
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
+msgstr ""
+
+#: src/application.vala:49
+msgid "Show the version of the program and exit"
 msgstr ""
 
 #: src/application-window.vala:357
@@ -52,10 +60,6 @@ msgstr ""
 
 #: src/application-window.vala:431
 msgid "Show in file manager"
-msgstr ""
-
-#: ui/about.ui:37
-msgid "Animated GIF recorder"
 msgstr ""
 
 #: ui/application-window.ui:33 ui/application-window.ui:139

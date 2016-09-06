@@ -1,34 +1,44 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Boris Sikora <sikora.boris@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 13:50+0100\n"
+"POT-Creation-Date: 2016-09-06 10:27+0200\n"
 "PO-Revision-Date: 2016-09-02 19:30+0000\n"
 "Last-Translator: Boris Sikora <sikora.boris@gmail.com>\n"
-"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/phwolfer/peek/language/uk_UA/)\n"
+"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/phwolfer/peek/"
+"language/uk_UA/)\n"
+"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk_UA\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
 msgstr "Peek"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:5
-msgid "An animated GIF recorder"
+#: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
+msgid "Animated GIF recorder"
 msgstr "Записувач GIF анімації"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
 msgstr "peek"
+
+#: src/application.vala:49
+msgid "Show the version of the program and exit"
+msgstr ""
 
 #: src/application-window.vala:357
 msgid "Save animation"
@@ -54,10 +64,6 @@ msgstr "Натисніть тут, щоб показати збережений 
 #: src/application-window.vala:431
 msgid "Show in file manager"
 msgstr "Показати в менеджері файлів"
-
-#: ui/about.ui:37
-msgid "Animated GIF recorder"
-msgstr "Записувач GIF анімації"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
@@ -119,7 +125,9 @@ msgstr "_Вихід"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Час у мілісекундах, за яке розмір області запису відображається після закінчення зміни розміру"
+msgstr ""
+"Час у мілісекундах, за яке розмір області запису відображається після "
+"закінчення зміни розміру"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -127,7 +135,9 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Ім'я за замовчуванням вже використовується. Ви можете приєднати специфікатор формату дати."
+msgstr ""
+"Ім'я за замовчуванням вже використовується. Ви можете приєднати специфікатор "
+"формату дати."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"

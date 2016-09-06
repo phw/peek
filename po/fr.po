@@ -1,34 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Yoan Malié <hello@yoan-malie.fr>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-02-26 13:50+0100\n"
+"POT-Creation-Date: 2016-09-06 10:27+0200\n"
 "PO-Revision-Date: 2016-09-04 18:57+0000\n"
 "Last-Translator: Yoan Malié <hello@yoan-malie.fr>\n"
 "Language-Team: French (http://www.transifex.com/phwolfer/peek/language/fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
 msgstr "Peek"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:5
-msgid "An animated GIF recorder"
-msgstr "Un enregistreur de GIF animé"
+#: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
+msgid "Animated GIF recorder"
+msgstr "Enregistreur de GIF animé"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
 msgstr "peek"
+
+#: src/application.vala:49
+msgid "Show the version of the program and exit"
+msgstr ""
 
 #: src/application-window.vala:357
 msgid "Save animation"
@@ -49,15 +57,12 @@ msgstr "Animation sauvegardé comme \"%s\""
 
 #: src/application-window.vala:429
 msgid "Click here to show the saved file in your file manager."
-msgstr "Cliquez ici pour afficher le fichier dans votre gestionnaire de fichier"
+msgstr ""
+"Cliquez ici pour afficher le fichier dans votre gestionnaire de fichier"
 
 #: src/application-window.vala:431
 msgid "Show in file manager"
 msgstr "Afficher dans le gestionnaire de fichier"
-
-#: ui/about.ui:37
-msgid "Animated GIF recorder"
-msgstr "Enregistreur de GIF animé"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
@@ -119,7 +124,9 @@ msgstr "_Quitter"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Temps en millisecondes pour lesquelles la taille de la zone d'enregistrement est affiché après l'arrêt du redimensionnement"
+msgstr ""
+"Temps en millisecondes pour lesquelles la taille de la zone d'enregistrement "
+"est affiché après l'arrêt du redimensionnement"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -127,7 +134,9 @@ msgstr "\"Peek %d-%m-%Y %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Nom de fichier par défaut utilisé. Peut inclure un spécificateurs de format de date."
+msgstr ""
+"Nom de fichier par défaut utilisé. Peut inclure un spécificateurs de format "
+"de date."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
