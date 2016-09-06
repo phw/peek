@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:27+0200\n"
-"PO-Revision-Date: 2016-09-01 12:14+0000\n"
-"Last-Translator: Alexander Wunschik <mail@wunschik.it>\n"
+"POT-Creation-Date: 2016-09-06 10:34+0200\n"
+"PO-Revision-Date: 2016-09-06 08:33+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Aufnahme von GIF Animationen"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Kurze GIF Animationen vom Bildschirm aufnehmen"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
@@ -37,7 +37,7 @@ msgstr "peek"
 
 #: src/application.vala:49
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Programmversion anzeigen und beenden"
 
 #: src/application-window.vala:357
 msgid "Save animation"
