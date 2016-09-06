@@ -3,21 +3,20 @@
 # This file is distributed under the same license as the peek package.
 # 
 # Translators:
-# Alexander Wunschik <mail@wunschik.it>, 2016
-# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
+# Moo, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-02-26 13:50+0100\n"
-"PO-Revision-Date: 2016-09-01 12:14+0000\n"
-"Last-Translator: Alexander Wunschik <mail@wunschik.it>\n"
-"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
+"PO-Revision-Date: 2016-09-01 16:13+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian (http://www.transifex.com/phwolfer/peek/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
 msgid "Peek"
@@ -25,7 +24,7 @@ msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5
 msgid "An animated GIF recorder"
-msgstr "Aufnahme von GIF Animationen"
+msgstr "Animuotas GIF rašytuvas"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "peek"
@@ -33,94 +32,94 @@ msgstr "peek"
 
 #: src/application-window.vala:357
 msgid "Save animation"
-msgstr "Animation speichern"
+msgstr "Įrašyti animaciją"
 
 #: src/application-window.vala:358
 msgid "_Cancel"
-msgstr "_Abbrechen"
+msgstr "_Atsisakyti"
 
 #: src/application-window.vala:360
 msgid "_Save"
-msgstr "_Speichern"
+msgstr "Į_rašyti"
 
 #: src/application-window.vala:426
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr "Animation als “%s” gespeichert"
+msgstr "Animacija įrašyta kaip \"%s\""
 
 #: src/application-window.vala:429
 msgid "Click here to show the saved file in your file manager."
-msgstr "Hier klicken, um die Datei in der  Dateiverwaltung anzuzeigen."
+msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
 #: src/application-window.vala:431
 msgid "Show in file manager"
-msgstr "In Ordner anzeigen"
+msgstr "Rodyti failų tvarkytuvėje"
 
 #: ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr "Recorder für animierte GIFs"
+msgstr "Animuotas GIF rašytuvas"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
-msgstr "Aufnahme starten"
+msgstr "Pradėti įrašinėjimą"
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr "Auf_nehmen"
+msgstr "Į_rašinėti"
 
 #: ui/application-window.ui:154
 msgid "_Stop"
-msgstr "_Stopp"
+msgstr "_Stabdyti"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
-msgstr "Aufnahme anhalten"
+msgstr "Stabdyti įrašinėjimą"
 
 #: ui/preferences.ui:78
 msgid "User interface"
-msgstr "Benutzeroberfläche"
+msgstr "Naudotojo sąsaja"
 
 #: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Dateimanager nach dem Speichern öffnen"
+msgstr "Po failo įrašymo atverti failų tvarkytuvę"
 
 #: ui/preferences.ui:123
 msgid "Recording"
-msgstr "Aufnahme"
+msgstr "Įrašinėjama"
 
 #: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
-msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
+msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
 
 #: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr "Bildwiederholrate"
+msgstr "Kadrų dažnis"
 
 #: ui/preferences.ui:238
 msgid "Peek preferences"
-msgstr "Einstellungen für Peek"
+msgstr "Peek nuostatos"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr "Neues _Fenster"
+msgstr "Naujas _langas"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
-msgstr "_Einstellungen"
+msgstr "_Nuostatos"
 
 #: ui/gtk/menus.ui:19
 msgid "_About"
-msgstr "_Info"
+msgstr "_Apie"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr "_Beenden"
+msgstr "_Išeiti"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der Größenänderung angezeigt wird"
+msgstr "Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus rodomas įrašinėjimo srities dydis"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -128,16 +127,16 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für Datumsangaben enthalten."
+msgstr "Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato specifikatorių."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr "Dunkles Thema bevorzugen"
+msgstr "Teikti pirmenybę tamsiai temai"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
-msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
+msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
-msgstr "Pfad, in dem das letzte Video gespeichert wurde"
+msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"

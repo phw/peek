@@ -3,21 +3,20 @@
 # This file is distributed under the same license as the peek package.
 # 
 # Translators:
-# Alexander Wunschik <mail@wunschik.it>, 2016
-# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
+# Yoan Malié <hello@yoan-malie.fr>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-02-26 13:50+0100\n"
-"PO-Revision-Date: 2016-09-01 12:14+0000\n"
-"Last-Translator: Alexander Wunschik <mail@wunschik.it>\n"
-"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
+"PO-Revision-Date: 2016-09-04 18:57+0000\n"
+"Last-Translator: Yoan Malié <hello@yoan-malie.fr>\n"
+"Language-Team: French (http://www.transifex.com/phwolfer/peek/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:59
 msgid "Peek"
@@ -25,7 +24,7 @@ msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5
 msgid "An animated GIF recorder"
-msgstr "Aufnahme von GIF Animationen"
+msgstr "Un enregistreur de GIF animé"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "peek"
@@ -33,111 +32,111 @@ msgstr "peek"
 
 #: src/application-window.vala:357
 msgid "Save animation"
-msgstr "Animation speichern"
+msgstr "Sauvegarder l'animation"
 
 #: src/application-window.vala:358
 msgid "_Cancel"
-msgstr "_Abbrechen"
+msgstr "_Annuler"
 
 #: src/application-window.vala:360
 msgid "_Save"
-msgstr "_Speichern"
+msgstr "_Sauvegarder"
 
 #: src/application-window.vala:426
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr "Animation als “%s” gespeichert"
+msgstr "Animation sauvegardé comme \"%s\""
 
 #: src/application-window.vala:429
 msgid "Click here to show the saved file in your file manager."
-msgstr "Hier klicken, um die Datei in der  Dateiverwaltung anzuzeigen."
+msgstr "Cliquez ici pour afficher le fichier dans votre gestionnaire de fichier"
 
 #: src/application-window.vala:431
 msgid "Show in file manager"
-msgstr "In Ordner anzeigen"
+msgstr "Afficher dans le gestionnaire de fichier"
 
 #: ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr "Recorder für animierte GIFs"
+msgstr "Enregistreur de GIF animé"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
-msgstr "Aufnahme starten"
+msgstr "Commencer l'enregistrement"
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr "Auf_nehmen"
+msgstr "_Enregistrer"
 
 #: ui/application-window.ui:154
 msgid "_Stop"
-msgstr "_Stopp"
+msgstr "_Arrêter"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
-msgstr "Aufnahme anhalten"
+msgstr "Arrêter l'enregistrement"
 
 #: ui/preferences.ui:78
 msgid "User interface"
-msgstr "Benutzeroberfläche"
+msgstr "Interface d'utilisateur"
 
 #: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Dateimanager nach dem Speichern öffnen"
+msgstr "Ouvrir le gestionnaire de fichier après la sauvegarde"
 
 #: ui/preferences.ui:123
 msgid "Recording"
-msgstr "Aufnahme"
+msgstr "Enregistrement"
 
 #: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
-msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
+msgstr "Délai en secondes avant le début de l'enregistrement"
 
 #: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr "Bildwiederholrate"
+msgstr "Fréquence d'image"
 
 #: ui/preferences.ui:238
 msgid "Peek preferences"
-msgstr "Einstellungen für Peek"
+msgstr "Préférences de Peek"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr "Neues _Fenster"
+msgstr "Nouvelle _fenêtre"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
-msgstr "_Einstellungen"
+msgstr "_Préférences"
 
 #: ui/gtk/menus.ui:19
 msgid "_About"
-msgstr "_Info"
+msgstr "_À propos"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr "_Beenden"
+msgstr "_Quitter"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der Größenänderung angezeigt wird"
+msgstr "Temps en millisecondes pour lesquelles la taille de la zone d'enregistrement est affiché après l'arrêt du redimensionnement"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr "\"Peek %d-%m-%Y %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für Datumsangaben enthalten."
+msgstr "Nom de fichier par défaut utilisé. Peut inclure un spécificateurs de format de date."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr "Dunkles Thema bevorzugen"
+msgstr "Préférer un thème sombre"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
-msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
+msgstr "Taille et position de la dernière fenêtre principale"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
-msgstr "Pfad, in dem das letzte Video gespeichert wurde"
+msgstr "Chemin ou la dernière vidéo a été sauvegardé"
