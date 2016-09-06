@@ -61,13 +61,19 @@ vala_precompile(VALA_C
   PACKAGES
     gtk+-3.0
     posix
+  CUSTOM_VAPIS
+    src/vapi/config.vapi
+  GENERATE_HEADER
+    application
   OPTIONS
     --target-glib=2.38
+    --use-header
     --gresources=${CMAKE_SOURCE_DIR}/ui/${PROJECT_NAME}.gresource.xml
 )
 
 # Compile C code
 add_definitions(-DGETTEXT_PACKAGE="${PROJECT_NAME}")
+add_definitions(-DVERSION="${PEEK_VERSION_MAJOR}.${PEEK_VERSION_MINOR}.${PEEK_VERSION_PATCH}")
 add_definitions(-Wno-deprecated-declarations)
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 

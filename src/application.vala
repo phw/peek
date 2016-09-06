@@ -43,6 +43,10 @@ namespace Peek {
     public Application () {
       Object (application_id: APP_ID,
         flags: ApplicationFlags.FLAGS_NONE);
+
+      add_main_option ("version", 'v',
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Show the version of the program and exit"), null);
     }
 
     public override void activate () {
@@ -89,6 +93,15 @@ namespace Peek {
       }
 
       base.shutdown ();
+    }
+
+    protected override int handle_local_options (GLib.VariantDict options) {
+      if (options.contains ("version")) {
+        stderr.printf ("%1$s %2$s\n", "Peek", Config.VERSION);
+        return Posix.EXIT_SUCCESS;
+      }
+
+      return -1;
     }
 
     private void new_window () {
