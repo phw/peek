@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-13 14:02+0200\n"
+"POT-Creation-Date: 2016-10-13 14:49+0200\n"
 "PO-Revision-Date: 2016-10-11 13:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -39,6 +39,10 @@ msgstr "peek"
 #: src/application.vala:49
 msgid "Show the version of the program and exit"
 msgstr "Показать версию программы и выйти"
+
+#: src/about-dialog.vala:20
+msgid "translator-credits"
+msgstr ""
 
 #: src/application-window.vala:244
 msgid "Rendering…"

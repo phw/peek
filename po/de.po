@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-13 14:02+0200\n"
-"PO-Revision-Date: 2016-10-13 14:04+0200\n"
+"POT-Creation-Date: 2016-10-13 14:49+0200\n"
+"PO-Revision-Date: 2016-10-13 15:08+0200\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/"
 "de/)\n"
@@ -40,6 +40,10 @@ msgstr "peek"
 #: src/application.vala:49
 msgid "Show the version of the program and exit"
 msgstr "Programmversion anzeigen und beenden"
+
+#: src/about-dialog.vala:20
+msgid "translator-credits"
+msgstr "Philipp Wolfer <ph.wolfer@gmail.com>"
 
 #: src/application-window.vala:244
 msgid "Rendering…"

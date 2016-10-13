@@ -16,7 +16,9 @@ namespace Peek {
 
     public static Gtk.Dialog present_single_instance (Gtk.Window main_window) {
       if (instance == null) {
-        instance = new AboutDialog ();
+        var aboutDialog = new AboutDialog ();
+        aboutDialog.set_translator_credits (_ ("translator-credits"));
+        instance = aboutDialog;
         instance.delete_event.connect ((event) => {
           instance = null;
           main_window.set_keep_above (true);
