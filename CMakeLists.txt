@@ -41,8 +41,7 @@ configure_file (
   )
 
 GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
-  SOURCE
-    ui/${PROJECT_NAME}.gresource.xml
+  ui/${PROJECT_NAME}.gresource.xml
 )
 
 # Compile Vala to C
