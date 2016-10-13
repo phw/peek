@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.uploadedlobster.peek
+Exec=@CMAKE_INSTALL_PREFIX@/bin/peek --gapplication-service

@@ -36,4 +36,9 @@ install(FILES "icons/256x256/peek.png" DESTINATION share/icons/hicolor/256x256/a
 install(FILES "icons/512x512/peek.png" DESTINATION share/icons/hicolor/512x512/apps)
 
 # Install DBus service
-install(FILES "dbus/com.uploadedlobster.peek.service" DESTINATION share/dbus-1/services)
+configure_file (
+  dbus/com.uploadedlobster.peek.service.in
+  dbus/com.uploadedlobster.peek.service
+  )
+
+install(FILES ${CMAKE_BINARY_DIR}/data/dbus/com.uploadedlobster.peek.service DESTINATION share/dbus-1/services)
