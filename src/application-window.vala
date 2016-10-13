@@ -241,6 +241,7 @@ namespace Peek {
       }
       else {
         stop_button.sensitive = false;
+        stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
       }
     }
@@ -259,6 +260,7 @@ namespace Peek {
       is_recording = true;
       size_indicator.opacity = 0.0;
       record_button.hide ();
+      stop_button.set_label (_ ("_Stop"));
       stop_button.sensitive = true;
       stop_button.show ();
       freeze_window_size ();
@@ -348,7 +350,7 @@ namespace Peek {
       int relative_left, relative_top;
       recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
         out relative_left, out relative_top);
-      
+
       area.left = (area.left + relative_left) * scale_factor;
       area.top = (area.top + relative_top) * scale_factor;
 
