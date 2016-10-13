@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:27+0200\n"
+"POT-Creation-Date: 2016-10-13 14:02+0200\n"
 "PO-Revision-Date: 2016-09-02 19:30+0000\n"
 "Last-Translator: Boris Sikora <sikora.boris@gmail.com>\n"
 "Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/phwolfer/peek/"
@@ -40,28 +40,36 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr ""
 
-#: src/application-window.vala:357
+#: src/application-window.vala:244
+msgid "Rendering…"
+msgstr ""
+
+#: src/application-window.vala:263 ui/application-window.ui:154
+msgid "_Stop"
+msgstr "_Стоп"
+
+#: src/application-window.vala:362
 msgid "Save animation"
 msgstr "Зберегти анімацію"
 
-#: src/application-window.vala:358
+#: src/application-window.vala:363
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: src/application-window.vala:360
+#: src/application-window.vala:365
 msgid "_Save"
 msgstr "_Зберегти"
 
-#: src/application-window.vala:426
+#: src/application-window.vala:431
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анімацію буде збережено як \"%s\""
 
-#: src/application-window.vala:429
+#: src/application-window.vala:434
 msgid "Click here to show the saved file in your file manager."
 msgstr "Натисніть тут, щоб показати збережений файл в менеджері файлів."
 
-#: src/application-window.vala:431
+#: src/application-window.vala:436
 msgid "Show in file manager"
 msgstr "Показати в менеджері файлів"
 
@@ -72,10 +80,6 @@ msgstr "Почати запис"
 #: ui/application-window.ui:128
 msgid "_Record"
 msgstr "_Запис"
-
-#: ui/application-window.ui:154
-msgid "_Stop"
-msgstr "_Стоп"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"

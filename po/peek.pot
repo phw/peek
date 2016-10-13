@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:27+0200\n"
+"POT-Creation-Date: 2016-10-13 14:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,28 +37,36 @@ msgstr ""
 msgid "Show the version of the program and exit"
 msgstr ""
 
-#: src/application-window.vala:357
+#: src/application-window.vala:244
+msgid "Rendering…"
+msgstr ""
+
+#: src/application-window.vala:263 ui/application-window.ui:154
+msgid "_Stop"
+msgstr ""
+
+#: src/application-window.vala:362
 msgid "Save animation"
 msgstr ""
 
-#: src/application-window.vala:358
+#: src/application-window.vala:363
 msgid "_Cancel"
 msgstr ""
 
-#: src/application-window.vala:360
+#: src/application-window.vala:365
 msgid "_Save"
 msgstr ""
 
-#: src/application-window.vala:426
+#: src/application-window.vala:431
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr ""
 
-#: src/application-window.vala:429
+#: src/application-window.vala:434
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 
-#: src/application-window.vala:431
+#: src/application-window.vala:436
 msgid "Show in file manager"
 msgstr ""
 
@@ -68,10 +76,6 @@ msgstr ""
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr ""
-
-#: ui/application-window.ui:154
-msgid "_Stop"
 msgstr ""
 
 #: ui/application-window.ui:165

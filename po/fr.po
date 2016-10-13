@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:27+0200\n"
+"POT-Creation-Date: 2016-10-13 14:02+0200\n"
 "PO-Revision-Date: 2016-09-04 18:57+0000\n"
 "Last-Translator: Yoan Malié <hello@yoan-malie.fr>\n"
 "Language-Team: French (http://www.transifex.com/phwolfer/peek/language/fr/)\n"
@@ -38,29 +38,37 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr ""
 
-#: src/application-window.vala:357
+#: src/application-window.vala:244
+msgid "Rendering…"
+msgstr ""
+
+#: src/application-window.vala:263 ui/application-window.ui:154
+msgid "_Stop"
+msgstr "_Arrêter"
+
+#: src/application-window.vala:362
 msgid "Save animation"
 msgstr "Sauvegarder l'animation"
 
-#: src/application-window.vala:358
+#: src/application-window.vala:363
 msgid "_Cancel"
 msgstr "_Annuler"
 
-#: src/application-window.vala:360
+#: src/application-window.vala:365
 msgid "_Save"
 msgstr "_Sauvegarder"
 
-#: src/application-window.vala:426
+#: src/application-window.vala:431
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation sauvegardé comme \"%s\""
 
-#: src/application-window.vala:429
+#: src/application-window.vala:434
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Cliquez ici pour afficher le fichier dans votre gestionnaire de fichier"
 
-#: src/application-window.vala:431
+#: src/application-window.vala:436
 msgid "Show in file manager"
 msgstr "Afficher dans le gestionnaire de fichier"
 
@@ -71,10 +79,6 @@ msgstr "Commencer l'enregistrement"
 #: ui/application-window.ui:128
 msgid "_Record"
 msgstr "_Enregistrer"
-
-#: ui/application-window.ui:154
-msgid "_Stop"
-msgstr "_Arrêter"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"

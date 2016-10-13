@@ -9,15 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:34+0200\n"
-"PO-Revision-Date: 2016-09-06 08:33+0000\n"
+"POT-Creation-Date: 2016-10-13 14:02+0200\n"
+"PO-Revision-Date: 2016-10-13 14:04+0200\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/"
+"de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.9\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
@@ -39,28 +41,36 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr "Programmversion anzeigen und beenden"
 
-#: src/application-window.vala:357
+#: src/application-window.vala:244
+msgid "Rendering…"
+msgstr "Erstelle…"
+
+#: src/application-window.vala:263 ui/application-window.ui:154
+msgid "_Stop"
+msgstr "_Stopp"
+
+#: src/application-window.vala:362
 msgid "Save animation"
 msgstr "Animation speichern"
 
-#: src/application-window.vala:358
+#: src/application-window.vala:363
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/application-window.vala:360
+#: src/application-window.vala:365
 msgid "_Save"
 msgstr "_Speichern"
 
-#: src/application-window.vala:426
+#: src/application-window.vala:431
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation als “%s” gespeichert"
 
-#: src/application-window.vala:429
+#: src/application-window.vala:434
 msgid "Click here to show the saved file in your file manager."
 msgstr "Hier klicken, um die Datei in der  Dateiverwaltung anzuzeigen."
 
-#: src/application-window.vala:431
+#: src/application-window.vala:436
 msgid "Show in file manager"
 msgstr "In Ordner anzeigen"
 
@@ -71,10 +81,6 @@ msgstr "Aufnahme starten"
 #: ui/application-window.ui:128
 msgid "_Record"
 msgstr "Auf_nehmen"
-
-#: ui/application-window.ui:154
-msgid "_Stop"
-msgstr "_Stopp"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"

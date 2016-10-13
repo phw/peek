@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Dawid <dawidd0811@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-09-06 10:27+0200\n"
+"POT-Creation-Date: 2016-10-13 14:02+0200\n"
 "PO-Revision-Date: 2016-09-06 15:35+0000\n"
 "Last-Translator: Dawid <dawidd0811@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/phwolfer/peek/language/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
@@ -38,28 +39,36 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr "Pokaż wersję programu i wyjdź"
 
-#: src/application-window.vala:357
+#: src/application-window.vala:244
+msgid "Rendering…"
+msgstr ""
+
+#: src/application-window.vala:263 ui/application-window.ui:154
+msgid "_Stop"
+msgstr "_Stop"
+
+#: src/application-window.vala:362
 msgid "Save animation"
 msgstr "Zapisz animację"
 
-#: src/application-window.vala:358
+#: src/application-window.vala:363
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: src/application-window.vala:360
+#: src/application-window.vala:365
 msgid "_Save"
 msgstr "_Zapisz"
 
-#: src/application-window.vala:426
+#: src/application-window.vala:431
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacja zapisana jako \"%s\""
 
-#: src/application-window.vala:429
+#: src/application-window.vala:434
 msgid "Click here to show the saved file in your file manager."
 msgstr "Kliknij tutaj, aby pokazać zapisany plik w twoim menadżerze plików."
 
-#: src/application-window.vala:431
+#: src/application-window.vala:436
 msgid "Show in file manager"
 msgstr "Pokaż w menadżerze plików"
 
@@ -70,10 +79,6 @@ msgstr "Zacznij nagrywać"
 #: ui/application-window.ui:128
 msgid "_Record"
 msgstr "_Nagranie"
-
-#: ui/application-window.ui:154
-msgid "_Stop"
-msgstr "_Stop"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
@@ -123,7 +128,9 @@ msgstr "_Wyjdź"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Czas w milisekundach dla którego obszar nagrywania jest wyświetlany po zmianie rozmiaru ogranicznika"
+msgstr ""
+"Czas w milisekundach dla którego obszar nagrywania jest wyświetlany po "
+"zmianie rozmiaru ogranicznika"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -131,7 +138,8 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Użyto domyślnej nazwy pliku. Można dołączyć specyfikatory formatu daty."
+msgstr ""
+"Użyto domyślnej nazwy pliku. Można dołączyć specyfikatory formatu daty."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
