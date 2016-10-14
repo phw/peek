@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Boris Sikora <sikora.boris@gmail.com>, 2016
+# strixaluco <maddox@i.ua>, 2016
+# strixaluco <maddox@i.ua>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-13 14:49+0200\n"
-"PO-Revision-Date: 2016-09-02 19:30+0000\n"
-"Last-Translator: Boris Sikora <sikora.boris@gmail.com>\n"
-"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/phwolfer/peek/"
-"language/uk_UA/)\n"
-"Language: uk_UA\n"
+"PO-Revision-Date: 2016-10-14 08:30+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: Ukrainian (Ukraine) (http://www.transifex.com/phwolfer/peek/language/uk_UA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk_UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: src/about-dialog.vala:20
 msgid "translator-credits"
-msgstr ""
+msgstr "Boris Sikora <sikora.boris@gmail.com>\nstrixaluco"
 
 #: src/application-window.vala:244
 msgid "Rendering…"
@@ -133,9 +133,7 @@ msgstr "_Вихід"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr ""
-"Час у мілісекундах, за яке розмір області запису відображається після "
-"закінчення зміни розміру"
+msgstr "Час у мілісекундах, за яке розмір області запису відображається після закінчення зміни розміру"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -143,9 +141,7 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
-"Ім'я за замовчуванням вже використовується. Ви можете приєднати специфікатор "
-"формату дати."
+msgstr "Ім'я за замовчуванням вже використовується. Ви можете приєднати специфікатор формату дати."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
@@ -157,4 +153,4 @@ msgstr "Розмір і позиція головного вікна з оста
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Path where last video got saved"
-msgstr "Шлях, по якому відео було збережено минулого разу"
+msgstr "Шлях, за яким відео було збережено востаннє"

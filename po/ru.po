@@ -1,24 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Victor Kropp <victor.kropp@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: peek\n"
+"Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-13 14:49+0200\n"
-"PO-Revision-Date: 2016-10-11 13:42+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ru\n"
+"PO-Revision-Date: 2016-10-14 08:30+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/phwolfer/peek/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
 msgid "Peek"
@@ -42,7 +40,7 @@ msgstr "Показать версию программы и выйти"
 
 #: src/about-dialog.vala:20
 msgid "translator-credits"
-msgstr ""
+msgstr "Victor Kropp <victor.kropp@gmail.com>"
 
 #: src/application-window.vala:244
 msgid "Rendering…"
@@ -133,9 +131,7 @@ msgstr "_Выход"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr ""
-"Время в миллисекундах, на которое отображается поле записи после изменения "
-"размера."
+msgstr "Время в миллисекундах, на которое отображается поле записи после изменения размера."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -143,8 +139,7 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
-"Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
+msgstr "Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
