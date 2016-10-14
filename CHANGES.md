@@ -11,6 +11,8 @@
  * i18n: Spanish translation
  * i18n: Ukrainian translation
  * misc: Added generic name and sub category to desktop file
+ * misc: Added uninstall target, so source installations can be uninstalled
+   with `make uninstall` (#28)
  * fix: Fix DBUS service file if installed to location other than `/usr` (#13)
 
 # Version 0.7.2 - 2016-07-07
