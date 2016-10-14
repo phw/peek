@@ -4,4 +4,4 @@
 tx push -s
 
 # Download completed translations from transifex
-tx pull -a --minimum-perc=100
+tx pull -a
