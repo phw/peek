@@ -1,3 +1,18 @@
+# Version 0.8.0 - 2016-1?-??
+ * ui: Change button text while rendering (#24)
+ * ui: Add a `--version` command line argument
+ * recording: Correctly scale recording area on HiDPI screens (#20)
+ * i18n: Catalan translation
+ * i18n: French translation
+ * i18n: Lithuanian translation
+ * i18n: Polish translation
+ * i18n: Portuguese (Portugal) translation
+ * i18n: Russian translation
+ * i18n: Spanish translation
+ * i18n: Ukrainian translation
+ * misc: Added generic name and sub category to desktop file
+ * fix: Fix DBUS service file if installed to location other than `/usr` (#13)
+
 # Version 0.7.2 - 2016-07-07
  * ui: Fixed window size not saved properly in Gtk 3.20 (#5)
 
