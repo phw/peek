@@ -1,15 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
+# Adolfo Jayme-Barrientos, 2016
 # Adolfo Jayme-Barrientos, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-13 14:49+0200\n"
-"PO-Revision-Date: 2016-10-13 13:23+0000\n"
+"PO-Revision-Date: 2016-10-14 08:34+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/phwolfer/peek/language/ca/)\n"
 "MIME-Version: 1.0\n"

@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Alexander Wunschik <mail@wunschik.it>, 2016
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2016
@@ -41,7 +41,7 @@ msgstr "Programmversion anzeigen und beenden"
 
 #: src/about-dialog.vala:20
 msgid "translator-credits"
-msgstr "Philipp Wolfer <ph.wolfer@gmail.com>"
+msgstr "Philipp Wolfer <ph.wolfer@gmail.com>\nAlexander Wunschik <mail@wunschik.it>"
 
 #: src/application-window.vala:244
 msgid "Rendering…"
