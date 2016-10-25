@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Mohamed Sakhri, 2016
+# Mohamed Sakhri, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-13 14:49+0200\n"
-"PO-Revision-Date: 2016-10-18 12:27+0000\n"
+"PO-Revision-Date: 2016-10-25 13:48+0000\n"
 "Last-Translator: Mohamed Sakhri\n"
 "Language-Team: Arabic (http://www.transifex.com/phwolfer/peek/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +37,7 @@ msgstr "peek"
 
 #: src/application.vala:49
 msgid "Show the version of the program and exit"
-msgstr "أظهر نسخة البرنامج وأغلقه"
+msgstr "أظهر نسخة البرنامج ثم أغلقه"
 
 #: src/about-dialog.vala:20
 msgid "translator-credits"
@@ -44,7 +45,7 @@ msgstr "Mohamed Sakhri <mohamed.sakhri@gmail.com>"
 
 #: src/application-window.vala:244
 msgid "Rendering…"
-msgstr "جاري التحويل..."
+msgstr "يُحوِّل..."
 
 #: src/application-window.vala:263 ui/application-window.ui:154
 msgid "_Stop"
@@ -52,15 +53,15 @@ msgstr "أوقف"
 
 #: src/application-window.vala:362
 msgid "Save animation"
-msgstr "حفظ الملف"
+msgstr "احفظ الملف"
 
 #: src/application-window.vala:363
 msgid "_Cancel"
-msgstr "إلغاء"
+msgstr "ألغِ"
 
 #: src/application-window.vala:365
 msgid "_Save"
-msgstr "حفظ"
+msgstr "احفظ"
 
 #: src/application-window.vala:431
 #, c-format
@@ -81,7 +82,7 @@ msgstr "ابدأ التسجيل"
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr "تسجيل"
+msgstr "سجِّل"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
@@ -97,7 +98,7 @@ msgstr "افتح مدير الملفات بعد الحفظ"
 
 #: ui/preferences.ui:123
 msgid "Recording"
-msgstr "يُسجِل"
+msgstr "التسجيل"
 
 #: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
@@ -125,7 +126,7 @@ msgstr "عن البرنامج"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr "إغلاق"
+msgstr "أغلق"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
@@ -143,7 +144,7 @@ msgstr "يستخدم اسم الملف الافتراضي . يمكن إضافة 
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr "أفضل سمة داكنة"
+msgstr "أُفضِّل سمة داكنة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:33
 msgid "Size and position of the last open main window"
