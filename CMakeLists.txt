@@ -73,6 +73,7 @@ vala_precompile(VALA_C
 
 # Compile C code
 add_definitions(-DGETTEXT_PACKAGE="${PROJECT_NAME}")
+add_definitions(-DLOCALEDIR="${LOCALEDIR}")
 add_definitions(-DVERSION="${PEEK_VERSION_MAJOR}.${PEEK_VERSION_MINOR}.${PEEK_VERSION_PATCH}")
 add_definitions(-Wno-deprecated-declarations)
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
