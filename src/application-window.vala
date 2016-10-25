@@ -49,6 +49,8 @@ namespace Peek {
     private uint delay_indicator_timeout = 0;
     private bool screen_supports_alpha = true;
     private bool is_recording = false;
+    private File in_file;
+    private File out_file;
     private RecordingArea active_recording_area;
 
     private GLib.Settings settings;
@@ -64,11 +66,8 @@ namespace Peek {
       });
 
       this.recorder.recording_finished.connect ((file) => {
-        leave_recording_state ();
-
-        if (file != null) {
-          save_output (file);
-        }
+        this.in_file = file;
+        try_save_file ();
       });
 
       this.recorder.recording_aborted.connect ((status) => {
@@ -243,6 +242,7 @@ namespace Peek {
         stop_button.sensitive = false;
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
+        show_file_chooser ();
       }
     }
 
@@ -268,6 +268,8 @@ namespace Peek {
     }
 
     private void leave_recording_state () {
+      this.in_file = null;
+      this.out_file = null;
       delay_indicator.hide ();
       is_recording = false;
       stop_button.hide ();
@@ -328,7 +330,9 @@ namespace Peek {
         height = widget.get_allocated_height ()
       };
 
-      widget.translate_coordinates (widget.get_toplevel(), 0, 0, out rectangle.x, out rectangle.y);
+      widget.translate_coordinates (
+        widget.get_toplevel(), 0, 0,
+        out rectangle.x, out rectangle.y);
       var region = new Region.rectangle (rectangle);
 
       return region;
@@ -357,7 +361,7 @@ namespace Peek {
       return area;
     }
 
-    private void save_output (File in_file) {
+    private void show_file_chooser () {
       var chooser = new FileChooserDialog (
         _ ("Save animation"), this, FileChooserAction.SAVE,
         _ ("_Cancel"),
@@ -378,41 +382,57 @@ namespace Peek {
       chooser.set_current_name (default_name);
 
       if (chooser.run () == ResponseType.OK) {
-        var out_file = chooser.get_file ();
-
-        in_file.copy_async.begin (out_file, FileCopyFlags.OVERWRITE,
-          Priority.DEFAULT, null, null, (obj, res) => {
-            try {
-              bool copy_success = in_file.copy_async.end (res);
-              debug ("File saved %s: %s\n",
-                copy_success.to_string (),
-                out_file.get_uri ());
-
-              if (copy_success) {
-                handle_saved_file (out_file);
-              }
-              else if (!copy_success) {
-                stderr.printf ("Saving file %s failed.", out_file.get_uri ());
-              }
-
-              in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
-                try {
-                  bool delete_success = in_file.delete_async.end (res);
-                  debug ("Temp file deleted: %s\n",
-                    delete_success.to_string ());
-                } catch (Error e) {
-                  stderr.printf ("Temp file delete error: %s\n", e.message);
-                }
-              });
-            }
-            catch (GLib.Error e) {
-              stderr.printf ("File save error: %s\n", e.message);
-             }
-          });
+        this.out_file = chooser.get_file ();
+        try_save_file ();
+      }
+      else {
+        leave_recording_state ();
       }
 
       // Close the FileChooserDialog:
       chooser.close ();
+    }
+
+    private void try_save_file () {
+      if (this.in_file == null || this.out_file == null) {
+        return;
+      }
+
+      save_file ();
+    }
+
+    private void save_file () {
+      in_file.copy_async.begin (out_file, FileCopyFlags.OVERWRITE,
+        Priority.DEFAULT, null, null, (obj, res) => {
+          try {
+            bool copy_success = in_file.copy_async.end (res);
+            debug ("File saved %s: %s\n",
+              copy_success.to_string (),
+              out_file.get_uri ());
+
+            if (copy_success) {
+              handle_saved_file (out_file);
+            }
+            else if (!copy_success) {
+              stderr.printf ("Saving file %s failed.", out_file.get_uri ());
+            }
+
+            in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
+              try {
+                bool delete_success = in_file.delete_async.end (res);
+                debug ("Temp file deleted: %s\n", delete_success.to_string ());
+              } catch (Error e) {
+                stderr.printf ("Temp file delete error: %s\n", e.message);
+              }
+            });
+          }
+          catch (GLib.Error e) {
+            stderr.printf ("File save error: %s\n", e.message);
+          }
+          finally {
+            leave_recording_state ();
+          }
+        });
     }
 
     private void handle_saved_file (File file) {

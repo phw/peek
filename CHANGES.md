@@ -1,6 +1,8 @@
 # Version 0.8.0 - 2016-1?-??
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument
+ * ui: Show file choose directly after recording stops. This way
+   rendering and choosing the file take place in parallel (#30)
  * recording: Correctly scale recording area on HiDPI screens (#20)
  * i18n: Arabic translation
  * i18n: Catalan translation
