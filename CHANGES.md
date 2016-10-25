@@ -1,4 +1,4 @@
-# Version 0.8.0 - 2016-1?-??
+# Version 0.8.0 - 2016-10-25
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument
  * ui: Show file choose directly after recording stops. This way
