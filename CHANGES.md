@@ -2,6 +2,7 @@
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument
  * recording: Correctly scale recording area on HiDPI screens (#20)
+ * i18n: Arabic translation
  * i18n: Catalan translation
  * i18n: French translation
  * i18n: Lithuanian translation
@@ -14,6 +15,7 @@
  * misc: Added uninstall target, so source installations can be uninstalled
    with `make uninstall` (#28)
  * fix: Fix DBUS service file if installed to location other than `/usr` (#13)
+ * fix: Locales not loaded if not installed to /usr due to missing locale path
 
 # Version 0.7.2 - 2016-07-07
  * ui: Fixed window size not saved properly in Gtk 3.20 (#5)
