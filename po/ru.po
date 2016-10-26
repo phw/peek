@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the peek package.
 # 
 # Translators:
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 # Victor Kropp <victor.kropp@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-13 14:49+0200\n"
-"PO-Revision-Date: 2016-10-14 08:30+0000\n"
+"PO-Revision-Date: 2016-10-26 15:53+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/phwolfer/peek/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +45,7 @@ msgstr "Victor Kropp <victor.kropp@gmail.com>"
 
 #: src/application-window.vala:244
 msgid "Rendering…"
-msgstr ""
+msgstr "Оказание ..."
 
 #: src/application-window.vala:263 ui/application-window.ui:154
 msgid "_Stop"
@@ -131,7 +132,7 @@ msgstr "_Выход"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Время в миллисекундах, на которое отображается поле записи после изменения размера."
+msgstr "Время в миллисекундах, на которое отображается поле записи после изменения размера"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
