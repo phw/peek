@@ -1,3 +1,6 @@
+# Versio 0.x.x - 2016-??-??
+ * ui: Fix problem of app menu not available on certain desktop configurations (#6)
+ 
 # Version 0.8.0 - 2016-10-25
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument

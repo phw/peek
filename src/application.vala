@@ -63,6 +63,7 @@ namespace Peek {
       GLib.Environment.set_application_name (_ ("Peek"));
 
       // Setup app menu
+      force_app_menu ();
       GLib.SimpleAction action;
 
       action = new GLib.SimpleAction ("new-window", null);
@@ -135,6 +136,56 @@ namespace Peek {
       debug ("Action show-file called with URI %s", uri_str);
       var file = File.new_for_uri (uri_str);
       DesktopIntegration.launch_file_manager (file);
+    }
+
+    /**
+    * Forces the app menu in the decoration layouts so in environments without an app-menu
+    * it will be rendered by GTK as part of the window.
+    *
+    * Applies if:
+    *  - disabled Gtk/ShellShowsAppMenu setting
+    *  - no 'menu' setting in Gtk/DecorationLayout
+    */
+    private void force_app_menu () {
+      var settings = Gtk.Settings.get_default ();
+
+      if (settings == null) {
+          warning ("Could not fetch Gtk default settings");
+          return ;
+      }
+
+      string decoration_layout = settings.gtk_decoration_layout ?? "";
+      debug ("Decoration layout: %s", decoration_layout);
+
+      if (!decoration_layout.contains ("menu")) {
+          string prefix = "menu:";
+          if (decoration_layout.contains (":")) {
+              prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
+          }
+
+          settings.gtk_decoration_layout = prefix + settings.gtk_decoration_layout;
+      }
+
+      string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
+      debug ("Desktop: %s", desktop);
+
+      // Unity specific workaround, force app menu in window when
+      // setting to display menus in titlebar in Unity is active
+      if (desktop.contains ("Unity")) {
+        try {
+          var schema_source = SettingsSchemaSource.get_default ();
+          SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
+          if (schema != null && schema.has_key ("integrated-menus")) {
+            var unity = new Settings.full (schema, null, null);
+            if (unity.get_boolean ("integrated-menus")) {
+              settings.gtk_shell_shows_app_menu = false;
+            }
+          }
+        }
+        catch (GLib.Error e) {
+          warning ("Loading Unity settings failed: %s", e.message);
+        }
+      }
     }
   }
 
