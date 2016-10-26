@@ -29,11 +29,16 @@ namespace Peek {
       try {
         var settings_dir = "./data/schemas/";
         var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
-        SettingsSchema schema = schema_source.lookup (APP_ID, false);
-        settings = new Settings.full (schema, null, null);
+        SettingsSchema? schema = schema_source.lookup (APP_ID, false);
+        if (schema != null) {
+          settings = new Settings.full (schema, null, null);
+        }
       }
       catch (GLib.Error e) {
         debug ("Loading local settings failed: %s", e.message);
+      }
+
+      if (settings == null) {
         settings = new Settings (APP_ID);
       }
 
