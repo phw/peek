@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Adolfo Jayme-Barrientos, 2016
 # Adolfo Jayme-Barrientos, 2016
@@ -10,11 +10,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-13 14:49+0200\n"
+"POT-Creation-Date: 2016-10-26 18:03+0200\n"
 "PO-Revision-Date: 2016-10-25 16:09+0000\n"
 "Last-Translator: Philipp Wolfer <phil@parolu.io>\n"
-"Language-Team: Spanish "
-"<https://translate.parolu.io/projects/sponsored/peek/es/>\n"
+"Language-Team: Spanish <https://translate.parolu.io/projects/sponsored/peek/"
+"es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.8\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
 msgstr "Peek"
 
@@ -38,15 +38,11 @@ msgstr "Graba pequeños gifs animados de tu pantalla"
 msgid "peek"
 msgstr "peek"
 
-#: src/application.vala:49
+#: src/application.vala:54
 msgid "Show the version of the program and exit"
 msgstr "Mostrar la versión del programa y salir"
 
-#: src/about-dialog.vala:20
-msgid "translator-credits"
-msgstr "Adolfo Jayme-Barrientos \nHolman Calderón <halecalderon@gmail.com>"
-
-#: src/application-window.vala:244
+#: src/application-window.vala:243
 msgid "Rendering…"
 msgstr ""
 
@@ -54,30 +50,38 @@ msgstr ""
 msgid "_Stop"
 msgstr "_Detener"
 
-#: src/application-window.vala:362
+#: src/application-window.vala:366
 msgid "Save animation"
 msgstr "Guardar animación"
 
-#: src/application-window.vala:363
+#: src/application-window.vala:367
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/application-window.vala:365
+#: src/application-window.vala:369
 msgid "_Save"
 msgstr "_Guardar"
 
-#: src/application-window.vala:431
+#: src/application-window.vala:451
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animación guardada como «%s»"
 
-#: src/application-window.vala:434
+#: src/application-window.vala:454
 msgid "Click here to show the saved file in your file manager."
 msgstr "Pulse aquí para mostrar el archivo guardado en el gestor de archivos."
 
-#: src/application-window.vala:436
+#: src/application-window.vala:456
 msgid "Show in file manager"
 msgstr "Mostrar en gestor de archivos"
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr ""
+"Adolfo Jayme-Barrientos \n"
+"Holman Calderón <halecalderon@gmail.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
@@ -135,7 +139,9 @@ msgstr "_Salir"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Intervalo en milisegundos por el que se muestra el tamaño del área de grabación después de finalizar el redimensionamiento"
+msgstr ""
+"Intervalo en milisegundos por el que se muestra el tamaño del área de "
+"grabación después de finalizar el redimensionamiento"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -143,7 +149,9 @@ msgstr "\"Peek %d-%m-%Y %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Nombre de archivo usado de manera predeterminada. Puede incluir prescriptores de formato de fecha."
+msgstr ""
+"Nombre de archivo usado de manera predeterminada. Puede incluir "
+"prescriptores de formato de fecha."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"

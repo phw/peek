@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 # Victor Kropp <victor.kropp@gmail.com>, 2016
@@ -9,17 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-13 14:49+0200\n"
+"POT-Creation-Date: 2016-10-26 18:03+0200\n"
 "PO-Revision-Date: 2016-10-26 15:53+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/phwolfer/peek/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/phwolfer/peek/language/"
+"ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
 msgstr "Peek"
 
@@ -35,15 +38,11 @@ msgstr "Записывайте короткие анимированные GIF �
 msgid "peek"
 msgstr "peek"
 
-#: src/application.vala:49
+#: src/application.vala:54
 msgid "Show the version of the program and exit"
 msgstr "Показать версию программы и выйти"
 
-#: src/about-dialog.vala:20
-msgid "translator-credits"
-msgstr "Victor Kropp <victor.kropp@gmail.com>"
-
-#: src/application-window.vala:244
+#: src/application-window.vala:243
 msgid "Rendering…"
 msgstr "Оказание ..."
 
@@ -51,30 +50,36 @@ msgstr "Оказание ..."
 msgid "_Stop"
 msgstr "_Стоп"
 
-#: src/application-window.vala:362
+#: src/application-window.vala:366
 msgid "Save animation"
 msgstr "Сохранить анимацию"
 
-#: src/application-window.vala:363
+#: src/application-window.vala:367
 msgid "_Cancel"
 msgstr "_Отмена"
 
-#: src/application-window.vala:365
+#: src/application-window.vala:369
 msgid "_Save"
 msgstr "_Сохранить"
 
-#: src/application-window.vala:431
+#: src/application-window.vala:451
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимация сохранена как «%s»"
 
-#: src/application-window.vala:434
+#: src/application-window.vala:454
 msgid "Click here to show the saved file in your file manager."
 msgstr "Нажмите здесь, чтобы показать сохранённый файл в файловом менеджере."
 
-#: src/application-window.vala:436
+#: src/application-window.vala:456
 msgid "Show in file manager"
 msgstr "Показать в файловом менеджере"
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr "Victor Kropp <victor.kropp@gmail.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
@@ -132,7 +137,9 @@ msgstr "_Выход"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Время в миллисекундах, на которое отображается поле записи после изменения размера"
+msgstr ""
+"Время в миллисекундах, на которое отображается поле записи после изменения "
+"размера"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -140,7 +147,8 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
+msgstr ""
+"Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"

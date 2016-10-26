@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Moo, 2016
 # Moo, 2016
@@ -9,17 +9,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-13 14:49+0200\n"
+"POT-Creation-Date: 2016-10-26 18:03+0200\n"
 "PO-Revision-Date: 2016-10-13 19:01+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/phwolfer/peek/language/lt/)\n"
+"Language-Team: Lithuanian (http://www.transifex.com/phwolfer/peek/language/"
+"lt/)\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:63
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
 msgstr "Peek"
 
@@ -35,15 +37,11 @@ msgstr "Įrašinėti trumpus animuotus GIF paveikslus iš jūsų ekrano"
 msgid "peek"
 msgstr "peek"
 
-#: src/application.vala:49
+#: src/application.vala:54
 msgid "Show the version of the program and exit"
 msgstr "Parodyti programos versiją ir išeiti"
 
-#: src/about-dialog.vala:20
-msgid "translator-credits"
-msgstr "Moo"
-
-#: src/application-window.vala:244
+#: src/application-window.vala:243
 msgid "Rendering…"
 msgstr "Perteikiama..."
 
@@ -51,30 +49,36 @@ msgstr "Perteikiama..."
 msgid "_Stop"
 msgstr "_Stabdyti"
 
-#: src/application-window.vala:362
+#: src/application-window.vala:366
 msgid "Save animation"
 msgstr "Įrašyti animaciją"
 
-#: src/application-window.vala:363
+#: src/application-window.vala:367
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/application-window.vala:365
+#: src/application-window.vala:369
 msgid "_Save"
 msgstr "Į_rašyti"
 
-#: src/application-window.vala:431
+#: src/application-window.vala:451
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/application-window.vala:434
+#: src/application-window.vala:454
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/application-window.vala:436
+#: src/application-window.vala:456
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr "Moo"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
@@ -132,7 +136,9 @@ msgstr "_Išeiti"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus rodomas įrašinėjimo srities dydis"
+msgstr ""
+"Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus "
+"rodomas įrašinėjimo srities dydis"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -140,7 +146,9 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr "Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato specifikatorių."
+msgstr ""
+"Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato "
+"specifikatorių."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
