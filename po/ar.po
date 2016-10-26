@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Mohamed Sakhri, 2016
 # Mohamed Sakhri, 2016
@@ -10,17 +10,14 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-26 18:03+0200\n"
-"PO-Revision-Date: 2016-10-25 16:07+0000\n"
-"Last-Translator: Philipp Wolfer <phil@parolu.io>\n"
-"Language-Team: Arabic <https://translate.parolu.io/projects/sponsored/peek/"
-"ar/>\n"
-"Language: ar\n"
+"PO-Revision-Date: 2016-10-26 16:04+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/phwolfer/peek/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 2.8\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
@@ -44,7 +41,7 @@ msgstr "أظهر نسخة البرنامج ثم أغلقه"
 
 #: src/application-window.vala:243
 msgid "Rendering…"
-msgstr "يُحوِّل…"
+msgstr "يُحوِّل..."
 
 #: src/application-window.vala:263 ui/application-window.ui:154
 msgid "_Stop"
@@ -75,7 +72,8 @@ msgstr "انقر هنا لإظهار الملف المحفوظ في مدير ا�
 msgid "Show in file manager"
 msgstr "اظهر في مدير الملفات"
 
-#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#. Please add your name to the list of translators if you want to be credited
+#. for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
@@ -137,9 +135,7 @@ msgstr "أغلق"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr ""
-"الوقت بالجزء الآلف من الثانية الذي حسبه تظهر المساحة المسجلة بعد تغيير "
-"التوقفات."
+msgstr "الوقت بالجزء الآلف من الثانية الذي حسبه تظهر المساحة المسجلة بعد تغيير التوقفات."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
