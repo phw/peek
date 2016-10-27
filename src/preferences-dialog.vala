@@ -38,6 +38,9 @@ namespace Peek {
     private Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
+    private Gtk.Switch recording_alternative_tmpdir;
+
+    [GtkChild]
     private Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
@@ -50,6 +53,10 @@ namespace Peek {
 
       settings.bind ("interface-open-file-manager",
         interface_open_file_manager, "active",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-alternative-tmpdir",
+        recording_alternative_tmpdir, "state",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",
