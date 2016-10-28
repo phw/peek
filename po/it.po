@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-26 18:03+0200\n"
-"PO-Revision-Date: 2016-10-28 16:41+0000\n"
+"PO-Revision-Date: 2016-10-28 16:42+0000\n"
 "Last-Translator: Emanuele Antonio Faraone (FaraOne) <emanueleant03@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/phwolfer/peek/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "Mostra nel file manager"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Emanuele Antonio Faraone"
+msgstr "translator-credits\nEmanuele Antonio Faraone"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
