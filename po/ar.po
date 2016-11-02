@@ -5,12 +5,13 @@
 # Translators:
 # Mohamed Sakhri, 2016
 # Mohamed Sakhri, 2016
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-26 18:03+0200\n"
-"PO-Revision-Date: 2016-10-26 16:04+0000\n"
+"PO-Revision-Date: 2016-10-26 19:04+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/phwolfer/peek/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +42,7 @@ msgstr "أظهر نسخة البرنامج ثم أغلقه"
 
 #: src/application-window.vala:243
 msgid "Rendering…"
-msgstr "يُحوِّل..."
+msgstr "يُحوِّل…"
 
 #: src/application-window.vala:263 ui/application-window.ui:154
 msgid "_Stop"

@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Moo, 2016
 # Moo, 2016
+# Philipp Wolfer <ph.wolfer@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-10-26 18:03+0200\n"
-"PO-Revision-Date: 2016-10-13 19:01+0000\n"
-"Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/phwolfer/peek/language/"
-"lt/)\n"
-"Language: lt\n"
+"PO-Revision-Date: 2016-10-26 19:05+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/phwolfer/peek/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
@@ -43,7 +42,7 @@ msgstr "Parodyti programos versiją ir išeiti"
 
 #: src/application-window.vala:243
 msgid "Rendering…"
-msgstr "Perteikiama..."
+msgstr "Perteikiama…"
 
 #: src/application-window.vala:263 ui/application-window.ui:154
 msgid "_Stop"
@@ -74,7 +73,8 @@ msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuv�
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
-#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#. Please add your name to the list of translators if you want to be credited
+#. for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
@@ -136,9 +136,7 @@ msgstr "_Išeiti"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr ""
-"Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus "
-"rodomas įrašinėjimo srities dydis"
+msgstr "Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus rodomas įrašinėjimo srities dydis"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
@@ -146,9 +144,7 @@ msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
-"Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato "
-"specifikatorių."
+msgstr "Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato specifikatorių."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
