@@ -98,6 +98,10 @@ namespace Peek {
         this.recorder, "framerate",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-downsample",
+        this.recorder, "downsample",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-start-delay",
         this, "recording_start_delay",
         SettingsBindFlags.DEFAULT);

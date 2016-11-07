@@ -33,7 +33,7 @@ namespace Peek.Recording {
           "-video_size", area.width.to_string () + "x" + area.height.to_string (),
           "-i", display + "+" + area.left.to_string () + "," + area.top.to_string (),
           "-codec:v", "huffyuv",
-          "-vf", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2)",
+          "-vf", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2), scale=iw/" + downsample.to_string () + ":-1",
           temp_file
         };
 

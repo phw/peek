@@ -28,6 +28,11 @@
       <default>15</default>
       <summary>Framerate</summary>
     </key>
+    <key name="recording-downsample" type="i">
+      <range min="1" max="4"/>
+      <default>1</default>
+      <summary>Resolution downsampling factor</summary>
+    </key>
     <key name="persist-window-geometry" type="(iiii)">
       <default>(-1,-1,500,300)</default>
       <summary>Size and position of the last open main window</summary>
