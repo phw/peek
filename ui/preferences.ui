@@ -28,7 +28,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
   <!-- interface-authors Philipp Wolfer <ph.wolfer@gmail.com> -->
   <object class="GtkAdjustment" id="recording_framerate">
-    <property name="lower">5</property>
+    <property name="lower">1</property>
     <property name="upper">60</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
