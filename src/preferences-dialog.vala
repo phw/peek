@@ -43,6 +43,9 @@ namespace Peek {
     [GtkChild]
     private Gtk.Adjustment recording_framerate;
 
+    [GtkChild]
+    private Gtk.Adjustment recording_downsample;
+
     public PreferencesDialog () {
       Object (use_header_bar: 1);
 
@@ -58,6 +61,10 @@ namespace Peek {
 
       settings.bind ("recording-framerate",
         recording_framerate, "value",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-downsample",
+        recording_downsample, "value",
         SettingsBindFlags.DEFAULT);
     }
   }

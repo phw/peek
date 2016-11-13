@@ -18,6 +18,8 @@ namespace Peek.Recording {
 
     public int framerate { get; set; default = 15; }
 
+    public int downsample { get; set; default = 1; }
+
     public abstract bool record (RecordingArea area);
 
     protected bool spawn_record_command (string[] args) {
