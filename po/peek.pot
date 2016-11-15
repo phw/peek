@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-26 18:03+0200\n"
+"POT-Creation-Date: 2016-11-15 14:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,36 +37,36 @@ msgstr ""
 msgid "Show the version of the program and exit"
 msgstr ""
 
-#: src/application-window.vala:243
+#: src/application-window.vala:247
 msgid "Rendering…"
 msgstr ""
 
-#: src/application-window.vala:263 ui/application-window.ui:154
+#: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
 msgstr ""
 
-#: src/application-window.vala:366
+#: src/application-window.vala:370
 msgid "Save animation"
 msgstr ""
 
-#: src/application-window.vala:367
+#: src/application-window.vala:371
 msgid "_Cancel"
 msgstr ""
 
-#: src/application-window.vala:369
+#: src/application-window.vala:373
 msgid "_Save"
 msgstr ""
 
-#: src/application-window.vala:451
+#: src/application-window.vala:455
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr ""
 
-#: src/application-window.vala:454
+#: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 
-#: src/application-window.vala:456
+#: src/application-window.vala:460
 msgid "Show in file manager"
 msgstr ""
 
@@ -88,27 +88,31 @@ msgstr ""
 msgid "Stop recording"
 msgstr ""
 
-#: ui/preferences.ui:78
+#: ui/preferences.ui:84
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr ""
 
-#: ui/preferences.ui:123
+#: ui/preferences.ui:129
 msgid "Recording"
 msgstr ""
 
-#: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
+#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
+#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
 msgstr ""
 
 #: ui/preferences.ui:238
+msgid "Resolution downsampling"
+msgstr ""
+
+#: ui/preferences.ui:286
 msgid "Peek preferences"
 msgstr ""
 
@@ -146,10 +150,14 @@ msgstr ""
 msgid "Prefer dark theme"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:33
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
+msgid "Resolution downsampling factor"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
 msgstr ""
