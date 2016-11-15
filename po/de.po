@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-26 18:03+0200\n"
-"PO-Revision-Date: 2016-10-26 19:15+0000\n"
+"POT-Creation-Date: 2016-11-15 14:24+0100\n"
+"PO-Revision-Date: 2016-11-15 13:29+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -39,36 +39,36 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr "Programmversion anzeigen und beenden"
 
-#: src/application-window.vala:243
+#: src/application-window.vala:247
 msgid "Rendering…"
 msgstr "Erstelle…"
 
-#: src/application-window.vala:263 ui/application-window.ui:154
+#: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Stopp"
 
-#: src/application-window.vala:366
+#: src/application-window.vala:370
 msgid "Save animation"
 msgstr "Animation speichern"
 
-#: src/application-window.vala:367
+#: src/application-window.vala:371
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/application-window.vala:369
+#: src/application-window.vala:373
 msgid "_Save"
 msgstr "_Speichern"
 
-#: src/application-window.vala:451
+#: src/application-window.vala:455
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation als “%s” gespeichert"
 
-#: src/application-window.vala:454
+#: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
 msgstr "Hier klicken, um die Datei in der  Dateiverwaltung anzuzeigen."
 
-#: src/application-window.vala:456
+#: src/application-window.vala:460
 msgid "Show in file manager"
 msgstr "In Ordner anzeigen"
 
@@ -91,27 +91,31 @@ msgstr "Auf_nehmen"
 msgid "Stop recording"
 msgstr "Aufnahme anhalten"
 
-#: ui/preferences.ui:78
+#: ui/preferences.ui:84
 msgid "User interface"
 msgstr "Benutzeroberfläche"
 
-#: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Dateimanager nach dem Speichern öffnen"
 
-#: ui/preferences.ui:123
+#: ui/preferences.ui:129
 msgid "Recording"
 msgstr "Aufnahme"
 
-#: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
+#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
 msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
 
-#: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
+#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
 msgstr "Bildwiederholrate"
 
 #: ui/preferences.ui:238
+msgid "Resolution downsampling"
+msgstr "Auflösung verringern"
+
+#: ui/preferences.ui:286
 msgid "Peek preferences"
 msgstr "Einstellungen für Peek"
 
@@ -149,10 +153,14 @@ msgstr "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für
 msgid "Prefer dark theme"
 msgstr "Dunkles Thema bevorzugen"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:33
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
+msgid "Resolution downsampling factor"
+msgstr "Faktor zum Verringern der Auflösung"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
 msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
 msgstr "Pfad, in dem das letzte Video gespeichert wurde"
