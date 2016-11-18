@@ -8,155 +8,161 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-11-18 19:51+0000\n"
+"Last-Translator: cromat <tbrabec@tvz.hr>\n"
+"Language-Team: Croatian "
+"<https://hosted.weblate.org/projects/peek/translations/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "Snimač GIF animacija"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Snimi kratku GIF animaciju slika s pozadine"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
-msgstr ""
+msgstr "peek"
 
 #: src/application.vala:54
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Prikaži verziju programa i izađi"
 
 #: src/application-window.vala:247
 msgid "Rendering…"
-msgstr ""
+msgstr "Podešavanje…"
 
 #: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
-msgstr ""
+msgstr "_Zaustavi"
 
 #: src/application-window.vala:370
 msgid "Save animation"
-msgstr ""
+msgstr "Pohrani animaciju"
 
 #: src/application-window.vala:371
 msgid "_Cancel"
-msgstr ""
+msgstr "_Prekini"
 
 #: src/application-window.vala:373
 msgid "_Save"
-msgstr ""
+msgstr "_Pohrani"
 
 #: src/application-window.vala:455
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "Animacija pohranjena kao “%s”"
 
 #: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Klikni za prikaz pohranjene datoteke."
 
 #: src/application-window.vala:460
 msgid "Show in file manager"
-msgstr ""
+msgstr "Prikaži u upravitelju datoteka"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "prevoditelj-zasluga"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
-msgstr ""
+msgstr "Pokreni snimanje"
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr ""
+msgstr "_Snimi"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
-msgstr ""
+msgstr "Zaustavi snimanje"
 
 #: ui/preferences.ui:84
 msgid "User interface"
-msgstr ""
+msgstr "Grafičko sučelje"
 
 #: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Otvori upravitelj datoteka nakon pohrane"
 
 #: ui/preferences.ui:129
 msgid "Recording"
-msgstr ""
+msgstr "Snimanje"
 
 #: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Odgoda u sekundama prije početka snimanja"
 
 #: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr ""
+msgstr "Framerate"
 
 #: ui/preferences.ui:238
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Reduciraj rezoluciju"
 
 #: ui/preferences.ui:286
 msgid "Peek preferences"
-msgstr ""
+msgstr "Peek postavke"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "Novi_prozor"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
-msgstr ""
+msgstr "_Postavke"
 
 #: ui/gtk/menus.ui:19
 msgid "_About"
-msgstr ""
+msgstr "_O programu"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr ""
+msgstr "_Izlaz"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr ""
+"Vrijeme prikazano u milisekundama za područje snimanja prikazano nakon "
+"završene promjene veličine"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr ""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
+msgstr "Koristi se zadani naziv. Može sadržavati oznake datumskog formata."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Preferiraj tamnu temu"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:34
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Faktor reduciranja rezolucije"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Veličina i pozicija zadnjeg glavnog otvorenog prozora"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Putanja zadnjeg pogranjenog videa"
