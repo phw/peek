@@ -50,9 +50,11 @@ You can build and install Peek using CMake:
     make install
 
 ## Translations
-You can help translate Peek into your language. Please visit the
-[Peek localization project](https://www.transifex.com/phwolfer/peek/)
-on Transifex.
+You can help translate Peek into your language. Peek is using
+[Weblate](https://weblate.org/) for translation management.
+
+Go to the **[Peek localization project](https://hosted.weblate.org/engage/peek/)**
+to start translating. 
 
 ## License
 Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
