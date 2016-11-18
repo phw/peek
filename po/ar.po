@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Mohamed Sakhri, 2016
 # Mohamed Sakhri, 2016
@@ -10,15 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-11-15 14:24+0100\n"
+"POT-Creation-Date: 2016-11-18 15:48+0100\n"
 "PO-Revision-Date: 2016-11-16 19:11+0000\n"
 "Last-Translator: Mohamed Sakhri\n"
 "Language-Team: Arabic (http://www.transifex.com/phwolfer/peek/language/ar/)\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
@@ -73,8 +74,7 @@ msgstr "انقر هنا لإظهار الملف المحفوظ في مدير ا�
 msgid "Show in file manager"
 msgstr "اظهر في مدير الملفات"
 
-#. Please add your name to the list of translators if you want to be credited
-#. for the translations you have done.
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
@@ -140,7 +140,9 @@ msgstr "أغلق"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
-msgstr "الوقت بالجزء الآلف من الثانية الذي حسبه تظهر المساحة المسجلة بعد تغيير التوقفات."
+msgstr ""
+"الوقت بالجزء الآلف من الثانية الذي حسبه تظهر المساحة المسجلة بعد تغيير "
+"التوقفات."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""

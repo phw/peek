@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Adolfo Jayme-Barrientos, 2016
 # Adolfo Jayme-Barrientos, 2016
@@ -9,14 +9,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-10-26 18:03+0200\n"
+"POT-Creation-Date: 2016-11-18 15:48+0100\n"
 "PO-Revision-Date: 2016-10-26 16:04+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Catalan (http://www.transifex.com/phwolfer/peek/language/ca/)\n"
+"Language-Team: Catalan (http://www.transifex.com/phwolfer/peek/language/"
+"ca/)\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
@@ -39,41 +40,40 @@ msgstr "peek"
 msgid "Show the version of the program and exit"
 msgstr ""
 
-#: src/application-window.vala:243
+#: src/application-window.vala:247
 msgid "Rendering…"
 msgstr ""
 
-#: src/application-window.vala:263 ui/application-window.ui:154
+#: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Atura"
 
-#: src/application-window.vala:366
+#: src/application-window.vala:370
 msgid "Save animation"
 msgstr "Desa l’animació"
 
-#: src/application-window.vala:367
+#: src/application-window.vala:371
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: src/application-window.vala:369
+#: src/application-window.vala:373
 msgid "_Save"
 msgstr "_Desa"
 
-#: src/application-window.vala:451
+#: src/application-window.vala:455
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "L’animació s’ha desat com a «%s»"
 
-#: src/application-window.vala:454
+#: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
 msgstr "Feu clic aquí per mostrar el fitxer desat al gestor de fitxers."
 
-#: src/application-window.vala:456
+#: src/application-window.vala:460
 msgid "Show in file manager"
 msgstr "Mostra al gestor de fitxers"
 
-#. Please add your name to the list of translators if you want to be credited
-#. for the translations you have done.
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
@@ -91,27 +91,31 @@ msgstr "_Enregistra"
 msgid "Stop recording"
 msgstr "Atura l’enregistrament"
 
-#: ui/preferences.ui:78
+#: ui/preferences.ui:84
 msgid "User interface"
 msgstr "Interfície de l’usuari"
 
-#: ui/preferences.ui:92 data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Obre el gestor de fitxers després de desar"
 
-#: ui/preferences.ui:123
+#: ui/preferences.ui:129
 msgid "Recording"
 msgstr "Enregistrament"
 
-#: ui/preferences.ui:147 data/schemas/com.uploadedlobster.peek.gschema.xml:24
+#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: ui/preferences.ui:190 data/schemas/com.uploadedlobster.peek.gschema.xml:29
+#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
 msgstr "Freqüència dels fotogrames"
 
 #: ui/preferences.ui:238
+msgid "Resolution downsampling"
+msgstr ""
+
+#: ui/preferences.ui:286
 msgid "Peek preferences"
 msgstr "Paràmetres del Peek"
 
@@ -149,10 +153,14 @@ msgstr ""
 msgid "Prefer dark theme"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:33
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
+msgid "Resolution downsampling factor"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
 msgstr ""
