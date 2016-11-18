@@ -1,5 +1,6 @@
 # Peek - an animated GIF recorder
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
+[![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
 
 ## About
 A simple tool that allows you to record short animated GIF images from your screen.
@@ -53,7 +54,7 @@ You can build and install Peek using CMake:
 You can help translate Peek into your language. Peek is using
 [Weblate](https://weblate.org/) for translation management.
 
-Go to the **[Peek localization project](https://hosted.weblate.org/engage/peek/)**
+Go to the [Peek localization project](https://hosted.weblate.org/engage/peek/)
 to start translating. 
 
 ## License
