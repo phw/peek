@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: 2016-11-18 19:51+0000\n"
+"PO-Revision-Date: 2016-11-18 19:52+0000\n"
 "Last-Translator: cromat <tbrabec@tvz.hr>\n"
 "Language-Team: Croatian "
 "<https://hosted.weblate.org/projects/peek/translations/hr/>\n"
@@ -109,7 +109,7 @@ msgstr "Odgoda u sekundama prije početka snimanja"
 
 #: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr "Framerate"
+msgstr "Brzina slike"
 
 #: ui/preferences.ui:238
 msgid "Resolution downsampling"
