@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: 2016-11-18 12:42+0000\n"
-"Last-Translator: andreas-xavier <andreas-xavier@ubuntu-it.org>\n"
-"Language-Team: Italian (http://www.transifex.com/phwolfer/peek/language/"
-"it/)\n"
+"PO-Revision-Date: 2016-11-19 05:35+0000\n"
+"Last-Translator: Emanuele Antonio Faraone <emanueleant03@gmail.com>\n"
+"Language-Team: Italian "
+"<https://hosted.weblate.org/projects/peek/translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
@@ -42,7 +43,7 @@ msgstr "Mostra la versione del programma ed esci"
 
 #: src/application-window.vala:247
 msgid "Rendering…"
-msgstr "Renderizzando..."
+msgstr "Renderizzando…"
 
 #: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
@@ -54,7 +55,7 @@ msgstr "Salva animazione"
 
 #: src/application-window.vala:371
 msgid "_Cancel"
-msgstr "_Elimina"
+msgstr "_Annulla"
 
 #: src/application-window.vala:373
 msgid "_Save"
@@ -67,7 +68,7 @@ msgstr "Animazione salvata come \"%s\""
 
 #: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
-msgstr "Premi qui per vedere il file salvato nel tuo file manager"
+msgstr "Premi qui per vedere il file salvato nel tuo file manager."
 
 #: src/application-window.vala:460
 msgid "Show in file manager"
