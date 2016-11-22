@@ -40,7 +40,7 @@ msgstr "peek"
 
 #: src/application.vala:54
 msgid "Show the version of the program and exit"
-msgstr "Mostrar la versión del programa y salir "
+msgstr "Mostrar la versión del programa y salir"
 
 #: src/application-window.vala:247
 msgid "Rendering…"
