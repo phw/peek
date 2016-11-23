@@ -257,9 +257,15 @@ namespace Peek {
     private void maybe_set_tmpdir () {
       if (this.alternative_tmpdir) {
         var tmpdir = Environment.get_variable ("TMPDIR");
+        var magick_tmpdir = Environment.get_variable ("MAGICK_TMPDIR");
 
         if ("/var/tmp" != tmpdir) {
           Environment.set_variable ("TMPDIR", "/var/tmp", true);
+        }
+
+        if ("/var/tmp" != magick_tmpdir) {
+          Environment.set_variable ("MAGICK_TMPDIR", "/var/tmp", true);
+          Environment.set_variable ("MAGICK_TEMPORARY_PATH", "/var/tmp", true);
         }
       }
     }
