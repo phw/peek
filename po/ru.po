@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: 2016-10-26 19:06+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/phwolfer/peek/language/"
-"ru/)\n"
+"PO-Revision-Date: 2016-11-23 14:37+0000\n"
+"Last-Translator: Victor Kropp <victor.kropp@gmail.com>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/peek/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.10-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
@@ -115,7 +115,7 @@ msgstr "Частота кадров"
 
 #: ui/preferences.ui:238
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Понижение разрешения"
 
 #: ui/preferences.ui:286
 msgid "Peek preferences"
@@ -160,7 +160,7 @@ msgstr "Предпочитать тёмную тему"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:34
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Множитель понижения разрешения"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
