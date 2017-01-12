@@ -272,7 +272,20 @@ namespace Peek {
     }
 
     private void leave_recording_state () {
-      this.in_file = null;
+      if (in_file != null) {
+        debug ("Deleting temp file %s\n", in_file.get_uri ());
+        in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
+          try {
+            bool delete_success = in_file.delete_async.end (res);
+            debug ("Temp file deleted: %s\n", delete_success.to_string ());
+          } catch (Error e) {
+            stderr.printf ("Temp file delete error: %s\n", e.message);
+          } finally {
+            this.in_file = null;
+          }
+        });
+      }
+
       this.out_file = null;
       delay_indicator.hide ();
       is_recording = false;
@@ -422,15 +435,6 @@ namespace Peek {
             else if (!copy_success) {
               stderr.printf ("Saving file %s failed.", out_file.get_uri ());
             }
-
-            in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
-              try {
-                bool delete_success = in_file.delete_async.end (res);
-                debug ("Temp file deleted: %s\n", delete_success.to_string ());
-              } catch (Error e) {
-                stderr.printf ("Temp file delete error: %s\n", e.message);
-              }
-            });
           }
           catch (GLib.Error e) {
             stderr.printf ("File save error: %s\n", e.message);
