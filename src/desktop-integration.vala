@@ -72,6 +72,12 @@ namespace Peek {
       return folder;
     }
 
+    public static bool is_unity () {
+      string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
+      debug ("Desktop: %s", desktop);
+      return desktop.contains ("Unity");
+    }
+
     private static bool file_manager_highlights_file (AppInfo app_info) {
       var exe = app_info.get_executable ();
       return exe == "nautilus" || exe == "nemo";

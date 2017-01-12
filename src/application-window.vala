@@ -455,14 +455,20 @@ namespace Peek {
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
       var parameter = new Variant.string (file.get_uri ());
       var notification = new GLib.Notification (message.str);
-      notification.set_body (_ ("Click here to show the saved file in your file manager."));
-      notification.add_button_with_target_value (
-        _ ("Show in file manager"),
-        "app.show-file",
-        parameter);
-      notification.set_default_action_and_target_value (
-        "app.show-file",
-        parameter);
+
+      // Unity does not allow actions on notifications, so we disable notifications
+      // completely.
+      if (!DesktopIntegration.is_unity ()) {
+        notification.set_body (_ ("Click here to show the saved file in your file manager."));
+        notification.add_button_with_target_value (
+          _ ("Show in file manager"),
+          "app.show-file",
+          parameter);
+        notification.set_default_action_and_target_value (
+          "app.show-file",
+          parameter);
+      }
+
       this.application.send_notification (null, notification);
     }
 

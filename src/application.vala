@@ -171,12 +171,9 @@ namespace Peek {
           settings.gtk_decoration_layout = prefix + settings.gtk_decoration_layout;
       }
 
-      string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
-      debug ("Desktop: %s", desktop);
-
       // Unity specific workaround, force app menu in window when
       // setting to display menus in titlebar in Unity is active
-      if (desktop.contains ("Unity")) {
+      if (DesktopIntegration.is_unity ()) {
         try {
           var schema_source = SettingsSchemaSource.get_default ();
           SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
