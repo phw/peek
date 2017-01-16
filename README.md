@@ -38,9 +38,9 @@ am working on it ;)
 
 On Ubuntu 16.04 Xenial:
 ```
-$ wget https://github.com/phw/peek/releases/download/v0.7.2/peek-0.7.2-Linux.deb
+$ wget https://github.com/phw/peek/releases/download/v0.8.0/peek-0.8.0-Linux.deb
 $ sudo apt install libsdl1.2debian ffmpeg libavdevice-ffmpeg56
-$ sudo dpkg -i peek-0.7.2-Linux.deb
+$ sudo dpkg -i peek-0.8.0-Linux.deb
 $ peek
 ```
 
