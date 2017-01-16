@@ -162,13 +162,14 @@ namespace Peek {
       string decoration_layout = settings.gtk_decoration_layout ?? "";
       debug ("Decoration layout: %s", decoration_layout);
 
+      // Make sure the menu is part of the decoration
       if (!decoration_layout.contains ("menu")) {
           string prefix = "menu:";
           if (decoration_layout.contains (":")) {
               prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
           }
 
-          settings.gtk_decoration_layout = prefix + settings.gtk_decoration_layout;
+          settings.gtk_decoration_layout = prefix + decoration_layout;
       }
 
       // Unity specific workaround, force app menu in window when

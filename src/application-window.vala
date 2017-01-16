@@ -31,6 +31,9 @@ namespace Peek {
     public string save_folder { get; set; }
 
     [GtkChild]
+    private HeaderBar headerbar;
+
+    [GtkChild]
     private Widget recording_view;
 
     [GtkChild]
@@ -114,6 +117,14 @@ namespace Peek {
       this.set_keep_above (true);
       this.load_geometry ();
       this.on_window_screen_changed (null);
+
+      // Reverse window decoration on Unity, close button should be left
+      if (DesktopIntegration.is_unity ()) {
+        var decoration = this.headerbar.decoration_layout.split (":", 2);
+        if (decoration.length == 2) {
+          this.headerbar.decoration_layout = decoration[1] + ":" + decoration[0];
+        }
+      }
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
