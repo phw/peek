@@ -18,6 +18,10 @@
       <default>true</default>
       <summary>Prefer dark theme</summary>
     </key>
+    <key name="recording-alternative-tmpdir" type="b">
+      <default>false</default>
+      <summary>Use alternative temporary directory. Enable this option if you experience system lag when creating gifs.</summary>
+    </key>
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
       <default>3</default>

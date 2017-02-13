@@ -24,6 +24,8 @@ namespace Peek {
 
     public int size_indicator_delay { get; set; }
 
+    public bool alternative_tmpdir { get; set; }
+
     public int recording_start_delay { get; set; }
 
     public string default_file_name_format { get; set; }
@@ -94,6 +96,10 @@ namespace Peek {
         this.get_settings (), "gtk_application_prefer_dark_theme",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-alternative-tmpdir",
+        this, "alternative_tmpdir",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-framerate",
         this.recorder, "framerate",
         SettingsBindFlags.DEFAULT);
@@ -114,6 +120,8 @@ namespace Peek {
       this.set_keep_above (true);
       this.load_geometry ();
       this.on_window_screen_changed (null);
+
+      this.maybe_set_tmpdir ();
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
@@ -247,6 +255,22 @@ namespace Peek {
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
         show_file_chooser ();
+      }
+    }
+
+    private void maybe_set_tmpdir () {
+      if (this.alternative_tmpdir) {
+        var tmpdir = Environment.get_variable ("TMPDIR");
+        var magick_tmpdir = Environment.get_variable ("MAGICK_TMPDIR");
+
+        if ("/var/tmp" != tmpdir) {
+          Environment.set_variable ("TMPDIR", "/var/tmp", true);
+        }
+
+        if ("/var/tmp" != magick_tmpdir) {
+          Environment.set_variable ("MAGICK_TMPDIR", "/var/tmp", true);
+          Environment.set_variable ("MAGICK_TEMPORARY_PATH", "/var/tmp", true);
+        }
       }
     }
 
