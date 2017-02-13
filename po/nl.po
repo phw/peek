@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# This file is distributed under the same license as the peek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: peek\n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
+"POT-Creation-Date: 2016-11-18 15:48+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
+msgid "Peek"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
+msgid "Animated GIF recorder"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr ""
+
+#: data/desktop/com.uploadedlobster.peek.desktop.in:7
+msgid "peek"
+msgstr ""
+
+#: src/application.vala:54
+msgid "Show the version of the program and exit"
+msgstr ""
+
+#: src/application-window.vala:247
+msgid "Rendering…"
+msgstr ""
+
+#: src/application-window.vala:267 ui/application-window.ui:154
+msgid "_Stop"
+msgstr ""
+
+#: src/application-window.vala:370
+msgid "Save animation"
+msgstr ""
+
+#: src/application-window.vala:371
+msgid "_Cancel"
+msgstr ""
+
+#: src/application-window.vala:373
+msgid "_Save"
+msgstr ""
+
+#: src/application-window.vala:455
+#, c-format
+msgid "Animation saved as “%s”"
+msgstr ""
+
+#: src/application-window.vala:458
+msgid "Click here to show the saved file in your file manager."
+msgstr ""
+
+#: src/application-window.vala:460
+msgid "Show in file manager"
+msgstr ""
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr ""
+
+#: ui/application-window.ui:33 ui/application-window.ui:139
+msgid "Start recording"
+msgstr ""
+
+#: ui/application-window.ui:128
+msgid "_Record"
+msgstr ""
+
+#: ui/application-window.ui:165
+msgid "Stop recording"
+msgstr ""
+
+#: ui/preferences.ui:84
+msgid "User interface"
+msgstr ""
+
+#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
+msgid "Open file manager after saving"
+msgstr ""
+
+#: ui/preferences.ui:129
+msgid "Recording"
+msgstr ""
+
+#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
+msgid "Delay in seconds before recording starts"
+msgstr ""
+
+#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
+msgid "Framerate"
+msgstr ""
+
+#: ui/preferences.ui:238
+msgid "Resolution downsampling"
+msgstr ""
+
+#: ui/preferences.ui:286
+msgid "Peek preferences"
+msgstr ""
+
+#: ui/gtk/menus.ui:7
+msgid "New _window"
+msgstr ""
+
+#: ui/gtk/menus.ui:13
+msgid "_Preferences"
+msgstr ""
+
+#: ui/gtk/menus.ui:19
+msgid "_About"
+msgstr ""
+
+#: ui/gtk/menus.ui:23
+msgid "_Quit"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
+msgid "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
+msgid "Default file name used. Can include date format specifiers."
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
+msgid "Prefer dark theme"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
+msgid "Resolution downsampling factor"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
+msgid "Size and position of the last open main window"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
+msgid "Path where last video got saved"
+msgstr ""
