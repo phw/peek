@@ -183,18 +183,13 @@ namespace Peek {
       // Unity specific workaround, force app menu in window when
       // setting to display menus in titlebar in Unity is active
       if (DesktopIntegration.is_unity ()) {
-        try {
-          var schema_source = SettingsSchemaSource.get_default ();
-          SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
-          if (schema != null && schema.has_key ("integrated-menus")) {
-            var unity = new Settings.full (schema, null, null);
-            if (unity.get_boolean ("integrated-menus")) {
-              settings.gtk_shell_shows_app_menu = false;
-            }
+        var schema_source = SettingsSchemaSource.get_default ();
+        SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
+        if (schema != null && schema.has_key ("integrated-menus")) {
+          var unity = new Settings.full (schema, null, null);
+          if (unity.get_boolean ("integrated-menus")) {
+            settings.gtk_shell_shows_app_menu = false;
           }
-        }
-        catch (GLib.Error e) {
-          warning ("Loading Unity settings failed: %s", e.message);
         }
       }
     }
