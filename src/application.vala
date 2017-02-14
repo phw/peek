@@ -63,7 +63,7 @@ namespace Peek {
     public override void startup () {
       base.startup ();
 
-      load_stylesheet ();
+      load_stylesheets ();
 
       GLib.Environment.set_application_name (_ ("Peek"));
 
@@ -122,17 +122,25 @@ namespace Peek {
       AboutDialog.present_single_instance (main_window);
     }
 
-    private void load_stylesheet () {
+    private void load_stylesheets () {
+      load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
+
+      if (DesktopIntegration.is_unity ()) {
+        load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/unity.css");
+      }
+    }
+
+    private void load_stylesheet_from_uri (string uri) {
       var provider = new Gtk.CssProvider ();
       try {
-        var file = File.new_for_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
+        var file = File.new_for_uri (uri);
         provider.load_from_file (file);
         var screen = Gdk.Screen.get_default ();
         Gtk.StyleContext.add_provider_for_screen (screen, provider,
           GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
       }
       catch (GLib.Error e) {
-        stderr.printf ("Loading application stylesheet failed: %s", e.message);
+        stderr.printf ("Loading application stylesheet %s failed: %s", uri, e.message);
       }
     }
 

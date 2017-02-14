@@ -1,0 +1,4 @@
+/* Workaround for gray bars in recording area */
+.titlebar {
+  border-radius: 0;
+}
