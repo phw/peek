@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.19.0 
+<!-- Generated with glade 3.19.0
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -60,10 +60,10 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="height_request">40</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin_left">6</property>
-            <property name="margin_right">6</property>
-            <property name="margin_top">6</property>
-            <property name="margin_bottom">6</property>
+            <property name="margin_left">1</property>
+            <property name="margin_right">1</property>
+            <property name="margin_top">1</property>
+            <property name="margin_bottom">1</property>
             <property name="orientation">vertical</property>
             <signal name="draw" handler="on_recording_view_draw" swapped="no"/>
             <signal name="size-allocate" handler="on_recording_view_size_allocate" swapped="no"/>
