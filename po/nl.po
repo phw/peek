@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: 2017-02-14 12:24+0000\n"
+"PO-Revision-Date: 2017-02-14 12:28+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch "
 "<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
@@ -33,7 +33,7 @@ msgstr "Korte bewegende GIF-afbeeldingen opnemen van uw scherm"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
-msgstr ""
+msgstr "peek"
 
 #: src/application.vala:54
 msgid "Show the version of the program and exit"
@@ -109,58 +109,60 @@ msgstr "Vertraging (in seconden) vóór opnemen"
 
 #: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr ""
+msgstr "Verversingssnelheid"
 
 #: ui/preferences.ui:238
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Resolutie van ruisreductie"
 
 #: ui/preferences.ui:286
 msgid "Peek preferences"
-msgstr ""
+msgstr "Peek-voorkeuren"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "Nieuw _venster"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
-msgstr ""
+msgstr "_Voorkeuren"
 
 #: ui/gtk/menus.ui:19
 msgid "_About"
-msgstr ""
+msgstr "_Over"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr ""
+msgstr "_Afsluiten"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr ""
+"Tijd (in milliseconden) dat de opnamegebiedsgrootte moet worden weergegeven "
+"na het herschalen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr ""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
-msgstr ""
+msgstr "Te gebruiken standaard naam. Mag datumopmaak bevatten."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Voorkeur geven aan donker thema"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:34
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Resolutie van ruisreductie-factor"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Grootte en locatie van het laatst geopende hoofdvenster"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Pad waar de laatste video is opgeslagen"
