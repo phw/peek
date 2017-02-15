@@ -126,9 +126,9 @@ function(vala_precompile output)
     endforeach(pkg ${ARGS_PACKAGES})
 
     set(vala_define_opts "")
-    foreach(def ${ARGS_DEFINTIONS})
+    foreach(def ${ARGS_DEFINITIONS})
         list(APPEND vala_define_opts "--define=${def}")
-    endforeach(def ${ARGS_DEFINTIONS})
+    endforeach(def ${ARGS_DEFINITIONS})
 
     set(in_files "")
     set(out_files "")

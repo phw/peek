@@ -25,7 +25,7 @@ include(GettextTranslate)
 find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
-pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.14)
+pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.10)
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
@@ -45,6 +45,13 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
     ui/${PROJECT_NAME}.gresource.xml
 )
 
+if (${GTK_VERSION} VERSION_GREATER "3.14")
+  message(STATUS "Compiling for GTK >= 3.14")
+  set (GTK_DEFINITION GTK_3_14)
+else()
+  message(STATUS "Compiling for GTK < 3.14")
+endif ()
+
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala
@@ -61,6 +68,8 @@ vala_precompile(VALA_C
   PACKAGES
     gtk+-3.0
     posix
+  DEFINITIONS
+    ${GTK_DEFINITION}
   CUSTOM_VAPIS
     src/vapi/config.vapi
   GENERATE_HEADER
@@ -112,7 +121,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.14), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.10), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 
