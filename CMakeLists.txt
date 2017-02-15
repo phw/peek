@@ -30,10 +30,10 @@ add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
 
-pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(CAIRO REQUIRED cairo)
+pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
+pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
-pkg_check_modules(GIO REQUIRED gio-2.0)
 
 # compile glib resource files to c code
 configure_file (
@@ -59,13 +59,6 @@ elseif (${GTK_VERSION} VERSION_EQUAL "3.12" OR ${GTK_VERSION} VERSION_GREATER "3
   list(APPEND VALA_DEFINITIONS "GTK_HAS_POPOVER")
 else()
   message(STATUS "Compiling for GTK < 3.12")
-endif ()
-
-if (${GIO_VERSION} VERSION_EQUAL "2.42" OR ${GIO_VERSION} VERSION_GREATER "2.42")
-  message(STATUS "Compiling for GIO >= 2.42")
-  list(APPEND VALA_DEFINITIONS "GIO_HAS_MAIN_OPTION_ENTRIES")
-else()
-  message(STATUS "Compiling for GIO < 2.42")
 endif ()
 
 # Compile Vala to C
