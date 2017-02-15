@@ -169,6 +169,7 @@ namespace Peek {
           return ;
       }
 
+      #if GTK_HAS_DECORATION_LAYOUT
       string decoration_layout = settings.gtk_decoration_layout ?? "";
       debug ("Decoration layout: %s", decoration_layout);
 
@@ -181,6 +182,7 @@ namespace Peek {
 
           settings.gtk_decoration_layout = prefix + decoration_layout;
       }
+      #endif
 
       // Unity specific workaround, force app menu in window when
       // setting to display menus in titlebar in Unity is active

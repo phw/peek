@@ -118,6 +118,7 @@ namespace Peek {
       this.load_geometry ();
       this.on_window_screen_changed (null);
 
+      #if GTK_HAS_DECORATION_LAYOUT
       // Reverse window decoration on Unity, close button should be left
       if (DesktopIntegration.is_unity ()) {
         var decoration = this.headerbar.decoration_layout.split (":", 2);
@@ -125,6 +126,7 @@ namespace Peek {
           this.headerbar.decoration_layout = decoration[1] + ":" + decoration[0];
         }
       }
+      #endif
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
