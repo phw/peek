@@ -322,7 +322,7 @@ namespace Peek {
     }
 
     private Widget? get_fallback_app_menu () {
-      #if GTK_3_14
+      #if GTK_HAS_PREFERS_APP_MENU
       if (Gtk.get_major_version () >= 3 &&
         Gtk.get_minor_version () >= 14 &&
         this.application.prefers_app_menu ()) {

@@ -49,9 +49,11 @@ namespace Peek {
       Object (application_id: APP_ID,
         flags: ApplicationFlags.FLAGS_NONE);
 
+      #if GIO_HAS_MAIN_OPTION_ENTRIES
       add_main_option ("version", 'v',
         OptionFlags.IN_MAIN, OptionArg.NONE,
         _ ("Show the version of the program and exit"), null);
+      #endif
     }
 
     public override void activate () {
