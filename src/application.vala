@@ -103,6 +103,7 @@ namespace Peek {
       base.shutdown ();
     }
 
+    #if GIO_HAS_MAIN_OPTION_ENTRIES
     protected override int handle_local_options (GLib.VariantDict options) {
       if (options.contains ("version")) {
         stderr.printf ("%1$s %2$s\n", "Peek", Config.VERSION);
@@ -111,6 +112,7 @@ namespace Peek {
 
       return -1;
     }
+    #endif
 
     private void new_window () {
       this.activate ();
