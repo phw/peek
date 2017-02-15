@@ -12,7 +12,7 @@ operating systems in the future.
 ## Requirements
 ### Runtime
 
-  * GTK+ >= 3.14
+  * GTK+ >= 3.10
   * GLib >= 2.38
   * FFmpeg
   * ImageMagick
@@ -55,7 +55,7 @@ You can help translate Peek into your language. Peek is using
 [Weblate](https://weblate.org/) for translation management.
 
 Go to the [Peek localization project](https://hosted.weblate.org/engage/peek/)
-to start translating. 
+to start translating.
 
 ## License
 Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>

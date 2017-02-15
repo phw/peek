@@ -118,6 +118,7 @@ namespace Peek {
       this.load_geometry ();
       this.on_window_screen_changed (null);
 
+      #if GTK_HAS_DECORATION_LAYOUT
       // Reverse window decoration on Unity, close button should be left
       if (DesktopIntegration.is_unity ()) {
         var decoration = this.headerbar.decoration_layout.split (":", 2);
@@ -125,6 +126,7 @@ namespace Peek {
           this.headerbar.decoration_layout = decoration[1] + ":" + decoration[0];
         }
       }
+      #endif
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
@@ -322,19 +324,21 @@ namespace Peek {
     }
 
     private Widget? get_fallback_app_menu () {
-      if (Gtk.get_major_version () >= 3 &&
-        Gtk.get_minor_version () >= 14 &&
-        this.application.prefers_app_menu ()) {
+      #if GTK_HAS_PREFERS_APP_MENU
+      if (this.application.prefers_app_menu ()) {
         return null;
       }
+      #endif
 
       Widget fallback_app_menu = null;
 
+      #if GTK_HAS_POPOVER
       this.forall ((child)  => {
         if (child is Gtk.Popover) {
           fallback_app_menu = child;
         }
       });
+      #endif
 
       return fallback_app_menu;
     }

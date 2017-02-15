@@ -25,7 +25,7 @@ include(GettextTranslate)
 find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
-pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.14)
+pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.10)
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
@@ -33,6 +33,7 @@ link_directories(${GTK_LIBRARY_DIRS})
 pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
+pkg_check_modules(GIO REQUIRED gio-2.0)
 
 # compile glib resource files to c code
 configure_file (
@@ -44,6 +45,28 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
   SOURCE
     ui/${PROJECT_NAME}.gresource.xml
 )
+
+set(VALA_DEFINITIONS "")
+
+if (${GTK_VERSION} VERSION_EQUAL "3.14" OR ${GTK_VERSION} VERSION_GREATER "3.14")
+  message(STATUS "Compiling for GTK >= 3.14")
+  list(APPEND VALA_DEFINITIONS "GTK_HAS_DECORATION_LAYOUT")
+  list(APPEND VALA_DEFINITIONS "GTK_HAS_POPOVER")
+  list(APPEND VALA_DEFINITIONS "GTK_HAS_PREFERS_APP_MENU")
+elseif (${GTK_VERSION} VERSION_EQUAL "3.12" OR ${GTK_VERSION} VERSION_GREATER "3.12")
+  message(STATUS "Compiling for GTK >= 3.12")
+  list(APPEND VALA_DEFINITIONS "GTK_HAS_DECORATION_LAYOUT")
+  list(APPEND VALA_DEFINITIONS "GTK_HAS_POPOVER")
+else()
+  message(STATUS "Compiling for GTK < 3.12")
+endif ()
+
+if (${GIO_VERSION} VERSION_EQUAL "2.42" OR ${GIO_VERSION} VERSION_GREATER "2.42")
+  message(STATUS "Compiling for GIO >= 2.42")
+  list(APPEND VALA_DEFINITIONS "GIO_HAS_MAIN_OPTION_ENTRIES")
+else()
+  message(STATUS "Compiling for GIO < 2.42")
+endif ()
 
 # Compile Vala to C
 vala_precompile(VALA_C
@@ -61,6 +84,8 @@ vala_precompile(VALA_C
   PACKAGES
     gtk+-3.0
     posix
+  DEFINITIONS
+    ${VALA_DEFINITIONS}
   CUSTOM_VAPIS
     src/vapi/config.vapi
   GENERATE_HEADER
@@ -112,7 +137,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.14), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.10), libglib2.0-0 (>= 2.38), ffmpeg, imagemagick")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 
