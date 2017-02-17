@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -8,6 +8,7 @@ This software is licensed under the GNU General Public License
 */
 
 using Peek.Recording;
+using Peek.Ui;
 
 namespace Peek {
 

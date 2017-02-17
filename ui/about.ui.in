@@ -27,7 +27,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   <!-- interface-name Peek -->
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
   <!-- interface-authors Philipp Wolfer <ph.wolfer@gmail.com> -->
-  <template class="PeekAboutDialog" parent="GtkAboutDialog">
+  <template class="PeekUiAboutDialog" parent="GtkAboutDialog">
     <property name="can_focus">False</property>
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>

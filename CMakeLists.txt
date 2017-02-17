@@ -52,10 +52,7 @@ set(VALA_DEFINITIONS "")
 vala_precompile(VALA_C
     src/main.vala
     src/application.vala
-    src/application-window.vala
-    src/about-dialog.vala
     src/desktop-integration.vala
-    src/preferences-dialog.vala
     src/defaults.vala
     src/utils.vala
     src/post-processing/imagemagick-post-processor.vala
@@ -65,6 +62,9 @@ vala_precompile(VALA_C
     src/recording/command-line-screen-recorder.vala
     #src/recording/avconv-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala
+    src/ui/about-dialog.vala
+    src/ui/application-window.vala
+    src/ui/preferences-dialog.vala
   PACKAGES
     gtk+-3.0
     posix

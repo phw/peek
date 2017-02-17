@@ -14,7 +14,7 @@ using Gtk;
 using Cairo;
 using Peek.Recording;
 
-namespace Peek {
+namespace Peek.Ui {
 
   [GtkTemplate (ui = "/com/uploadedlobster/peek/application-window.ui")]
   class ApplicationWindow : Gtk.ApplicationWindow {
