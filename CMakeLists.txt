@@ -56,6 +56,7 @@ vala_precompile(VALA_C
     src/about-dialog.vala
     src/desktop-integration.vala
     src/preferences-dialog.vala
+    src/defaults.vala
     src/utils.vala
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processor.vala

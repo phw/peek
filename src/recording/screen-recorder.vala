@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2016-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -11,6 +11,10 @@ namespace Peek.Recording {
 
   public interface ScreenRecorder : Object {
     public abstract bool is_recording { get; protected set; }
+
+    public abstract int framerate { get; set; }
+
+    public abstract int downsample { get; set; }
 
     public signal void recording_started ();
 
