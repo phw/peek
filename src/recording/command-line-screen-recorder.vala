@@ -38,7 +38,7 @@ namespace Peek.Recording {
           Process.close_pid (pid);
 
           if (!is_exit_status_success (status)) {
-            recording_aborted (status);
+            recording_aborted (Process.exit_status (status));
           }
         });
 

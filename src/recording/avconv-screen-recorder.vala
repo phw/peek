@@ -45,7 +45,9 @@ namespace Peek.Recording {
     }
 
     protected override bool is_exit_status_success (int status) {
-      return Process.term_sig (status) == ProcessSignal.INT;
+      return Process.term_sig (status) == ProcessSignal.INT ||
+        Process.exit_status (status) == 0 ||
+        Process.exit_status (status) == 255;
     }
 
     protected override void stop_command () {
