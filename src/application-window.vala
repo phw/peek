@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -367,26 +367,7 @@ namespace Peek {
     }
 
     private RecordingArea get_recording_area () {
-      var recording_view_window = recording_view.get_window ();
-      var scale_factor = recording_view_window.get_scale_factor ();
-
-      var area = RecordingArea() {
-        width = recording_view.get_allocated_width () * scale_factor,
-        height = recording_view.get_allocated_height () * scale_factor
-      };
-
-      // Get absoulte window coordinates
-      recording_view_window.get_origin (out area.left, out area.top);
-
-      // Add relative widget coordinates
-      int relative_left, relative_top;
-      recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
-        out relative_left, out relative_top);
-
-      area.left = (area.left + relative_left) * scale_factor;
-      area.top = (area.top + relative_top) * scale_factor;
-
-      return area;
+      return RecordingArea.create_for_widget (recording_view);
     }
 
     private void show_file_chooser () {
