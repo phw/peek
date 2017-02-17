@@ -24,7 +24,7 @@ namespace Peek.PostProcessing {
         var output_file = Utils.create_temp_file ("gif");
         string[] argv = {
           "convert",
-          "-set", "delay", delay.to_string(),
+          "-set", "delay", delay.to_string (),
           "-layers", "Optimize",
           file.get_path (),
           output_file
@@ -37,17 +37,17 @@ namespace Peek.PostProcessing {
         ChildWatch.add (pid, (pid, status) => {
           // Triggered when the child indicated by pid exits
           Process.close_pid (pid);
-          Idle.add((owned) callback);
+          Idle.add ((owned) callback);
         });
 
         yield;
         return File.new_for_path (output_file);
       } catch (SpawnError e) {
-       stderr.printf ("Error: %s\n", e.message);
-       return null;
+        stderr.printf ("Error: %s\n", e.message);
+        return null;
       } catch (FileError e) {
-       stderr.printf ("Error: %s\n", e.message);
-       return null;
+        stderr.printf ("Error: %s\n", e.message);
+        return null;
       }
     }
   }
