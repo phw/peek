@@ -54,8 +54,11 @@ vala_precompile(VALA_C
     src/application.vala
     src/application-window.vala
     src/about-dialog.vala
-    src/preferences-dialog.vala
     src/desktop-integration.vala
+    src/preferences-dialog.vala
+    src/utils.vala
+    src/post-processing/imagemagick-post-processor.vala
+    src/post-processing/post-processor.vala
     src/recording/screen-recorder.vala
     src/recording/recording-area.vala
     src/recording/command-line-screen-recorder.vala

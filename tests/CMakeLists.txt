@@ -35,9 +35,12 @@ add_test(
 # /screen-recorder/command-line-screen-recorder/
 vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     screen-recorder/test-command-line-screen-recorder.vala
+    ../src/post-processing/post-processor.vala
+    ../src/post-processing/imagemagick-post-processor.vala
     ../src/recording/recording-area.vala
     ../src/recording/screen-recorder.vala
     ../src/recording/command-line-screen-recorder.vala
+    ../src/utils.vala
   PACKAGES
     gtk+-3.0
 )

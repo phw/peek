@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -18,7 +18,7 @@ namespace Peek.Recording {
         // Cancel running recording
         cancel ();
 
-        temp_file = create_temp_file ("avi");
+        temp_file =  Utils.create_temp_file ("avi");
         string display = Environment.get_variable ("DISPLAY");
         if (display == null) {
           display = ":0";
