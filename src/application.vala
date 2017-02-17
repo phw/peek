@@ -56,9 +56,13 @@ namespace Peek {
     }
 
     public override void activate () {
-      var recorder = new FfmpegScreenRecorder ();
-      main_window = new ApplicationWindow (this, recorder);
-      main_window.present ();
+      try {
+        var recorder = ScreenRecorderFactory.create_default_screen_recorder ();
+        main_window = new ApplicationWindow (this, recorder);
+        main_window.present ();
+      } catch (PeekError e) {
+        stderr.printf (_ ("Unable to create default screen recorder.\n"));
+      }
     }
 
     public override void startup () {

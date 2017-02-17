@@ -81,16 +81,7 @@ namespace Peek.Recording {
     }
 
     protected virtual bool is_exit_status_success (int status) {
-      try {
-        if (Process.check_exit_status (status)) {
-          return true;
-        }
-      }
-      catch (Error e) {
-        stderr.printf ("Error: %s\n", e.message);
-      }
-
-      return false;
+      return Utils.is_exit_status_success (status);
     }
 
     protected abstract void stop_command ();

@@ -16,6 +16,19 @@ namespace Peek {
       FileUtils.close (fd);
       return file_name;
     }
+
+    public static bool is_exit_status_success (int status) {
+      try {
+        if (Process.check_exit_status (status)) {
+          return true;
+        }
+      }
+      catch (Error e) {
+        stderr.printf ("Error: %s\n", e.message);
+      }
+
+      return false;
+    }
   }
 
 }
