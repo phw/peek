@@ -31,19 +31,18 @@ For Arch Linux there is a
 [PKGBUILD](https://aur.archlinux.org/packages/peek/) available in the AUR.
 
 ### Ubuntu / Debian
-A x86_64 DEB package is provided for download for the [latest release](https://github.com/phw/peek/releases).
+You can install the latest versions of Peek from the
+[Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
 
-In theory this package should also work on Debian. In practice you will miss the
-ffmpeg package. libav is currently not directly usable as a replacement, but I
-am working on it ;)
+  sudo add-apt-repository ppa:peek-developers/stable
+  sudo apt-get update
+  sudo apt-get install peek
 
-On Ubuntu 16.04 Xenial:
-```
-$ wget https://github.com/phw/peek/releases/download/v0.8.0/peek-0.8.0-Linux.deb
-$ sudo apt-get install libsdl1.2debian ffmpeg libavdevice-ffmpeg56
-$ sudo dpkg -i peek-0.8.0-Linux.deb
-$ peek
-```
+If you want to use the latest development version there is also a
+[PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
+available.
+
+The deb packages from this PPA probably will also work on Debian.
 
 ### From source
 You can build and install Peek using CMake:
