@@ -34,15 +34,15 @@ For Arch Linux there is a
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
 
-  sudo add-apt-repository ppa:peek-developers/stable
-  sudo apt-get update
-  sudo apt-get install peek
+    sudo add-apt-repository ppa:peek-developers/stable
+    sudo apt-get update
+    sudo apt-get install peek
 
 If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
 available.
 
-The deb packages from this PPA probably will also work on Debian.
+The deb packages from these PPAs probably will also work on Debian.
 
 ### From source
 You can build and install Peek using CMake:
