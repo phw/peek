@@ -3,12 +3,14 @@
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 
+
 ## About
 A simple tool that allows you to record short animated GIF images from your screen.
 
 Currently only Linux with X11 is supported. Other Unix like systems using X11
 should work as well. It is planned to also support Wayland and maybe other
 operating systems in the future.
+
 
 ## Requirements
 ### Runtime
@@ -24,6 +26,7 @@ operating systems in the future.
  * Vala compiler
  * CMake >= 2.8.8
  * Gettext (>= 0.19 for localized .desktop entry)
+
 
 ## Installation
 ### Arch Linux
@@ -50,6 +53,27 @@ You can build and install Peek using CMake:
     cmake . && make
     make install
 
+
+## Frequently Asked Questions
+### The recording area is all black, how can I record anything?
+If the recording area is not showing the content behind Peek you have probably
+compositing disabled in your window manager. Peek requires compositing in order
+to make the Peek window transparent. Please consult your window manager's
+documentation how to enable compositing.
+
+### My recorded GIFs flicker, what is wrong?
+Some users have experienced recorded windows flicker or other strange visual
+artifacts only visible in the recorded GIF. This is most likely a video driver
+issue. If you are using Intel video drivers switching between the SNA and UXA
+acceleration methods can help.
+
+### Why can't I interact with the UI elements inside the recording area?
+You absolutely should be able to click the UI elements inside the area you are
+recording. However this does not work as intented on some window managers,
+most notably I3. If this does not work for you on any other window manager
+please open an [issue on Github](https://github.com/phw/peek/issues).
+
+
 ## Translations
 You can help translate Peek into your language. Peek is using
 [Weblate](https://weblate.org/) for translation management.
@@ -57,8 +81,9 @@ You can help translate Peek into your language. Peek is using
 Go to the [Peek localization project](https://hosted.weblate.org/engage/peek/)
 to start translating.
 
+
 ## License
-Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 Peek is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
