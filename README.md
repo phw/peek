@@ -17,7 +17,7 @@ operating systems in the future.
 
   * GTK+ >= 3.14
   * GLib >= 2.38
-  * FFmpeg
+  * FFmpeg or libav-tools
   * ImageMagick
   * Window manager with compositing enabled
 
