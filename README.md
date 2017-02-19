@@ -43,16 +43,36 @@ You can install the latest versions of Peek from the
 
 If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
-available.
+available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
 The deb packages from these PPAs probably will also work on Debian.
+
+### Gentoo
+Install the [Peek Ebuild](https://packages.gentoo.org/packages/media-video/peek).
+
+### Fedora
+Install the dependencies with dnf:
+
+    sudo dnf install vala gtk3-devel ffmpeg
+
+Then follow the instructions to install from source below.
 
 ### From source
 You can build and install Peek using CMake:
 
-    cmake . && make
-    make install
+```shell
+git clone git@github.com:phw/peek.git
+mkdir peek/build
+cd peek/build
+cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+make
 
+# Run directly from source
+./peek
+
+# Install system wide
+sudo make install
+```
 
 ## Frequently Asked Questions
 ### The recording area is all black, how can I record anything?
