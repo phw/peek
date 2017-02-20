@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Make sure imagemagick finds the config dir
+if [ ! -d "$HOME/.config/ImageMagick" ]; then
+  mkdir -p "$HOME/.config"
+  ln -s "$SNAP/etc/ImageMagick-6/" "$HOME/.config/ImageMagick"
+fi
+
+peek
