@@ -27,14 +27,17 @@ namespace Peek.Recording {
 
         string[] args = {
           "ffmpeg", "-y",
+          // "-loglevel", "debug",
           "-f", "x11grab",
           "-show_region", "0",
           "-framerate", framerate.to_string (),
           "-video_size", area.width.to_string () + "x" + area.height.to_string (),
+          // "-use_shm", "0",
+          // "-draw_mouse", "0",
           "-i", display + "+" + area.left.to_string () + "," + area.top.to_string (),
           "-codec:v", "libx264rgb",
           "-preset:v", "ultrafast",
-          "-vf", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2), scale=iw/" + downsample.to_string () + ":-1",
+          "-filter:v", "crop=iw-mod(iw\\,2):ih-mod(ih\\,2), scale=iw/" + downsample.to_string () + ":-1",
           temp_file
         };
 
