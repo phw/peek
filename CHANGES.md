@@ -1,6 +1,28 @@
-# Versio 0.x.x - 2016-??-??
+# Version 0.9.0 - 2017-02-20
  * ui: Fix problem of app menu not available on certain desktop configurations (#6)
- 
+ * ui: Fix display of desktop notifications on Ubuntu Unity (#55)
+ * ui: Close button is displayed left on Ubuntu Unity (#67)
+ * ui: Workaround for gray borders under unity (#11)
+ * ui: Smaller border around recording area
+ * recording: Add resolution downsampling option (#32)
+ * recording: Minimal frame rate is now 1fps
+ * recording: Smaller temporary files by using libx264rgb instead of huffyuv (#2)
+ * recording: Support for avconf, if ffmpeg is unavailable (#56)
+ * i18n: Chinese (Simplified) translation
+ * i18n: Croatian translation
+ * i18n: Czech translation
+ * i18n: Dutch translation
+ * i18n: Italian translation
+ * i18n: Korean translation
+ * i18n: Norwegian Bokmål translation
+ * i18n: Portuguese (Brazil) translation
+ * i18n: Swedish translation
+ * fix: Fix possible crash when loading schema from local folder
+ * fix: Fix temp file deletion warning
+ * package: Peek is installable via [Ubuntu PPA](https://code.launchpad.net/%7Epeek-developers/+archive/ubuntu/stable)
+ * docs: Update installation instructions
+ * docs: Added FAQs
+
 # Version 0.8.0 - 2016-10-25
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument
