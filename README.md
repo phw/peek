@@ -97,6 +97,30 @@ recording. However this does not work as intented on some window managers,
 most notably I3. If this does not work for you on any other window manager
 please open an [issue on Github](https://github.com/phw/peek/issues).
 
+### Why are the GIF files so big?
+Peek is using ImageMagick to optimize the GIF files and reduce the file size.
+As was shown in [issue #3](https://github.com/phw/peek/issues/3#issuecomment-243872774)
+the resulting files are already small and compare well to other GIF recording
+software. In the end the GIF format is not well suited for doing large
+animations with a lot of changes and colors. For best results:
+
+- Use a low framerate. 15fps seems to work quite well for me
+- Avoid too much change. If there is heavy animation the frames will differ a lot
+- Avoid too many colors, since GIF is limited to a 256 color pallette. This one
+  is not so much about file size but more about visual quality.
+
+### If GIF is so bad why use it at all?
+While GIF is a very old format, it has seen some rise in usage again in recent
+years. One reason is its easy usage in the Web. GIF files are supported nearly
+everywhere, which means you can add animations easily to everywhere where you
+can upload images. With real video files you are still more limited. Typical use
+cases for Peek are recording small user interactions for showing UI features
+of an app you developed, for making short tutorials or for reporting bugs.
+
+### What about WEBM or MP4? Those are well supported on the web.
+True, but still still not as universally supported as GIFs. But Peek will become
+an option to choose WEBM output for those who prefer or need it.
+
 
 ## Translations
 You can help translate Peek into your language. Peek is using
