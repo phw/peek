@@ -1,3 +1,31 @@
+peek (0.9.0-0) mx; urgency=low
+
+  * New upstream release:
+    - ui: Fix problem of app menu not available on certain desktop configurations (#6)
+    - ui: Fix display of desktop notifications on Ubuntu Unity (#55)
+    - ui: Close button is displayed left on Ubuntu Unity (#67)
+    - ui: Workaround for gray borders under unity (#11)
+    - ui: Smaller border around recording area
+    - recording: Add resolution downsampling option (#32)
+    - recording: Minimal frame rate is now 1fps
+    - recording: Smaller temporary files by using libx264rgb instead of huffyuv (#2)
+    - recording: Support for avconf, if ffmpeg is unavailable (#56)
+    - i18n: Chinese (Simplified) translation
+    - i18n: Croatian translation
+    - i18n: Czech translation
+    - i18n: Dutch translation
+    - i18n: Italian translation
+    - i18n: Korean translation
+    - i18n: Norwegian Bokmål translation
+    - i18n: Portuguese (Brazil) translation
+    - i18n: Swedish translation
+    - fix: Fix possible crash when loading schema from local folder
+    - fix: Fix temp file deletion warning
+    - docs: Update installation instructions
+    - docs: Added FAQs
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Mo, 20 Feb 2017 20:23:29 +0100
+
 peek (0.8.0-1mx15+1) mx; urgency=medium
 
   * New upstream release:
