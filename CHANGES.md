@@ -1,3 +1,6 @@
+# Version 0.9.0 - 2017-02-21
+ * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
+
 # Version 0.9.0 - 2017-02-20
  * ui: Fix problem of app menu not available on certain desktop configurations (#6)
  * ui: Fix display of desktop notifications on Ubuntu Unity (#55)
