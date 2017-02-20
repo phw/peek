@@ -13,11 +13,10 @@ confinement: strict
 
 apps:
   peek:
-    command: desktop-launch peek
+    command: desktop-launch launch-peek
     desktop: usr/share/applications/com.uploadedlobster.peek.desktop
     plugs:
       - x11
-      - unity7
       - home
       - gsettings
 
@@ -36,8 +35,6 @@ parts:
     source: .
     after:
       - desktop-gtk3
-      - ffmpeg
-      - imagemagick
     build-packages:
       - libgtk-3-dev
       - gettext
@@ -49,6 +46,14 @@ parts:
     prime:
       - -usr/share/doc
       - -usr/share/man
+
+  launcher:
+    plugin: dump
+    source: data/snapcraft/
+    organize:
+      launch-peek: bin/launch-peek
+    install: |
+      chmod 0555 $SNAPCRAFT_PART_INSTALL/launch-peek
 
   ffmpeg:
     plugin: nil
