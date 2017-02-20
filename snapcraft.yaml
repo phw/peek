@@ -8,8 +8,8 @@ description: |
   showing UI features of your own apps or for showing a bug in bug reports. It
   is not a general purpose screencast app with extended features and it never
   will be.
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable
+confinement: strict
 
 apps:
   peek:
@@ -21,6 +21,12 @@ apps:
       - home
       - gsettings
 
+slots:
+  session-dbus-interface:
+    interface: dbus
+    name: com.uploadedlobster.peek
+    bus: session
+
 parts:
   peek:
     plugin: cmake
@@ -30,14 +36,49 @@ parts:
     source: .
     after:
       - desktop-gtk3
+      - ffmpeg
+      - imagemagick
     build-packages:
       - libgtk-3-dev
       - gettext
       - valac
     stage-packages:
       - libcanberra-gtk3-module
-      - ffmpeg
-      - imagemagick
     install: |
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/usr/share/glib-2.0/schemas
-      [[ ! -f $SNAPCRAFT_PART_INSTALL/usr/bin/convert ]] && ln -s $SNAPCRAFT_PART_INSTALL/usr/bin/convert-im6 $SNAPCRAFT_PART_INSTALL/usr/bin/convert
+    prime:
+      - -usr/share/doc
+      - -usr/share/man
+
+  ffmpeg:
+    plugin: nil
+    stage-packages:
+      - ffmpeg
+    prime:
+      - -usr/share/applications
+      - -usr/share/bug
+      - -usr/share/doc
+      - -usr/share/fonts
+      - -usr/share/icons
+      - -usr/share/locale
+      - -usr/share/man
+
+  imagemagick:
+    plugin: nil
+    stage-packages:
+      - imagemagick
+    prime:
+      - -usr/bin/ffplay
+      - -usr/bin/ffprobe
+      - -usr/bin/ffserver
+      - -usr/bin/qt-faststart
+      - -usr/share/bug
+      - -usr/share/doc
+      - -usr/share/fonts
+      - -usr/share/locale
+      - -usr/share/man
+    install: |
+      if [ ! -f $SNAPCRAFT_PART_INSTALL/usr/bin/convert ]; then
+        cd $SNAPCRAFT_PART_INSTALL/usr/bin
+        ln -s ./convert-im6 convert
+      fi
