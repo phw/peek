@@ -5,7 +5,11 @@
 
 
 ## About
-A simple tool that allows you to record short animated GIF images from your screen.
+Peek creates animated GIF screencasts using ffmpeg and imagemagick. It was
+built for the specific use case of recording screen areas, e.g., for easily
+showing UI features of your own apps or for showing a bug in bug reports. It
+is not a general purpose screencast app with extended features and it never
+will be.
 
 Currently only Linux with X11 is supported. Other Unix like systems using X11
 should work as well. It is planned to also support Wayland and maybe other
