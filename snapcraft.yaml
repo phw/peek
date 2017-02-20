@@ -1,5 +1,5 @@
 name: peek
-version: '0.8.0+git'
+version: '0.9.0+git'
 icon: data/icons/512x512/peek.png
 summary: An animated GIF recorder with an easy to use interface.
 description: |
