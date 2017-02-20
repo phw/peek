@@ -1,3 +1,11 @@
+peek (0.9.1-0) mx; urgency=low
+
+  * New upstream release:
+    - i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not
+            getting installed
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Tue, 21 Feb 2017 00:26:35 +0100
+
 peek (0.9.0-0) mx; urgency=low
 
   * New upstream release:
@@ -24,7 +32,7 @@ peek (0.9.0-0) mx; urgency=low
     - docs: Update installation instructions
     - docs: Added FAQs
 
- -- Philipp Wolfer <ph.wolfer@gmail.com>  Mo, 20 Feb 2017 20:23:29 +0100
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Mon, 20 Feb 2017 20:23:29 +0100
 
 peek (0.8.0-1mx15+1) mx; urgency=medium
 
