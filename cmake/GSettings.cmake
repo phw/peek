@@ -18,10 +18,10 @@ macro(add_schema SCHEMA_NAME)
     # Have an option to not install the schema into where GLib is
     if (GSETTINGS_LOCALINSTALL)
         SET (GSETTINGS_DIR "${CMAKE_INSTALL_PREFIX}/share/glib-2.0/schemas/")
-    else (GSETTINGS_LOCALINSTALL)
+    else ()
         execute_process (COMMAND ${PKG_CONFIG_EXECUTABLE} glib-2.0 --variable prefix OUTPUT_VARIABLE _glib_prefix OUTPUT_STRIP_TRAILING_WHITESPACE)
         SET (GSETTINGS_DIR "${_glib_prefix}/share/glib-2.0/schemas/")
-    endif (GSETTINGS_LOCALINSTALL)
+    endif ()
 
     # Run the validator and error if it fails
     execute_process (COMMAND ${PKG_CONFIG_EXECUTABLE} gio-2.0 --variable glib_compile_schemas  OUTPUT_VARIABLE _glib_comple_schemas OUTPUT_STRIP_TRAILING_WHITESPACE)

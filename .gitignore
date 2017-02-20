@@ -13,3 +13,9 @@ ui/*.c
 ui/about.ui
 data/schemas/gschemas.compiled
 data/*.desktop
+
+# snapcraft build directories
+parts/
+prime/
+stage/
+*.snap
