@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-11-18 15:48+0100\n"
+"POT-Creation-Date: 2017-02-21 22:08+0100\n"
 "PO-Revision-Date: 2016-11-23 14:37+0000\n"
 "Last-Translator: Victor Kropp <victor.kropp@gmail.com>\n"
-"Language-Team: Russian "
-"<https://hosted.weblate.org/projects/peek/translations/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
+"translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.10-dev\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
 msgstr "Peek"
 
@@ -38,40 +38,134 @@ msgstr "Записывайте короткие анимированные GIF �
 msgid "peek"
 msgstr "peek"
 
-#: src/application.vala:54
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#, fuzzy
+msgid "Open file manager after saving."
+msgstr "Открыть файловый менеджер после сохранения"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
+#, fuzzy
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops."
+msgstr ""
+"Время в миллисекундах, на которое отображается поле записи после изменения "
+"размера"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
+#, fuzzy
+msgid "\"Peek %Y-%m-%d %H-%M\""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
+#, fuzzy
+msgid ""
+"Default file name used. Can include date format specifiers. The extension "
+"will be added automatically."
+msgstr ""
+"Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
+#, fuzzy
+msgid "Prefer dark theme."
+msgstr "Предпочитать тёмную тему"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:31
+msgid "Output file format."
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
+#, fuzzy
+msgid "Delay in seconds before recording starts."
+msgstr "Задержка в секундах перед началом записи"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
+msgid "Framerate"
+msgstr "Частота кадров"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:46
+msgid "Resolution downsampling factor"
+msgstr "Множитель понижения разрешения"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:50
+msgid "Whether to capture the mouse cursor."
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:54
+#, fuzzy
+msgid "Size and position of the last open main window."
+msgstr "Размер и положение последнего открытого главного окна"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:58
+#, fuzzy
+msgid "Path where last video got saved."
+msgstr "Путь к последнему сохраненному видео"
+
+#: src/application.vala:59
 msgid "Show the version of the program and exit"
 msgstr "Показать версию программы и выйти"
 
-#: src/application-window.vala:247
+#: src/application.vala:63
+msgid ""
+"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
+"set Peek will automatically select a backend."
+msgstr ""
+
+#: src/application.vala:64
+msgid "BACKEND"
+msgstr ""
+
+#: src/application.vala:68
+msgid "Start recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:72
+msgid "Stop recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:76
+msgid "Toggle recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:170
+msgid "Unable to create default screen recorder.\n"
+msgstr ""
+
+#: src/application.vala:184
+#, c-format
+msgid "Unable to initialize backend %s.\n"
+msgstr ""
+
+#: src/ui/application-window.vala:284
 msgid "Rendering…"
 msgstr "Оказание…"
 
-#: src/application-window.vala:267 ui/application-window.ui:154
+#: src/ui/application-window.vala:312 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Стоп"
 
-#: src/application-window.vala:370
+#: src/ui/application-window.vala:409
 msgid "Save animation"
 msgstr "Сохранить анимацию"
 
-#: src/application-window.vala:371
+#: src/ui/application-window.vala:410
 msgid "_Cancel"
 msgstr "_Отмена"
 
-#: src/application-window.vala:373
+#: src/ui/application-window.vala:412
 msgid "_Save"
 msgstr "_Сохранить"
 
-#: src/application-window.vala:455
+#: src/ui/application-window.vala:497
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимация сохранена как «%s»"
 
-#: src/application-window.vala:458
+#: src/ui/application-window.vala:504
 msgid "Click here to show the saved file in your file manager."
 msgstr "Нажмите здесь, чтобы показать сохранённый файл в файловом менеджере."
 
-#: src/application-window.vala:460
+#: src/ui/application-window.vala:506
 msgid "Show in file manager"
 msgstr "Показать в файловом менеджере"
 
@@ -93,34 +187,6 @@ msgstr "_Запись"
 msgid "Stop recording"
 msgstr "Остановить запись"
 
-#: ui/preferences.ui:84
-msgid "User interface"
-msgstr "Внешний вид"
-
-#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
-msgid "Open file manager after saving"
-msgstr "Открыть файловый менеджер после сохранения"
-
-#: ui/preferences.ui:129
-msgid "Recording"
-msgstr "Запись"
-
-#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
-msgid "Delay in seconds before recording starts"
-msgstr "Задержка в секундах перед началом записи"
-
-#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
-msgid "Framerate"
-msgstr "Частота кадров"
-
-#: ui/preferences.ui:238
-msgid "Resolution downsampling"
-msgstr "Понижение разрешения"
-
-#: ui/preferences.ui:286
-msgid "Peek preferences"
-msgstr "Настройки Peek"
-
 #: ui/gtk/menus.ui:7
 msgid "New _window"
 msgstr "Новое _окно"
@@ -137,35 +203,42 @@ msgstr "_О программе"
 msgid "_Quit"
 msgstr "_Выход"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-msgid ""
-"Time in milliseconds for which the recording area size is displayed after "
-"resizing stops"
+#: ui/preferences.ui:70
+msgid "User interface"
+msgstr "Внешний вид"
+
+#: ui/preferences.ui:83
+msgid "Open file manager after saving"
+msgstr "Открыть файловый менеджер после сохранения"
+
+#: ui/preferences.ui:115
+msgid "Recording"
+msgstr "Запись"
+
+#: ui/preferences.ui:138
+msgid "Output format"
 msgstr ""
-"Время в миллисекундах, на которое отображается поле записи после изменения "
-"размера"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
-
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-msgid "Default file name used. Can include date format specifiers."
+#: ui/preferences.ui:153
+msgid "GIF"
 msgstr ""
-"Имя файла по умолчанию. Можно использовать спецификаторы форматирования дат."
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-msgid "Prefer dark theme"
-msgstr "Предпочитать тёмную тему"
+#: ui/preferences.ui:154
+msgid "WebM"
+msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
-msgid "Resolution downsampling factor"
-msgstr "Множитель понижения разрешения"
+#: ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
+msgstr "Задержка в секундах перед началом записи"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
-msgid "Size and position of the last open main window"
-msgstr "Размер и положение последнего открытого главного окна"
+#: ui/preferences.ui:225
+msgid "Resolution downsampling"
+msgstr "Понижение разрешения"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
-msgid "Path where last video got saved"
-msgstr "Путь к последнему сохраненному видео"
+#: ui/preferences.ui:299
+msgid "Capture mouse cursor"
+msgstr ""
+
+#: ui/preferences.ui:330
+msgid "Peek preferences"
+msgstr "Настройки Peek"

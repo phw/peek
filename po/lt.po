@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2016-11-18 15:48+0100\n"
+"POT-Creation-Date: 2017-02-21 22:08+0100\n"
 "PO-Revision-Date: 2017-02-21 16:31+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian "
-"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
+"translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
 msgstr "Peek"
 
@@ -39,40 +39,135 @@ msgstr "Įrašinėti trumpus animuotus GIF paveikslus iš jūsų ekrano"
 msgid "peek"
 msgstr "peek"
 
-#: src/application.vala:54
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#, fuzzy
+msgid "Open file manager after saving."
+msgstr "Po failo įrašymo atverti failų tvarkytuvę"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
+#, fuzzy
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops."
+msgstr ""
+"Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus "
+"rodomas įrašinėjimo srities dydis"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
+#, fuzzy
+msgid "\"Peek %Y-%m-%d %H-%M\""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
+#, fuzzy
+msgid ""
+"Default file name used. Can include date format specifiers. The extension "
+"will be added automatically."
+msgstr ""
+"Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato "
+"specifikatorių."
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
+#, fuzzy
+msgid "Prefer dark theme."
+msgstr "Teikti pirmenybę tamsiai temai"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:31
+msgid "Output file format."
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
+#, fuzzy
+msgid "Delay in seconds before recording starts."
+msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
+msgid "Framerate"
+msgstr "Kadrų dažnis"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:46
+msgid "Resolution downsampling factor"
+msgstr "Raiškos ėminių atrankos koeficientas"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:50
+msgid "Whether to capture the mouse cursor."
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:54
+#, fuzzy
+msgid "Size and position of the last open main window."
+msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:58
+#, fuzzy
+msgid "Path where last video got saved."
+msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
+
+#: src/application.vala:59
 msgid "Show the version of the program and exit"
 msgstr "Parodyti programos versiją ir išeiti"
 
-#: src/application-window.vala:247
+#: src/application.vala:63
+msgid ""
+"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
+"set Peek will automatically select a backend."
+msgstr ""
+
+#: src/application.vala:64
+msgid "BACKEND"
+msgstr ""
+
+#: src/application.vala:68
+msgid "Start recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:72
+msgid "Stop recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:76
+msgid "Toggle recording in all running Peek instances."
+msgstr ""
+
+#: src/application.vala:170
+msgid "Unable to create default screen recorder.\n"
+msgstr ""
+
+#: src/application.vala:184
+#, c-format
+msgid "Unable to initialize backend %s.\n"
+msgstr ""
+
+#: src/ui/application-window.vala:284
 msgid "Rendering…"
 msgstr "Perteikiama…"
 
-#: src/application-window.vala:267 ui/application-window.ui:154
+#: src/ui/application-window.vala:312 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Stabdyti"
 
-#: src/application-window.vala:370
+#: src/ui/application-window.vala:409
 msgid "Save animation"
 msgstr "Įrašyti animaciją"
 
-#: src/application-window.vala:371
+#: src/ui/application-window.vala:410
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/application-window.vala:373
+#: src/ui/application-window.vala:412
 msgid "_Save"
 msgstr "Į_rašyti"
 
-#: src/application-window.vala:455
+#: src/ui/application-window.vala:497
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/application-window.vala:458
+#: src/ui/application-window.vala:504
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/application-window.vala:460
+#: src/ui/application-window.vala:506
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
@@ -94,34 +189,6 @@ msgstr "Į_rašinėti"
 msgid "Stop recording"
 msgstr "Stabdyti įrašinėjimą"
 
-#: ui/preferences.ui:84
-msgid "User interface"
-msgstr "Naudotojo sąsaja"
-
-#: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
-msgid "Open file manager after saving"
-msgstr "Po failo įrašymo atverti failų tvarkytuvę"
-
-#: ui/preferences.ui:129
-msgid "Recording"
-msgstr "Įrašinėjimas"
-
-#: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
-msgid "Delay in seconds before recording starts"
-msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
-
-#: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
-msgid "Framerate"
-msgstr "Kadrų dažnis"
-
-#: ui/preferences.ui:238
-msgid "Resolution downsampling"
-msgstr "Raiškos ėminių atrankos mažinimas"
-
-#: ui/preferences.ui:286
-msgid "Peek preferences"
-msgstr "Peek nuostatos"
-
 #: ui/gtk/menus.ui:7
 msgid "New _window"
 msgstr "Naujas _langas"
@@ -138,36 +205,42 @@ msgstr "_Apie"
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-msgid ""
-"Time in milliseconds for which the recording area size is displayed after "
-"resizing stops"
+#: ui/preferences.ui:70
+msgid "User interface"
+msgstr "Naudotojo sąsaja"
+
+#: ui/preferences.ui:83
+msgid "Open file manager after saving"
+msgstr "Po failo įrašymo atverti failų tvarkytuvę"
+
+#: ui/preferences.ui:115
+msgid "Recording"
+msgstr "Įrašinėjimas"
+
+#: ui/preferences.ui:138
+msgid "Output format"
 msgstr ""
-"Milisekundėmis nurodytas laikas, per kurį, nustojus keisti lango dydį, bus "
-"rodomas įrašinėjimo srities dydis"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
-
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-msgid "Default file name used. Can include date format specifiers."
+#: ui/preferences.ui:153
+msgid "GIF"
 msgstr ""
-"Numatytasis naudojamas failo pavadinimas. Jame gali būti datos formato "
-"specifikatorių."
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-msgid "Prefer dark theme"
-msgstr "Teikti pirmenybę tamsiai temai"
+#: ui/preferences.ui:154
+msgid "WebM"
+msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:34
-msgid "Resolution downsampling factor"
-msgstr "Raiškos ėminių atrankos koeficientas"
+#: ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
+msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:38
-msgid "Size and position of the last open main window"
-msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
+#: ui/preferences.ui:225
+msgid "Resolution downsampling"
+msgstr "Raiškos ėminių atrankos mažinimas"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:42
-msgid "Path where last video got saved"
-msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
+#: ui/preferences.ui:299
+msgid "Capture mouse cursor"
+msgstr ""
+
+#: ui/preferences.ui:330
+msgid "Peek preferences"
+msgstr "Peek nuostatos"
