@@ -12,11 +12,11 @@ using Gtk;
 namespace Peek.Ui {
 
   [GtkTemplate (ui = "/com/uploadedlobster/peek/preferences.ui")]
-  class PreferencesDialog : Dialog {
+  class PreferencesDialog : Window {
 
-    private static Gtk.Dialog? instance;
+    private static Gtk.Window? instance;
 
-    public static Gtk.Dialog present_single_instance (Gtk.Window main_window) {
+    public static Gtk.Window present_single_instance (Gtk.Window main_window) {
       if (instance == null) {
         instance = new PreferencesDialog ();
         instance.delete_event.connect ((event) => {
@@ -47,7 +47,7 @@ namespace Peek.Ui {
     private Gtk.Adjustment recording_downsample;
 
     public PreferencesDialog () {
-      Object (use_header_bar: 1);
+      Object ();
 
       settings = Application.get_app_settings ();
 
