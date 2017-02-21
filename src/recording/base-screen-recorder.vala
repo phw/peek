@@ -23,6 +23,8 @@ namespace Peek.Recording {
 
     public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
 
+    public bool capture_mouse { get; set; default = true; }
+
     public abstract bool record (RecordingArea area);
 
     public void stop () {

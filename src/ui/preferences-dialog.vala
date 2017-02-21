@@ -49,6 +49,9 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.Adjustment recording_downsample;
 
+    [GtkChild]
+    private Gtk.CheckButton recording_capture_mouse;
+
 
     public PreferencesDialog () {
       Object ();
@@ -73,6 +76,10 @@ namespace Peek.Ui {
 
       settings.bind ("recording-downsample",
         recording_downsample, "value",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-capture-mouse",
+        recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
     }
   }

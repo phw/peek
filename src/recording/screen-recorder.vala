@@ -18,6 +18,8 @@ namespace Peek.Recording {
 
     public abstract int downsample { get; set; }
 
+    public abstract bool capture_mouse { get; set; }
+
     public signal void recording_started ();
 
     public signal void recording_finished (File file);

@@ -34,6 +34,10 @@ namespace Peek.Recording {
       options.insert ("framerate", new Variant.int32 (framerate));
       options.insert ("pipeline", build_gst_pipeline (area));
 
+      if (!capture_mouse) {
+        options.insert ("draw-cursor", false);
+      }
+
       try {
         string file_template = Path.build_filename (
           Environment.get_tmp_dir (), "peek%d" + get_temp_file_extension ());

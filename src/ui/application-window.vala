@@ -109,6 +109,10 @@ namespace Peek.Ui {
         this.recorder, "downsample",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-capture-mouse",
+        this.recorder, "capture_mouse",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-start-delay",
         this, "recording_start_delay",
         SettingsBindFlags.DEFAULT);

@@ -36,8 +36,13 @@ namespace Peek.Recording {
         args.append_val (framerate.to_string ());
         args.append_val ("-video_size");
         args.append_val (area.width.to_string () + "x" + area.height.to_string ());
-        // args.append_val ("-draw_mouse");
-        // args.append_val ("0");
+
+        if (!capture_mouse) {
+          stderr.printf ("capture_mouse is set to false, but avconv does not support disabling the mouse cursor");
+          // args.append_val ("-draw_mouse");
+          // args.append_val ("0");
+        }
+
         args.append_val ("-i");
         args.append_val (display + "+" + area.left.to_string () + "," + area.top.to_string ());
         args.append_val ("-codec:v");
