@@ -81,15 +81,15 @@ namespace Peek.Recording {
     }
 
     protected override void stop_recording () {
-      if (is_recording) {
-        try {
-          screencast.stop_screencast ();
-          finalize_recording ();
-        } catch (DBusError e) {
-          stderr.printf ("Error: %s\n", e.message);
-        } catch (IOError e) {
-          stderr.printf ("Error: %s\n", e.message);
-        }
+      try {
+        screencast.stop_screencast ();
+        finalize_recording ();
+      } catch (DBusError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        recording_aborted (0);
+      } catch (IOError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        recording_aborted (0);
       }
     }
 

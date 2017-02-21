@@ -93,8 +93,10 @@ namespace Peek.Recording {
         input.flush ();
       } catch (ConvertError e) {
         stderr.printf ("Error: %s\n", e.message);
+        recording_aborted (0);
       } catch (IOChannelError e) {
         stderr.printf ("Error: %s\n", e.message);
+        recording_aborted (0);
       }
     }
   }
