@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-21 21:21+0000\n"
+"PO-Revision-Date: 2017-02-21 22:26+0100\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German "
-"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/peek/"
+"translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
@@ -67,7 +67,7 @@ msgstr "Dunkles Thema bevorzugen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
 msgid "Output file format"
-msgstr ""
+msgstr "Format der Ausgabedatei"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
 msgid "Delay in seconds before recording starts"
@@ -83,7 +83,7 @@ msgstr "Faktor zum Verringern der Auflösung"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Legt fest, ob der Mauszeiger aufgenommen wird"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 msgid "Size and position of the last open main window"
@@ -102,31 +102,33 @@ msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Zu verwendendes Aufnahme-Backend wählen (gnome-shell, ffmpeg oder avconv). "
+"Falls nicht angegeben wird Peek automatisch ein Backend wählen."
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Aufnahme in allen laufenden Peek-Instanzen starten."
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Aufnahme in allen laufenden Peek-Instanzen stoppen."
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Aufnahme in allen laufenden Peek-Instanzen umschalten."
 
 #: src/application.vala:170
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Konnte Standard-Bildschirmrekorder nicht erstellen.\n"
 
 #: src/application.vala:184
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Konnte Backend %s nicht initialisieren.\n"
 
 #: src/ui/application-window.vala:284
 msgid "Rendering…"
@@ -207,15 +209,15 @@ msgstr "Aufnahme"
 
 #: ui/preferences.ui:138
 msgid "Output format"
-msgstr ""
+msgstr "Ausgabeformat"
 
 #: ui/preferences.ui:153
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:154
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
@@ -223,7 +225,7 @@ msgstr "Auflösung verringern"
 
 #: ui/preferences.ui:299
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Mauszeiger aufnehmen"
 
 #: ui/preferences.ui:330
 msgid "Peek preferences"
