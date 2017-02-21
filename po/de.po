@@ -10,14 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:08+0100\n"
-"PO-Revision-Date: 2016-11-15 13:29+0000\n"
+"PO-Revision-Date: 2017-02-21 21:17+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German (http://www.transifex.com/phwolfer/peek/language/de/)\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.12-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
@@ -36,46 +38,40 @@ msgid "peek"
 msgstr "peek"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
 msgid "Open file manager after saving."
-msgstr "Dateimanager nach dem Speichern öffnen"
+msgstr "Dateimanager nach dem Speichern öffnen."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
 "Dauer in Millisekunden, in der die Größe des Aufnahmebereichs nach der "
-"Größenänderung angezeigt wird"
+"Größenänderung angezeigt wird."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-#, fuzzy
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
 "Der Standarddateiname beim Speichern. Kann Formatierungsanweisungen für "
-"Datumsangaben enthalten."
+"Datumsangaben enthalten. Die Dateierweiterung wird automatisch ergänzt."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme."
-msgstr "Dunkles Thema bevorzugen"
+msgstr "Dunkles Thema bevorzugen."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
 msgid "Output file format."
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
 msgid "Delay in seconds before recording starts."
-msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
+msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
 msgid "Framerate"
@@ -90,9 +86,8 @@ msgid "Whether to capture the mouse cursor."
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
-#, fuzzy
 msgid "Size and position of the last open main window."
-msgstr "Größe und Position des zuletzt geöffneten Hauptfensters"
+msgstr "Größe und Position des zuletzt geöffneten Hauptfensters."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
