@@ -104,7 +104,7 @@ msgstr "Po failo įrašymo atverti failų tvarkytuvę"
 
 #: ui/preferences.ui:129
 msgid "Recording"
-msgstr "Įrašinėjama"
+msgstr "Įrašinėjimas"
 
 #: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
