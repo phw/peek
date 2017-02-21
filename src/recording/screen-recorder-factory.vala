@@ -25,7 +25,7 @@ namespace Peek.Recording {
           "No suitable screen recorder found");
       }
 
-      stdout.printf ("Using screen recorder %s\n", recorder);
+      stdout.printf ("Using screen recorder backend %s\n", recorder);
       return create_screen_recorder (recorder);
     }
 

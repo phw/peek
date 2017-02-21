@@ -48,21 +48,20 @@ namespace Peek {
 
     public Application () {
       Object (application_id: APP_ID,
-        flags: ApplicationFlags.FLAGS_NONE);
+        flags: ApplicationFlags.HANDLES_COMMAND_LINE);
 
       add_main_option ("version", 'v',
         OptionFlags.IN_MAIN, OptionArg.NONE,
         _ ("Show the version of the program and exit"), null);
+
+      add_main_option ("backend", 'b',
+        OptionFlags.IN_MAIN, OptionArg.STRING,
+        _ ("Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend."),
+        _ ("BACKEND"));
     }
 
     public override void activate () {
-      try {
-        var recorder = ScreenRecorderFactory.create_default_screen_recorder ();
-        main_window = new ApplicationWindow (this, recorder);
-        main_window.present ();
-      } catch (PeekError e) {
-        stderr.printf (_ ("Unable to create default screen recorder.\n"));
-      }
+      this.new_window ();
     }
 
     public override void startup () {
@@ -78,6 +77,10 @@ namespace Peek {
 
       action = new GLib.SimpleAction ("new-window", null);
       action.activate.connect (new_window);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("new-window-with-backend", VariantType.STRING);
+      action.activate.connect (new_window_with_backend);
       add_action (action);
 
       action = new GLib.SimpleAction ("preferences", null);
@@ -115,8 +118,41 @@ namespace Peek {
       return -1;
     }
 
-    private void new_window () {
+    public override int command_line (ApplicationCommandLine command_line) {
+      var options = command_line.get_options_dict ();
+      if (options.contains ("backend")) {
+        var backend = options.lookup_value ("backend", VariantType.STRING);
+        this.activate_action ("new-window-with-backend", backend);
+        return Posix.EXIT_SUCCESS;
+      }
+
       this.activate ();
+      return Posix.EXIT_SUCCESS;
+    }
+
+    private void new_window () {
+      try {
+        var recorder = ScreenRecorderFactory.create_default_screen_recorder ();
+        main_window = new ApplicationWindow (this, recorder);
+        main_window.present ();
+      } catch (PeekError e) {
+        stderr.printf (_ ("Unable to create default screen recorder.\n"));
+      }
+    }
+
+    private void new_window_with_backend (Variant? backend) {
+      size_t length;
+      string backend_name = backend.get_string (out length);
+      stdout.printf ("Requested screen recorder backend %s\n", backend_name);
+
+      try {
+        var recorder = ScreenRecorderFactory.create_screen_recorder (backend_name);
+        main_window = new ApplicationWindow (this, recorder);
+        main_window.present ();
+      } catch (PeekError e) {
+        stderr.printf (_ ("Unable to initialize backend %s.\n"), backend_name);
+        stderr.printf (e.message);
+      }
     }
 
     private void show_preferences () {
