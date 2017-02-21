@@ -56,11 +56,14 @@ vala_precompile(VALA_C
     src/defaults.vala
     src/errordomain.vala
     src/utils.vala
+    src/dbus/freedesktop.vala
+    src/dbus/gnome-shell.vala
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processor.vala
     src/recording/screen-recorder.vala
     src/recording/screen-recorder-factory.vala
     src/recording/recording-area.vala
+    src/recording/gnome-shell-dbus-recorder.vala
     src/recording/command-line-screen-recorder.vala
     src/recording/avconv-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala

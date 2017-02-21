@@ -48,6 +48,10 @@ namespace Peek.Recording {
       }
     }
 
+    public static bool is_available () throws PeekError {
+      return Utils.check_for_executable ("ffmpeg");
+    }
+
     protected override void stop_command () {
       try {
         char[] command = { 'q' };

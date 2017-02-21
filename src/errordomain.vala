@@ -11,7 +11,8 @@ namespace Peek {
 
   public errordomain PeekError {
     UNKNOWN_SCREEN_RECORDER,
-    NO_SUITABLE_SCREEN_RECORDER
+    NO_SUITABLE_SCREEN_RECORDER,
+    SCREEN_RECORDER_ERROR
   }
 
 }

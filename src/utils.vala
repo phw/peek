@@ -29,6 +29,29 @@ namespace Peek {
 
       return false;
     }
+
+    public static bool check_for_executable (string executable) {
+      string[] args = {
+        "which", executable
+      };
+
+      int status;
+      string output;
+      string errorout;
+
+      try {
+        Process.spawn_sync (null, args, null,
+          SpawnFlags.SEARCH_PATH,
+          null, out output, out errorout, out status);
+        debug ("Looking for executable %s (%i): %s%s",
+          executable, status, output, errorout);
+        return Utils.is_exit_status_success (status);
+      } catch (SpawnError e) {
+        debug ("Error: %s", e.message);
+      }
+
+      return false;
+    }
   }
 
 }

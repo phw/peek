@@ -44,6 +44,10 @@ namespace Peek.Recording {
       }
     }
 
+    public static bool is_available () throws PeekError {
+      return Utils.check_for_executable ("avconv");
+    }
+
     protected override bool is_exit_status_success (int status) {
       return Process.term_sig (status) == ProcessSignal.INT ||
         Process.exit_status (status) == 0 ||

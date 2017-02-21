@@ -1,3 +1,7 @@
+# Version 0.10.0 - 2017-??-??
+ * recording: Support Gnome Shell screencast DBUS service. Allows recording
+   under Gnome Wayland.
+
 # Version 0.9.0 - 2017-02-21
  * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
 

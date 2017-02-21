@@ -56,7 +56,6 @@ namespace Peek.Recording {
       stop_command ();
       is_recording = false;
 
-      // postProcessor.process_async.begin ((obj, res) => {
       run_post_processors_async.begin ((obj, res) => {
         var file = run_post_processors_async.end (res);
         remove_temp_file ();
