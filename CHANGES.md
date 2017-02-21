@@ -1,12 +1,17 @@
 # Version 0.10.0 - 2017-??-??
  * recording: Support Gnome Shell screencast DBUS service. Allows recording
-   under Gnome Wayland (#33).
+   under Gnome Wayland (#33)
  * recording: Support WebM as output format (#73)
+ * recording: Added option to not record mouse cursor
+ * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
+       the recording (partially fixes #23)
+ * ui: Add `--backend` command line parameter to manually choose recording
+       backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
  * fix: Moving Peek partially outside the visible area does no longer break the
         recording. Instead the recording area is clipped to the visible part (#64)
 
-# Version 0.9.0 - 2017-02-21
+# Version 0.9.1 - 2017-02-21
  * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
 
 # Version 0.9.0 - 2017-02-20
