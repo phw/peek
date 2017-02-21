@@ -2,7 +2,9 @@
  * recording: Support Gnome Shell screencast DBUS service. Allows recording
    under Gnome Wayland (#33).
  * recording: Support WebM as output format (#73)
- * fix: Fixd a possible race condition that could lead to empty or broken files (#1)
+ * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
+ * fix: Moving Peek partially outside the visible area does no longer break the
+        recording. Instead the recording area is clipped to the visible part (#64)
 
 # Version 0.9.0 - 2017-02-21
  * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
@@ -36,7 +38,7 @@
  * ui: Change button text while rendering (#24)
  * ui: Add a `--version` command line argument
  * ui: Show file choose directly after recording stops. This way
-   rendering and choosing the file take place in parallel (#30)
+       rendering and choosing the file take place in parallel (#30)
  * recording: Correctly scale recording area on HiDPI screens (#20)
  * i18n: Arabic translation
  * i18n: Catalan translation
@@ -70,9 +72,8 @@
 # Version 0.6.0 - 2016-01-28
  * ui: Removed unused auto save option from preferences dialog
  * fix: Try to always open the file manager, not the image viewer
- * general: Changed app id to com.uploadedlobster.peek due to the
-   previous using the wrong domain name by default. This also resets
-   existing settings.
+ * general: Changed app id to com.uploadedlobster.peek due to the previous using
+            the wrong domain name by default. This also resets existing settings.
  * i18n: Updated German translation
 
 # Version 0.5.0 - 2016.01.09
