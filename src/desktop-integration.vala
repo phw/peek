@@ -73,9 +73,17 @@ namespace Peek {
     }
 
     public static bool is_unity () {
+      return xdg_current_desktop_contains ("Unity");
+    }
+
+    public static bool is_gnome () {
+      return xdg_current_desktop_contains ("GNOME");
+    }
+
+    private static bool xdg_current_desktop_contains (string text) {
       string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
       debug ("Desktop: %s", desktop);
-      return desktop.contains ("Unity");
+      return desktop.contains (text);
     }
 
     private static bool file_manager_highlights_file (AppInfo app_info) {

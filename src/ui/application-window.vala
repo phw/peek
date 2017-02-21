@@ -58,7 +58,7 @@ namespace Peek.Ui {
 
     private GLib.Settings settings;
 
-    public ApplicationWindow (Gtk.Application application,
+    public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
       Object (application: application);
 
@@ -77,6 +77,12 @@ namespace Peek.Ui {
         stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
         leave_recording_state ();
       });
+
+      application.toggle_recording.connect (toggle_recording);
+
+      application.start_recording.connect (prepare_start_recording);
+
+      application.stop_recording.connect (prepare_stop_recording);
 
       // Bind settings
       settings = Peek.Application.get_app_settings ();
@@ -97,12 +103,20 @@ namespace Peek.Ui {
         this.get_settings (), "gtk_application_prefer_dark_theme",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-output-format",
+        this.recorder, "output_format",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-framerate",
         this.recorder, "framerate",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-downsample",
         this.recorder, "downsample",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-capture-mouse",
+        this.recorder, "capture_mouse",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",
@@ -219,6 +233,17 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
+      prepare_start_recording ();
+    }
+
+    [GtkCallback]
+    private void on_stop_button_clicked (Button source) {
+      prepare_stop_recording ();
+    }
+
+    private void prepare_start_recording () {
+      if (is_recording) return;
+
       enter_recording_state ();
       var delay = this.recording_start_delay;
 
@@ -246,8 +271,9 @@ namespace Peek.Ui {
       }
     }
 
-    [GtkCallback]
-    private void on_stop_button_clicked (Button source) {
+    private void prepare_stop_recording () {
+      if (!is_recording) return;
+
       if (delay_indicator_timeout != 0) {
         Source.remove (delay_indicator_timeout);
         delay_indicator_timeout = 0;
@@ -258,6 +284,14 @@ namespace Peek.Ui {
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
         show_file_chooser ();
+      }
+    }
+
+    private void toggle_recording () {
+      if (is_recording) {
+        prepare_stop_recording ();
+      } else {
+        prepare_start_recording ();
       }
     }
 
@@ -381,13 +415,25 @@ namespace Peek.Ui {
       var filter = new FileFilter ();
       chooser.do_overwrite_confirmation = true;
       chooser.filter = filter;
-      filter.add_mime_type ("image/gif");
+
+      string filename = default_file_name_format;
+      string mimetype;
+
+      if (recorder.output_format == OUTPUT_FORMAT_WEBM) {
+        mimetype = "image/webm";
+        filename += ".webm";
+      } else {
+        mimetype = "image/gif";
+        filename += ".gif";
+      }
+
+      filter.add_mime_type (mimetype);
 
       var folder = load_preferred_save_folder ();
       chooser.set_current_folder (folder);
 
       var now = new DateTime.now_local ();
-      var default_name = now.format (default_file_name_format);
+      var default_name = now.format (filename);
       chooser.set_current_name (default_name);
 
       if (chooser.run () == ResponseType.OK) {

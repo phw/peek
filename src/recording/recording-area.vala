@@ -36,6 +36,28 @@ namespace Peek.Recording {
       area.left = (area.left + relative_left) * scale_factor;
       area.top = (area.top + relative_top) * scale_factor;
 
+      debug ("Absolute recording area x: %d, y: %d, w: %d, h: %d",
+        area.left, area.top, area.width, area.height);
+
+      var screen = recording_view.get_screen ();
+      var screen_width = screen.get_width ();
+      var screen_height = screen.get_height ();
+      debug ("Screen w: %d, h: %d", screen_width, screen_height);
+
+      area.left = int.min (int.max (0, area.left), screen_width);
+      area.top = int.min (int.max (0, area.top), screen_height);
+
+      if (area.left + area.width > screen_width) {
+        area.width = screen_width - area.left;
+      }
+
+      if (area.top + area.height > screen_height) {
+        area.height = screen_height - area.top;
+      }
+
+      debug ("Clipped recording area x: %d, y: %d, w: %d, h: %d",
+        area.left, area.top, area.width, area.height);
+
       return area;
     }
 

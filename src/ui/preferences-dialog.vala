@@ -12,11 +12,11 @@ using Gtk;
 namespace Peek.Ui {
 
   [GtkTemplate (ui = "/com/uploadedlobster/peek/preferences.ui")]
-  class PreferencesDialog : Dialog {
+  class PreferencesDialog : Window {
 
-    private static Gtk.Dialog? instance;
+    private static Gtk.Window? instance;
 
-    public static Gtk.Dialog present_single_instance (Gtk.Window main_window) {
+    public static Gtk.Window present_single_instance (Gtk.Window main_window) {
       if (instance == null) {
         instance = new PreferencesDialog ();
         instance.delete_event.connect ((event) => {
@@ -38,6 +38,9 @@ namespace Peek.Ui {
     private Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
+    private Gtk.ComboBoxText recording_output_format_combo_box;
+
+    [GtkChild]
     private Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
@@ -46,13 +49,21 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.Adjustment recording_downsample;
 
+    [GtkChild]
+    private Gtk.CheckButton recording_capture_mouse;
+
+
     public PreferencesDialog () {
-      Object (use_header_bar: 1);
+      Object ();
 
       settings = Application.get_app_settings ();
 
       settings.bind ("interface-open-file-manager",
         interface_open_file_manager, "active",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-output-format",
+        recording_output_format_combo_box, "active_id",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",
@@ -65,6 +76,10 @@ namespace Peek.Ui {
 
       settings.bind ("recording-downsample",
         recording_downsample, "value",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-capture-mouse",
+        recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
     }
   }
