@@ -55,6 +55,12 @@ namespace Peek.Recording {
     }
 
     public static bool is_available () throws PeekError {
+      // In theory the dbus service can be installed, but it will only work
+      // if Gnome Shell is running.
+      if (!DesktopIntegration.is_gnome ()) {
+        return false;
+      }
+
       try {
         Freedesktop.DBus dbus = Bus.get_proxy_sync (
           BusType.SESSION,
