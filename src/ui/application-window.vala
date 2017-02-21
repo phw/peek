@@ -132,6 +132,10 @@ namespace Peek.Ui {
       this.load_geometry ();
       this.on_window_screen_changed (null);
 
+      this.show.connect (() => {
+        show_size_indicator ();
+      });
+
       // Reverse window decoration on Unity, close button should be left
       if (DesktopIntegration.is_unity ()) {
         var decoration = this.headerbar.decoration_layout.split (":", 2);
@@ -209,6 +213,10 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_recording_view_size_allocate (Allocation allocation) {
       // Show the size
+      show_size_indicator ();
+    }
+
+    private void show_size_indicator () {
       if (this.get_realized () && !is_recording) {
         var size_label = new StringBuilder ();
         var area = get_recording_area ();
