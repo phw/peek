@@ -38,6 +38,9 @@ namespace Peek.Ui {
     private Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
+    private Gtk.ComboBoxText recording_output_format_combo_box;
+
+    [GtkChild]
     private Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
@@ -46,6 +49,7 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.Adjustment recording_downsample;
 
+
     public PreferencesDialog () {
       Object ();
 
@@ -53,6 +57,10 @@ namespace Peek.Ui {
 
       settings.bind ("interface-open-file-manager",
         interface_open_file_manager, "active",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("recording-output-format",
+        recording_output_format_combo_box, "active_id",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",

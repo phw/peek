@@ -11,18 +11,9 @@ using Peek.PostProcessing;
 
 namespace Peek.Recording {
 
-  public abstract class CommandLineScreenRecorder : Object, ScreenRecorder {
+  public abstract class CommandLineScreenRecorder : BaseScreenRecorder {
     protected Pid pid;
     protected IOChannel input;
-    protected string temp_file;
-
-    public bool is_recording { get; protected set; default = false; }
-
-    public int framerate { get; set; default = DEFAULT_FRAMERATE; }
-
-    public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
-
-    public abstract bool record (RecordingArea area);
 
     protected bool spawn_record_command (string[] args) {
       try {
@@ -35,10 +26,13 @@ namespace Peek.Recording {
 
         ChildWatch.add (pid, (pid, status) => {
           // Triggered when the child indicated by pid exits
+          debug ("Recorder process closed");
           Process.close_pid (pid);
 
           if (!is_exit_status_success (status)) {
             recording_aborted (Process.exit_status (status));
+          } else {
+            finalize_recording ();
           }
         });
 
@@ -51,45 +45,8 @@ namespace Peek.Recording {
       }
     }
 
-    public void stop () {
-      stdout.printf ("Recording stopped\n");
-      stop_command ();
-      is_recording = false;
-
-      run_post_processors_async.begin ((obj, res) => {
-        var file = run_post_processors_async.end (res);
-        remove_temp_file ();
-        recording_finished (file);
-      });
-    }
-
-    public void cancel () {
-      if (is_recording) {
-        stop_command ();
-        remove_temp_file ();
-        is_recording = false;
-        recording_aborted (0);
-      }
-    }
-
-    private async File? run_post_processors_async () {
-      var file = File.new_for_path (temp_file);
-      var postProcessor = new ImagemagickPostProcessor (framerate);
-      file = yield postProcessor.process_async (file);
-      return file;
-    }
-
     protected virtual bool is_exit_status_success (int status) {
       return Utils.is_exit_status_success (status);
-    }
-
-    protected abstract void stop_command ();
-
-    private void remove_temp_file () {
-      if (temp_file != null) {
-        FileUtils.remove (temp_file);
-        temp_file = null;
-      }
     }
   }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 
+<!-- Generated with glade 3.20.0
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -22,7 +22,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
 
 -->
 <interface>
-  <requires lib="gtk+" version="3.10"/>
+  <requires lib="gtk+" version="3.14"/>
   <!-- interface-license-type gplv3 -->
   <!-- interface-name Peek -->
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
@@ -66,8 +66,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <object class="GtkLabel" id="interface_options_title">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="halign">start</property>
                 <property name="label" translatable="yes">User interface</property>
-                <property name="xalign">0</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
@@ -84,7 +84,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
-                <property name="xalign">0</property>
+                <property name="halign">start</property>
                 <property name="draw_indicator">True</property>
               </object>
               <packing>
@@ -111,8 +111,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <object class="GtkLabel" id="recording_options_title">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="halign">start</property>
                 <property name="label" translatable="yes">Recording</property>
-                <property name="xalign">0</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
@@ -121,6 +121,50 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
                 <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="recording_output_format_box">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">12</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <object class="GtkLabel" id="recording_output_format_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="hexpand">True</property>
+                    <property name="label" translatable="yes">Output format</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="recording_output_format_combo_box">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="active">0</property>
+                    <items>
+                      <item id="gif" translatable="yes">GIF</item>
+                      <item id="webm" translatable="yes">WebM</item>
+                    </items>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -163,7 +207,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -205,7 +249,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
             <child>
@@ -247,7 +291,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
           </object>

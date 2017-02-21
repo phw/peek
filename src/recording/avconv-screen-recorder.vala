@@ -18,6 +18,9 @@ namespace Peek.Recording {
         // Cancel running recording
         cancel ();
 
+        // FIXME: Implement WebM output
+        this.output_format = OUTPUT_FORMAT_GIF;
+
         temp_file =  Utils.create_temp_file ("avi");
         string display = Environment.get_variable ("DISPLAY");
         if (display == null) {
@@ -54,7 +57,7 @@ namespace Peek.Recording {
         Process.exit_status (status) == 255;
     }
 
-    protected override void stop_command () {
+    protected override void stop_recording () {
       Posix.kill (pid, Posix.SIGINT);
     }
   }

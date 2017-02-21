@@ -97,6 +97,10 @@ namespace Peek.Ui {
         this.get_settings (), "gtk_application_prefer_dark_theme",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-output-format",
+        this.recorder, "output_format",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-framerate",
         this.recorder, "framerate",
         SettingsBindFlags.DEFAULT);
@@ -381,13 +385,25 @@ namespace Peek.Ui {
       var filter = new FileFilter ();
       chooser.do_overwrite_confirmation = true;
       chooser.filter = filter;
-      filter.add_mime_type ("image/gif");
+
+      string filename = default_file_name_format;
+      string mimetype;
+
+      if (recorder.output_format == OUTPUT_FORMAT_WEBM) {
+        mimetype = "image/webm";
+        filename += ".webm";
+      } else {
+        mimetype = "image/gif";
+        filename += ".gif";
+      }
+
+      filter.add_mime_type (mimetype);
 
       var folder = load_preferred_save_folder ();
       chooser.set_current_folder (folder);
 
       var now = new DateTime.now_local ();
-      var default_name = now.format (default_file_name_format);
+      var default_name = now.format (filename);
       chooser.set_current_name (default_name);
 
       if (chooser.run () == ResponseType.OK) {

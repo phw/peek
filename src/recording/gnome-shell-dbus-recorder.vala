@@ -12,14 +12,7 @@ using Peek.PostProcessing;
 
 namespace Peek.Recording {
 
-  public class GnomeShellDbusRecorder : Object, ScreenRecorder {
-    public bool is_recording { get; protected set; default = false; }
-
-    public int framerate { get; set; default = DEFAULT_FRAMERATE; }
-
-    public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
-
-    string temp_file;
+  public class GnomeShellDbusRecorder : BaseScreenRecorder {
     private Screencast screencast;
 
     private const string DBUS_NAME = "org.gnome.Shell.Screencast";
@@ -31,16 +24,20 @@ namespace Peek.Recording {
         "/org/gnome/Shell/Screencast");
     }
 
-    public bool record (RecordingArea area) {
+    public override bool record (RecordingArea area) {
+      // Cancel running recording
+      cancel ();
+
       bool success = false;
 
       var options = new HashTable<string, Variant> (null, null);
-      options.insert ("framerate", new Variant.int32(framerate));
+      options.insert ("framerate", new Variant.int32 (framerate));
       options.insert ("pipeline", build_gst_pipeline (area));
 
       try {
         string file_template = Path.build_filename (
-          Environment.get_tmp_dir (), "peek %d.avi");
+          Environment.get_tmp_dir (), "peek%d" + get_temp_file_extension ());
+        debug (file_template);
         screencast.screencast_area (
           area.left, area.top, area.width, area.height,
           file_template, options, out success, out temp_file);
@@ -55,25 +52,6 @@ namespace Peek.Recording {
 
       is_recording = success;
       return success;
-    }
-
-    public void stop () {
-      stdout.printf ("Recording stopped\n");
-      stop_recording ();
-
-      run_post_processors_async.begin ((obj, res) => {
-        var file = run_post_processors_async.end (res);
-        remove_temp_file ();
-        recording_finished (file);
-      });
-    }
-
-    public void cancel () {
-      if (is_recording) {
-        stop_recording ();
-        remove_temp_file ();
-        recording_aborted (0);
-      }
     }
 
     public static bool is_available () throws PeekError {
@@ -92,39 +70,25 @@ namespace Peek.Recording {
       }
     }
 
-    private void stop_recording () {
+    protected override void stop_recording () {
       if (is_recording) {
         try {
           screencast.stop_screencast ();
+          finalize_recording ();
         } catch (DBusError e) {
           stderr.printf ("Error: %s\n", e.message);
         } catch (IOError e) {
           stderr.printf ("Error: %s\n", e.message);
         }
       }
-
-      is_recording = false;
-    }
-
-    private async File? run_post_processors_async () {
-      var file = File.new_for_path (temp_file);
-      var postProcessor = new ImagemagickPostProcessor (framerate);
-      file = yield postProcessor.process_async (file);
-      return file;
-    }
-
-    private void remove_temp_file () {
-      if (temp_file != null) {
-        FileUtils.remove (temp_file);
-        temp_file = null;
-      }
     }
 
     private string build_gst_pipeline (RecordingArea area) {
 
-      // Default pipeline is "videorate ! vp8enc quality=10 speed=2 threads=%T ! queue ! webmmux"
+      // Default pipeline is for Gnome Shell up to 2.22:
+      // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
+      // Gnome Shell 3.24 will use vp9enc with same settings.
       var pipeline = new StringBuilder ();
-      pipeline.append ("videorate ! ");
 
       if (downsample > 1) {
         int width = area.width / downsample;
@@ -132,11 +96,20 @@ namespace Peek.Recording {
         pipeline.append_printf ("videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
 
-      pipeline.append ("x264enc speed-preset=ultrafast threads=%T ! ");
-      pipeline.append ("queue ! avimux");
+      if (output_format == OUTPUT_FORMAT_GIF) {
+        pipeline.append ("x264enc speed-preset=ultrafast threads=%T ! ");
+        pipeline.append ("queue ! avimux");
+      } else {
+        pipeline.append ("vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("queue ! webmmux");
+      }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
       return pipeline.str;
+    }
+
+    private string get_temp_file_extension () {
+      return output_format == OUTPUT_FORMAT_GIF ? ".avi" : ".webm";
     }
   }
 

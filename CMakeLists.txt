@@ -61,6 +61,7 @@ vala_precompile(VALA_C
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processor.vala
     src/recording/screen-recorder.vala
+    src/recording/base-screen-recorder.vala
     src/recording/screen-recorder-factory.vala
     src/recording/recording-area.vala
     src/recording/gnome-shell-dbus-recorder.vala
