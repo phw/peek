@@ -39,6 +39,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     ../src/post-processing/imagemagick-post-processor.vala
     ../src/recording/recording-area.vala
     ../src/recording/screen-recorder.vala
+    ../src/recording/base-screen-recorder.vala
     ../src/recording/command-line-screen-recorder.vala
     ../src/defaults.vala
     ../src/utils.vala

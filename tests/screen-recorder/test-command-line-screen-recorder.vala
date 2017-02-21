@@ -9,7 +9,7 @@ class TestCommandLineScreenRecorder : CommandLineScreenRecorder {
     return true;
   }
 
-  protected override void stop_command () {
+  protected override void stop_recording () {
     stop_command_called = true;
   }
 }
