@@ -10,17 +10,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2017-02-21 21:14+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Lithuanian "
-"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
+"translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
@@ -39,9 +39,8 @@ msgstr "Įrašinėti trumpus animuotus GIF paveikslus iš jūsų ekrano"
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "Po failo įrašymo atverti failų tvarkytuvę"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -68,16 +67,15 @@ msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "Teikti pirmenybę tamsiai temai"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -89,17 +87,17 @@ msgid "Resolution downsampling factor"
 msgstr "Raiškos ėminių atrankos koeficientas"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
 
 #: src/application.vala:59
@@ -208,10 +206,6 @@ msgstr "_Išeiti"
 msgid "User interface"
 msgstr "Naudotojo sąsaja"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "Po failo įrašymo atverti failų tvarkytuvę"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "Įrašinėjimas"
@@ -228,10 +222,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr "Raiškos ėminių atrankos mažinimas"
@@ -243,3 +233,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "Peek nuostatos"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "Po failo įrašymo atverti failų tvarkytuvę"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"

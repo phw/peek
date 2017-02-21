@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,8 +33,8 @@ msgstr ""
 msgid "peek"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -54,15 +54,15 @@ msgid ""
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -74,15 +74,15 @@ msgid "Resolution downsampling factor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr ""
 
 #: src/application.vala:59
@@ -191,10 +191,6 @@ msgstr ""
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr ""
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr ""
@@ -209,10 +205,6 @@ msgstr ""
 
 #: ui/preferences.ui:154
 msgid "WebM"
-msgstr ""
-
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
 msgstr ""
 
 #: ui/preferences.ui:225

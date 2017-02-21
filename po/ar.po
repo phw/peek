@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2016-11-19 10:15+0000\n"
 "Last-Translator: Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -39,9 +39,8 @@ msgstr "تسجيل صور متحركة قصيرة من شاشة حاسوبك"
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "افتح مدير الملفات بعد الحفظ"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -67,16 +66,15 @@ msgstr "يستخدم اسم الملف الافتراضي . يمكن إضافة 
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "أُفضِّل سمة داكنة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "التأخير بالثواني قبل بدء التسجيل"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -88,17 +86,17 @@ msgid "Resolution downsampling factor"
 msgstr "معامل تقليل مستوى الدقة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "حجم ومكان آخر نافذة رئيسية مفتوحة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr "مسار آخر ملف تم حفظه"
 
 #: src/application.vala:59
@@ -207,10 +205,6 @@ msgstr "أغلق"
 msgid "User interface"
 msgstr "واجهة المستخدم"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "افتح مدير الملفات بعد الحفظ"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "التسجيل"
@@ -227,10 +221,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "التأخير بالثواني قبل بدء التسجيل"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr "تقليل مستوى الدقة"
@@ -242,3 +232,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "تفضيلات Peek"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "افتح مدير الملفات بعد الحفظ"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "التأخير بالثواني قبل بدء التسجيل"

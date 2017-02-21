@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2016-11-18 19:52+0000\n"
 "Last-Translator: cromat <tbrabec@tvz.hr>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
@@ -36,9 +36,8 @@ msgstr "Snimi kratku GIF animaciju slika s pozadine"
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "Otvori upravitelj datoteka nakon pohrane"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -64,16 +63,15 @@ msgstr "Koristi se zadani naziv. Može sadržavati oznake datumskog formata."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "Preferiraj tamnu temu"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "Odgoda u sekundama prije početka snimanja"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -85,17 +83,17 @@ msgid "Resolution downsampling factor"
 msgstr "Faktor reduciranja rezolucije"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "Veličina i pozicija zadnjeg glavnog otvorenog prozora"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr "Putanja zadnjeg pogranjenog videa"
 
 #: src/application.vala:59
@@ -204,10 +202,6 @@ msgstr "_Izlaz"
 msgid "User interface"
 msgstr "Grafičko sučelje"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "Otvori upravitelj datoteka nakon pohrane"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "Snimanje"
@@ -224,10 +218,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "Odgoda u sekundama prije početka snimanja"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr "Reduciraj rezoluciju"
@@ -239,3 +229,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "Peek postavke"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "Otvori upravitelj datoteka nakon pohrane"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "Odgoda u sekundama prije početka snimanja"

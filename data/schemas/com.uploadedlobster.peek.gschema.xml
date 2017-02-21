@@ -4,7 +4,7 @@
     gettext-domain="peek">
     <key name="interface-open-file-manager" type="b">
       <default>false</default>
-      <summary>Open file manager after saving.</summary>
+      <summary>Open file manager after saving</summary>
     </key>
     <key name="interface-size-indicator-delay" type="i">
       <default>1600</default>
@@ -16,7 +16,7 @@
     </key>
     <key name="interface-prefer-dark-theme" type="b">
       <default>true</default>
-      <summary>Prefer dark theme.</summary>
+      <summary>Prefer dark theme</summary>
     </key>
     <key name="recording-output-format" type="s">
       <choices>
@@ -28,12 +28,12 @@
         <alias value="WebM" target="webm"/>
       </aliases>
       <default>"gif"</default>
-      <summary>Output file format.</summary>
+      <summary>Output file format</summary>
     </key>
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
       <default>3</default>
-      <summary>Delay in seconds before recording starts.</summary>
+      <summary>Delay in seconds before recording starts</summary>
     </key>
     <key name="recording-framerate" type="i">
       <range min="1" max="60"/>
@@ -47,15 +47,15 @@
     </key>
     <key name="recording-capture-mouse" type="b">
       <default>true</default>
-      <summary>Whether to capture the mouse cursor.</summary>
+      <summary>Whether to capture the mouse cursor</summary>
     </key>
     <key name="persist-window-geometry" type="(iiii)">
       <default>(-1,-1,500,300)</default>
-      <summary>Size and position of the last open main window.</summary>
+      <summary>Size and position of the last open main window</summary>
     </key>
     <key name="persist-save-folder" type="s">
       <default>""</default>
-      <summary>Path where last video got saved.</summary>
+      <summary>Path where last video got saved</summary>
     </key>
   </schema>
 </schemalist>

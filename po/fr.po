@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2016-12-11 14:05+0000\n"
 "Last-Translator: Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
@@ -39,9 +39,8 @@ msgstr "Enregistrer courtes images GIF animés à partir de votre écran"
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "Ouvrir le gestionnaire de fichier après la sauvegarde"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -69,16 +68,15 @@ msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "Préférer un thème sombre"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "Délai en secondes avant le début de l'enregistrement"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -90,17 +88,17 @@ msgid "Resolution downsampling factor"
 msgstr "Facteur de réduction de la résolution"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "Taille et position de la dernière fenêtre principale"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr "Chemin ou la dernière vidéo a été sauvegardé"
 
 #: src/application.vala:59
@@ -212,10 +210,6 @@ msgstr "_Quitter"
 msgid "User interface"
 msgstr "Interface d'utilisateur"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "Ouvrir le gestionnaire de fichier après la sauvegarde"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "Enregistrement"
@@ -232,10 +226,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "Délai en secondes avant le début de l'enregistrement"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr "Réduction de la résolution"
@@ -247,3 +237,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "Préférences de Peek"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "Ouvrir le gestionnaire de fichier après la sauvegarde"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "Délai en secondes avant le début de l'enregistrement"

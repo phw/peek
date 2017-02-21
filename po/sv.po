@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2016-11-18 17:37+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
@@ -37,9 +37,8 @@ msgstr "Spela in korta animerade GIF-bilder från skärmen"
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "Öppna filhanteraren efter sparad fil"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -65,16 +64,15 @@ msgstr "Standardfilnamn som används. Kan inkludera specificerat datumformat."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "Föredra mörkt tema"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "Fördröjning i sekunder före inspelningsstart"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -86,17 +84,17 @@ msgid "Resolution downsampling factor"
 msgstr "Faktor för nersampling av upplösningen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "Storlek och position för senast öppnade programfönster"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
 #, fuzzy
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr "Sökväg till senast sparade gif-fil"
 
 #: src/application.vala:59
@@ -205,10 +203,6 @@ msgstr "_Avsluta"
 msgid "User interface"
 msgstr "Användargränssnitt"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "Öppna filhanteraren efter sparad fil"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "Spelar in"
@@ -225,10 +219,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "Fördröjning i sekunder före inspelningsstart"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr "Nersampling av upplösning"
@@ -240,3 +230,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "Peek-inställningar"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "Öppna filhanteraren efter sparad fil"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "Fördröjning i sekunder före inspelningsstart"

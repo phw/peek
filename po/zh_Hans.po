@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:08+0100\n"
+"POT-Creation-Date: 2017-02-21 22:20+0100\n"
 "PO-Revision-Date: 2016-11-25 11:08+0000\n"
 "Last-Translator: Chunyang Xu <mail@xuchunyang.me>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -35,9 +35,8 @@ msgstr ""
 msgid "peek"
 msgstr "peek"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:7
-#, fuzzy
-msgid "Open file manager after saving."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:7 ui/preferences.ui:83
+msgid "Open file manager after saving"
 msgstr "保存之后打开文件管理器"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
@@ -60,16 +59,15 @@ msgstr "默认使用的文件名。可以包含日期格式说明符。"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
-msgid "Prefer dark theme."
+msgid "Prefer dark theme"
 msgstr "偏好暗色主题"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
-msgid "Output file format."
+msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36
-#, fuzzy
-msgid "Delay in seconds before recording starts."
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+msgid "Delay in seconds before recording starts"
 msgstr "录制开始前延迟的秒数"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
@@ -82,16 +80,16 @@ msgid "Resolution downsampling factor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
-msgid "Whether to capture the mouse cursor."
+msgid "Whether to capture the mouse cursor"
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
 #, fuzzy
-msgid "Size and position of the last open main window."
+msgid "Size and position of the last open main window"
 msgstr "最后打开的主窗口的大小和位置"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
-msgid "Path where last video got saved."
+msgid "Path where last video got saved"
 msgstr ""
 
 #: src/application.vala:59
@@ -201,10 +199,6 @@ msgstr "_退出"
 msgid "User interface"
 msgstr "用户界面"
 
-#: ui/preferences.ui:83
-msgid "Open file manager after saving"
-msgstr "保存之后打开文件管理器"
-
 #: ui/preferences.ui:115
 msgid "Recording"
 msgstr "录制"
@@ -221,10 +215,6 @@ msgstr ""
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:182
-msgid "Delay in seconds before recording starts"
-msgstr "录制开始前延迟的秒数"
-
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
 msgstr ""
@@ -236,3 +226,11 @@ msgstr ""
 #: ui/preferences.ui:330
 msgid "Peek preferences"
 msgstr "Peek 偏好设置"
+
+#, fuzzy
+#~ msgid "Open file manager after saving."
+#~ msgstr "保存之后打开文件管理器"
+
+#, fuzzy
+#~ msgid "Delay in seconds before recording starts."
+#~ msgstr "录制开始前延迟的秒数"
