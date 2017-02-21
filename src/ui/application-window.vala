@@ -58,7 +58,7 @@ namespace Peek.Ui {
 
     private GLib.Settings settings;
 
-    public ApplicationWindow (Gtk.Application application,
+    public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
       Object (application: application);
 
@@ -77,6 +77,12 @@ namespace Peek.Ui {
         stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
         leave_recording_state ();
       });
+
+      application.toggle_recording.connect (toggle_recording);
+
+      application.start_recording.connect (prepare_start_recording);
+
+      application.stop_recording.connect (prepare_stop_recording);
 
       // Bind settings
       settings = Peek.Application.get_app_settings ();
@@ -227,6 +233,17 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
+      prepare_start_recording ();
+    }
+
+    [GtkCallback]
+    private void on_stop_button_clicked (Button source) {
+      prepare_stop_recording ();
+    }
+
+    private void prepare_start_recording () {
+      if (is_recording) return;
+
       enter_recording_state ();
       var delay = this.recording_start_delay;
 
@@ -254,8 +271,9 @@ namespace Peek.Ui {
       }
     }
 
-    [GtkCallback]
-    private void on_stop_button_clicked (Button source) {
+    private void prepare_stop_recording () {
+      if (!is_recording) return;
+
       if (delay_indicator_timeout != 0) {
         Source.remove (delay_indicator_timeout);
         delay_indicator_timeout = 0;
@@ -266,6 +284,14 @@ namespace Peek.Ui {
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
         show_file_chooser ();
+      }
+    }
+
+    private void toggle_recording () {
+      if (is_recording) {
+        prepare_stop_recording ();
+      } else {
+        prepare_start_recording ();
       }
     }
 

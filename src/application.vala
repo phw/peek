@@ -22,6 +22,10 @@ namespace Peek {
 
     private static Settings? settings = null;
 
+    public signal void toggle_recording ();
+    public signal void start_recording ();
+    public signal void stop_recording ();
+
     public static Settings get_app_settings () {
       if (settings != null) {
         return settings;
@@ -58,6 +62,18 @@ namespace Peek {
         OptionFlags.IN_MAIN, OptionArg.STRING,
         _ ("Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend."),
         _ ("BACKEND"));
+
+      add_main_option ("start", 's',
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Start recording in all running Peek instances."), null);
+
+      add_main_option ("stop", 'p',
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Stop recording in all running Peek instances."), null);
+
+      add_main_option ("toggle", 't',
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Toggle recording in all running Peek instances."), null);
     }
 
     public override void activate () {
@@ -123,6 +139,21 @@ namespace Peek {
       if (options.contains ("backend")) {
         var backend = options.lookup_value ("backend", VariantType.STRING);
         this.activate_action ("new-window-with-backend", backend);
+        return Posix.EXIT_SUCCESS;
+      }
+
+      if (options.contains ("start")) {
+        this.start_recording ();
+        return Posix.EXIT_SUCCESS;
+      }
+
+      if (options.contains ("stop")) {
+        this.stop_recording ();
+        return Posix.EXIT_SUCCESS;
+      }
+
+      if (options.contains ("toggle")) {
+        this.toggle_recording ();
         return Posix.EXIT_SUCCESS;
       }
 
