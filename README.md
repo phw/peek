@@ -3,6 +3,32 @@
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Contents
+
+- [About](#about)
+- [Requirements](#requirements)
+  - [Runtime](#runtime)
+  - [Development](#development)
+- [Installation](#installation)
+  - [Arch Linux](#arch-linux)
+  - [Ubuntu / Debian](#ubuntu--debian)
+  - [Gentoo](#gentoo)
+  - [Fedora](#fedora)
+  - [From source](#from-source)
+- [Frequently Asked Questions](#frequently-asked-questions)
+  - [The recording area is all black, how can I record anything?](#the-recording-area-is-all-black-how-can-i-record-anything)
+  - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
+  - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
+  - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
+  - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
+  - [What about WEBM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [Why no native Wayland support?](#why-no-native-wayland-support)
+- [Translations](#translations)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
 Peek creates animated GIF screencasts using ffmpeg and imagemagick. It was
@@ -120,7 +146,7 @@ of an app you developed, for making short tutorials or for reporting bugs.
 True, but still still not as universally supported as GIFs. But Peek will become
 an option to choose WEBM output for those who prefer or need it.
 
-### Why no Wayland support?
+### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
 natively:
 
@@ -136,8 +162,8 @@ natively:
    applications. There is not even a coordinate system for windows at all. Again
    this is intentional, as they are not needed in many cases and you do not need
    to follow restrictions imposed by the traditional assumption that the screen
-   is a rectangular area (e.g. you can have circular screens or lay out windows
-  in 3D space).
+   is a rectangular area (e.g. you can have circular screens or [lay out windows
+   in 3D space](https://www.youtube.com/watch?v=_FjuPn7MXMs)).
 
 Unfortunately the whole concept of the Peek UI is that the window position
 itself is used to obtain the recording coordinates. That means for now there
