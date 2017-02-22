@@ -40,12 +40,17 @@ namespace Peek.Recording {
 
       try {
         string file_template = Path.build_filename (
-          Environment.get_tmp_dir (), "peek%d" + get_temp_file_extension ());
+          Environment.get_tmp_dir (), "peek%d%t" + get_temp_file_extension ());
         debug (file_template);
         screencast.screencast_area (
           area.left, area.top, area.width, area.height,
           file_template, options, out success, out temp_file);
-        stdout.printf ("Recording to file %s\n", temp_file);
+
+        if (success) {
+          stdout.printf ("Recording to file %s\n", temp_file);
+        } else {
+          stdout.printf ("Could not start recording, already an active recording using org.gnome.Shell.Screencast?\n");
+        }
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
         return false;
