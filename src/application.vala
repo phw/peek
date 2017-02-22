@@ -87,33 +87,9 @@ namespace Peek {
 
       GLib.Environment.set_application_name (_ ("Peek"));
 
-      // Setup app menu
       force_app_menu ();
-      GLib.SimpleAction action;
-
-      action = new GLib.SimpleAction ("new-window", null);
-      action.activate.connect (new_window);
-      add_action (action);
-
-      action = new GLib.SimpleAction ("new-window-with-backend", VariantType.STRING);
-      action.activate.connect (new_window_with_backend);
-      add_action (action);
-
-      action = new GLib.SimpleAction ("preferences", null);
-      action.activate.connect (show_preferences);
-      add_action (action);
-
-      action = new GLib.SimpleAction ("about", null);
-      action.activate.connect (show_about);
-      add_action (action);
-
-      action = new GLib.SimpleAction ("quit", null);
-      action.activate.connect (quit);
-      add_action (action);
-
-      action = new GLib.SimpleAction ("show-file", VariantType.STRING);
-      action.activate.connect (show_file);
-      add_action (action);
+      register_actions ();
+      register_key_bindings ();
     }
 
     public override void shutdown () {
@@ -121,6 +97,8 @@ namespace Peek {
         var recorder = (window as ApplicationWindow).recorder;
         recorder.cancel ();
       }
+
+      unregister_key_bindings ();
 
       base.shutdown ();
     }
@@ -159,6 +137,73 @@ namespace Peek {
 
       this.activate ();
       return Posix.EXIT_SUCCESS;
+    }
+
+    private void register_actions () {
+      // Application actions
+      GLib.SimpleAction action;
+
+      action = new GLib.SimpleAction ("new-window", null);
+      action.activate.connect (new_window);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("new-window-with-backend", VariantType.STRING);
+      action.activate.connect (new_window_with_backend);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("preferences", null);
+      action.activate.connect (show_preferences);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("about", null);
+      action.activate.connect (show_about);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("quit", null);
+      action.activate.connect (quit);
+      add_action (action);
+
+      action = new GLib.SimpleAction ("show-file", VariantType.STRING);
+      action.activate.connect (show_file);
+      add_action (action);
+    }
+
+    private void register_key_bindings () {
+      var settings = get_app_settings ();
+
+      // Global key bindings
+      Keybinder.init ();
+
+      settings.bind ("keybinding-toggle-recording",
+        this, "keybinding_toggle_recording",
+        SettingsBindFlags.DEFAULT);
+    }
+
+    private void unregister_key_bindings () {
+      Keybinder.unbind_all (keybinding_toggle_recording);
+    }
+
+    private string _keybinding_toggle_recording = "";
+    public string keybinding_toggle_recording {
+        get { return _keybinding_toggle_recording; }
+        set {
+          debug ("Changed keybinding_toggle_recording %s => %s\n",
+            _keybinding_toggle_recording, value);
+          if (_keybinding_toggle_recording != "") {
+            Keybinder.unbind_all (_keybinding_toggle_recording);
+          }
+
+          if (value != "") {
+            Keybinder.bind_full (value, handle_keybinding_toggle_recording);
+          }
+
+          _keybinding_toggle_recording = value;
+        }
+    }
+
+    private void handle_keybinding_toggle_recording (string keystring) {
+      debug ("Global keybinding %s\n", keystring);
+      toggle_recording ();
     }
 
     private void new_window () {

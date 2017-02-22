@@ -18,6 +18,10 @@
       <default>true</default>
       <summary>Prefer dark theme</summary>
     </key>
+    <key name="keybinding-toggle-recording" type="s">
+      <default l10n="messages">"&lt;Ctrl&gt;&lt;Alt&gt;R"</default>
+      <summary>Global keybinding to toggle recording</summary>
+    </key>
     <key name="recording-output-format" type="s">
       <choices>
         <choice value="gif"/>

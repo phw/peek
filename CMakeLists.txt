@@ -26,14 +26,16 @@ find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
 pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.14)
-add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
-link_libraries(${GTK_LIBRARIES})
-link_directories(${GTK_LIBRARY_DIRS})
-
 pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
 pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
+pkg_check_modules(KEYBINDER REQUIRED keybinder-3.0)
+
+add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
+link_libraries(${GTK_LIBRARIES})
+link_libraries(${KEYBINDER_LIBRARIES})
+link_directories(${GTK_LIBRARY_DIRS})
 
 # compile glib resource files to c code
 configure_file (
@@ -78,6 +80,7 @@ vala_precompile(VALA_C
     ${VALA_DEFINITIONS}
   CUSTOM_VAPIS
     src/vapi/config.vapi
+    src/vapi/keybinder-3.0.vapi
   GENERATE_HEADER
     application
   OPTIONS
