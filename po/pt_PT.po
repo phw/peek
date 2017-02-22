@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-22 00:20+0000\n"
+"PO-Revision-Date: 2017-02-22 00:22+0000\n"
 "Last-Translator: Steeven Lopes <steevenlopes@outlook.com>\n"
 "Language-Team: Portuguese (Portugal) "
 "<https://hosted.weblate.org/projects/peek/translations/pt_PT/>\n"
@@ -208,7 +208,7 @@ msgstr "Gravando"
 
 #: ui/preferences.ui:138
 msgid "Output format"
-msgstr "Formato de saida"
+msgstr "Formato de saída"
 
 #: ui/preferences.ui:153
 msgid "GIF"
