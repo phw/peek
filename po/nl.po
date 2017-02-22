@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-21 21:15+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
-"nl/>\n"
+"PO-Revision-Date: 2017-02-22 09:59+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch "
+"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,33 +40,32 @@ msgid "Open file manager after saving"
 msgstr "Bestandsbeheerder openen na opslaan"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
 "Tijd (in milliseconden) dat de opnamegebiedsgrootte moet worden weergegeven "
-"na het herschalen"
+"na het herschalen."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "Te gebruiken standaard naam. Mag datumopmaak bevatten."
+msgstr ""
+"Te gebruiken standaard naam. Mag datumopmaak bevatten. De bestandsextensie "
+"zal automatisch worden toegevoegd."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "Voorkeur geven aan donker thema"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
 msgid "Output file format"
-msgstr ""
+msgstr "Uitvoer-bestandsformaat"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
 msgid "Delay in seconds before recording starts"
@@ -82,15 +81,13 @@ msgstr "Resolutie van ruisreductie-factor"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Of de muiscursor moet worden opgenomen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
-#, fuzzy
 msgid "Size and position of the last open main window"
 msgstr "Grootte en locatie van het laatst geopende hoofdvenster"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
-#, fuzzy
 msgid "Path where last video got saved"
 msgstr "Pad waar de laatste video is opgeslagen"
 
@@ -103,31 +100,33 @@ msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Selecteer het te gebruiken opname-backend (gnome-shell, ffmpeg of avconv). "
+"Als u hier niets instelt, zal Peek automatisch een backend selecteren."
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Begin met opnemen in alle draaiende Peek-processen."
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Stop met opnemen in alle draaiende Peek-processen."
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Opnemen in alle draaiende Peek-processen in-/uitschakelen."
 
 #: src/application.vala:170
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Het creëren van de standaard schermopnemer is mislukt.\n"
 
 #: src/application.vala:184
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Het initialiseren van %s-backend is mislukt.\n"
 
 #: src/ui/application-window.vala:284
 msgid "Rendering…"
@@ -207,15 +206,15 @@ msgstr "Opname"
 
 #: ui/preferences.ui:138
 msgid "Output format"
-msgstr ""
+msgstr "Uitvoerformaat"
 
 #: ui/preferences.ui:153
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:154
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
@@ -223,7 +222,7 @@ msgstr "Resolutie van ruisreductie"
 
 #: ui/preferences.ui:299
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Muiscursor opnemen"
 
 #: ui/preferences.ui:330
 msgid "Peek preferences"
