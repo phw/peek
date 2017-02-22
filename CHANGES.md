@@ -1,6 +1,6 @@
 # Version 0.10.0 - 2017-??-??
  * recording: Support Gnome Shell screencast DBUS service. Allows recording
-   under Gnome Wayland (#33)
+   under Gnome Shell with XWayland (#33)
  * recording: Support WebM as output format (#73)
  * recording: Added option to not record mouse cursor
  * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control

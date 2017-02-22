@@ -80,6 +80,11 @@ namespace Peek {
       return xdg_current_desktop_contains ("GNOME");
     }
 
+    public static bool is_wayland () {
+      string? wayland_display = GLib.Environment.get_variable ("WAYLAND_DISPLAY");
+      return wayland_display != null && wayland_display != "";
+    }
+
     private static bool xdg_current_desktop_contains (string text) {
       string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
       debug ("Desktop: %s", desktop);
