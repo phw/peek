@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-21 21:28+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2017-02-22 12:45+0000\n"
+"Last-Translator: Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
 "Language-Team: Arabic "
 "<https://hosted.weblate.org/projects/peek/translations/ar/>\n"
 "Language: ar\n"
@@ -44,33 +44,32 @@ msgid "Open file manager after saving"
 msgstr "افتح مدير الملفات بعد الحفظ"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
 "الوقت بالجزء الآلف من الثانية الذي حسبه تظهر المساحة المسجلة بعد تغيير "
-"التوقفات"
+"التوقفات."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "يستخدم اسم الملف الافتراضي . يمكن إضافة محددات لقالب عرض التاريخ."
+msgstr ""
+"يستخدم اسم الملف الافتراضي . يمكن إضافة محددات لقالب عرض التاريخ. تضاف "
+"الإضافة تلقائيا."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "أُفضِّل سمة داكنة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:31
 msgid "Output file format"
-msgstr ""
+msgstr "صيغة الملف الناتج"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
 msgid "Delay in seconds before recording starts"
@@ -86,15 +85,13 @@ msgstr "معامل تقليل مستوى الدقة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "تحدد إن كان سيسجل مؤشر الفأرة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:54
-#, fuzzy
 msgid "Size and position of the last open main window"
 msgstr "حجم ومكان آخر نافذة رئيسية مفتوحة"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:58
-#, fuzzy
 msgid "Path where last video got saved"
 msgstr "مسار آخر ملف تم حفظه"
 
@@ -107,31 +104,33 @@ msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"تختار ما هي أداة التسجيل المستخدمة (gnome-shell, ffmpeg أو avconv). إن لم "
+"يتم تحديدها فإن Peek سيختارها تلقائيا."
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "أداة التسجيل"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "بدء التسجيل في جميع نوافذ Peek المفتوحة."
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "وقف التسجيل في جميع نوافذ Peek المفتوحة."
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "تبديل حالة التسجيل في جميع نوافذ Peek المفتوحة."
 
 #: src/application.vala:170
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "تعذر إنشاء مسجل الشاشة الافتراضي.\n"
 
 #: src/application.vala:184
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "تعذر تهيئة أداة التسجيل %s.\n"
 
 #: src/ui/application-window.vala:284
 msgid "Rendering…"
@@ -210,15 +209,15 @@ msgstr "التسجيل"
 
 #: ui/preferences.ui:138
 msgid "Output format"
-msgstr ""
+msgstr "صيغة الناتج"
 
 #: ui/preferences.ui:153
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:154
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:225
 msgid "Resolution downsampling"
@@ -226,7 +225,7 @@ msgstr "تقليل مستوى الدقة"
 
 #: ui/preferences.ui:299
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "سجّل مؤشر الفأرة"
 
 #: ui/preferences.ui:330
 msgid "Peek preferences"
