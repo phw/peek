@@ -11,9 +11,8 @@ showing UI features of your own apps or for showing a bug in bug reports. It
 is not a general purpose screencast app with extended features and it never
 will be.
 
-Currently only Linux with X11 is supported. Other Unix like systems using X11
-should work as well. It is planned to also support Wayland and maybe other
-operating systems in the future.
+Currently only X11 is fully supported. There is no direct support for Wayland
+and Mir, but you can use Peek on Gnome Shell with XWayland (see FAQs below).
 
 
 ## Requirements
@@ -104,8 +103,8 @@ the resulting files are already small and compare well to other GIF recording
 software. In the end the GIF format is not well suited for doing large
 animations with a lot of changes and colors. For best results:
 
-- Use a low framerate. 15fps seems to work quite well for me
-- Avoid too much change. If there is heavy animation the frames will differ a lot
+- Use a low framerate. 15fps seems to work quite well.
+- Avoid too much change. If there is heavy animation the frames will differ a lot.
 - Avoid too many colors, since GIF is limited to a 256 color pallette. This one
   is not so much about file size but more about visual quality.
 
@@ -121,13 +120,46 @@ of an app you developed, for making short tutorials or for reporting bugs.
 True, but still still not as universally supported as GIFs. But Peek will become
 an option to choose WEBM output for those who prefer or need it.
 
+### Why no Wayland support?
+Wayland has two restrictions that make it hard for Peek to support Wayland
+natively:
+
+1. The Wayland protocol does not define a standard way for applications to
+   obtain a screenshot. That is intentional, as taking an arbitrary screenshot
+   essentially means any application can read the contents of the whole display,
+   and Wayland strives to offer improved security by isolating applications. It
+   is up to the compositors to provide screenshot capability, and most do. Gnome
+   Shell also provides a public interface for applications to use which Peek
+   does support.
+
+2. The Wayland protocol does not provide absolute screen coordinates to the
+   applications. There is not even a coordinate system for windows at all. Again
+   this is intentional, as they are not needed in many cases and you do not need
+   to follow restrictions imposed by the traditional assumption that the screen
+   is a rectangular area (e.g. you can have circular screens or lay out windows
+  in 3D space).
+
+Unfortunately the whole concept of the Peek UI is that the window position
+itself is used to obtain the recording coordinates. That means for now there
+cannot be any fully native Wayland support without special support for this
+use case by the compositor.
+
+It is however possible to use Peek in a Gnome Shell Wayland session using
+XWayland by launching Peek with the X11 backend:
+
+    GDK_BACKEND=x11 peek
+
+Support for cmpositors other than Gnome Shell can be added if a suitable
+screencasting interface is provided.
+
 
 ## Translations
 You can help translate Peek into your language. Peek is using
 [Weblate](https://weblate.org/) for translation management.
 
-Go to the [Peek localization project](https://hosted.weblate.org/engage/peek/)
-to start translating.
+Go to the [Peek localization project](https://hosted.weblate.org/projects/peek/translations/)
+to start translating. If the language you want to translate into is not already
+available, you [can add it here](https://hosted.weblate.org/projects/peek/translations/#newlang).
 
 
 ## License
