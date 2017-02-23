@@ -23,7 +23,7 @@
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
-  - [What about WEBM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
   - [Why no native Wayland support?](#why-no-native-wayland-support)
 - [Translations](#translations)
 - [License](#license)
@@ -142,9 +142,9 @@ can upload images. With real video files you are still more limited. Typical use
 cases for Peek are recording small user interactions for showing UI features
 of an app you developed, for making short tutorials or for reporting bugs.
 
-### What about WEBM or MP4? Those are well supported on the web.
-True, but still still not as universally supported as GIFs. But Peek will become
-an option to choose WEBM output for those who prefer or need it.
+### What about WebM or MP4? Those are well supported on the web.
+True, but still still not as universally supported as GIFs. But Peek will get
+an option to choose WebM output for those who prefer or need it.
 
 ### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
@@ -175,7 +175,7 @@ XWayland by launching Peek with the X11 backend:
 
     GDK_BACKEND=x11 peek
 
-Support for cmpositors other than Gnome Shell can be added if a suitable
+Support for compositors other than Gnome Shell can be added if a suitable
 screencasting interface is provided.
 
 
