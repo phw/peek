@@ -46,6 +46,7 @@ and Mir, but you can use Peek on Gnome Shell with XWayland (see FAQs below).
 
   * GTK+ >= 3.14
   * GLib >= 2.38
+  * [libkeybinder3](https://github.com/kupferlauncher/keybinder)
   * FFmpeg or libav-tools
   * ImageMagick
   * Window manager with compositing enabled

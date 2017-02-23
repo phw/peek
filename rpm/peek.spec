@@ -11,11 +11,12 @@ BuildRequires:  cmake
 BuildRequires:  vala-devel
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
+BuildRequires:  pkgconfig(keybinder-3.0)
 Requires:       ffmpeg
 Requires:       ImageMagick
 
 %description
-A simple tool that allows you to record short animated GIF images 
+A simple tool that allows you to record short animated GIF images
 from your screen.
 
 
@@ -55,8 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 - Smaller border around recording area
 - Add resolution downsampling option
 - Minimal frame rate is now 1fps
-- Smaller temporary files by using libx264rgb instead of huffyuv 
-- Support for avconf, if ffmpeg is unavailable 
+- Smaller temporary files by using libx264rgb instead of huffyuv
+- Support for avconf, if ffmpeg is unavailable
 - Chinese (Simplified) translation
 - Croatian translation
 - Czech translation
@@ -76,10 +77,10 @@ rm -rf $RPM_BUILD_ROOT
 - Change button text while rendering
 - Add a --version command line argument
 - Show file choose directly after recording stops
-- Correctly scale recording area on HiDPI screens 
+- Correctly scale recording area on HiDPI screens
 - Fix DBUS service file if installed to location other than /usr
 - Fix locales not loaded if not installed to /usr due to missing locale path
-- Add Translation: Arabic, Catalan, French, Lithuanian, Polish, Portuguese (Pt), Russian, Spanish, Ukrainian 
+- Add Translation: Arabic, Catalan, French, Lithuanian, Polish, Portuguese (Pt), Russian, Spanish, Ukrainian
 
 * Sun Sep 04 2016 Roseanne Levert <dinnae@yandex.com> - 0.7.2-1
 - First package
