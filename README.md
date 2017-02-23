@@ -80,11 +80,11 @@ The deb packages from these PPAs probably will also work on Debian.
 Install the [Peek Ebuild](https://packages.gentoo.org/packages/media-video/peek).
 
 ### Fedora
-Install the dependencies with dnf:
-
-    sudo dnf install vala gtk3-devel ffmpeg
-
-Then follow the instructions to install from source below.
+ Fedora 25 user's can use this repo:
+```
+sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
+sudo dnf install peek -y
+```
 
 ### From source
 You can build and install Peek using CMake:
