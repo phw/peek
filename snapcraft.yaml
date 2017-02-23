@@ -37,10 +37,12 @@ parts:
       - desktop-gtk3
     build-packages:
       - libgtk-3-dev
+      - libkeybinder-3.0-dev
       - gettext
       - valac
     stage-packages:
       - libcanberra-gtk3-module
+      - libkeybinder-3.0-0
     install: |
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/usr/share/glib-2.0/schemas
     prime:
