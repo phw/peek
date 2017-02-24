@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-24 10:22+0000\n"
+"PO-Revision-Date: 2017-02-24 10:24+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Italian "
 "<https://hosted.weblate.org/projects/peek/translations/it/>\n"
@@ -80,7 +80,7 @@ msgstr "Frequenza fotogrammi"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:46
 msgid "Resolution downsampling factor"
-msgstr "Risoluzione del fattore di sottocampionamento."
+msgstr "Risoluzione del fattore di sottocampionamento"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:50
 msgid "Whether to capture the mouse cursor"
