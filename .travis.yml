@@ -23,7 +23,7 @@ script:
   - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - # sudo mv sources.list /etc/apt/sources.list
   - # sudo apt-get update
-  - sudo apt-get -y install checkinstall libav-tools
+  - sudo apt-get -y install checkinstall libav-tools ffmpeg
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
   - mkdir appdir ; cd appdir
   - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find . 
