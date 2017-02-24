@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-24 10:22+0000\n"
+"PO-Revision-Date: 2017-02-24 10:41+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Croatian "
 "<https://hosted.weblate.org/projects/peek/translations/hr/>\n"
@@ -167,7 +167,7 @@ msgstr "Prikaži u upravitelju datoteka"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "prevoditelj-zasluga"
+msgstr "cromat"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
