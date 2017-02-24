@@ -287,7 +287,9 @@ namespace Peek.Ui {
         delay_indicator_timeout = 0;
         leave_recording_state ();
       }
-      else {
+      else if (!recorder.is_recording) {
+        return;
+      } else {
         stop_button.sensitive = false;
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
