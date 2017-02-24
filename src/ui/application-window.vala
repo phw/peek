@@ -314,14 +314,16 @@ namespace Peek.Ui {
     }
 
     private void enter_recording_state () {
-      is_recording = true;
-      size_indicator.opacity = 0.0;
-      record_button.hide ();
-      stop_button.set_label (_ ("_Stop"));
-      stop_button.sensitive = true;
-      stop_button.show ();
-      freeze_window_size ();
-      set_keep_above (true);
+      if (!is_recording) {
+        is_recording = true;
+        size_indicator.opacity = 0.0;
+        record_button.hide ();
+        stop_button.set_label (_ ("_Stop"));
+        stop_button.sensitive = true;
+        stop_button.show ();
+        freeze_window_size ();
+        set_keep_above (true);
+      }
     }
 
     private void leave_recording_state () {
@@ -382,6 +384,7 @@ namespace Peek.Ui {
     private void freeze_window_size () {
       var width = this.get_allocated_width ();
       var height = this.get_allocated_height ();
+      debug ("freeze_window_size w: %d, h: %d", width, height);
       this.set_size_request (width, height);
       this.resizable = false;
     }
@@ -389,6 +392,7 @@ namespace Peek.Ui {
     private void unfreeze_window_size () {
       var width = this.get_allocated_width ();
       var height = this.get_allocated_height ();
+      debug ("unfreeze_window_size w: %d, h: %d", width, height);
       this.set_size_request (0, 0);
       this.set_default_size (width, height);
       this.resizable = true;
