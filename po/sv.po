@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-22 05:33+0000\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"PO-Revision-Date: 2017-02-24 10:22+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Swedish "
 "<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
 "Language: sv\n"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
