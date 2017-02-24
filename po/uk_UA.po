@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-22 07:49+0000\n"
-"Last-Translator: strixaluco <maddox@i.ua>\n"
+"PO-Revision-Date: 2017-02-24 10:20+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Ukrainian "
 "<https://hosted.weblate.org/projects/peek/translations/uk/>\n"
 "Language: uk_UA\n"
@@ -53,9 +53,8 @@ msgstr ""
 "закінчення зміни розміру"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-#, fuzzy
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
