@@ -7,7 +7,7 @@
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-Contents
+## Contents
 
 - [About](#about)
 - [Requirements](#requirements)
@@ -90,7 +90,7 @@ available. Use the repository `ppa:peek-developers/daily` in the above commands.
 The deb packages from these PPAs probably will also work on Debian.
 
 ### Fedora
- Fedora 25 users can use this repo:
+Fedora 25 users can use this repository:
 
 ```
 sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
@@ -129,7 +129,7 @@ acceleration methods can help.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. However this does not work as intented on some window managers,
+recording. However this does not work as intended on some window managers,
 most notably I3. If this does not work for you on any other window manager
 please open an [issue on Github](https://github.com/phw/peek/issues).
 
@@ -141,10 +141,10 @@ the resulting files are already small and compare well to other GIF recording
 software. In the end the GIF format is not well suited for doing large
 animations with a lot of changes and colors. For best results:
 
-- Use a low framerate. 15fps seems to work quite well.
+- Use a low frame rate. 15fps seems to work quite well.
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
-- Avoid too many colors, since GIF is limited to a 256 color pallette. This one
+- Avoid too many colors, since GIF is limited to a 256 color palette. This one
   is not so much about file size but more about visual quality.
 
 ### If GIF is so bad why use it at all?
@@ -221,7 +221,7 @@ Go to the [Peek localization project](https://hosted.weblate.org/projects/peek/t
 to start translating. If the language you want to translate into is not already
 available, you [can add it here](https://hosted.weblate.org/projects/peek/translations/#newlang).
 
-If you want to be cedited for your translation, please add your name to the
+If you want to be credited for your translation, please add your name to the
 [translator-credits](https://hosted.weblate.org/search/peek/translations/?q=translator-credits&search=exact&source=on&type=all&ignored=False)
 for your language. The translator credits are shown in Peek's About dialog.
 
