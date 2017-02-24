@@ -20,10 +20,10 @@ script:
   - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DBUILD_TESTS=ON .
   - make
   - make test
-  - echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
-  - sudo mv sources.list /etc/apt/sources.list
-  - sudo apt-get update
-  - sudo apt-get -y install checkinstall avconv
+  - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
+  - # sudo mv sources.list /etc/apt/sources.list
+  - # sudo apt-get update
+  - sudo apt-get -y install checkinstall libav-tools
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
   - mkdir appdir ; cd appdir
   - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find . 
