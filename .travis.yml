@@ -23,8 +23,9 @@ script:
   - sudo apt-get -y install checkinstall 
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
   - ls 
-  - mkdir appdir ; cd appdir 
-  - dpkg -x ../app_1-1_amd64.deb . ; find . 
+  - mkdir appdir ; cd appdir
+  - ( cd usr ; ln -s . local )
+  - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find . 
   - cp ./usr/share/applications/*.desktop . 
   - cp ./usr/share/icons/*.png . 
   - cd .. 
