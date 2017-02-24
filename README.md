@@ -1,6 +1,6 @@
 # Peek - an animated GIF recorder
 [![GitHub release](https://img.shields.io/github/release/phw/peek.svg)](https://github.com/phw/peek/releases)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
@@ -221,7 +221,7 @@ Go to the [Peek localization project](https://hosted.weblate.org/projects/peek/t
 to start translating. If the language you want to translate into is not already
 available, you [can add it here](https://hosted.weblate.org/projects/peek/translations/#newlang).
 
-If you want to be cedited for you translation, please add your name to the
+If you want to be cedited for your translation, please add your name to the
 [translator-credits](https://hosted.weblate.org/search/peek/translations/?q=translator-credits&search=exact&source=on&type=all&ignored=False)
 for your language. The translator credits are shown in Peek's About dialog.
 
