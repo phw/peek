@@ -31,7 +31,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
-Peek creates animated GIF screencasts using ffmpeg and imagemagick. It was
+Peek creates animated GIF screencasts using FFmpeg and ImageMagick. It was
 built for the specific use case of recording screen areas, e.g., for easily
 showing UI features of your own apps or for showing a bug in bug reports. It
 is not a general purpose screencast app with extended features and it never
