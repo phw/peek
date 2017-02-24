@@ -121,7 +121,7 @@ add_custom_target(uninstall
 # CPack configuration
 set(CPACK_GENERATOR "DEB")
 set(CPACK_PROJECT_CONFIG_FILE ${CMAKE_SOURCE_DIR}/package.txt)
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Peek - an animated GIF recorder")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Simple animated GIF screen recorder with an easy to use interface")
 set(CPACK_PACKAGE_VENDOR "")
 set(CPACK_PACKAGE_CONTACT "Philipp Wolfer <ph.wolfer@gmail.com>")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")

@@ -1,7 +1,7 @@
 Name:           peek
 Version:        0.9.1
 Release:        1%{?dist}
-Summary:        An animated GIF recorder
+Summary:        Simple animated GIF screen recorder with an easy to use interface
 
 License:        GPLv3
 URL:            https://github.com/phw/peek

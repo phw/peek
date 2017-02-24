@@ -1,7 +1,7 @@
 name: peek
 version: '0.9.1+git'
 icon: data/icons/512x512/peek.png
-summary: An animated GIF recorder with an easy to use interface.
+summary: Simple animated GIF screen recorder with an easy to use interface
 description: |
   Peek creates animated GIF screencasts using FFmpeg and ImageMagick. It was
   built for the specific use case of recording screen areas, e.g., for easily
