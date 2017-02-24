@@ -20,6 +20,19 @@ script:
   - cmake -DBUILD_TESTS=ON .
   - make
   - make test
+  - sudo apt-get -y install checkinstall 
+  - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
+  - ls 
+  - mkdir appdir ; cd appdir 
+  - dpkg -x ../app_1-1_amd64.deb . ; find . 
+  - cp ./usr/share/applications/*.desktop . 
+  - cp ./usr/share/icons/*.png . 
+  - cd .. 
+  - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage" 
+  - chmod a+x linuxdeployqt*.AppImage 
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek 
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage 
+  - curl --upload-file ./Peek-*.AppImage https://transfer.sh/Peek-x86_64.AppImage 
 
 deploy:
   provider: launchpad
