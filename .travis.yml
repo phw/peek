@@ -23,7 +23,7 @@ script:
   - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - # sudo mv sources.list /etc/apt/sources.list
   - # sudo apt-get update
-  - sudo apt-get -y install checkinstall libav-tools
+  - sudo apt-get -y install checkinstall libav-tools imagemagick
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
   - mkdir appdir ; cd appdir
   - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find . 
@@ -33,7 +33,9 @@ script:
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage" 
   - chmod a+x linuxdeployqt*.AppImage 
   - cp $(which avconv) ./appdir/usr/bin
+  - cp $(which convert) ./appdir/usr/bin
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/avconv -bundle-non-qt-libs # Workaround for https://github.com/probonopd/linuxdeployqt/issues/83
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/convert -bundle-non-qt-libs
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs
   - ( cd usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage 
