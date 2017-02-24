@@ -32,8 +32,8 @@ script:
   - cd .. 
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage" 
   - chmod a+x linuxdeployqt*.AppImage 
-  - cp $(which avconv) ./appdir/usr/bin
-  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs -executable=./appdir/usr/bin/avconv
+  - cp $(which avconv) $(which ffmpeg) ./appdir/usr/bin
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs -executable=./appdir/usr/bin/avconv -executable=./appdir/usr/bin/ffmpeg
   - ( cd usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage 
   - curl --upload-file ./Peek-*.AppImage https://transfer.sh/Peek-x86_64.AppImage 
