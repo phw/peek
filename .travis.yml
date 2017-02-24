@@ -22,6 +22,7 @@ script:
   - make test
   - echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - sudo mv sources.list /etc/apt/sources.list
+  - sudo apt-get update
   - sudo apt-get -y install checkinstall avconv
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
   - mkdir appdir ; cd appdir
