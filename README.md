@@ -12,9 +12,9 @@ Contents
   - [Runtime](#runtime)
   - [Development](#development)
 - [Installation](#installation)
+  - [Official distribution packages](#official-distribution-packages)
   - [Arch Linux](#arch-linux)
   - [Ubuntu / Debian](#ubuntu--debian)
-  - [Gentoo](#gentoo)
   - [Fedora](#fedora)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -46,21 +46,29 @@ and Mir, but you can use Peek on Gnome Shell with XWayland (see FAQs below).
 ## Requirements
 ### Runtime
 
-  * GTK+ >= 3.14
-  * GLib >= 2.38
-  * [libkeybinder3](https://github.com/kupferlauncher/keybinder)
-  * FFmpeg or libav-tools
-  * ImageMagick
-  * Window manager with compositing enabled
+- GTK+ >= 3.14
+- GLib >= 2.38
+- [libkeybinder3](https://github.com/kupferlauncher/keybinder)
+- FFmpeg or libav-tools
+- ImageMagick
+- Window manager with compositing enabled
 
 ### Development
 
- * Vala compiler
- * CMake >= 2.8.8
- * Gettext (>= 0.19 for localized .desktop entry)
+- Vala compiler
+- CMake >= 2.8.8
+- Gettext (>= 0.19 for localized .desktop entry)
 
 
 ## Installation
+### Official distribution packages
+Peek is available in official package repositories for the following
+distributions:
+
+- [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
+- [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
+- [Parabola](https://www.parabola.nu/packages/?q=peek)
+
 ### Arch Linux
 For Arch Linux there is a
 [PKGBUILD](https://aur.archlinux.org/packages/peek/) available in the AUR.
@@ -79,11 +87,9 @@ available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
 The deb packages from these PPAs probably will also work on Debian.
 
-### Gentoo
-Install the [Peek Ebuild](https://packages.gentoo.org/packages/media-video/peek).
-
 ### Fedora
- Fedora 25 user's can use this repo:
+ Fedora 25 users can use this repo:
+
 ```
 sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
 sudo dnf install peek -y
@@ -127,13 +133,15 @@ please open an [issue on Github](https://github.com/phw/peek/issues).
 
 ### Why are the GIF files so big?
 Peek is using ImageMagick to optimize the GIF files and reduce the file size.
-As was shown in [issue #3](https://github.com/phw/peek/issues/3#issuecomment-243872774)
+As was shown in
+[issue #3](https://github.com/phw/peek/issues/3#issuecomment-243872774)
 the resulting files are already small and compare well to other GIF recording
 software. In the end the GIF format is not well suited for doing large
 animations with a lot of changes and colors. For best results:
 
 - Use a low framerate. 15fps seems to work quite well.
-- Avoid too much change. If there is heavy animation the frames will differ a lot.
+- Avoid too much change. If there is heavy animation the frames will differ
+  a lot.
 - Avoid too many colors, since GIF is limited to a 256 color pallette. This one
   is not so much about file size but more about visual quality.
 
