@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-24 10:24+0000\n"
+"PO-Revision-Date: 2017-02-24 10:36+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://hosted.weblate.org/projects/peek/translations/nb/>\n"
@@ -167,7 +167,7 @@ msgstr "Vis i filutforsker"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "oversetter-credits"
+msgstr "Ole Erik Brennhagen"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
