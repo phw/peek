@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-21 22:20+0100\n"
-"PO-Revision-Date: 2017-02-23 19:57+0000\n"
+"PO-Revision-Date: 2017-02-26 10:21+0000\n"
 "Last-Translator: Dawid Dziurla <dawidd0811@gmail.com>\n"
 "Language-Team: Polish "
 "<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
@@ -170,7 +170,7 @@ msgstr "Pokaż w menadżerze plików"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Dawid <dawidd0811@gmail.com>"
+msgstr "Dawid Dziurla <dawidd0811@gmail.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
