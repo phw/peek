@@ -31,6 +31,7 @@ namespace Peek.PostProcessing {
         };
 
         Pid pid;
+        debug ("Running ImageMagick convert, saving to %s", output_file);
         Process.spawn_async (null, argv, null,
           SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
 

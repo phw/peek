@@ -39,6 +39,7 @@ namespace Peek.Recording {
         debug ("Finished post processing");
         recording_finished (file);
       });
+      recording_postprocess_started ();
     }
 
     public void cancel () {

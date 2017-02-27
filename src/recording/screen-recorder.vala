@@ -22,6 +22,8 @@ namespace Peek.Recording {
 
     public signal void recording_started ();
 
+    public signal void recording_postprocess_started ();
+
     public signal void recording_finished (File file);
 
     public signal void recording_aborted (int status);

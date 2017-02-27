@@ -68,6 +68,10 @@ namespace Peek.Ui {
         enter_recording_state ();
       });
 
+      this.recorder.recording_postprocess_started.connect (() => {
+        show_file_chooser ();
+      });
+
       this.recorder.recording_finished.connect ((file) => {
         this.in_file = file;
         try_save_file ();
@@ -293,7 +297,6 @@ namespace Peek.Ui {
         stop_button.sensitive = false;
         stop_button.set_label (_ ("Rendering…"));
         recorder.stop ();
-        show_file_chooser ();
       }
     }
 
@@ -450,6 +453,7 @@ namespace Peek.Ui {
       var default_name = now.format (filename);
       chooser.set_current_name (default_name);
 
+      debug ("Showing file chooser");
       if (chooser.run () == ResponseType.OK) {
         this.out_file = chooser.get_file ();
         try_save_file ();
