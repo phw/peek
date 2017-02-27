@@ -29,6 +29,20 @@ namespace Peek.Recording {
           debug ("Recorder process closed");
           Process.close_pid (pid);
 
+          // Temporary debugging for issue #83
+          debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
+          Process.term_sig (status), Process.exit_status (status),
+          Utils.is_exit_status_success (status).to_string ());
+
+          var file = File.new_for_path (temp_file);
+          try {
+            var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
+            debug ("temporary file %s, %lld bytes",
+            temp_file, file_info.get_size ());
+          } catch (Error e) {
+            stderr.printf ("Error: %s\n", e.message);
+          }
+
           if (!is_exit_status_success (status)) {
             recording_aborted (Process.exit_status (status));
           } else {
