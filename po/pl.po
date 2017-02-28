@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:20+0100\n"
+"POT-Creation-Date: 2017-02-28 12:20+0100\n"
 "PO-Revision-Date: 2017-02-26 10:21+0000\n"
 "Last-Translator: Dawid Dziurla <dawidd0811@gmail.com>\n"
-"Language-Team: Polish "
-"<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
+"pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,31 +68,35 @@ msgstr ""
 msgid "Prefer dark theme"
 msgstr "Preferuj ciemny motyw"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:31
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:23
+msgid "Global keybinding to toggle recording"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
 msgstr "Wyjściowy format pliku"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:252
 msgid "Delay in seconds before recording starts"
 msgstr "Opóźnienie w sekundach przed rozpoczęciem nagrywania"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:337
 msgid "Framerate"
 msgstr "FPS"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:46
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
 msgstr "Współczynnik próbkowania rozdzielczości"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:50
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
 msgstr "Czy uchwycić kursor"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:54
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:60
 msgid "Size and position of the last open main window"
 msgstr "Rozmiar i pozycja ostatnio otwartego okna głównego"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:58
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
 msgstr "Ścieżka ostatnio zapisanego video"
 
@@ -124,45 +128,45 @@ msgstr "Zatrzymaj nagrywanie we wszystkich instancjach Peek."
 msgid "Toggle recording in all running Peek instances."
 msgstr "Przełącz nagrywanie we wszystkich instancjach Peek."
 
-#: src/application.vala:170
+#: src/application.vala:215
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nie można utworzyć domyślnego rejestratora ekranu.\n"
 
-#: src/application.vala:184
+#: src/application.vala:229
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nie można zainicjalizować backendu %s.\n"
 
-#: src/ui/application-window.vala:284
+#: src/ui/application-window.vala:298
 msgid "Rendering…"
 msgstr "Renderowanie…"
 
-#: src/ui/application-window.vala:312 ui/application-window.ui:154
+#: src/ui/application-window.vala:326 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_Stop"
 
-#: src/ui/application-window.vala:409
+#: src/ui/application-window.vala:426
 msgid "Save animation"
 msgstr "Zapisz animację"
 
-#: src/ui/application-window.vala:410
+#: src/ui/application-window.vala:427
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: src/ui/application-window.vala:412
+#: src/ui/application-window.vala:429
 msgid "_Save"
 msgstr "_Zapisz"
 
-#: src/ui/application-window.vala:497
+#: src/ui/application-window.vala:515
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacja zapisana jako \"%s\""
 
-#: src/ui/application-window.vala:504
+#: src/ui/application-window.vala:522
 msgid "Click here to show the saved file in your file manager."
 msgstr "Kliknij tutaj, aby pokazać zapisany plik w twoim menadżerze plików."
 
-#: src/ui/application-window.vala:506
+#: src/ui/application-window.vala:524
 msgid "Show in file manager"
 msgstr "Pokaż w menadżerze plików"
 
@@ -204,31 +208,48 @@ msgstr "_Wyjdź"
 msgid "User interface"
 msgstr "Interfejs użytkownika"
 
-#: ui/preferences.ui:115
+#: ui/preferences.ui:108
+#, fuzzy
+msgid "Start / stop recording"
+msgstr "Zacznij nagrywać"
+
+#: ui/preferences.ui:127
+msgid "deactivated"
+msgstr ""
+
+#: ui/preferences.ui:137
+msgid "Change"
+msgstr ""
+
+#: ui/preferences.ui:184
 msgid "Recording"
 msgstr "Nagrywanie"
 
-#: ui/preferences.ui:138
+#: ui/preferences.ui:207
 msgid "Output format"
 msgstr "Format wyjściowy"
 
-#: ui/preferences.ui:153
+#: ui/preferences.ui:222
 msgid "GIF"
 msgstr "GIF"
 
-#: ui/preferences.ui:154
+#: ui/preferences.ui:223
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:225
+#: ui/preferences.ui:224
+msgid "MP4"
+msgstr ""
+
+#: ui/preferences.ui:295
 msgid "Resolution downsampling"
 msgstr "Próbkowanie rozdzielczości"
 
-#: ui/preferences.ui:299
+#: ui/preferences.ui:369
 msgid "Capture mouse cursor"
 msgstr "Uchwyć kursor"
 
-#: ui/preferences.ui:330
+#: ui/preferences.ui:400
 msgid "Peek preferences"
 msgstr "Preferencje peek"
 

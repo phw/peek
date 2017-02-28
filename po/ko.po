@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-21 22:20+0100\n"
+"POT-Creation-Date: 2017-02-28 12:20+0100\n"
 "PO-Revision-Date: 2017-02-24 10:38+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Korean "
-"<https://hosted.weblate.org/projects/peek/translations/ko/>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/peek/translations/"
+"ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,31 +59,35 @@ msgstr ""
 msgid "Prefer dark theme"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:31
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:23
+msgid "Global keybinding to toggle recording"
+msgstr ""
+
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:36 ui/preferences.ui:182
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:252
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:41 ui/preferences.ui:267
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:337
 msgid "Framerate"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:46
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:50
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:54
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:60
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:58
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
 msgstr ""
 
@@ -113,45 +117,45 @@ msgstr ""
 msgid "Toggle recording in all running Peek instances."
 msgstr ""
 
-#: src/application.vala:170
+#: src/application.vala:215
 msgid "Unable to create default screen recorder.\n"
 msgstr ""
 
-#: src/application.vala:184
+#: src/application.vala:229
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr ""
 
-#: src/ui/application-window.vala:284
+#: src/ui/application-window.vala:298
 msgid "Rendering…"
 msgstr "렌더링 중…"
 
-#: src/ui/application-window.vala:312 ui/application-window.ui:154
+#: src/ui/application-window.vala:326 ui/application-window.ui:154
 msgid "_Stop"
 msgstr "_멈추기"
 
-#: src/ui/application-window.vala:409
+#: src/ui/application-window.vala:426
 msgid "Save animation"
 msgstr "애니메이션 저장하기"
 
-#: src/ui/application-window.vala:410
+#: src/ui/application-window.vala:427
 msgid "_Cancel"
 msgstr "_취소하기"
 
-#: src/ui/application-window.vala:412
+#: src/ui/application-window.vala:429
 msgid "_Save"
 msgstr "_저장하기"
 
-#: src/ui/application-window.vala:497
+#: src/ui/application-window.vala:515
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "애니메이션이 %s로 저장됐습니다"
 
-#: src/ui/application-window.vala:504
+#: src/ui/application-window.vala:522
 msgid "Click here to show the saved file in your file manager."
 msgstr "여기를 눌러서 저장하세요."
 
-#: src/ui/application-window.vala:506
+#: src/ui/application-window.vala:524
 msgid "Show in file manager"
 msgstr "저장된 폴더 열기"
 
@@ -193,30 +197,46 @@ msgstr ""
 msgid "User interface"
 msgstr ""
 
-#: ui/preferences.ui:115
+#: ui/preferences.ui:108
+msgid "Start / stop recording"
+msgstr ""
+
+#: ui/preferences.ui:127
+msgid "deactivated"
+msgstr ""
+
+#: ui/preferences.ui:137
+msgid "Change"
+msgstr ""
+
+#: ui/preferences.ui:184
 msgid "Recording"
 msgstr ""
 
-#: ui/preferences.ui:138
+#: ui/preferences.ui:207
 msgid "Output format"
 msgstr ""
 
-#: ui/preferences.ui:153
+#: ui/preferences.ui:222
 msgid "GIF"
 msgstr ""
 
-#: ui/preferences.ui:154
+#: ui/preferences.ui:223
 msgid "WebM"
 msgstr ""
 
-#: ui/preferences.ui:225
+#: ui/preferences.ui:224
+msgid "MP4"
+msgstr ""
+
+#: ui/preferences.ui:295
 msgid "Resolution downsampling"
 msgstr ""
 
-#: ui/preferences.ui:299
+#: ui/preferences.ui:369
 msgid "Capture mouse cursor"
 msgstr ""
 
-#: ui/preferences.ui:330
+#: ui/preferences.ui:400
 msgid "Peek preferences"
 msgstr ""
