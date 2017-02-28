@@ -114,7 +114,9 @@ namespace Peek.Ui {
       // shortcut keys.
       keybinding_toggle_recording_accelerator = new Gtk.Label ("");
       keybinding_toggle_recording_accelerator.halign = Gtk.Align.START;
+      #if HAS_GTK_LABEL_XALIGN
       keybinding_toggle_recording_accelerator.xalign = 0;
+      #endif
       editor_box.pack_start (keybinding_toggle_recording_accelerator,
         false, true, 0);
       settings.changed.connect ((key) => {
