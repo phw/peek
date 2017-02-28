@@ -5,7 +5,7 @@
  * recording: Added option to not record mouse cursor
  * ui: Recording can be started / stopped via configurable keyboard shortcut (#23)
  * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
-       the recording (partially fixes #23)
+       the recording
  * ui: Add `--backend` command line parameter to manually choose recording
        backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)

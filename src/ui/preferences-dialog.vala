@@ -38,6 +38,9 @@ namespace Peek.Ui {
     private Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
+    private Gtk.Entry keybinding_toggle_recording_entry;
+
+    [GtkChild]
     private Gtk.ComboBoxText recording_output_format_combo_box;
 
     [GtkChild]
@@ -60,6 +63,10 @@ namespace Peek.Ui {
 
       settings.bind ("interface-open-file-manager",
         interface_open_file_manager, "active",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("keybinding-toggle-recording",
+        keybinding_toggle_recording_entry, "text",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-output-format",
