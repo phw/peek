@@ -37,10 +37,15 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.CheckButton interface_open_file_manager;
 
-    [GtkChild]
+    #if HAS_GTK_SHORTCUT_LABEL
+    private Gtk.ShortcutLabel keybinding_toggle_recording_accelerator;
+    #else
     private Gtk.Label keybinding_toggle_recording_accelerator;
+    #endif
 
     [GtkChild]
+    private Gtk.Box keybinding_toggle_recording_editor;
+
     private Gtk.ToggleButton keybinding_toggle_recording_button;
 
     [GtkChild]
@@ -88,10 +93,58 @@ namespace Peek.Ui {
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
 
-      watch_keybindings ();
+      init_keybinding_editor ();
     }
 
-    [GtkCallback]
+    private void init_keybinding_editor () {
+      var editor_box = keybinding_toggle_recording_editor;
+
+      #if HAS_GTK_SHORTCUT_LABEL
+      // Gtk >= 3.22 does have GtkShortcutLabel, which is easier to use
+      // and displays the shortcuts more nicely to the user.
+      keybinding_toggle_recording_accelerator = new Gtk.ShortcutLabel ("");
+      keybinding_toggle_recording_accelerator.disabled_text = _ ("deactivated");
+      editor_box.pack_start (keybinding_toggle_recording_accelerator,
+        false, true, 0);
+      settings.bind ("keybinding-toggle-recording",
+        keybinding_toggle_recording_accelerator, "accelerator",
+        SettingsBindFlags.DEFAULT);
+      #else
+      // Fallback to a normal GtkLabel with custom code for displaying the
+      // shortcut keys.
+      keybinding_toggle_recording_accelerator = new Gtk.Label ("");
+      keybinding_toggle_recording_accelerator.halign = Gtk.Align.START;
+      keybinding_toggle_recording_accelerator.xalign = 0;
+      editor_box.pack_start (keybinding_toggle_recording_accelerator,
+        false, true, 0);
+      settings.changed.connect ((key) => {
+        if (key == "keybinding-toggle-recording") {
+          set_accelerator_label (
+            keybinding_toggle_recording_accelerator,
+            settings.get_string (key));
+        }
+      });
+      set_accelerator_label (
+        keybinding_toggle_recording_accelerator,
+        settings.get_string ("keybinding-toggle-recording"));
+      #endif
+
+      keybinding_toggle_recording_accelerator.width_request = 175;
+
+      // Add a button to change the keyboard shortcut
+      keybinding_toggle_recording_button = new Gtk.ToggleButton.with_label (
+        _ ("Change"));
+      keybinding_toggle_recording_button.toggled.connect (
+        on_keybinding_toggle_recording_button_toggled);
+      keybinding_toggle_recording_button.focus_out_event.connect (
+        on_keybinding_toggle_recording_button_focus_out);
+      keybinding_toggle_recording_button.key_release_event.connect (
+        on_keybinding_toggle_recording_button_keypress);
+      editor_box.pack_start (keybinding_toggle_recording_button, false, true, 0);
+
+      editor_box.show_all ();
+    }
+
     private void on_keybinding_toggle_recording_button_toggled (Button source) {
       if (keybinding_toggle_recording_button.active) {
         keybinding_toggle_recording_button.label = _ ("Press keys…");
@@ -100,13 +153,11 @@ namespace Peek.Ui {
       }
     }
 
-    [GtkCallback]
     private bool on_keybinding_toggle_recording_button_focus_out (Gdk.EventFocus event) {
       keybinding_toggle_recording_button.active = false;
       return false;
     }
 
-    [GtkCallback]
     private bool on_keybinding_toggle_recording_button_keypress (Gdk.EventKey event) {
       if (keybinding_toggle_recording_button.active) {
         if (event.keyval == Gdk.Key.Escape &&
@@ -124,24 +175,7 @@ namespace Peek.Ui {
       return false;
     }
 
-    private void watch_keybindings () {
-      // TODO: Gtk 3.22 will have GtkShortcutLabel, which is easier
-      // and prettier to use.
-      // settings.bind ("keybinding-toggle-recording",
-      //   keybinding_toggle_recording_accelerator, "accelerator",
-      //   SettingsBindFlags.DEFAULT);
-      settings.changed.connect ((key) => {
-        if (key == "keybinding-toggle-recording") {
-          set_accelerator_label (
-            keybinding_toggle_recording_accelerator,
-            settings.get_string (key));
-        }
-      });
-      set_accelerator_label (
-        keybinding_toggle_recording_accelerator,
-        settings.get_string ("keybinding-toggle-recording"));
-    }
-
+    #if ! HAS_GTK_SHORTCUT_LABEL
     private void set_accelerator_label (Gtk.Label accel_label, string accelerator) {
       uint accelerator_key;
       Gdk.ModifierType accelerator_mods;
@@ -154,6 +188,7 @@ namespace Peek.Ui {
 
       accel_label.label = label;
     }
+    #endif
 
     private static bool no_modifier_set (Gdk.ModifierType mods) {
       return (mods & Gtk.accelerator_get_default_mod_mask ()) == 0;

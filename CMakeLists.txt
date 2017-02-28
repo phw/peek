@@ -50,6 +50,14 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 
 set(VALA_DEFINITIONS "")
 
+if(${GTK_VERSION} VERSION_EQUAL "3.22" OR ${GTK_VERSION} VERSION_GREATER "3.22")
+  message(STATUS "Compiling for GTK >= 3.14")
+  list(APPEND VALA_DEFINITIONS "HAS_GTK_SHORTCUT_LABEL")
+else()
+  message(STATUS "Compiling for GTK < 3.22")
+endif()
+
+
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala
