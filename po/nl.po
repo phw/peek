@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 12:20+0100\n"
-"PO-Revision-Date: 2017-02-22 09:59+0000\n"
+"PO-Revision-Date: 2017-02-28 12:34+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
-"nl/>\n"
+"Language-Team: Dutch "
+"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgstr "Voorkeur geven aan donker thema"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Algemene sneltoets om opname in of uit te schakelen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
@@ -205,17 +205,16 @@ msgid "User interface"
 msgstr "Uiterlijk"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Opname starten"
+msgstr "Opname starten/stoppen"
 
 #: ui/preferences.ui:127
 msgid "deactivated"
-msgstr ""
+msgstr "uitgeschakeld"
 
 #: ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Wijzigen"
 
 #: ui/preferences.ui:184
 msgid "Recording"
@@ -235,7 +234,7 @@ msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
 msgid "Resolution downsampling"
