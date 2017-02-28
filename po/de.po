@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 13:37+0100\n"
-"PO-Revision-Date: 2017-02-28 11:46+0000\n"
+"PO-Revision-Date: 2017-02-28 12:40+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,7 +169,7 @@ msgstr "In Ordner anzeigen"
 
 #: src/ui/preferences-dialog.vala:97
 msgid "Press keys…"
-msgstr ""
+msgstr "Tasten drücken…"
 
 #: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
 msgid "Change"
