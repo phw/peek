@@ -91,7 +91,10 @@ namespace Peek {
 
       force_app_menu ();
       register_actions ();
-      register_key_bindings ();
+
+      if (DesktopIntegration.is_x11_backend ()) {
+        register_key_bindings ();
+      }
     }
 
     public override void shutdown () {

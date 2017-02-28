@@ -46,6 +46,9 @@ namespace Peek.Ui {
     #endif
 
     [GtkChild]
+    private Gtk.Box keybinding_toggle_recording_box;
+
+    [GtkChild]
     private Gtk.Box keybinding_toggle_recording_editor;
 
     private Gtk.ToggleButton keybinding_toggle_recording_button;
@@ -95,7 +98,11 @@ namespace Peek.Ui {
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
 
-      init_keybinding_editor ();
+      if (DesktopIntegration.is_x11_backend ()) {
+        init_keybinding_editor ();
+      } else {
+        keybinding_toggle_recording_box.hide ();
+      }
     }
 
     public override bool delete_event (Gdk.EventAny event) {

@@ -85,6 +85,16 @@ namespace Peek {
       return wayland_display != null && wayland_display != "";
     }
 
+    public static bool is_x11_backend () {
+      var window_type = Gdk.DisplayManager.get ().default_display.get_type ();
+      return window_type.name () == "GdkX11Display";
+    }
+
+    public static bool is_wayland_backend () {
+      var window_type = Gdk.DisplayManager.get ().default_display.get_type ();
+      return window_type.name () == "GdkWaylandDisplay";
+    }
+
     private static bool xdg_current_desktop_contains (string text) {
       string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
       debug ("Desktop: %s", desktop);
