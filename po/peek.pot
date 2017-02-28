@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek \n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-28 12:20+0100\n"
+"POT-Creation-Date: 2017-02-28 13:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,6 +157,18 @@ msgstr ""
 msgid "Show in file manager"
 msgstr ""
 
+#: src/ui/preferences-dialog.vala:97
+msgid "Press keys…"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
+msgid "Change"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
+msgid "deactivated"
+msgstr ""
+
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
@@ -197,14 +209,6 @@ msgstr ""
 
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
-msgstr ""
-
-#: ui/preferences.ui:127
-msgid "deactivated"
-msgstr ""
-
-#: ui/preferences.ui:137
-msgid "Change"
 msgstr ""
 
 #: ui/preferences.ui:184

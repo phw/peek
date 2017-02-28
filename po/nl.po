@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-28 12:20+0100\n"
+"POT-Creation-Date: 2017-02-28 13:37+0100\n"
 "PO-Revision-Date: 2017-02-28 12:34+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: Dutch "
-"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -166,6 +166,18 @@ msgstr ""
 msgid "Show in file manager"
 msgstr "Weergeven in bestandsbeheerder"
 
+#: src/ui/preferences-dialog.vala:97
+msgid "Press keys…"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
+msgid "Change"
+msgstr "Wijzigen"
+
+#: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
+msgid "deactivated"
+msgstr "uitgeschakeld"
+
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
@@ -207,14 +219,6 @@ msgstr "Uiterlijk"
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
 msgstr "Opname starten/stoppen"
-
-#: ui/preferences.ui:127
-msgid "deactivated"
-msgstr "uitgeschakeld"
-
-#: ui/preferences.ui:137
-msgid "Change"
-msgstr "Wijzigen"
 
 #: ui/preferences.ui:184
 msgid "Recording"

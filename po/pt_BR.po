@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-28 12:20+0100\n"
+"POT-Creation-Date: 2017-02-28 13:37+0100\n"
 "PO-Revision-Date: 2017-02-21 21:15+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
@@ -171,6 +171,18 @@ msgstr ""
 msgid "Show in file manager"
 msgstr "Exibir no gerenciador de arquivos"
 
+#: src/ui/preferences-dialog.vala:97
+msgid "Press keys…"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
+msgid "Change"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
+msgid "deactivated"
+msgstr ""
+
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
@@ -215,14 +227,6 @@ msgstr "Interface de usuário"
 #, fuzzy
 msgid "Start / stop recording"
 msgstr "Iniciar gravação"
-
-#: ui/preferences.ui:127
-msgid "deactivated"
-msgstr ""
-
-#: ui/preferences.ui:137
-msgid "Change"
-msgstr ""
 
 #: ui/preferences.ui:184
 msgid "Recording"

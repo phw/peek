@@ -3,6 +3,7 @@ data/schemas/com.uploadedlobster.peek.gschema.xml
 src/application.vala
 src/ui/about-dialog.vala
 src/ui/application-window.vala
+src/ui/preferences-dialog.vala
 ui/about.ui
 ui/application-window.ui
 ui/gtk/menus.ui
