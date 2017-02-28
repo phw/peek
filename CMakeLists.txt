@@ -85,6 +85,7 @@ vala_precompile(VALA_C
     src/ui/about-dialog.vala
     src/ui/application-window.vala
     src/ui/preferences-dialog.vala
+    src/ui/shortcut-label.vala
   PACKAGES
     gtk+-3.0
     posix

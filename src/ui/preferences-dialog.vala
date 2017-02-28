@@ -37,10 +37,12 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.CheckButton interface_open_file_manager;
 
+    // FIXME: For some cases we cannot do ShortcutLabel : Gtk.ShortcutLabel,
+    // so we have to distingiush between both classes here.
     #if HAS_GTK_SHORTCUT_LABEL
     private Gtk.ShortcutLabel keybinding_toggle_recording_accelerator;
     #else
-    private Gtk.Label keybinding_toggle_recording_accelerator;
+    private ShortcutLabel keybinding_toggle_recording_accelerator;
     #endif
 
     [GtkChild]
@@ -104,37 +106,14 @@ namespace Peek.Ui {
     private void init_keybinding_editor () {
       var editor_box = keybinding_toggle_recording_editor;
 
-      #if HAS_GTK_SHORTCUT_LABEL
-      // Gtk >= 3.22 does have GtkShortcutLabel, which is easier to use
-      // and displays the shortcuts more nicely to the user.
-      keybinding_toggle_recording_accelerator = new Gtk.ShortcutLabel ("");
+      // Display the configured shortcut to the user
+      keybinding_toggle_recording_accelerator = new ShortcutLabel ("");
       keybinding_toggle_recording_accelerator.disabled_text = _ ("deactivated");
       editor_box.pack_start (keybinding_toggle_recording_accelerator,
         false, true, 0);
       settings.bind ("keybinding-toggle-recording",
         keybinding_toggle_recording_accelerator, "accelerator",
         SettingsBindFlags.DEFAULT);
-      #else
-      // Fallback to a normal GtkLabel with custom code for displaying the
-      // shortcut keys.
-      keybinding_toggle_recording_accelerator = new Gtk.Label ("");
-      keybinding_toggle_recording_accelerator.halign = Gtk.Align.START;
-      #if HAS_GTK_LABEL_XALIGN
-      keybinding_toggle_recording_accelerator.xalign = 0;
-      #endif
-      editor_box.pack_start (keybinding_toggle_recording_accelerator,
-        false, true, 0);
-      settings.changed.connect ((key) => {
-        if (key == "keybinding-toggle-recording") {
-          set_accelerator_label (
-            keybinding_toggle_recording_accelerator,
-            settings.get_string (key));
-        }
-      });
-      set_accelerator_label (
-        keybinding_toggle_recording_accelerator,
-        settings.get_string ("keybinding-toggle-recording"));
-      #endif
 
       keybinding_toggle_recording_accelerator.width_request = 175;
 
@@ -181,21 +160,6 @@ namespace Peek.Ui {
 
       return false;
     }
-
-    #if ! HAS_GTK_SHORTCUT_LABEL
-    private void set_accelerator_label (Gtk.Label accel_label, string accelerator) {
-      uint accelerator_key;
-      Gdk.ModifierType accelerator_mods;
-      Gtk.accelerator_parse (accelerator, out accelerator_key, out accelerator_mods);
-      var label = Gtk.accelerator_get_label (accelerator_key, accelerator_mods);
-
-      if (label == "") {
-        label = _ ("deactivated");
-      }
-
-      accel_label.label = label;
-    }
-    #endif
 
     private static bool no_modifier_set (Gdk.ModifierType mods) {
       return (mods & Gtk.accelerator_get_default_mod_mask ()) == 0;
