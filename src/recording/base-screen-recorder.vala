@@ -26,8 +26,16 @@ namespace Peek.Recording {
 
     public abstract bool record (RecordingArea area);
 
+    private bool _is_cancelling;
+    protected bool is_cancelling {
+      get {
+        return _is_cancelling && !is_recording;
+      }
+    }
+
     public void stop () {
       debug ("Recording stopped");
+      _is_cancelling = false;
       is_recording = false;
       stop_recording ();
     }
@@ -44,8 +52,9 @@ namespace Peek.Recording {
 
     public void cancel () {
       if (is_recording) {
-        stop_recording ();
+        _is_cancelling = true;
         is_recording = false;
+        stop_recording ();
         remove_temp_file ();
         recording_aborted (0);
       }

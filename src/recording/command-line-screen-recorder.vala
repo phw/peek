@@ -34,13 +34,20 @@ namespace Peek.Recording {
           Process.term_sig (status), Process.exit_status (status),
           Utils.is_exit_status_success (status).to_string ());
 
-          var file = File.new_for_path (temp_file);
-          try {
-            var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
-            debug ("temporary file %s, %lld bytes",
-            temp_file, file_info.get_size ());
-          } catch (Error e) {
-            stderr.printf ("Error: %s\n", e.message);
+          if (temp_file != null) {
+            var file = File.new_for_path (temp_file);
+            try {
+              var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
+              debug ("temporary file %s, %lld bytes",
+              temp_file, file_info.get_size ());
+              } catch (Error e) {
+                stderr.printf ("Error: %s\n", e.message);
+              }
+          }
+
+          // If the recorder was cancelled no further action is required
+          if (is_cancelling) {
+            return;
           }
 
           if (!is_exit_status_success (status)) {
