@@ -114,12 +114,6 @@ namespace Peek {
 
     public override int command_line (ApplicationCommandLine command_line) {
       var options = command_line.get_options_dict ();
-      if (options.contains ("backend")) {
-        var backend = options.lookup_value ("backend", VariantType.STRING);
-        this.activate_action ("new-window-with-backend", backend);
-        return Posix.EXIT_SUCCESS;
-      }
-
       if (options.contains ("start")) {
         this.start_recording ();
         return Posix.EXIT_SUCCESS;
@@ -135,7 +129,13 @@ namespace Peek {
         return Posix.EXIT_SUCCESS;
       }
 
-      this.activate ();
+      if (options.contains ("backend")) {
+        var backend = options.lookup_value ("backend", VariantType.STRING);
+        this.activate_action ("new-window-with-backend", backend);
+      } else {
+        this.activate_action ("new-window", null);
+      }
+
       return Posix.EXIT_SUCCESS;
     }
 
