@@ -6,12 +6,14 @@
       <item>
         <attribute name="label" translatable="yes">New _window</attribute>
         <attribute name="action">app.new-window</attribute>
+        <attribute name="accel">&lt;Primary&gt;n</attribute>
       </item>
     </section>
     <section>
       <item>
         <attribute name="label" translatable="yes">_Preferences</attribute>
         <attribute name="action">app.preferences</attribute>
+        <attribute name="accel">&lt;Primary&gt;p</attribute>
       </item>
     </section>
     <section>
