@@ -111,12 +111,15 @@ namespace Peek.Recording {
         pipeline.append_printf ("videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
 
-      if (output_format == OUTPUT_FORMAT_GIF) {
-        pipeline.append ("x264enc speed-preset=ultrafast threads=%T ! ");
-        pipeline.append ("queue ! avimux");
-      } else {
+      if (output_format == OUTPUT_FORMAT_WEBM) {
         pipeline.append ("vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
+      } else if (output_format == OUTPUT_FORMAT_MP4) {
+        pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
+        pipeline.append ("queue ! mp4mux");
+      } else {
+        pipeline.append ("x264enc speed-preset=ultrafast threads=%T ! ");
+        pipeline.append ("queue ! avimux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
@@ -124,7 +127,9 @@ namespace Peek.Recording {
     }
 
     private string get_temp_file_extension () {
-      return output_format == OUTPUT_FORMAT_GIF ? ".avi" : ".webm";
+      var extension = output_format == OUTPUT_FORMAT_GIF ?
+        "avi" : Utils.get_file_extension_for_format (output_format);
+      return "." + extension;
     }
   }
 

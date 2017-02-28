@@ -25,10 +25,12 @@
     <key name="recording-output-format" type="s">
       <choices>
         <choice value="gif"/>
+        <choice value="mp4"/>
         <choice value="webm"/>
       </choices>
       <aliases>
         <alias value="GIF" target="gif"/>
+        <alias value="MP4" target="mp4"/>
         <alias value="WebM" target="webm"/>
       </aliases>
       <default>"gif"</default>

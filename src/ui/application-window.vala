@@ -433,15 +433,15 @@ namespace Peek.Ui {
       chooser.do_overwrite_confirmation = true;
       chooser.filter = filter;
 
-      string filename = default_file_name_format;
+      string extension = Utils.get_file_extension_for_format (
+        recorder.output_format);
+      string filename = default_file_name_format + "." + extension;
       string mimetype;
 
       if (recorder.output_format == OUTPUT_FORMAT_WEBM) {
         mimetype = "image/webm";
-        filename += ".webm";
       } else {
         mimetype = "image/gif";
-        filename += ".gif";
       }
 
       filter.add_mime_type (mimetype);

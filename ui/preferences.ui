@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 
+<!-- Generated with glade 3.20.0
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -152,6 +152,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                     <items>
                       <item id="gif" translatable="yes">GIF</item>
                       <item id="webm" translatable="yes">WebM</item>
+                      <item id="mp4" translatable="yes">MP4</item>
                     </items>
                   </object>
                   <packing>

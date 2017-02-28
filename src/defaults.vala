@@ -14,5 +14,6 @@ namespace Peek {
 
   const string OUTPUT_FORMAT_GIF = "gif";
   const string OUTPUT_FORMAT_WEBM = "webm";
+  const string OUTPUT_FORMAT_MP4 = "mp4";
 
 }
