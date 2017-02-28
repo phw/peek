@@ -96,6 +96,11 @@ namespace Peek.Ui {
       init_keybinding_editor ();
     }
 
+    public override bool delete_event (Gdk.EventAny event) {
+      Application.keybindings_paused = false;
+      return false;
+    }
+
     private void init_keybinding_editor () {
       var editor_box = keybinding_toggle_recording_editor;
 
@@ -138,11 +143,10 @@ namespace Peek.Ui {
         _ ("Change"));
       keybinding_toggle_recording_button.toggled.connect (
         on_keybinding_toggle_recording_button_toggled);
-      keybinding_toggle_recording_button.focus_out_event.connect (
-        on_keybinding_toggle_recording_button_focus_out);
-      keybinding_toggle_recording_button.key_release_event.connect (
-        on_keybinding_toggle_recording_button_keypress);
       editor_box.pack_start (keybinding_toggle_recording_button, false, true, 0);
+
+      // Listen to key events on the window for setting keyboard shortcuts
+      this.key_release_event.connect (on_key_release);
 
       editor_box.show_all ();
     }
@@ -150,19 +154,20 @@ namespace Peek.Ui {
     private void on_keybinding_toggle_recording_button_toggled (Button source) {
       if (keybinding_toggle_recording_button.active) {
         keybinding_toggle_recording_button.label = _ ("Press keys…");
+        Application.keybindings_paused = true;
       } else {
         keybinding_toggle_recording_button.label = _ ("Change");
+        Application.keybindings_paused = false;
       }
     }
 
-    private bool on_keybinding_toggle_recording_button_focus_out (Gdk.EventFocus event) {
-      keybinding_toggle_recording_button.active = false;
-      return false;
-    }
-
-    private bool on_keybinding_toggle_recording_button_keypress (Gdk.EventKey event) {
+    private bool on_key_release (Gdk.EventKey event) {
       if (keybinding_toggle_recording_button.active) {
-        if (event.keyval == Gdk.Key.Escape &&
+        keybinding_toggle_recording_button.active = false;
+
+        if (event.keyval == Gdk.Key.Escape && no_modifier_set (event.state)) {
+          return true;
+        } else if (event.keyval == Gdk.Key.BackSpace &&
           no_modifier_set (event.state)) {
           settings.set_string ("keybinding-toggle-recording", "");
         } else if (event.is_modifier == 0) {
@@ -171,7 +176,6 @@ namespace Peek.Ui {
           settings.set_string ("keybinding-toggle-recording", accelerator);
         }
 
-        keybinding_toggle_recording_button.active = false;
         return true;
       }
 

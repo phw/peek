@@ -50,6 +50,8 @@ namespace Peek {
       return settings;
     }
 
+    public static bool keybindings_paused { get; set; default = false; }
+
     public Application () {
       Object (application_id: APP_ID,
         flags: ApplicationFlags.HANDLES_COMMAND_LINE);
@@ -203,8 +205,10 @@ namespace Peek {
     }
 
     private void handle_keybinding_toggle_recording (string keystring) {
-      debug ("Global keybinding %s\n", keystring);
-      toggle_recording ();
+      if (!keybindings_paused) {
+        debug ("Global keybinding %s\n", keystring);
+        toggle_recording ();
+      }
     }
 
     private void new_window () {
