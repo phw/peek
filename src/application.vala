@@ -173,6 +173,7 @@ namespace Peek {
 
       // Global key bindings
       Keybinder.init ();
+      Keybinder.set_use_cooked_accelerators (false);
 
       settings.bind ("keybinding-toggle-recording",
         this, "keybinding_toggle_recording",

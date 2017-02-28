@@ -166,7 +166,8 @@ namespace Peek.Ui {
           no_modifier_set (event.state)) {
           settings.set_string ("keybinding-toggle-recording", "");
         } else if (event.is_modifier == 0) {
-          string accelerator = Gtk.accelerator_name (event.keyval, event.state);
+          var mods = event.state & Gtk.accelerator_get_default_mod_mask ();
+          string accelerator = Gtk.accelerator_name (event.keyval, mods);
           settings.set_string ("keybinding-toggle-recording", accelerator);
         }
 
