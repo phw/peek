@@ -1,8 +1,9 @@
-# Version 0.10.0 - 2017-??-??
+# Version 1.0.0 - 2017-??-??
  * recording: Support Gnome Shell screencast DBUS service. Allows recording
    under Gnome Shell with XWayland (#33)
- * recording: Support WebM as output format (#73)
+ * recording: Support WebM and MP4 as output format (#73)
  * recording: Added option to not record mouse cursor
+ * ui: Recording can be started / stopped via configurable keyboard shortcut (#23)
  * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
        the recording (partially fixes #23)
  * ui: Add `--backend` command line parameter to manually choose recording
@@ -10,6 +11,7 @@
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
  * fix: Moving Peek partially outside the visible area does no longer break the
         recording. Instead the recording area is clipped to the visible part (#64)
+ * fix: Starting recording in maximized window relocated the window on Ubuntu Unity (#74)
 
 # Version 0.9.1 - 2017-02-21
  * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
