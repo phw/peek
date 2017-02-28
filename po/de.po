@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 12:20+0100\n"
-"PO-Revision-Date: 2017-02-21 22:26+0100\n"
+"PO-Revision-Date: 2017-02-28 11:46+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Weblate 2.12-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
@@ -67,7 +67,7 @@ msgstr "Dunkles Thema bevorzugen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Globales Tastaturkürzel um Aufnahme zu starten / zu stoppen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
@@ -208,17 +208,16 @@ msgid "User interface"
 msgstr "Benutzeroberfläche"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Aufnahme starten"
+msgstr "Aufnahme starten / stoppen"
 
 #: ui/preferences.ui:127
 msgid "deactivated"
-msgstr ""
+msgstr "deaktiviert"
 
 #: ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Ändern"
 
 #: ui/preferences.ui:184
 msgid "Recording"
@@ -238,7 +237,7 @@ msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
 msgid "Resolution downsampling"
