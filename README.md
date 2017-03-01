@@ -130,7 +130,7 @@ acceleration methods can help.
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
 recording. However this does not work as intended on some window managers,
-most notably I3. If this does not work for you on any other window manager
+most notably i3. If this does not work for you on any other window manager
 please open an [issue on Github](https://github.com/phw/peek/issues).
 
 ### Why are the GIF files so big?
@@ -149,6 +149,8 @@ animations with a lot of changes and colors. For best results:
   file format is not well suited for high resolution or full screen recording.
 - Avoid too many colors, since GIF is limited to a 256 color palette. This one
   is not so much about file size but more about visual quality.
+- If the above suggestions are not suitable for your use case, consider using
+  WebM or MP4 format (see below).
 
 ### If GIF is so bad why use it at all?
 While GIF is a very old format, it has seen some rise in usage again in recent
@@ -159,8 +161,10 @@ cases for Peek are recording small user interactions for showing UI features
 of an app you developed, for making short tutorials or for reporting bugs.
 
 ### What about WebM or MP4? Those are well supported on the web.
-True, but still still not as universally supported as GIFs. But Peek will get
-an option to choose WebM output for those who prefer or need it.
+Peek allows you to record in both WebM and MP4 format, just choose your preferred
+output format in the preferences. Both are well supported by modern browser, even
+though they are still not as universally supported by tools and online services
+as GIFs.
 
 ### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
