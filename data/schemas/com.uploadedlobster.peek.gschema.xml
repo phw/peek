@@ -43,7 +43,7 @@
     </key>
     <key name="recording-framerate" type="i">
       <range min="1" max="60"/>
-      <default>15</default>
+      <default>10</default>
       <summary>Framerate</summary>
     </key>
     <key name="recording-downsample" type="i">
