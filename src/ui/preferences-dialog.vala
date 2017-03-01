@@ -37,13 +37,7 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.CheckButton interface_open_file_manager;
 
-    // FIXME: For some cases we cannot do ShortcutLabel : Gtk.ShortcutLabel,
-    // so we have to distingiush between both classes here.
-    #if HAS_GTK_SHORTCUT_LABEL
-    private Gtk.ShortcutLabel keybinding_toggle_recording_accelerator;
-    #else
     private ShortcutLabel keybinding_toggle_recording_accelerator;
-    #endif
 
     [GtkChild]
     private Gtk.Box keybinding_toggle_recording_box;
