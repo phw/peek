@@ -12,10 +12,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 13:37+0100\n"
-"PO-Revision-Date: 2017-02-26 10:21+0000\n"
+"PO-Revision-Date: 2017-03-01 09:42+0000\n"
 "Last-Translator: Dawid Dziurla <dawidd0811@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
-"pl/>\n"
+"Language-Team: Polish "
+"<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,7 +70,7 @@ msgstr "Preferuj ciemny motyw"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Globalna kombinacja klawiszy do przełączania nagrywania"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
@@ -172,15 +172,15 @@ msgstr "Pokaż w menadżerze plików"
 
 #: src/ui/preferences-dialog.vala:97
 msgid "Press keys…"
-msgstr ""
+msgstr "Wciśnij klawisze…"
 
 #: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Zmień"
 
 #: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
 msgid "deactivated"
-msgstr ""
+msgstr "zdezaktywowany"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -221,9 +221,8 @@ msgid "User interface"
 msgstr "Interfejs użytkownika"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Zacznij nagrywać"
+msgstr "Zacznij / przestań nagrywać"
 
 #: ui/preferences.ui:184
 msgid "Recording"
@@ -243,7 +242,7 @@ msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
 msgid "Resolution downsampling"
