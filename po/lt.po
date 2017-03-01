@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 13:37+0100\n"
-"PO-Revision-Date: 2017-02-22 11:12+0000\n"
+"PO-Revision-Date: 2017-03-01 09:52+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
-"translations/lt/>\n"
+"Language-Team: Lithuanian "
+"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
@@ -69,7 +69,7 @@ msgstr "Teikti pirmenybę tamsiai temai"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Visuotinis klavišų susiejimas, skirtas įrašinėjimo perjungimui"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
@@ -171,15 +171,15 @@ msgstr "Rodyti failų tvarkytuvėje"
 
 #: src/ui/preferences-dialog.vala:97
 msgid "Press keys…"
-msgstr ""
+msgstr "Paspauskite klavišus…"
 
 #: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Pakeisti"
 
 #: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
 msgid "deactivated"
-msgstr ""
+msgstr "išjungta"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -220,9 +220,8 @@ msgid "User interface"
 msgstr "Naudotojo sąsaja"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Pradėti įrašinėjimą"
+msgstr "Pradėti / stabdyti įrašinėjimą"
 
 #: ui/preferences.ui:184
 msgid "Recording"
@@ -242,7 +241,7 @@ msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
 msgid "Resolution downsampling"
