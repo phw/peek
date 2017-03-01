@@ -162,7 +162,7 @@ of an app you developed, for making short tutorials or for reporting bugs.
 
 ### What about WebM or MP4? Those are well supported on the web.
 Peek allows you to record in both WebM and MP4 format, just choose your preferred
-output format in the preferences. Both are well supported by modern browser, even
+output format in the preferences. Both are well supported by modern browsers, even
 though they are still not as universally supported by tools and online services
 as GIFs.
 
