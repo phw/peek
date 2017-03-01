@@ -141,9 +141,12 @@ the resulting files are already small and compare well to other GIF recording
 software. In the end the GIF format is not well suited for doing large
 animations with a lot of changes and colors. For best results:
 
-- Use a low frame rate. 15fps seems to work quite well.
+- Use a lower frame rate. 10fps is the default and works well, but in many
+  cases you can even get good results with lower framerates.
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
+- Record small areas or use the downsample option to scale the image. The GIF
+  file format is not well suited for high resolution or full screen recording.
 - Avoid too many colors, since GIF is limited to a 256 color palette. This one
   is not so much about file size but more about visual quality.
 
