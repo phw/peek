@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 13:37+0100\n"
-"PO-Revision-Date: 2017-02-24 10:20+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
-"translations/uk/>\n"
+"PO-Revision-Date: 2017-03-03 03:29+0000\n"
+"Last-Translator: strixaluco <maddox@i.ua>\n"
+"Language-Team: Ukrainian "
+"<https://hosted.weblate.org/projects/peek/translations/uk/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
@@ -44,13 +44,12 @@ msgid "Open file manager after saving"
 msgstr "Відкрити менеджер файлів після збереження"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
-"Час у мілісекундах, за яке розмір області запису відображається після "
-"закінчення зміни розміру"
+"Час у мілісекундах, протягом якого показується розмір області запису після "
+"закінчення зміни розміру."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -65,13 +64,12 @@ msgstr ""
 "дати."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "Надати перевагу темній темі"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Глобальні скорочення для перемикання запису"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
@@ -86,7 +84,6 @@ msgid "Framerate"
 msgstr "Кадрова частота"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:52
-#, fuzzy
 msgid "Resolution downsampling factor"
 msgstr "Множник понижувальної передискретизації роздільної здатності"
 
@@ -95,12 +92,10 @@ msgid "Whether to capture the mouse cursor"
 msgstr "Захоплювати вказівник миші"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:60
-#, fuzzy
 msgid "Size and position of the last open main window"
-msgstr "Розмір і позиція головного вікна з останнього відкриття"
+msgstr "Розмір і позиція головного вікна з часу останнього відкриття"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:64
-#, fuzzy
 msgid "Path where last video got saved"
 msgstr "Шлях, за яким відео було збережено востаннє"
 
@@ -176,15 +171,15 @@ msgstr "Показати в менеджері файлів"
 
 #: src/ui/preferences-dialog.vala:97
 msgid "Press keys…"
-msgstr ""
+msgstr "Натисніть клавіші…"
 
 #: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Змінити"
 
 #: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
 msgid "deactivated"
-msgstr ""
+msgstr "вимкнено"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -227,7 +222,6 @@ msgid "User interface"
 msgstr "Інтерфейс користувача"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
 msgstr "Почати запис"
 
@@ -249,10 +243,9 @@ msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
-#, fuzzy
 msgid "Resolution downsampling"
 msgstr "Понижувальна передискретизація роздільної здатності"
 
