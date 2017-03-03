@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-02-28 13:37+0100\n"
-"PO-Revision-Date: 2017-02-21 21:16+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
-"cs/>\n"
+"PO-Revision-Date: 2017-03-03 15:38+0000\n"
+"Last-Translator: Michal Mašek <misamasek@gmail.com>\n"
+"Language-Team: Czech "
+"<https://hosted.weblate.org/projects/peek/translations/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.12\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
 msgid "Peek"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
 msgid "Change"
-msgstr ""
+msgstr "Změnit"
 
 #: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
 msgid "deactivated"
@@ -218,9 +218,8 @@ msgid "User interface"
 msgstr "Uživatelské rozhraní"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Spustit nahrávání"
+msgstr "Spustit / zastavit nahrávání"
 
 #: ui/preferences.ui:184
 msgid "Recording"
@@ -228,19 +227,19 @@ msgstr "Nahrávání"
 
 #: ui/preferences.ui:207
 msgid "Output format"
-msgstr ""
+msgstr "Výstupní formát"
 
 #: ui/preferences.ui:222
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:223
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:224
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:295
 msgid "Resolution downsampling"
