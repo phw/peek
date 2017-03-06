@@ -24,6 +24,7 @@ namespace Peek.PostProcessing {
         var output_file = Utils.create_temp_file ("gif");
         string[] argv = {
           "convert",
+          "-debug", "All",
           "-set", "delay", delay.to_string (),
           "-layers", "Optimize",
           file.get_path (),
