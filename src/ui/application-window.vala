@@ -55,8 +55,11 @@ namespace Peek.Ui {
     private File in_file;
     private File out_file;
     private RecordingArea active_recording_area;
+    private string stop_button_label;
 
     private GLib.Settings settings;
+
+    private const int SMALL_WINDOW_SIZE = 300;
 
     public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
@@ -140,6 +143,8 @@ namespace Peek.Ui {
         show_size_indicator ();
       });
 
+      stop_button_label = stop_button.label;
+
       // Reverse window decoration on Unity, close button should be left
       if (DesktopIntegration.is_unity ()) {
         var decoration = this.headerbar.decoration_layout.split (":", 2);
@@ -221,24 +226,35 @@ namespace Peek.Ui {
     }
 
     private void show_size_indicator () {
-      if (this.get_realized () && !is_recording) {
-        var size_label = new StringBuilder ();
+      if (this.get_realized ()) {
         var area = get_recording_area ();
-        size_label.printf ("%i x %i", area.width, area.height);
-        size_indicator.set_text (size_label.str);
-        size_indicator.show ();
 
-        if (size_indicator_timeout != 0) {
-          Source.remove (size_indicator_timeout);
+        if (get_window_width () < SMALL_WINDOW_SIZE) {
+          GtkHelper.hide_button_label (record_button);
+          GtkHelper.hide_button_label (stop_button);
+        } else {
+          GtkHelper.show_button_label (record_button);
+          GtkHelper.show_button_label (stop_button);
         }
 
-        if (!recorder.is_recording) {
-          size_indicator.opacity = 1.0;
-          size_indicator_timeout = Timeout.add (size_indicator_delay, () => {
-            size_indicator_timeout = 0;
-            size_indicator.opacity = 0.0;
-            return false;
-          });
+        if (!is_recording) {
+          var size_label = new StringBuilder ();
+          size_label.printf ("%i x %i", area.width, area.height);
+          size_indicator.set_text (size_label.str);
+          size_indicator.show ();
+
+          if (size_indicator_timeout != 0) {
+            Source.remove (size_indicator_timeout);
+          }
+
+          if (!recorder.is_recording) {
+            size_indicator.opacity = 1.0;
+            size_indicator_timeout = Timeout.add (size_indicator_delay, () => {
+              size_indicator_timeout = 0;
+              size_indicator.opacity = 0.0;
+              return false;
+              });
+            }
         }
       }
     }
@@ -295,7 +311,11 @@ namespace Peek.Ui {
         return;
       } else {
         stop_button.sensitive = false;
-        stop_button.set_label (_ ("Rendering…"));
+
+        if (get_window_width () >= SMALL_WINDOW_SIZE) {
+          stop_button.set_label (_ ("Rendering…"));
+        }
+
         recorder.stop ();
       }
     }
@@ -323,7 +343,10 @@ namespace Peek.Ui {
         is_recording = true;
         size_indicator.opacity = 0.0;
         record_button.hide ();
-        stop_button.set_label (_ ("_Stop"));
+        if (get_window_width () >= SMALL_WINDOW_SIZE) {
+          stop_button.set_label (stop_button_label);
+        }
+
         stop_button.sensitive = true;
         stop_button.show ();
         freeze_window_size ();
@@ -588,6 +611,12 @@ namespace Peek.Ui {
       builder.add_value (new GLib.Variant.int32(w));
       builder.add_value (new GLib.Variant.int32(h));
       settings.set_value ("persist-window-geometry", builder.end ());
+    }
+
+    private int get_window_width () {
+      int w, h;
+      get_size (out w, out h);
+      return w;
     }
   }
 

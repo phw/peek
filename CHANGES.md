@@ -8,6 +8,7 @@
        the recording
  * ui: Add `--backend` command line parameter to manually choose recording
        backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
+ * ui: Hide button label on small window width. Allows for smaller recording area.
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
  * fix: Moving Peek partially outside the visible area does no longer break the
         recording. Instead the recording area is clipped to the visible part (#64)

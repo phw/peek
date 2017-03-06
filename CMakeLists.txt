@@ -69,6 +69,7 @@ vala_precompile(VALA_C
     src/desktop-integration.vala
     src/defaults.vala
     src/errordomain.vala
+    src/gtk-helper.vala
     src/utils.vala
     src/dbus/freedesktop.vala
     src/dbus/gnome-shell.vala
