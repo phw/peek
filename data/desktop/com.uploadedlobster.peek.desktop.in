@@ -3,7 +3,7 @@ Name=Peek
 Exec=env GDK_BACKEND=x11 peek
 GenericName=Animated GIF recorder
 Comment=Record short animated GIF images from your screen
-Icon=peek
+Icon=com.uploadedlobster.peek
 Type=Application
 Categories=GTK;GNOME;Utility;X-DesktopUtility;
 StartupNotify=true
