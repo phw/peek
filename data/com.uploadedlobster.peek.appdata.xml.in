@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Philipp Wolfer <ph.wolfer@gmail.com> -->
+<component type="desktop">
+  <id>com.uploadedlobster.peek.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Peek</name>
+  <summary>
+    Simple animated GIF screen recorder with an easy to use interface
+  </summary>
+
+  <description>
+    <p>
+      Peek makes it easy to creates short screencasts of a screen area. It was
+      built for the specific use case of recording screen areas, e.g., for
+      easily showing UI features of your own apps or for showing a bug in bug
+      reports. With Peek you simply place the Peek window over the area you
+      want to record and press "Record". Peek is optimized for generating
+      animated GIFs, but you can also directly record to WebM or MP4 if you
+      prefer.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Select a screen region to record</li>
+      <li>Save recorded video as an optimized animated GIF</li>
+      <li>Record directly to WebM or MP4 format</li>
+      <li>Simple user interface optimized for the task</li>
+      <li>Automatically downscale recorded videos</li>
+      <li>Support for HiDPI screens</li>
+      <li>Works inside a Gnome Shell Wayland session (using XWayland)</li>
+    </ul>
+    <p>
+      Peek is not a general purpose screencast app with extended features but
+      rather focuses on the single task of creating small silent screencasts of
+      an area of the screen for creating GIF animations or silent WebM or MP4
+      videos.
+    </p>
+  </description>
+
+  <!-- <screenshots>
+    <screenshot type="default">
+      <image>http://www.hughsie.com/en_US/main.png</image>
+      <caption>The main window showing the application in action</caption>
+    </screenshot>
+    <screenshot>
+      <image>http://www.hughsie.com/en_US/preferences.png</image>
+      <caption>The preferences window where you can change the defaults</caption>
+    </screenshot>
+  </screenshots> -->
+
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
+
+  <url type="homepage">http://peek.uploadedlobster.com</url>
+  <!-- <url type="help">http://peek.uploadedlobster.com</url> -->
+  <url type="faq">https://github.com/phw/peek#frequently-asked-questions</url>
+  <url type="bugtracker">https://github.com/phw/peek/issues</url>
+  <!-- <url type="translate">https://hosted.weblate.org/projects/peek/translations/</url> -->
+
+  <translation type="gettext">peek</translation>
+
+  <provides>
+    <binary>peek</binary>
+  </provides>
+
+  <developer_name>Philipp Wolfer</developer_name>
+  <update_contact>ph.wolfer@gmail.com</update_contact>
+</component>
