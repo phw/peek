@@ -129,7 +129,8 @@ documentation how to enable compositing.
 Some users have experienced recorded windows flicker or other strange visual
 artifacts only visible in the recorded GIF. This is most likely a video driver
 issue. If you are using Intel video drivers switching between the SNA and UXA
-acceleration methods can help.
+acceleration methods can help. For NVIDIA drivers changing the "Allow Flipping"
+setting in the NVIDIA control panel was reported to help.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
