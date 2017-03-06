@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:07+0100\n"
-"PO-Revision-Date: 2017-03-06 11:37+0000\n"
+"PO-Revision-Date: 2017-03-06 15:15+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -230,6 +230,8 @@ msgstr "Einstellungen für Peek"
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
 msgstr ""
+"Einfacher Bildschirmrekorder für animierte GIFs mit einer einfach zu "
+"bedienenden Oberfläche"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -243,35 +245,35 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Merkmale:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Eine Bildschirmregion zum Aufnehmen wählen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Das aufgenommene Video als optimiertes animiertes GIF speichern"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Direkt im WebM- oder MP4-Format aufnehmen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Eine Benutzeroberfläche, die für den Anwendungsfall optimiert ist"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Aufgenommene Videos automatisch skalieren"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Unterstützung für hochauflösende Bildschirme"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a Gnome Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Funktioniert in Gnome Shell mit Wayland (mit XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -283,11 +285,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Das Hauptfenster, mit dem der Aufnahmebereich ausgewählt wird"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek nimmt sich selbst auf"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
