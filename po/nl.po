@@ -297,7 +297,7 @@ msgstr "Het hoofdvenster om het op te nemen gebied te selecteren"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr "Peek neemt zichzelf op"
+msgstr "Peek is bezig zichzelf op te nemen"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
