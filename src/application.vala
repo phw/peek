@@ -217,8 +217,7 @@ namespace Peek {
     private void new_window () {
       try {
         var recorder = ScreenRecorderFactory.create_default_screen_recorder ();
-        main_window = new ApplicationWindow (this, recorder);
-        main_window.present ();
+        show_window (recorder);
       } catch (PeekError e) {
         stderr.printf (_ ("Unable to create default screen recorder.\n"));
       }
@@ -231,11 +230,19 @@ namespace Peek {
 
       try {
         var recorder = ScreenRecorderFactory.create_screen_recorder (backend_name);
-        main_window = new ApplicationWindow (this, recorder);
-        main_window.present ();
+        show_window (recorder);
       } catch (PeekError e) {
         stderr.printf (_ ("Unable to initialize backend %s.\n"), backend_name);
         stderr.printf (e.message);
+      }
+    }
+
+    private void show_window (ScreenRecorder recorder) {
+      main_window = new ApplicationWindow (this, recorder);
+      main_window.present ();
+
+      if (DesktopIntegration.is_wayland_backend ()) {
+        show_wayland_warning (main_window);
       }
     }
 
@@ -317,6 +324,18 @@ namespace Peek {
           }
         }
       }
+    }
+
+    private void show_wayland_warning (Gtk.Window parent) {
+      var msg = new Gtk.MessageDialog (parent, Gtk.DialogFlags.MODAL,
+        Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
+        _ ("Native Wayland backend is unsupported"));
+      msg.secondary_use_markup = true;
+      msg.secondary_text = _ ("You are running Peek natively on Wayland, this is currently unsupported. Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n\nFor Details see the Peek <a href='https://github.com/phw/peek#why-no-native-wayland-support'>FAQ about Wayland support</a>.");
+      msg.response.connect ((response_id) => {
+        parent.destroy ();
+      });
+      msg.show ();
     }
   }
 
