@@ -11,7 +11,7 @@
 
   <description>
     <p>
-      Peek makes it easy to creates short screencasts of a screen area. It was
+      Peek makes it easy to create short screencasts of a screen area. It was
       built for the specific use case of recording screen areas, e.g., for
       easily showing UI features of your own apps or for showing a bug in bug
       reports. With Peek you simply place the Peek window over the area you
@@ -31,22 +31,29 @@
     </ul>
     <p>
       Peek is not a general purpose screencast app with extended features but
-      rather focuses on the single task of creating small silent screencasts of
+      rather focuses on the single task of creating small, silent screencasts of
       an area of the screen for creating GIF animations or silent WebM or MP4
       videos.
     </p>
   </description>
 
-  <!-- <screenshots>
+  <screenshots>
     <screenshot type="default">
-      <image>http://www.hughsie.com/en_US/main.png</image>
-      <caption>The main window showing the application in action</caption>
+      <image>https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-main-window.png</image>
+      <caption>The main window to select the recording area</caption>
     </screenshot>
     <screenshot>
-      <image>http://www.hughsie.com/en_US/preferences.png</image>
-      <caption>The preferences window where you can change the defaults</caption>
+      <image>https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif</image>
+      <caption>Peek is recording itself</caption>
     </screenshot>
-  </screenshots> -->
+  </screenshots>
+
+  <categories>
+    <category>Graphics</category>
+    <category>Utility</category>
+    <category>GNOME</category>
+    <category>GTK</category>
+  </categories>
 
   <kudos>
     <kudo>AppMenu</kudo>
