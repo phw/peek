@@ -1,6 +1,4 @@
-data/com.uploadedlobster.peek.appdata.xml.in
 data/desktop/com.uploadedlobster.peek.desktop.in
-data/schemas/com.uploadedlobster.peek.gschema.xml
 src/application.vala
 src/ui/about-dialog.vala
 src/ui/application-window.vala
@@ -9,3 +7,5 @@ ui/about.ui
 ui/application-window.ui
 ui/gtk/menus.ui
 ui/preferences.ui
+data/com.uploadedlobster.peek.appdata.xml.in
+data/schemas/com.uploadedlobster.peek.gschema.xml
