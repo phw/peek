@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-28 13:37+0100\n"
+"POT-Creation-Date: 2017-03-06 12:17+0100\n"
 "PO-Revision-Date: 2017-02-22 12:45+0000\n"
 "Last-Translator: Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -23,7 +23,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 msgid "Peek"
 msgstr "Peek"
 
@@ -75,11 +75,11 @@ msgstr ""
 msgid "Output file format"
 msgstr "صيغة الملف الناتج"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:252
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:230
 msgid "Delay in seconds before recording starts"
 msgstr "التأخير بالثواني قبل بدء التسجيل"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:337
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:315
 msgid "Framerate"
 msgstr "معدل الأطر"
 
@@ -99,11 +99,11 @@ msgstr "حجم ومكان آخر نافذة رئيسية مفتوحة"
 msgid "Path where last video got saved"
 msgstr "مسار آخر ملف تم حفظه"
 
-#: src/application.vala:59
+#: src/application.vala:61
 msgid "Show the version of the program and exit"
 msgstr "أظهر نسخة البرنامج ثم أغلقه"
 
-#: src/application.vala:63
+#: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
@@ -111,74 +111,83 @@ msgstr ""
 "تختار ما هي أداة التسجيل المستخدمة (gnome-shell, ffmpeg أو avconv). إن لم "
 "يتم تحديدها فإن Peek سيختارها تلقائيا."
 
-#: src/application.vala:64
+#: src/application.vala:66
 msgid "BACKEND"
 msgstr "أداة التسجيل"
 
-#: src/application.vala:68
+#: src/application.vala:70
 msgid "Start recording in all running Peek instances."
 msgstr "بدء التسجيل في جميع نوافذ Peek المفتوحة."
 
-#: src/application.vala:72
+#: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
 msgstr "وقف التسجيل في جميع نوافذ Peek المفتوحة."
 
-#: src/application.vala:76
+#: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
 msgstr "تبديل حالة التسجيل في جميع نوافذ Peek المفتوحة."
 
-#: src/application.vala:215
+#: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
 msgstr "تعذر إنشاء مسجل الشاشة الافتراضي.\n"
 
-#: src/application.vala:229
+#: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "تعذر تهيئة أداة التسجيل %s.\n"
 
-#: src/ui/application-window.vala:298
+#: src/application.vala:332
+msgid "Native Wayland backend is unsupported"
+msgstr ""
+
+#: src/application.vala:334
+msgid ""
+"You are running Peek natively on Wayland, this is currently unsupported. "
+"Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ about Wayland support</a>."
+msgstr ""
+
+#: src/ui/application-window.vala:316
 msgid "Rendering…"
 msgstr "يُحوِّل…"
 
-#: src/ui/application-window.vala:326 ui/application-window.ui:154
-msgid "_Stop"
-msgstr "أوقف"
-
-#: src/ui/application-window.vala:426
+#: src/ui/application-window.vala:449
 msgid "Save animation"
 msgstr "احفظ الملف"
 
-#: src/ui/application-window.vala:427
+#: src/ui/application-window.vala:450
 msgid "_Cancel"
 msgstr "ألغِ"
 
-#: src/ui/application-window.vala:429
+#: src/ui/application-window.vala:452
 msgid "_Save"
 msgstr "احفظ"
 
-#: src/ui/application-window.vala:515
+#: src/ui/application-window.vala:538
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "تم حفظ الملف باسم \"%s\""
 
-#: src/ui/application-window.vala:522
+#: src/ui/application-window.vala:545
 msgid "Click here to show the saved file in your file manager."
 msgstr "انقر هنا لإظهار الملف المحفوظ في مدير الملفات."
 
-#: src/ui/application-window.vala:524
+#: src/ui/application-window.vala:547
 msgid "Show in file manager"
 msgstr "اظهر في مدير الملفات"
 
-#: src/ui/preferences-dialog.vala:97
-msgid "Press keys…"
+#: src/ui/preferences-dialog.vala:112
+msgid "deactivated"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
+#: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
-msgid "deactivated"
+#: src/ui/preferences-dialog.vala:136
+msgid "Press keys…"
 msgstr ""
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
@@ -187,15 +196,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Mohamed Sakhri <mohamed.sakhri@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:139
+#: ui/application-window.ui:33 ui/application-window.ui:140
 msgid "Start recording"
 msgstr "ابدأ التسجيل"
 
-#: ui/application-window.ui:128
+#: ui/application-window.ui:129
 msgid "_Record"
 msgstr "سجِّل"
 
-#: ui/application-window.ui:165
+#: ui/application-window.ui:156
+msgid "_Stop"
+msgstr "أوقف"
+
+#: ui/application-window.ui:167
 msgid "Stop recording"
 msgstr "أوقف التسجيل"
 
@@ -203,15 +216,15 @@ msgstr "أوقف التسجيل"
 msgid "New _window"
 msgstr "نافذة جديدة"
 
-#: ui/gtk/menus.ui:13
+#: ui/gtk/menus.ui:14
 msgid "_Preferences"
 msgstr "التفضيلات"
 
-#: ui/gtk/menus.ui:19
+#: ui/gtk/menus.ui:21
 msgid "_About"
 msgstr "عن البرنامج"
 
-#: ui/gtk/menus.ui:23
+#: ui/gtk/menus.ui:25
 msgid "_Quit"
 msgstr "أغلق"
 
@@ -224,35 +237,35 @@ msgstr "واجهة المستخدم"
 msgid "Start / stop recording"
 msgstr "ابدأ التسجيل"
 
-#: ui/preferences.ui:184
+#: ui/preferences.ui:162
 msgid "Recording"
 msgstr "التسجيل"
 
-#: ui/preferences.ui:207
+#: ui/preferences.ui:185
 msgid "Output format"
 msgstr "صيغة الناتج"
 
-#: ui/preferences.ui:222
+#: ui/preferences.ui:200
 msgid "GIF"
 msgstr "GIF"
 
-#: ui/preferences.ui:223
+#: ui/preferences.ui:201
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:224
+#: ui/preferences.ui:202
 msgid "MP4"
 msgstr ""
 
-#: ui/preferences.ui:295
+#: ui/preferences.ui:273
 msgid "Resolution downsampling"
 msgstr "تقليل مستوى الدقة"
 
-#: ui/preferences.ui:369
+#: ui/preferences.ui:347
 msgid "Capture mouse cursor"
 msgstr "سجّل مؤشر الفأرة"
 
-#: ui/preferences.ui:400
+#: ui/preferences.ui:378
 msgid "Peek preferences"
 msgstr "تفضيلات Peek"
 

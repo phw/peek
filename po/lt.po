@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-02-28 13:37+0100\n"
+"POT-Creation-Date: 2017-03-06 12:17+0100\n"
 "PO-Revision-Date: 2017-03-01 09:52+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian "
-"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
+"translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.12-dev\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:88
+#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 msgid "Peek"
 msgstr "Peek"
 
@@ -75,11 +75,11 @@ msgstr "Visuotinis klavišų susiejimas, skirtas įrašinėjimo perjungimui"
 msgid "Output file format"
 msgstr "Išvesties failo formatas"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:252
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:42 ui/preferences.ui:230
 msgid "Delay in seconds before recording starts"
 msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:337
+#: data/schemas/com.uploadedlobster.peek.gschema.xml:47 ui/preferences.ui:315
 msgid "Framerate"
 msgstr "Kadrų dažnis"
 
@@ -99,11 +99,11 @@ msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 msgid "Path where last video got saved"
 msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
 
-#: src/application.vala:59
+#: src/application.vala:61
 msgid "Show the version of the program and exit"
 msgstr "Parodyti programos versiją ir išeiti"
 
-#: src/application.vala:63
+#: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
@@ -111,75 +111,84 @@ msgstr ""
 "Pasirinkite įrašymui naudojamą vidinę pusę (gnome-shell, ffmpeg or avconv). "
 "Jei nenustatyta, Peek pasirinks vidinę pusę automatiškai."
 
-#: src/application.vala:64
+#: src/application.vala:66
 msgid "BACKEND"
 msgstr "VIDINĖ PUSĖ"
 
-#: src/application.vala:68
+#: src/application.vala:70
 msgid "Start recording in all running Peek instances."
 msgstr "Pradėti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
-#: src/application.vala:72
+#: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
 msgstr "Stabdyti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
-#: src/application.vala:76
+#: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
 msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
-#: src/application.vala:215
+#: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nepavyko sukurti numatytojo ekrano rašytuvo.\n"
 
-#: src/application.vala:229
+#: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nepavyko inicijuoti vidinės pusės %s.\n"
 
-#: src/ui/application-window.vala:298
+#: src/application.vala:332
+msgid "Native Wayland backend is unsupported"
+msgstr ""
+
+#: src/application.vala:334
+msgid ""
+"You are running Peek natively on Wayland, this is currently unsupported. "
+"Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ about Wayland support</a>."
+msgstr ""
+
+#: src/ui/application-window.vala:316
 msgid "Rendering…"
 msgstr "Perteikiama…"
 
-#: src/ui/application-window.vala:326 ui/application-window.ui:154
-msgid "_Stop"
-msgstr "_Stabdyti"
-
-#: src/ui/application-window.vala:426
+#: src/ui/application-window.vala:449
 msgid "Save animation"
 msgstr "Įrašyti animaciją"
 
-#: src/ui/application-window.vala:427
+#: src/ui/application-window.vala:450
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/ui/application-window.vala:429
+#: src/ui/application-window.vala:452
 msgid "_Save"
 msgstr "Į_rašyti"
 
-#: src/ui/application-window.vala:515
+#: src/ui/application-window.vala:538
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/ui/application-window.vala:522
+#: src/ui/application-window.vala:545
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/ui/application-window.vala:524
+#: src/ui/application-window.vala:547
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
-#: src/ui/preferences-dialog.vala:97
-msgid "Press keys…"
-msgstr "Paspauskite klavišus…"
+#: src/ui/preferences-dialog.vala:112
+msgid "deactivated"
+msgstr "išjungta"
 
-#: src/ui/preferences-dialog.vala:99 ui/preferences.ui:137
+#: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
 msgstr "Pakeisti"
 
-#: src/ui/preferences-dialog.vala:152 ui/preferences.ui:127
-msgid "deactivated"
-msgstr "išjungta"
+#: src/ui/preferences-dialog.vala:136
+msgid "Press keys…"
+msgstr "Paspauskite klavišus…"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -187,15 +196,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Moo"
 
-#: ui/application-window.ui:33 ui/application-window.ui:139
+#: ui/application-window.ui:33 ui/application-window.ui:140
 msgid "Start recording"
 msgstr "Pradėti įrašinėjimą"
 
-#: ui/application-window.ui:128
+#: ui/application-window.ui:129
 msgid "_Record"
 msgstr "Į_rašinėti"
 
-#: ui/application-window.ui:165
+#: ui/application-window.ui:156
+msgid "_Stop"
+msgstr "_Stabdyti"
+
+#: ui/application-window.ui:167
 msgid "Stop recording"
 msgstr "Stabdyti įrašinėjimą"
 
@@ -203,15 +216,15 @@ msgstr "Stabdyti įrašinėjimą"
 msgid "New _window"
 msgstr "Naujas _langas"
 
-#: ui/gtk/menus.ui:13
+#: ui/gtk/menus.ui:14
 msgid "_Preferences"
 msgstr "_Nuostatos"
 
-#: ui/gtk/menus.ui:19
+#: ui/gtk/menus.ui:21
 msgid "_About"
 msgstr "_Apie"
 
-#: ui/gtk/menus.ui:23
+#: ui/gtk/menus.ui:25
 msgid "_Quit"
 msgstr "_Išeiti"
 
@@ -223,35 +236,35 @@ msgstr "Naudotojo sąsaja"
 msgid "Start / stop recording"
 msgstr "Pradėti / stabdyti įrašinėjimą"
 
-#: ui/preferences.ui:184
+#: ui/preferences.ui:162
 msgid "Recording"
 msgstr "Įrašinėjimas"
 
-#: ui/preferences.ui:207
+#: ui/preferences.ui:185
 msgid "Output format"
 msgstr "Išvesties formatas"
 
-#: ui/preferences.ui:222
+#: ui/preferences.ui:200
 msgid "GIF"
 msgstr "GIF"
 
-#: ui/preferences.ui:223
+#: ui/preferences.ui:201
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:224
+#: ui/preferences.ui:202
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:295
+#: ui/preferences.ui:273
 msgid "Resolution downsampling"
 msgstr "Raiškos ėminių atrankos mažinimas"
 
-#: ui/preferences.ui:369
+#: ui/preferences.ui:347
 msgid "Capture mouse cursor"
 msgstr "Fotografuoti pelės žymeklį"
 
-#: ui/preferences.ui:400
+#: ui/preferences.ui:378
 msgid "Peek preferences"
 msgstr "Peek nuostatos"
 
