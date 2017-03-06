@@ -114,6 +114,10 @@ make
 sudo make install
 ```
 
+You can uninstall Peek again by running `sudo make uninstall` from within the build
+directory.
+
+
 ## Frequently Asked Questions
 ### The recording area is all black, how can I record anything?
 If the recording area is not showing the content behind Peek you have probably
