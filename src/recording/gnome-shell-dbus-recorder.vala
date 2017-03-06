@@ -40,7 +40,7 @@ namespace Peek.Recording {
 
       try {
         string file_template = Path.build_filename (
-          Environment.get_tmp_dir (), "peek%d%t" + get_temp_file_extension ());
+          Environment.get_user_cache_dir (), "peek%d%t" + get_temp_file_extension ());
         debug (file_template);
         screencast.screencast_area (
           area.left, area.top, area.width, area.height,

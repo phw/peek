@@ -15,6 +15,8 @@
     "--talk-name=org.gnome.Shell.Screencast",
     "--filesystem=xdg-pictures",
     "--filesystem=xdg-videos",
+    "--filesystem=xdg-desktop",
+    "--filesystem=xdg-cache",
     "--filesystem=xdg-run/dconf",
     "--filesystem=~/.config/dconf:ro",
     "--talk-name=ca.desrt.dconf",
