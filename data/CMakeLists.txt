@@ -3,9 +3,9 @@ include(GSettings)
 add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
 
 include(FindGettext)
-set (GETTEXT_REQUIRED_VERSION 0.19)
 
 # Translate and install the desktop file
+set (GETTEXT_REQUIRED_VERSION 0.19)
 if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERSION_STRING VERSION_GREATER GETTEXT_REQUIRED_VERSION)
   add_custom_command(
       OUTPUT com.uploadedlobster.peek.desktop
@@ -29,6 +29,7 @@ else()
 endif()
 
 # Translate and install AppData file
+set (GETTEXT_REQUIRED_VERSION 0.19.7)
 if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERSION_STRING VERSION_GREATER GETTEXT_REQUIRED_VERSION)
   add_custom_command(
       OUTPUT com.uploadedlobster.peek.appdata.xml
@@ -44,7 +45,7 @@ if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERS
     FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.appdata.xml
     DESTINATION share/metainfo)
 else()
-  message(WARNING "Gettext >= ${GETTEXT_REQUIRED_VERSION} required for .desktop file translation")
+  message(WARNING "Gettext >= ${GETTEXT_REQUIRED_VERSION} required for AppData file translation")
   install(
     FILES com.uploadedlobster.peek.appdata.xml.in
     DESTINATION share/metainfo

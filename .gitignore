@@ -20,3 +20,8 @@ parts/
 prime/
 stage/
 *.snap
+
+# flatpak build directories
+.flatpak-builder/
+com.uploadedlobster.peek/
+flatpack/
