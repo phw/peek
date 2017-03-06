@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-06 11:22+0000\n"
+"PO-Revision-Date: 2017-03-06 15:41+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
-"nl/>\n"
+"Language-Team: Dutch "
+"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,6 +226,8 @@ msgstr "Peek-voorkeuren"
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
 msgstr ""
+"Simpele, geanimeerde GIF-schermopname-applicatie met een eenvoudig te "
+"bedienen uiterlijk"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -236,38 +238,46 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek maakt het opnemen van korte screencasts van een deel van het scherm erg "
+"makkelijk. Het is gebouwd met het gebruiksdoel om delen van schermen op te "
+"nemen, bijv. om de werking van uw apps te weergeven of een opname te maken "
+"voor een fout(bug)rapport. Met Peek plaatst u simpelweg het venster over het "
+"op te nemen gebied en drukt op \"Opnemen\". Peek is geoptimaliseerd voor het "
+"genereren van geanimeerde GIF's, maar u kunt ook, indien gewenst, direct "
+"opnemen naar WebM of MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Mogelijkheden:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Selecteer een op te nemen gebied op het scherm"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
 msgstr ""
+"Sla een opgenomen video op als een geoptimaliseerd, geanimeerd GIF-bestand"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Neem direct op naar WebM- of MP4-formaat"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Eenvoudig uiterlijk, geoptimaliseerd voor de taak"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Opgenomen video's automatisch bijsnijden"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Ondersteuning voor HiDPI-schermen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a Gnome Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Werkt in GNOME Shell op Wayland (met behulp van XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -276,14 +286,18 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek is geen algemene screencast-app met uitgebreide mogelijkheden. Peek "
+"focust op de taak op het creëren van kleine, stille screencasts van een "
+"gedeelde van het scherm voor het creëren van GIF-animaties of stille WebM- "
+"of MP4-video's."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Het hoofdvenster om het op te nemen gebied te selecteren"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek neemt zichzelf op"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
