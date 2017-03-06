@@ -13,6 +13,7 @@ ui/*.c
 ui/about.ui
 data/schemas/gschemas.compiled
 data/*.desktop
+data/*.appdata.xml
 
 # snapcraft build directories
 parts/

@@ -12,6 +12,8 @@ BuildRequires:  vala-devel
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
 BuildRequires:  pkgconfig(keybinder-3.0)
+BuildRequires:  desktop-file-utils
+BuildRequires:  libappstream-glib
 Requires:       ffmpeg
 Requires:       ImageMagick
 
@@ -32,6 +34,8 @@ from your screen.
 %install
 rm -rf $RPM_BUILD_ROOT
 %make_install
+desktop-file-validate %{buildroot}/%{_datadir}/applications/com.uploadedlobster.%{name}.desktop
+appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdata.xml
 %find_lang %{name}
 
 
@@ -39,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %license LICENSE
 %{_bindir}/%{name}
 %{_datadir}/applications/com.uploadedlobster.%{name}.desktop
+%{_datadir}/metainfo/com.uploadedlobster.%{name}.appdata.xml
 %{_datadir}/dbus-1/services/com.uploadedlobster.%{name}.service
 %{_datadir}/glib-2.0/schemas/com.uploadedlobster.%{name}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/%{name}.png

@@ -1,3 +1,4 @@
+data/com.uploadedlobster.peek.appdata.xml.in
 data/desktop/com.uploadedlobster.peek.desktop.in
 data/schemas/com.uploadedlobster.peek.gschema.xml
 src/application.vala
