@@ -58,9 +58,40 @@ parts:
       chmod 0555 $SNAPCRAFT_PART_INSTALL/launch-peek
 
   ffmpeg:
-    plugin: nil
-    stage-packages:
-      - ffmpeg
+    plugin: autotools
+    source: https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz
+    configflags:
+      - --disable-debug
+      - --disable-static
+      - --enable-gpl
+      - --enable-libvpx
+      - --enable-libx264
+      - --enable-shared
+      - --enable-x11grab
+      - --disable-ffplay
+      - --disable-ffprobe
+      - --disable-ffserver
+      - --disable-doc
+      - --disable-everything
+      - --enable-decoder=h264
+      - --enable-decoder=rawvideo
+      - --enable-encoder=libx264
+      - --enable-encoder=libx264rgb
+      - --enable-encoder=libvpx_vp8
+      - --enable-encoder=rawvideo
+      - --enable-encoder=pam
+      - --enable-parser=h264
+      - --enable-demuxer=avi
+      - --enable-muxer=avi
+      - --enable-muxer=mp4
+      - --enable-muxer=webm
+      - --enable-muxer=rawvideo
+      - --enable-filter=crop
+      - --enable-filter=scale
+      - --enable-protocol=file
+      - --enable-indev=x11grab_xcb
+    build-packages:
+      - libx264-dev
     prime:
       - -usr/share/applications
       - -usr/share/bug
@@ -71,9 +102,31 @@ parts:
       - -usr/share/man
 
   imagemagick:
-    plugin: nil
-    stage-packages:
-      - imagemagick
+    plugin: autotools
+    source: https://www.imagemagick.org/download/ImageMagick-6.9.7-10.tar.bz2
+    configflags:
+      - --enable-static=no
+      - --disable-docs
+      - --without-gvc
+      - --without-djvu
+      - --without-autotrace
+      - --without-jbig
+      - --without-fpx
+      - --without-dps
+      - --without-fftw
+      - --without-png
+      - --without-pango
+      - --without-jpeg
+      - --without-tiff
+      - --without-webp
+      - --without-wmf
+      - --without-raqm
+      - --without-xml
+      - --without-openjp2
+      - --without-openexr
+      - --without-freetype
+      - --without-fontconfig
+      - --without-magick-plus-plus
     prime:
       - -usr/bin/ffplay
       - -usr/bin/ffprobe
