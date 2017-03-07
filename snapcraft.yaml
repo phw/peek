@@ -92,6 +92,9 @@ parts:
       - --enable-indev=x11grab_xcb
     build-packages:
       - libx264-dev
+      - yasm
+    stage-packages:
+      - libx264-148
     prime:
       - -usr/share/applications
       - -usr/share/bug
