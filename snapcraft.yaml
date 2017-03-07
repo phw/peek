@@ -32,7 +32,8 @@ parts:
     configflags:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DGSETTINGS_COMPILE=OFF
-    source: .
+    # source: .
+    source: /media/sf_devel/peek/
     after:
       - desktop-gtk3
     build-packages:
@@ -61,6 +62,7 @@ parts:
     plugin: autotools
     source: https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz
     configflags:
+      - --prefix=/usr
       - --disable-debug
       - --disable-static
       - --enable-gpl
@@ -110,28 +112,35 @@ parts:
     plugin: autotools
     source: https://www.imagemagick.org/download/ImageMagick-6.9.7-10.tar.bz2
     configflags:
+      - --prefix=/usr
       - --enable-static=no
       - --disable-docs
-      - --without-gvc
-      - --without-djvu
+      - --disable-deprecated
       - --without-autotrace
-      - --without-jbig
-      - --without-fpx
+      - --without-bzlib
+      - --without-djvu
       - --without-dps
       - --without-fftw
-      - --without-png
-      - --without-pango
+      - --without-fontconfig
+      - --without-fpx
+      - --without-freetype
+      - --without-gvc
+      - --without-jbig
       - --without-jpeg
+      - --without-lcms
+      - --without-lzma
+      - --without-magick-plus-plus
+      - --without-openexr
+      - --without-openjp2
+      - --without-pango
+      - --without-png
+      - --without-raqm
       - --without-tiff
       - --without-webp
       - --without-wmf
-      - --without-raqm
+      - --without-x
       - --without-xml
-      - --without-openjp2
-      - --without-openexr
-      - --without-freetype
-      - --without-fontconfig
-      - --without-magick-plus-plus
+      - --without-zlib
     prime:
       - -usr/bin/ffplay
       - -usr/bin/ffprobe

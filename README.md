@@ -45,8 +45,9 @@ showing UI features of your own apps or for showing a bug in bug reports. It
 is not a general purpose screencast app with extended features and it never
 will be.
 
-Currently only X11 is fully supported. There is no direct support for Wayland
-and Mir, but you can use Peek on Gnome Shell with XWayland (see FAQs below).
+Peek runs on X11 or inside a GNOME Shell Wayland session using XWayland.
+Support for more Wayland desktops or Ubuntu Mir might be added in the future
+(see FAQs below).
 
 
 ## Requirements
@@ -183,7 +184,7 @@ natively:
    obtain a screenshot. That is intentional, as taking an arbitrary screenshot
    essentially means any application can read the contents of the whole display,
    and Wayland strives to offer improved security by isolating applications. It
-   is up to the compositors to provide screenshot capability, and most do. Gnome
+   is up to the compositors to provide screenshot capability, and most do. GNOME
    Shell also provides a public interface for applications to use which Peek
    does support.
 
@@ -199,12 +200,12 @@ itself is used to obtain the recording coordinates. That means for now there
 cannot be any fully native Wayland support without special support for this
 use case by the compositor.
 
-It is however possible to use Peek in a Gnome Shell Wayland session using
+It is however possible to use Peek in a GNOME Shell Wayland session using
 XWayland by launching Peek with the X11 backend:
 
     GDK_BACKEND=x11 peek
 
-Support for compositors other than Gnome Shell can be added if a suitable
+Support for compositors other than GNOME Shell can be added if a suitable
 screencasting interface is provided.
 
 

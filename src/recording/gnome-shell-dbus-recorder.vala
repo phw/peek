@@ -65,7 +65,7 @@ namespace Peek.Recording {
 
     public static bool is_available () throws PeekError {
       // In theory the dbus service can be installed, but it will only work
-      // if Gnome Shell is running.
+      // if GNOME Shell is running.
       if (!DesktopIntegration.is_gnome ()) {
         return false;
       }
@@ -106,9 +106,9 @@ namespace Peek.Recording {
 
     private string build_gst_pipeline (RecordingArea area) {
 
-      // Default pipeline is for Gnome Shell up to 2.22:
+      // Default pipeline is for GNOME Shell up to 2.22:
       // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
-      // Gnome Shell 3.24 will use vp9enc with same settings.
+      // GNOME Shell 3.24 will use vp9enc with same settings.
       var pipeline = new StringBuilder ();
 
       if (downsample > 1) {
