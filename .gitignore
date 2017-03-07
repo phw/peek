@@ -24,4 +24,4 @@ stage/
 # flatpak build directories
 .flatpak-builder/
 com.uploadedlobster.peek/
-flatpack/
+flatpak/

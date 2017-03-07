@@ -4,6 +4,7 @@ enable_testing()
 vala_precompile(VALA_TEST_DESKTOP_INTEGRATION_C
     test-desktop-integration.vala
     ../src/desktop-integration.vala
+    ../src/dbus/freedesktop-filemanager.vala
   PACKAGES
     gtk+-3.0
 )
