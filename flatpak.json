@@ -10,9 +10,8 @@
     "--env=GDK_BACKEND=x11",
     "--socket=wayland",
     "--own-name=com.uploadedlobster.peek",
-    /*"--talk-name=org.freedesktop.Notifications",
-    "--talk-name=org.gtk.Notifications",*/
     "--talk-name=org.freedesktop.DBus",
+    "--talk-name=org.freedesktop.FileManager1",
     "--talk-name=org.gnome.Shell.Screencast",
     "--filesystem=xdg-pictures",
     "--filesystem=xdg-videos",

@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2016 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -10,11 +10,37 @@ This software is licensed under the GNU General Public License
 namespace Peek {
 
   public class DesktopIntegration {
+    private static Freedesktop.FileManager1? _file_manager = null;
+    private static Freedesktop.FileManager1 file_manager {
+      get {
+        if (_file_manager == null) {
+          _file_manager = Bus.get_proxy_sync (
+            BusType.SESSION,
+            "org.freedesktop.FileManager1",
+            "/org/freedesktop/FileManager1");
+        }
+
+        return _file_manager;
+      }
+    }
+
     public static bool launch_file_manager (File file) {
+      var uri = file.get_uri ();
+      debug ("File URI: %s\n", uri);
+
+      // First try using standardized DBus service
       try {
-        var uri = file.get_uri ();
+        debug ("Launching org.freedesktop.FileManager1 for URI: %s\n", uri);
+        file_manager.show_items ({uri}, "");
+        return true;
+      } catch (Error e) {
+        stderr.printf ("Unable to call org.freedesktop.FileManager1: %s\n", e.message);
+      }
+
+      // If this does not work try getting the default app for handling
+      // directories and launch that.
+      try {
         var parent = file.get_parent ();
-        debug ("File URI: %s\n", uri);
 
         AppInfo app_info = null;
         if (file.has_uri_scheme ("file")) {
@@ -25,8 +51,7 @@ namespace Peek {
         if (app_info == null && parent != null) {
           try {
             app_info = parent.query_default_handler ();
-          }
-          catch (Error e) {
+          } catch (Error e) {
             stderr.printf ("Unable to get AppInfo for parent folder: %s\n", parent.get_uri ());
           }
         }
@@ -36,7 +61,7 @@ namespace Peek {
             uri = parent.get_uri ();
           }
 
-          debug("Launching \"%s\" for URI: %s\n", app_info.get_display_name (), uri);
+          debug ("Launching \"%s\" for URI: %s\n", app_info.get_display_name (), uri);
           var uri_list = new List<string> ();
           uri_list.append (uri);
           app_info.launch_uris (uri_list, null);
@@ -47,11 +72,10 @@ namespace Peek {
           uri = parent.get_uri ();
         }
 
-        debug("Launching default for URI: %s\n", uri);
+        debug ("Launching default for URI: %s\n", uri);
         AppInfo.launch_default_for_uri (uri, null);
         return true;
-      }
-      catch (Error e) {
+      } catch (Error e) {
         stderr.printf ("Launching file manager failed: %s\n", e.message);
         return false;
       }

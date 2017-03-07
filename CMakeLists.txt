@@ -71,8 +71,9 @@ vala_precompile(VALA_C
     src/errordomain.vala
     src/gtk-helper.vala
     src/utils.vala
-    src/dbus/freedesktop.vala
-    src/dbus/gnome-shell.vala
+    src/dbus/freedesktop-dbus.vala
+    src/dbus/freedesktop-filemanager.vala
+    src/dbus/gnome-shell-screencast.vala
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processor.vala
     src/recording/screen-recorder.vala
