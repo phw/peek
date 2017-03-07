@@ -1,6 +1,6 @@
 # GSettings
 include(GSettings)
-add_schema(schemas/com.uploadedlobster.peek.gschema.xml)
+add_schema(com.uploadedlobster.peek.gschema.xml)
 
 include(FindGettext)
 
@@ -11,7 +11,7 @@ if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERS
       OUTPUT com.uploadedlobster.peek.desktop
       COMMAND ${GETTEXT_MSGFMT_EXECUTABLE}
         --desktop
-        --template=data/desktop/com.uploadedlobster.peek.desktop.in
+        --template=data/com.uploadedlobster.peek.desktop.in
         -d po
         -o ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.desktop
       WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
@@ -23,7 +23,7 @@ if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERS
 else()
   message(WARNING "Gettext >= ${GETTEXT_REQUIRED_VERSION} required for .desktop file translation")
   install(
-    FILES desktop/com.uploadedlobster.peek.desktop.in
+    FILES com.uploadedlobster.peek.desktop.in
     DESTINATION ${XDG_APPS_INSTALL_DIR}
     RENAME com.uploadedlobster.peek.desktop)
 endif()
@@ -63,8 +63,8 @@ install(FILES "icons/512x512/com.uploadedlobster.peek.png" DESTINATION share/ico
 
 # Install DBus service
 configure_file (
-  dbus/com.uploadedlobster.peek.service.in
-  dbus/com.uploadedlobster.peek.service
+  com.uploadedlobster.peek.service.in
+  com.uploadedlobster.peek.service
   )
 
-install(FILES ${CMAKE_BINARY_DIR}/data/dbus/com.uploadedlobster.peek.service DESTINATION share/dbus-1/services)
+install(FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.service DESTINATION share/dbus-1/services)

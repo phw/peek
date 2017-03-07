@@ -32,7 +32,7 @@ namespace Peek {
       }
 
       try {
-        var settings_dir = "./data/schemas/";
+        var settings_dir = "./data/";
         var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
         SettingsSchema? schema = schema_source.lookup (APP_ID, false);
         if (schema != null) {

@@ -11,7 +11,7 @@ src/*.c
 tests/*.c
 ui/*.c
 ui/about.ui
-data/schemas/gschemas.compiled
+data/gschemas.compiled
 data/*.desktop
 data/*.appdata.xml
 
