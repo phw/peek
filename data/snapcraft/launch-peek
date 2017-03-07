@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Make sure imagemagick finds the config dir
-if [ ! -d "$HOME/.config/ImageMagick" ]; then
-  mkdir -p "$HOME/.config"
-  ln -s "$SNAP/etc/ImageMagick-6/" "$HOME/.config/ImageMagick"
-fi
+export MAGICK_CONFIGURE_PATH="$SNAP/usr/etc/ImageMagick-6/"
+
+export XDG_CONFIG_DIRS=$SNAP/etc:$XDG_CONFIG_DIRS
 
 peek

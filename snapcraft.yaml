@@ -9,7 +9,7 @@ description: |
   is not a general purpose screencast app with extended features and it never
   will be.
 grade: stable
-confinement: strict
+confinement: devmode
 
 apps:
   peek:
@@ -17,8 +17,13 @@ apps:
     desktop: usr/share/applications/com.uploadedlobster.peek.desktop
     plugs:
       - x11
+      - unity7
       - home
       - gsettings
+  # ffmpeg:
+  #   command: ffmpeg
+  # convert:
+  #   command: convert
 
 slots:
   session-dbus-interface:
@@ -151,7 +156,4 @@ parts:
       - -usr/share/locale
       - -usr/share/man
     install: |
-      if [ ! -f $SNAPCRAFT_PART_INSTALL/usr/bin/convert ]; then
-        cd $SNAPCRAFT_PART_INSTALL/usr/bin
-        ln -s ./convert-im6 convert
-      fi
+      sed -i s/avconv/ffmpeg/g $SNAPCRAFT_PART_INSTALL/usr/etc/ImageMagick-6/delegates.xml
