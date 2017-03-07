@@ -45,8 +45,9 @@ showing UI features of your own apps or for showing a bug in bug reports. It
 is not a general purpose screencast app with extended features and it never
 will be.
 
-Currently only X11 is fully supported. There is no direct support for Wayland
-and Mir, but you can use Peek on Gnome Shell with XWayland (see FAQs below).
+Peek runs on X11 or inside a GNOME Shell Wayland session using XWayland (see
+FAQs below). Support for more Wayland desktops or Ubuntu Mir might be added in
+the future.
 
 
 ## Requirements
