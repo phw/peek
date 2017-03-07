@@ -79,3 +79,7 @@ Generate a `.flatpak` file for single file distribution:
 Build snappy package with:
 
     snapcraft
+
+Install the package with:
+
+    sudo snap install --dangerous peek_0.9.1+git_amd64.snap

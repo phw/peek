@@ -96,7 +96,7 @@ parts:
       - yasm
     stage-packages:
       - libx264-148
-      - libvpx-3
+      - libvpx3
     prime:
       - -usr/share/applications
       - -usr/share/bug
