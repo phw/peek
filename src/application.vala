@@ -328,8 +328,8 @@ namespace Peek {
 
     private void show_wayland_warning (Gtk.Window parent) {
       var msg = new Gtk.MessageDialog (parent, Gtk.DialogFlags.MODAL,
-        Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
-        _ ("Native Wayland backend is unsupported"));
+        Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, "");
+      msg.text = _ ("Native Wayland backend is unsupported");
       msg.secondary_use_markup = true;
       msg.secondary_text = _ ("You are running Peek natively on Wayland, this is currently unsupported. Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n\nFor Details see the Peek <a href='https://github.com/phw/peek#why-no-native-wayland-support'>FAQ about Wayland support</a>.");
       msg.response.connect ((response_id) => {

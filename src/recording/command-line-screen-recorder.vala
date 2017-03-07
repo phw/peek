@@ -38,7 +38,7 @@ namespace Peek.Recording {
             var file = File.new_for_path (temp_file);
             try {
               var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
-              debug ("temporary file %s, %lld bytes",
+              debug ("Temporary file %s, %" + int64.FORMAT + " bytes",
               temp_file, file_info.get_size ());
               } catch (Error e) {
                 stderr.printf ("Error: %s\n", e.message);

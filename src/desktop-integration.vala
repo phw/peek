@@ -10,17 +10,24 @@ This software is licensed under the GNU General Public License
 namespace Peek {
 
   public class DesktopIntegration {
-    private static Freedesktop.FileManager1? _file_manager = null;
-    private static Freedesktop.FileManager1 file_manager {
+    private static Freedesktop.FileManager1? _file_manager_service = null;
+    private static bool _file_manager_dbus_initialized = false;
+    private static Freedesktop.FileManager1? file_manager_service {
       get {
-        if (_file_manager == null) {
-          _file_manager = Bus.get_proxy_sync (
-            BusType.SESSION,
-            "org.freedesktop.FileManager1",
-            "/org/freedesktop/FileManager1");
+        if (!_file_manager_dbus_initialized) {
+          try {
+            _file_manager_service = Bus.get_proxy_sync (
+              BusType.SESSION,
+              "org.freedesktop.FileManager1",
+              "/org/freedesktop/FileManager1");
+            _file_manager_dbus_initialized = true;
+          } catch (IOError e) {
+            debug ("DBus service org.freedesktop.FileManager1 not available: %s\n", e.message);
+            _file_manager_service = null;
+          }
         }
 
-        return _file_manager;
+        return _file_manager_service;
       }
     }
 
@@ -29,12 +36,14 @@ namespace Peek {
       debug ("File URI: %s\n", uri);
 
       // First try using standardized DBus service
-      try {
-        debug ("Launching org.freedesktop.FileManager1 for URI: %s\n", uri);
-        file_manager.show_items ({uri}, "");
-        return true;
-      } catch (Error e) {
-        stderr.printf ("Unable to call org.freedesktop.FileManager1: %s\n", e.message);
+      if (file_manager_service != null) {
+        try {
+          debug ("Launching org.freedesktop.FileManager1 for URI: %s\n", uri);
+          file_manager_service.show_items ({uri}, "");
+          return true;
+        } catch (Error e) {
+          stderr.printf ("Unable to call org.freedesktop.FileManager1: %s\n", e.message);
+        }
       }
 
       // If this does not work try getting the default app for handling
