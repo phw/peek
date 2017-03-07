@@ -27,7 +27,7 @@
       <li>Simple user interface optimized for the task</li>
       <li>Automatically downscale recorded videos</li>
       <li>Support for HiDPI screens</li>
-      <li>Works inside a Gnome Shell Wayland session (using XWayland)</li>
+      <li>Works inside a GNOME Shell Wayland session (using XWayland)</li>
     </ul>
     <p>
       Peek is not a general purpose screencast app with extended features but
