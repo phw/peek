@@ -81,7 +81,7 @@ namespace Peek.Ui {
       });
 
       this.recorder.recording_aborted.connect ((status) => {
-        stderr.printf ("Recording stopped unexpectedly with return code %i\n", status);
+        stderr.printf ("Recording canceled with return code %i\n", status);
         leave_recording_state ();
       });
 
@@ -482,7 +482,7 @@ namespace Peek.Ui {
         try_save_file ();
       }
       else {
-        leave_recording_state ();
+        recorder.cancel ();
       }
 
       // Close the FileChooserDialog:

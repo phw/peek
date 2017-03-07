@@ -12,6 +12,8 @@ namespace Peek.PostProcessing {
   public class ImagemagickPostProcessor : Object, PostProcessor {
     public int framerate { get; set; default = 15; }
 
+    private Pid? pid = null;
+
     public ImagemagickPostProcessor (int framerate) {
       this.framerate = framerate;
     }
@@ -30,7 +32,6 @@ namespace Peek.PostProcessing {
           output_file
         };
 
-        Pid pid;
         debug ("Running ImageMagick convert, saving to %s", output_file);
         Process.spawn_async (null, argv, null,
           SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
@@ -39,6 +40,7 @@ namespace Peek.PostProcessing {
           // Triggered when the child indicated by pid exits
           Process.close_pid (pid);
           Idle.add ((owned) callback);
+          this.pid = null;
         });
 
         yield;
@@ -49,6 +51,12 @@ namespace Peek.PostProcessing {
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
         return null;
+      }
+    }
+
+    public void cancel () {
+      if (pid != null) {
+        Posix.kill (pid, Posix.SIGINT);
       }
     }
   }

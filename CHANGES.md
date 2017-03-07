@@ -13,6 +13,8 @@
  * fix: Moving Peek partially outside the visible area does no longer break the
         recording. Instead the recording area is clipped to the visible part (#64)
  * fix: Starting recording in maximized window relocated the window on Ubuntu Unity (#74)
+ * fix: When cancelling the file chooser also stop the background processing
+        of the image (#96)
 
 # Version 0.9.1 - 2017-02-21
  * i18n: Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed

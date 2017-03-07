@@ -11,6 +11,8 @@ namespace Peek.PostProcessing {
 
   public interface PostProcessor : Object {
     public abstract async File? process_async (File file);
+
+    public abstract void cancel ();
   }
 
 }
