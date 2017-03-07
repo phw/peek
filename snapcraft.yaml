@@ -32,8 +32,7 @@ parts:
     configflags:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DGSETTINGS_COMPILE=OFF
-    # source: .
-    source: /media/sf_devel/peek/
+    source: .
     after:
       - desktop-gtk3
     build-packages:

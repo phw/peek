@@ -12,8 +12,6 @@ This software is licensed under the GNU General Public License
 
 int main (string[] args) {
   // Setup gettext
-  stdout.printf("Startup ID: " + GLib.Environment.get_variable("DESKTOP_STARTUP_ID") + "\n");
-  
   GLib.Intl.setlocale(GLib.LocaleCategory.ALL, "");
   GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
   GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
