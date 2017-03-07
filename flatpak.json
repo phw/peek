@@ -8,6 +8,7 @@
     "--share=ipc",
     "--socket=x11",
     "--env=GDK_BACKEND=x11",
+    "--env=GTK_THEME=Adwaita:dark",
     "--socket=wayland",
     "--own-name=com.uploadedlobster.peek",
     "--talk-name=org.freedesktop.DBus",
