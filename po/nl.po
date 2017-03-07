@@ -276,7 +276,7 @@ msgid "Support for HiDPI screens"
 msgstr "Ondersteuning voor HiDPI-schermen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-msgid "Works inside a Gnome Shell Wayland session (using XWayland)"
+msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Werkt in GNOME Shell op Wayland (met behulp van XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32

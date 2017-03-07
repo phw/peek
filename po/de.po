@@ -272,8 +272,8 @@ msgid "Support for HiDPI screens"
 msgstr "Unterstützung für hochauflösende Bildschirme"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-msgid "Works inside a Gnome Shell Wayland session (using XWayland)"
-msgstr "Funktioniert in Gnome Shell mit Wayland (mit XWayland)"
+msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
+msgstr "Funktioniert in GNOME Shell mit Wayland (mit XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
