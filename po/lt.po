@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-07 13:39+0000\n"
+"PO-Revision-Date: 2017-03-07 16:15+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian "
 "<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
@@ -89,6 +89,12 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Jūs paleidote Peek savu būdu per Wayland, tai šiuo metu yra nepalaikoma. "
+"Prašome paleisti Peek, naudojant XWayland, nustačius "
+"<tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"Išsamesnei informacijai, žiūrėkite Peek <a href='https://github.com/phw/peek"
+"#why-no-native-wayland-support'>DUK apie Wayland palaikymą</a>."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
@@ -223,7 +229,7 @@ msgstr "Peek nuostatos"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Paprastas animuotas GIF ekrano rašytuvas su lengva naudoti sąsaja"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -234,38 +240,45 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek palengvina ekrano srities trumpų ekrano įrašų kūrimą. Ši programa buvo "
+"sukurta specialiai ekrano sričių įrašymui, pvz., norint lengvai parodyti "
+"savo programos naudotojo sąsajos ypatybes arba, siekiant parodyti klaidą "
+"klaidų pranešimuose. Naudodami Peek, jūs tiesiog patalpinate Peek langą virš "
+"srities, kurią norite įrašyti ir paspaudžiate \"Įrašinėti\". Peek yra "
+"optimizuota animuotų GIF kūrimui, tačiau jei pageidaujate, galite tiesiogiai "
+"įrašinėti į WebM ar MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Ypatybės:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Pasirinkti norimą įrašinėti ekrano sritį"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Įrašyti įrašinėtą vaizdo įrašą kaip optimizuotą animuotą GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Įrašinėti tiesiogiai į WebM ar MP4 formatą"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Paprasta, užduočiai optimizuota, naudotojo sąsaja"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Automatinis įrašinėtų vaizdo įrašų mažinimas pagal skalę"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "HiDPI ekranų palaikymas"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Veikia GNOME apvalkalo Wayland seanso viduje (naudojant XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -274,14 +287,18 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek nėra bendrosios paskirties ekrano įrašų programa su išplėstinėmis "
+"ypatybėmis, tačiau ji labiau susitelkia ties viena užduotimi - tylių ekrano "
+"srities ekrano įrašų kūrimu, kuriant GIF animacijas arba tylius WebM ar MP4 "
+"vaizdo įrašus."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Pagrindinis langas, skirtas pasirinkti įrašinėjimo sritį"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek įrašinėja pati save"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
