@@ -37,7 +37,8 @@ parts:
     configflags:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DGSETTINGS_COMPILE=OFF
-    source: .
+    # source: .
+    source: /media/sf_devel/peek/
     after:
       - desktop-gtk3
     build-packages:
@@ -88,7 +89,6 @@ parts:
       - --enable-encoder=pam
       - --enable-parser=h264
       - --enable-demuxer=avi
-      - --enable-muxer=avi
       - --enable-muxer=mp4
       - --enable-muxer=webm
       - --enable-muxer=rawvideo

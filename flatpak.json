@@ -63,7 +63,6 @@
       "--enable-encoder=pam",
       "--enable-parser=h264",
       "--enable-demuxer=avi",
-      "--enable-muxer=avi",
       "--enable-muxer=mp4",
       "--enable-muxer=webm",
       "--enable-muxer=rawvideo",

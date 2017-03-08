@@ -68,17 +68,18 @@ namespace Peek.Recording {
           args.append_val ("-preset");
           args.append_val ("fast");
         } else {
-          extension = "avi";
+          extension = "pam";
           args.append_val ("-codec:v");
-          args.append_val ("libx264");
-          args.append_val ("-preset");
-          args.append_val ("ultrafast");
+          args.append_val ("pam");
+          args.append_val ("-f");
+          args.append_val ("rawvideo");
         }
 
         args.append_val ("-filter:v");
         args.append_val ("crop=iw-mod(iw\\,2):ih-mod(ih\\,2), scale=iw/" + downsample.to_string () + ":-1");
 
         temp_file = Utils.create_temp_file (extension);
+        args.append_val ("-y");
         args.append_val (temp_file);
 
         return spawn_record_command (args.data);
