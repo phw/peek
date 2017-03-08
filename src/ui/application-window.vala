@@ -537,10 +537,12 @@ namespace Peek.Ui {
       var message = new StringBuilder ("");
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
       var parameter = new Variant.string (file.get_uri ());
-      var notification = new GLib.Notification (message.str);
 
-      // Unity does not allow actions on notifications, so we disable notifications
-      // completely.
+      var notification = new GLib.Notification (message.str);
+      notification.set_icon (new ThemedIcon ("com.uploadedlobster.peek"));
+
+      // Unity does not allow actions on notifications, so we disable
+      // notification actions there.
       if (!DesktopIntegration.is_unity ()) {
         notification.set_body (_ ("Click here to show the saved file in your file manager."));
         notification.add_button_with_target_value (
