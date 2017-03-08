@@ -102,6 +102,12 @@ sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/hom
 sudo dnf install peek -y
 ```
 
+To install the required ffmpeg package you can use the RPM Fusion free repository, see the [setup instructions for RPM fusion](https://rpmfusion.org/Configuration). Once the repository is enabled install ffmpeg with
+
+```
+sudo dnf install ffmpeg
+```
+
 ### From source
 You can build and install Peek using CMake:
 
