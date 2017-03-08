@@ -46,6 +46,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     ../src/utils.vala
   PACKAGES
     gtk+-3.0
+    posix
 )
 
 add_executable(
