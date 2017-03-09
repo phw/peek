@@ -18,6 +18,8 @@ Depends: ${misc:Depends},
  ${shlibs:Depends},
  ffmpeg | libav-tools,
  imagemagick
+Recommends: gstreamer1.0-plugins-good,
+ gstreamer1.0-plugins-bad
 Description: Simple animated GIF screen recorder with an easy to use interface
  Peek creates animated GIF screencasts using FFmpeg and ImageMagick. It was
  built for the specific use case of recording screen areas, e.g., for easily
