@@ -60,7 +60,7 @@
       "--enable-encoder=libvpx_vp8",
       "--enable-encoder=rawvideo",
       "--enable-encoder=pam",
-      "--enable-demuxer=webm",
+      "--enable-demuxer=avi",
       "--enable-muxer=mp4",
       "--enable-muxer=webm",
       "--enable-muxer=rawvideo",
