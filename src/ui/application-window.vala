@@ -483,6 +483,7 @@ namespace Peek.Ui {
       }
       else {
         recorder.cancel ();
+        leave_recording_state ();
       }
 
       // Close the FileChooserDialog:
