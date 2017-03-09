@@ -34,7 +34,10 @@ namespace Peek.PostProcessing {
         };
 
         debug ("Running ImageMagick convert, saving to %s", output_file);
-        Process.spawn_async (null, argv, null,
+        string[] env = Environ.get ();
+        Environ.set_variable (env, "TMPDIR", Utils.get_temp_dir (), true);
+        Environ.unset_variable (env, "MAGICK_TMPDIR");
+        Process.spawn_async (null, argv, env,
           SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
 
         ChildWatch.add (pid, (pid, status) => {

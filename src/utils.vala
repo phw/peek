@@ -10,10 +10,32 @@ This software is licensed under the GNU General Public License
 namespace Peek {
 
   public class Utils {
+    public static string get_temp_dir () {
+      string cache_dir_path = Path.build_filename (
+        GLib.Environment.get_user_cache_dir (), "peek"
+      );
+      var cache_dir = File.new_for_path (cache_dir_path);
+
+      try {
+        cache_dir.make_directory_with_parents (null);
+      } catch (Error e) {
+        if (e is IOError.EXISTS) {
+          debug ("Cache directory does already exist %s\n", cache_dir_path);
+        } else {
+          stderr.printf ("Error: %s\n", e.message);
+          return Environment.get_tmp_dir ();
+        }
+      }
+
+      return cache_dir.get_path ();
+    }
+
     public static string create_temp_file (string extension) throws FileError {
-      string file_name;
-      var fd = FileUtils.open_tmp ("peekXXXXXX." + extension, out file_name);
+      var temp_dir = get_temp_dir ();
+      var file_name = Path.build_filename (temp_dir, "peekXXXXXX." + extension);
+      var fd = FileUtils.mkstemp (file_name);
       FileUtils.close (fd);
+      debug ("Temp file: %s\n", file_name);
       return file_name;
     }
 

@@ -39,9 +39,10 @@ namespace Peek.Recording {
       }
 
       try {
-        string file_template = Path.build_filename (
-          Environment.get_user_cache_dir (), "peek%d%t" + get_temp_file_extension ());
-        debug (file_template);
+        string file_template = Utils.create_temp_file (
+          get_temp_file_extension ()
+        );
+
         screencast.screencast_area (
           area.left, area.top, area.width, area.height,
           file_template, options, out success, out temp_file);
@@ -55,6 +56,9 @@ namespace Peek.Recording {
         stderr.printf ("Error: %s\n", e.message);
         return false;
       } catch (IOError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        return false;
+      } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
         return false;
       }
@@ -135,7 +139,7 @@ namespace Peek.Recording {
     private string get_temp_file_extension () {
       var extension = output_format == OUTPUT_FORMAT_GIF ?
         "avi" : Utils.get_file_extension_for_format (output_format);
-      return "." + extension;
+      return extension;
     }
   }
 
