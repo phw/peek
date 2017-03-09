@@ -124,8 +124,8 @@ namespace Peek.Recording {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        pipeline.append ("x264enc speed-preset=ultrafast threads=%T ! ");
-        pipeline.append ("queue ! avimux");
+        pipeline.append ("vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("queue ! webmmux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
@@ -134,7 +134,7 @@ namespace Peek.Recording {
 
     private string get_temp_file_extension () {
       var extension = output_format == OUTPUT_FORMAT_GIF ?
-        "avi" : Utils.get_file_extension_for_format (output_format);
+        "webm" : Utils.get_file_extension_for_format (output_format);
       return "." + extension;
     }
   }

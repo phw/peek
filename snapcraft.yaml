@@ -80,15 +80,13 @@ parts:
       - --disable-ffserver
       - --disable-doc
       - --disable-everything
-      - --enable-decoder=h264
+      - --enable-decoder=libvpx_vp8
       - --enable-decoder=rawvideo
       - --enable-encoder=libx264
-      - --enable-encoder=libx264rgb
       - --enable-encoder=libvpx_vp8
       - --enable-encoder=rawvideo
       - --enable-encoder=pam
-      - --enable-parser=h264
-      - --enable-demuxer=avi
+      - --enable-demuxer=webm
       - --enable-muxer=mp4
       - --enable-muxer=webm
       - --enable-muxer=rawvideo
