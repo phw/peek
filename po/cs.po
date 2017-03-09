@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-03 15:38+0000\n"
-"Last-Translator: Michal Mašek <misamasek@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
-"cs/>\n"
+"PO-Revision-Date: 2017-03-09 21:32+0000\n"
+"Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
+"Language-Team: Czech "
+"<https://hosted.weblate.org/projects/peek/translations/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,35 +46,37 @@ msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Vyberte backend pro nahrávání (gnome-shell, ffmpeg or avconv). Pokud "
+"nevybrán, Peek vybere backend automaticky."
 
 #: src/application.vala:66
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:70
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Spustit nahrávání ve všech běžících instancích."
 
 #: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Zastavit nahrávání ve všech běžících instancích."
 
 #: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Přepnout nahrávání ve všech běžících instancích."
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Nelze vytvořit výchozí obrazovku nahrávání.\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Nelze zavést backend %s.\n"
 
 #: src/application.vala:332
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Nativní Wayland backend není podporován"
 
 #: src/application.vala:334
 msgid ""
@@ -84,6 +86,11 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Peek běží nativně na Waylandu, toto není v současné době podporováno. Prosím "
+"spusťte Peek s použitím XWayland nastavení <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"Pro detaily zobrazte Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ o Wayland podpoře</a>."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
@@ -116,7 +123,7 @@ msgstr "Zobrazit ve správci souborů"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "deaktivováno"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
@@ -124,11 +131,10 @@ msgstr "Změnit"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "Stiskněte klávesy…"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
-#, fuzzy
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Tomáš Průcha <pruchatomas@gmail.com>"
@@ -203,7 +209,7 @@ msgstr "Zpoždění (v sekundách) před spuštěním nahrávání"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Podvzorkování rozlišení"
 
 #: ui/preferences.ui:315 data/schemas/com.uploadedlobster.peek.gschema.xml:47
 msgid "Framerate"
@@ -211,7 +217,7 @@ msgstr "Snímková frekvence"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Zachytit kurzor myši"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
@@ -220,6 +226,8 @@ msgstr "Peek předvolby"
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
 msgstr ""
+"Program s jednoduchým rozhraním pro nahrávání dění na obrazovce do formátu "
+"GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -230,38 +238,44 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek umí jednoduše vytvářet krátké nahrávky části obrazovky. Byl vytvořen "
+"např. pro jednoduchou prezentaci možností rozhraní vaší aplikace nebo "
+"zobrazení chyby pro reportování. Okno programu Peek jednoduše umístíte na "
+"oblast, kterou chcete nahrát a stisknete tlačítko \"Nahrávat\". Peek je "
+"optimalizován pro generování animovaných GIF souborů, ale můžete také "
+"nahrávat přímo do formátu WebM nebo MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Funkce:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Vyberte oblast pro nahrávání"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Uložit nahrané video jako optimalizovaný animovaný GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Nahrávat přímo do formátu WebM nebo MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Jednoduché uživatelské rozhraní optimalizované pro daný úkol"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Automaticky podvzorkovat nahraná videa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Podpora pro HiDPI obrazovky"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Pracuje uvnitř sezení GNOME Shell Wayland (s použitím XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -270,62 +284,62 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek není komplexní aplikace pro nahrávání obrazovky, ale raději se zaměřuje "
+"na vytváření malých nahrávek zvolené části obrazovky do formátů GIF, WebM "
+"nebo MP4 bez zvuku."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Hlavní okno pro výběr oblasti nahrávání"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek nahrává sám sebe"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
-"Doba (v milisekundách) zobrazení oblasti nahrávání po ukončení nahrávání"
+"Doba (v milisekundách) zobrazení oblasti nahrávání po ukončení nahrávání."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "Použitý výchozí název souboru může obsahovat datum."
+msgstr ""
+"Použitý výchozí název souboru může obsahovat datum.  Přípona souboru bude "
+"přidána automaticky."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "Upřednostnit tmavý motiv"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Globální klávesová zkratka pro přepnutí nahrávání"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
-msgstr ""
+msgstr "Výchozí formát souboru"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Faktor podvzorkování rozlišení"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Zda se má zachytit kurzor myši"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:60
-#, fuzzy
 msgid "Size and position of the last open main window"
 msgstr "Velikost a pozice naposledy otevřeného okna"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:64
-#, fuzzy
 msgid "Path where last video got saved"
 msgstr "Cesta naposledy uloženého videa"
 
