@@ -16,7 +16,8 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 Requires:       ffmpeg
 Requires:       ImageMagick
-Requires:       gstreamer-plugins-good
+Requires:       gstreamer1-plugins-good
+Recommends:     gstreamer1-plugins-bad-freeworld
 
 %description
 A simple tool that allows you to record short animated GIF images
