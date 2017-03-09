@@ -24,6 +24,7 @@ Simple screen recorder with an easy to use interface
   - [Fedora](#fedora)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
+  - [How can I capture mouse clicks and/or key strokes?](#user-content-how-can-i-capture-mouse-clicks-andor-key-strokes)
   - [The recording area is all black, how can I record anything?](#the-recording-area-is-all-black-how-can-i-record-anything)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
@@ -130,6 +131,14 @@ directory.
 
 
 ## Frequently Asked Questions
+### How can I capture mouse clicks and/or key strokes?
+Peek does not support this natively. But you could install an external tool 
+like [key-mon](https://github.com/critiqjo/key-mon) which is usually included 
+in most distributions, so you can easily install with your package manager. 
+Then start key-mon with `key-mon --visible_click`. The `--visible_click` option 
+is for drawing small circles around mouse clicks.
+
+
 ### The recording area is all black, how can I record anything?
 If the recording area is not showing the content behind Peek you have probably
 compositing disabled in your window manager. Peek requires compositing in order
