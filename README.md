@@ -132,10 +132,11 @@ directory.
 
 ## Frequently Asked Questions
 ### How can I capture mouse clicks and/or key strokes?
-Peek does not support this natively. But you could install [key-mon](https://github.com/critiqjo/key-mon) 
-which is usually included in most distributions, so you can easily install 
-with your package manager. Then start key-mon with `key-mon --visible_click`. 
-The `--visible_click` option is for drawing small circles around mouse clicks.
+Peek does not support this natively. But you could install an external tool 
+like [key-mon](https://github.com/critiqjo/key-mon) which is usually included 
+in most distributions, so you can easily install with your package manager. 
+Then start key-mon with `key-mon --visible_click`. The `--visible_click` option 
+is for drawing small circles around mouse clicks.
 
 
 ### The recording area is all black, how can I record anything?
