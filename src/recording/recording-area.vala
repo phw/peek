@@ -17,12 +17,11 @@ namespace Peek.Recording {
 
     public static RecordingArea create_for_widget (Gtk.Widget recording_view) {
       var recording_view_window = recording_view.get_window ();
-      var scale_factor = recording_view_window.get_scale_factor ();
 
       var area = RecordingArea() {
         widget = recording_view,
-        width = recording_view.get_allocated_width () * scale_factor,
-        height = recording_view.get_allocated_height () * scale_factor
+        width = recording_view.get_allocated_width (),
+        height = recording_view.get_allocated_height ()
       };
 
       // Get absolute window coordinates
@@ -33,12 +32,13 @@ namespace Peek.Recording {
       recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
         out relative_left, out relative_top);
 
-      area.left = (area.left + relative_left) * scale_factor;
-      area.top = (area.top + relative_top) * scale_factor;
+      area.left = (area.left + relative_left);
+      area.top = (area.top + relative_top);
 
       debug ("Absolute recording area x: %d, y: %d, w: %d, h: %d",
         area.left, area.top, area.width, area.height);
 
+      // Clip recording area to visible screen area
       var screen = recording_view.get_screen ();
       var screen_width = screen.get_width ();
       var screen_height = screen.get_height ();
@@ -56,6 +56,17 @@ namespace Peek.Recording {
       }
 
       debug ("Clipped recording area x: %d, y: %d, w: %d, h: %d",
+        area.left, area.top, area.width, area.height);
+
+      // Scale recording area on HiDPI screens
+      var scale_factor = recording_view_window.get_scale_factor ();
+
+      area.left *= scale_factor;
+      area.top *= scale_factor;
+      area.width *= scale_factor;
+      area.height *= scale_factor;
+
+      debug ("Scaled recording area x: %d, y: %d, w: %d, h: %d",
         area.left, area.top, area.width, area.height);
 
       return area;
