@@ -45,6 +45,10 @@ namespace Peek.PostProcessing {
           Process.close_pid (pid);
           Idle.add ((owned) callback);
           this.pid = null;
+
+          if (!Utils.is_exit_status_success (status)) {
+            FileUtils.remove (output_file);
+          }
         });
 
         yield;

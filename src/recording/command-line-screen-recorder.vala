@@ -31,8 +31,8 @@ namespace Peek.Recording {
 
           // Temporary debugging for issue #83
           debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
-          Process.term_sig (status), Process.exit_status (status),
-          Utils.is_exit_status_success (status).to_string ());
+            Process.term_sig (status), Process.exit_status (status),
+            Utils.is_exit_status_success (status).to_string ());
 
           if (temp_file != null) {
             var file = File.new_for_path (temp_file);
