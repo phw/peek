@@ -79,7 +79,7 @@ distributions:
 
 ### Arch Linux
 For Arch Linux there is a
-[PKGBUILD](https://aur.archlinux.org/packages/peek/) available in the AUR.
+[PKGBUILD](https://aur.archlinux.org/packages/peek/) available in the AUR. You can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to use the latest development version.
 
 ### Ubuntu / Debian
 You can install the latest versions of Peek from the
