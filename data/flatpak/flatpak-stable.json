@@ -32,7 +32,7 @@
       "branch": "v1.0.0"
     }, {
       "type": "patch",
-      "path": "com.uploadedlobster.peek.desktop.in.patch"
+      "path": "launch-command.patch"
     }],
     "modules": [{
       "name": "keybinder3",

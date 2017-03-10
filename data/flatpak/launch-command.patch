@@ -1,0 +1,21 @@
+diff --git a/data/com.uploadedlobster.peek.desktop.in b/data/com.uploadedlobster.peek.desktop.in
+index ffc3753..ecd040c 100644
+--- a/data/com.uploadedlobster.peek.desktop.in
++++ b/data/com.uploadedlobster.peek.desktop.in
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=Peek
+-Exec=env GDK_BACKEND=x11 peek
++Exec=launch-peek
+ GenericName=Animated GIF recorder
+ Comment=Record short animated GIF images from your screen
+ Icon=com.uploadedlobster.peek
+diff --git a/data/com.uploadedlobster.peek.service.in b/data/com.uploadedlobster.peek.service.in
+index af8b8d1..7322983 100644
+--- a/data/com.uploadedlobster.peek.service.in
++++ b/data/com.uploadedlobster.peek.service.in
+@@ -1,3 +1,3 @@
+ [D-BUS Service]
+ Name=com.uploadedlobster.peek
+-Exec=@CMAKE_INSTALL_PREFIX@/bin/peek --gapplication-service
++Exec=@CMAKE_INSTALL_PREFIX@/bin/launch-peek --gapplication-service

@@ -33,10 +33,4 @@ then
   fi
 fi
 
-echo "XDG_CURRENT_DESKTOP: ${XDG_CURRENT_DESKTOP}"
-echo "THEME: ${THEME}"
-echo "VARIANT: ${VARIANT}"
-echo "PREFER_DARK: ${PREFER_DARK}"
-echo "GTK_THEME: ${GTK_THEME}"
-
 /app/bin/peek "$@"
