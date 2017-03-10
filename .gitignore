@@ -1,5 +1,5 @@
 *~
-build*
+build*/
 
 CMakeCache.txt
 CMakeFiles/*
@@ -20,8 +20,3 @@ parts/
 prime/
 stage/
 *.snap
-
-# flatpak build directories
-.flatpak-builder/
-com.uploadedlobster.peek/
-flatpak/

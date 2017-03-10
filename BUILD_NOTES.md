@@ -70,7 +70,8 @@ http://docs.flatpak.org/en/latest/getting-setup.html
 Build Flatpak and place it in flatpak-repo repository:
 
     flatpak-builder --repo=flatpak-repo com.uploadedlobster.peek \
-        flatpak.json --force-clean
+      --gpg-sign=B539AD7A5763EE9C1C2E4DE24C14923F47BF1A02 \
+      flatpak.json --force-clean
 
 You can build for different architecture with the `--arch` parameter, e.g.
 `--arch=x86_64` or `--arch=i386`.
@@ -78,7 +79,7 @@ You can build for different architecture with the `--arch` parameter, e.g.
 Generate a `.flatpak` file for single file distribution:
 
     flatpak build-bundle flatpak-repo peek-1.0.0-0.flatpak \
-        com.uploadedlobster.peek
+      com.uploadedlobster.peek
 
 ### Snappy
 
