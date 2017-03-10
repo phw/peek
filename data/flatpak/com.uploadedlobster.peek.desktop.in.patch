@@ -6,7 +6,7 @@ index ffc3753..e28d67e 100644
  [Desktop Entry]
  Name=Peek
 -Exec=env GDK_BACKEND=x11 peek
-+Exec=peek
++Exec=launch-peek
  GenericName=Animated GIF recorder
  Comment=Record short animated GIF images from your screen
  Icon=com.uploadedlobster.peek

@@ -4,12 +4,11 @@
   "runtime-version": "3.22",
   "sdk": "org.gnome.Sdk",
   "branch": "master",
-  "command": "peek",
+  "command": "launch-peek",
   "finish-args": [
     "--share=ipc",
     "--socket=x11",
     "--env=GDK_BACKEND=x11",
-    "--env=GTK_THEME=Adwaita:dark",
     "--socket=wayland",
     "--own-name=com.uploadedlobster.peek",
     "--talk-name=org.freedesktop.DBus",
@@ -46,7 +45,10 @@
         "/include/**/*",
         "/share/gtk-doc/**/*"
       ]
-    }]
+    }],
+    "post-install": [
+      "cp data/flatpak/launch-peek /app/bin"
+    ]
   }, {
     "name": "ffmpeg",
     "config-opts": [
