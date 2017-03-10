@@ -1,0 +1,12 @@
+diff --git a/data/com.uploadedlobster.peek.desktop.in b/data/com.uploadedlobster.peek.desktop.in
+index ffc3753..e28d67e 100644
+--- a/data/com.uploadedlobster.peek.desktop.in
++++ b/data/com.uploadedlobster.peek.desktop.in
+@@ -1,6 +1,6 @@
+ [Desktop Entry]
+ Name=Peek
+-Exec=env GDK_BACKEND=x11 peek
++Exec=peek
+ GenericName=Animated GIF recorder
+ Comment=Record short animated GIF images from your screen
+ Icon=com.uploadedlobster.peek

@@ -31,6 +31,9 @@
       "type": "git",
       "url": "../..",
       "branch": "master"
+    }, {
+      "type": "patch",
+      "path": "com.uploadedlobster.peek.desktop.in.patch"
     }],
     "modules": [{
       "name": "keybinder3",
