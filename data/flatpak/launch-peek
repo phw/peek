@@ -6,6 +6,10 @@
 # ignored. We therefore try to detect the theme and prefer-dark-theme setting
 # and force the proper theme by setting GTK_THEME accordingly.
 # See also discussion at https://phabricator.freedesktop.org/T7490
+
+PREFER_DARK=$(dconf read /com/uploadedlobster/peek/interface-prefer-dark-theme)
+
+# For GNOME read the actully configured theme
 if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]
 then
   THEME=$(dconf read /org/gnome/desktop/interface/gtk-theme | cut -d"'" -f 2)
@@ -16,7 +20,6 @@ then
   if [ "$NAME" != "Adwaita" ]
   then
     # Else force using the Adwaita theme
-    PREFER_DARK=$(dconf read /com/uploadedlobster/peek/interface-prefer-dark-theme)
     if [ "$PREFER_DARK" == "true" ]
     then
       VARIANT=dark
@@ -31,6 +34,20 @@ then
 
     export GTK_THEME
   fi
+else
+  if [ "$PREFER_DARK" == "true" ]
+  then
+    VARIANT=dark
+  fi
+
+  if [ "$VARIANT" == "" ]
+  then
+    GTK_THEME=Adwaita
+  else
+    GTK_THEME=Adwaita:${VARIANT}
+  fi
+
+  export GTK_THEME
 fi
 
 /app/bin/peek "$@"
