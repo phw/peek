@@ -93,17 +93,17 @@
             the wrong domain name by default. This also resets existing settings.
  * i18n: Updated German translation
 
-# Version 0.5.0 - 2016.01.09
+# Version 0.5.0 - 2016-01-09
  * ui: Remember last used save folder
  * ui: The default file name used is now a localized hidden setting
  * ui: If dark theme is preferred is now a hidden setting
 
-# Version 0.4.0 - 2016.01.09
+# Version 0.4.0 - 2016-01-08
  * ui: Prefer dark theme, removed custom window background hack
  * ui: Persist window position and size
  * recording: Do not block UI during GIF post processing
 
-# Version 0.3.0 - 2016.01.08
+# Version 0.3.0 - 2016-01-08
  * ui: Added a "New window" action to app menu
  * fix: If fallback app menu was used it was not clickable
  * fix: Fixed warning and crash if indicators where shown when closing a window
@@ -112,11 +112,11 @@
  * fix: App menu on Unity showed "Unknown application name"
  * i18n: App menu and preferences title are now localized
 
-# Version 0.2.1 - 2016.01.07
+# Version 0.2.1 - 2016-01-07
  * i18n: Setup gettext
  * fix: Fixed installation directory for locale files
 
-# Version 0.2.0 - 2016.01.07
+# Version 0.2.0 - 2016-01-07
  * ui: Application logo
  * ui: Size indicator is shown longer after resizing stops
  * fix: Fixed window transparency not properly set on some systems
@@ -124,5 +124,5 @@
  * i18n: Integrated translation extraction into build
  * i18n: German translation
 
-# Version 0.1.0 - 2016.01.05
+# Version 0.1.0 - 2016-01-05
  * Initial public release with basic functionality working
