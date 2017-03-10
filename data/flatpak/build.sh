@@ -11,4 +11,8 @@ cd `dirname $0`
 
 flatpak-builder --repo="${LOCAL_REPO}" com.uploadedlobster.peek \
   --gpg-sign=B539AD7A5763EE9C1C2E4DE24C14923F47BF1A02 \
-  flatpak-${BRANCH}.json --force-clean
+  flatpak-${BRANCH}.json --force-clean --arch=x86_64
+
+flatpak-builder --repo="${LOCAL_REPO}" com.uploadedlobster.peek \
+  --gpg-sign=B539AD7A5763EE9C1C2E4DE24C14923F47BF1A02 \
+  flatpak-${BRANCH}.json --force-clean --arch=i386
