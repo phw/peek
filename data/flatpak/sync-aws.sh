@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_REPO=/home/phw/flatpak-repo
+LOCAL_REPO=${HOME}/flatpak-repo
 REMOTE_REPO=s3://com.uploadedlobster.flatpak
 REGION=eu-central-1
 

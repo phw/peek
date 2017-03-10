@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_REPO=/home/phw/flatpak-repo
+LOCAL_REPO=${HOME}/flatpak-repo
 
 if [ -z  "$1" ]; then
     BRANCH=master
