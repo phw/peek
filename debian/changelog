@@ -1,3 +1,32 @@
+peek (1.0.0-0) mx; urgency=medium
+
+  * New upstream release:
+    - recording: Support GNOME Shell screencast DBUS service. Allows recording
+    under GNOME Shell with XWayland (#33)
+    - recording: Support WebM and MP4 as output format (#73)
+    - recording: Added option to not record mouse cursor
+    - recording: Default frame rate is now 10fps
+    - ui: Recording can be started / stopped via configurable keyboard shortcut (#23)
+    - ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
+          the recording
+    - ui: Add `--backend` command line parameter to manually choose recording
+          backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
+    - ui: Hide button label on small window width. Allows for smaller recording area.
+    - misc: Use org.freedesktop.FileManager1 DBUs service for launching file manager.
+    - fix: Fixed a possible race condition that could lead to empty or broken files (#1)
+    - fix: Moving Peek partially outside the visible area does no longer break the
+           recording. Instead the recording area is clipped to the visible part (#64)
+    - fix: Starting recording in maximized window relocated the window on Ubuntu Unity (#74)
+    - fix: When canceling the file chooser also stop the background processing
+           of the image (#96)
+    - i18n: Many updated translations, with Czech, Dutch, German, Lithuanian,
+            Polish and Swedish 100% completed
+    - package: Peek is available from a Flatpak repository (#85)
+    - package: Provide AppStream data
+    - docs: Much improved README
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Sat, 11 Mar 2017 22:12:00 +0100
+
 peek (0.9.1-1) mx; urgency=low
 
   * Added libkeybinder-3.0-0 dependency
