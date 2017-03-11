@@ -78,6 +78,7 @@
   <update_contact>ph.wolfer@gmail.com</update_contact>
 
   <releases>
+    <release version="1.0.0" date="2017-03-11" />
     <release version="0.9.1" date="2017-02-21" />
     <release version="0.9.0" date="2017-02-20" />
     <release version="0.8.0" date="2016-10-25" />
