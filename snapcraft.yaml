@@ -111,7 +111,7 @@ parts:
 
   imagemagick:
     plugin: autotools
-    source: https://www.imagemagick.org/download/ImageMagick-6.9.7-10.tar.bz2
+    source: https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz
     configflags:
       - --prefix=/usr
       - --enable-static=no
