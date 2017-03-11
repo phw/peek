@@ -79,13 +79,15 @@ distributions:
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 
 ### Flatpak
-Peek can be installed on all distributions supporting Flatpak. To install,
-either download
+Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/).
+To install, either download
 [peek-stable.flatpakref](https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref)
 and open it with GNOME Software or install via command line:
 
-    flatpak --user install https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref
+    flatpak install --user --from https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref
 
+For full functionality you should also install
+[xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
 Once installed you can update to the latest version with:
 
     flatpak --user update com.uploadedlobster.peek
@@ -94,8 +96,9 @@ To test the latest development version you can install
 [peek-master.flatpakref](https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-master.flatpakref)
 
 ### Arch Linux
-For Arch Linux there is a
-[PKGBUILD](https://aur.archlinux.org/packages/peek/) available in the AUR. You can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to use the latest development version.
+For Arch Linux
+[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You can also use [peek-git](https://aur.archlinux.org/packages/peek-git/)
+to install the latest development version.
 
 ### Ubuntu / Debian
 You can install the latest versions of Peek from the
@@ -153,7 +156,6 @@ like [key-mon](https://github.com/critiqjo/key-mon) which is usually included
 in most distributions, so you can easily install with your package manager.
 Then start key-mon with `key-mon --visible_click`. The `--visible_click` option
 is for drawing small circles around mouse clicks.
-
 
 ### The recording area is all black, how can I record anything?
 If the recording area is not showing the content behind Peek you have probably
