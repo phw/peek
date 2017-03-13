@@ -21,7 +21,8 @@ Simple screen recorder with an easy to use interface
   - [Official distribution packages](#official-distribution-packages)
   - [Flatpak](#flatpak)
   - [Arch Linux](#arch-linux)
-  - [Ubuntu / Debian](#ubuntu--debian)
+  - [Ubuntu](#ubuntu)
+  - [Debian](#debian)
   - [Fedora](#fedora)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -100,7 +101,7 @@ For Arch Linux
 [peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You can also use [peek-git](https://aur.archlinux.org/packages/peek-git/)
 to install the latest development version.
 
-### Ubuntu / Debian
+### Ubuntu
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
 
@@ -112,7 +113,27 @@ If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
 available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
-The deb packages from these PPAs probably will also work on Debian.
+### Debian
+There are no official Debian packages, yet, but you can easily create your own
+.deb package for Peek. First install the build dependencies:
+
+    sudo apt-get install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext
+
+Then build Peek and package it:
+
+    git clone git@github.com:phw/peek.git
+    mkdir peek/build
+    cd peek/build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
+    make package
+
+This will create the package `peek-1.0.0-Linux.deb`. You can install it with
+dpkg:
+
+    sudo dpkg -i peek-1.0.0-Linux.deb
+
+Alternatively you might want to try the Ubuntu packages from the PPA (see above),
+they probably work just fine on Debian, too.
 
 ### Fedora
 Fedora 25 users can use this repository:
