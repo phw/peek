@@ -47,10 +47,10 @@ namespace Peek {
       }
 
       // If this does not work try getting the default app for handling
-      // directories and launch that.
+      // directories and launch that. If possible the file manager
+      // should be able to highlight the file.
+      var parent = file.get_parent ();
       try {
-        var parent = file.get_parent ();
-
         AppInfo app_info = null;
         if (file.has_uri_scheme ("file")) {
           app_info = AppInfo.get_default_for_type (
@@ -81,10 +81,17 @@ namespace Peek {
           uri = parent.get_uri ();
         }
 
-        debug ("Launching default for URI: %s\n", uri);
-        AppInfo.launch_default_for_uri (uri, null);
+        // Final approach: Run xdg-open (no file highlighting possible)
+        debug ("Launching xdg-open for URI: %s\n", uri);
+        string[] args = {
+          "xdg-open", uri
+        };
+        Process.spawn_sync (null, args, null,
+          SpawnFlags.SEARCH_PATH,
+          null, null, null, null);
         return true;
       } catch (Error e) {
+
         stderr.printf ("Launching file manager failed: %s\n", e.message);
         return false;
       }
