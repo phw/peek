@@ -9,22 +9,35 @@ description: |
   is not a general purpose screencast app with extended features and it never
   will be.
 grade: stable
-confinement: devmode
+# confinement: devmode
+confinement: strict
 
 apps:
   peek:
     command: desktop-launch launch-peek
-    desktop: usr/share/applications/com.uploadedlobster.peek.desktop
+    desktop: share/applications/com.uploadedlobster.peek.desktop
     plugs:
       - x11
       - unity7
       - home
       - gsettings
+      # - filemanager-dbus-client
+      # - screencast-dbus-client
   # ffmpeg:
   #   command: ffmpeg
   # convert:
   #   command: convert
 
+# plugs:
+#   filemanager-dbus-client:
+#     interface: dbus
+#     name: org.freedesktop.FileManager1
+#     bus: session
+#   screencast-dbus-client:
+#     interface: dbus
+#     name: org.gnome.Shell.Screencast
+#     bus: session
+#
 # slots:
 #   session-dbus-interface:
 #     interface: dbus
@@ -35,9 +48,9 @@ parts:
   peek:
     plugin: cmake
     configflags:
-      - -DCMAKE_INSTALL_PREFIX=/usr
       - -DGSETTINGS_COMPILE=OFF
     source: .
+    source-type: git
     after:
       - desktop-gtk3
     build-packages:
@@ -49,7 +62,7 @@ parts:
       - libcanberra-gtk3-module
       - libkeybinder-3.0-0
     install: |
-      glib-compile-schemas $SNAPCRAFT_PART_INSTALL/usr/share/glib-2.0/schemas
+      glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
     prime:
       - -usr/share/doc
       - -usr/share/man
@@ -113,7 +126,6 @@ parts:
     plugin: autotools
     source: https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz
     configflags:
-      - --prefix=/usr
       - --enable-static=no
       - --disable-docs
       - --disable-deprecated
@@ -143,14 +155,14 @@ parts:
       - --without-xml
       - --without-zlib
     prime:
-      - -usr/bin/ffplay
-      - -usr/bin/ffprobe
-      - -usr/bin/ffserver
-      - -usr/bin/qt-faststart
-      - -usr/share/bug
-      - -usr/share/doc
-      - -usr/share/fonts
-      - -usr/share/locale
-      - -usr/share/man
+      - -bin/ffplay
+      - -bin/ffprobe
+      - -bin/ffserver
+      - -bin/qt-faststart
+      - -share/bug
+      - -share/doc
+      - -share/fonts
+      - -share/locale
+      - -share/man
     install: |
-      sed -i s/avconv/ffmpeg/g $SNAPCRAFT_PART_INSTALL/usr/etc/ImageMagick-6/delegates.xml
+      sed -i s/avconv/ffmpeg/g $SNAPCRAFT_PART_INSTALL/etc/ImageMagick-6/delegates.xml

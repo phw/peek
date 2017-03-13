@@ -192,8 +192,7 @@ namespace Peek.Ui {
         stderr.printf ("Screen does not support alpha channels!");
         visual = screen.get_system_visual ();
         screen_supports_alpha = false;
-      }
-      else {
+      } else {
         screen_supports_alpha = true;
       }
 
@@ -204,8 +203,7 @@ namespace Peek.Ui {
     private bool on_recording_view_draw (Widget widget, Context ctx) {
       if (screen_supports_alpha) {
         ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
-      }
-      else {
+      } else {
         ctx.set_source_rgb (0.0, 0.0, 0.0);
       }
 
@@ -287,14 +285,12 @@ namespace Peek.Ui {
             delay_indicator.hide ();
             start_recording ();
             return false;
-          }
-          else {
+          } else {
             delay_indicator.set_text (delay.to_string ());
             return true;
           }
         });
-      }
-      else {
+      } else {
         start_recording ();
       }
     }
@@ -306,8 +302,7 @@ namespace Peek.Ui {
         Source.remove (delay_indicator_timeout);
         delay_indicator_timeout = 0;
         leave_recording_state ();
-      }
-      else if (!recorder.is_recording) {
+      } else if (!recorder.is_recording) {
         return;
       } else {
         stop_button.sensitive = false;
@@ -478,10 +473,10 @@ namespace Peek.Ui {
 
       debug ("Showing file chooser");
       if (chooser.run () == ResponseType.ACCEPT) {
+        debug ("Selected file %s", chooser.get_uri ());
         this.out_file = chooser.get_file ();
         try_save_file ();
-      }
-      else {
+      } else {
         recorder.cancel ();
         leave_recording_state ();
       }
@@ -511,8 +506,7 @@ namespace Peek.Ui {
 
             if (copy_success) {
               handle_saved_file (out_file);
-            }
-            else if (!copy_success) {
+            } else if (!copy_success) {
               stderr.printf ("Saving file %s failed.", out_file.get_uri ());
             }
           }
@@ -530,8 +524,7 @@ namespace Peek.Ui {
 
       if (open_file_manager) {
         DesktopIntegration.launch_file_manager (file);
-      }
-      else {
+      } else {
         show_file_saved_notification (file);
       }
     }
