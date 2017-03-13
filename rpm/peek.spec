@@ -48,7 +48,7 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/metainfo/com.uploadedlobster.%{name}.appdata.xml
 %{_datadir}/dbus-1/services/com.uploadedlobster.%{name}.service
 %{_datadir}/glib-2.0/schemas/com.uploadedlobster.%{name}.gschema.xml
-%{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.peek.%{name}.png
+%{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
 
 
 %changelog

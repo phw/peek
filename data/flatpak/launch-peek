@@ -7,16 +7,12 @@
 # and force the proper theme by setting GTK_THEME accordingly.
 # See also discussion at https://phabricator.freedesktop.org/T7490
 
-PREFER_DARK=$(dconf read /com/uploadedlobster/peek/interface-prefer-dark-theme)
-if [ "$PREFER_DARK" == "" ]
-then
-  PREFER_DARK=true
-fi
+PREFER_DARK=$(gsettings get com.uploadedlobster.peek interface-prefer-dark-theme)
 
 # For GNOME read the actully configured theme
 if [ "$XDG_CURRENT_DESKTOP" == "GNOME" ]
 then
-  THEME=$(dconf read /org/gnome/desktop/interface/gtk-theme | cut -d"'" -f 2)
+  THEME=$(gsettings get org.gnome.desktop.interface gtk-theme | cut -d"'" -f 2)
   NAME=${THEME%:*}
   VARIANT=$(echo $THEME | cut -d: -f2 -s)
 

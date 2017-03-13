@@ -445,29 +445,29 @@ namespace Peek.Ui {
     }
 
     private void show_file_chooser () {
+      #if HAS_GTK_FILECHOOSERNATIVE
+      var chooser = new FileChooserNative (
+        _ ("Save animation"), this, FileChooserAction.SAVE,
+        _ ("_Save"),
+        _ ("_Cancel"));
+      #else
       var chooser = new FileChooserDialog (
         _ ("Save animation"), this, FileChooserAction.SAVE,
         _ ("_Cancel"),
         ResponseType.CANCEL);
-      var ok_button = chooser.add_button (_ ("_Save"), ResponseType.OK);
+      var ok_button = chooser.add_button (_ ("_Save"), ResponseType.ACCEPT);
       ok_button.get_style_context ().add_class ("suggested-action");
+      #endif
 
-      var filter = new FileFilter ();
       chooser.do_overwrite_confirmation = true;
-      chooser.filter = filter;
 
       string extension = Utils.get_file_extension_for_format (
         recorder.output_format);
       string filename = default_file_name_format + "." + extension;
-      string mimetype;
 
-      if (recorder.output_format == OUTPUT_FORMAT_WEBM) {
-        mimetype = "image/webm";
-      } else {
-        mimetype = "image/gif";
-      }
-
-      filter.add_mime_type (mimetype);
+      var filter = new FileFilter ();
+      filter.add_pattern ("*." + extension);
+      chooser.filter = filter;
 
       var folder = load_preferred_save_folder ();
       chooser.set_current_folder (folder);
@@ -477,7 +477,7 @@ namespace Peek.Ui {
       chooser.set_current_name (default_name);
 
       debug ("Showing file chooser");
-      if (chooser.run () == ResponseType.OK) {
+      if (chooser.run () == ResponseType.ACCEPT) {
         this.out_file = chooser.get_file ();
         try_save_file ();
       }
@@ -486,8 +486,10 @@ namespace Peek.Ui {
         leave_recording_state ();
       }
 
+      #if ! HAS_GTK_FILECHOOSERNATIVE
       // Close the FileChooserDialog:
       chooser.close ();
+      #endif
     }
 
     private void try_save_file () {

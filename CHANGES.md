@@ -1,3 +1,8 @@
+# Version 1.?.? - 2017-??-??
+ * misc: Use GtkFileChooserNative, if available. Most importantly this allows
+         saving the files everywhere when Peek is running as Flatpak package
+         without giving Peek access to the entire file system.
+
 # Version 1.0.0 - 2017-03-11
  * recording: Support GNOME Shell screencast DBUS service. Allows recording
    under GNOME Shell with XWayland (#33)
