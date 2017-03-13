@@ -87,6 +87,17 @@ namespace Peek {
           return "";
       }
     }
+
+    public static bool string_is_empty (string ? str) {
+      if (str == null) return true;
+
+      unichar c;
+      for (int i = 0; str.get_next_char (ref i, out c);) {
+        if (!c.isspace () && !c.iscntrl ()) return false;
+      }
+
+      return true;
+    }
   }
 
 }
