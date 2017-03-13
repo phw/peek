@@ -25,11 +25,11 @@ apps:
   # convert:
   #   command: convert
 
-slots:
-  session-dbus-interface:
-    interface: dbus
-    name: com.uploadedlobster.peek
-    bus: session
+# slots:
+#   session-dbus-interface:
+#     interface: dbus
+#     name: com.uploadedlobster.peek
+#     bus: session
 
 parts:
   peek:
