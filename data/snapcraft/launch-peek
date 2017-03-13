@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# Make sure imagemagick finds the config dir
-export MAGICK_CONFIGURE_PATH="$SNAP/usr/etc/ImageMagick-6/"
+# Make sure ImageMagick finds the config dir
+export MAGICK_CONFIGURE_PATH="$SNAP/etc/ImageMagick-6/"
 
+# Necessary for GTK, otherwise it will try to access global /etc
 export XDG_CONFIG_DIRS=$SNAP/etc:$XDG_CONFIG_DIRS
+export XDG_DATA_DIRS=$SNAP/share:$XDG_DATA_DIRS
 
 peek
