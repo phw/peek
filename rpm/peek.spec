@@ -1,5 +1,5 @@
 Name:           peek
-Version:        0.9.1
+Version:        1.0.0
 Release:        1%{?dist}
 Summary:        Simple animated GIF screen recorder with an easy to use interface
 
@@ -52,10 +52,29 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
-* Wed Feb 22 2017 Steeven Lopes <steevenlopes@outllok.com> -0.9.1
+* Sat Mar 11 2017 Steeven Lopes <steevenlopes@outlook> -1.0.0
+- Support GNOME Shell screencast DBus service. Allows recording under GNOME Shell with XWayland.
+- Support WebM and MP4 as output format.
+- Added option to not record mouse cursor.
+- Default frame rate is now 10fps.
+- Recording can be started / stopped via configurable keyboard shortcut.
+- Add --start, --stop and --toggle command line parameters to control the recording.
+- Add --backend command line parameter to manually choose recording backend (gnome-shell, ffmpeg or avcodec for now).
+- Hide button label on small window width. Allows for smaller recording area.
+- Use org.freedesktop.FileManager1 DBus service for launching file manager.
+- Fixed a possible race condition that could lead to empty or broken files.
+- Moving Peek partially outside the visible area does no longer break the recording. Instead the recording area is clipped to the visible part.
+- Starting recording in maximized window relocated the window on Ubuntu Unity.
+- When canceling the file chooser also stop the background processing of the image.
+- Many updated translations, with Czech, Dutch, German, Lithuanian,Polish and Swedish 100% completed.
+- Peek is available from a Flatpak repository.
+- Provide AppStream data.
+- Much improved README.
+
+* Wed Feb 22 2017 Steeven Lopes <steevenlopes@outlook.com> -0.9.1
 - Fixed Czech, Croatian, Korean, Dutch and Chinese (Simplified) not getting installed
 
-* Wed Feb 22 2017 Steeven Lopes <steevenlopes@outllok.com> -0.9.0
+* Wed Feb 22 2017 Steeven Lopes <steevenlopes@outlook.com> -0.9.0
 - Fix problem of app menu not available on certain desktop configurations
 - Fix display of desktop notifications on Ubuntu Unity
 - Close button is displayed left on Ubuntu Unity
