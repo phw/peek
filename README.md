@@ -65,7 +65,7 @@ Support for more Wayland desktops or Ubuntu Mir might be added in the future
 
 ### Development
 
-- Vala compiler
+- Vala compiler >= 0.22
 - CMake >= 2.8.8
 - Gettext (>= 0.19 for localized .desktop entry)
 
@@ -89,7 +89,12 @@ and open it with GNOME Software or install via command line:
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
-Once installed you can update to the latest version with:
+Once installed you can run Peek via its application icon in your desktop
+environment or from command line:
+
+    flatpak run com.uploadedlobster.peek
+
+To update to the latest version run:
 
     flatpak --user update com.uploadedlobster.peek
 
@@ -166,8 +171,8 @@ make
 sudo make install
 ```
 
-You can uninstall Peek again by running `sudo make uninstall` from within the build
-directory.
+You can uninstall Peek again by running `sudo make uninstall` from within the
+build directory.
 
 
 ## Frequently Asked Questions
