@@ -10,7 +10,6 @@
     "--socket=x11",
     "--env=GDK_BACKEND=x11",
     "--socket=wayland",
-    "--own-name=com.uploadedlobster.peek",
     "--talk-name=org.freedesktop.DBus",
     "--talk-name=org.freedesktop.FileManager1",
     "--talk-name=org.gnome.Shell.Screencast",
@@ -22,6 +21,12 @@
     "--filesystem=~/.config/dconf:ro",
     "--talk-name=ca.desrt.dconf",
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+  ],
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/share/gtk-doc",
+    "*.la"
   ],
   "modules": [{
     "name": "peek",
@@ -40,11 +45,7 @@
         "type": "archive",
         "url": "https://github.com/kupferlauncher/keybinder/releases/download/keybinder-3.0-v0.3.2/keybinder-3.0-0.3.2.tar.gz",
         "sha256": "e6e3de4e1f3b201814a956ab8f16dfc8a262db1937ff1eee4d855365398c6020"
-      }],
-      "cleanup": [
-        "/include/**/*",
-        "/share/gtk-doc/**/*"
-      ]
+      }]
     }],
     "post-install": [
       "cp data/flatpak/launch-peek /app/bin"
@@ -105,13 +106,9 @@
         "branch": "86b71982e131eaa70125f8d0e725fcade9c4c677"
       }],
       "cleanup": [
-        "/include/**/*",
         "/bin/x264"
       ]
-    }],
-    "cleanup": [
-      "/include/**/*"
-    ]
+    }]
   }, {
     "name": "imagemagick",
     "config-opts": [
@@ -148,9 +145,6 @@
       "type": "archive",
       "url": "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz",
       "sha256": "f4d4e9a56a752dac6aeb06be0c5d0febeb42eecb207f9db607e262f5f6de080d"
-    }],
-    "cleanup": [
-      "/include/**/*"
-    ]
+    }]
   }]
 }
