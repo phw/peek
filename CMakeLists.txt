@@ -25,7 +25,8 @@ include(GettextTranslate)
 find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
-pkg_check_modules(GTK REQUIRED gtk+-3.0>=3.14)
+set(REQUIRE_GTK "3.14")
+pkg_check_modules(GTK REQUIRED gtk+-3.0>=${REQUIRE_GTK})
 pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
 pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
@@ -52,16 +53,19 @@ set(VALA_DEFINITIONS "")
 
 if(${GTK_VERSION} VERSION_EQUAL "3.16" OR ${GTK_VERSION} VERSION_GREATER "3.16")
   message(STATUS "Compiling with features for GTK >= 3.16")
+  set(REQUIRE_GTK "3.16")
   list(APPEND VALA_DEFINITIONS "HAS_GTK_LABEL_XALIGN")
 endif()
 
 if(${GTK_VERSION} VERSION_EQUAL "3.20" OR ${GTK_VERSION} VERSION_GREATER "3.20")
   message(STATUS "Compiling with features for GTK >= 3.20")
+  set(REQUIRE_GTK "3.20")
   list(APPEND VALA_DEFINITIONS "HAS_GTK_FILECHOOSERNATIVE")
 endif()
 
 if(${GTK_VERSION} VERSION_EQUAL "3.22" OR ${GTK_VERSION} VERSION_GREATER "3.22")
   message(STATUS "Compiling with features for GTK >= 3.22")
+  set(REQUIRE_GTK "3.22")
   list(APPEND VALA_DEFINITIONS "HAS_GTK_SHORTCUT_LABEL")
 endif()
 
@@ -151,7 +155,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= 3.14), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg | libav-tools, imagemagick")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg | libav-tools, imagemagick")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 
