@@ -320,8 +320,13 @@ namespace Peek {
         if (schema != null && schema.has_key ("integrated-menus")) {
           var unity = new Settings.full (schema, null, null);
           if (unity.get_boolean ("integrated-menus")) {
+            debug ("Unity with integrated menus");
             settings.gtk_shell_shows_app_menu = false;
+          } else {
+            debug ("Unity with global menus");
           }
+        } else {
+          debug ("Could not load schema com.canonical.Unity");
         }
       }
     }
