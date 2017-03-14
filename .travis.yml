@@ -33,6 +33,7 @@ script:
   - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib
   - make
   - sudo checkinstall --pkgname=imagemagick --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  - mv imagemagick_1-1_amd64.deb ..
   - cd ..
   # Building and installing FFmpeg
   - wget -c "https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz"
@@ -41,6 +42,7 @@ script:
   - ./configure --prefix=/usr --disable-debug --disable-static --enable-gpl --enable-libvpx --enable-libx264 --enable-shared --enable-x11grab --disable-ffplay --disable-ffprobe --disable-ffserver --disable-doc --disable-everything --enable-decoder=libvpx_vp8 --enable-decoder=rawvideo --enable-encoder=libx264 --enable-encoder=libvpx_vp8 --enable-encoder=rawvideo --enable-encoder=pam --enable-demuxer=avi --enable-muxer=mp4 --enable-muxer=webm --enable-muxer=rawvideo --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=x11grab_xcb
   - make
   - sudo checkinstall --pkgname=ffmpeg --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  - mv ffmpeg_1-1_amd64.deb ..
   - cd ..
   # Populate appdir
   - mkdir appdir ; cd appdir
