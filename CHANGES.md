@@ -3,9 +3,13 @@
          saving the files everywhere when Peek is running as Flatpak package
          without giving Peek access to the entire file system.
  * fix: Set temporary directory for ImageMagick
+ * fix: Detect if global menus are disabled in Unity when running as
+        Flatpak / Snap package
+ * i18n: Updated translations for Czech, Spanish
+ * docs: Added Debian instructions to build custom package
 
 # Version 1.0.0 - 2017-03-11
- * recording: Support GNOME Shell screencast DBUS service. Allows recording
+ * recording: Support GNOME Shell screencast DBus service. Allows recording
    under GNOME Shell with XWayland (#33)
  * recording: Support WebM and MP4 as output format (#73)
  * recording: Added option to not record mouse cursor
@@ -16,7 +20,7 @@
  * ui: Add `--backend` command line parameter to manually choose recording
        backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
  * ui: Hide button label on small window width. Allows for smaller recording area.
- * misc: Use org.freedesktop.FileManager1 DBUs service for launching file manager.
+ * misc: Use org.freedesktop.FileManager1 DBus service for launching file manager.
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
  * fix: Moving Peek partially outside the visible area does no longer break the
         recording. Instead the recording area is clipped to the visible part (#64)
@@ -75,7 +79,7 @@
  * misc: Added generic name and sub category to desktop file
  * misc: Added uninstall target, so source installations can be uninstalled
    with `make uninstall` (#28)
- * fix: Fix DBUS service file if installed to location other than `/usr` (#13)
+ * fix: Fix DBus service file if installed to location other than `/usr` (#13)
  * fix: Locales not loaded if not installed to /usr due to missing locale path
 
 # Version 0.7.2 - 2016-07-07
