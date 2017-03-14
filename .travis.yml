@@ -23,7 +23,7 @@ script:
   - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - # sudo mv sources.list /etc/apt/sources.list
   - # sudo apt-get update
-  - sudo apt-get -y install checkinstall libx264-dev
+  - sudo apt-get -y install checkinstall libx264-dev libvpx-dev yasm
   - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc
   - wget -c "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz"
   - tar xf ImageMagick-6.9.8-0.tar.xz
@@ -42,7 +42,7 @@ script:
   - mkdir appdir ; cd appdir
   - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find .
   - cp ./usr/share/applications/*.desktop .
-  - cp ./usr/share/icons/hicolor/256x256/apps/peek.png .
+  - cp ./usr/share/icons/hicolor/256x256/apps/com.uploadedlobster.peek.png .
   - cd ..
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage"
   - chmod a+x linuxdeployqt*.AppImage
