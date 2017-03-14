@@ -51,6 +51,7 @@ parts:
       - libcanberra-gtk3-module
       - libkeybinder-3.0-0
     install: |
+      cp data/extra/com.canonical.Unity.gschema.xml $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
     prime:
       - -usr/share/doc
@@ -61,10 +62,8 @@ parts:
     source: data/snapcraft/
     organize:
       launch-peek: bin/launch-peek
-      com.canonical.Unity.gschema.xml: share/glib-2.0/schemas
     install: |
-      chmod 0555 $SNAPCRAFT_PART_INSTALL/launch-peek
-      glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
+      chmod 0755 $SNAPCRAFT_PART_INSTALL/launch-peek
 
   # snapd-xdg-open:
   #   plugin: dump

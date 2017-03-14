@@ -60,7 +60,6 @@ install(FILES "icons/48x48/com.uploadedlobster.peek.png" DESTINATION share/icons
 install(FILES "icons/256x256/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/256x256/apps)
 install(FILES "icons/512x512/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/512x512/apps)
 
-
 # Install DBus service
 configure_file (
   com.uploadedlobster.peek.service.in
@@ -68,3 +67,9 @@ configure_file (
   )
 
 install(FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.service DESTINATION share/dbus-1/services)
+
+# Copy build data FILES
+file(
+  COPY com.canonical.Unity.gschema.xml
+  DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/extra/
+)

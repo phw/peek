@@ -144,7 +144,7 @@
     }],
     "post-install": [
       "cp data/flatpak/launch-peek /app/bin",
-      "cp data/flatpak/com.canonical.Unity.gschema.xml /app/share/glib-2.0/schemas",
+      "cp data/com.canonical.Unity.gschema.xml /app/share/glib-2.0/schemas",
       "glib-compile-schemas /app/share/glib-2.0/schemas"
     ]
   }]

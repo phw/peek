@@ -1,7 +1,7 @@
 <schemalist>
   <!--
-  Fake schema for com.canonical.Unity to get
-  access to the integrated-menus setting.
+  Fake schema for com.canonical.Unity to get access to the
+  integrated-menus setting in sandboxed packages (Flatpak, Snap).
   -->
 
   <schema path="/com/canonical/unity/" id="com.canonical.Unity" gettext-domain="unity">
