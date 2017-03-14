@@ -46,7 +46,7 @@ script:
   - cd ..
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage"
   - chmod a+x linuxdeployqt*.AppImage
-  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/avconv -bundle-non-qt-libs # Workaround for https://github.com/probonopd/linuxdeployqt/issues/83
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/ffmpeg -bundle-non-qt-libs # Workaround for https://github.com/probonopd/linuxdeployqt/issues/83
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/convert -bundle-non-qt-libs
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs
   - ( cd usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
