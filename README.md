@@ -85,7 +85,7 @@ To install, either download
 [peek-stable.flatpakref](https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref)
 and open it with GNOME Software or install via command line:
 
-    flatpak install --user --from https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref
+    flatpak install --user https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-stable.flatpakref
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
@@ -96,23 +96,24 @@ environment or from command line:
 
 To update to the latest version run:
 
-    flatpak --user update com.uploadedlobster.peek
+    flatpak update --user com.uploadedlobster.peek
 
 To test the latest development version you can install
 [peek-master.flatpakref](https://raw.githubusercontent.com/phw/peek/master/data/flatpak/peek-master.flatpakref)
 
 ### Arch Linux
 For Arch Linux
-[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You can also use [peek-git](https://aur.archlinux.org/packages/peek-git/)
-to install the latest development version.
+[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
+can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to install
+the latest development version.
 
 ### Ubuntu
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
 
     sudo add-apt-repository ppa:peek-developers/stable
-    sudo apt-get update
-    sudo apt-get install peek
+    sudo apt update
+    sudo apt install peek
 
 If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
@@ -122,7 +123,7 @@ available. Use the repository `ppa:peek-developers/daily` in the above commands.
 There are no official Debian packages, yet, but you can easily create your own
 .deb package for Peek. First install the build dependencies:
 
-    sudo apt-get install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext
+    sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext
 
 Then build Peek and package it:
 
@@ -143,33 +144,30 @@ they probably work just fine on Debian, too.
 ### Fedora
 Fedora 25 users can use this repository:
 
-```
-sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
-sudo dnf install peek -y
-```
+    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
+    sudo dnf install peek -y
 
-To install the required ffmpeg package you can use the RPM Fusion free repository, see the [setup instructions for RPM fusion](https://rpmfusion.org/Configuration). Once the repository is enabled install ffmpeg with
+To install the required ffmpeg package you can use the RPM Fusion free
+repository, see the
+[setup instructions for RPM fusion](https://rpmfusion.org/Configuration).
+Once the repository is enabled install ffmpeg with:
 
-```
-sudo dnf install ffmpeg
-```
+    sudo dnf install ffmpeg
 
 ### From source
 You can build and install Peek using CMake:
 
-```shell
-git clone git@github.com:phw/peek.git
-mkdir peek/build
-cd peek/build
-cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-make
+    git clone git@github.com:phw/peek.git
+    mkdir peek/build
+    cd peek/build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make
 
-# Run directly from source
-./peek
+    # Run directly from source
+    ./peek
 
-# Install system wide
-sudo make install
-```
+    # Install system wide
+    sudo make install
 
 You can uninstall Peek again by running `sudo make uninstall` from within the
 build directory.
@@ -194,7 +192,8 @@ Some users have experienced recorded windows flicker or other strange visual
 artifacts only visible in the recorded GIF. This is most likely a video driver
 issue. If you are using Intel video drivers switching between the SNA and UXA
 acceleration methods can help. For NVIDIA drivers changing the "Allow Flipping"
-setting in the NVIDIA control panel [was reported to help](https://github.com/phw/peek/issues/86).
+setting in the NVIDIA control panel
+[was reported to help](https://github.com/phw/peek/issues/86).
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
@@ -230,10 +229,10 @@ cases for Peek are recording small user interactions for showing UI features
 of an app you developed, for making short tutorials or for reporting bugs.
 
 ### What about WebM or MP4? Those are well supported on the web.
-Peek allows you to record in both WebM and MP4 format, just choose your preferred
-output format in the preferences. Both are well supported by modern browsers, even
-though they are still not as universally supported by tools and online services
-as GIFs.
+Peek allows you to record in both WebM and MP4 format, just choose your
+preferred output format in the preferences. Both are well supported by modern
+browsers, even though they are still not as universally supported by tools and
+online services as GIFs.
 
 ### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
