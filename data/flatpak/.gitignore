@@ -1,4 +1,6 @@
 # flatpak build directories
+.x86_64/
+.i386/
 .flatpak-builder/
 com.uploadedlobster.peek/
 flatpak/

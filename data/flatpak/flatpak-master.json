@@ -128,11 +128,11 @@
     "buildsystem": "cmake",
     "sources": [{
       "type": "git",
-      "url": "../..",
+      "url": "../../..",
       "branch": "master"
     }, {
       "type": "patch",
-      "path": "launch-command.patch"
+      "path": "../launch-command.patch"
     }],
     "modules": [{
       "name": "keybinder3",
