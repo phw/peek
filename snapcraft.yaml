@@ -9,8 +9,8 @@ description: |
   is not a general purpose screencast app with extended features and it never
   will be.
 grade: stable
-# confinement: devmode
-confinement: strict
+confinement: devmode
+# confinement: strict
 
 apps:
   peek:
@@ -38,6 +38,7 @@ parts:
     configflags:
       - -DGSETTINGS_COMPILE=OFF
     source: .
+    # source: /media/sf_devel/peek
     source-type: git
     after:
       - desktop-gtk3
@@ -62,6 +63,14 @@ parts:
       launch-peek: bin/launch-peek
     install: |
       chmod 0555 $SNAPCRAFT_PART_INSTALL/launch-peek
+
+  # snapd-xdg-open:
+  #   plugin: dump
+  #   source: https://github.com/ubuntu-core/snapd-xdg-open.git
+  #   organize:
+  #     data/xdg-open: bin/xdg-open
+  #   stage-packages:
+  #     - dbus
 
   ffmpeg:
     plugin: autotools
