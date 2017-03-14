@@ -17,14 +17,16 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script:
-  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DBUILD_TESTS=ON .
-  - make
-  - make test
+  - sudo apt-get -y install checkinstall libx264-dev libvpx-dev yasm
   - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - # sudo mv sources.list /etc/apt/sources.list
   - # sudo apt-get update
-  - sudo apt-get -y install checkinstall libx264-dev libvpx-dev yasm
-  - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  # Building and Installing Peek
+  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DBUILD_TESTS=ON .
+  - make
+  - make test
+  - sudo checkinstall --pkgname=peek --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  # Building and installing ImageMagick
   - wget -c "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz"
   - tar xf ImageMagick-6.9.8-0.tar.xz
   - cd ImageMagick-6.9.8-0/
@@ -32,6 +34,7 @@ script:
   - make
   - sudo checkinstall --pkgname=imagemagick --pkgversion="1" --backup=no --fstrans=no --default --deldoc
   - cd ..
+  # Building and installing FFmpeg
   - wget -c "https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz"
   - tar xf ffmpeg-3.2.4.tar.xz
   - cd ffmpeg-3.2.4
@@ -39,17 +42,21 @@ script:
   - make
   - sudo checkinstall --pkgname=ffmpeg --pkgversion="1" --backup=no --fstrans=no --default --deldoc
   - cd ..
+  # Populate appdir
   - mkdir appdir ; cd appdir
-  - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find .
+  - dpkg -x ../peek_1-1_amd64.deb . ; rm usr/local ; find .
+  - dpkg -x ../imagemagick_1-1_amd64.deb . ; rm usr/local ; find .
+  - dpkg -x ../ffmpeg_1-1_amd64.deb . ; rm usr/local ; find .
   - cp ./usr/share/applications/*.desktop .
   - cp ./usr/share/icons/hicolor/256x256/apps/com.uploadedlobster.peek.png .
   - cd ..
+  # Create AppImage
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage"
   - chmod a+x linuxdeployqt*.AppImage
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/ffmpeg -bundle-non-qt-libs # Workaround for https://github.com/probonopd/linuxdeployqt/issues/83
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/convert -bundle-non-qt-libs
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs
-  - ( cd usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
+  - ( cd appdir/usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage
   - curl --upload-file ./Peek-*.AppImage https://transfer.sh/Peek-x86_64.AppImage
 
