@@ -61,8 +61,10 @@ parts:
     source: data/snapcraft/
     organize:
       launch-peek: bin/launch-peek
+      com.canonical.Unity.gschema.xml: share/glib-2.0/schemas
     install: |
       chmod 0555 $SNAPCRAFT_PART_INSTALL/launch-peek
+      glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
 
   # snapd-xdg-open:
   #   plugin: dump

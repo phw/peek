@@ -1,0 +1,12 @@
+<schemalist>
+  <!--
+  Fake schema for com.canonical.Unity to get
+  access to the integrated-menus setting.
+  -->
+
+  <schema path="/com/canonical/unity/" id="com.canonical.Unity" gettext-domain="unity">
+    <key type="b" name="integrated-menus">
+      <default>false</default>
+    </key>
+  </schema>
+</schemalist>
