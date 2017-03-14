@@ -23,23 +23,35 @@ script:
   - # echo "deb http://archive.ubuntu.com/ubuntu/ xenial main universe multiverse restricted" > sources.list
   - # sudo mv sources.list /etc/apt/sources.list
   - # sudo apt-get update
-  - sudo apt-get -y install checkinstall libav-tools imagemagick
-  - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc 
+  - sudo apt-get -y install checkinstall libx264-dev
+  - sudo checkinstall --pkgname=app --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  - wget -c "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz"
+  - tar xf ImageMagick-6.9.8-0.tar.xz
+  - cd ImageMagick-6.9.8-0/
+  - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib
+  - make
+  - sudo checkinstall --pkgname=imagemagick --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  - cd ..
+  - wget -c "https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz"
+  - tar xf ffmpeg-3.2.4.tar.xz
+  - cd ffmpeg-3.2.4
+  - ./configure --prefix=/usr --disable-debug --disable-static --enable-gpl --enable-libvpx --enable-libx264 --enable-shared --enable-x11grab --disable-ffplay --disable-ffprobe --disable-ffserver --disable-doc --disable-everything --enable-decoder=libvpx_vp8 --enable-decoder=rawvideo --enable-encoder=libx264 --enable-encoder=libvpx_vp8 --enable-encoder=rawvideo --enable-encoder=pam --enable-demuxer=avi --enable-muxer=mp4 --enable-muxer=webm --enable-muxer=rawvideo --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=x11grab_xcb
+  - make
+  - sudo checkinstall --pkgname=ffmpeg --pkgversion="1" --backup=no --fstrans=no --default --deldoc
+  - cd ..
   - mkdir appdir ; cd appdir
-  - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find . 
-  - cp ./usr/share/applications/*.desktop . 
-  - cp ./usr/share/icons/hicolor/256x256/apps/peek.png . 
-  - cd .. 
-  - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage" 
-  - chmod a+x linuxdeployqt*.AppImage 
-  - cp $(which avconv) ./appdir/usr/bin
-  - cp $(which convert) ./appdir/usr/bin
+  - dpkg -x ../app_1-1_amd64.deb . ; rm usr/local ; find .
+  - cp ./usr/share/applications/*.desktop .
+  - cp ./usr/share/icons/hicolor/256x256/apps/peek.png .
+  - cd ..
+  - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/3/linuxdeployqt-3-x86_64.AppImage"
+  - chmod a+x linuxdeployqt*.AppImage
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/avconv -bundle-non-qt-libs # Workaround for https://github.com/probonopd/linuxdeployqt/issues/83
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/convert -bundle-non-qt-libs
   - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -bundle-non-qt-libs
   - ( cd usr/share/glib-2.0/schemas/ ; glib-compile-schemas . )
-  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage 
-  - curl --upload-file ./Peek-*.AppImage https://transfer.sh/Peek-x86_64.AppImage 
+  - ./linuxdeployqt*.AppImage ./appdir/usr/bin/peek -appimage
+  - curl --upload-file ./Peek-*.AppImage https://transfer.sh/Peek-x86_64.AppImage
 
 deploy:
   provider: launchpad
