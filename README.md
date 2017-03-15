@@ -101,6 +101,12 @@ To update to the latest version run:
 To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
+### Snappy
+Peek can also be installed on all distributions supporting [Snappy](https://snapcraft.io/docs/core/install).
+Currently only the development version is available in the Snappy format:
+
+    sudo snap install peek --edge --devmode
+
 ### Arch Linux
 For Arch Linux
 [peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
