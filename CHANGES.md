@@ -1,7 +1,4 @@
 # Version 1.?.? - 2017-??-??
- * misc: Use GtkFileChooserNative, if available. Most importantly this allows
-         saving the files everywhere when Peek is running as Flatpak package
-         without giving Peek access to the entire file system.
  * fix: Set temporary directory for ImageMagick
  * fix: Detect if global menus are disabled in Unity when running as
         Flatpak / Snap package
