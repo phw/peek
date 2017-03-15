@@ -1,6 +1,6 @@
 #!/bin/sh
 LOCAL_REPO=${HOME}/flatpak-repo
-REMOTE_REPO=s3://com.uploadedlobster.flatpak
+REMOTE_REPO=s3://flatpak.uploadedlobster.com
 REGION=eu-central-1
 
 flatpak build-update-repo \
