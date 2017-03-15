@@ -24,3 +24,5 @@ build_for_arch () {
 
 build_for_arch x86_64
 build_for_arch i386
+
+cp *.flatpakref ${LOCAL_REPO}
