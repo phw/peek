@@ -20,6 +20,7 @@ Simple screen recorder with an easy to use interface
 - [Installation](#installation)
   - [Official distribution packages](#official-distribution-packages)
   - [Flatpak](#flatpak)
+  - [Snappy](#snappy)
   - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
