@@ -19,6 +19,7 @@ build_for_arch () {
   echo -e "\e[0;36mBuilding Peek \e[1;36m${BRANCH}\e[0;36m for \e[1;36m${ARCH}\e[0m"
 
   flatpak-builder \
+    --require-changes \
     --repo="${LOCAL_REPO}" \
     --gpg-sign=B539AD7A5763EE9C1C2E4DE24C14923F47BF1A02 \
     --force-clean \
