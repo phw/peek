@@ -30,6 +30,7 @@ build_for_arch () {
     echo -e "\e[0;32mBuild \e[1;32m${ARCH}\e[0;32m success!\e[0m\n"
   else
     echo -e "\e[0;31mBuild \e[1;31m${ARCH}\e[0;31m failed!\e[0m\n"
+    exit $?
   fi
 }
 
