@@ -11,6 +11,12 @@ This software is licensed under the GNU General Public License
 [CCode(cname="LOCALEDIR")] extern const string LOCALEDIR;
 
 int main (string[] args) {
+  // If not explicitly set otherwise, set GDK_BACKEND to x11.
+  // Native Wayland is not yet supported, that means on Wayland
+  // the use of XWayland is mandatory. See also
+  // https://github.com/phw/peek#why-no-native-wayland-support
+  Environment.set_variable ("GDK_BACKEND", "x11", false);
+
   // Setup gettext
   GLib.Intl.setlocale(GLib.LocaleCategory.ALL, "");
   GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);

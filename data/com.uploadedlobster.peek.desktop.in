@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Peek
-Exec=env GDK_BACKEND=x11 peek
+Exec=peek
 GenericName=Animated GIF recorder
 Comment=Record short animated GIF images from your screen
 Icon=com.uploadedlobster.peek
