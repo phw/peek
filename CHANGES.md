@@ -1,9 +1,11 @@
 # Version 1.?.? - 2017-??-??
  * fix: Set temporary directory for ImageMagick
+ * fix: Always launch with `GDK_BACKEND=x11` for Wayland
  * fix: Detect if global menus are disabled in Unity when running as
         Flatpak / Snap package
  * i18n: Updated translations for Czech, Spanish
  * docs: Added Debian instructions to build custom package
+ * docs: Added Snappy install instructions (development builds only)
 
 # Version 1.0.0 - 2017-03-11
  * recording: Support GNOME Shell screencast DBus service. Allows recording
