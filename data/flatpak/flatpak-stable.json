@@ -120,8 +120,8 @@
     ],
     "sources": [{
       "type": "archive",
-      "url": "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-0.tar.xz",
-      "sha256": "f4d4e9a56a752dac6aeb06be0c5d0febeb42eecb207f9db607e262f5f6de080d"
+      "url": "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-1.tar.xz",
+      "sha256": "bd857450a4277d512e406088594500d80c09c547635c433f091b6c2104705ad6"
     }]
   }, {
     "name": "peek",
