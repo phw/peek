@@ -126,6 +126,7 @@ namespace Peek.Recording {
         pipeline.append ("queue ! webmmux");
       } else if (output_format == OUTPUT_FORMAT_MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
+        pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
         pipeline.append ("vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! ");

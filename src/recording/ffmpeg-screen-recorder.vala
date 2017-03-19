@@ -67,6 +67,10 @@ namespace Peek.Recording {
           args.append_val ("libx264");
           args.append_val ("-preset:v");
           args.append_val ("fast");
+          args.append_val ("-profile:v");
+          args.append_val ("baseline");
+          args.append_val ("-pix_fmt");
+          args.append_val ("yuv420p");
         } else {
           extension = "pam";
           args.append_val ("-codec:v");
