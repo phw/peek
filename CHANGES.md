@@ -1,4 +1,8 @@
 # Version 1.?.? - 2017-??-??
+ * recording: Use h264 baseline profile for MP4 for increased browser
+              compatibility (#111)
+ * recording: For WebM GNOME Shell recorder use same quality settings as with
+              FFmpeg encoder
  * fix: Set temporary directory for ImageMagick
  * fix: Always launch with `GDK_BACKEND=x11` for Wayland
  * fix: Detect if global menus are disabled in Unity when running as
