@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-13 15:54+0000\n"
+"PO-Revision-Date: 2017-03-19 20:58+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech "
 "<https://hosted.weblate.org/projects/peek/translations/cs/>\n"
@@ -208,7 +208,6 @@ msgid "Delay in seconds before recording starts"
 msgstr "Zpoždění (v sekundách) před spuštěním nahrávání"
 
 #: ui/preferences.ui:273
-#, fuzzy
 msgid "Resolution downsampling"
 msgstr "Downsampling rozlišení"
 
@@ -267,7 +266,6 @@ msgid "Simple user interface optimized for the task"
 msgstr "Jednoduché uživatelské rozhraní optimalizované pro daný úkol"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
-#, fuzzy
 msgid "Automatically downscale recorded videos"
 msgstr "Automaticky podvzorkovat nahraná videa"
 
@@ -330,7 +328,6 @@ msgid "Output file format"
 msgstr "Výchozí formát souboru"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:52
-#, fuzzy
 msgid "Resolution downsampling factor"
 msgstr "Faktor pro downsampling rozlišení"
 
