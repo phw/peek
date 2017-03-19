@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-06-16 11:11+0200\n"
-"PO-Revision-Date: 2017-03-19 20:58+0000\n"
+"PO-Revision-Date: 2017-07-05 09:25+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
-"cs/>\n"
+"Language-Team: Czech "
+"<https://hosted.weblate.org/projects/peek/translations/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.16-dev\n"
 
 #: src/application.vala:59
 msgid "Show the version of the program and exit"
@@ -224,11 +224,9 @@ msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
-#, fuzzy
 msgid "Simple screen recorder with an easy to use interface"
 msgstr ""
-"Program s jednoduchým rozhraním pro nahrávání dění na obrazovce do formátu "
-"GIF"
+"Program pro nahrávání dění na obrazovce s jednoduše použitelným rozhraním"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
