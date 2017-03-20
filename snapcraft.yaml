@@ -122,7 +122,8 @@ parts:
 
   imagemagick:
     plugin: autotools
-    source: https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-1.tar.xz
+    source: http://git.imagemagick.org/repos/ImageMagick.git
+    source-type: git
     configflags:
       - --enable-static=no
       - --disable-docs

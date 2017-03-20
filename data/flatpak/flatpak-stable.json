@@ -119,9 +119,9 @@
       "--without-zlib"
     ],
     "sources": [{
-      "type": "archive",
-      "url": "https://www.imagemagick.org/download/releases/ImageMagick-6.9.8-1.tar.xz",
-      "sha256": "bd857450a4277d512e406088594500d80c09c547635c433f091b6c2104705ad6"
+      "type": "git",
+      "url": "http://git.imagemagick.org/repos/ImageMagick.git",
+      "branch": "e12a51e9039a50a06338022d07cc5777f9f9cb98"
     }]
   }, {
     "name": "peek",
