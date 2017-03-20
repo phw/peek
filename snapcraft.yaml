@@ -124,6 +124,7 @@ parts:
     plugin: autotools
     source: http://git.imagemagick.org/repos/ImageMagick.git
     source-type: git
+    source-commit: e12a51e9039a50a06338022d07cc5777f9f9cb98
     configflags:
       - --enable-static=no
       - --disable-docs
