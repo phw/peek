@@ -1,13 +1,15 @@
 # Version 1.?.? - 2017-??-??
- * recording: Use h264 baseline profile for MP4 for increased browser
+ * recording: Use H.264 baseline profile for MP4 for increased browser
               compatibility (#111)
  * recording: For WebM GNOME Shell recorder use same quality settings as with
               FFmpeg encoder
+ * ui: Show only the most recent "file saved" notification to avoid spamming
+       the desktop with notifications.
  * fix: Set temporary directory for ImageMagick
  * fix: Always launch with `GDK_BACKEND=x11` for Wayland
  * fix: Detect if global menus are disabled in Unity when running as
         Flatpak / Snap package
- * i18n: Updated translations for Czech, Spanish
+ * i18n: Updated translations for Arabic, Czech, Russian and Spanish
  * docs: Added Debian instructions to build custom package
  * docs: Added Snappy install instructions (development builds only)
 
