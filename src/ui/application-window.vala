@@ -550,7 +550,7 @@ namespace Peek.Ui {
           parameter);
       }
 
-      this.application.send_notification (null, notification);
+      this.application.send_notification ("peek-file-saved", notification);
     }
 
     private string load_preferred_save_folder () {
