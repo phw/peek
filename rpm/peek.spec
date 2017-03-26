@@ -1,11 +1,11 @@
 Name:           peek
-Version:        1.0.0
+Version:        1.0.1
 Release:        1%{?dist}
-Summary:        Simple animated GIF screen recorder with an easy to use interface
+Summary:      Simple animated GIF screen recorder with an easy to use interface
 
 License:        GPLv3
-URL:            https://github.com/phw/peek
-Source0:        https://github.com/phw/peek/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+URL:              https://github.com/phw/peek
+Source0:       https://github.com/phw/peek/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  vala-devel
@@ -14,10 +14,10 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
 BuildRequires:  pkgconfig(keybinder-3.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
-Requires:       ffmpeg
-Requires:       ImageMagick
-Requires:       gstreamer1-plugins-good
-Recommends:     gstreamer1-plugins-bad-freeworld
+Requires:          ffmpeg
+Requires:          ImageMagick
+Requires:          gstreamer1-plugins-good
+Recommends:   gstreamer1-plugins-bad-freeworld
 
 %description
 A simple tool that allows you to record short animated GIF images
@@ -50,9 +50,21 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/glib-2.0/schemas/com.uploadedlobster.%{name}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
 
-
 %changelog
-* Sat Mar 11 2017 Steeven Lopes <steevenlopes@outlook> -1.0.0
+* Mon Mar 26 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.1
+- Use H.264 baseline profile for MP4 for increased browser compatibility (#111)
+- For WebM GNOME Shell recorder use same quality settings as with Fmpeg encoder 
+- Show only the most recent "file saved" notification to avoid spamming the desktop with notifications.
+- Set temporary directory for ImageMagick
+- Always launch with GDK_BACKEND=x11 for Wayland
+- Detect if global menus are disabled in Unity when running as Flatpak / Snap package
+- Updated translations for Arabic, Czech, Russian and Spanish
+- New translations for Basque and Esperanto
+- Added Debian instructions to build custom package
+- Added Snappy install instructions (development builds only)
+
+
+* Sat Mar 11 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.0
 - Support GNOME Shell screencast DBus service. Allows recording under GNOME Shell with XWayland.
 - Support WebM and MP4 as output format.
 - Added option to not record mouse cursor.
