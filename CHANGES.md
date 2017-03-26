@@ -1,4 +1,4 @@
-# Version 1.?.? - 2017-??-??
+# Version 1.0.1 - 2017-03-26
  * recording: Use H.264 baseline profile for MP4 for increased browser
               compatibility (#111)
  * recording: For WebM GNOME Shell recorder use same quality settings as with
@@ -10,6 +10,7 @@
  * fix: Detect if global menus are disabled in Unity when running as
         Flatpak / Snap package
  * i18n: Updated translations for Arabic, Czech, Russian and Spanish
+ * i18n: New translations for Basque and Esperanto
  * docs: Added Debian instructions to build custom package
  * docs: Added Snappy install instructions (development builds only)
 
