@@ -129,7 +129,7 @@
     "sources": [{
       "type": "git",
       "url": "../..",
-      "branch": "v1.0.0"
+      "branch": "v1.0.1"
     }, {
       "type": "patch",
       "path": "launch-command.patch"
