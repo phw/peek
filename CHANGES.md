@@ -1,4 +1,4 @@
-# Version 1.?.? - 2017-??-??
+# Version 1.0.1 - 2017-03-26
  * recording: Use H.264 baseline profile for MP4 for increased browser
               compatibility (#111)
  * recording: For WebM GNOME Shell recorder use same quality settings as with
