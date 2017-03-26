@@ -8,30 +8,33 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-03-26 08:13+0000\n"
+"Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
+"Language-Team: Basque "
+"<https://hosted.weblate.org/projects/peek/translations/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.12\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "GIF animatuen grabagailua"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Grabatu zure pantailaren gif animatu txikiak"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
-msgstr ""
+msgstr "peek"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
@@ -83,11 +86,11 @@ msgstr ""
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
-msgstr ""
+msgstr "Errendatzen…"
 
 #: src/ui/application-window.vala:449
 msgid "Save animation"
-msgstr ""
+msgstr "Gorde animazioa"
 
 #: src/ui/application-window.vala:450
 msgid "_Cancel"
@@ -95,7 +98,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:452
 msgid "_Save"
-msgstr ""
+msgstr "_Gorde"
 
 #: src/ui/application-window.vala:538
 #, c-format
@@ -116,105 +119,105 @@ msgstr ""
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
-msgstr ""
+msgstr "Aldatu"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "Sakatu teklak…"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Alexander Gabilondo"
 
 #: ui/application-window.ui:33 ui/application-window.ui:140
 msgid "Start recording"
-msgstr ""
+msgstr "Hasi grabatzen"
 
 #: ui/application-window.ui:129
 msgid "_Record"
-msgstr ""
+msgstr "_Grabatu"
 
 #: ui/application-window.ui:156
 msgid "_Stop"
-msgstr ""
+msgstr "_Gelditu"
 
 #: ui/application-window.ui:167
 msgid "Stop recording"
-msgstr ""
+msgstr "Gelditu grabazioa"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "_Leiho berria"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr ""
+msgstr "_Hobespenak"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr ""
+msgstr "_Honi buruz"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr ""
+msgstr "_Irten"
 
 #: ui/preferences.ui:70
 msgid "User interface"
-msgstr ""
+msgstr "Erabiltzaile interfazea"
 
 #: ui/preferences.ui:83 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Ireki fitxategien arakatzailea gorde ondoren"
 
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
-msgstr ""
+msgstr "Hasi / Gelditu grabazioa"
 
 #: ui/preferences.ui:162
 msgid "Recording"
-msgstr ""
+msgstr "Grabatzen"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "Irteera formatua"
 
 #: ui/preferences.ui:200
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:201
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:202
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:230 data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Atzerapena segundotan grabazioa hasi aurretik"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Bereizmenaren txikiagotzea"
 
 #: ui/preferences.ui:315 data/schemas/com.uploadedlobster.peek.gschema.xml:47
 msgid "Framerate"
-msgstr ""
+msgstr "Fotograma emaria"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Kapturatu saguaren kurtsorea"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
-msgstr ""
+msgstr "Peek hobespenak"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Pantailaren GIF animatuen bidezko grabagailu erabilerraza"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -225,38 +228,44 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek aplikazioaren bidez erraz egin daitezke pantailaren area baten bideo "
+"grabazio txikiak.  Diseinatuta dago pantaila areak grabatzeko, esate "
+"baterako interfazeen erabilera erakusteko edo aplikazioen akatsen txostenak "
+"ilustratzeko. Peek-en leihatila grabatu nahi duzun arearen gainean kokatu "
+"eta sakatu \"Grabatu\". Optimizatuta dago GIF animatuak egiteko baina Webm "
+"edo MP4 formatuetan ere grabatu daiteke zuzenean."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Eginbideak:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Hautatu pantaila area bat grabatzeko"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Gorde grabatutako bideoa optimizatutako GIF animatu moduan."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Grabatu zuzenean WebM edo MP4 formatuan"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Ataza egiteko optimizatutako erabiltzaile interfaze sinplea"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Txikiagotu automatikoki grabatutako bideoak"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "HiDPI motako pantailak onartzen ditu"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "GNOME Shell Wayland saioan bertan lan egiten du (XWayland-en bidez)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -268,11 +277,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Grabatzeko area duen leiho nagusia"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek bere burua grabatzen ari da"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
@@ -282,38 +291,40 @@ msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr ""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
+"Fitxategiaren izen lehenetsia. Data formatu espezifikoak erabili dezake. "
+"Fitxategiaren luzapena automatikoki erantsiko zaio."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Nahiago gai iluna"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Grabazioa aldatzeko laster teklak"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
-msgstr ""
+msgstr "Irteerako fitxategi formatua"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Bereizmena txikiagotzeko faktorea"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Saguaren kurtsorea kapturatzeko"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:60
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Irekitako azken leihoaren tamaina eta kokapena"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Azken bideoa gorde den tokia"
