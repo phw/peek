@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-03-26 11:18+0000\n"
+"Last-Translator: Tirifto <tirifto@posteo.cz>\n"
+"Language-Team: Esperanto "
+"<https://hosted.weblate.org/projects/peek/translations/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.12\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -23,7 +26,7 @@ msgstr ""
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "GIF-movbilda registrilo"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -35,29 +38,31 @@ msgstr ""
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Montri version de la programo kaj eliri"
 
 #: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Elektu la uzotan registrilon (gnome-shell, ffmpeg aŭ avconv). Se vi ne "
+"elektos, Peek ĝin elektos aŭtomate."
 
 #: src/application.vala:66
 msgid "BACKEND"
-msgstr ""
+msgstr "REGISTRILO"
 
 #: src/application.vala:70
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Komenci registradon en ĉiuj funkciantaj aperoj de Peek."
 
 #: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Haltigi registradon en ĉiuj funkciantaj aperoj de Peek."
 
 #: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Ŝalti registradon en ĉiuj funkciantaj aperoj de Peek."
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
@@ -70,7 +75,7 @@ msgstr ""
 
 #: src/application.vala:332
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Indiĝena registrado en Wayland ne estas subtenata"
 
 #: src/application.vala:334
 msgid ""
@@ -80,10 +85,16 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Vi lanĉas Peek indiĝene en Wayland; tio nuntempe ne estas subtenata. Bonvolu "
+"ĝin lanĉi per XWayland, agordinte <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"Por pliaj detaloj, rigardu la respondaron <a "
+"href='https://github.com/phw/peek#why-no-native-wayland-support'> pri "
+"subteno de Wayland</a>."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
-msgstr ""
+msgstr "Bildiganta…"
 
 #: src/ui/application-window.vala:449
 msgid "Save animation"
@@ -91,94 +102,94 @@ msgstr ""
 
 #: src/ui/application-window.vala:450
 msgid "_Cancel"
-msgstr ""
+msgstr "_Nuligi"
 
 #: src/ui/application-window.vala:452
 msgid "_Save"
-msgstr ""
+msgstr "_Konservi"
 
 #: src/ui/application-window.vala:538
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "Movbildo konservita kiel «%s»"
 
 #: src/ui/application-window.vala:545
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Alklaku ĉi tien por montri la konservitan dosieron en dosiermastrumilo."
 
 #: src/ui/application-window.vala:547
 msgid "Show in file manager"
-msgstr ""
+msgstr "Montri en dosiermastrumilo"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "malaktiva"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
-msgstr ""
+msgstr "Ŝanĝi"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "Premu la klavojn…"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Tirifto <tirifto@posteo.cz>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:140
 msgid "Start recording"
-msgstr ""
+msgstr "Komenci registradon"
 
 #: ui/application-window.ui:129
 msgid "_Record"
-msgstr ""
+msgstr "_Registri"
 
 #: ui/application-window.ui:156
 msgid "_Stop"
-msgstr ""
+msgstr "_Haltigi"
 
 #: ui/application-window.ui:167
 msgid "Stop recording"
-msgstr ""
+msgstr "Haltigi registradon"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "_Nova fenestro"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr ""
+msgstr "_Agordoj"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr ""
+msgstr "_Pri"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr ""
+msgstr "_Ĉesi"
 
 #: ui/preferences.ui:70
 msgid "User interface"
-msgstr ""
+msgstr "Fasado"
 
 #: ui/preferences.ui:83 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Konservite dosieron malfermi dosiermastrumilon"
 
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
-msgstr ""
+msgstr "Komenci / haltigi registradon"
 
 #: ui/preferences.ui:162
 msgid "Recording"
-msgstr ""
+msgstr "Registrado"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "Eliga formo"
 
 #: ui/preferences.ui:200
 msgid "GIF"
@@ -194,27 +205,27 @@ msgstr ""
 
 #: ui/preferences.ui:230 data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Prokrasto (en sekundoj) antaŭ registrado komenciĝos"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Malpligrandigo de distingivo"
 
 #: ui/preferences.ui:315 data/schemas/com.uploadedlobster.peek.gschema.xml:47
 msgid "Framerate"
-msgstr ""
+msgstr "Filmeroj sekunde"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Videbligi musmontrilon"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
-msgstr ""
+msgstr "Agordoj de Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Simpla ekran-registrilo de GIF-movbildoj kun facila fasado"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -225,30 +236,36 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek faciligas kreadon de mallongaj rekordaĵoj de la ekrano. Ĝi estas farita "
+"por registrado de partoj de la ekrano; tio ebligas por vi facile montri "
+"funkciojn de viaj propraj programoj, aŭ kapti cimojn por cimraportoj. Kun "
+"Peek, vi metas ĝian fenestron sur la registrota zono kaj alklakos al "
+"«Registri.» Peek estis kreita por GIF-movbildoj, sed ankaŭ eblas registri en "
+"la formojn WebM aŭ MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Funkcioj:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Elektu registrotan zonon"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Konservi registritan videon kiel optimumigitan GIF-movbildon"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Registri senpere en la formon WebM aŭ MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Simpla fasado ĝustigita por la tasko"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Aŭtomate malpligrandigi registritajn videojn"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
@@ -256,7 +273,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Funkcias en seanco de GNOME Shell kun Wayland (per XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -265,20 +282,25 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek ne estas ĝenerala ekranregistilo kun multaj funkcioj, sed celas ebligi "
+"simplan kreadon de malgrandaj, silentaj registraĵoj de partoj de la ekrano "
+"por GIF-movbildoj, aŭ videoj en la formoj WebM aŭ MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "La ĉefa fenestro por elekti la registrotan zonon"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek registras sin mem"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
+"Tempo (en milisekundoj) dum kiu ankoraŭ videblos la grandeco de registrota "
+"zono post regrandigo."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
