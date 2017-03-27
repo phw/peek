@@ -134,7 +134,7 @@ There are no official Debian packages, yet, but you can easily create your own
 
 Then build Peek and package it:
 
-    git clone git@github.com:phw/peek.git
+    git clone https://github.com/phw/peek.git
     mkdir peek/build
     cd peek/build
     cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
@@ -164,7 +164,7 @@ Once the repository is enabled install ffmpeg with:
 ### From source
 You can build and install Peek using CMake:
 
-    git clone git@github.com:phw/peek.git
+    git clone https://github.com/phw/peek.git
     mkdir peek/build
     cd peek/build
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
