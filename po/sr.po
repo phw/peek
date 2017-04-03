@@ -2,75 +2,80 @@
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-04-03 20:38+0000\n"
+"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
+"Language-Team: Serbian "
+"<https://hosted.weblate.org/projects/peek/translations/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
-msgstr ""
+msgstr "Виркало"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "Снимач анимираних ГИФ-ова"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Снимајте кратке анимиране ГИФ слике на вашем екрану"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
-msgstr ""
+msgstr "peek"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Прикажи издање програма и изађи"
 
 #: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Изаберите позадинца за снимање (gnome-shell, ffmpeg или avconv). Ако није "
+"подешено, Виркало ће само изабрати позадинца."
 
 #: src/application.vala:66
 msgid "BACKEND"
-msgstr ""
+msgstr "ПОЗАДИНАЦ"
 
 #: src/application.vala:70
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Крени са снимањем у свим покренутим виркалима."
 
 #: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Стани са снимањем у свим покренутим виркалима."
 
 #: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Промени стање снимања у свим покренутим виркалима."
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Не могу да направим подразумеваног снимача екрана.\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Не могу да покренем позадинца „%s“.\n"
 
 #: src/application.vala:332
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Домаћи Вејленд позадинац није подржан"
 
 #: src/application.vala:334
 msgid ""
@@ -80,141 +85,150 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Покренули сте Виркало тако да ради на Вејленду а то није тренутно подржано. "
+"Покрените Виркало унутар XWayland-a тако што ћете поставити "
+"<tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"За појединости погледајте питања и одговоре Виркала <a "
+"href='https://github.com/phw/peek#why-no-native-wayland-support'>везана за "
+"подршку на Вејленду</a>."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
-msgstr ""
+msgstr "Исцртавам…"
 
 #: src/ui/application-window.vala:449
 msgid "Save animation"
-msgstr ""
+msgstr "Сачувај анимацију"
 
 #: src/ui/application-window.vala:450
 msgid "_Cancel"
-msgstr ""
+msgstr "_Откажи"
 
 #: src/ui/application-window.vala:452
 msgid "_Save"
-msgstr ""
+msgstr "_Сачувај"
 
 #: src/ui/application-window.vala:538
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "Анимација је сачувана као „%s“"
 
 #: src/ui/application-window.vala:545
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Кликните овде да видите сачувану датотеку у вашем управнику датотека."
 
 #: src/ui/application-window.vala:547
 msgid "Show in file manager"
-msgstr ""
+msgstr "Прикажи у управнику датотека"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "непокренуто"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
-msgstr ""
+msgstr "Промени"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "Притисни тастере…"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Марко М. Костић <marko.m.kostic@gmail.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:140
 msgid "Start recording"
-msgstr ""
+msgstr "Крени са снимањем"
 
 #: ui/application-window.ui:129
 msgid "_Record"
-msgstr ""
+msgstr "_Снимај"
 
 #: ui/application-window.ui:156
 msgid "_Stop"
-msgstr ""
+msgstr "_Заустави"
 
 #: ui/application-window.ui:167
 msgid "Stop recording"
-msgstr ""
+msgstr "Заустави снимање"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "_Нови прозор"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr ""
+msgstr "_Поставке"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr ""
+msgstr "_О програму"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr ""
+msgstr "_Изађи"
 
 #: ui/preferences.ui:70
 msgid "User interface"
-msgstr ""
+msgstr "Кориснички интерфејс"
 
 #: ui/preferences.ui:83 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Отвори управника датотека након чувања"
 
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
-msgstr ""
+msgstr "Крени или заустави снимање"
 
 #: ui/preferences.ui:162
 msgid "Recording"
-msgstr ""
+msgstr "Снимање"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "Излазни формат"
 
 #: ui/preferences.ui:200
 msgid "GIF"
-msgstr ""
+msgstr "ГИФ"
 
 #: ui/preferences.ui:201
 msgid "WebM"
-msgstr ""
+msgstr "ВебМ видео"
 
 #: ui/preferences.ui:202
 msgid "MP4"
-msgstr ""
+msgstr "МП4"
 
 #: ui/preferences.ui:230 data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Пауза пре почетка снимања, у секундама"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Смањивање узорка резолуције"
 
 #: ui/preferences.ui:315 data/schemas/com.uploadedlobster.peek.gschema.xml:47
 msgid "Framerate"
-msgstr ""
+msgstr "Проток кадрова"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Сними показивач миша"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
-msgstr ""
+msgstr "Поставке Виркала"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
 msgstr ""
+"Једноставан снимач анимираних ГИФ-ова на екрану са лако употребљивим "
+"интерфејсом"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -225,38 +239,45 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Виркало чини снимање одређених делова екрана веома лаким. Направљен је за "
+"прецизно снимање одређених делова екрана као што је то потребно приликом "
+"снимања графичких делова сопственог програма или за потребе пријаве грешке у "
+"неком програму. Са Виркалом је само потребно да поставите прозор Виркала над "
+"површином коју желите да снимите и да кликнте на „Снимај“. Виркало је "
+"оптимизовано за стварање анимираних ГИВ-ова али такође можете директно "
+"снимати у ВебМ видео или МП4, ако желите."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Могућности:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Бирање области за снимање"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Чување снимљеног видеа као оптимизовани анимирани ГИФ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Директно снимање у ВебМ или МП4 формат"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Једноставан кориснички интерфејс направљен сходно задатку"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Аутоматско смањивање величине снимљених видео материјала"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Подршка за екране високе резолуције"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Ради унудар Вејленд сесије Гномове шкољке (преко XWayland-a)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -265,55 +286,63 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Виркало није опште наменско решење за снимање радне површине, са напредним "
+"могућностима, већ се усредсређује на одређени циљ а то је стварање малих, "
+"тихих снимака одређених делова екрана зарад стварања ГИФ анимација или тихих "
+"ВебМ или МП4 видео записа."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Главни прозор за бирање површине која ће се снимати"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Виркало снима само себе"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
+"Време, у милисекундама, за које ће се површина за снимање приказати након "
+"што се сразмеравање заврши."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr ""
+msgstr "\"Виркало %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
+"Подразумевано име датотеке. Може садржати навођење формата датума. "
+"Екстензија ће бити додата самостално."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Користи тамну варијанту теме"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Општа пречица на тастатури за промену стања снимања"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
-msgstr ""
+msgstr "Излазни формат датотеке"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Чинилац смањивања узорка резолуције"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Да ли да се снима показивач миша"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:60
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Величина и положај последње отвореног главног прозора"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Путања где је сачуван последњи видео"
