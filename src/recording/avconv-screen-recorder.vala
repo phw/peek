@@ -25,7 +25,6 @@ namespace Peek.Recording {
 
         var args = new Array<string> ();
         args.append_val ("avconv");
-        args.append_val ("-y");
         // args.append_val ("-loglevel");
         // args.append_val ("debug");
         args.append_val ("-f");
