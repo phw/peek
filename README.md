@@ -145,9 +145,6 @@ dpkg:
 
     sudo dpkg -i peek-1.0.0-Linux.deb
 
-Alternatively you might want to try the Ubuntu packages from the PPA (see above),
-they probably work just fine on Debian, too.
-
 ### Fedora
 Fedora 25 users can use this repository:
 
