@@ -1,11 +1,11 @@
 Name:           peek
 Version:        1.0.1
 Release:        1%{?dist}
-Summary:      Simple animated GIF screen recorder with an easy to use interface
+Summary:        Simple animated GIF screen recorder with an easy to use interface
 
 License:        GPLv3
-URL:              https://github.com/phw/peek
-Source0:       https://github.com/phw/peek/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+URL:            https://github.com/phw/peek
+Source0:        https://github.com/phw/peek/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  vala-devel
@@ -14,10 +14,10 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
 BuildRequires:  pkgconfig(keybinder-3.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
-Requires:          ffmpeg
-Requires:          ImageMagick
-Requires:          gstreamer1-plugins-good
-Recommends:   gstreamer1-plugins-bad-freeworld
+Requires:       ffmpeg
+Requires:       ImageMagick
+Requires:       gstreamer1-plugins-good
+Recommends:     gstreamer1-plugins-bad-freeworld
 
 %description
 A simple tool that allows you to record short animated GIF images
@@ -53,7 +53,7 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %changelog
 * Mon Mar 26 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.1
 - Use H.264 baseline profile for MP4 for increased browser compatibility (#111)
-- For WebM GNOME Shell recorder use same quality settings as with Fmpeg encoder 
+- For WebM GNOME Shell recorder use same quality settings as with Fmpeg encoder
 - Show only the most recent "file saved" notification to avoid spamming the desktop with notifications.
 - Set temporary directory for ImageMagick
 - Always launch with GDK_BACKEND=x11 for Wayland
