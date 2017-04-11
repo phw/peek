@@ -66,14 +66,26 @@ namespace Peek {
         }
 
         if (app_info != null) {
-          if (parent != null && !file_manager_highlights_file (app_info)) {
-            uri = parent.get_uri ();
-          }
+          debug ("Launching \"%s\" for URI: %s\n", app_info.get_executable (), uri);
 
-          debug ("Launching \"%s\" for URI: %s\n", app_info.get_display_name (), uri);
-          var uri_list = new List<string> ();
-          uri_list.append (uri);
-          app_info.launch_uris (uri_list, null);
+          if (app_info.get_executable () == "dolphin") {
+            // Handle launching Dolphin with file selection
+            string[] args = {
+              app_info.get_executable (), "--select", uri
+            };
+            Process.spawn_sync (null, args, null,
+              SpawnFlags.SEARCH_PATH,
+              null, null, null, null);
+          } else {
+            // Generic handling of launching file manager with URIs
+            if (parent != null && !file_manager_highlights_file (app_info)) {
+              uri = parent.get_uri ();
+            }
+
+            var uri_list = new List<string> ();
+            uri_list.append (uri);
+            app_info.launch_uris (uri_list, null);
+          }
           return true;
         }
 
