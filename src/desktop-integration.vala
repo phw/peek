@@ -120,6 +120,13 @@ namespace Peek {
       return xdg_current_desktop_contains ("GNOME");
     }
 
+    public static bool is_plasma () {
+      string desktop_session = GLib.Environment.get_variable ("XDG_SESSION_DESKTOP")
+        ?? GLib.Environment.get_variable ("DESKTOP_SESSION")
+        ?? "";
+      return desktop_session == "plasma";
+    }
+
     public static bool is_wayland () {
       string? wayland_display = GLib.Environment.get_variable ("WAYLAND_DISPLAY");
       return wayland_display != null && wayland_display != "";

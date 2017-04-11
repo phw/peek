@@ -545,9 +545,13 @@ namespace Peek.Ui {
           _ ("Show in file manager"),
           "app.show-file",
           parameter);
-        notification.set_default_action_and_target_value (
-          "app.show-file",
-          parameter);
+
+        // Plasma will show an empty button for the default action
+        if (!DesktopIntegration.is_plasma ()) {
+          notification.set_default_action_and_target_value (
+            "app.show-file",
+            parameter);
+        }
       }
 
       this.application.send_notification ("peek-file-saved", notification);

@@ -1,4 +1,5 @@
 # Version 1.?.? - 2017-??-??
+ * fix: KDE Plasma was showing an empty button in notification
  * i18n: Serbian translation
  * i18n: Updated translations for Esperanto and Portuguese (Brazil)
 
