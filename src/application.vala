@@ -14,8 +14,6 @@ namespace Peek {
 
   public class Application : Gtk.Application {
 
-    const string APP_ID = "com.uploadedlobster.peek";
-
     const uint GTK_STYLE_PROVIDER_PRIORITY_APPLICATION = 600;
 
     private Gtk.Window main_window;

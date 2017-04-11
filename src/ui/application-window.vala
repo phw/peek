@@ -535,7 +535,7 @@ namespace Peek.Ui {
       var parameter = new Variant.string (file.get_uri ());
 
       var notification = new GLib.Notification (message.str);
-      notification.set_icon (new ThemedIcon ("com.uploadedlobster.peek"));
+      notification.set_icon (new ThemedIcon (APP_ID));
 
       // Unity does not allow actions on notifications, so we disable
       // notification actions there.
