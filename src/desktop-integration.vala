@@ -20,10 +20,11 @@ namespace Peek {
               BusType.SESSION,
               "org.freedesktop.FileManager1",
               "/org/freedesktop/FileManager1");
-            _file_manager_dbus_initialized = true;
           } catch (IOError e) {
             debug ("DBus service org.freedesktop.FileManager1 not available: %s\n", e.message);
             _file_manager_service = null;
+          } finally {
+            _file_manager_dbus_initialized = true;
           }
         }
 
