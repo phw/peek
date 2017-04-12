@@ -25,6 +25,7 @@ Simple screen recorder with an easy to use interface
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
   - [Fedora](#fedora)
+  - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [How can I capture mouse clicks and/or key strokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
@@ -157,6 +158,10 @@ repository, see the
 Once the repository is enabled install ffmpeg with:
 
     sudo dnf install ffmpeg
+
+### Other distributions
+See the [Repology package list](https://repology.org/metapackage/peek/packages)
+for a list of Peek packages for various distributions.
 
 ### From source
 You can build and install Peek using CMake:
