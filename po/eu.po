@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-04-13 22:54+0000\n"
+"PO-Revision-Date: 2017-04-13 22:55+0000\n"
 "Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
 "Language-Team: Basque "
 "<https://hosted.weblate.org/projects/peek/translations/eu/>\n"
@@ -76,7 +76,7 @@ msgstr "Ezin izan du  %s 1 motorra abiarazi.\n"
 
 #: src/application.vala:332
 msgid "Native Wayland backend is unsupported"
-msgstr "Jatorrizko Wayland motorra ez da onartzen."
+msgstr "Jatorrizko Wayland motorra ez da onartzen"
 
 #: src/application.vala:334
 msgid ""
@@ -253,7 +253,7 @@ msgstr "Hautatu pantaila area bat grabatzeko"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Gorde grabatutako bideoa optimizatutako GIF animatu moduan."
+msgstr "Gorde grabatutako bideoa optimizatutako GIF animatu moduan"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
