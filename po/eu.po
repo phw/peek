@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-26 08:13+0000\n"
+"PO-Revision-Date: 2017-04-13 22:54+0000\n"
 "Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
 "Language-Team: Basque "
 "<https://hosted.weblate.org/projects/peek/translations/eu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -38,42 +38,45 @@ msgstr "peek"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Erakutsi programaren bertsioa eta irten"
 
 #: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Hautatu erabili behar den grabatzeko motorra (gnome-shell, ffmpeg or avconv)"
+".  Ezartzen ez bada Peek-ek hautatuko du bat automatikoki."
 
 #: src/application.vala:66
 msgid "BACKEND"
-msgstr ""
+msgstr "MOTORRA"
 
 #: src/application.vala:70
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Hasi grabatzen martxan dauden Peek instantzia guztiak."
 
 #: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Gelditu martxan dauden Peek instantzia guztien grabazioa."
 
 #: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
 msgstr ""
+"Aktibatu/desaktibatu grabazioa martxan dauden Peek instantzia guztietan."
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Ezin izan du lehenetsitako pantaila grabagailua sortu.\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Ezin izan du  %s 1 motorra abiarazi.\n"
 
 #: src/application.vala:332
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Jatorrizko Wayland motorra ez da onartzen."
 
 #: src/application.vala:334
 msgid ""
@@ -83,6 +86,11 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Ari zara Peek erabiltzen Wayland gainean eta gaur egun hori ez da onartzen.  "
+"Hasi Peek XWayland erabiliz ezarpen hauekin  <tt> 1GDK_BACKEND=x11</tt> 2.\n"
+"\n"
+"Xehetasunetarako ikusi Peek <a href='https://github.com/phw/peek#why-no-"
+"native-wayland-support'> 3 Wayland soportearen gaineko ohiko galderak</a> 4."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
@@ -94,7 +102,7 @@ msgstr "Gorde animazioa"
 
 #: src/ui/application-window.vala:450
 msgid "_Cancel"
-msgstr ""
+msgstr "_Utzi"
 
 #: src/ui/application-window.vala:452
 msgid "_Save"
@@ -103,19 +111,19 @@ msgstr "_Gorde"
 #: src/ui/application-window.vala:538
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "“%s 1” izenez gordetako animazioa"
 
 #: src/ui/application-window.vala:545
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Sakatu hemen ikusteko gordetako fitxategia arakatzailean."
 
 #: src/ui/application-window.vala:547
 msgid "Show in file manager"
-msgstr ""
+msgstr "Erakutsi fitxategien arakatzailean"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "desaktibatuta"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
@@ -274,6 +282,10 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek ez da erabilera anitzeko eta eginbide zabaleko pantailako bideoen "
+"kapturak egiten dituen aplikazioa, bere helburua da sortzea pantailaren area "
+"baten bideo kaptura txiki eta mutuak GIF animatuen bidez edo WebM edo MP4 "
+"bideo mutuen bidez."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
@@ -288,6 +300,8 @@ msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
+"Grabazio arearen tamaina erakutsiko den denbora segundoko milarenetan "
+"tamaina aldaketa osatu ondoren."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
