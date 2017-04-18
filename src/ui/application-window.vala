@@ -496,14 +496,14 @@ namespace Peek.Ui {
         Priority.DEFAULT, null, null, (obj, res) => {
           try {
             bool copy_success = in_file.copy_async.end (res);
-            debug ("File saved %s: %s\n",
+            debug ("File saved %s: %s",
               copy_success.to_string (),
               out_file.get_uri ());
 
             if (copy_success) {
               handle_saved_file (out_file);
             } else if (!copy_success) {
-              stderr.printf ("Saving file %s failed.", out_file.get_uri ());
+              stderr.printf ("Saving file %s failed.\n", out_file.get_uri ());
             }
           }
           catch (GLib.Error e) {
@@ -531,7 +531,10 @@ namespace Peek.Ui {
       var parameter = new Variant.string (file.get_uri ());
 
       var notification = new GLib.Notification (message.str);
-      notification.set_icon (new ThemedIcon (APP_ID));
+
+      if (!DesktopIntegration.is_cinnamon ()) {
+        notification.set_icon (new ThemedIcon (APP_ID));
+      }
 
       // Unity does not allow actions on notifications, so we disable
       // notification actions there.
@@ -550,6 +553,8 @@ namespace Peek.Ui {
         }
       }
 
+      debug ("Showing desktop notification: %s",
+        message.str);
       this.application.send_notification ("peek-file-saved", notification);
     }
 
