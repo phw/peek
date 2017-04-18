@@ -145,13 +145,9 @@ namespace Peek.Ui {
 
       stop_button_label = stop_button.label;
 
-      // Reverse window decoration on Unity, close button should be left
-      if (DesktopIntegration.is_unity ()) {
-        var decoration = this.headerbar.decoration_layout.split (":", 2);
-        if (decoration.length == 2) {
-          this.headerbar.decoration_layout = decoration[1] + ":" + decoration[0];
-        }
-      }
+      // Make sure the close button is on the left if desktop environment
+      // is configured that way.
+      this.set_close_button_position ();
     }
 
     public override bool configure_event (Gdk.EventConfigure event) {
@@ -620,6 +616,25 @@ namespace Peek.Ui {
       get_size (out w, out h);
       return w;
     }
-  }
 
+    private void set_close_button_position () {
+      var settings = Gtk.Settings.get_default ();
+      string decoration_layout = settings.gtk_decoration_layout ?? "";
+      debug ("Decoration layout: %s", decoration_layout);
+
+      if (decoration_layout.contains (":")) {
+        var decoration = decoration_layout.split (":", 2);
+        if (decoration[0].contains ("close")) {
+          this.move_close_button_left ();
+        }
+      }
+    }
+
+    private void move_close_button_left () {
+      var decoration = this.headerbar.decoration_layout.split (":", 2);
+      if (decoration.length == 2 && decoration[1].contains ("close")) {
+        this.headerbar.decoration_layout = decoration[1] + ":" + decoration[0];
+      }
+    }
+  }
 }
