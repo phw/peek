@@ -51,8 +51,7 @@ is not a general purpose screencast app with extended features and it never
 will be.
 
 Peek runs on X11 or inside a GNOME Shell Wayland session using XWayland.
-Support for more Wayland desktops or Ubuntu Mir might be added in the future
-(see FAQs below).
+Support for more Wayland desktops might be added in the future (see FAQs below).
 
 
 ## Requirements
