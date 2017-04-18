@@ -534,6 +534,15 @@ namespace Peek.Ui {
 
       if (!DesktopIntegration.is_cinnamon ()) {
         notification.set_icon (new ThemedIcon (APP_ID));
+      } else {
+        var icon_theme = IconTheme.get_default ();
+        var icon_info = icon_theme.lookup_icon (APP_ID, 48, 0);
+        var icon_path = icon_info.get_filename ();
+        debug ("Using notification icon: %s", icon_path);
+        if (icon_path != null) {
+          var icon = new FileIcon (File.new_for_path (icon_path));
+          notification.set_icon (icon);
+        }
       }
 
       // Unity does not allow actions on notifications, so we disable
