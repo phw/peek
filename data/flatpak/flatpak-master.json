@@ -133,6 +133,9 @@
     "config-opts": [
       "-DCMAKE_VERBOSE_MAKEFILE=TRUE"
     ],
+    "build-options" : {
+      "cflags": "-L/app/lib"
+    },
     "sources": [{
       "type": "git",
       "url": "../..",
