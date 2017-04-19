@@ -127,7 +127,6 @@ parts:
     source: http://git.imagemagick.org/repos/ImageMagick.git
     source-type: git
     source-tag: 6.9.8-3
-    source-commit: f48cb7d91e547c5dbd7304ae19605550e49673b9
     configflags:
       - --enable-static=no
       - --disable-docs
