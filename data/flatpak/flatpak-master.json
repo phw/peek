@@ -10,7 +10,6 @@
     "--socket=x11",
     "--env=GDK_BACKEND=x11",
     "--socket=wayland",
-    "--talk-name=org.freedesktop.DBus",
     "--talk-name=org.freedesktop.FileManager1",
     "--talk-name=org.gnome.Shell.Screencast",
     "--filesystem=xdg-pictures",
@@ -21,6 +20,11 @@
     "--talk-name=ca.desrt.dconf",
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
+  "build-options" : {
+    "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
+    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now"
+  },
   "cleanup": [
     "/include",
     "/lib/pkgconfig",
@@ -126,6 +130,9 @@
   }, {
     "name": "peek",
     "buildsystem": "cmake",
+    "config-opts": [
+      "-DCMAKE_VERBOSE_MAKEFILE=TRUE"
+    ],
     "sources": [{
       "type": "git",
       "url": "../..",
