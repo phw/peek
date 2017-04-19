@@ -75,7 +75,7 @@ parts:
 
   ffmpeg:
     plugin: autotools
-    source: https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz
+    source: https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz
     configflags:
       - --prefix=/usr
       - --disable-debug
@@ -84,7 +84,9 @@ parts:
       - --enable-libvpx
       - --enable-libx264
       - --enable-shared
-      - --enable-x11grab
+      - --enable-libxcb
+      - --enable-libxcb-xfixes
+      - --disable-libxcb-shape
       - --disable-ffplay
       - --disable-ffprobe
       - --disable-ffserver
@@ -103,7 +105,7 @@ parts:
       - --enable-filter=crop
       - --enable-filter=scale
       - --enable-protocol=file
-      - --enable-indev=x11grab_xcb
+      - --enable-indev=xcbgrab
     build-packages:
       - libx264-dev
       - libvpx-dev
@@ -124,7 +126,8 @@ parts:
     plugin: autotools
     source: http://git.imagemagick.org/repos/ImageMagick.git
     source-type: git
-    source-commit: e12a51e9039a50a06338022d07cc5777f9f9cb98
+    source-tag: 6.9.8-3
+    source-commit: f48cb7d91e547c5dbd7304ae19605550e49673b9
     configflags:
       - --enable-static=no
       - --disable-docs

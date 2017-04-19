@@ -40,7 +40,9 @@
       "--enable-libvpx",
       "--enable-libx264",
       "--enable-shared",
-      "--enable-x11grab",
+      "--enable-libxcb",
+      "--enable-libxcb-xfixes",
+      "--disable-libxcb-shape",
       "--disable-ffplay",
       "--disable-ffprobe",
       "--disable-ffserver",
@@ -59,12 +61,12 @@
       "--enable-filter=crop",
       "--enable-filter=scale",
       "--enable-protocol=file",
-      "--enable-indev=x11grab_xcb"
+      "--enable-indev=xcbgrab"
     ],
     "sources": [{
       "type": "archive",
-      "url": "https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz",
-      "sha256": "6e38ff14f080c98b58cf5967573501b8cb586e3a173b591f3807d8f0660daf7a"
+      "url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
+      "sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
     }],
     "modules": [{
       "name": "libx264",
@@ -84,7 +86,8 @@
       "sources": [{
         "type": "git",
         "url": "https://git.videolan.org/git/x264.git",
-        "branch": "86b71982e131eaa70125f8d0e725fcade9c4c677"
+        "branch": "stable",
+        "commit": "97eaef2ab82a46d13ea5e00270712d6475fbe42b"
       }],
       "cleanup": [
         "/bin/x264"
@@ -125,7 +128,8 @@
     "sources": [{
       "type": "git",
       "url": "http://git.imagemagick.org/repos/ImageMagick.git",
-      "branch": "e12a51e9039a50a06338022d07cc5777f9f9cb98"
+      "branch": "6.9.8-3",
+      "commit": "f48cb7d91e547c5dbd7304ae19605550e49673b9"
     }]
   }, {
     "name": "peek",
