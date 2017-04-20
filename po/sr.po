@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-04-03 20:38+0000\n"
+"PO-Revision-Date: 2017-04-20 19:59+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian "
 "<https://hosted.weblate.org/projects/peek/translations/sr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -244,7 +244,7 @@ msgstr ""
 "снимања графичких делова сопственог програма или за потребе пријаве грешке у "
 "неком програму. Са Виркалом је само потребно да поставите прозор Виркала над "
 "површином коју желите да снимите и да кликнте на „Снимај“. Виркало је "
-"оптимизовано за стварање анимираних ГИВ-ова али такође можете директно "
+"оптимизовано за стварање анимираних ГИФ-ова али такође можете директно "
 "снимати у ВебМ видео или МП4, ако желите."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
