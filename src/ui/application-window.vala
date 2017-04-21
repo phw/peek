@@ -554,16 +554,16 @@ namespace Peek.Ui {
           "app.show-file",
           parameter);
 
-        // Plasma will show an empty button for the default action
-        if (!DesktopIntegration.is_plasma ()) {
+        // Plasma and XFCE will show an empty button for the default action
+        if (!DesktopIntegration.is_plasma () &&
+          !DesktopIntegration.is_xfce ()) {
           notification.set_default_action_and_target_value (
             "app.show-file",
             parameter);
         }
       }
 
-      debug ("Showing desktop notification: %s",
-        message.str);
+      debug ("Showing desktop notification: %s", message.str);
       this.application.send_notification ("peek-file-saved", notification);
     }
 
