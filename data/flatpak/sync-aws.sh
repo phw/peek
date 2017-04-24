@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_REPO=${HOME}/flatpak-repo
+LOCAL_REPO=${HOME}/flatpak-repos/peek
 REMOTE_REPO=s3://flatpak.uploadedlobster.com
 REGION=eu-central-1
 

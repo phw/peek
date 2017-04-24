@@ -1,5 +1,5 @@
 #!/bin/sh
-LOCAL_REPO=${HOME}/flatpak-repo
+LOCAL_REPO=${HOME}/flatpak-repos/peek
 
 if [ -z "$1" ]; then
     BRANCH=master
