@@ -74,15 +74,6 @@
         "--enable-pic",
         "--enable-shared"
       ],
-      "build-options": {
-        "arch": {
-          "i386": {
-            "config-opts": [
-              "--host=i386-pc-linux"
-            ]
-          }
-        }
-      },
       "sources": [{
         "type": "git",
         "url": "https://git.videolan.org/git/x264.git",

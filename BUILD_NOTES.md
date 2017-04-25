@@ -67,6 +67,8 @@ A Debian package can be created with cmake on any system:
 Install the GNOME runtime and SDK as described in
 http://docs.flatpak.org/en/latest/getting-setup.html
 
+**Note:** Flatpak >= 0.9.3 is required for the build.
+
 Build Flatpak and place it in flatpak-repo repository:
 
     flatpak-builder --repo=flatpak-repo com.uploadedlobster.peek \
