@@ -11,17 +11,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-06 16:17+0100\n"
-"PO-Revision-Date: 2017-03-03 03:29+0000\n"
+"PO-Revision-Date: 2017-04-25 06:12+0000\n"
 "Last-Translator: strixaluco <maddox@i.ua>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
-"translations/uk/>\n"
+"Language-Team: Ukrainian "
+"<https://hosted.weblate.org/projects/peek/translations/uk/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -89,6 +89,12 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Ви запустили Peek власне на Wayland, але цей режим наразі не підтримується. "
+"Будь ласка, запустіть Peek на XWayland за допомогою <tt>GDK_BACKEND=x11</tt>."
+"\n"
+"\n"
+"Щодо деталей звертайтесь до <a href='https://github.com/phw/peek#why-no-"
+"native-wayland-support'>FAQ about Wayland support</a>."
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
@@ -225,7 +231,7 @@ msgstr "Налаштування Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple animated GIF screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Простий записувач оживлених GIF зі зручним інтерфейсом"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -239,35 +245,35 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Властивості:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Позначення довільних ділянок екрану для запису"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Збереження відео у форматі оптимізованого оживленого GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Запис напряму у форматі WebM або MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Простий і оптимізований інтерфейс користувача"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Автоматичне пониження роздільної здатності записуваних відео"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Підтримка екранів високої роздільної здатності (HiDPI)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Працює у GNOME Shell на Wayland (за допомогою XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
