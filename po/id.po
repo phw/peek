@@ -8,155 +8,163 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2016-11-18 15:48+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-04-29 08:59+0000\n"
+"Last-Translator: Mohamad Hasan Al Banna <se7entime@protonmail.com>\n"
+"Language-Team: Indonesian "
+"<https://hosted.weblate.org/projects/peek/translations/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.14-dev\n"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:68
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "Perekam Animasi GIF"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Rekam gambar animasi GIF pendek dari layar anda"
 
 #: data/desktop/com.uploadedlobster.peek.desktop.in:7
 msgid "peek"
-msgstr ""
+msgstr "peek"
 
 #: src/application.vala:54
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Tampilkan versi program dan keluar"
 
 #: src/application-window.vala:247
 msgid "Rendering…"
-msgstr ""
+msgstr "Membuat…"
 
 #: src/application-window.vala:267 ui/application-window.ui:154
 msgid "_Stop"
-msgstr ""
+msgstr "_Berhenti"
 
 #: src/application-window.vala:370
 msgid "Save animation"
-msgstr ""
+msgstr "Simpan animasi"
 
 #: src/application-window.vala:371
 msgid "_Cancel"
-msgstr ""
+msgstr "_Batal"
 
 #: src/application-window.vala:373
 msgid "_Save"
-msgstr ""
+msgstr "_Simpan"
 
 #: src/application-window.vala:455
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "Animasi disimpan sebagai “%s”"
 
 #: src/application-window.vala:458
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Klik disini untuk menampilkan berkas tersimpan dimanajer berkas anda."
 
 #: src/application-window.vala:460
 msgid "Show in file manager"
-msgstr ""
+msgstr "Tampilkan dimanajer berkas"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "se7entime <se7entime@openmailbox.org>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:139
 msgid "Start recording"
-msgstr ""
+msgstr "Mulai perekaman"
 
 #: ui/application-window.ui:128
 msgid "_Record"
-msgstr ""
+msgstr "_Rekam"
 
 #: ui/application-window.ui:165
 msgid "Stop recording"
-msgstr ""
+msgstr "Hentikan perekaman"
 
 #: ui/preferences.ui:84
 msgid "User interface"
-msgstr ""
+msgstr "Tampilan pengguna"
 
 #: ui/preferences.ui:98 data/schemas/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Buka manajer berkas setelah disimpan"
 
 #: ui/preferences.ui:129
 msgid "Recording"
-msgstr ""
+msgstr "Merekam"
 
 #: ui/preferences.ui:153 data/schemas/com.uploadedlobster.peek.gschema.xml:24
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Jeda beberapa detik sebelum memulai perekaman"
 
 #: ui/preferences.ui:196 data/schemas/com.uploadedlobster.peek.gschema.xml:29
 msgid "Framerate"
-msgstr ""
+msgstr "Framerate"
 
 #: ui/preferences.ui:238
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Resolusi contoh penurunan"
 
 #: ui/preferences.ui:286
 msgid "Peek preferences"
-msgstr ""
+msgstr "Preferensi Peek"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "Jendela _Baru"
 
 #: ui/gtk/menus.ui:13
 msgid "_Preferences"
-msgstr ""
+msgstr "_Preferensi"
 
 #: ui/gtk/menus.ui:19
 msgid "_About"
-msgstr ""
+msgstr "_Tentang"
 
 #: ui/gtk/menus.ui:23
 msgid "_Quit"
-msgstr ""
+msgstr "_Keluar"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops"
 msgstr ""
+"Waktu dalam mili-detik untuk dimana ukuran area perekaman tertampil setelah "
+"mengubah ukuran berhenti"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
+#, fuzzy
 msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr ""
+msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
 msgstr ""
+"Nama berkas bawaah telah digunakan. Dapat termasuk format tanggal yang "
+"spesifik."
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Pilih tema gelap"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:34
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Faktor resolusi downsampling"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:38
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "Ukuran dan posisi jendela utama terakhir terbuka"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:42
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Jalur dimana video terakhir disimpan"
