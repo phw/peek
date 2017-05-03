@@ -25,6 +25,7 @@ Simple screen recorder with an easy to use interface
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
   - [Fedora](#fedora)
+  - [Solus](#solus)
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -162,6 +163,13 @@ For MP4 recording on GNOME Shell you also need the `gstreamer1-plugins-ugly`
 package also available from RPM Fusion free:
 
     sudo dnf install gstreamer1-plugins-ugly
+
+### Solus
+
+For Solus users just run:
+
+	sudo eopkg install peek
+
 
 ### Other distributions
 See the [Repology package list](https://repology.org/metapackage/peek/packages)
