@@ -138,7 +138,7 @@ msgid ""
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-msgid "\"Peek %Y-%m-%d %H-%M.gif\""
+msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr ""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15

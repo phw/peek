@@ -143,9 +143,8 @@ msgstr ""
 "mengubah ukuran berhenti"
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:14
-#, fuzzy
-msgid "\"Peek %Y-%m-%d %H-%M.gif\""
-msgstr "\"Peek %Y-%m-%d %H-%M.gif\""
+msgid "\"Peek %Y-%m-%d %H-%M\""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/schemas/com.uploadedlobster.peek.gschema.xml:15
 msgid "Default file name used. Can include date format specifiers."
