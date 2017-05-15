@@ -4,7 +4,7 @@
   "runtime-version": "3.24",
   "sdk": "org.gnome.Sdk",
   "branch": "stable",
-  "command": "launch-peek",
+  "command": "peek",
   "finish-args": [
     "--share=ipc",
     "--socket=x11",
@@ -136,9 +136,6 @@
       "url": "../..",
       "branch": "v1.0.1",
       "commit": "5c0532316637ff629a104dedc0e9585d7f92feff"
-    }, {
-      "type": "patch",
-      "path": "launch-command.patch"
     }],
     "modules": [{
       "name": "keybinder3",
@@ -149,7 +146,6 @@
       }]
     }],
     "post-install": [
-      "cp data/flatpak/launch-peek /app/bin",
       "cp data/com.canonical.Unity.gschema.xml /app/share/glib-2.0/schemas",
       "glib-compile-schemas /app/share/glib-2.0/schemas"
     ]
