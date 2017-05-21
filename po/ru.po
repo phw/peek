@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-17 18:16+0100\n"
-"PO-Revision-Date: 2017-03-17 16:11+0100\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
-"translations/ru/>\n"
+"PO-Revision-Date: 2017-05-21 16:41+0000\n"
+"Last-Translator: Anton Shestakov <av6@dwimlabs.net>\n"
+"Language-Team: Russian "
+"<https://hosted.weblate.org/projects/peek/translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.14.1-dev\n"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
@@ -84,7 +84,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:316
 msgid "Rendering…"
-msgstr "Оказание…"
+msgstr "Отрисовка…"
 
 #: src/ui/application-window.vala:449
 msgid "Save animation"
@@ -167,7 +167,7 @@ msgstr "_Выход"
 
 #: ui/preferences.ui:70
 msgid "User interface"
-msgstr "Внешний вид"
+msgstr "Пользовательский интерфейс"
 
 #: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
@@ -237,7 +237,7 @@ msgstr ""
 "Peek помогает удобно записать короткий скринкаст области экрана. Он был "
 "создан специально для записи частей экрана, например, демонстрации "
 "возможностей ваших собственных приложений или созданий сообщений об ошибках. "
-"Помести окно Peek над той областью, которую вы хотите записать и нажмите "
+"Поместите окно Peek над той областью, которую вы хотите записать и нажмите "
 "«Запись». Peek лучше всего записывает анимированные GIF, но также может "
 "записывать напрямую в WebM или MP4."
 
@@ -297,8 +297,8 @@ msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
-"Время в миллисекундах, на которое отображается поле записи после изменения "
-"размера."
+"Время в миллисекундах, на которое отображается размер области записи после "
+"изменения размера."
 
 #: data/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -338,7 +338,7 @@ msgstr "Размер и положение последнего открытог
 
 #: data/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
-msgstr "Путь к последнему сохраненному видео"
+msgstr "Путь к последнему сохранённому видео"
 
 #~ msgid "peek"
 #~ msgstr "peek"
