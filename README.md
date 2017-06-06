@@ -108,6 +108,10 @@ Peek can also be installed on all distributions supporting [Snappy](https://snap
 Currently only the development version is available in the Snappy format:
 
     sudo snap install peek --edge --devmode
+    
+Because the Snap is unconfined, you will need to manually update Peek (there are daily builds, so you could update it daily)
+
+    sudo snap refresh peek --devmode
 
 ### Arch Linux
 For Arch Linux
