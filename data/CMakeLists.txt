@@ -57,6 +57,8 @@ install(FILES "icons/16x16/com.uploadedlobster.peek.png" DESTINATION share/icons
 install(FILES "icons/24x24/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/24x24/apps)
 install(FILES "icons/32x32/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/32x32/apps)
 install(FILES "icons/48x48/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/48x48/apps)
+install(FILES "icons/64x64/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/64x64/apps)
+install(FILES "icons/128x128/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/128x128/apps)
 install(FILES "icons/256x256/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/256x256/apps)
 install(FILES "icons/512x512/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/512x512/apps)
 
