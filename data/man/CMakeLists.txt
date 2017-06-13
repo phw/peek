@@ -18,7 +18,7 @@ else ()
         -v "\"User commands\""
         ${CMAKE_SOURCE_DIR}/data/man/${PROJECT_NAME}.1.txt
         | ${GZIP}
-        > ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1
+        > ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1.gz
       WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
   add_custom_target(build-manpage ALL DEPENDS ${PROJECT_NAME}.1)
