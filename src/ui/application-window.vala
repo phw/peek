@@ -212,12 +212,17 @@ namespace Peek.Ui {
     }
 
     [GtkCallback]
+    private bool on_window_draw (Widget widget, Context ctx) {
+      update_input_shape ();
+
+      return false;
+    }
+
+    [GtkCallback]
     private bool on_recording_view_draw (Widget widget, Context ctx) {
       // Stance out the transparent inner part
       ctx.set_operator (Operator.CLEAR);
       ctx.paint ();
-
-      update_input_shape ();
 
       return false;
     }
