@@ -278,8 +278,12 @@ namespace Peek.Ui {
 
           if (delay == 0) {
             delay_indicator_timeout = 0;
+            ulong hide_handler = 0;
+            hide_handler = delay_indicator.hide.connect (() => {
+              delay_indicator.disconnect (hide_handler);
+              start_recording ();
+            });
             delay_indicator.hide ();
-            start_recording ();
             return false;
           } else {
             delay_indicator.set_text (delay.to_string ());
