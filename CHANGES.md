@@ -1,13 +1,17 @@
 # Version 1.?.? - 2017-??-??
+ * feat: Finish saving file when closing window while rendering (#142)
  * feat: Highlight file when launching Dolphin file manager
+ * recording: Use raw video for recording GIF with GNOME Shell recorder (this
+              is identical to how FFmpeg recorder works)
  * fix: Failed to record MP4 when dimensions where not divisible by 2 (#141)
  * fix: Make sure recording starts after countdown is hidden (#146)
+ * fix: Closing window while recording could leave temp files behind
  * fix: KDE Plasma and XFCE were showing an empty button in notification
  * fix: Place close button on the left on all desktops configured this way (#129)
  * fix: Cinammon showing notification with icon
  * i18n: Indonesian and Serbian translation
- * i18n: Updated translations for Basque, Esperanto, French, Portuguese (Brazil)
-         and Ukrainian
+ * i18n: Updated translations for Basque, Esperanto, French, Portuguese (Brazil),
+         Russian and Ukrainian
  * docs: Added man page (#136)
  * package: Removed dark theme hack for Flatpak (proper theme support is part of
             Flatpak now)
