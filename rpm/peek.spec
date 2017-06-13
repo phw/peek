@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.0.1
+Version:        1.0.2
 Release:        1%{?dist}
 Summary:        Simple animated GIF screen recorder with an easy to use interface
 
@@ -53,8 +53,22 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
 
 %changelog
+* Tue Jun 13 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.0.2
+- Finish saving file when closing window while rendering
+- Highlight file when launching Dolphin file manager
+- Use raw video for recording GIF with GNOME Shell recorder (this is identical to how FFmpeg recorder works)
+- Failed to record MP4 when dimensions where not divisible by 2
+- Make sure recording starts after countdown is hidden
+- Closing window while recording could leave temp files behind
+- KDE Plasma and XFCE were showing an empty button in notification
+- Place close button on the left on all desktops configured this way
+- Cinammon showing notification with icon
+- Indonesian and Serbian translation
+- Updated translations for Basque, Esperanto, French, Portuguese (Brazil), Russian and Ukrainian
+- Added man page
+
 * Mon Mar 26 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.1
-- Use H.264 baseline profile for MP4 for increased browser compatibility (#111)
+- Use H.264 baseline profile for MP4 for increased browser compatibility
 - For WebM GNOME Shell recorder use same quality settings as with Fmpeg encoder
 - Show only the most recent "file saved" notification to avoid spamming the desktop with notifications.
 - Set temporary directory for ImageMagick

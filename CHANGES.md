@@ -1,8 +1,8 @@
-# Version 1.?.? - 2017-??-??
+# Version 1.0.2 - 2017-06-13
  * feat: Finish saving file when closing window while rendering (#142)
  * feat: Highlight file when launching Dolphin file manager
  * recording: Use raw video for recording GIF with GNOME Shell recorder (this
-              is identical to how FFmpeg recorder works)
+              is identical to how FFmpeg recorder works) (#116)
  * fix: Failed to record MP4 when dimensions where not divisible by 2 (#141)
  * fix: Make sure recording starts after countdown is hidden (#146)
  * fix: Closing window while recording could leave temp files behind
