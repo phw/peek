@@ -14,6 +14,8 @@ BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
 BuildRequires:  pkgconfig(keybinder-3.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
+BuildRequires:  txt2man
+BuildRequires:  gzip
 Requires:       ffmpeg
 Requires:       ImageMagick
 Requires:       gstreamer1-plugins-good

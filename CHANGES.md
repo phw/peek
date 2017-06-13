@@ -8,6 +8,7 @@
  * i18n: Indonesian and Serbian translation
  * i18n: Updated translations for Basque, Esperanto, French, Portuguese (Brazil)
          and Ukrainian
+ * docs: Added man page (#136)
  * package: Removed dark theme hack for Flatpak (proper theme support is part of
             Flatpak now)
  * package: Updated dependencies for Flatpak and Snap packages

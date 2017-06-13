@@ -8,7 +8,9 @@ Build-Depends: cmake (>= 2.8.8),
  gettext,
  valac (>= 0.22),
  libgtk-3-dev (>= 3.14),
- libkeybinder-3.0-dev
+ libkeybinder-3.0-dev,
+ txt2man,
+ gzip
 Standards-Version: 3.9.6
 Homepage: https://github.com/phw/peek
 

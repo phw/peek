@@ -1,0 +1,32 @@
+NAME
+  peek - create animated GIF screencasts
+
+SYNOPSIS
+  peek [OPTION...]
+
+DESCRIPTION
+  Peek creates animated GIF screencasts using ffmpeg and imagemagick. It was
+  built for the specific use case of recording screen areas, e.g., for easily
+  showing UI features of your own apps or for showing a bug in bug reports. It is
+  not a general purpose screencast app with extended features and it never
+  will be.
+
+OPTIONS
+  -h, --help                 Show help options
+  --help-all                 Show all help options
+  --help-gapplication        Show GApplication options
+  --help-gtk                 Show GTK+ Options
+
+Application Options:
+  -v, --version              Show the version of the program and exit
+  -b, --backend=BACKEND      Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend.
+  -s, --start                Start recording in all running Peek instances.
+  -p, --stop                 Stop recording in all running Peek instances.
+  -t, --toggle               Toggle recording in all running Peek instances.
+  --display=DISPLAY          X display to use
+
+AUTHOR
+ Written by Philipp Wolfer <ph.wolfer@gmail.com>.
+
+ This manual page was written by Paulo Roberto Alves de Oliveira (aka kretcheu)
+ <kretcheu@gmail.com> for the Debian project (but may be used by others).

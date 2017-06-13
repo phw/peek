@@ -73,3 +73,5 @@ file(
   COPY com.canonical.Unity.gschema.xml
   DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/extra/
 )
+
+add_subdirectory(man)
