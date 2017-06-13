@@ -79,10 +79,12 @@ namespace Peek.Recording {
         }
 
         args.append_val ("-filter:v");
-        args.append_val ("scale=iw/" + downsample.to_string () + ":-1");
+        var filter = "scale=iw/" + downsample.to_string () + ":-1";
         if (output_format == OUTPUT_FORMAT_MP4) {
-          args.append_val (", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)");
+          filter += ", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)";
         }
+
+        args.append_val (filter);
 
         temp_file = Utils.create_temp_file (extension);
         args.append_val ("-y");
