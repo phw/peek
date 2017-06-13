@@ -45,8 +45,7 @@ namespace Peek.Recording {
 
         int width = area.width;
         int height = area.height;
-        if (output_format == OUTPUT_FORMAT_MP4 ||
-            output_format == OUTPUT_FORMAT_GIF) {
+        if (output_format == OUTPUT_FORMAT_MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -127,8 +126,7 @@ namespace Peek.Recording {
         int width = area.width / downsample;
         int height = area.height / downsample;
 
-        if (output_format == OUTPUT_FORMAT_MP4 ||
-            output_format == OUTPUT_FORMAT_GIF) {
+        if (output_format == OUTPUT_FORMAT_MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -145,8 +143,7 @@ namespace Peek.Recording {
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        pipeline.append ("x264enc speed-preset=ultrafast quantizer=0 threads=%T ! ");
-        pipeline.append ("queue ! mp4mux");
+        pipeline.append ("videoconvert ! avimux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
@@ -155,7 +152,7 @@ namespace Peek.Recording {
 
     private string get_temp_file_extension () {
       var extension = output_format == OUTPUT_FORMAT_GIF ?
-        "mp4" : Utils.get_file_extension_for_format (output_format);
+        "avi" : Utils.get_file_extension_for_format (output_format);
       return extension;
     }
   }

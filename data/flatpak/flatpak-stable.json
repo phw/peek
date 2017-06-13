@@ -48,7 +48,6 @@
       "--disable-ffserver",
       "--disable-doc",
       "--disable-everything",
-      "--enable-decoder=libvpx_vp8",
       "--enable-decoder=rawvideo",
       "--enable-encoder=libx264",
       "--enable-encoder=libvpx_vp8",
