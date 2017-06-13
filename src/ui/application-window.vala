@@ -50,7 +50,6 @@ namespace Peek.Ui {
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
-    private bool screen_supports_alpha = true;
     private bool is_recording = false;
     private bool is_postprocessing = false;
     private File in_file;
@@ -207,9 +206,6 @@ namespace Peek.Ui {
       if (visual == null) {
         stderr.printf ("Screen does not support alpha channels!");
         visual = screen.get_system_visual ();
-        screen_supports_alpha = false;
-      } else {
-        screen_supports_alpha = true;
       }
 
       this.set_visual (visual);
@@ -217,16 +213,9 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private bool on_recording_view_draw (Widget widget, Context ctx) {
-      if (screen_supports_alpha) {
-        ctx.set_source_rgba (0.0, 0.0, 0.0, 0.0);
-      } else {
-        ctx.set_source_rgb (0.0, 0.0, 0.0);
-      }
-
       // Stance out the transparent inner part
       ctx.set_operator (Operator.CLEAR);
       ctx.paint ();
-      ctx.fill ();
 
       update_input_shape ();
 
@@ -241,6 +230,7 @@ namespace Peek.Ui {
 
     private void show_size_indicator () {
       if (this.get_realized ()) {
+        update_input_shape ();
         var area = get_recording_area ();
 
         if (get_window_width () < SMALL_WINDOW_SIZE) {
@@ -266,6 +256,7 @@ namespace Peek.Ui {
             size_indicator_timeout = Timeout.add (size_indicator_delay, () => {
               size_indicator_timeout = 0;
               size_indicator.opacity = 0.0;
+              update_input_shape ();
               return false;
               });
             }
@@ -411,6 +402,13 @@ namespace Peek.Ui {
       }
 
       this.input_shape_combine_region (window_region);
+
+      if (delay_indicator_timeout == 0 &&
+        size_indicator_timeout == 0) {
+        this.shape_combine_region (window_region);
+      } else {
+        this.shape_combine_region (null);
+      }
     }
 
     private Widget? get_fallback_app_menu () {
