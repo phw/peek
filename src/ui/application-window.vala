@@ -52,10 +52,13 @@ namespace Peek.Ui {
     private uint delay_indicator_timeout = 0;
     private bool screen_supports_alpha = true;
     private bool is_recording = false;
+    private bool is_postprocessing = false;
     private File in_file;
     private File out_file;
     private RecordingArea active_recording_area;
     private string stop_button_label;
+
+    private signal void recording_finished ();
 
     private GLib.Settings settings;
 
@@ -72,6 +75,7 @@ namespace Peek.Ui {
       });
 
       this.recorder.recording_postprocess_started.connect (() => {
+        is_postprocessing = true;
         show_file_chooser ();
       });
 
@@ -162,8 +166,24 @@ namespace Peek.Ui {
     }
 
     public override bool delete_event (Gdk.EventAny event) {
-      if (recorder.is_recording) {
-        recorder.cancel ();
+      debug ("delete_event: recorder.is_recording=%s, window.is_postprocessing=%s",
+        recorder.is_recording.to_string (),
+        this.is_postprocessing.to_string ()
+      );
+
+      if (recorder.is_recording || this.is_postprocessing) {
+        // Recorder has stopped, but Peek is still saving / post processing the
+        // file. Hide the window and close after it has finished.
+        this.recording_finished.connect ((file) => {
+          this.close ();
+        });
+
+        if (recorder.is_recording) {
+          recorder.cancel ();
+        }
+
+        this.hide ();
+        return true;
       }
 
       if (size_indicator_timeout != 0) {
@@ -350,6 +370,14 @@ namespace Peek.Ui {
     }
 
     private void leave_recording_state () {
+      this.out_file = null;
+      delay_indicator.hide ();
+      is_recording = false;
+      is_postprocessing = false;
+      stop_button.hide ();
+      record_button.show ();
+      unfreeze_window_size ();
+
       if (in_file != null) {
         debug ("Deleting temp file %s\n", in_file.get_uri ());
         in_file.delete_async.begin (Priority.DEFAULT, null, (obj, res) => {
@@ -361,15 +389,12 @@ namespace Peek.Ui {
           } finally {
             this.in_file = null;
           }
-        });
-      }
 
-      this.out_file = null;
-      delay_indicator.hide ();
-      is_recording = false;
-      stop_button.hide ();
-      record_button.show ();
-      unfreeze_window_size ();
+          recording_finished ();
+        });
+      } else {
+        recording_finished ();
+      }
     }
 
     private void update_input_shape () {
@@ -522,7 +547,7 @@ namespace Peek.Ui {
     private void handle_saved_file (File file) {
       save_preferred_save_folder (file);
 
-      if (open_file_manager) {
+      if (this.visible && open_file_manager) {
         DesktopIntegration.launch_file_manager (file);
       } else {
         show_file_saved_notification (file);
