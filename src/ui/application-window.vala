@@ -403,11 +403,13 @@ namespace Peek.Ui {
 
       this.input_shape_combine_region (window_region);
 
-      if (delay_indicator_timeout == 0 &&
-        size_indicator_timeout == 0) {
-        this.shape_combine_region (window_region);
-      } else {
-        this.shape_combine_region (null);
+      if (!this.get_screen ().is_composited ()) {
+        if (delay_indicator_timeout == 0 &&
+          size_indicator_timeout == 0) {
+          this.shape_combine_region (window_region);
+        } else {
+          this.shape_combine_region (null);
+        }
       }
     }
 
