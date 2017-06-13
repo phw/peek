@@ -10,7 +10,7 @@ else ()
   # We have the tools.  We can make them.
   string(TOUPPER ${PROJECT_NAME} MAN_TITLE)
   add_custom_command(
-      OUTPUT ${PROJECT_NAME}.1
+      OUTPUT ${PROJECT_NAME}.1.gz
       COMMAND ${TXT2MAN}
         -t ${MAN_TITLE}
         -r ${PEEK_VERSION_MAJOR}.${PEEK_VERSION_MINOR}.${PEEK_VERSION_PATCH}
@@ -21,8 +21,8 @@ else ()
         > ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1.gz
       WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
-  add_custom_target(build-manpage ALL DEPENDS ${PROJECT_NAME}.1)
+  add_custom_target(build-manpage ALL DEPENDS ${PROJECT_NAME}.1.gz)
 
   # Set the rules to install the documentation.
-  install(FILES ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1 DESTINATION share/man/man1/)
+  install(FILES ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1.gz DESTINATION share/man/man1/)
 endif ()
