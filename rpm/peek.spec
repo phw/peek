@@ -53,6 +53,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
 
 %changelog
+* Tue Jun 13 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.0.3
+- Fixed installing man page
+
 * Tue Jun 13 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.0.2
 - Finish saving file when closing window while rendering
 - Highlight file when launching Dolphin file manager
