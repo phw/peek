@@ -133,8 +133,8 @@
     "sources": [{
       "type": "git",
       "url": "../..",
-      "branch": "v1.0.1",
-      "commit": "5c0532316637ff629a104dedc0e9585d7f92feff"
+      "branch": "v1.0.3",
+      "commit": "257e5e30209fd7a8fc5d530deb56179fccdd0aed"
     }],
     "modules": [{
       "name": "keybinder3",
