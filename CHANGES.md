@@ -1,3 +1,6 @@
+# Version 1.?.? - 2017-??-??
+ * feat: Transparent recording area without compositor (#147, #7)
+
 # Version 1.0.3 - 2017-06-13
  * package: fixed installing man page
  * package: fixed Debian packaging

@@ -30,7 +30,6 @@ Simple screen recorder with an easy to use interface
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [How can I capture mouse clicks and/or key strokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
-  - [The recording area is all black, how can I record anything?](#the-recording-area-is-all-black-how-can-i-record-anything)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
@@ -63,7 +62,6 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
 - FFmpeg or libav-tools
 - ImageMagick
-- Window manager with compositing enabled
 
 ### Development
 
@@ -207,12 +205,6 @@ like [key-mon](https://github.com/critiqjo/key-mon) which is usually included
 in most distributions, so you can easily install with your package manager.
 Then start key-mon with `key-mon --visible_click`. The `--visible_click` option
 is for drawing small circles around mouse clicks.
-
-### The recording area is all black, how can I record anything?
-If the recording area is not showing the content behind Peek you have probably
-compositing disabled in your window manager. Peek requires compositing in order
-to make the Peek window transparent. Please consult your window manager's
-documentation how to enable compositing.
 
 ### My recorded GIFs flicker, what is wrong?
 Some users have experienced recorded windows flicker or other strange visual
