@@ -43,8 +43,16 @@ namespace Peek.Recording {
           get_temp_file_extension ()
         );
 
+        int width = area.width;
+        int height = area.height;
+        if (output_format == OUTPUT_FORMAT_MP4 ||
+            output_format == OUTPUT_FORMAT_GIF) {
+          width = Utils.make_even (width);
+          height = Utils.make_even (height);
+        }
+
         screencast.screencast_area (
-          area.left, area.top, area.width, area.height,
+          area.left, area.top, width, height,
           file_template, options, out success, out temp_file);
 
         if (success) {
@@ -118,7 +126,15 @@ namespace Peek.Recording {
       if (downsample > 1) {
         int width = area.width / downsample;
         int height = area.height / downsample;
-        pipeline.append_printf ("videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
+
+        if (output_format == OUTPUT_FORMAT_MP4 ||
+            output_format == OUTPUT_FORMAT_GIF) {
+          width = Utils.make_even (width);
+          height = Utils.make_even (height);
+        }
+
+        pipeline.append_printf (
+          "videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
 
       if (output_format == OUTPUT_FORMAT_WEBM) {

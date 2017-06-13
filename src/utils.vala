@@ -88,7 +88,7 @@ namespace Peek {
       }
     }
 
-    public static bool string_is_empty (string ? str) {
+    public static bool string_is_empty (string? str) {
       if (str == null) return true;
 
       unichar c;
@@ -97,6 +97,10 @@ namespace Peek {
       }
 
       return true;
+    }
+
+    public static int make_even (int i) {
+      return (i / 2) * 2;
     }
   }
 

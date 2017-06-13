@@ -17,6 +17,23 @@ add_test(
   test-desktop-integration
   ${PROJECT_NAME}-test-desktop-integration)
 
+# /utils/
+vala_precompile(VALA_TEST_UTILS_C
+    test-utils.vala
+    ../src/defaults.vala
+    ../src/utils.vala
+  PACKAGES
+    gtk+-3.0
+)
+
+add_executable(
+  ${PROJECT_NAME}-test-utils
+  ${VALA_TEST_UTILS_C})
+
+add_test(
+  test-utils
+  ${PROJECT_NAME}-test-utils)
+
 # /screen-recorder/recording-area/
 vala_precompile(VALA_TEST_RECORDING_AREA_C
     screen-recorder/test-recording-area.vala

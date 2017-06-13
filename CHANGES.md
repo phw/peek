@@ -1,5 +1,6 @@
 # Version 1.?.? - 2017-??-??
  * feat: Highlight file when launching Dolphin file manager
+ * fix: Failed to record MP4 when dimensions where not divisible by 2 (#141)
  * fix: Make sure recording starts after countdown is hidden (#146)
  * fix: KDE Plasma and XFCE were showing an empty button in notification
  * fix: Place close button on the left on all desktops configured this way (#129)
