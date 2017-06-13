@@ -64,8 +64,8 @@
     ],
     "sources": [{
       "type": "archive",
-      "url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
-      "sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
+      "url": "https://ffmpeg.org/releases/ffmpeg-3.3.2.tar.xz",
+      "sha256": "1998de1ab32616cbf2ff86efc3f1f26e76805ec5dc51e24c041c79edd8262785"
     }],
     "modules": [{
       "name": "libx264",
@@ -77,7 +77,7 @@
         "type": "git",
         "url": "https://git.videolan.org/git/x264.git",
         "branch": "stable",
-        "commit": "97eaef2ab82a46d13ea5e00270712d6475fbe42b"
+        "commit": "d32d7bf1c6923a42cbd5ac2fd540ecbb009ba681"
       }],
       "cleanup": [
         "/bin/x264"
@@ -118,8 +118,8 @@
     "sources": [{
       "type": "git",
       "url": "http://git.imagemagick.org/repos/ImageMagick.git",
-      "branch": "6.9.8-3",
-      "commit": "f48cb7d91e547c5dbd7304ae19605550e49673b9"
+      "branch": "6.9.8-10",
+      "commit": "d0b34c978f6959f6981541692b3ba80556149cac"
     }]
   }, {
     "name": "peek",

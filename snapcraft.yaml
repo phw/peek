@@ -75,7 +75,7 @@ parts:
 
   ffmpeg:
     plugin: autotools
-    source: https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz
+    source: https://ffmpeg.org/releases/ffmpeg-3.3.2.tar.xz
     configflags:
       - --prefix=/usr
       - --disable-debug
@@ -126,7 +126,7 @@ parts:
     plugin: autotools
     source: http://git.imagemagick.org/repos/ImageMagick.git
     source-type: git
-    source-tag: 6.9.8-3
+    source-tag: 6.9.8-10
     configflags:
       - --enable-static=no
       - --disable-docs
