@@ -1,8 +1,15 @@
 # Version 1.?.? - 2017-??-??
+ * feat: Highlight file when launching Dolphin file manager
  * fix: Make sure recording starts after countdown is hidden (#146)
- * fix: KDE Plasma was showing an empty button in notification
+ * fix: KDE Plasma and XFCE were showing an empty button in notification
+ * fix: Place close button on the left on all desktops configured this way (#129)
+ * fix: Cinammon showing notification with icon
  * i18n: Indonesian and Serbian translation
- * i18n: Updated translations for Esperanto and Portuguese (Brazil)
+ * i18n: Updated translations for Basque, Esperanto, French, Portuguese (Brazil)
+         and Ukrainian
+ * package: Removed dark theme hack for Flatpak (proper theme support is part of
+            Flatpak now)
+ * package: Updated dependencies for Flatpak and Snap packages
 
 # Version 1.0.1 - 2017-03-26
  * recording: Use H.264 baseline profile for MP4 for increased browser
