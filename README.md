@@ -110,6 +110,11 @@ Currently only the development version is available in the Snappy format:
 
     sudo snap install peek --edge --devmode
 
+Once installed you can run Peek via its application icon in your desktop
+environment or from command line:
+
+    snap run peek
+
 ### Arch Linux
 For Arch Linux
 [peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
