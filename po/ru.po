@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-03-17 18:16+0100\n"
-"PO-Revision-Date: 2017-05-21 16:41+0000\n"
+"PO-Revision-Date: 2017-06-14 10:54+0000\n"
 "Last-Translator: Anton Shestakov <av6@dwimlabs.net>\n"
 "Language-Team: Russian "
 "<https://hosted.weblate.org/projects/peek/translations/ru/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.14.1-dev\n"
+"X-Generator: Weblate 2.15-dev\n"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
@@ -125,7 +125,7 @@ msgstr "Нажмите кнопки…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr "Съемка анимированных GIF"
+msgstr "Съёмка анимированных GIF"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -281,8 +281,8 @@ msgid ""
 "videos."
 msgstr ""
 "Peek не является многофункциональным приложением для записи скринкастов, а "
-"помогает решить единственную задачи записи GIF анимации или беззвучных WebM "
-"или MP4 видео."
+"помогает решить единственную задачу записи GIF-анимации или беззвучных видео "
+"WebM или MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
