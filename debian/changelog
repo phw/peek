@@ -1,3 +1,29 @@
+peek (1.0.3-0) mx; urgency=medium
+
+  * New upstream release:
+    - Fixed installing man page
+    - Fixed Debian packaging
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Tue, 13 Jun 2017 23:50:00 +0100
+
+peek (1.0.2-0) mx; urgency=medium
+
+  * New upstream release:
+    - Finish saving file when closing window while rendering
+    - Highlight file when launching Dolphin file manager
+    - Use raw video for recording GIF with GNOME Shell recorder (this is identical to how FFmpeg recorder works)
+    - Failed to record MP4 when dimensions where not divisible by 2
+    - Make sure recording starts after countdown is hidden
+    - Closing window while recording could leave temp files behind
+    - KDE Plasma and XFCE were showing an empty button in notification
+    - Place close button on the left on all desktops configured this way
+    - Cinammon showing notification with icon
+    - Indonesian and Serbian translation
+    - Updated translations for Basque, Esperanto, French, Portuguese (Brazil), Russian and Ukrainian
+    - Added man page
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Tue, 13 Jun 2017 22:52:00 +0100
+
 peek (1.0.1-0) mx; urgency=medium
 
   * New upstream release:
