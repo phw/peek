@@ -31,10 +31,11 @@ Simple screen recorder with an easy to use interface
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [How can I capture mouse clicks and/or key strokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
-  - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
+  - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
   - [Why no native Wayland support?](#why-no-native-wayland-support)
 - [Contribute](#contribute)
   - [Development](#development-1)
@@ -214,12 +215,6 @@ acceleration methods can help. For NVIDIA drivers changing the "Allow Flipping"
 setting in the NVIDIA control panel
 [was reported to help](https://github.com/phw/peek/issues/86).
 
-### Why can't I interact with the UI elements inside the recording area?
-You absolutely should be able to click the UI elements inside the area you are
-recording. However this does not work as intended on some window managers,
-most notably i3. If this does not work for you on any other window manager
-please open an [issue on Github](https://github.com/phw/peek/issues).
-
 ### Why are the GIF files so big?
 Peek is using ImageMagick to optimize the GIF files and reduce the file size.
 As was shown in
@@ -252,6 +247,16 @@ Peek allows you to record in both WebM and MP4 format, just choose your
 preferred output format in the preferences. Both are well supported by modern
 browsers, even though they are still not as universally supported by tools and
 online services as GIFs.
+
+### Why can't I interact with the UI elements inside the recording area?
+You absolutely should be able to click the UI elements inside the area you are
+recording. However this does not work as intended on some window managers,
+most notably i3. If this does not work for you on any other window manager
+please open an [issue on Github](https://github.com/phw/peek/issues).
+
+### On i3 the recording area is all black, how can I record anything?
+i3 does not support the X shape extension. In order to get a transparent
+recording area you have to run a compositor such as Compton.
 
 ### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
