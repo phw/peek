@@ -8,6 +8,7 @@ elseif (NOT GZIP)
   message(WARNING "gzip not found; man pages will not be generated.")
 else ()
   # We have the tools.  We can make them.
+  message(STATUS "Found txt2man and gzip; man page will be built and installed")
   string(TOUPPER ${PROJECT_NAME} MAN_TITLE)
   add_custom_command(
       OUTPUT ${PROJECT_NAME}.1.gz

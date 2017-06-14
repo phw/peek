@@ -1,7 +1,7 @@
 # Peek build and packaging notes
 This file contains information about building and packaging Peek. The
 information here is mainly for developers and packagers, end users should
-refer to the installation instrctions in README.md.
+refer to the installation instructions in README.md.
 
 ## Building
 
@@ -42,12 +42,14 @@ Or you can build with [ninja](https://ninja-build.org/):
 ### Debian package
 
 #### Build requirements
- - cmake (>= 2.6)
+ - cmake (>= 2.8.8)
  - valac (>= 0.22)
  - libgtk-3-dev (>= 3.14)
  - libkeybinder-3.0-dev
  - libxml2-utils
- - gettext
+ - gettext (>= 0.19 for localized .desktop entry)
+ - txt2man (optional for building man page)
+ - gzip
 
 #### Runtime requirements
  - libgtk-3-0 (>= 3.14)

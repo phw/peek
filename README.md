@@ -70,6 +70,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - Vala compiler >= 0.22
 - CMake >= 2.8.8
 - Gettext (>= 0.19 for localized .desktop entry)
+- txt2man (Optional for building man page)
 
 
 ## Installation

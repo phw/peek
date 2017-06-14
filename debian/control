@@ -2,13 +2,13 @@ Source: peek
 Section: video
 Priority: optional
 Maintainer: Philipp Wolfer <ph.wolfer@gmail.com>
-Build-Depends: cmake (>= 2.8.8),
- debhelper (>=9),
+Build-Depends: debhelper (>=9),
  dpkg-dev (>= 1.6.1.1),
- gettext,
+ cmake (>= 2.8.8),
  valac (>= 0.22),
  libgtk-3-dev (>= 3.14),
  libkeybinder-3.0-dev,
+ gettext,
  txt2man,
  gzip
 Standards-Version: 3.9.6
