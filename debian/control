@@ -29,5 +29,3 @@ Description: Simple animated GIF screen recorder with an easy to use interface
  showing UI features of your own apps or for showing a bug in bug reports. It is
  not a general purpose screencast app with extended features and it never
  will be.
- .
- It also requires a window manager with compositing enabled.
