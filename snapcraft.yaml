@@ -19,6 +19,7 @@ apps:
     plugs:
       - x11
       - unity7
+      - gnome-platform
       - home
       - gsettings
   # ffmpeg:
@@ -32,6 +33,12 @@ slots:
     name: com.uploadedlobster.peek
     bus: session
 
+plugs:
+  gnome318-platform:
+    interface: content
+    target: gnome-platform
+    default-provider: gnome318-udt:gnome318-platform
+
 parts:
   peek:
     plugin: cmake
@@ -41,7 +48,7 @@ parts:
     # source: /media/sf_devel/peek
     source-type: git
     after:
-      - desktop-gtk3
+      - desktop-gnome-platform
     build-packages:
       - libgtk-3-dev
       - libkeybinder-3.0-dev
