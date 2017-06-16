@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-03-06 16:17+0100\n"
+"POT-Creation-Date: 2017-06-16 10:56+0200\n"
 "PO-Revision-Date: 2017-03-06 16:11+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: Swedish "
-"<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
+"translations/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,28 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.12\n"
 
-#: data/desktop/com.uploadedlobster.peek.desktop.in:3 src/application.vala:90
-#: data/com.uploadedlobster.peek.appdata.xml.in:7
-msgid "Peek"
-msgstr "Peek"
-
-#: data/desktop/com.uploadedlobster.peek.desktop.in:5 ui/about.ui:37
-msgid "Animated GIF recorder"
-msgstr "Animerad GIF-inspelare"
-
-#: data/desktop/com.uploadedlobster.peek.desktop.in:6
-msgid "Record short animated GIF images from your screen"
-msgstr "Spela in korta animerade GIF-bilder från skärmen"
-
-#: data/desktop/com.uploadedlobster.peek.desktop.in:7
-msgid "peek"
-msgstr "peek"
-
-#: src/application.vala:61
+#: src/application.vala:59
 msgid "Show the version of the program and exit"
 msgstr "Visa programversion och avsluta"
 
-#: src/application.vala:65
+#: src/application.vala:63
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
@@ -50,36 +33,41 @@ msgstr ""
 "Välj inspelningsgränssnitt (gnome-shell, ffmpeg or avconv). Om inte, kommer "
 "Peek att välja ett gränssnitt automatiskt."
 
-#: src/application.vala:66
+#: src/application.vala:64
 msgid "BACKEND"
 msgstr "GRÄNSSNITT"
 
-#: src/application.vala:70
+#: src/application.vala:68
 msgid "Start recording in all running Peek instances."
 msgstr "Börja spela in i alla startade Peek-instanser."
 
-#: src/application.vala:74
+#: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
 msgstr "Sluta spela in i alla startade Peek-instanser."
 
-#: src/application.vala:78
+#: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
 msgstr "Växla inspelningsläge i alla startade Peek-instanser."
 
-#: src/application.vala:222
+#: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
+#: data/com.uploadedlobster.peek.appdata.xml.in:7
+msgid "Peek"
+msgstr "Peek"
+
+#: src/application.vala:220
 msgid "Unable to create default screen recorder.\n"
 msgstr "Kan inte skapa standardinspelare.\n"
 
-#: src/application.vala:235
+#: src/application.vala:233
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Kan inte starta gränssnittet %s.\n"
 
-#: src/application.vala:332
+#: src/application.vala:335
 msgid "Native Wayland backend is unsupported"
 msgstr "Inbyggt Wayland-gränssnitt stöds inte"
 
-#: src/application.vala:334
+#: src/application.vala:337
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -93,32 +81,32 @@ msgstr ""
 "För detaljerad info, se Peek <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'>FAQ om Wayland-stöd</a>."
 
-#: src/ui/application-window.vala:316
+#: src/ui/application-window.vala:327
 msgid "Rendering…"
 msgstr "Renderar …"
 
-#: src/ui/application-window.vala:449
+#: src/ui/application-window.vala:475 src/ui/application-window.vala:480
 msgid "Save animation"
 msgstr "Spara animering"
 
-#: src/ui/application-window.vala:450
-msgid "_Cancel"
-msgstr "_Avbryt"
-
-#: src/ui/application-window.vala:452
+#: src/ui/application-window.vala:476 src/ui/application-window.vala:483
 msgid "_Save"
 msgstr "_Spara"
 
-#: src/ui/application-window.vala:538
+#: src/ui/application-window.vala:477 src/ui/application-window.vala:481
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: src/ui/application-window.vala:564
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animeringen sparad som \"%s\""
 
-#: src/ui/application-window.vala:545
+#: src/ui/application-window.vala:585
 msgid "Click here to show the saved file in your file manager."
 msgstr "Klicka här för att visa den sparade filen i din filhanterare."
 
-#: src/ui/application-window.vala:547
+#: src/ui/application-window.vala:587
 msgid "Show in file manager"
 msgstr "Visa i filhanteraren"
 
@@ -134,25 +122,29 @@ msgstr "Ändra"
 msgid "Press keys…"
 msgstr "Tryck på tangenter…"
 
+#: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
+msgid "Animated GIF recorder"
+msgstr "Animerad GIF-inspelare"
+
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Åke Engelbrektson"
 
-#: ui/application-window.ui:33 ui/application-window.ui:140
+#: ui/application-window.ui:33 ui/application-window.ui:141
 msgid "Start recording"
 msgstr "Starta inspelning"
 
-#: ui/application-window.ui:129
+#: ui/application-window.ui:130
 msgid "_Record"
 msgstr "_Spela in"
 
-#: ui/application-window.ui:156
+#: ui/application-window.ui:157
 msgid "_Stop"
 msgstr "_Stoppa"
 
-#: ui/application-window.ui:167
+#: ui/application-window.ui:168
 msgid "Stop recording"
 msgstr "Stoppa inspelning"
 
@@ -176,7 +168,7 @@ msgstr "_Avsluta"
 msgid "User interface"
 msgstr "Användargränssnitt"
 
-#: ui/preferences.ui:83 data/schemas/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Öppna filhanteraren efter sparad fil"
 
@@ -204,7 +196,7 @@ msgstr "WebM"
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:230 data/schemas/com.uploadedlobster.peek.gschema.xml:42
+#: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
 msgstr "Fördröjning i sekunder före inspelningsstart"
 
@@ -212,7 +204,7 @@ msgstr "Fördröjning i sekunder före inspelningsstart"
 msgid "Resolution downsampling"
 msgstr "Nersampling av upplösning"
 
-#: ui/preferences.ui:315 data/schemas/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:315 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Framerate"
 msgstr "Bildfrekvens"
 
@@ -224,8 +216,17 @@ msgstr "Spela in muspekaren"
 msgid "Peek preferences"
 msgstr "Peek-inställningar"
 
+#: data/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr "Spela in korta animerade GIF-bilder från skärmen"
+
+#: data/com.uploadedlobster.peek.desktop.in:7
+msgid "com.uploadedlobster.peek"
+msgstr ""
+
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
-msgid "Simple animated GIF screen recorder with an easy to use interface"
+#, fuzzy
+msgid "Simple screen recorder with an easy to use interface"
 msgstr "Enkel animerad GIF-inspelare med ett användarvänligt gränssnitt"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
@@ -296,7 +297,11 @@ msgstr "Huvudfönster för att välja inspelningsområde"
 msgid "Peek is recording itself"
 msgstr "Peek spelar in sig självt"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:11
+#: data/com.uploadedlobster.peek.appdata.xml.in:77
+msgid "Philipp Wolfer"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
@@ -304,43 +309,46 @@ msgstr ""
 "Tid i millisekunder, som inspelningsområdets storlek visas, efter slutförd "
 "storleksändring."
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:14
+#: data/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:15
+#: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr "Standardfilnamn som används. Kan inkludera specificerat datumformat."
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:19
+#: data/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
 msgstr "Föredra mörkt tema"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:23
+#: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
 msgstr "Global tangentbindning för inspelning"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:37
+#: data/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
 msgstr "Filformat för utdata"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
 msgstr "Faktor för nersampling av upplösningen"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:56
+#: data/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
 msgstr "Om muspekaren skall spelas in"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:60
+#: data/com.uploadedlobster.peek.gschema.xml:60
 msgid "Size and position of the last open main window"
 msgstr "Storlek och position för senast öppnade programfönster"
 
-#: data/schemas/com.uploadedlobster.peek.gschema.xml:64
+#: data/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
 msgstr "Sökväg till senast sparade video"
+
+#~ msgid "peek"
+#~ msgstr "peek"
 
 #, fuzzy
 #~ msgid "Open file manager after saving."
