@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-06-16 10:56+0200\n"
-"PO-Revision-Date: 2017-03-10 13:59+0000\n"
+"PO-Revision-Date: 2017-06-16 09:02+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.12\n"
+"X-Generator: Weblate 2.15-dev\n"
 
 #: src/application.vala:59
 msgid "Show the version of the program and exit"
@@ -225,14 +225,12 @@ msgstr "Kurze GIF-Animationen vom Bildschirm aufnehmen"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
-#, fuzzy
 msgid "Simple screen recorder with an easy to use interface"
 msgstr ""
-"Einfacher Bildschirmrekorder für animierte GIFs mit einer einfach zu "
-"bedienenden Oberfläche"
+"Einfacher Bildschirmrekorder mit einer einfach zu bedienenden Oberfläche"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -306,7 +304,7 @@ msgstr "Peek nimmt sich selbst auf"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
