@@ -45,11 +45,17 @@ Simple screen recorder with an easy to use interface
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## About
-Peek creates animated GIF screencasts using FFmpeg and ImageMagick. It was
-built for the specific use case of recording screen areas, e.g., for easily
-showing UI features of your own apps or for showing a bug in bug reports. It
-is not a general purpose screencast app with extended features and it never
-will be.
+Peek makes it easy to create short screencasts of a screen area. It was built
+for the specific use case of recording screen areas, e.g. for easily showing UI
+features of your own apps or for showing a bug in bug reports. With Peek you
+simply place the Peek window over the area you want to record and press
+"Record". Peek is optimized for generating animated GIFs, but you can also
+directly record to WebM or MP4 if you prefer.
+
+Peek is not a general purpose screencast app with extended features but
+rather focuses on the single task of creating small, silent screencasts of
+an area of the screen for creating GIF animations or silent WebM or MP4
+videos.
 
 Peek runs on X11 or inside a GNOME Shell Wayland session using XWayland.
 Support for more Wayland desktops might be added in the future (see FAQs below).
@@ -113,7 +119,7 @@ Once installed you can run Peek via its application icon in your desktop
 environment or from command line:
 
     snap run peek
-    
+
 To update to the latest version run:
 
     sudo snap refresh peek --devmode

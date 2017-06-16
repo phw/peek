@@ -1,7 +1,7 @@
 Name:           peek
 Version:        1.0.3
 Release:        1%{?dist}
-Summary:        Simple animated GIF screen recorder with an easy to use interface
+Summary:        Simple screen recorder with an easy to use interface
 
 License:        GPLv3
 URL:            https://github.com/phw/peek
@@ -22,8 +22,12 @@ Requires:       gstreamer1-plugins-good
 Recommends:     gstreamer1-plugins-ugly
 
 %description
-A simple tool that allows you to record short animated GIF images
-from your screen.
+Peek makes it easy to create short screencasts of a screen area. It was built
+for the specific use case of recording screen areas, e.g. for easily showing UI
+features of your own apps or for showing a bug in bug reports. With Peek you
+simply place the Peek window over the area you want to record and press
+"Record". Peek is optimized for generating animated GIFs, but you can also
+directly record to WebM or MP4 if you prefer.
 
 
 %prep
