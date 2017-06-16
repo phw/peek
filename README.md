@@ -113,6 +113,10 @@ Once installed you can run Peek via its application icon in your desktop
 environment or from command line:
 
     snap run peek
+    
+To update to the latest version run:
+
+    sudo snap refresh peek --devmode
 
 ### Arch Linux
 For Arch Linux
