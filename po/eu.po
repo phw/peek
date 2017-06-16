@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 10:56+0200\n"
+"POT-Creation-Date: 2017-06-16 11:11+0200\n"
 "PO-Revision-Date: 2017-04-13 22:55+0000\n"
 "Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
@@ -221,7 +221,7 @@ msgstr "Grabatu zure pantailaren gif animatu txikiak"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 #, fuzzy
@@ -298,7 +298,7 @@ msgstr "Peek bere burua grabatzen ari da"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""

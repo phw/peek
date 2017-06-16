@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 10:56+0200\n"
+"POT-Creation-Date: 2017-06-16 11:11+0200\n"
 "PO-Revision-Date: 2017-05-10 17:16+0000\n"
 "Last-Translator: Fábio Nogueira <fnogueira@gnome.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
@@ -227,7 +227,7 @@ msgstr "Grave pequenas GIFs animadas a partir da sua tela"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 #, fuzzy
@@ -306,7 +306,7 @@ msgstr "O Peek está se gravando"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""

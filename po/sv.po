@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 10:56+0200\n"
+"POT-Creation-Date: 2017-06-16 11:11+0200\n"
 "PO-Revision-Date: 2017-03-06 16:11+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
@@ -222,7 +222,7 @@ msgstr "Spela in korta animerade GIF-bilder från skärmen"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 #, fuzzy
@@ -299,7 +299,7 @@ msgstr "Peek spelar in sig självt"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""

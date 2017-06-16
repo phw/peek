@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 10:56+0200\n"
+"POT-Creation-Date: 2017-06-16 11:11+0200\n"
 "PO-Revision-Date: 2017-04-20 19:59+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
@@ -222,7 +222,7 @@ msgstr "Снимајте кратке анимиране ГИФ слике на 
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 #, fuzzy
@@ -302,7 +302,7 @@ msgstr "Виркало снима само себе"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
