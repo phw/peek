@@ -1,4 +1,6 @@
 # Peek - an animated GIF recorder
+
+[![Join the chat at https://gitter.im/phw/peek](https://badges.gitter.im/phw/peek.svg)](https://gitter.im/phw/peek?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![GitHub release](https://img.shields.io/github/release/phw/peek.svg)](https://github.com/phw/peek/releases)
 [![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
