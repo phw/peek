@@ -43,24 +43,24 @@ if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERS
   add_custom_target(build-appdata-file ALL DEPENDS com.uploadedlobster.peek.appdata.xml)
   install(
     FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.appdata.xml
-    DESTINATION share/metainfo)
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo)
 else()
   message(WARNING "Gettext >= ${GETTEXT_REQUIRED_VERSION} required for AppData file translation")
   install(
     FILES com.uploadedlobster.peek.appdata.xml.in
-    DESTINATION share/metainfo
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo
   RENAME com.uploadedlobster.peek.appdata.xml)
 endif()
 
 # Install application icons
-install(FILES "icons/16x16/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/16x16/apps)
-install(FILES "icons/24x24/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/24x24/apps)
-install(FILES "icons/32x32/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/32x32/apps)
-install(FILES "icons/48x48/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/48x48/apps)
-install(FILES "icons/64x64/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/64x64/apps)
-install(FILES "icons/128x128/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/128x128/apps)
-install(FILES "icons/256x256/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/256x256/apps)
-install(FILES "icons/512x512/com.uploadedlobster.peek.png" DESTINATION share/icons/hicolor/512x512/apps)
+install(FILES "icons/16x16/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/16x16/apps)
+install(FILES "icons/24x24/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/apps)
+install(FILES "icons/32x32/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/32x32/apps)
+install(FILES "icons/48x48/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
+install(FILES "icons/64x64/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/64x64/apps)
+install(FILES "icons/128x128/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps)
+install(FILES "icons/256x256/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps)
+install(FILES "icons/512x512/com.uploadedlobster.peek.png" DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps)
 
 # Install DBus service
 configure_file (
@@ -68,7 +68,7 @@ configure_file (
   com.uploadedlobster.peek.service
   )
 
-install(FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.service DESTINATION share/dbus-1/services)
+install(FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.service DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/dbus-1/services)
 
 # Copy build data FILES
 file(

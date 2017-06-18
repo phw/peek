@@ -5,10 +5,10 @@ set (PEEK_VERSION_MAJOR 1)
 set (PEEK_VERSION_MINOR 0)
 set (PEEK_VERSION_PATCH 3)
 
-set (XDG_APPS_INSTALL_DIR share/applications)
+set (XDG_APPS_INSTALL_DIR ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 set (GettextTranslate_GMO_BINARY TRUE)
 set (GettextTranslate_ALL TRUE)
-set (LOCALEDIR ${CMAKE_INSTALL_PREFIX}/share/locale)
+set (LOCALEDIR ${CMAKE_INSTALL_DATAROOTDIR}/locale)
 
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH

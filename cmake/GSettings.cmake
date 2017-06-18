@@ -17,7 +17,7 @@ macro(add_schema SCHEMA_NAME)
     set(PKG_CONFIG_EXECUTABLE pkg-config)
     # Have an option to not install the schema into where GLib is
     if (GSETTINGS_LOCALINSTALL)
-        SET (GSETTINGS_DIR "${CMAKE_INSTALL_PREFIX}/share/glib-2.0/schemas/")
+        SET (GSETTINGS_DIR "${CMAKE_INSTALL_DATAROOTDIR}/glib-2.0/schemas/")
     else ()
         execute_process (COMMAND ${PKG_CONFIG_EXECUTABLE} glib-2.0 --variable prefix OUTPUT_VARIABLE _glib_prefix OUTPUT_STRIP_TRAILING_WHITESPACE)
         SET (GSETTINGS_DIR "${_glib_prefix}/share/glib-2.0/schemas/")
