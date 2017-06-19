@@ -18,7 +18,7 @@ include(GResource)
 
 set (GettextTranslate_GMO_BINARY TRUE)
 set (GettextTranslate_ALL TRUE)
-set (LOCALEDIR ${CMAKE_INSTALL_LOCALEDIR})
+set (LOCALEDIR ${CMAKE_INSTALL_FULL_LOCALEDIR})
 include(GettextTranslate)
 
 # Check dependencies
