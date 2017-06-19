@@ -23,5 +23,5 @@ endforeach(file)
 # Also update GSettings schema, if this was done during installation
 set(GSETTINGS_COMPILE @GSETTINGS_COMPILE@)
 if(GSETTINGS_COMPILE)
-	exec_program("glib-compile-schemas" ARGS "@CMAKE_INSTALL_PREFIX@/share/glib-2.0/schemas/")
+	exec_program("glib-compile-schemas" ARGS "@CMAKE_INSTALL_FULL_DATAROOTDIR@/glib-2.0/schemas/")
 endif()

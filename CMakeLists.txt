@@ -5,21 +5,21 @@ set (PEEK_VERSION_MAJOR 1)
 set (PEEK_VERSION_MINOR 0)
 set (PEEK_VERSION_PATCH 3)
 
-set (XDG_APPS_INSTALL_DIR ${CMAKE_INSTALL_DATAROOTDIR}/applications)
-set (GettextTranslate_GMO_BINARY TRUE)
-set (GettextTranslate_ALL TRUE)
-set (LOCALEDIR ${CMAKE_INSTALL_DATAROOTDIR}/locale)
-
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
   ${CMAKE_SOURCE_DIR}/cmake
 )
 
+include(GNUInstallDirs)
 include(CTest)
 include(FindVala)
 include(UseVala)
 include(GResource)
 include(GettextTranslate)
+
+set (GettextTranslate_GMO_BINARY TRUE)
+set (GettextTranslate_ALL TRUE)
+set (LOCALEDIR ${CMAKE_INSTALL_LOCALEDIR})
 
 # Check dependencies
 find_package(Vala 0.22 REQUIRED)
@@ -122,7 +122,7 @@ add_definitions(-Wformat-security)
 add_executable(${PROJECT_NAME} ${VALA_C} ${GLIB_RESOURCES})
 
 # Installation
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 add_subdirectory(data)
 add_subdirectory(po)

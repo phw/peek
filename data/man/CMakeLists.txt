@@ -25,5 +25,8 @@ else ()
   add_custom_target(build-manpage ALL DEPENDS ${PROJECT_NAME}.1.gz)
 
   # Set the rules to install the documentation.
-  install(FILES ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1.gz DESTINATION share/man/man1/)
+  install(
+    FILES ${CMAKE_BINARY_DIR}/data/man/${PROJECT_NAME}.1.gz
+    DESTINATION ${CMAKE_INSTALL_MANDIR}/man1/
+  )
 endif ()

@@ -4,6 +4,8 @@ add_schema(com.uploadedlobster.peek.gschema.xml)
 
 include(FindGettext)
 
+set (XDG_APPS_INSTALL_DIR ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+
 # Translate and install the desktop file
 set (GETTEXT_REQUIRED_VERSION 0.19)
 if(GETTEXT_VERSION_STRING VERSION_EQUAL GETTEXT_REQUIRED_VERSION OR GETTEXT_VERSION_STRING VERSION_GREATER GETTEXT_REQUIRED_VERSION)
