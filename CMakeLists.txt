@@ -15,11 +15,11 @@ include(CTest)
 include(FindVala)
 include(UseVala)
 include(GResource)
-include(GettextTranslate)
 
 set (GettextTranslate_GMO_BINARY TRUE)
 set (GettextTranslate_ALL TRUE)
 set (LOCALEDIR ${CMAKE_INSTALL_LOCALEDIR})
+include(GettextTranslate)
 
 # Check dependencies
 find_package(Vala 0.22 REQUIRED)
