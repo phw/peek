@@ -10,8 +10,7 @@ description: |
   "Record". Peek is optimized for generating animated GIFs, but you can also
   directly record to WebM or MP4 if you prefer.
 grade: stable
-confinement: devmode
-# confinement: strict
+confinement: classic
 
 apps:
   peek:
