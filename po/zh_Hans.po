@@ -8,43 +8,42 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-06-16 11:11+0200\n"
-"PO-Revision-Date: 2017-02-24 10:39+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"peek/translations/zh_Hans/>\n"
+"PO-Revision-Date: 2017-07-13 23:29+0000\n"
+"Last-Translator: YFdyh000 <yfdyh000@gmail.com>\n"
+"Language-Team: Chinese (Simplified) "
+"<https://hosted.weblate.org/projects/peek/translations/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.16-dev\n"
 
 #: src/application.vala:59
-#, fuzzy
 msgid "Show the version of the program and exit"
-msgstr "Show the version of the program and exit"
+msgstr "显示程序版本然后退出"
 
 #: src/application.vala:63
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
-msgstr ""
+msgstr "选择要使用的录像后端（gnome-shell、ffmpeg 或 avconv）。如果没有设置，Peek 会自动选择一个后端。"
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "后端"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "所有运行中的 Peek 实例开始录制。"
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "所有运行中的 Peek 实例停止录制。"
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "所有运行中的 Peek 实例切换录制状态。"
 
 #: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -53,16 +52,16 @@ msgstr "Peek"
 
 #: src/application.vala:220
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "无法创建默认屏幕记录器。\n"
 
 #: src/application.vala:233
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "无法初始化 %s 后端。\n"
 
 #: src/application.vala:335
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "原生 Wayland 后端不支持"
 
 #: src/application.vala:337
 msgid ""
@@ -72,27 +71,32 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"您目前在 Wayland 上运行 Peek，这目前不受支持。请使用 XWayland 运行 Peek（通过设置 "
+"<tt>GDK_BACKEND=x11</tt>）。\n"
+"\n"
+"更多细节见 Peek <a href='https://github.com/phw/peek#why-no-native-wayland-"
+"support'>常见问题 - 有关 Wayland 支持</a>。"
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
-msgstr ""
+msgstr "正在渲染…"
 
 #: src/ui/application-window.vala:475 src/ui/application-window.vala:480
 msgid "Save animation"
-msgstr ""
+msgstr "保存动画"
 
 #: src/ui/application-window.vala:476 src/ui/application-window.vala:483
 msgid "_Save"
-msgstr "_保存"
+msgstr "保存(_S)"
 
 #: src/ui/application-window.vala:477 src/ui/application-window.vala:481
 msgid "_Cancel"
-msgstr "_取消"
+msgstr "取消(_C)"
 
 #: src/ui/application-window.vala:564
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "动画已保存在“%s”"
 
 #: src/ui/application-window.vala:585
 msgid "Click here to show the saved file in your file manager."
@@ -104,25 +108,25 @@ msgstr "在文件管理器中显示"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "已停用"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
-msgstr ""
+msgstr "更改"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "请按键…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "GIF 动画录制机"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Chunyang Xu"
+msgstr "Chunyang Xu, YFdyh000"
 
 #: ui/application-window.ui:33 ui/application-window.ui:141
 msgid "Start recording"
@@ -130,11 +134,11 @@ msgstr "开始录制"
 
 #: ui/application-window.ui:130
 msgid "_Record"
-msgstr "_录制"
+msgstr "录制(_R)"
 
 #: ui/application-window.ui:157
 msgid "_Stop"
-msgstr "_停止"
+msgstr "停止(_S)"
 
 #: ui/application-window.ui:168
 msgid "Stop recording"
@@ -142,19 +146,19 @@ msgstr "停止录制"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "新建窗口(_W)"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr "_偏好设置"
+msgstr "偏好设置(_P)"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr "_关于"
+msgstr "关于(_A)"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr "_退出"
+msgstr "退出(_Q)"
 
 #: ui/preferences.ui:70
 msgid "User interface"
@@ -165,29 +169,28 @@ msgid "Open file manager after saving"
 msgstr "保存之后打开文件管理器"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "开始录制"
+msgstr "开始/停止录制"
 
 #: ui/preferences.ui:162
 msgid "Recording"
-msgstr "录制"
+msgstr "正在录制"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "输出格式"
 
 #: ui/preferences.ui:200
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:201
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:202
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
@@ -195,16 +198,15 @@ msgstr "录制开始前延迟的秒数"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "分辨率下采样"
 
 #: ui/preferences.ui:315 data/com.uploadedlobster.peek.gschema.xml:47
-#, fuzzy
 msgid "Framerate"
-msgstr "Framerate"
+msgstr "帧率"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "拍摄鼠标光标"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
@@ -212,7 +214,7 @@ msgstr "Peek 偏好设置"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "录制屏幕，制成小巧便捷的 GIF 动画"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
@@ -220,7 +222,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "有易用接口的简单屏幕记录器"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -234,35 +236,35 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "特色："
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "选择要录制的屏幕区域"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "将录制的视频保存为优化的 GIF 动画"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "直接录制为 WebM 或 MP4 格式"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "为任务优化的简单用户界面"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "自动缩放录制的视频"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "支持 HiDPI 屏幕"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "能在使用 XWayland 的 GNOME Shell Wayland 会话内使用"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -274,11 +276,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "用主窗口来选择录制区域"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek 正在录制自身"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
@@ -295,41 +297,38 @@ msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "默认使用的文件名。可以包含日期格式说明符。"
+msgstr "默认使用的文件名。可以包含日期格式说明符。扩展名将自动追加。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "偏好暗色主题"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "切换录制状态的全局快捷键"
 
 #: data/com.uploadedlobster.peek.gschema.xml:37
 msgid "Output file format"
-msgstr ""
+msgstr "输出文件格式"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "分辨率下采样因子"
 
 #: data/com.uploadedlobster.peek.gschema.xml:56
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "是否拍摄鼠标光标"
 
 #: data/com.uploadedlobster.peek.gschema.xml:60
-#, fuzzy
 msgid "Size and position of the last open main window"
-msgstr "最后打开的主窗口的大小和位置"
+msgstr "最后打开的主窗口大小和位置"
 
 #: data/com.uploadedlobster.peek.gschema.xml:64
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "上次保存视频的路径"
 
 #~ msgid "peek"
 #~ msgstr "peek"
