@@ -21,10 +21,17 @@ apps:
       - unity7
       - home
       - gsettings
+      - gnome-3-24-platform
   # ffmpeg:
   #   command: ffmpeg
   # convert:
   #   command: convert
+
+plugs:
+  gnome-3-24-platform:
+    interface: content
+    target: gnome-platform
+    default-provider: gnome-3-24:gnome-3-24-platform
 
 slots:
   session-dbus-interface:
