@@ -50,7 +50,7 @@ parts:
     # source: /media/sf_devel/peek
     source-type: git
     after:
-      - desktop-gnome-platform
+      - gnome-3-26-1604
     build-packages:
       - libgtk-3-dev
       - libkeybinder-3.0-dev
