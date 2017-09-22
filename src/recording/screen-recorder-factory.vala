@@ -14,9 +14,12 @@ namespace Peek.Recording {
     public static ScreenRecorder create_default_screen_recorder () throws PeekError {
       string recorder;
 
+#if ! DISABLE_GNOME_SHELL
       if (GnomeShellDbusRecorder.is_available ()) {
         recorder = "gnome-shell";
-      } else if (FfmpegScreenRecorder.is_available ()) {
+      } else
+#endif
+      if (FfmpegScreenRecorder.is_available ()) {
         recorder = "ffmpeg";
       } else if (AvconvScreenRecorder.is_available ()) {
         recorder = "avconv";
@@ -31,6 +34,7 @@ namespace Peek.Recording {
 
     public static ScreenRecorder create_screen_recorder (string name) throws PeekError {
       switch (name) {
+#if ! DISABLE_GNOME_SHELL
         case "gnome-shell":
           try {
             return new GnomeShellDbusRecorder ();
@@ -38,6 +42,7 @@ namespace Peek.Recording {
             throw new PeekError.SCREEN_RECORDER_ERROR (
               e.message);
           }
+#endif
         case "ffmpeg":
           return new FfmpegScreenRecorder ();
         case "avconv":

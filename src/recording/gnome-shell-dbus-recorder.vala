@@ -7,6 +7,8 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+#if ! DISABLE_GNOME_SHELL
+
 using Gnome.Shell;
 using Peek.PostProcessing;
 
@@ -158,3 +160,5 @@ namespace Peek.Recording {
   }
 
 }
+
+#endif

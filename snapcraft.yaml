@@ -37,6 +37,7 @@ parts:
     plugin: cmake
     configflags:
       - -DGSETTINGS_COMPILE=OFF
+      - -DDISABLE_GNOME_SHELL=ON 
     source: .
     # source: /media/sf_devel/peek
     source-type: git
