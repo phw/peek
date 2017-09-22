@@ -51,6 +51,7 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 
 set(VALA_DEFINITIONS "")
 
+# Check for GTK features
 if(${GTK_VERSION} VERSION_EQUAL "3.16" OR ${GTK_VERSION} VERSION_GREATER "3.16")
   message(STATUS "Compiling with features for GTK >= 3.16")
   set(REQUIRE_GTK "3.16")
@@ -69,8 +70,15 @@ if(${GTK_VERSION} VERSION_EQUAL "3.22" OR ${GTK_VERSION} VERSION_GREATER "3.22")
   list(APPEND VALA_DEFINITIONS "HAS_GTK_SHORTCUT_LABEL")
 endif()
 
+# Flags for disabling certain features
 if(DISABLE_GNOME_SHELL)
+  message(STATUS "GNOME Shell recorder disabled by configuration")
   list(APPEND VALA_DEFINITIONS "DISABLE_GNOME_SHELL")
+endif()
+
+if(DISABLE_OPEN_FILE_MANAGER)
+  message(STATUS "File manager integration disabled by configuration")
+  list(APPEND VALA_DEFINITIONS "DISABLE_OPEN_FILE_MANAGER")
 endif()
 
 # Compile Vala to C

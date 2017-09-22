@@ -552,17 +552,20 @@ namespace Peek.Ui {
     private void handle_saved_file (File file) {
       save_preferred_save_folder (file);
 
+#if ! DISABLE_OPEN_FILE_MANAGER
       if (this.visible && open_file_manager) {
         DesktopIntegration.launch_file_manager (file);
       } else {
         show_file_saved_notification (file);
       }
+#else
+      show_file_saved_notification (file);
+#endif
     }
 
     private void show_file_saved_notification (File file) {
       var message = new StringBuilder ("");
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
-      var parameter = new Variant.string (file.get_uri ());
 
       var notification = new GLib.Notification (message.str);
 
@@ -578,6 +581,9 @@ namespace Peek.Ui {
           notification.set_icon (icon);
         }
       }
+
+#if ! DISABLE_OPEN_FILE_MANAGER
+      var parameter = new Variant.string (file.get_uri ());
 
       // Unity does not allow actions on notifications, so we disable
       // notification actions there.
@@ -596,6 +602,7 @@ namespace Peek.Ui {
             parameter);
         }
       }
+#endif
 
       debug ("Showing desktop notification: %s", message.str);
       this.application.send_notification ("peek-file-saved", notification);

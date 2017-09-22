@@ -97,6 +97,10 @@ namespace Peek.Ui {
       } else {
         keybinding_toggle_recording_box.hide ();
       }
+
+#if DISABLE_OPEN_FILE_MANAGER
+      interface_open_file_manager.hide();
+#endif
     }
 
     public override bool delete_event (Gdk.EventAny event) {

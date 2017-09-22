@@ -166,9 +166,11 @@ namespace Peek {
       action.activate.connect (quit);
       add_action (action);
 
+#if ! DISABLE_OPEN_FILE_MANAGER
       action = new GLib.SimpleAction ("show-file", VariantType.STRING);
       action.activate.connect (show_file);
       add_action (action);
+#endif
     }
 
     private void register_key_bindings () {
@@ -274,12 +276,14 @@ namespace Peek {
       }
     }
 
+#if ! DISABLE_OPEN_FILE_MANAGER
     private void show_file (Variant? uri) {
       var uri_str = uri.get_string ();
       debug ("Action show-file called with URI %s", uri_str);
       var file = File.new_for_uri (uri_str);
       DesktopIntegration.launch_file_manager (file);
     }
+#endif
 
     /**
     * Forces the app menu in the decoration layouts so in environments without an app-menu

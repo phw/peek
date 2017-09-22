@@ -10,6 +10,8 @@ This software is licensed under the GNU General Public License
 namespace Peek {
 
   public class DesktopIntegration {
+
+#if ! DISABLE_OPEN_FILE_MANAGER
     private static Freedesktop.FileManager1? _file_manager_service = null;
     private static bool _file_manager_dbus_initialized = false;
     private static Freedesktop.FileManager1? file_manager_service {
@@ -109,6 +111,7 @@ namespace Peek {
         return false;
       }
     }
+#endif
 
     public static string get_video_folder () {
       string folder;
@@ -169,10 +172,12 @@ namespace Peek {
       return desktop.contains (text);
     }
 
+#if ! DISABLE_OPEN_FILE_MANAGER
     private static bool file_manager_highlights_file (AppInfo app_info) {
       var exe = app_info.get_executable ();
       return exe == "nautilus" || exe == "nemo";
     }
+#endif
   }
 
 }
