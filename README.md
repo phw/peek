@@ -115,7 +115,9 @@ To test the latest development version you can install
 Peek can also be installed on all distributions supporting [Snappy](https://snapcraft.io/docs/core/install).
 Currently only the development version is available in the Snappy format:
 
-    sudo snap install peek --edge --devmode
+    sudo snap install peek --edge
+    sudo snap install gnome-3-24
+    sudo snap connect peek:gnome-3-24-platform gnome-3-24:gnome-3-24-platform
 
 Once installed you can run Peek via its application icon in your desktop
 environment or from command line:
