@@ -1,7 +1,7 @@
 {
   "app-id": "com.uploadedlobster.peek",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.24",
+  "runtime-version": "3.26",
   "sdk": "org.gnome.Sdk",
   "branch": "master",
   "command": "peek",
