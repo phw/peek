@@ -21,17 +21,17 @@ apps:
       - unity7
       - home
       - gsettings
-      - gnome-3-24-platform
+      - gnome-3-26-1604
   # ffmpeg:
   #   command: ffmpeg
   # convert:
   #   command: convert
 
 plugs:
-  gnome-3-24-platform:
+  gnome-3-26-1604:
     interface: content
     target: gnome-platform
-    default-provider: gnome-3-24:gnome-3-24-platform
+    default-provider: gnome-3-26-1604:gnome-3-26-1604
 
 slots:
   session-dbus-interface:
@@ -50,7 +50,7 @@ parts:
     # source: /media/sf_devel/peek
     source-type: git
     after:
-      - desktop-gtk3
+      - desktop-gnome-platform
     build-packages:
       - libgtk-3-dev
       - libkeybinder-3.0-dev
