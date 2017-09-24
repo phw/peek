@@ -126,7 +126,7 @@ environment or from command line:
 
 To update to the latest version run:
 
-    sudo snap refresh peek --devmode
+    sudo snap refresh peek
 
 ### Arch Linux
 For Arch Linux
