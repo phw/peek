@@ -103,16 +103,22 @@ namespace Peek {
 
     /**
     * Returns available system memory in kiB.
-    *
-    * Returns -1 if memory could not be read.
+    * Returns -1 if memory could not be read
     */
-    public static int get_system_memory () {
+    public static int get_available_system_memory () {
       var stream = FileStream.open ("/proc/meminfo", "r");
       assert (stream != null);
 
-      int memory = -1;
-      stream.scanf ("MemTotal: %d kB", &memory);
-      return memory;
+      string line;
+      while ((line = stream.read_line ()) != null) {
+        if (line.has_prefix ("MemAvailable")) {
+          int memory = 0;
+          line.scanf ("MemAvailable: %d kB", &memory);
+          return memory;
+        }
+      }
+
+      return -1;
     }
   }
 

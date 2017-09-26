@@ -8,8 +8,8 @@ void test_make_even () {
   assert(Utils.make_even (-12) == -12);
 }
 
-void test_get_system_memory () {
-  int memory = Utils.get_system_memory ();
+void test_get_available_system_memory () {
+  int memory = Utils.get_available_system_memory ();
   assert(memory > 0);
 }
 
@@ -18,7 +18,7 @@ void main (string[] args) {
   Gtk.init (ref args);
 
   GLib.Test.add_func ("/utils/test_make_even", test_make_even);
-  GLib.Test.add_func ("/utils/get_system_memory", test_get_system_memory);
+  GLib.Test.add_func ("/utils/get_available_system_memory", test_get_available_system_memory);
 
   GLib.Test.run ();
 }

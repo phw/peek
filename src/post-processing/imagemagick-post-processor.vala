@@ -14,14 +14,20 @@ namespace Peek.PostProcessing {
 
     private Pid? pid = null;
 
-    private int memory_limit = -1;
+    private int memory_limit {
+      get {
+        int available_memory = Utils.get_available_system_memory ();
+        int memory_limit = available_memory;
+        if (available_memory > 0) {
+          memory_limit = (int)(available_memory * 0.9);
+        }
+
+        return memory_limit;
+      }
+    }
 
     public ImagemagickPostProcessor (int framerate) {
       this.framerate = framerate;
-      int system_memory = Utils.get_system_memory ();
-      if (system_memory > 0) {
-        memory_limit = (int)(system_memory * 0.8);
-      }
     }
 
     public async File? process_async (File file) {
