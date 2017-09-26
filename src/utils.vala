@@ -100,6 +100,20 @@ namespace Peek {
     public static int make_even (int i) {
       return (i / 2) * 2;
     }
+
+    /**
+    * Returns available system memory in kiB.
+    *
+    * Returns -1 if memory could not be read.
+    */
+    public static int get_system_memory () {
+      var stream = FileStream.open ("/proc/meminfo", "r");
+      assert (stream != null);
+
+      int memory = -1;
+      stream.scanf ("MemTotal: %d kB", &memory);
+      return memory;
+    }
   }
 
 }

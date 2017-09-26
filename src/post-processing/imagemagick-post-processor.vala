@@ -14,8 +14,14 @@ namespace Peek.PostProcessing {
 
     private Pid? pid = null;
 
+    private int memory_limit = -1;
+
     public ImagemagickPostProcessor (int framerate) {
       this.framerate = framerate;
+      int system_memory = Utils.get_system_memory ();
+      if (system_memory > 0) {
+        memory_limit = (int)(system_memory * 0.8);
+      }
     }
 
     public async File? process_async (File file) {
@@ -31,13 +37,15 @@ namespace Peek.PostProcessing {
           magick_debug = "None";
         }
 
-        debug ("Running ImageMagick convert, saving to %s, using temporary path %s",
-          output_file, temp_dir);
+        debug ("Running ImageMagick convert\n    saving to: %s\n    temporary path: %s\n    memory limit: %d kiB",
+          output_file, temp_dir, memory_limit);
 
         string[] argv = {
           "convert",
           "-debug", magick_debug,
           "-set", "delay", delay.to_string (),
+          "-limit", "disk", "unlimited",
+          "-limit", "memory", "%dkiB".printf(memory_limit),
           "-layers", "Optimize",
           "-define", "registry:temporary-path=" + temp_dir,
           file.get_path (),
