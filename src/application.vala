@@ -37,7 +37,7 @@ namespace Peek {
           settings = new Settings.full (schema, null, null);
         }
       }
-      catch (GLib.Error e) {
+      catch (Error e) {
         debug ("Loading local settings failed: %s", e.message);
       }
 
@@ -85,7 +85,7 @@ namespace Peek {
 
       load_stylesheets ();
 
-      GLib.Environment.set_application_name (_ ("Peek"));
+      Environment.set_application_name (_ ("Peek"));
 
       force_app_menu ();
       register_actions ();
@@ -106,7 +106,7 @@ namespace Peek {
       base.shutdown ();
     }
 
-    protected override int handle_local_options (GLib.VariantDict options) {
+    protected override int handle_local_options (VariantDict options) {
       if (options.contains ("version")) {
         stderr.printf ("%1$s %2$s\n", "Peek", Config.VERSION);
         return Posix.EXIT_SUCCESS;
@@ -144,30 +144,30 @@ namespace Peek {
 
     private void register_actions () {
       // Application actions
-      GLib.SimpleAction action;
+      SimpleAction action;
 
-      action = new GLib.SimpleAction ("new-window", null);
+      action = new SimpleAction ("new-window", null);
       action.activate.connect (new_window);
       add_action (action);
 
-      action = new GLib.SimpleAction ("new-window-with-backend", VariantType.STRING);
+      action = new SimpleAction ("new-window-with-backend", VariantType.STRING);
       action.activate.connect (new_window_with_backend);
       add_action (action);
 
-      action = new GLib.SimpleAction ("preferences", null);
+      action = new SimpleAction ("preferences", null);
       action.activate.connect (show_preferences);
       add_action (action);
 
-      action = new GLib.SimpleAction ("about", null);
+      action = new SimpleAction ("about", null);
       action.activate.connect (show_about);
       add_action (action);
 
-      action = new GLib.SimpleAction ("quit", null);
+      action = new SimpleAction ("quit", null);
       action.activate.connect (quit);
       add_action (action);
 
 #if ! DISABLE_OPEN_FILE_MANAGER
-      action = new GLib.SimpleAction ("show-file", VariantType.STRING);
+      action = new SimpleAction ("show-file", VariantType.STRING);
       action.activate.connect (show_file);
       add_action (action);
 #endif
@@ -271,7 +271,7 @@ namespace Peek {
         Gtk.StyleContext.add_provider_for_screen (screen, provider,
           GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
       }
-      catch (GLib.Error e) {
+      catch (Error e) {
         stderr.printf ("Loading application stylesheet %s failed: %s", uri, e.message);
       }
     }

@@ -49,12 +49,12 @@ void test_equals () {
 }
 
 void main (string[] args) {
-  GLib.Test.init (ref args);
+  Test.init (ref args);
   Gtk.init (ref args);
 
-  GLib.Test.add_func (
+  Test.add_func (
     "/screen-recorder/recording-area/test_equals",
     test_equals);
 
-  GLib.Test.run ();
+  Test.run ();
 }

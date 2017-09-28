@@ -115,14 +115,14 @@ namespace Peek {
 
     public static string get_video_folder () {
       string folder;
-      folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.VIDEOS);
+      folder = Environment.get_user_special_dir (UserDirectory.VIDEOS);
 
       if (folder == null) {
-        folder = GLib.Environment.get_user_special_dir (GLib.UserDirectory.PICTURES);
+        folder = Environment.get_user_special_dir (UserDirectory.PICTURES);
       }
 
       if (folder == null) {
-        folder = GLib.Environment.get_home_dir ();
+        folder = Environment.get_home_dir ();
       }
 
       return folder;
@@ -145,14 +145,14 @@ namespace Peek {
     }
 
     public static bool is_plasma () {
-      string desktop_session = GLib.Environment.get_variable ("XDG_SESSION_DESKTOP")
-        ?? GLib.Environment.get_variable ("DESKTOP_SESSION")
+      string desktop_session = Environment.get_variable ("XDG_SESSION_DESKTOP")
+        ?? Environment.get_variable ("DESKTOP_SESSION")
         ?? "";
       return desktop_session == "plasma";
     }
 
     public static bool is_wayland () {
-      string? wayland_display = GLib.Environment.get_variable ("WAYLAND_DISPLAY");
+      string? wayland_display = Environment.get_variable ("WAYLAND_DISPLAY");
       return wayland_display != null && wayland_display != "";
     }
 
@@ -167,7 +167,7 @@ namespace Peek {
     }
 
     private static bool xdg_current_desktop_contains (string text) {
-      string desktop = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
+      string desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "";
       debug ("Desktop: %s", desktop);
       return desktop.contains (text);
     }

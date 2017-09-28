@@ -35,12 +35,12 @@ void test_cancel () {
 }
 
 void main (string[] args) {
-  GLib.Test.init (ref args);
+  Test.init (ref args);
   Gtk.init (ref args);
 
-  GLib.Test.add_func (
+  Test.add_func (
     "/screen-recorder/command-line-screen-recorder/test_cancel",
     test_cancel);
 
-  GLib.Test.run ();
+  Test.run ();
 }

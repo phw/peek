@@ -540,7 +540,7 @@ namespace Peek.Ui {
               stderr.printf ("Saving file %s failed.\n", out_file.get_uri ());
             }
           }
-          catch (GLib.Error e) {
+          catch (Error e) {
             stderr.printf ("File save error: %s\n", e.message);
           }
           finally {
@@ -567,7 +567,7 @@ namespace Peek.Ui {
       var message = new StringBuilder ("");
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
 
-      var notification = new GLib.Notification (message.str);
+      var notification = new Notification (message.str);
 
       if (!DesktopIntegration.is_cinnamon ()) {
         notification.set_icon (new ThemedIcon (APP_ID));
@@ -632,7 +632,7 @@ namespace Peek.Ui {
     }
 
     private void load_geometry () {
-      GLib.Variant geom = settings.get_value ("persist-window-geometry");
+      Variant geom = settings.get_value ("persist-window-geometry");
       int x = 0,
           y = 0,
           w = 0,
@@ -652,17 +652,17 @@ namespace Peek.Ui {
     }
 
     private void save_geometry () {
-      var builder = new GLib.VariantBuilder (GLib.VariantType.TUPLE);
+      var builder = new VariantBuilder (VariantType.TUPLE);
       int x = 0,
           y = 0,
           w = 0,
           h = 0;
       get_position (out x, out y);
       get_size (out w, out h);
-      builder.add_value (new GLib.Variant.int32(x));
-      builder.add_value (new GLib.Variant.int32(y));
-      builder.add_value (new GLib.Variant.int32(w));
-      builder.add_value (new GLib.Variant.int32(h));
+      builder.add_value (new Variant.int32(x));
+      builder.add_value (new Variant.int32(y));
+      builder.add_value (new Variant.int32(w));
+      builder.add_value (new Variant.int32(h));
       settings.set_value ("persist-window-geometry", builder.end ());
     }
 

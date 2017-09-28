@@ -18,10 +18,10 @@ int main (string[] args) {
   Environment.set_variable ("GDK_BACKEND", "x11", false);
 
   // Setup gettext
-  GLib.Intl.setlocale(GLib.LocaleCategory.ALL, "");
-  GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-  GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-  GLib.Intl.textdomain (GETTEXT_PACKAGE);
+  Intl.setlocale(LocaleCategory.ALL, "");
+  Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+  Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  Intl.textdomain (GETTEXT_PACKAGE);
 
   var app = new Peek.Application ();
   return app.run (args);

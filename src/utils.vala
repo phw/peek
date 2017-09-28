@@ -12,7 +12,7 @@ namespace Peek {
   public class Utils {
     public static string get_temp_dir () {
       string cache_dir_path = Path.build_filename (
-        GLib.Environment.get_user_cache_dir (), "peek"
+        Environment.get_user_cache_dir (), "peek"
       );
       var cache_dir = File.new_for_path (cache_dir_path);
 

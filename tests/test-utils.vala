@@ -14,11 +14,11 @@ void test_get_available_system_memory () {
 }
 
 void main (string[] args) {
-  GLib.Test.init (ref args);
+  Test.init (ref args);
   Gtk.init (ref args);
 
-  GLib.Test.add_func ("/utils/test_make_even", test_make_even);
-  GLib.Test.add_func ("/utils/get_available_system_memory", test_get_available_system_memory);
+  Test.add_func ("/utils/test_make_even", test_make_even);
+  Test.add_func ("/utils/get_available_system_memory", test_get_available_system_memory);
 
-  GLib.Test.run ();
+  Test.run ();
 }
