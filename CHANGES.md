@@ -1,5 +1,15 @@
-# Version 1.?.? - 2017-??-??
+# Version 1.1.0 - 2017-10-05
  * feat: Transparent recording area without compositor (#147, #7)
+ * fix: Unusual default permissions (#161)
+ * fix: Explicitly set ImageMagick resource limits (#112, #125)
+ * i18n: Updated translations for Basque, Chinese (Simplified), Czech, Dutch,
+         French, German, Lithuanian, Russian, Serbian, Spanish, Swedish, Polish,
+         Portuguese (Brazil)
+ * build: New flag `DISABLE_GNOME_SHELL` to disable gnome-shell recorder
+ * build: New flag `DISABLE_OPEN_FILE_MANAGER` to disable file manager integration
+ * build: Use CMake GNUInstallDirs variables
+ * package: Updated dependencies for Flatpak and Snap packages
+ * package: Stable Snap package depending on gnome-platform 3.26
 
 # Version 1.0.3 - 2017-06-13
  * package: fixed installing man page

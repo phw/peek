@@ -57,6 +57,12 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
 
 %changelog
+* Thu Oct 05 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.1.0
+- Transparent recording area without compositor
+- Unusual default permissions
+- Explicitly set ImageMagick resource limits
+- Updated translations for Basque, Chinese (Simplified), Czech, Dutch, French, German, Lithuanian, Russian, Serbian, Spanish, Swedish, Polish, Portuguese (Brazil)
+
 * Tue Jun 13 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.0.3
 - Fixed installing man page
 

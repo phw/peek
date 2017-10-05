@@ -2,8 +2,8 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 1)
-set (PEEK_VERSION_MINOR 0)
-set (PEEK_VERSION_PATCH 3)
+set (PEEK_VERSION_MINOR 1)
+set (PEEK_VERSION_PATCH 0)
 
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
