@@ -1,5 +1,5 @@
 name: peek
-version: '1.0.3+git'
+version: '1.1.0'
 icon: data/icons/512x512/com.uploadedlobster.peek.png
 summary: Simple screen recorder with an easy to use interface
 description: |
@@ -21,17 +21,18 @@ apps:
       - unity7
       - home
       - gsettings
-      - gnome-3-24-platform
+      - gnome-3-26-1604
   # ffmpeg:
   #   command: ffmpeg
   # convert:
   #   command: convert
 
 plugs:
-  gnome-3-24-platform:
+  gnome-3-26-1604:
     interface: content
+    content: gnome-3-26-1604
+    default-provider: gnome-3-26-1604
     target: gnome-platform
-    default-provider: gnome-3-24:gnome-3-24-platform
 
 slots:
   session-dbus-interface:
