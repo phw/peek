@@ -5,7 +5,7 @@ Summary:        Simple screen recorder with an easy to use interface
 
 License:        GPLv3
 URL:            https://github.com/phw/peek
-Source0:        https://github.com/phw/peek/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/phw/peek/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  vala-devel
@@ -55,6 +55,8 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 %{_datadir}/dbus-1/services/com.uploadedlobster.%{name}.service
 %{_datadir}/glib-2.0/schemas/com.uploadedlobster.%{name}.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/com.uploadedlobster.%{name}.png
+%{_datadir}/man/man1/%{name}.1.gz
+
 
 %changelog
 * Thu Oct 05 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.1.0
