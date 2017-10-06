@@ -1,0 +1,10 @@
+#!/bin/sh
+SCRIPT=$(readlink -f "$0")
+BIN_DIR=$(dirname "$SCRIPT")
+BASE_DIR=$(readlink -f "$BIN_DIR/../..")
+
+export XDG_CONFIG_DIRS=$BASE_DIR/etc:$XDG_CONFIG_DIRS
+export XDG_DATA_DIRS=$BASE_DIR/usr/share/:$XDG_DATA_DIRS
+export PATH=$BIN_DIR:$PATH
+
+$BASE_DIR/usr/lib/peek/peek-run "$@"
