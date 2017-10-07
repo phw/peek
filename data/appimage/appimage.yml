@@ -1,0 +1,56 @@
+app: peek
+
+build:
+  packages:
+    - cmake
+    - vala-devel
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(keybinder-3.0)
+    - pkgconfig(vpx)
+    - gettext
+    - linuxdeployqt
+    - yasm
+
+  git:
+    - https://github.com/phw/peek.git
+    - https://git.videolan.org/git/x264.git
+    - git://source.ffmpeg.org/ffmpeg.git
+    - https://github.com/ImageMagick/ImageMagick.git
+
+script:
+  # Build libx264
+  - cd $BUILD_SOURCE_DIR/x264
+  - ./configure --prefix=/usr --enable-pic --enable-shared --disable-asm
+  - make
+  - make DESTDIR=$BUILD_APPDIR install
+  # Build FFmpeg
+  - cd $BUILD_SOURCE_DIR/ffmpeg
+  - ./configure --prefix=/usr --extra-ldflags="-L${BUILD_APPDIR}/usr/lib" --extra-cflags="-I${BUILD_APPDIR}/usr/include" --disable-debug --disable-static --enable-gpl --enable-libvpx --enable-libx264 --enable-shared --enable-libxcb --enable-libxcb-xfixes --disable-libxcb-shape --disable-ffplay --disable-ffprobe --disable-ffserver --disable-doc --disable-everything --enable-decoder=rawvideo --enable-encoder=libx264 --enable-encoder=libvpx_vp8 --enable-encoder=rawvideo --enable-encoder=pam --enable-demuxer=avi --enable-muxer=mp4 --enable-muxer=webm --enable-muxer=rawvideo --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
+  - make
+  - make DESTDIR=$BUILD_APPDIR install
+  # Build ImageMagick
+  - cd $BUILD_SOURCE_DIR/ImageMagick
+  - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
+  - make
+  - make DESTDIR=$BUILD_APPDIR install
+  # Build Peek
+  - cd $BUILD_SOURCE_DIR/peek
+  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DGSETTINGS_COMPILE=OFF -DLOCALEDIR=share/locale .
+  - make
+  - make DESTDIR=$BUILD_APPDIR install
+  # Finalize AppDir
+  - export LD_LIBRARY_PATH=${BUILD_APPDIR}/usr/lib:$LD_LIBRARY_PATH
+  - linuxdeployqt ${BUILD_APPDIR}/usr/bin/ffmpeg -bundle-non-qt-libs
+  - linuxdeployqt ${BUILD_APPDIR}/usr/bin/convert -bundle-non-qt-libs
+  - linuxdeployqt ${BUILD_APPDIR}/usr/bin/peek -bundle-non-qt-libs
+  - glib-compile-schemas $BUILD_APPDIR/usr/share/glib-2.0/schemas
+  - cp $BUILD_APPDIR/usr/share/applications/com.uploadedlobster.peek.desktop $BUILD_APPDIR
+  - cp $BUILD_APPDIR/usr/share/icons/hicolor/256x256/apps/com.uploadedlobster.peek.png $BUILD_APPDIR
+  - mkdir -p $BUILD_APPDIR/usr/lib/peek
+  - mv $BUILD_APPDIR/usr/bin/peek $BUILD_APPDIR/usr/lib/peek/peek-run
+  - cp $BUILD_SOURCE_DIR/peek/data/appimage/launch-peek $BUILD_APPDIR/usr/bin/peek
+  - rm -rf ${BUILD_APPDIR}/usr/bin/x264
+  - rm -rf ${BUILD_APPDIR}/usr/include
+  - rm -rf ${BUILD_APPDIR}/usr/lib/pkgconfig
+  - rm -rf ${BUILD_APPDIR}/usr/lib/*.la
+  - rm -rf ${BUILD_APPDIR}/usr/share/gtk-doc
