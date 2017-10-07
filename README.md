@@ -164,10 +164,10 @@ Then build Peek and package it:
     cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
     make package
 
-This will create the package `peek-1.1.0-Linux.deb`. You can install it with
-dpkg:
+This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
+current version). You can install it with dpkg:
 
-    sudo dpkg -i peek-1.1.0-Linux.deb
+    sudo dpkg -i peek-x.y.z-Linux.deb
 
 ### Fedora
 Fedora 25 users can use this repository:
