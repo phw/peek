@@ -8,4 +8,7 @@ export XDG_CONFIG_DIRS=$BASE_DIR/usr/etc:$XDG_CONFIG_DIRS
 export XDG_DATA_DIRS=$BASE_DIR/usr/share/:$XDG_DATA_DIRS
 export PATH=$BIN_DIR:$PATH
 
+# Workaround for theme incompatibility with bundled GTK version
+export GTK_THEME=Adwaita-dark
+
 $BASE_DIR/usr/lib/peek/peek-run "$@"
