@@ -48,7 +48,7 @@ script:
   - cp $BUILD_APPDIR/usr/share/icons/hicolor/256x256/apps/com.uploadedlobster.peek.png $BUILD_APPDIR
   - mkdir -p $BUILD_APPDIR/usr/lib/peek
   - mv $BUILD_APPDIR/usr/bin/peek $BUILD_APPDIR/usr/lib/peek/peek-run
-  - cp $BUILD_SOURCE_DIR/peek/data/appimage/launch-peek $BUILD_APPDIR/usr/bin/peek
+  - cp $BUILD_SOURCE_DIR/appimage-launch-peek $BUILD_APPDIR/usr/bin/peek
   - rm -rf ${BUILD_APPDIR}/usr/bin/x264
   - rm -rf ${BUILD_APPDIR}/usr/include
   - rm -rf ${BUILD_APPDIR}/usr/lib/pkgconfig
