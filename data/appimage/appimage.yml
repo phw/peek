@@ -14,28 +14,34 @@ build:
   git:
     - https://github.com/phw/peek.git
     - https://git.videolan.org/git/x264.git
-    - git://source.ffmpeg.org/ffmpeg.git
-    - https://github.com/ImageMagick/ImageMagick.git
+
+  files:
+    - https://ffmpeg.org/releases/ffmpeg-3.3.4.tar.xz
+    - https://github.com/ImageMagick/ImageMagick/archive/6.9.9-19.tar.gz
 
 script:
+  # Build Peek
+  - cd $BUILD_SOURCE_DIR/peek
+  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DGSETTINGS_COMPILE=OFF -DLOCALEDIR=share/locale .
+  - make
+  - make DESTDIR=$BUILD_APPDIR install
   # Build libx264
   - cd $BUILD_SOURCE_DIR/x264
   - ./configure --prefix=/usr --enable-pic --enable-shared --disable-asm
   - make
   - make DESTDIR=$BUILD_APPDIR install
   # Build FFmpeg
-  - cd $BUILD_SOURCE_DIR/ffmpeg
+  - cd $BUILD_SOURCE_DIR
+  - tar -xf ffmpeg-3.3.4.tar.xz
+  - cd ffmpeg-3.3.4
   - ./configure --prefix=/usr --extra-ldflags="-L${BUILD_APPDIR}/usr/lib" --extra-cflags="-I${BUILD_APPDIR}/usr/include" --disable-debug --disable-static --enable-gpl --enable-libvpx --enable-libx264 --enable-shared --enable-libxcb --enable-libxcb-xfixes --disable-libxcb-shape --disable-ffplay --disable-ffprobe --disable-ffserver --disable-doc --disable-everything --enable-decoder=rawvideo --enable-encoder=libx264 --enable-encoder=libvpx_vp8 --enable-encoder=rawvideo --enable-encoder=pam --enable-demuxer=avi --enable-muxer=mp4 --enable-muxer=webm --enable-muxer=rawvideo --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
   - make
   - make DESTDIR=$BUILD_APPDIR install
   # Build ImageMagick
-  - cd $BUILD_SOURCE_DIR/ImageMagick
+  - cd $BUILD_SOURCE_DIR
+  - tar -xf ImageMagick-6.9.9-19.tar.gz
+  - cd ImageMagick-6.9.9-19
   - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
-  - make
-  - make DESTDIR=$BUILD_APPDIR install
-  # Build Peek
-  - cd $BUILD_SOURCE_DIR/peek
-  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DGSETTINGS_COMPILE=OFF -DLOCALEDIR=share/locale .
   - make
   - make DESTDIR=$BUILD_APPDIR install
   # Finalize AppDir
@@ -49,6 +55,7 @@ script:
   - mkdir -p $BUILD_APPDIR/usr/lib/peek
   - mv $BUILD_APPDIR/usr/bin/peek $BUILD_APPDIR/usr/lib/peek/peek-run
   - cp $BUILD_SOURCE_DIR/appimage-launch-peek $BUILD_APPDIR/usr/bin/peek
+  - chmod +x $BUILD_APPDIR/usr/bin/peek
   - rm -rf ${BUILD_APPDIR}/usr/bin/x264
   - rm -rf ${BUILD_APPDIR}/usr/include
   - rm -rf ${BUILD_APPDIR}/usr/lib/pkgconfig
