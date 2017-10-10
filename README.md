@@ -23,6 +23,7 @@ Simple screen recorder with an easy to use interface
   - [Official distribution packages](#official-distribution-packages)
   - [Flatpak](#flatpak)
   - [Snappy](#snappy)
+  - [AppImage](#appimage)
   - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
@@ -112,7 +113,7 @@ To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
 ### Snappy
-Peek can also be installed on all distributions supporting [Snappy](https://snapcraft.io/docs/core/install).
+Peek can be installed on all distributions supporting [Snappy](https://snapcraft.io/docs/core/install).
 Currently only the development version is available in the Snappy format:
 
     sudo snap install gnome-3-26-1604
@@ -131,6 +132,14 @@ you can update Peek manually to the latest version:
 To test the latest development version install Peek from the edge channel:
 
     sudo snap install peek --edge
+
+### AppImage
+Peek [AppImage](https://appimage.org/) packages are available on the
+[release page](https://github.com/phw/peek/releases). To run download the
+`.AppImage` file and set it executable, than just run it. You can name the file
+however you want, e.g. you can name it just `peek` and place it in `$HOME/bin`
+for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit/wiki)
+for more information on how to use AppImages and integrate them with your system.
 
 ### Arch Linux
 For Arch Linux
