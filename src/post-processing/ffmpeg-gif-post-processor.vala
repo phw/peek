@@ -46,7 +46,7 @@ namespace Peek.PostProcessing {
 
     private async File? generate_palette_async (File file) {
       string[] args = {
-        "ffmpeg",
+        "ffmpeg", "-y",
         "-i", file.get_path (),
         "-vf", "fps=%d,palettegen".printf(framerate)
       };
@@ -59,7 +59,7 @@ namespace Peek.PostProcessing {
 
     private async File? generate_gif_async (File input_file, File palette_file) {
       string[] args = {
-        "ffmpeg",
+        "ffmpeg", "-y",
         "-i", input_file.get_path (),
         "-i", palette_file.get_path (),
         "-filter_complex", "fps=%d,paletteuse".printf(framerate)
@@ -107,5 +107,4 @@ namespace Peek.PostProcessing {
         SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
     }
   }
-
 }

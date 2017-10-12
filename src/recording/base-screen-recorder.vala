@@ -46,6 +46,7 @@ namespace Peek.Recording {
       debug ("Started post processing");
       run_post_processors_async.begin ((obj, res) => {
         var file = run_post_processors_async.end (res);
+        FileUtils.chmod (file.get_path (), 0644);
         debug ("Finished post processing");
         recording_finished (file);
       });
