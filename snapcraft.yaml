@@ -102,17 +102,25 @@ parts:
       - --disable-ffserver
       - --disable-doc
       - --disable-everything
-      - --enable-decoder=libvpx_vp8
+      - --enable-decoder=png
       - --enable-decoder=rawvideo
-      - --enable-encoder=libx264
+      - --enable-encoder=gif
       - --enable-encoder=libvpx_vp8
-      - --enable-encoder=rawvideo
+      - --enable-encoder=libx264
       - --enable-encoder=pam
+      - --enable-encoder=png
+      - --enable-encoder=rawvideo
       - --enable-demuxer=avi
+      - --enable-demuxer=image2
+      - --enable-muxer=gif
+      - --enable-muxer=image2
       - --enable-muxer=mp4
-      - --enable-muxer=webm
       - --enable-muxer=rawvideo
+      - --enable-muxer=webm
       - --enable-filter=crop
+      - --enable-filter=fps
+      - --enable-filter=palettegen
+      - --enable-filter=paletteuse
       - --enable-filter=scale
       - --enable-protocol=file
       - --enable-indev=xcbgrab
