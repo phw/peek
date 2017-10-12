@@ -33,6 +33,8 @@ namespace Peek {
     public static string create_temp_file (string extension) throws FileError {
       var temp_dir = get_temp_dir ();
       var file_name = Path.build_filename (temp_dir, "peekXXXXXX." + extension);
+      var fd = FileUtils.mkstemp (file_name);
+      FileUtils.close (fd);
       debug ("Temp file: %s\n", file_name);
       return file_name;
     }
