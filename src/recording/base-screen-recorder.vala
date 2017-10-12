@@ -72,7 +72,13 @@ namespace Peek.Recording {
       var file = File.new_for_path (temp_file);
 
       if (output_format == OUTPUT_FORMAT_GIF) {
-        var post_processor = new ImagemagickPostProcessor (framerate);
+        PostProcessor post_processor;
+        if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "ffmpeg") {
+          post_processor = new FfmpegGifPostProcessor (framerate);
+        } else {
+          post_processor = new ImagemagickPostProcessor (framerate);
+        }
+
         active_post_processor = post_processor;
         file = yield post_processor.process_async (file);
         active_post_processor = null;

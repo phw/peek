@@ -1,3 +1,6 @@
+# Version 1.?.? - 2017-??-??
+ * feat: Optional GIF conversion with ffmpeg
+
 # Version 1.1.0 - 2017-10-05
  * feat: Transparent recording area without compositor (#147, #7)
  * fix: Unusual default permissions (#161)
