@@ -153,8 +153,13 @@ namespace Peek.Recording {
     }
 
     private string get_temp_file_extension () {
-      var extension = output_format == OUTPUT_FORMAT_GIF ?
-        "avi" : Utils.get_file_extension_for_format (output_format);
+      string extension;
+      if (output_format == OUTPUT_FORMAT_GIF || output_format == OUTPUT_FORMAT_APNG) {
+        extension = "avi";
+      } else {
+        extension = Utils.get_file_extension_for_format (output_format);
+      }
+
       return extension;
     }
   }

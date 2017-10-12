@@ -72,14 +72,18 @@ namespace Peek.Recording {
     private async File? run_post_processors_async () {
       var file = File.new_for_path (temp_file);
 
+      PostProcessor? post_processor = null;
       if (output_format == OUTPUT_FORMAT_GIF) {
-        PostProcessor post_processor;
         if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "ffmpeg") {
-          post_processor = new FfmpegGifPostProcessor (framerate);
+          post_processor = new FfmpegPostProcessor (framerate, output_format);
         } else {
           post_processor = new ImagemagickPostProcessor (framerate);
         }
+      } else if (output_format == OUTPUT_FORMAT_APNG) {
+        post_processor = new FfmpegPostProcessor (framerate, output_format);
+      }
 
+      if (post_processor != null) {
         active_post_processor = post_processor;
         file = yield post_processor.process_async (file);
         active_post_processor = null;

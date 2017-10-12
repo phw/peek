@@ -14,6 +14,7 @@ namespace Peek {
   const int DEFAULT_FRAMERATE = 15;
   const int DEFAULT_DOWNSAMPLE = 1;
 
+  const string OUTPUT_FORMAT_APNG = "apng";
   const string OUTPUT_FORMAT_GIF = "gif";
   const string OUTPUT_FORMAT_WEBM = "webm";
   const string OUTPUT_FORMAT_MP4 = "mp4";

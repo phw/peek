@@ -81,6 +81,8 @@ namespace Peek {
           return "webm";
         case OUTPUT_FORMAT_MP4:
           return "mp4";
+        case OUTPUT_FORMAT_APNG:
+          return "apng";
         case OUTPUT_FORMAT_GIF:
           return "gif";
         default:

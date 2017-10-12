@@ -1,5 +1,6 @@
 # Version 1.?.? - 2017-??-??
- * feat: Optional GIF conversion with ffmpeg
+ * feat: Optional GIF conversion with Ffmpeg
+ * feat: Support APNG as output format (#108)
  * fix: Temporary files get unique name again
 
 # Version 1.1.0 - 2017-10-05

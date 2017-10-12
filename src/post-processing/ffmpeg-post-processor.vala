@@ -12,13 +12,15 @@ namespace Peek.PostProcessing {
   /**
   * Use FFmpeg to generate an optimized GIF from a video input
   */
-  public class FfmpegGifPostProcessor : Object, PostProcessor {
+  public class FfmpegPostProcessor : Object, PostProcessor {
     public int framerate { get; set; default = 15; }
 
     private Pid? pid = null;
+    private string output_format;
 
-    public FfmpegGifPostProcessor (int framerate) {
+    public FfmpegPostProcessor (int framerate, string output_format) {
       this.framerate = framerate;
+      this.output_format = output_format;
     }
 
     public async File? process_async (File file) {
@@ -68,7 +70,8 @@ namespace Peek.PostProcessing {
       var argv = new Array<string> ();
       argv.append_vals (args, args.length);
 
-      return yield spawn_file_conversion_async (argv, "gif");
+      var extension = Utils.get_file_extension_for_format (output_format);
+      return yield spawn_file_conversion_async (argv, extension);
     }
 
     private async File? spawn_file_conversion_async (Array<string> argv, string output_extension) {
