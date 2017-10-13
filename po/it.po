@@ -1,17 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# Copyright (C) 2017 Emanuele Antonio Faraone <emanueleant03@gmail.com>
 # This file is distributed under the same license as the peek package.
 #
 # Translators:
 # andreas-xavier <andreas-xavier@ubuntu-it.org>, 2016
-# Emanuele Antonio Faraone (FaraOne) <emanueleant03@gmail.com>, 2016
+# Emanuele Antonio Faraone <emanueleant03@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-06-16 11:11+0200\n"
 "PO-Revision-Date: 2017-02-24 10:40+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"Last-Translator: Emanuele Antonio Faraone <emanueleant03@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/peek/"
 "translations/it/>\n"
 "Language: it\n"
@@ -33,19 +33,19 @@ msgstr ""
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Avvia la registrazione in tutte le istanze aperte di Peek."
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Ferma la registrazione in tutte le istanze aperte di Peek."
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Riavvia la registrazione in tutte le istanze aperte di Peek."
 
 #: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/application.vala:335
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Il backend nativo di Wayland non é supportato"
 
 #: src/application.vala:337
 msgid ""
@@ -105,15 +105,15 @@ msgstr "Mostra nel file manager"
 
 #: src/ui/preferences-dialog.vala:112
 msgid "deactivated"
-msgstr ""
+msgstr "disattivato"
 
 #: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
 msgid "Change"
-msgstr ""
+msgstr "Cambia"
 
 #: src/ui/preferences-dialog.vala:136
 msgid "Press keys…"
-msgstr ""
+msgstr "Premi tasto..."
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -176,23 +176,23 @@ msgstr "Registrando"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "Formato di Output"
 
 #: ui/preferences.ui:200
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:201
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:202
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
 msgid "Delay in seconds before recording starts"
-msgstr "Tempo in secondi prima dell'inizio della registrazione"
+msgstr "Ritardo in secondi prima dell'inizio della registrazione"
 
 #: ui/preferences.ui:273
 msgid "Resolution downsampling"
@@ -204,7 +204,7 @@ msgstr "Frequenza fotogrammi"
 
 #: ui/preferences.ui:347
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Cattura il cursore"
 
 #: ui/preferences.ui:378
 msgid "Peek preferences"
@@ -220,7 +220,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Semplice registratore di schermo con un interfaccia facile da usare"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -234,19 +234,19 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Funzionalità:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Seleziona una porzione di schermo da registrare"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Salva il video registrato come una GIF ottimizzata"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Registra direttamente nel formato WebM o MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
@@ -258,11 +258,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Supporto per gli schermi HiDPI"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Funziona in una sessione GNOME Shell Wayland (usando Xwayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek si sta registrando da solo"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
