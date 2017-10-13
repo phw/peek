@@ -78,7 +78,7 @@ msgstr ""
 "Per favore apri Peek usando XWayland settando <tt>GDK_BACKEND=x11</tt>.\n"
 "\n" 
 "Per dettagli vedi Peek <a href='https://github.com/phw/peek#why-no-native-"
-"wayland-support'>FAQ sul supporto a Wayland</a>
+"wayland-support'>FAQ sul supporto a Wayland</a>."
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
