@@ -113,8 +113,8 @@ To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
 ### Snappy
-Peek can be installed on all distributions supporting [Snappy](https://snapcraft.io/docs/core/install).
-Currently only the development version is available in the Snappy format:
+Peek can be installed on all distributions supporting [snappy](https://snapcraft.io/docs/core/install).
+To install, either install the GNOME content snap (gnome-3-26-1604) and the Peek snap from your software center (if the software center supports snappy) or install via command line:
 
     sudo snap install gnome-3-26-1604
     sudo snap install peek
