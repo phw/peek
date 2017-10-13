@@ -104,6 +104,7 @@ parts:
       - --disable-everything
       - --enable-decoder=png
       - --enable-decoder=rawvideo
+      - --enable-encoder=apng
       - --enable-encoder=gif
       - --enable-encoder=libvpx_vp8
       - --enable-encoder=libx264
@@ -112,6 +113,7 @@ parts:
       - --enable-encoder=rawvideo
       - --enable-demuxer=avi
       - --enable-demuxer=image2
+      - --enable-muxer=apng
       - --enable-muxer=gif
       - --enable-muxer=image2
       - --enable-muxer=mp4
