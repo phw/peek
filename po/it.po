@@ -29,7 +29,8 @@ msgstr "Mostra la versione del programma ed esci"
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
-msgstr ""
+msgstr "Seleziona il backend da usare (gnome-shell, ffmpeg o avconv). Se non lo"
+"selezioni Peek ne sceglierà una automaticamente."
 
 #: src/application.vala:64
 msgid "BACKEND"
@@ -54,12 +55,12 @@ msgstr "Peek"
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Impossibile creare il registratore dello schermo.\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Impossibile inizializzare il backend %s.\n"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -73,6 +74,8 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Stai eseguendo Peek nativamente su Wayland, che non è attualmente supportato. "
+"Per favore apri Peek usando XWayland settando <tt>GDK_BACKEND=x11</tt>.\n"
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
@@ -135,7 +138,7 @@ msgstr "_Registra"
 
 #: ui/application-window.ui:157
 msgid "_Stop"
-msgstr "_Stop"
+msgstr "_Ferma"
 
 #: ui/application-window.ui:168
 msgid "Stop recording"
@@ -168,7 +171,7 @@ msgstr "Apri il file manager dopo il salvataggio"
 #: ui/preferences.ui:108
 #, fuzzy
 msgid "Start / stop recording"
-msgstr "Inizia registrazione"
+msgstr "Avvia / ferma registrazione"
 
 #: ui/preferences.ui:162
 msgid "Recording"
@@ -235,6 +238,12 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek rende facile creare brevi registrazioni di un'area dello schermo. E stato "
+" creato per essere usato per registrare aree di schermo, es. per mostrare "
+"facilmente le UI delle app o per riportare dei bug nei bug report. "
+"Con Peek è sufficiente collocare la finestra Peek sull'area che si desidera registrare "
+"e premere \"Registra\". Peek è ottimizzato per creare delle GIF animate, ma "
+"puoi anche registrare in WebM o MP4 se preferisci."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -254,11 +263,11 @@ msgstr "Registra direttamente nel formato WebM o MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Semplice interfaccia ottimizzata per l'obiettivo"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Downscala automaticamente i video registrati"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
@@ -275,10 +284,13 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek non è un'applicazione di screencast per uso generale con funzioni estese ma "
+"si concentra su piccoli processi per creare, piccole registrazioni di "
+"un area dello schermo per creare una GIF animata,video WebM o MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "La finestra principale per selezionare l'area di registrazione"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
@@ -299,7 +311,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr "\"Peek %Y-%m-%d %H-%M\""
+msgstr "\"Peek %d-%m-%Y %H-%M\""
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 #, fuzzy
@@ -315,11 +327,11 @@ msgstr "Preferisci tema scuro"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Tasto globale per avviare la registrazione"
 
 #: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
-msgstr ""
+msgstr "Formato file in output"
 
 #: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
@@ -327,7 +339,7 @@ msgstr "Risoluzione del fattore di sottocampionamento"
 
 #: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Se cattura il cursore del mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:62
 #, fuzzy
