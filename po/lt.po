@@ -10,17 +10,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 11:11+0200\n"
+"POT-Creation-Date: 2017-10-13 10:25+0200\n"
 "PO-Revision-Date: 2017-07-10 18:36+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian "
-"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
+"translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
-"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
 "X-Generator: Weblate 2.16-dev\n"
 
 #: src/application.vala:59
@@ -56,20 +56,20 @@ msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:220
+#: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nepavyko sukurti numatytojo ekrano rašytuvo.\n"
 
-#: src/application.vala:233
+#: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nepavyko inicijuoti vidinės pusės %s.\n"
 
-#: src/application.vala:335
+#: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
 msgstr "Sava Wayland vidinė pusė yra nepalaikoma"
 
-#: src/application.vala:337
+#: src/application.vala:341
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -100,28 +100,28 @@ msgstr "Į_rašyti"
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/ui/application-window.vala:564
+#: src/ui/application-window.vala:568
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/ui/application-window.vala:585
+#: src/ui/application-window.vala:591
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/ui/application-window.vala:587
+#: src/ui/application-window.vala:593
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
-#: src/ui/preferences-dialog.vala:112
+#: src/ui/preferences-dialog.vala:116
 msgid "deactivated"
 msgstr "išjungta"
 
-#: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
+#: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
 msgid "Change"
 msgstr "Pakeisti"
 
-#: src/ui/preferences-dialog.vala:136
+#: src/ui/preferences-dialog.vala:140
 msgid "Press keys…"
 msgstr "Paspauskite klavišus…"
 
@@ -192,30 +192,34 @@ msgid "GIF"
 msgstr "GIF"
 
 #: ui/preferences.ui:201
+msgid "APNG"
+msgstr "APNG"
+
+#: ui/preferences.ui:202
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:202
+#: ui/preferences.ui:203
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
+#: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Delay in seconds before recording starts"
 msgstr "Delsa sekundėmis, prieš pradedant įrašinėjimą"
 
-#: ui/preferences.ui:273
+#: ui/preferences.ui:274
 msgid "Resolution downsampling"
 msgstr "Raiškos ėminių atrankos mažinimas"
 
-#: ui/preferences.ui:315 data/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
 msgstr "Kadrų dažnis"
 
-#: ui/preferences.ui:347
+#: ui/preferences.ui:348
 msgid "Capture mouse cursor"
 msgstr "Fotografuoti pelės žymeklį"
 
-#: ui/preferences.ui:378
+#: ui/preferences.ui:379
 msgid "Peek preferences"
 msgstr "Peek nuostatos"
 
@@ -332,23 +336,23 @@ msgstr "Teikti pirmenybę tamsiai temai"
 msgid "Global keybinding to toggle recording"
 msgstr "Visuotinis klavišų susiejimas, skirtas įrašinėjimo perjungimui"
 
-#: data/com.uploadedlobster.peek.gschema.xml:37
+#: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
 msgstr "Išvesties failo formatas"
 
-#: data/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
 msgstr "Raiškos ėminių atrankos koeficientas"
 
-#: data/com.uploadedlobster.peek.gschema.xml:56
+#: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
 msgstr "Ar fotografuoti pelės žymeklį"
 
-#: data/com.uploadedlobster.peek.gschema.xml:60
+#: data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Size and position of the last open main window"
 msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 
-#: data/com.uploadedlobster.peek.gschema.xml:64
+#: data/com.uploadedlobster.peek.gschema.xml:66
 msgid "Path where last video got saved"
 msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
 

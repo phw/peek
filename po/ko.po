@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 11:11+0200\n"
+"POT-Creation-Date: 2017-10-13 10:25+0200\n"
 "PO-Revision-Date: 2017-02-24 10:38+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/peek/translations/"
@@ -50,20 +50,20 @@ msgstr ""
 msgid "Peek"
 msgstr ""
 
-#: src/application.vala:220
+#: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
 msgstr ""
 
-#: src/application.vala:233
+#: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr ""
 
-#: src/application.vala:335
+#: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
 msgstr ""
 
-#: src/application.vala:337
+#: src/application.vala:341
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -88,28 +88,28 @@ msgstr "_저장하기"
 msgid "_Cancel"
 msgstr "_취소하기"
 
-#: src/ui/application-window.vala:564
+#: src/ui/application-window.vala:568
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "애니메이션이 %s로 저장됐습니다"
 
-#: src/ui/application-window.vala:585
+#: src/ui/application-window.vala:591
 msgid "Click here to show the saved file in your file manager."
 msgstr "여기를 눌러서 저장하세요."
 
-#: src/ui/application-window.vala:587
+#: src/ui/application-window.vala:593
 msgid "Show in file manager"
 msgstr "저장된 폴더 열기"
 
-#: src/ui/preferences-dialog.vala:112
+#: src/ui/preferences-dialog.vala:116
 msgid "deactivated"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
+#: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
 msgid "Change"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:136
+#: src/ui/preferences-dialog.vala:140
 msgid "Press keys…"
 msgstr ""
 
@@ -180,30 +180,34 @@ msgid "GIF"
 msgstr ""
 
 #: ui/preferences.ui:201
-msgid "WebM"
+msgid "APNG"
 msgstr ""
 
 #: ui/preferences.ui:202
+msgid "WebM"
+msgstr ""
+
+#: ui/preferences.ui:203
 msgid "MP4"
 msgstr ""
 
-#: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
+#: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Delay in seconds before recording starts"
 msgstr ""
 
-#: ui/preferences.ui:273
+#: ui/preferences.ui:274
 msgid "Resolution downsampling"
 msgstr ""
 
-#: ui/preferences.ui:315 data/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
 msgstr ""
 
-#: ui/preferences.ui:347
+#: ui/preferences.ui:348
 msgid "Capture mouse cursor"
 msgstr ""
 
-#: ui/preferences.ui:378
+#: ui/preferences.ui:379
 msgid "Peek preferences"
 msgstr ""
 
@@ -305,22 +309,22 @@ msgstr ""
 msgid "Global keybinding to toggle recording"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:37
+#: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:56
+#: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:60
+#: data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Size and position of the last open main window"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:64
+#: data/com.uploadedlobster.peek.gschema.xml:66
 msgid "Path where last video got saved"
 msgstr ""

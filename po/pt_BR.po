@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-06-16 11:11+0200\n"
+"POT-Creation-Date: 2017-10-13 10:25+0200\n"
 "PO-Revision-Date: 2017-06-23 18:21+0000\n"
 "Last-Translator: Augusto Morais <aflavio@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) "
-"<https://hosted.weblate.org/projects/peek/translations/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
+"translations/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,20 +53,20 @@ msgstr "Alternar a gravação em todas as instâncias Peek em execução."
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:220
+#: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
 msgstr "Não é possível criar o gravador de tela padrão.\n"
 
-#: src/application.vala:233
+#: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Não é possível inicializar o backend %s.\n"
 
-#: src/application.vala:335
+#: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
 msgstr "O backend Wayland nativo não é suportado"
 
-#: src/application.vala:337
+#: src/application.vala:341
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -98,29 +98,29 @@ msgstr "_Salvar"
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/ui/application-window.vala:564
+#: src/ui/application-window.vala:568
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animação salva como “%s”"
 
-#: src/ui/application-window.vala:585
+#: src/ui/application-window.vala:591
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Clique aqui para exibir o arquivo salvo no seu gerenciador de arquivos."
 
-#: src/ui/application-window.vala:587
+#: src/ui/application-window.vala:593
 msgid "Show in file manager"
 msgstr "Exibir no gerenciador de arquivos"
 
-#: src/ui/preferences-dialog.vala:112
+#: src/ui/preferences-dialog.vala:116
 msgid "deactivated"
 msgstr "desativado"
 
-#: src/ui/preferences-dialog.vala:123 src/ui/preferences-dialog.vala:139
+#: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
 msgid "Change"
 msgstr "Alterar"
 
-#: src/ui/preferences-dialog.vala:136
+#: src/ui/preferences-dialog.vala:140
 msgid "Press keys…"
 msgstr "Pressione teclas…"
 
@@ -194,30 +194,34 @@ msgid "GIF"
 msgstr "GIF"
 
 #: ui/preferences.ui:201
+msgid "APNG"
+msgstr "APNG"
+
+#: ui/preferences.ui:202
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:202
+#: ui/preferences.ui:203
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:230 data/com.uploadedlobster.peek.gschema.xml:42
+#: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Delay in seconds before recording starts"
 msgstr "Atraso em segundos antes do início da gravação"
 
-#: ui/preferences.ui:273
+#: ui/preferences.ui:274
 msgid "Resolution downsampling"
 msgstr "Redução de resolução"
 
-#: ui/preferences.ui:315 data/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
 msgstr "Taxa de quadros"
 
-#: ui/preferences.ui:347
+#: ui/preferences.ui:348
 msgid "Capture mouse cursor"
 msgstr "Capturar cursor do mouse"
 
-#: ui/preferences.ui:378
+#: ui/preferences.ui:379
 msgid "Peek preferences"
 msgstr "Preferências do Peek"
 
@@ -335,23 +339,23 @@ msgstr "Preferir tema escuro"
 msgid "Global keybinding to toggle recording"
 msgstr "Atalhos globais do teclado para alternar a gravação"
 
-#: data/com.uploadedlobster.peek.gschema.xml:37
+#: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
 msgstr "Formato do arquivo de saída"
 
-#: data/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
 msgstr "Fator de redução de resolução"
 
-#: data/com.uploadedlobster.peek.gschema.xml:56
+#: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
 msgstr "Deseja capturar capturar o cursor do mouse"
 
-#: data/com.uploadedlobster.peek.gschema.xml:60
+#: data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Size and position of the last open main window"
 msgstr "Tamanho e posição da última janela principal aberta"
 
-#: data/com.uploadedlobster.peek.gschema.xml:64
+#: data/com.uploadedlobster.peek.gschema.xml:66
 msgid "Path where last video got saved"
 msgstr "Caminho onde o último vídeo foi salvo"
 
