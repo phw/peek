@@ -30,7 +30,7 @@ namespace Peek.PostProcessing {
           return null;
         }
 
-        var output_file = yield generate_gif_async (file, palette_file);
+        var output_file = yield generate_animation_async (file, palette_file);
         try {
           yield palette_file.delete_async ();
         } catch (Error e) {
@@ -59,7 +59,7 @@ namespace Peek.PostProcessing {
       return yield spawn_file_conversion_async (argv, "png");
     }
 
-    private async File? generate_gif_async (File input_file, File palette_file) {
+    private async File? generate_animation_async (File input_file, File palette_file) {
       string[] args = {
         "ffmpeg", "-y",
         "-i", input_file.get_path (),
@@ -69,6 +69,11 @@ namespace Peek.PostProcessing {
 
       var argv = new Array<string> ();
       argv.append_vals (args, args.length);
+
+      if (output_format == OUTPUT_FORMAT_APNG) {
+        argv.append_val ("-plays");
+        argv.append_val ("0");
+      }
 
       var extension = Utils.get_file_extension_for_format (output_format);
       return yield spawn_file_conversion_async (argv, extension);
