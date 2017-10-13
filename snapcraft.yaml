@@ -64,8 +64,25 @@ parts:
       cp data/extra/com.canonical.Unity.gschema.xml $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
     prime:
+      - -usr/lib/pkgconfig
+      - -usr/lib/x86_64-linux-gnu/dri
+      - -usr/lib/x86_64-linux-gnu/libasound*
+      - -usr/lib/x86_64-linux-gnu/libgnutls*
+      - -usr/lib/x86_64-linux-gnu/libicu*
+      - -usr/lib/x86_64-linux-gnu/libLLVM*
+      - -usr/lib/x86_64-linux-gnu/libX11*
+      - -usr/share/alsa
+      - -usr/share/bug
       - -usr/share/doc
+      - -usr/share/fonts
+      - -usr/share/icons
       - -usr/share/man
+      - -usr/share/mime
+      - -usr/share/libthai
+      - -usr/share/lintian
+      - -usr/share/pkgconfig
+      - -usr/share/sounds
+      - -usr/share/X11
 
   launcher:
     plugin: dump
@@ -134,10 +151,13 @@ parts:
       - libx264-148
       - libvpx3
     prime:
+      - -usr/include
+      - -usr/lib/pkgconfig
       - -usr/share/applications
       - -usr/share/bug
       - -usr/share/doc
       - -usr/share/fonts
+      - -usr/share/ffmpeg/examples
       - -usr/share/icons
       - -usr/share/locale
       - -usr/share/man
@@ -181,6 +201,8 @@ parts:
       - -bin/ffprobe
       - -bin/ffserver
       - -bin/qt-faststart
+      - -include/
+      - -lib/pkgconfig
       - -share/bug
       - -share/doc
       - -share/fonts
