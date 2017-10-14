@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-10-13 10:25+0200\n"
-"PO-Revision-Date: 2017-10-14 14:40+0000\n"
+"PO-Revision-Date: 2017-10-14 16:38+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Italian "
 "<https://hosted.weblate.org/projects/peek/translations/it/>\n"
@@ -172,7 +172,6 @@ msgid "Open file manager after saving"
 msgstr "Apri il file manager dopo il salvataggio"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
 msgstr "Avvia / ferma registrazione"
 
@@ -304,7 +303,6 @@ msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
@@ -317,14 +315,12 @@ msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %d-%m-%Y %H-%M\""
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr "Nome utilizzato di default. Può includere formati specifici."
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid "Prefer dark theme"
 msgstr "Preferisci tema scuro"
 
@@ -345,12 +341,10 @@ msgid "Whether to capture the mouse cursor"
 msgstr "Se cattura il cursore del mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:62
-#, fuzzy
 msgid "Size and position of the last open main window"
 msgstr "Grandezza e posizione dell' ultima finestra principale aperta"
 
 #: data/com.uploadedlobster.peek.gschema.xml:66
-#, fuzzy
 msgid "Path where last video got saved"
 msgstr "Posizione dove l'ultimo video è stato salvato"
 
