@@ -9,42 +9,46 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-10-13 10:25+0200\n"
-"PO-Revision-Date: 2017-02-24 10:36+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/peek/"
-"translations/nb/>\n"
+"PO-Revision-Date: 2017-10-16 14:51+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://hosted.weblate.org/projects/peek/translations/nb/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"X-Generator: Weblate 2.17\n"
 
 #: src/application.vala:59
 msgid "Show the version of the program and exit"
-msgstr "Vis versjonen til programmet og avslutt"
+msgstr "Vis programversjon og avslutt"
 
 #: src/application.vala:63
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
 msgstr ""
+"Velg opptaksbakenden som skal brukes (gnome-shell, ffmpeg eller avconv). "
+"Hvis ikke satt vil Peek velge en bakende automatisk."
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "BAKENDE"
 
 #: src/application.vala:68
+#, fuzzy
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "Start opptak i alle kjørende Peek-instanser."
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "Stopp opptak i alle kjørende Peek-instanser."
 
 #: src/application.vala:76
+#, fuzzy
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "Veksle opptakstilstand i alle kjørende Peek-instanser."
 
 #: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -53,16 +57,17 @@ msgstr "Peek"
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Klarte ikke å opprette forvalgt skjermopptaker.\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Klarte ikke å igangsette bakende %s.\n"
 
 #: src/application.vala:339
+#, fuzzy
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Stedsegen Wayland-bakende ustøttet"
 
 #: src/application.vala:341
 msgid ""
@@ -72,10 +77,15 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Du kjører stedsegen Peek på Wayland, dette støttes ikke. Start Peek på nytt "
+"med XWayland ved å sette <tt> 1GDK_BACKEND=x11</tt> 2.\n"
+"\n"
+"For detaljer, sjekk <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'> 3O-S-S om Wayland-støtte</a> 4."
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
-msgstr "Lager…"
+msgstr "Tegner…"
 
 #: src/ui/application-window.vala:475 src/ui/application-window.vala:480
 msgid "Save animation"
@@ -96,33 +106,35 @@ msgstr "Animasjon lagret som \"%s\""
 
 #: src/ui/application-window.vala:591
 msgid "Click here to show the saved file in your file manager."
-msgstr "Klikk her for å vise den lagrede filen i din filutforsker."
+msgstr "Klikk her for å vise den lagrede filen i din filubehandler."
 
 #: src/ui/application-window.vala:593
 msgid "Show in file manager"
-msgstr "Vis i filutforsker"
+msgstr "Vis i filbehandler"
 
 #: src/ui/preferences-dialog.vala:116
 msgid "deactivated"
-msgstr ""
+msgstr "avskrudd"
 
 #: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
 msgid "Change"
-msgstr ""
+msgstr "Endre"
 
 #: src/ui/preferences-dialog.vala:140
 msgid "Press keys…"
-msgstr ""
+msgstr "Trykk taster…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr "Animert GIF opptaker"
+msgstr "Animert GIF-opptaker"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Ole Erik Brennhagen"
+msgstr ""
+"Allan Nordhøy <epost@anotheragency.no>\n"
+"Ole Erik Brennhagen"
 
 #: ui/application-window.ui:33 ui/application-window.ui:141
 msgid "Start recording"
@@ -162,12 +174,11 @@ msgstr "Brukergrensesnitt"
 
 #: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Åpne fileutforsker etter lagring"
+msgstr "Åpne filbehandler etter lagring"
 
 #: ui/preferences.ui:108
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Start opptak"
+msgstr "Start/stopp opptak"
 
 #: ui/preferences.ui:162
 msgid "Recording"
@@ -175,7 +186,7 @@ msgstr "Tar opp"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "Utdataformat"
 
 #: ui/preferences.ui:200
 msgid "GIF"
@@ -199,23 +210,23 @@ msgstr "Forsinkelse i sekunder før opptak starter"
 
 #: ui/preferences.ui:274
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "Nedsampling av oppløsning"
 
 #: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
-msgstr "Bildefrekvens"
+msgstr "Bildetakt"
 
 #: ui/preferences.ui:348
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Fang musepeker"
 
 #: ui/preferences.ui:379
 msgid "Peek preferences"
-msgstr "Peek alternativer"
+msgstr "Peek-innstillinger"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Ta opp korte animerte GIF bilder fra din skjerm"
+msgstr "Ta opp korte animerte GIF-avbildninger av skjermen din"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
@@ -223,7 +234,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Enkel skjermopptaker med enkelt brukergrensesnitt"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -234,38 +245,45 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek gjør det enkelt å opprette korte skjermopptak av skjermområde. Det ble "
+"bygg med den hensikt å ta opp skjermområder. F.eks. for å enkelt vise "
+"grensesnittsfunksjoner av programmer, eller for å vise en feil i en "
+"feilrapport. Med Peek kan du med letthet plassere Peek-vinduet over området "
+"du ønsker å ta opp og trykke \"Ta opp\". Peek er optimisert for å generere "
+"animerte GIF-filer, men du kan også ta opp direkte til WebM eller MP4 hvis "
+"du foretrekker det."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Funksjoner:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Velg et skjermområde å ta opp"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Lagre innspilt video som optimisert animert GIF-fil"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Ta opp direkte i WebM- eller MP4-format"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Enkelt brukergrensesnitt optimalisert for oppgaven"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Automatisk nedskalering av innspilte videoer"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Støtte for HiDPI-skjermer"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Fungerer inne i en GNOME-skall- Wayland-økt (ved bruk av XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -274,14 +292,18 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek er ikke en generisk skjermdelingsapp med utvidede funksjoner, men "
+"snarere et fokus på enkle oppgaver som å lage små, tause skjermopptak av et "
+"område på skjermen for opprettelse av GIF-animasjoner eller stumme WebM- "
+"eller MP4-videoer."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Hovedvinduet for å velge opptaksområde"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek tar opp seg selv"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
@@ -305,7 +327,9 @@ msgstr "\"Peek %d-%m-%Y %H-%M\""
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "Forhåndsvalgs filnavn brukt. Kan inkludere datoformat-spesifiserere."
+msgstr ""
+"Forhåndsvalgt filnavn brukt. Kan inkludere datoformat-spesifiserere. "
+"Utvidelsen vil bli lagt til automatisk."
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
 #, fuzzy
@@ -314,19 +338,19 @@ msgstr "_Foretrekk mørkt utseende"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Tastatursnarvei for å veksle opptakstilstand i hele programmet"
 
 #: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
-msgstr ""
+msgstr "Filformat for utdata"
 
 #: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "Faktor for nedsampling av oppløsning"
 
 #: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Hvorvidt musepekeren skal tas med"
 
 #: data/com.uploadedlobster.peek.gschema.xml:62
 #, fuzzy
