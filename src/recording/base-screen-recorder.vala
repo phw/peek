@@ -26,7 +26,7 @@ namespace Peek.Recording {
 
     public abstract bool record (RecordingArea area);
 
-    private PostProcessor? active_post_processor = null;
+    protected PostProcessor? active_post_processor = null;
 
     private bool _is_cancelling;
     protected bool is_cancelling {
@@ -69,15 +69,15 @@ namespace Peek.Recording {
 
     protected abstract void stop_recording ();
 
-    private async File? run_post_processors_async () {
+    protected virtual async File? run_post_processors_async () {
       var file = File.new_for_path (temp_file);
 
       PostProcessor? post_processor = null;
       if (output_format == OUTPUT_FORMAT_GIF) {
-        if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "ffmpeg") {
-          post_processor = new FfmpegPostProcessor (framerate, output_format);
-        } else {
+        if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "imagemagick") {
           post_processor = new ImagemagickPostProcessor (framerate);
+        } else {
+          post_processor = new FfmpegPostProcessor (framerate, output_format);
         }
       } else if (output_format == OUTPUT_FORMAT_APNG) {
         post_processor = new FfmpegPostProcessor (framerate, output_format);
@@ -95,7 +95,7 @@ namespace Peek.Recording {
       return file;
     }
 
-    private void remove_temp_file () {
+    protected void remove_temp_file () {
       if (temp_file != null) {
         FileUtils.remove (temp_file);
         temp_file = null;

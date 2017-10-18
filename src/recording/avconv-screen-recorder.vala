@@ -7,7 +7,11 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using Peek.PostProcessing;
+
 namespace Peek.Recording {
+
+  [Version (deprecated = true, replacement = "FfmpegScreenRecorder")]
   public class AvconvScreenRecorder : CommandLineScreenRecorder {
     ~AvconvScreenRecorder () {
       cancel ();
@@ -37,7 +41,7 @@ namespace Peek.Recording {
         args.append_val (area.width.to_string () + "x" + area.height.to_string ());
 
         if (!capture_mouse) {
-          stderr.printf ("capture_mouse is set to false, but avconv does not support disabling the mouse cursor");
+          stderr.printf ("capture_mouse is set to false, but avconv does not support disabling the mouse cursor\n");
           // args.append_val ("-draw_mouse");
           // args.append_val ("0");
         }
@@ -66,12 +70,17 @@ namespace Peek.Recording {
           args.append_val ("libx264");
           args.append_val ("-preset");
           args.append_val ("fast");
-        } else {
+        } else if (output_format == OUTPUT_FORMAT_GIF) {
           extension = "pam";
           args.append_val ("-codec:v");
           args.append_val ("pam");
           args.append_val ("-f");
           args.append_val ("rawvideo");
+        } else {
+          stderr.printf (
+            "Error: Output format %s no supported by avconv screen recorder.\n",
+            output_format);
+          return false;
         }
 
         args.append_val ("-filter:v");
@@ -105,6 +114,26 @@ namespace Peek.Recording {
 
     protected override void stop_recording () {
       Posix.kill (pid, Posix.SIGINT);
+    }
+
+    protected override async File? run_post_processors_async () {
+      var file = File.new_for_path (temp_file);
+
+      PostProcessor? post_processor = null;
+      if (output_format == OUTPUT_FORMAT_GIF) {
+        post_processor = new ImagemagickPostProcessor (framerate);
+      }
+
+      if (post_processor != null) {
+        active_post_processor = post_processor;
+        file = yield post_processor.process_async (file);
+        active_post_processor = null;
+        remove_temp_file ();
+      }
+
+      temp_file = null;
+
+      return file;
     }
   }
 

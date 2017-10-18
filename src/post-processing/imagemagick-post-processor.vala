@@ -9,6 +9,7 @@ This software is licensed under the GNU General Public License
 
 namespace Peek.PostProcessing {
 
+  [Version (deprecated = true, replacement = "FfmpegPostProcessor")]
   public class ImagemagickPostProcessor : Object, PostProcessor {
     public int framerate { get; set; default = 15; }
 
