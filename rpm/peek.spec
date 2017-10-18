@@ -17,9 +17,9 @@ BuildRequires:  libappstream-glib
 BuildRequires:  txt2man
 BuildRequires:  gzip
 Requires:       ffmpeg
-Requires:       ImageMagick
 Requires:       gstreamer1-plugins-good
 Recommends:     gstreamer1-plugins-ugly
+Suggests:       ImageMagick
 
 %description
 Peek makes it easy to create short screencasts of a screen area. It was built
@@ -82,7 +82,7 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 - Updated translations for Basque, Esperanto, French, Portuguese (Brazil), Russian and Ukrainian
 - Added man page
 
-* Mon Mar 26 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.1
+* Mon Mar 27 2017 Steeven Lopes <steevenlopes@outlook.com> -1.0.1
 - Use H.264 baseline profile for MP4 for increased browser compatibility
 - For WebM GNOME Shell recorder use same quality settings as with Fmpeg encoder
 - Show only the most recent "file saved" notification to avoid spamming the desktop with notifications.
