@@ -41,7 +41,17 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Button stop_button;
-
+    [GtkChild]
+    private Popover pop_format;
+   /* [GtkChild]
+    private Button gif_button;
+    [GtkChild]
+    private Button apng_button;
+    [GtkChild]
+    private Button webm_button;
+    [GtkChild]
+    private Button mp4_button;
+    */
     [GtkChild]
     private Label size_indicator;
 
@@ -269,9 +279,43 @@ namespace Peek.Ui {
       }
     }
 
+   /* [GtkCallback]
+    private bool on_record_button_enter_notify_event() {
+    	pop_format.show();
+    	button_box.show();
+    	output_format="GIF";
+    	print(recorder.output_format);
+    	recorder.output_format="mp4";
+	return false;
+    }
+*/
+
+    [GtkCallback]
+    private void on_gif_button_clicked (Button source) {
+    	recorder.output_format="gif";
+    	prepare_start_recording ();
+    	}
+    [GtkCallback]
+    private void on_apng_button_clicked (Button source) {
+    	recorder.output_format="apng";
+    	prepare_start_recording ();
+    	}
+[GtkCallback]
+    private void on_webm_button_clicked (Button source) {
+    	recorder.output_format="webm";
+    	prepare_start_recording ();
+    	}
+[GtkCallback]
+    private void on_mp4_button_clicked (Button source) {
+    	recorder.output_format="mp4";
+    	prepare_start_recording ();
+    	}
+
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
-      prepare_start_recording ();
+      print(recorder.output_format);
+      pop_format.show();
+ //     prepare_start_recording ();
     }
 
     [GtkCallback]
