@@ -43,6 +43,9 @@ namespace Peek.Ui {
     private Button stop_button;
     [GtkChild]
     private Popover pop_format;
+    [GtkChild]
+    private MenuButton pop_format_menu;
+
    /* [GtkChild]
     private Button gif_button;
     [GtkChild]
@@ -293,29 +296,29 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
     	recorder.output_format="gif";
-    	prepare_start_recording ();
+    	pop_format.hide();
     	}
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
     	recorder.output_format="apng";
-    	prepare_start_recording ();
+    	pop_format.hide();
     	}
 [GtkCallback]
     private void on_webm_button_clicked (Button source) {
     	recorder.output_format="webm";
-    	prepare_start_recording ();
+    	pop_format.hide();
     	}
 [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
     	recorder.output_format="mp4";
-    	prepare_start_recording ();
+    	pop_format.hide();
     	}
 
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
       print(recorder.output_format);
-      pop_format.show();
- //     prepare_start_recording ();
+      //pop_format.show();
+      prepare_start_recording ();
     }
 
     [GtkCallback]
@@ -397,6 +400,7 @@ namespace Peek.Ui {
       if (!is_recording) {
         is_recording = true;
         size_indicator.opacity = 0.0;
+        pop_format_menu.hide();
         record_button.hide ();
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
           stop_button.set_label (stop_button_label);
@@ -415,6 +419,7 @@ namespace Peek.Ui {
       is_recording = false;
       is_postprocessing = false;
       stop_button.hide ();
+      pop_format_menu.show();
       record_button.show ();
       unfreeze_window_size ();
 
@@ -439,9 +444,18 @@ namespace Peek.Ui {
 
     private void update_input_shape () {
       // Set an input shape so that the recording view is not clickable
+
+
       var window_region = create_region_from_widget (recording_view.get_toplevel ());
       var recording_view_region = create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
+
+      //popover menu
+      if (pop_format.visible) {
+  	var pop_format_region = create_region_from_widget (pop_format);
+  	window_region.union (pop_format_region);
+	}
+
 
       // The fallback app menu overlaps the recording area
       var fallback_app_menu = get_fallback_app_menu ();
