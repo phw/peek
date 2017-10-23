@@ -277,8 +277,8 @@ online services as GIFs.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. If you use i3 you should stack peek with the window you intend to record
-or make sure all windows are floating and uncheck "Always on top" from the peek settings.
+recording. If you use i3 you should stack Peek with the window you intend to record
+or make sure all windows are floating and uncheck "Always on top" from the Peek settings.
 If this does not work for you on any other window manager please open an [issue on Github](https://github.com/phw/peek/issues).
 
 
