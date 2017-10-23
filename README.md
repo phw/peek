@@ -281,7 +281,6 @@ recording. If you use i3 you should stack Peek with the window you intend to rec
 or make sure all windows are floating and uncheck "Always on top" from the Peek settings.
 If this does not work for you on any other window manager please open an [issue on Github](https://github.com/phw/peek/issues).
 
-
 ### On i3 the recording area is all black, how can I record anything?
 i3 does not support the X shape extension. In order to get a transparent
 recording area you have to run a compositor such as Compton.
