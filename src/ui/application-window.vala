@@ -11,8 +11,11 @@ Copyright (C) 2013 Timm Bäder, https://github.com/baedert/corebird/
 */
 
 using Gtk;
+using Gtk;
 using Cairo;
 using Peek.Recording;
+
+
 
 namespace Peek.Ui {
 
@@ -73,6 +76,7 @@ namespace Peek.Ui {
     private signal void recording_finished ();
 
     private GLib.Settings settings;
+   
 
     private const int SMALL_WINDOW_SIZE = 300;
 
@@ -299,6 +303,7 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
     	recorder.output_format="gif";
+	
     	pop_format.hide();
     	}
     [GtkCallback]
@@ -455,12 +460,17 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
+	var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
+	var theme_name = theme.get_string ("gtk-theme");//find the users' theme
 	var pop_style=pop_format.get_style_context();
-	if ( DesktopIntegration.is_gnome() ){
+	if ( theme_name == "Ambiance" ){
 		pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
-	}
-  	var pop_format_region = create_region_from_widget (pop_format);
+	   }
+	
+	var pop_format_region = create_region_from_widget (pop_format);
   	window_region.union (pop_format_region);
+	
+  	
 	}
 
 
