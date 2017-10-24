@@ -8,44 +8,47 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-10-13 10:25+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-10-25 08:45+0000\n"
+"Last-Translator: Coin <cce5784@gmail.com>\n"
+"Language-Team: Chinese (Traditional) "
+"<https://hosted.weblate.org/projects/peek/translations/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.17\n"
 
 #: src/application.vala:59
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "顯示程式版本後結束"
 
 #: src/application.vala:63
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
-msgstr ""
+msgstr "選擇要使用的錄影後端（gnome-shell、ffmepg、avconv 等），如未指定將自動選擇。"
 
 #: src/application.vala:64
 msgid "BACKEND"
-msgstr ""
+msgstr "後端名稱"
 
 #: src/application.vala:68
 msgid "Start recording in all running Peek instances."
-msgstr ""
+msgstr "讓所有執行中的 Peek 開始錄影。"
 
 #: src/application.vala:72
 msgid "Stop recording in all running Peek instances."
-msgstr ""
+msgstr "讓所有執行中的 Peek 停止錄影。"
 
 #: src/application.vala:76
 msgid "Toggle recording in all running Peek instances."
-msgstr ""
+msgstr "切換所有執行中的 Peek 的錄影狀態。"
 
 #: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
@@ -71,7 +74,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
-msgstr ""
+msgstr "正在輸出…"
 
 #: src/ui/application-window.vala:475 src/ui/application-window.vala:480
 msgid "Save animation"
@@ -79,98 +82,98 @@ msgstr ""
 
 #: src/ui/application-window.vala:476 src/ui/application-window.vala:483
 msgid "_Save"
-msgstr ""
+msgstr "儲存"
 
 #: src/ui/application-window.vala:477 src/ui/application-window.vala:481
 msgid "_Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/ui/application-window.vala:568
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "動畫已儲存至 %s"
 
 #: src/ui/application-window.vala:591
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "點選這裡以在檔案管理器中顯示儲存的檔案。"
 
 #: src/ui/application-window.vala:593
 msgid "Show in file manager"
-msgstr ""
+msgstr "在檔案管理器中顯示"
 
 #: src/ui/preferences-dialog.vala:116
 msgid "deactivated"
-msgstr ""
+msgstr "已停用快速鍵"
 
 #: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
 msgid "Change"
-msgstr ""
+msgstr "更改"
 
 #: src/ui/preferences-dialog.vala:140
 msgid "Press keys…"
-msgstr ""
+msgstr "按下欲設定為快速鍵的按鍵…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "GIF 動畫錄製軟體"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "coin3x"
 
 #: ui/application-window.ui:33 ui/application-window.ui:141
 msgid "Start recording"
-msgstr ""
+msgstr "開始錄影"
 
 #: ui/application-window.ui:130
 msgid "_Record"
-msgstr ""
+msgstr "錄影"
 
 #: ui/application-window.ui:157
 msgid "_Stop"
-msgstr ""
+msgstr "停止"
 
 #: ui/application-window.ui:168
 msgid "Stop recording"
-msgstr ""
+msgstr "停止錄影"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr ""
+msgstr "新視窗"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr ""
+msgstr "偏好設定"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr ""
+msgstr "關於"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr ""
+msgstr "退出"
 
 #: ui/preferences.ui:70
 msgid "User interface"
-msgstr ""
+msgstr "使用者界面"
 
 #: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "儲存後自動在檔案管理器中開啟"
 
 #: ui/preferences.ui:108
 msgid "Start / stop recording"
-msgstr ""
+msgstr "開始 / 停止錄影"
 
 #: ui/preferences.ui:162
 msgid "Recording"
-msgstr ""
+msgstr "錄影"
 
 #: ui/preferences.ui:185
 msgid "Output format"
-msgstr ""
+msgstr "輸出格式"
 
 #: ui/preferences.ui:200
 msgid "GIF"
@@ -190,23 +193,23 @@ msgstr ""
 
 #: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "錄影開始前的延遲秒數"
 
 #: ui/preferences.ui:274
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "像素採樣縮減倍率"
 
 #: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
-msgstr ""
+msgstr "幀率"
 
 #: ui/preferences.ui:348
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "一併錄製滑鼠游標"
 
 #: ui/preferences.ui:379
 msgid "Peek preferences"
-msgstr ""
+msgstr "Peek 偏好設定"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -218,7 +221,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "簡單易用的螢幕錄影軟體"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -229,38 +232,41 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek 讓錄製一部分的螢幕截取變得更加容易。這是專門被設計來錄製部分螢幕區塊的，例如在示範軟體操作或者重現 bug 狀況時就能派上用場。有了 Peek，"
+"您只要把 Peek 的視窗放置在您想錄影的區塊，然後按下「錄影」即可。Peek 已針對產生 GIF 動畫進行優化，不過需要的話也能直接錄製 WebM "
+"或者 MP4 格式。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "功能："
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "可選取欲錄製的螢幕區塊"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "可將錄製的影片儲存為經優化的 GIF 動畫"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "可直接錄製成 WebM 或 MP4 格式"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "簡單易用的界面"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "可自動縮小影片解析度"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "支援 HiDPI 螢幕"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "支援 GNOME Shell Wayland 模式（透過 XWayland）"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -268,7 +274,7 @@ msgid ""
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
-msgstr ""
+msgstr "Peek 並不是專門用來錄影的應用程式，Peek 專注在錄製螢幕區塊並輸出成 GIF 動畫或無聲的 WebM、MP4 影片。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
@@ -286,7 +292,7 @@ msgstr ""
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
-msgstr ""
+msgstr "調整錄製區塊大小後顯示區塊大小的毫秒數。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -296,7 +302,7 @@ msgstr ""
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr ""
+msgstr "預設的檔案名稱。可包含日期格式的代號。副檔名會自動補上。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
