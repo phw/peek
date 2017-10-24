@@ -293,7 +293,7 @@ namespace Peek.Ui {
     }
 */
 
-	
+
 
 
     [GtkCallback]
@@ -456,7 +456,9 @@ namespace Peek.Ui {
       //popover menu
       if (pop_format.visible) {
 	var pop_style=pop_format.get_style_context();
-	pop_style.add_class(Gtk.STYLE_CLASS_MENU);
+	if ( DesktopIntegration.is_gnome() ){
+		pop_style.add_class(Gtk.STYLE_CLASS_HEADER);
+	}
   	var pop_format_region = create_region_from_widget (pop_format);
   	window_region.union (pop_format_region);
 	}
