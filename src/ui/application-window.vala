@@ -303,22 +303,25 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
     	recorder.output_format="gif";
-	
+	    record_button.set_label("Record as GIF");
     	pop_format.hide();
     	}
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
     	recorder.output_format="apng";
+    	record_button.set_label("Record as APNG");
     	pop_format.hide();
     	}
 [GtkCallback]
     private void on_webm_button_clicked (Button source) {
     	recorder.output_format="webm";
+    	record_button.set_label("Record as WebM");
     	pop_format.hide();
     	}
 [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
     	recorder.output_format="mp4";
+    	record_button.set_label("Record as MP4");
     	pop_format.hide();
     	}
 
