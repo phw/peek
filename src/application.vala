@@ -256,6 +256,11 @@ namespace Peek {
 
     private void load_stylesheets () {
       load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
+      var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
+      var theme_name = theme.get_string ("gtk-theme");//find the users' theme
+      if ( theme_name == "Ambiance" ){
+		load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/ambiance.css");
+	   }
 
       if (DesktopIntegration.is_unity ()) {
         load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/unity.css");
