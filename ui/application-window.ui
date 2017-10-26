@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.1 
+<!-- Generated with glade 3.20.0 
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -219,6 +219,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_gif_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -233,6 +236,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_apng_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -247,6 +253,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_webm_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -261,6 +270,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_mp4_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
           </object>
           <packing>
             <property name="expand">True</property>
