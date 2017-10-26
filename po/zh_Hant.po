@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-10-13 10:25+0200\n"
-"PO-Revision-Date: 2017-10-26 12:35+0000\n"
+"PO-Revision-Date: 2017-10-27 12:44+0000\n"
 "Last-Translator: Coin <cce5784@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://hosted.weblate.org/projects/peek/translations/zh_Hant/>\n"
@@ -201,7 +201,7 @@ msgstr "錄影開始前的延遲秒數"
 
 #: ui/preferences.ui:274
 msgid "Resolution downsampling"
-msgstr "像素採樣縮減倍率"
+msgstr "解析度縮減倍率"
 
 #: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
 msgid "Framerate"
@@ -209,7 +209,7 @@ msgstr "幀率"
 
 #: ui/preferences.ui:348
 msgid "Capture mouse cursor"
-msgstr "一併錄製滑鼠游標"
+msgstr "錄製滑鼠游標"
 
 #: ui/preferences.ui:379
 msgid "Peek preferences"
@@ -314,7 +314,7 @@ msgstr "使用暗色主題"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr "切換錄影狀態的按鍵綁定"
+msgstr "切換錄影狀態的快速鍵"
 
 #: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
