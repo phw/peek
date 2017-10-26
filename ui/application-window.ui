@@ -209,7 +209,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <child>
       <object class="GtkButtonBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can_focus">True</property>
         <property name="orientation">vertical</property>
         <property name="layout_style">start</property>
         <child>
