@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-10-13 10:25+0200\n"
-"PO-Revision-Date: 2017-10-25 08:45+0000\n"
+"PO-Revision-Date: 2017-10-26 12:35+0000\n"
 "Last-Translator: Coin <cce5784@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://hosted.weblate.org/projects/peek/translations/zh_Hant/>\n"
@@ -52,16 +52,16 @@ msgstr "Peek"
 
 #: src/application.vala:222
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "無法建立預設的螢幕錄影器。\n"
 
 #: src/application.vala:235
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "無法初始化後端 %s。\n"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "尚未支援 Wayland 原生模式後端"
 
 #: src/application.vala:341
 msgid ""
@@ -71,6 +71,10 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"目前尚未支援使用 Wayland 原生模式執行 Peek。請設定 <tt>GDK_BACKEND=x11</tt> 以透過 XWayland 執行。\n"
+"\n"
+"更多細節請造訪有關 <a href='https://github.com/phw/peek#why-no-native-wayland-"
+"support'>Peek Wayland 支援的 FAQ</a>。"
 
 #: src/ui/application-window.vala:327
 msgid "Rendering…"
@@ -78,7 +82,7 @@ msgstr "正在輸出…"
 
 #: src/ui/application-window.vala:475 src/ui/application-window.vala:480
 msgid "Save animation"
-msgstr ""
+msgstr "儲存動畫"
 
 #: src/ui/application-window.vala:476 src/ui/application-window.vala:483
 msgid "_Save"
@@ -177,19 +181,19 @@ msgstr "輸出格式"
 
 #: ui/preferences.ui:200
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: ui/preferences.ui:201
 msgid "APNG"
-msgstr ""
+msgstr "APNG"
 
 #: ui/preferences.ui:202
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: ui/preferences.ui:203
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Delay in seconds before recording starts"
@@ -213,11 +217,11 @@ msgstr "Peek 偏好設定"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "從您的螢幕上錄製簡短的 GIF 動畫"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
@@ -278,15 +282,15 @@ msgstr "Peek 並不是專門用來錄影的應用程式，Peek 專注在錄製�
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "選擇錄影區塊的主要視窗"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek 正在錄製它自己"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:77
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
@@ -296,7 +300,7 @@ msgstr "調整錄製區塊大小後顯示區塊大小的毫秒數。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:14
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr ""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
@@ -306,28 +310,28 @@ msgstr "預設的檔案名稱。可包含日期格式的代號。副檔名會自
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "使用暗色主題"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "切換錄影狀態的按鍵綁定"
 
 #: data/com.uploadedlobster.peek.gschema.xml:39
 msgid "Output file format"
-msgstr ""
+msgstr "輸出檔案格式"
 
 #: data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "解析度縮減倍率"
 
 #: data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "是否一併錄製滑鼠游標"
 
 #: data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "最後開啟主視窗的大小與位置"
 
 #: data/com.uploadedlobster.peek.gschema.xml:66
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "上一個影片儲存的路徑"
