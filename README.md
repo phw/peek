@@ -127,7 +127,8 @@ environment or from command line:
 In case it fails to start with the message `You need to connect this snap to the gnome platform snap` 
 do the following command via command-line:
 
-    sudo snap connect peek:gnome-3-26-platform gnome-3-24:gnome-3-24-platform
+    sudo snap connect peek:gnome-3-26-1604 gnome-3-26-1604:gnome-3-26-1604
+
 
 
 Snaps should automatically update in the background. If this is not happening
