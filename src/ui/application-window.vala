@@ -11,7 +11,6 @@ Copyright (C) 2013 Timm Bäder, https://github.com/baedert/corebird/
 */
 
 using Gtk;
-using Gtk;
 using Cairo;
 using Peek.Recording;
 
@@ -44,20 +43,13 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Button stop_button;
+    
     [GtkChild]
     private Popover pop_format;
+    
     [GtkChild]
     private MenuButton pop_format_menu;
-
-   /* [GtkChild]
-    private Button gif_button;
-    [GtkChild]
-    private Button apng_button;
-    [GtkChild]
-    private Button webm_button;
-    [GtkChild]
-    private Button mp4_button;
-    */
+    
     [GtkChild]
     private Label size_indicator;
 
@@ -72,7 +64,7 @@ namespace Peek.Ui {
     private File out_file;
     private RecordingArea active_recording_area;
     private string stop_button_label;
-
+    private string format;
     private signal void recording_finished ();
 
     private GLib.Settings settings;
@@ -104,6 +96,8 @@ namespace Peek.Ui {
         stderr.printf ("Recording canceled with return code %i\n", status);
         leave_recording_state ();
       });
+      
+      
 
       application.toggle_recording.connect (toggle_recording);
 
@@ -153,6 +147,21 @@ namespace Peek.Ui {
       settings.bind ("persist-save-folder",
         this, "save_folder",
         SettingsBindFlags.DEFAULT);
+        
+      //Grab current format and udate the recorder button label to reflect the user's choice  
+      format=settings.get_string("recording-output-format");
+        if (format == "gif") {
+            record_button.set_label("Record as GIF");
+        }
+        else if (format == "apng") {
+            record_button.set_label("Record as APNG");
+        }
+        else if (format == "webm") {
+            record_button.set_label("Record as WebM");
+        }
+        else if (format == "mp4") {
+            record_button.set_label("Record as MP4");
+        }
 
       // Configure window
       this.set_keep_above (true);
@@ -285,20 +294,9 @@ namespace Peek.Ui {
         }
       }
     }
-
-   /* [GtkCallback]
-    private bool on_record_button_enter_notify_event() {
-    	pop_format.show();
-    	button_box.show();
-    	output_format="GIF";
-    	print(recorder.output_format);
-    	recorder.output_format="mp4";
-	return false;
-    }
-*/
-
-
-
+    
+    
+    
 
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
@@ -312,13 +310,13 @@ namespace Peek.Ui {
     	record_button.set_label("Record as APNG");
     	pop_format.hide();
     	}
-[GtkCallback]
+    [GtkCallback]
     private void on_webm_button_clicked (Button source) {
     	recorder.output_format="webm";
     	record_button.set_label("Record as WebM");
     	pop_format.hide();
     	}
-[GtkCallback]
+    [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
     	recorder.output_format="mp4";
     	record_button.set_label("Record as MP4");
@@ -327,8 +325,6 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
-      print(recorder.output_format);
-      //pop_format.show();
       prepare_start_recording ();
     }
 
@@ -463,18 +459,16 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
-	var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
-	var theme_name = theme.get_string ("gtk-theme");//find the users' theme
-	var pop_style=pop_format.get_style_context();
-	if ( theme_name == "Ambiance" ){
-		pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
-	   }
+	    var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
+	    var theme_name = theme.get_string ("gtk-theme");//find the users' theme
+	    var pop_style=pop_format.get_style_context();
+	    if ( theme_name == "Ambiance" ){
+		    pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
+	    }
 	
-	var pop_format_region = create_region_from_widget (pop_format);
-  	window_region.union (pop_format_region);
-	
-  	
-	}
+	  var pop_format_region = create_region_from_widget (pop_format);
+  	  window_region.union (pop_format_region);
+	  }
 
 
       // The fallback app menu overlaps the recording area
