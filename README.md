@@ -129,8 +129,6 @@ do the following command via command-line:
 
     sudo snap connect peek:gnome-3-26-1604 gnome-3-26-1604:gnome-3-26-1604
 
-
-
 Snaps should automatically update in the background. If this is not happening
 you can update Peek manually to the latest version:
 
