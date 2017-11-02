@@ -17,7 +17,7 @@ build:
 
   files:
     - https://ffmpeg.org/releases/ffmpeg-3.3.4.tar.xz
-    - https://github.com/ImageMagick/ImageMagick/archive/6.9.9-19.tar.gz
+    - https://github.com/ImageMagick/ImageMagick/archive/6.9.9-21.tar.gz
 
 script:
   # Build Peek
@@ -39,8 +39,8 @@ script:
   - make DESTDIR=$BUILD_APPDIR install
   # Build ImageMagick
   - cd $BUILD_SOURCE_DIR
-  - tar -xf ImageMagick-6.9.9-19.tar.gz
-  - cd ImageMagick-6.9.9-19
+  - tar -xf ImageMagick-6.9.9-21.tar.gz
+  - cd ImageMagick-6.9.9-21
   - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
   - make
   - make DESTDIR=$BUILD_APPDIR install
