@@ -76,6 +76,8 @@ namespace Peek.Recording {
       if (output_format == OUTPUT_FORMAT_GIF) {
         if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "imagemagick") {
           post_processor = new ImagemagickPostProcessor (framerate);
+        } else if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "gifski") {
+          post_processor = new GifskiPostProcessor (framerate);
         } else {
           post_processor = new FfmpegPostProcessor (framerate, output_format);
         }
