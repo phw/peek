@@ -110,7 +110,7 @@ namespace Peek.PostProcessing {
       }
     }
 
-    private void spawn (string[] argv) {
+    private void spawn (string[] argv) throws SpawnError {
       Process.spawn_async (null, argv, null,
         SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
     }
