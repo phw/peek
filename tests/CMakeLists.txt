@@ -55,6 +55,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     screen-recorder/test-command-line-screen-recorder.vala
     ../src/post-processing/post-processor.vala
     ../src/post-processing/ffmpeg-post-processor.vala
+    ../src/post-processing/gifski-post-processor.vala
     ../src/post-processing/imagemagick-post-processor.vala
     ../src/recording/recording-area.vala
     ../src/recording/screen-recorder.vala
