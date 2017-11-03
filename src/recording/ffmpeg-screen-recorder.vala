@@ -71,11 +71,9 @@ namespace Peek.Recording {
           args.append_val ("-pix_fmt");
           args.append_val ("yuv420p");
         } else {
-          extension = "pam";
+          extension = "mkv";
           args.append_val ("-codec:v");
-          args.append_val ("pam");
-          args.append_val ("-f");
-          args.append_val ("rawvideo");
+          args.append_val ("ffvhuff");
         }
 
         args.append_val ("-filter:v");
