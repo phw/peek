@@ -181,7 +181,7 @@ Then build Peek and package it:
 This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
 current version). You can install it with dpkg:
 
-    sudo dpkg -i peek-x.y.z-Linux.deb
+    sudo dpkg -i peek-*-Linux.deb
 
 ### Fedora
 Fedora 25 users can use this repository:
