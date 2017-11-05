@@ -145,7 +145,7 @@ namespace Peek.Recording {
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        pipeline.append ("videoconvert ! avimux");
+        pipeline.append ("queue ! matroskamux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
@@ -155,7 +155,7 @@ namespace Peek.Recording {
     private string get_temp_file_extension () {
       string extension;
       if (output_format == OUTPUT_FORMAT_GIF || output_format == OUTPUT_FORMAT_APNG) {
-        extension = "avi";
+        extension = "mkv";
       } else {
         extension = Utils.get_file_extension_for_format (output_format);
       }

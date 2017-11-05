@@ -31,7 +31,7 @@ namespace Peek.PostProcessing {
       this.framerate = framerate;
     }
 
-    public async File? process_async (File file) {
+    public async File[]? process_async (File[] files) {
       try {
         SourceFunc callback = process_async.callback;
 
@@ -47,7 +47,7 @@ namespace Peek.PostProcessing {
         debug ("Running ImageMagick convert\n    saving to: %s\n    temporary path: %s\n    memory limit: %d kiB",
           output_file, temp_dir, memory_limit);
 
-        string[] argv = {
+        string[] args = {
           "convert",
           "-debug", magick_debug,
           "-set", "delay", delay.to_string (),
@@ -55,11 +55,16 @@ namespace Peek.PostProcessing {
           "-limit", "memory", "%dkiB".printf(memory_limit),
           "-layers", "Optimize",
           "-define", "registry:temporary-path=" + temp_dir,
-          file.get_path (),
-          output_file
         };
 
-        Process.spawn_async (null, argv, null,
+        var argv = new Array<string> ();
+        argv.append_vals (args, args.length);
+        foreach (var file in files) {
+          argv.append_val (file.get_path ());
+        }
+        argv.append_val (output_file);
+
+        Process.spawn_async (null, argv.data, null,
           SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
 
         ChildWatch.add (pid, (pid, status) => {
@@ -74,7 +79,7 @@ namespace Peek.PostProcessing {
         });
 
         yield;
-        return File.new_for_path (output_file);
+        return { File.new_for_path (output_file) };
       } catch (SpawnError e) {
         stderr.printf ("Error: %s\n", e.message);
         return null;

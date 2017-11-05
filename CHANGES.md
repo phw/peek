@@ -1,9 +1,11 @@
 # Version 1.?.? - 2017-??-??
- * feat: Optional GIF conversion with Ffmpeg
+ * feat: GIF conversion with FFmpeg
+ * feat: Optional GIF conversion with gifski
  * feat: Support APNG as output format (#108)
  * fix: Temporary files get unique name again
 
 # Version 1.1.0 - 2017-10-05
+ * feat: Transparent recording area without composito 7)
  * feat: Transparent recording area without compositor (#147, #7)
  * fix: Unusual default permissions (#161)
  * fix: Explicitly set ImageMagick resource limits (#112, #125)

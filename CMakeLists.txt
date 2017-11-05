@@ -95,6 +95,7 @@ vala_precompile(VALA_C
     src/dbus/freedesktop-dbus.vala
     src/dbus/freedesktop-filemanager.vala
     src/dbus/gnome-shell-screencast.vala
+    src/post-processing/extract-frames-post-processor.vala
     src/post-processing/ffmpeg-post-processor.vala
     src/post-processing/gifski-post-processor.vala
     src/post-processing/imagemagick-post-processor.vala

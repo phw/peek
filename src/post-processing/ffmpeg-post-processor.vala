@@ -23,21 +23,21 @@ namespace Peek.PostProcessing {
       this.output_format = output_format;
     }
 
-    public async File? process_async (File file) {
-        var palette_file = yield generate_palette_async (file);
+    public async File[]? process_async (File[] files) {
+        var palette_file = yield generate_palette_async (files[0]);
 
         if (palette_file == null) {
           return null;
         }
 
-        var output_file = yield generate_animation_async (file, palette_file);
+        var output_file = yield generate_animation_async (files[0], palette_file);
         try {
           yield palette_file.delete_async ();
         } catch (Error e) {
           stderr.printf ("Error deleting palette file: %s\n", e.message);
         }
 
-        return output_file;
+        return { output_file };
     }
 
     public void cancel () {
