@@ -13,12 +13,15 @@ namespace Peek.PostProcessing {
   * Use gifski (https://gif.ski/) to generate an optimized GIF from a video input
   */
   public class GifskiPostProcessor : Object, PostProcessor {
+    public static int DEFAULT_QUALITY = 60;
     public int framerate { get; set; default = 15; }
+    public int quality { get; set; default = DEFAULT_QUALITY; }
 
     private Pid? pid = null;
 
-    public GifskiPostProcessor (int framerate) {
+    public GifskiPostProcessor (int framerate, int quality = DEFAULT_QUALITY) {
       this.framerate = framerate;
+      this.quality = quality;
     }
 
     public async File? process_async (File file) {
@@ -60,6 +63,7 @@ namespace Peek.PostProcessing {
         string[] args = {
           "gifski",
           "--fps", framerate.to_string (),
+          "--quality", quality.to_string (),
           "-o", output_file
         };
 
