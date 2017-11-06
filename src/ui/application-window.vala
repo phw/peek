@@ -179,11 +179,16 @@ namespace Peek.Ui {
         // Recorder has stopped, but Peek is still saving / post processing the
         // file. Hide the window and close after it has finished.
         this.recording_finished.connect ((file) => {
+          this.application.withdraw_notification ("background-rendering");
           this.close ();
         });
 
         if (recorder.is_recording) {
           recorder.cancel ();
+        } else {
+          var notification = build_standard_notification (_ ("Rendering animation…"));
+          notification.set_body (_ ("Peek will close when rendering is finished."));
+          this.application.send_notification ("background-rendering", notification);
         }
 
         this.hide ();
@@ -572,20 +577,7 @@ namespace Peek.Ui {
       var message = new StringBuilder ("");
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
 
-      var notification = new Notification (message.str);
-
-      if (!DesktopIntegration.is_cinnamon ()) {
-        notification.set_icon (new ThemedIcon (APP_ID));
-      } else {
-        var icon_theme = IconTheme.get_default ();
-        var icon_info = icon_theme.lookup_icon (APP_ID, 48, 0);
-        var icon_path = icon_info.get_filename ();
-        debug ("Using notification icon: %s", icon_path);
-        if (icon_path != null) {
-          var icon = new FileIcon (File.new_for_path (icon_path));
-          notification.set_icon (icon);
-        }
-      }
+      var notification = build_standard_notification (message.str);
 
 #if ! DISABLE_OPEN_FILE_MANAGER
       var parameter = new Variant.string (file.get_uri ());
@@ -611,6 +603,25 @@ namespace Peek.Ui {
 
       debug ("Showing desktop notification: %s", message.str);
       this.application.send_notification ("peek-file-saved", notification);
+    }
+
+    private static Notification build_standard_notification (string message) {
+      var notification = new Notification (message);
+
+      if (!DesktopIntegration.is_cinnamon ()) {
+        notification.set_icon (new ThemedIcon (APP_ID));
+      } else {
+        var icon_theme = IconTheme.get_default ();
+        var icon_info = icon_theme.lookup_icon (APP_ID, 48, 0);
+        var icon_path = icon_info.get_filename ();
+        debug ("Using notification icon: %s", icon_path);
+        if (icon_path != null) {
+          var icon = new FileIcon (File.new_for_path (icon_path));
+          notification.set_icon (icon);
+        }
+      }
+
+      return notification;
     }
 
     private string load_preferred_save_folder () {
