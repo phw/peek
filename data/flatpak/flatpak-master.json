@@ -123,7 +123,7 @@
     "build-commands": [
       "rust/install.sh --prefix=/app",
       "cargo build --release --features=openmp",
-      "install -Dm755 target/release/gifski /app/bin/bin/gifski"
+      "install -Dm755 target/release/gifski /app/bin/gifski"
     ],
     "post-install": [
       "/app/lib/rustlib/uninstall.sh"
