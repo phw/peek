@@ -40,7 +40,7 @@ namespace Peek.PostProcessing {
         return null;
       }
 
-      var result = new Array<File>();
+      var result = new Array<File> ();
       result.append_val (output_file);
       return result;
     }

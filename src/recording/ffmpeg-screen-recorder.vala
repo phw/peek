@@ -9,7 +9,7 @@ This software is licensed under the GNU General Public License
 
 namespace Peek.Recording {
 
-  public class FfmpegScreenRecorder : CommandLineScreenRecorder {
+  public class FfmpegScreenRecorder : CliScreenRecorder {
     ~FfmpegScreenRecorder () {
       cancel ();
     }

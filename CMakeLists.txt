@@ -108,7 +108,7 @@ vala_precompile(VALA_C
     src/recording/recording-area.vala
     src/recording/recording-config.vala
     src/recording/gnome-shell-dbus-recorder.vala
-    src/recording/command-line-screen-recorder.vala
+    src/recording/cli-screen-recorder.vala
     src/recording/avconv-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala
     src/ui/about-dialog.vala

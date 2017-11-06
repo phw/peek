@@ -12,7 +12,7 @@ using Peek.PostProcessing;
 namespace Peek.Recording {
 
   [Version (deprecated = true, replacement = "FfmpegScreenRecorder")]
-  public class AvconvScreenRecorder : CommandLineScreenRecorder {
+  public class AvconvScreenRecorder : CliScreenRecorder {
     ~AvconvScreenRecorder () {
       cancel ();
     }

@@ -11,7 +11,7 @@ using Peek.PostProcessing;
 
 namespace Peek.Recording {
 
-  public abstract class CommandLineScreenRecorder : BaseScreenRecorder {
+  public abstract class CliScreenRecorder : BaseScreenRecorder {
     protected Pid pid;
     protected IOChannel input;
 

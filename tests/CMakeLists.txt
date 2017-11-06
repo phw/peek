@@ -50,9 +50,9 @@ add_test(
   screen-recorder-test-recording-area
   ${PROJECT_NAME}-screen-recorder-test-recording-area)
 
-# /screen-recorder/command-line-screen-recorder/
+# /screen-recorder/cli-screen-recorder/
 vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
-    screen-recorder/test-command-line-screen-recorder.vala
+    screen-recorder/test-cli-screen-recorder.vala
     ../src/post-processing/cli-post-processor.vala
     ../src/post-processing/extract-frames-post-processor.vala
     ../src/post-processing/ffmpeg-post-processor.vala
@@ -64,7 +64,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     ../src/recording/recording-config.vala
     ../src/recording/screen-recorder.vala
     ../src/recording/base-screen-recorder.vala
-    ../src/recording/command-line-screen-recorder.vala
+    ../src/recording/cli-screen-recorder.vala
     ../src/defaults.vala
     ../src/utils.vala
   PACKAGES
@@ -73,9 +73,9 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
 )
 
 add_executable(
-  ${PROJECT_NAME}-test-screen-recorder-command-line-screen-recorder
+  ${PROJECT_NAME}-test-screen-recorder-cli-screen-recorder
   ${VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C})
 
 add_test(
-  test-screen-recorder-command-line-screen-recorder
-  ${PROJECT_NAME}-test-screen-recorder-command-line-screen-recorder)
+  test-screen-recorder-cli-screen-recorder
+  ${PROJECT_NAME}-test-screen-recorder-cli-screen-recorder)

@@ -1,6 +1,6 @@
 using Peek.Recording;
 
-class TestCommandLineScreenRecorder : CommandLineScreenRecorder {
+class TestCliScreenRecorder : CliScreenRecorder {
   public bool stop_command_called { get; set; default = false; }
 
   public override bool record (RecordingArea area) {
@@ -15,7 +15,7 @@ class TestCommandLineScreenRecorder : CommandLineScreenRecorder {
 }
 
 void test_cancel () {
-  var recorder = new TestCommandLineScreenRecorder ();
+  var recorder = new TestCliScreenRecorder ();
   bool recording_aborted_called = false;
   recorder.recording_aborted.connect ((status) => {
     recording_aborted_called = true;
@@ -39,7 +39,7 @@ void main (string[] args) {
   Gtk.init (ref args);
 
   Test.add_func (
-    "/screen-recorder/command-line-screen-recorder/test_cancel",
+    "/screen-recorder/cli-screen-recorder/test_cancel",
     test_cancel);
 
   Test.run ();

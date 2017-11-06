@@ -50,7 +50,7 @@ namespace Peek.PostProcessing {
           "-debug", magick_debug,
           "-set", "delay", delay.to_string (),
           "-limit", "disk", "unlimited",
-          "-limit", "memory", "%dkiB".printf(memory_limit),
+          "-limit", "memory", "%dkiB".printf (memory_limit),
           "-layers", "Optimize",
           "-define", "registry:temporary-path=" + temp_dir,
         };
@@ -69,7 +69,7 @@ namespace Peek.PostProcessing {
           return null;
         }
 
-        var result = new Array<File>();
+        var result = new Array<File> ();
         result.append_val (File.new_for_path (output_file));
         return result;
       } catch (FileError e) {

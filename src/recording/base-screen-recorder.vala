@@ -92,7 +92,7 @@ namespace Peek.Recording {
     }
 
     private async File? run_post_processors_async (PostProcessingPipeline pipeline) {
-      var files = new Array<File>();
+      var files = new Array<File> ();
       files.append_val (File.new_for_path (temp_file));
 
       active_post_processor = pipeline;

@@ -10,7 +10,7 @@ This software is licensed under the GNU General Public License
 namespace Peek.PostProcessing {
 
   /**
-  * Uses ffmpeg to generate PNG images for each frame.
+  * Common base class for post processors calling external CLI tools.
   */
   public abstract class CliPostProcessor : Object, PostProcessor {
     private Pid? pid = null;

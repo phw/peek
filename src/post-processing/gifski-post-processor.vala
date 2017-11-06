@@ -46,7 +46,7 @@ namespace Peek.PostProcessing {
           return null;
         }
 
-        var result = new Array<File>();
+        var result = new Array<File> ();
         result.append_val (File.new_for_path (output_file));
         return result;
       } catch (FileError e) {
