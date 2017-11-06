@@ -46,6 +46,10 @@ namespace Peek.PostProcessing {
       return result;
     }
 
+    public static bool is_available () {
+      return Utils.check_for_executable ("ffmpeg");
+    }
+
     private async File? generate_palette_async (File file) {
       try {
         var palette_file = Utils.create_temp_file ("png");

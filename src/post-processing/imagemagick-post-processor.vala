@@ -75,6 +75,10 @@ namespace Peek.PostProcessing {
         return null;
       }
     }
+
+    public static bool is_available () {
+      return Utils.check_for_executable ("convert");
+    }
   }
 
 }

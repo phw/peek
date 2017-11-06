@@ -120,8 +120,13 @@ namespace Peek.Recording {
       var pipeline = new PostProcessingPipeline ();
 
       if (output_format == OUTPUT_FORMAT_GIF) {
-        pipeline.add (new ExtractFramesPostProcessor ());
-        pipeline.add (new ImagemagickPostProcessor (framerate));
+        if (GifskiPostProcessor.is_available ()) {
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new GifskiPostProcessor (framerate));
+        } else if (ImagemagickPostProcessor.is_available ()) {
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new ImagemagickPostProcessor (framerate));
+        }
       }
 
       return pipeline;

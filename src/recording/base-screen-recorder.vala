@@ -77,14 +77,14 @@ namespace Peek.Recording {
       var pipeline = new PostProcessingPipeline ();
 
       if (output_format == OUTPUT_FORMAT_GIF) {
-        if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "imagemagick") {
-          pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new ImagemagickPostProcessor (framerate));
-        } else if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "gifski") {
+        if (GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
           pipeline.add (new GifskiPostProcessor (framerate));
-        } else {
+        } else if (FfmpegPostProcessor.is_available ()) {
           pipeline.add (new FfmpegPostProcessor (framerate, output_format));
+        } else if (ImagemagickPostProcessor.is_available ()) {
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new ImagemagickPostProcessor (framerate));
         }
       } else if (output_format == OUTPUT_FORMAT_APNG) {
         pipeline.add (new FfmpegPostProcessor (framerate, output_format));
