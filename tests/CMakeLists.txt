@@ -61,6 +61,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     ../src/post-processing/post-processing-pipeline.vala
     ../src/post-processing/post-processor.vala
     ../src/recording/recording-area.vala
+    ../src/recording/recording-config.vala
     ../src/recording/screen-recorder.vala
     ../src/recording/base-screen-recorder.vala
     ../src/recording/command-line-screen-recorder.vala

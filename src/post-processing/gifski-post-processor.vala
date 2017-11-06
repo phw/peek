@@ -7,6 +7,8 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using Peek.Recording;
+
 namespace Peek.PostProcessing {
 
   /**
@@ -14,12 +16,12 @@ namespace Peek.PostProcessing {
   */
   public class GifskiPostProcessor : CliPostProcessor {
     public static int DEFAULT_QUALITY = 60;
-    public int framerate { get; set; default = 15; }
     public int quality { get; set; default = DEFAULT_QUALITY; }
 
-    public GifskiPostProcessor (int framerate, int quality = DEFAULT_QUALITY) {
-      this.framerate = framerate;
-      this.quality = quality;
+    private RecordingConfig config;
+
+    public GifskiPostProcessor (RecordingConfig config, int quality = DEFAULT_QUALITY) {
+      this.config = config;
     }
 
     public override async Array<File>? process_async (Array<File> files) {
@@ -29,7 +31,7 @@ namespace Peek.PostProcessing {
 
         string[] args = {
           "gifski",
-          "--fps", framerate.to_string (),
+          "--fps", config.framerate.to_string (),
           "--quality", quality.to_string (),
           "-o", output_file
         };

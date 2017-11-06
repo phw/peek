@@ -7,12 +7,12 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using Peek.Recording;
+
 namespace Peek.PostProcessing {
 
   [Version (deprecated = true, replacement = "FfmpegPostProcessor")]
   public class ImagemagickPostProcessor : CliPostProcessor {
-    public int framerate { get; set; default = 15; }
-
     private int memory_limit {
       get {
         int available_memory = Utils.get_available_system_memory ();
@@ -25,13 +25,15 @@ namespace Peek.PostProcessing {
       }
     }
 
-    public ImagemagickPostProcessor (int framerate) {
-      this.framerate = framerate;
+    private RecordingConfig config;
+
+    public ImagemagickPostProcessor (RecordingConfig config) {
+      this.config = config;
     }
 
     public override async Array<File>? process_async (Array<File> files) {
       try {
-        double delay = (100.0 / framerate);
+        double delay = (100.0 / config.framerate);
         var output_file = Utils.create_temp_file ("gif");
         var temp_dir = Utils.get_temp_dir ();
 

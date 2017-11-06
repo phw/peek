@@ -14,17 +14,9 @@ namespace Peek.Recording {
   public abstract class BaseScreenRecorder : Object, ScreenRecorder {
     protected string temp_file;
 
-    public bool is_recording { get; protected set; default = false; }
+    public bool is_recording { get; protected set; }
 
-    public string output_format { get; set; default = OUTPUT_FORMAT_GIF; }
-
-    public int framerate { get; set; default = DEFAULT_FRAMERATE; }
-
-    public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
-
-    public bool capture_mouse { get; set; default = true; }
-
-    public abstract bool record (RecordingArea area);
+    public RecordingConfig config { get; protected set; }
 
     private PostProcessor? active_post_processor = null;
 
@@ -34,6 +26,12 @@ namespace Peek.Recording {
         return _is_cancelling && !is_recording;
       }
     }
+
+    public BaseScreenRecorder () {
+      config = new RecordingConfig();
+    }
+
+    public abstract bool record (RecordingArea area);
 
     public void stop () {
       debug ("Recording stopped");
@@ -76,18 +74,18 @@ namespace Peek.Recording {
     protected virtual PostProcessingPipeline build_post_processor_pipeline () {
       var pipeline = new PostProcessingPipeline ();
 
-      if (output_format == OUTPUT_FORMAT_GIF) {
+      if (config.output_format == OUTPUT_FORMAT_GIF) {
         if (GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new GifskiPostProcessor (framerate));
+          pipeline.add (new GifskiPostProcessor (config));
         } else if (FfmpegPostProcessor.is_available ()) {
-          pipeline.add (new FfmpegPostProcessor (framerate, output_format));
+          pipeline.add (new FfmpegPostProcessor (config));
         } else if (ImagemagickPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new ImagemagickPostProcessor (framerate));
+          pipeline.add (new ImagemagickPostProcessor (config));
         }
-      } else if (output_format == OUTPUT_FORMAT_APNG) {
-        pipeline.add (new FfmpegPostProcessor (framerate, output_format));
+      } else if (config.output_format == OUTPUT_FORMAT_APNG) {
+        pipeline.add (new FfmpegPostProcessor (config));
       }
 
       return pipeline;

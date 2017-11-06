@@ -7,19 +7,18 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using Peek.Recording;
+
 namespace Peek.PostProcessing {
 
   /**
   * Use FFmpeg to generate an optimized GIF from a video input
   */
   public class FfmpegPostProcessor : CliPostProcessor {
-    public int framerate { get; set; default = 15; }
+    private RecordingConfig config;
 
-    private string output_format;
-
-    public FfmpegPostProcessor (int framerate, string output_format) {
-      this.framerate = framerate;
-      this.output_format = output_format;
+    public FfmpegPostProcessor (RecordingConfig config) {
+      this.config = config;
     }
 
     public override async Array<File>? process_async (Array<File> files) {
@@ -57,7 +56,7 @@ namespace Peek.PostProcessing {
         string[] args = {
           "ffmpeg", "-y",
           "-i", file.get_path (),
-          "-vf", "fps=%d,palettegen".printf(framerate),
+          "-vf", "fps=%d,palettegen".printf (config.framerate),
           palette_file
         };
 
@@ -77,20 +76,20 @@ namespace Peek.PostProcessing {
 
     private async File? generate_animation_async (File input_file, File palette_file) {
       try {
-        var extension = Utils.get_file_extension_for_format (output_format);
+        var extension = Utils.get_file_extension_for_format (config.output_format);
         var output_file = Utils.create_temp_file (extension);
 
         string[] args = {
           "ffmpeg", "-y",
           "-i", input_file.get_path (),
           "-i", palette_file.get_path (),
-          "-filter_complex", "fps=%d,paletteuse".printf(framerate)
+          "-filter_complex", "fps=%d,paletteuse".printf (config.framerate)
         };
 
         var argv = new Array<string> ();
         argv.append_vals (args, args.length);
 
-        if (output_format == OUTPUT_FORMAT_APNG) {
+        if (config.output_format == OUTPUT_FORMAT_APNG) {
           argv.append_val ("-plays");
           argv.append_val ("0");
         }

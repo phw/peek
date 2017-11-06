@@ -36,11 +36,11 @@ namespace Peek.Recording {
         args.append_val ("-show_region");
         args.append_val ("0");
         args.append_val ("-framerate");
-        args.append_val (framerate.to_string ());
+        args.append_val (config.framerate.to_string ());
         args.append_val ("-video_size");
         args.append_val (area.width.to_string () + "x" + area.height.to_string ());
 
-        if (!capture_mouse) {
+        if (!config.capture_mouse) {
           stderr.printf ("capture_mouse is set to false, but avconv does not support disabling the mouse cursor\n");
           // args.append_val ("-draw_mouse");
           // args.append_val ("0");
@@ -51,8 +51,8 @@ namespace Peek.Recording {
 
         string extension;
 
-        if (output_format == OUTPUT_FORMAT_WEBM) {
-          extension = Utils.get_file_extension_for_format (output_format);
+        if (config.output_format == OUTPUT_FORMAT_WEBM) {
+          extension = Utils.get_file_extension_for_format (config.output_format);
           args.append_val ("-codec:v");
           // args.append_val ("libvpx-vp9");
           args.append_val ("libvpx");
@@ -64,13 +64,13 @@ namespace Peek.Recording {
           args.append_val ("13");
           args.append_val ("-b:v");
           args.append_val ("1M");
-        } else if (output_format == OUTPUT_FORMAT_MP4) {
-          extension = Utils.get_file_extension_for_format (output_format);
+        } else if (config.output_format == OUTPUT_FORMAT_MP4) {
+          extension = Utils.get_file_extension_for_format (config.output_format);
           args.append_val ("-codec:v");
           args.append_val ("libx264");
           args.append_val ("-preset");
           args.append_val ("fast");
-        } else if (output_format == OUTPUT_FORMAT_GIF) {
+        } else if (config.output_format == OUTPUT_FORMAT_GIF) {
           extension = "mkv";
           args.append_val ("-codec:v");
           args.append_val ("libx264");
@@ -81,13 +81,13 @@ namespace Peek.Recording {
         } else {
           stderr.printf (
             "Error: Output format %s no supported by avconv screen recorder.\n",
-            output_format);
+            config.output_format);
           return false;
         }
 
         args.append_val ("-filter:v");
-        var filter = "scale=iw/" + downsample.to_string () + ":-1";
-        if (output_format == OUTPUT_FORMAT_MP4) {
+        var filter = "scale=iw/" + config.downsample.to_string () + ":-1";
+        if (config.output_format == OUTPUT_FORMAT_MP4) {
           filter += ", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)";
         }
 
@@ -121,13 +121,13 @@ namespace Peek.Recording {
     protected override PostProcessingPipeline build_post_processor_pipeline () {
       var pipeline = new PostProcessingPipeline ();
 
-      if (output_format == OUTPUT_FORMAT_GIF) {
+      if (config.output_format == OUTPUT_FORMAT_GIF) {
         if (GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new GifskiPostProcessor (framerate));
+          pipeline.add (new GifskiPostProcessor (config));
         } else if (ImagemagickPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new ImagemagickPostProcessor (framerate));
+          pipeline.add (new ImagemagickPostProcessor (config));
         }
       }
 

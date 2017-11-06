@@ -115,19 +115,19 @@ namespace Peek.Ui {
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-output-format",
-        this.recorder, "output_format",
+        this.recorder.config, "output_format",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-framerate",
-        this.recorder, "framerate",
+        this.recorder.config, "framerate",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-downsample",
-        this.recorder, "downsample",
+        this.recorder.config, "downsample",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-capture-mouse",
-        this.recorder, "capture_mouse",
+        this.recorder.config, "capture_mouse",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",
@@ -488,7 +488,7 @@ namespace Peek.Ui {
       chooser.do_overwrite_confirmation = true;
 
       string extension = Utils.get_file_extension_for_format (
-        recorder.output_format);
+        recorder.config.output_format);
       string filename = default_file_name_format + "." + extension;
 
       var filter = new FileFilter ();
