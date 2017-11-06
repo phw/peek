@@ -10,7 +10,7 @@ This software is licensed under the GNU General Public License
 namespace Peek.PostProcessing {
 
   public interface PostProcessor : Object {
-    public abstract async File[]? process_async (File[] file);
+    public abstract async File[]? process_async (File[] files);
 
     public abstract void cancel ();
   }

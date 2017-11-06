@@ -10,10 +10,8 @@ This software is licensed under the GNU General Public License
 namespace Peek.PostProcessing {
 
   [Version (deprecated = true, replacement = "FfmpegPostProcessor")]
-  public class ImagemagickPostProcessor : Object, PostProcessor {
+  public class ImagemagickPostProcessor : CliPostProcessor {
     public int framerate { get; set; default = 15; }
-
-    private Pid? pid = null;
 
     private int memory_limit {
       get {
@@ -31,10 +29,8 @@ namespace Peek.PostProcessing {
       this.framerate = framerate;
     }
 
-    public async File[]? process_async (File[] files) {
+    public override async File[]? process_async (File[] files) {
       try {
-        SourceFunc callback = process_async.callback;
-
         double delay = (100.0 / framerate);
         var output_file = Utils.create_temp_file ("gif");
         var temp_dir = Utils.get_temp_dir ();
@@ -64,34 +60,17 @@ namespace Peek.PostProcessing {
         }
         argv.append_val (output_file);
 
-        Process.spawn_async (null, argv.data, null,
-          SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
+        var status = yield spawn_command_async (argv.data);
 
-        ChildWatch.add (pid, (pid, status) => {
-          // Triggered when the child indicated by pid exits
-          Process.close_pid (pid);
-          Idle.add ((owned) callback);
-          this.pid = null;
+        if (!Utils.is_exit_status_success (status)) {
+          FileUtils.remove (output_file);
+          return null;
+        }
 
-          if (!Utils.is_exit_status_success (status)) {
-            FileUtils.remove (output_file);
-          }
-        });
-
-        yield;
         return { File.new_for_path (output_file) };
-      } catch (SpawnError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return null;
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
         return null;
-      }
-    }
-
-    public void cancel () {
-      if (pid != null) {
-        Posix.kill (pid, Posix.SIGINT);
       }
     }
   }
