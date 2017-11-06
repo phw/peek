@@ -22,7 +22,7 @@ namespace Peek.PostProcessing {
       this.quality = quality;
     }
 
-    public override async File[]? process_async (File[] files) {
+    public override async Array<File>? process_async (Array<File> files) {
       try {
         var extension = Utils.get_file_extension_for_format (OUTPUT_FORMAT_GIF);
         var output_file = Utils.create_temp_file (extension);
@@ -36,7 +36,7 @@ namespace Peek.PostProcessing {
 
         var argv = new Array<string> ();
         argv.append_vals (args, args.length);
-        foreach (var file in files) {
+        foreach (var file in files.data) {
           argv.append_val (file.get_path ());
         }
 
@@ -47,7 +47,9 @@ namespace Peek.PostProcessing {
           return null;
         }
 
-        return { File.new_for_path (output_file) };
+        var result = new Array<File>();
+        result.append_val (File.new_for_path (output_file));
+        return result;
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
         return null;

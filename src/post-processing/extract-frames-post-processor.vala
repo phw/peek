@@ -13,11 +13,11 @@ namespace Peek.PostProcessing {
   * Uses ffmpeg to generate PNG images for each frame.
   */
   public class ExtractFramesPostProcessor : CliPostProcessor {
-    public override async File[]? process_async (File[] files) {
-      var input_file = files[0];
+    public override async Array<File>? process_async (Array<File> files) {
+      var input_file = files.index (0);
       string[] args = {
         "ffmpeg", "-y",
-        "-i", files[0].get_path (),
+        "-i", input_file.get_path (),
         get_png_filename_pattern (input_file, "%04d")
       };
 
@@ -41,7 +41,7 @@ namespace Peek.PostProcessing {
         output.append_val (file);
       }
 
-      return output.data;
+      return output;
     }
 
     private static string get_png_filename_pattern (File input_file, string replacement) {

@@ -15,7 +15,7 @@ namespace Peek.PostProcessing {
   public abstract class CliPostProcessor : Object, PostProcessor {
     private Pid? pid = null;
 
-    public abstract async File[]? process_async (File[] files);
+    public abstract async Array<File>? process_async (Array<File> files);
 
     public void cancel () {
       if (pid != null) {

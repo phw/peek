@@ -116,15 +116,15 @@ namespace Peek.Recording {
       Posix.kill (pid, Posix.SIGINT);
     }
 
-    protected override PostProcessor[] build_post_processor_pipeline () {
-      var post_processors = new Array<PostProcessor> ();
+    protected override PostProcessingPipeline build_post_processor_pipeline () {
+      var pipeline = new PostProcessingPipeline ();
 
       if (output_format == OUTPUT_FORMAT_GIF) {
-        var p = new ImagemagickPostProcessor (framerate);
-        post_processors.append_val (p);
+        pipeline.add (new ExtractFramesPostProcessor ());
+        pipeline.add (new ImagemagickPostProcessor (framerate));
       }
 
-      return post_processors.data;
+      return pipeline;
     }
   }
 

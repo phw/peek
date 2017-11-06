@@ -85,6 +85,7 @@ namespace Peek.Ui {
 
       this.recorder.recording_aborted.connect ((status) => {
         stderr.printf ("Recording canceled with return code %i\n", status);
+        this.in_file = null;
         leave_recording_state ();
       });
 

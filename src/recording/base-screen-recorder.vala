@@ -26,7 +26,7 @@ namespace Peek.Recording {
 
     public abstract bool record (RecordingArea area);
 
-    protected PostProcessor? active_post_processor = null;
+    private PostProcessor? active_post_processor = null;
 
     private bool _is_cancelling;
     protected bool is_cancelling {
@@ -44,12 +44,15 @@ namespace Peek.Recording {
 
     protected void finalize_recording () {
       debug ("Started post processing");
-      var post_processors = build_post_processor_pipeline ();
-      run_post_processors_async.begin (post_processors, (obj, res) => {
+      var pipeline = build_post_processor_pipeline ();
+      run_post_processors_async.begin (pipeline, (obj, res) => {
         var file = run_post_processors_async.end (res);
-        FileUtils.chmod (file.get_path (), 0644);
         debug ("Finished post processing");
-        recording_finished (file);
+
+        if (file != null) {
+          FileUtils.chmod (file.get_path (), 0644);
+          recording_finished (file);
+        }
       });
       recording_postprocess_started ();
     }
@@ -70,58 +73,40 @@ namespace Peek.Recording {
 
     protected abstract void stop_recording ();
 
-    protected virtual PostProcessor[] build_post_processor_pipeline () {
-      var post_processors = new Array<PostProcessor> ();
-      PostProcessor p;
+    protected virtual PostProcessingPipeline build_post_processor_pipeline () {
+      var pipeline = new PostProcessingPipeline ();
+
       if (output_format == OUTPUT_FORMAT_GIF) {
         if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "imagemagick") {
-          p = new ExtractFramesPostProcessor ();
-          post_processors.append_val (p);
-          p = new ImagemagickPostProcessor (framerate);
-          post_processors.append_val (p);
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new ImagemagickPostProcessor (framerate));
         } else if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "gifski") {
-          p = new ExtractFramesPostProcessor ();
-          post_processors.append_val (p);
-          p = new GifskiPostProcessor (framerate);
-          post_processors.append_val (p);
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new GifskiPostProcessor (framerate));
         } else {
-          p = new FfmpegPostProcessor (framerate, output_format);
-          post_processors.append_val (p);
+          pipeline.add (new FfmpegPostProcessor (framerate, output_format));
         }
       } else if (output_format == OUTPUT_FORMAT_APNG) {
-        p = new FfmpegPostProcessor (framerate, output_format);
-        post_processors.append_val (p);
+        pipeline.add (new FfmpegPostProcessor (framerate, output_format));
       }
 
-      return post_processors.data;
+      return pipeline;
     }
 
-    private async File? run_post_processors_async (PostProcessor[] post_processors) {
-      File[]? files = { File.new_for_path (temp_file) };
+    private async File? run_post_processors_async (PostProcessingPipeline pipeline) {
+      var files = new Array<File>();
+      files.append_val (File.new_for_path (temp_file));
 
-      foreach (var post_processor in post_processors) {
-        active_post_processor = post_processor;
-        var new_files = yield post_processor.process_async (files);
-
-        if (new_files == null) {
-          return null;
-        }
-
-        foreach (var file in files) {
-          try {
-            yield file.delete_async ();
-          } catch (Error e) {
-            stderr.printf ("Error deleting temporary file %s: %s\n", file.get_path (), e.message);
-          }
-        }
-
-        files = new_files;
-      }
-
+      active_post_processor = pipeline;
+      files = yield pipeline.process_async (files);
       active_post_processor = null;
       temp_file = null;
 
-      return files[0];
+      if (files == null || files.length == 0) {
+        return null;
+      }
+
+      return files.index (0);
     }
 
     protected void remove_temp_file () {
