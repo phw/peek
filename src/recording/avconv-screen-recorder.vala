@@ -71,11 +71,13 @@ namespace Peek.Recording {
           args.append_val ("-preset");
           args.append_val ("fast");
         } else if (output_format == OUTPUT_FORMAT_GIF) {
-          extension = "pam";
+          extension = "mkv";
           args.append_val ("-codec:v");
-          args.append_val ("pam");
-          args.append_val ("-f");
-          args.append_val ("rawvideo");
+          args.append_val ("libx264");
+          args.append_val ("-preset");
+          args.append_val ("ultrafast");
+          args.append_val ("-crf");
+          args.append_val ("0");
         } else {
           stderr.printf (
             "Error: Output format %s no supported by avconv screen recorder.\n",

@@ -145,7 +145,7 @@ namespace Peek.Recording {
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        // We could use lossless x264 here, but x264enc it's part of
+        // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.
         // Being near lossless here is important to avoid color distortions in
         // final GIF.
