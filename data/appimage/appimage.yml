@@ -22,7 +22,7 @@ build:
 script:
   # Build Peek
   - cd $BUILD_SOURCE_DIR/peek
-  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DGSETTINGS_COMPILE=OFF -DLOCALEDIR=share/locale .
+  - cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_BUILD_TYPE=Release -DGSETTINGS_COMPILE=OFF -DLOCALEDIR=share/locale .
   - make
   - make DESTDIR=$BUILD_APPDIR install
   # Build libx264

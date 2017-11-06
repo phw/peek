@@ -83,6 +83,10 @@ if(DISABLE_OPEN_FILE_MANAGER)
   list(APPEND VALA_DEFINITIONS "DISABLE_OPEN_FILE_MANAGER")
 endif()
 
+if(NOT ${CMAKE_BUILD_TYPE} STREQUAL Release)
+  list(APPEND VALA_DEFINITIONS "DEBUG")
+endif()
+
 # Compile Vala to C
 vala_precompile(VALA_C
     src/main.vala

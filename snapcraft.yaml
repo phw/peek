@@ -45,6 +45,7 @@ parts:
     plugin: cmake
     configflags:
       - -DGSETTINGS_COMPILE=OFF
+      - -DCMAKE_BUILD_TYPE=Release
       - -DDISABLE_GNOME_SHELL=ON
       - -DDISABLE_OPEN_FILE_MANAGER=ON
     source: .

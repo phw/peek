@@ -29,6 +29,7 @@ namespace Peek {
         return settings;
       }
 
+#if DEBUG
       try {
         var settings_dir = "./data/";
         var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
@@ -40,6 +41,7 @@ namespace Peek {
       catch (Error e) {
         debug ("Loading local settings failed: %s", e.message);
       }
+#endif
 
       if (settings == null) {
         settings = new Settings (APP_ID);

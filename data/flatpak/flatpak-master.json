@@ -132,7 +132,8 @@
     "name": "peek",
     "buildsystem": "cmake",
     "config-opts": [
-      "-DCMAKE_VERBOSE_MAKEFILE=TRUE"
+      "-DCMAKE_VERBOSE_MAKEFILE=TRUE",
+      "-DCMAKE_BUILD_TYPE=Release"
     ],
     "build-options": {
       "cflags": "-L/app/lib"
