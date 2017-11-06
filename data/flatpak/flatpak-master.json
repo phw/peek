@@ -20,7 +20,7 @@
     "--talk-name=ca.desrt.dconf",
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
   ],
-  "build-options" : {
+  "build-options": {
     "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
     "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
     "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now"
@@ -95,50 +95,45 @@
       ]
     }]
   }, {
-    "name": "imagemagick",
-    "config-opts": [
-      "--enable-static=no",
-      "--disable-docs",
-      "--disable-deprecated",
-      "--without-autotrace",
-      "--without-bzlib",
-      "--without-djvu",
-      "--without-dps",
-      "--without-fftw",
-      "--without-fontconfig",
-      "--without-fpx",
-      "--without-freetype",
-      "--without-gvc",
-      "--without-jbig",
-      "--without-jpeg",
-      "--without-lcms",
-      "--without-lzma",
-      "--without-magick-plus-plus",
-      "--without-openexr",
-      "--without-openjp2",
-      "--without-pango",
-      "--without-png",
-      "--without-raqm",
-      "--without-tiff",
-      "--without-webp",
-      "--without-wmf",
-      "--without-x",
-      "--without-xml",
-      "--without-zlib"
-    ],
+    "name": "gifski",
+    "buildsystem": "simple",
+    "build-options": {
+      "build-args": ["--share=network"]
+    },
     "sources": [{
-      "type": "git",
-      "url": "https://github.com/ImageMagick/ImageMagick.git",
-      "branch": "6.9.9-21",
-      "commit": "5260d11261b120d0ff52960e50f87f45e5e8ab31"
-    }]
+      "type": "archive",
+      "url": "https://github.com/ImageOptim/gifski/archive/0.5.0.tar.gz",
+      "sha256": "6cf9a69ad141c6bf61f6f8b5ba507c06aaf0d401351768d2cd790fe27d6a9de7"
+    },
+    {
+      "type": "archive",
+      "url": "https://static.rust-lang.org/dist/rust-1.21.0-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "b41e70e018402bc04d02fde82f91bea24428e6be432f0df12ac400cfb03108e8",
+      "only-arches": ["x86_64"],
+      "dest": "rust"
+    },
+    {
+      "type": "archive",
+      "url": "https://static.rust-lang.org/dist/rust-1.21.0-i686-unknown-linux-gnu.tar.gz",
+      "sha256": "b7caed0f602cdb8ef22e0bfa9125a65bec411e15c0b8901d937e43303ec7dbee",
+      "only-arches": ["i686"],
+      "dest": "rust"
+    }],
+    "build-commands": [
+      "rust/install.sh --prefix=/app",
+      "cargo build --release --features=openmp",
+      "install -Dm755 target/release/gifski /app/bin/bin/gifski"
+    ],
+    "post-install": [
+      "/app/lib/rustlib/uninstall.sh"
+    ]
   }, {
     "name": "peek",
     "buildsystem": "cmake",
     "config-opts": [
       "-DCMAKE_VERBOSE_MAKEFILE=TRUE"
     ],
-    "build-options" : {
+    "build-options": {
       "cflags": "-L/app/lib"
     },
     "sources": [{
