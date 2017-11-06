@@ -282,9 +282,11 @@ online services as GIFs.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. However this does not work as intended on some window managers,
-most notably i3. If this does not work for you on any other window manager
-please open an [issue on Github](https://github.com/phw/peek/issues).
+recording. If you use i3 you should stack Peek with the window you intend to record
+or make sure all windows are floating and uncheck "Always on top" from the Peek settings.
+If you want to be able to control the area when recording in i3 you can move Peek
+to the Scratchpad it will keep recording the area once you hide the window.
+If this does not work for you on any other window manager please open an [issue on Github](https://github.com/phw/peek/issues).
 
 ### On i3 the recording area is all black, how can I record anything?
 i3 does not support the X shape extension. In order to get a transparent
