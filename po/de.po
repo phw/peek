@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-06 23:35+0100\n"
-"PO-Revision-Date: 2017-06-16 09:02+0000\n"
+"PO-Revision-Date: 2017-11-06 22:39+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15-dev\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
@@ -83,13 +83,12 @@ msgstr ""
 "no-native-wayland-support'>FAQ zur Wayland-Unterstützung</a>."
 
 #: src/ui/application-window.vala:189
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Erstelle…"
+msgstr "Erstelle Animation…"
 
 #: src/ui/application-window.vala:190
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek wird beendet sobald die Erstellung abgeschlossen ist."
 
 #: src/ui/application-window.vala:337
 msgid "Rendering…"
@@ -214,7 +213,7 @@ msgstr "MP4"
 
 #: ui/preferences.ui:238
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF-Qualität"
 
 #: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
@@ -316,9 +315,8 @@ msgid "The main window to select the recording area"
 msgstr "Das Hauptfenster, mit dem der Aufnahmebereich ausgewählt wird"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Einstellungen für Peek"
+msgstr "Einstellungsdialog von Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
@@ -362,7 +360,7 @@ msgstr "Format der Ausgabedatei"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Quality for gifski"
-msgstr ""
+msgstr "Qualität für gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
