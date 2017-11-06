@@ -116,7 +116,7 @@
       "type": "archive",
       "url": "https://static.rust-lang.org/dist/rust-1.21.0-i686-unknown-linux-gnu.tar.gz",
       "sha256": "b7caed0f602cdb8ef22e0bfa9125a65bec411e15c0b8901d937e43303ec7dbee",
-      "only-arches": ["i686"],
+      "only-arches": ["i386"],
       "dest": "rust"
     }],
     "build-commands": [
