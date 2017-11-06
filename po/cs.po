@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-#
+# 
 # Translators:
 # Tomáš Průcha <pruchatomas@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-10-13 10:25+0200\n"
+"POT-Creation-Date: 2017-11-06 23:35+0100\n"
 "PO-Revision-Date: 2017-07-05 09:25+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
@@ -20,11 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 2.16-dev\n"
 
-#: src/application.vala:59
+#: src/application.vala:61
 msgid "Show the version of the program and exit"
 msgstr "Ukázat verzi programu a ukončit"
 
-#: src/application.vala:63
+#: src/application.vala:65
 msgid ""
 "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
 "set Peek will automatically select a backend."
@@ -32,41 +32,41 @@ msgstr ""
 "Vyberte backend pro nahrávání (gnome-shell, ffmpeg or avconv). Pokud "
 "nevybrán, Peek vybere backend automaticky."
 
-#: src/application.vala:64
+#: src/application.vala:66
 msgid "BACKEND"
 msgstr "BACKEND"
 
-#: src/application.vala:68
+#: src/application.vala:70
 msgid "Start recording in all running Peek instances."
 msgstr "Spustit nahrávání ve všech běžících instancích."
 
-#: src/application.vala:72
+#: src/application.vala:74
 msgid "Stop recording in all running Peek instances."
 msgstr "Zastavit nahrávání ve všech běžících instancích."
 
-#: src/application.vala:76
+#: src/application.vala:78
 msgid "Toggle recording in all running Peek instances."
 msgstr "Přepnout nahrávání ve všech běžících instancích."
 
-#: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:90 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:222
+#: src/application.vala:232
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nelze vytvořit výchozí obrazovku nahrávání.\n"
 
-#: src/application.vala:235
+#: src/application.vala:245
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nelze zavést backend %s.\n"
 
-#: src/application.vala:339
+#: src/application.vala:349
 msgid "Native Wayland backend is unsupported"
 msgstr "Nativní Wayland backend není podporován"
 
-#: src/application.vala:341
+#: src/application.vala:351
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -80,44 +80,53 @@ msgstr ""
 "Pro detaily zobrazte Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ o Wayland podpoře</a>."
 
-#: src/ui/application-window.vala:327
+#: src/ui/application-window.vala:189
+#, fuzzy
+msgid "Rendering animation…"
+msgstr "Vykreslování…"
+
+#: src/ui/application-window.vala:190
+msgid "Peek will close when rendering is finished."
+msgstr ""
+
+#: src/ui/application-window.vala:337
 msgid "Rendering…"
 msgstr "Vykreslování…"
 
-#: src/ui/application-window.vala:475 src/ui/application-window.vala:480
+#: src/ui/application-window.vala:485 src/ui/application-window.vala:490
 msgid "Save animation"
 msgstr "Uložení animace"
 
-#: src/ui/application-window.vala:476 src/ui/application-window.vala:483
+#: src/ui/application-window.vala:486 src/ui/application-window.vala:493
 msgid "_Save"
 msgstr "_Uložit"
 
-#: src/ui/application-window.vala:477 src/ui/application-window.vala:481
+#: src/ui/application-window.vala:487 src/ui/application-window.vala:491
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: src/ui/application-window.vala:568
+#: src/ui/application-window.vala:578
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animace uložena jako “%s”"
 
-#: src/ui/application-window.vala:591
+#: src/ui/application-window.vala:588
 msgid "Click here to show the saved file in your file manager."
 msgstr "Klikněte zde pro zobrazení uloženého souboru."
 
-#: src/ui/application-window.vala:593
+#: src/ui/application-window.vala:590
 msgid "Show in file manager"
 msgstr "Zobrazit ve správci souborů"
 
-#: src/ui/preferences-dialog.vala:116
+#: src/ui/preferences-dialog.vala:142
 msgid "deactivated"
 msgstr "deaktivováno"
 
-#: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
+#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
 msgid "Change"
 msgstr "Změnit"
 
-#: src/ui/preferences-dialog.vala:140
+#: src/ui/preferences-dialog.vala:166
 msgid "Press keys…"
 msgstr "Stiskněte klávesy…"
 
@@ -163,59 +172,63 @@ msgstr "_O aplikaci"
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: ui/preferences.ui:70
+#: ui/preferences.ui:77
 msgid "User interface"
 msgstr "Uživatelské rozhraní"
 
-#: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Po uložení otevřít správce souborů"
 
-#: ui/preferences.ui:108
+#: ui/preferences.ui:115
 msgid "Start / stop recording"
 msgstr "Spustit / zastavit nahrávání"
 
-#: ui/preferences.ui:162
+#: ui/preferences.ui:169
 msgid "Recording"
 msgstr "Nahrávání"
 
-#: ui/preferences.ui:185
+#: ui/preferences.ui:192
 msgid "Output format"
 msgstr "Výstupní formát"
 
-#: ui/preferences.ui:200
+#: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: ui/preferences.ui:201
+#: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: ui/preferences.ui:202
+#: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:203
+#: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
-msgid "Delay in seconds before recording starts"
-msgstr "Zpoždění (v sekundách) před spuštěním nahrávání"
+#: ui/preferences.ui:238
+msgid "GIF quality"
+msgstr ""
 
-#: ui/preferences.ui:274
-msgid "Resolution downsampling"
-msgstr "Downsampling rozlišení"
-
-#: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
+#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
 msgstr "Snímková frekvence"
 
-#: ui/preferences.ui:348
+#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
+msgid "Delay in seconds before recording starts"
+msgstr "Zpoždění (v sekundách) před spuštěním nahrávání"
+
+#: ui/preferences.ui:366
+msgid "Resolution downsampling"
+msgstr "Downsampling rozlišení"
+
+#: ui/preferences.ui:398
 msgid "Capture mouse cursor"
 msgstr "Zachytit kurzor myši"
 
-#: ui/preferences.ui:379
+#: ui/preferences.ui:429
 msgid "Peek preferences"
 msgstr "Peek předvolby"
 
@@ -296,10 +309,15 @@ msgid "The main window to select the recording area"
 msgstr "Hlavní okno pro výběr oblasti nahrávání"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
+#, fuzzy
+msgid "Peek's preferences dialog"
+msgstr "Peek předvolby"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
 msgstr "Peek nahrává sám sebe"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:77
+#: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
@@ -334,19 +352,23 @@ msgstr "Globální klávesová zkratka pro přepnutí nahrávání"
 msgid "Output file format"
 msgstr "Výchozí formát souboru"
 
-#: data/com.uploadedlobster.peek.gschema.xml:54
+#: data/com.uploadedlobster.peek.gschema.xml:44
+msgid "Quality for gifski"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
 msgstr "Faktor pro downsampling rozlišení"
 
-#: data/com.uploadedlobster.peek.gschema.xml:58
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Whether to capture the mouse cursor"
 msgstr "Zda se má zachytit kurzor myši"
 
-#: data/com.uploadedlobster.peek.gschema.xml:62
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Size and position of the last open main window"
 msgstr "Velikost a pozice naposledy otevřeného okna"
 
-#: data/com.uploadedlobster.peek.gschema.xml:66
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Path where last video got saved"
 msgstr "Cesta naposledy uloženého videa"
 
