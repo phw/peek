@@ -97,7 +97,15 @@ namespace Peek {
       }
     }
 
+    public void request_quit () {
+      debug ("Application was requested to quit");
+      foreach (var window in this.get_windows ()) {
+        window.close ();
+      }
+    }
+
     public override void shutdown () {
+      debug ("Application got shutdown signal");
       foreach (var window in this.get_windows ()) {
         var recorder = (window as ApplicationWindow).recorder;
         recorder.cancel ();
@@ -165,7 +173,7 @@ namespace Peek {
       add_action (action);
 
       action = new SimpleAction ("quit", null);
-      action.activate.connect (quit);
+      action.activate.connect (request_quit);
       add_action (action);
 
 #if ! DISABLE_OPEN_FILE_MANAGER
