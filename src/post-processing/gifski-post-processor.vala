@@ -15,12 +15,9 @@ namespace Peek.PostProcessing {
   * Use gifski (https://gif.ski/) to generate an optimized GIF from a video input
   */
   public class GifskiPostProcessor : CliPostProcessor {
-    public static int DEFAULT_QUALITY = 60;
-    public int quality { get; set; default = DEFAULT_QUALITY; }
-
     private RecordingConfig config;
 
-    public GifskiPostProcessor (RecordingConfig config, int quality = DEFAULT_QUALITY) {
+    public GifskiPostProcessor (RecordingConfig config) {
       this.config = config;
     }
 
@@ -32,7 +29,7 @@ namespace Peek.PostProcessing {
         string[] args = {
           "gifski",
           "--fps", config.framerate.to_string (),
-          "--quality", quality.to_string (),
+          "--quality", config.gifski_quality.to_string (),
           "-o", output_file
         };
 

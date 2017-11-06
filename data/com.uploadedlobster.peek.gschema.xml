@@ -38,6 +38,11 @@
       <default>"gif"</default>
       <summary>Output file format</summary>
     </key>
+    <key name="recording-gifski-quality" type="i">
+      <range min="0" max="100"/>
+      <default>60</default>
+      <summary>Quality for gifski</summary>
+    </key>
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
       <default>3</default>

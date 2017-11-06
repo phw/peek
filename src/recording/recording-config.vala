@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2016-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -13,5 +13,6 @@ namespace Peek.Recording {
     public int framerate { get; set; default = DEFAULT_FRAMERATE; }
     public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
     public bool capture_mouse { get; set; default = true; }
+    public int gifski_quality { get; set; default = DEFAULT_GIFSKI_QUALITY; }
   }
 }
