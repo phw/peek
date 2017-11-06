@@ -53,6 +53,11 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 
 set(VALA_DEFINITIONS "")
 
+if(NOT CMAKE_BUILD_TYPE STREQUAL Release)
+  message (STATUS "Debug build")
+  list(APPEND VALA_DEFINITIONS "DEBUG")
+endif()
+
 # Check for GTK features
 if(${GTK_VERSION} VERSION_EQUAL "3.16" OR ${GTK_VERSION} VERSION_GREATER "3.16")
   message(STATUS "Compiling with features for GTK >= 3.16")
@@ -81,10 +86,6 @@ endif()
 if(DISABLE_OPEN_FILE_MANAGER)
   message(STATUS "File manager integration disabled by configuration")
   list(APPEND VALA_DEFINITIONS "DISABLE_OPEN_FILE_MANAGER")
-endif()
-
-if(NOT ${CMAKE_BUILD_TYPE} STREQUAL Release)
-  list(APPEND VALA_DEFINITIONS "DEBUG")
 endif()
 
 # Compile Vala to C
