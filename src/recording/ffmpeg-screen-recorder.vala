@@ -73,7 +73,11 @@ namespace Peek.Recording {
         } else {
           extension = "mkv";
           args.append_val ("-codec:v");
-          args.append_val ("ffvhuff");
+          args.append_val ("libx264rgb");
+          args.append_val ("-preset:v");
+          args.append_val ("ultrafast");
+          args.append_val ("-crf");
+          args.append_val ("0");
         }
 
         args.append_val ("-filter:v");

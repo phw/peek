@@ -145,7 +145,12 @@ namespace Peek.Recording {
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        pipeline.append ("queue ! matroskamux");
+        // We could use lossless x264 here, but x264enc it's part of
+        // gstreamer1.0-plugins-ugly and not always available.
+        // Being near lossless here is important to avoid color distortions in
+        // final GIF.
+        pipeline.append ("vp8enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("queue ! webmmux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
