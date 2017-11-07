@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-06 23:35+0100\n"
+"POT-Creation-Date: 2017-11-07 08:49+0100\n"
 "PO-Revision-Date: 2017-11-06 22:39+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German "
-"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
+"de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -359,7 +359,8 @@ msgid "Output file format"
 msgstr "Format der Ausgabedatei"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
-msgid "Quality for gifski"
+#, fuzzy
+msgid "Quality setting for the gifski GIF encoder"
 msgstr "Qualität für gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:59

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-06 23:35+0100\n"
+"POT-Creation-Date: 2017-11-07 08:49+0100\n"
 "PO-Revision-Date: 2017-07-13 23:29+0000\n"
 "Last-Translator: YFdyh000 <yfdyh000@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -345,7 +345,7 @@ msgid "Output file format"
 msgstr "文件输出格式"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
-msgid "Quality for gifski"
+msgid "Quality setting for the gifski GIF encoder"
 msgstr ""
 
 #: data/com.uploadedlobster.peek.gschema.xml:59
