@@ -26,6 +26,9 @@ namespace Peek.PostProcessing {
         var extension = Utils.get_file_extension_for_format (OUTPUT_FORMAT_GIF);
         var output_file = Utils.create_temp_file (extension);
 
+        debug ("Running gifski\n    saving to: %s\n    quality: %d\n",
+          output_file, config.gifski_quality);
+
         string[] args = {
           "gifski",
           "--fps", config.framerate.to_string (),
