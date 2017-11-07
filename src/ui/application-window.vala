@@ -159,6 +159,7 @@ namespace Peek.Ui {
     }
 
     public void hide_headerbar () {
+      this.get_style_context ().add_class ("headerbar-hidden");
       this.headerbar.hide ();
     }
 
