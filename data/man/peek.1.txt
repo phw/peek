@@ -24,7 +24,7 @@ OPTIONS
 
 Application Options:
   -v, --version              Show the version of the program and exit
-  -b, --backend=BACKEND      Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend.
+  -b, --backend=BACKEND      Select the recording backend (gnome-shell, ffmpeg)
   -s, --start                Start recording in all running Peek instances
   -p, --stop                 Stop recording in all running Peek instances
   -t, --toggle               Toggle recording in all running Peek instances

@@ -62,7 +62,7 @@ namespace Peek {
 
       add_main_option ("backend", 'b',
         OptionFlags.IN_MAIN, OptionArg.STRING,
-        _ ("Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend."),
+        _ ("Select the recording backend (gnome-shell, ffmpeg)"),
         _ ("BACKEND"));
 
       add_main_option ("start", 's',

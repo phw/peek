@@ -19,7 +19,7 @@ BuildRequires:  gzip
 Requires:       ffmpeg
 Requires:       gstreamer1-plugins-good
 Recommends:     gstreamer1-plugins-ugly
-Suggests:       ImageMagick
+Suggests:       gifski
 
 %description
 Peek makes it easy to create short screencasts of a screen area. It was built
