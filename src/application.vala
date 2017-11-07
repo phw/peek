@@ -16,7 +16,7 @@ namespace Peek {
 
     const uint GTK_STYLE_PROVIDER_PRIORITY_APPLICATION = 600;
 
-    private Gtk.Window main_window;
+    private ApplicationWindow main_window;
 
     private static Settings? settings = null;
 
@@ -67,15 +67,19 @@ namespace Peek {
 
       add_main_option ("start", 's',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Start recording in all running Peek instances."), null);
+        _ ("Start recording in all running Peek instances"), null);
 
       add_main_option ("stop", 'p',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Stop recording in all running Peek instances."), null);
+        _ ("Stop recording in all running Peek instances"), null);
 
       add_main_option ("toggle", 't',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Toggle recording in all running Peek instances."), null);
+        _ ("Toggle recording in all running Peek instances"), null);
+
+      add_main_option ("no-headerbar", 0,
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Start Peek without the header bar"), null);
     }
 
     public override void activate () {
@@ -147,6 +151,10 @@ namespace Peek {
         this.activate_action ("new-window-with-backend", backend);
       } else {
         this.activate_action ("new-window", null);
+      }
+
+      if (options.contains ("no-headerbar") && main_window != null) {
+        main_window.hide_headerbar ();
       }
 
       return Posix.EXIT_SUCCESS;

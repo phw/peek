@@ -158,6 +158,10 @@ namespace Peek.Ui {
       this.set_close_button_position ();
     }
 
+    public void hide_headerbar () {
+      this.headerbar.hide ();
+    }
+
     public override bool configure_event (Gdk.EventConfigure event) {
       if (recorder.is_recording) {
         var new_recording_area = get_recording_area ();
