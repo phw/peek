@@ -68,7 +68,7 @@ parts:
       - -usr/lib/*-linux-*/libasound*
       - -usr/lib/*-linux-*/libgnutls*
       - -usr/lib/*-linux-*/libicu*
-      - -usr/lib/*-linux-*/libLLVM*ls
+      - -usr/lib/*-linux-*/libLLVM*
       - -usr/lib/*-linux-*/libX11*
       - -usr/share/alsa
       - -usr/share/bug
