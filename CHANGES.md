@@ -8,10 +8,10 @@
  * fix: Much smaller temporary file sizes
  * fix: Do not load local settings schema in release builds
  * i18n: Added Chinese (Traditional)
- * i18n: Updated translations for Esperanto, Italian, Norwegian Bokmål, Serbian
+ * i18n: Updated translations for Esperanto, Italian, Norwegian Bokmål, Serbian,
+         Swedish
 
 # Version 1.1.0 - 2017-10-05
- * feat: Transparent recording area without composito 7)
  * feat: Transparent recording area without compositor (#147, #7)
  * fix: Unusual default permissions (#161)
  * fix: Explicitly set ImageMagick resource limits (#112, #125)
