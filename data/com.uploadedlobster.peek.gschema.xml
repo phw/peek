@@ -39,9 +39,9 @@
       <summary>Output file format</summary>
     </key>
     <key name="recording-gifski-quality" type="i">
-      <range min="0" max="100"/>
+      <range min="20" max="100"/>
       <default>60</default>
-      <summary>Quality for gifski</summary>
+      <summary>Quality setting for the gifski GIF encoder</summary>
     </key>
     <key name="recording-start-delay" type="i">
       <range min="0" max="60"/>
