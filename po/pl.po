@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-07 08:49+0100\n"
-"PO-Revision-Date: 2017-11-07 11:28+0000\n"
-"Last-Translator: Kuba Niewiarowski <marsjaninzmarsa@gmail.com>\n"
+"PO-Revision-Date: 2017-11-07 13:35+0000\n"
+"Last-Translator: Kuba Niewiarowski <jakub@niewiarowski.it>\n"
 "Language-Team: Polish "
 "<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
 "Language: pl\n"
@@ -314,7 +314,7 @@ msgstr "Główne okno do wyboru obszaru nagrywania"
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 #, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Preferencje peek"
+msgstr "Okno preferencji Peeka"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
@@ -357,8 +357,9 @@ msgid "Output file format"
 msgstr "Wyjściowy format pliku"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
+#, fuzzy
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Ustawienia jakości kodera GIF-ów gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
