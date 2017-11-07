@@ -19,6 +19,7 @@ apps:
     plugs:
       - x11
       - unity7
+      - wayland
       - home
       - gsettings
       - gnome-3-26-1604
