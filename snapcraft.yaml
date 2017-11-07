@@ -64,12 +64,12 @@ parts:
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
     prime:
       - -usr/lib/pkgconfig
-      - -usr/lib/x86_64-linux-gnu/dri
-      - -usr/lib/x86_64-linux-gnu/libasound*
-      - -usr/lib/x86_64-linux-gnu/libgnutls*
-      - -usr/lib/x86_64-linux-gnu/libicu*
-      - -usr/lib/x86_64-linux-gnu/libLLVM*
-      - -usr/lib/x86_64-linux-gnu/libX11*
+      - -usr/lib/*-linux-*/dri
+      - -usr/lib/*-linux-*/libasound*
+      - -usr/lib/*-linux-*/libgnutls*
+      - -usr/lib/*-linux-*/libicu*
+      - -usr/lib/*-linux-*/libLLVM*ls
+      - -usr/lib/*-linux-*/libX11*
       - -usr/share/alsa
       - -usr/share/bug
       - -usr/share/doc
