@@ -12,17 +12,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-07 08:49+0100\n"
-"PO-Revision-Date: 2017-06-16 21:10+0000\n"
-"Last-Translator: Dawid Dziurla <dawidd0811@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
-"pl/>\n"
+"PO-Revision-Date: 2017-11-07 11:28+0000\n"
+"Last-Translator: Kuba Niewiarowski <marsjaninzmarsa@gmail.com>\n"
+"Language-Team: Polish "
+"<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.15-dev\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:61
 msgid "Show the version of the program and exit"
@@ -85,13 +85,12 @@ msgstr ""
 "wayland-support'>FAQ Peek na temat wsparcia Wayland'a</a>."
 
 #: src/ui/application-window.vala:189
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Renderowanie…"
+msgstr "Renderowanie animacji…"
 
 #: src/ui/application-window.vala:190
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek zostanie zamknięty po zakończeniu renderingu."
 
 #: src/ui/application-window.vala:337
 msgid "Rendering…"
@@ -214,7 +213,7 @@ msgstr "MP4"
 
 #: ui/preferences.ui:238
 msgid "GIF quality"
-msgstr ""
+msgstr "Jakość GIF-a"
 
 #: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
