@@ -19,6 +19,7 @@ apps:
     plugs:
       - x11
       - unity7
+      - wayland
       - home
       - gsettings
       - gnome-3-26-1604
@@ -64,12 +65,12 @@ parts:
       glib-compile-schemas $SNAPCRAFT_PART_INSTALL/share/glib-2.0/schemas
     prime:
       - -usr/lib/pkgconfig
-      # - -usr/lib/*-linux-*/dri
-      # - -usr/lib/*-linux-*/libasound*
-      # - -usr/lib/*-linux-*/libgnutls*
-      # - -usr/lib/*-linux-*/libicu*
-      # - -usr/lib/*-linux-*/libLLVM*
-      # - -usr/lib/*-linux-*/libX11*
+      - -usr/lib/*-linux-*/dri
+      - -usr/lib/*-linux-*/libasound*
+      - -usr/lib/*-linux-*/libgnutls*
+      - -usr/lib/*-linux-*/libicu*
+      - -usr/lib/*-linux-*/libLLVM*
+      - -usr/lib/*-linux-*/libX11*
       - -usr/share/alsa
       - -usr/share/bug
       - -usr/share/doc
@@ -119,17 +120,18 @@ parts:
       - --disable-doc
       - --disable-everything
       - --enable-decoder=libvpx_vp8
-      - --enable-decoder=libx264
+      - --enable-decoder=h264
       - --enable-decoder=png
+      - --enable-decoder=rawvideo
       - --enable-encoder=apng
       - --enable-encoder=ffvhuff
       - --enable-encoder=gif
       - --enable-encoder=libvpx_vp8
       - --enable-encoder=libx264
+      - --enable-encoder=libx264rgb
       - --enable-encoder=png
       - --enable-demuxer=image2
       - --enable-demuxer=matroska
-      - --enable-demuxer=webm
       - --enable-muxer=apng
       - --enable-muxer=gif
       - --enable-muxer=image2
