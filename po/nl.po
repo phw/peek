@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-07 15:10+0100\n"
-"PO-Revision-Date: 2017-11-07 21:15+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"PO-Revision-Date: 2017-11-07 22:29+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Dutch "
 "<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
 "Language: nl\n"
@@ -32,19 +32,16 @@ msgid "BACKEND"
 msgstr "BACKEND"
 
 #: src/application.vala:70
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Begin met opnemen in alle draaiende Peek-processen."
+msgstr "Begin met opnemen in alle draaiende Peek-processen"
 
 #: src/application.vala:74
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Stop met opnemen in alle draaiende Peek-processen."
+msgstr "Stop met opnemen in alle draaiende Peek-processen"
 
 #: src/application.vala:78
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr "Opnemen in alle draaiende Peek-processen in-/uitschakelen."
+msgstr "Opnemen in alle draaiende Peek-processen in-/uitschakelen"
 
 #: src/application.vala:82
 msgid "Start Peek without the header bar"
