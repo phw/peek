@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 08:49+0100\n"
+"POT-Creation-Date: 2017-11-07 15:10+0100\n"
 "PO-Revision-Date: 2017-06-16 09:06+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
@@ -24,48 +24,51 @@ msgid "Show the version of the program and exit"
 msgstr "Applicatieversie weergeven en afsluiten"
 
 #: src/application.vala:65
-msgid ""
-"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
-"set Peek will automatically select a backend."
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
-"Selecteer het te gebruiken opname-backend (gnome-shell, ffmpeg of avconv). "
-"Als u hier niets instelt, zal Peek automatisch een backend selecteren."
 
 #: src/application.vala:66
 msgid "BACKEND"
 msgstr "BACKEND"
 
 #: src/application.vala:70
-msgid "Start recording in all running Peek instances."
+#, fuzzy
+msgid "Start recording in all running Peek instances"
 msgstr "Begin met opnemen in alle draaiende Peek-processen."
 
 #: src/application.vala:74
-msgid "Stop recording in all running Peek instances."
+#, fuzzy
+msgid "Stop recording in all running Peek instances"
 msgstr "Stop met opnemen in alle draaiende Peek-processen."
 
 #: src/application.vala:78
-msgid "Toggle recording in all running Peek instances."
+#, fuzzy
+msgid "Toggle recording in all running Peek instances"
 msgstr "Opnemen in alle draaiende Peek-processen in-/uitschakelen."
 
-#: src/application.vala:90 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:82
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:232
+#: src/application.vala:240
 msgid "Unable to create default screen recorder.\n"
 msgstr "Het creëren van de standaard schermopnemer is mislukt.\n"
 
-#: src/application.vala:245
+#: src/application.vala:253
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Het initialiseren van %s-backend is mislukt.\n"
 
-#: src/application.vala:349
+#: src/application.vala:357
 msgid "Native Wayland backend is unsupported"
 msgstr "Het Wayland-backend wordt niet ondersteund"
 
-#: src/application.vala:351
+#: src/application.vala:359
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -79,42 +82,42 @@ msgstr ""
 "Meer informatie is te vinden in de <a href='https://github.com/phw/peek#why-"
 "no-native-wayland-support'>FAQ over Wayland-ondersteuning</a>."
 
-#: src/ui/application-window.vala:189
+#: src/ui/application-window.vala:193
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Bezig met renderen…"
 
-#: src/ui/application-window.vala:190
+#: src/ui/application-window.vala:194
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:337
+#: src/ui/application-window.vala:341
 msgid "Rendering…"
 msgstr "Bezig met renderen…"
 
-#: src/ui/application-window.vala:485 src/ui/application-window.vala:490
+#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
 msgid "Save animation"
 msgstr "Animatie opslaan"
 
-#: src/ui/application-window.vala:486 src/ui/application-window.vala:493
+#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
 msgid "_Save"
 msgstr "_Opslaan"
 
-#: src/ui/application-window.vala:487 src/ui/application-window.vala:491
+#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
 msgid "_Cancel"
 msgstr "-Annuleren"
 
-#: src/ui/application-window.vala:578
+#: src/ui/application-window.vala:582
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "De animatie is opgeslagen als \"%s\""
 
-#: src/ui/application-window.vala:588
+#: src/ui/application-window.vala:592
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Klik hier om het opgeslagen bestand weer te geven in uw bestandsbeheerder."
 
-#: src/ui/application-window.vala:590
+#: src/ui/application-window.vala:594
 msgid "Show in file manager"
 msgstr "Weergeven in bestandsbeheerder"
 
@@ -375,6 +378,14 @@ msgstr "Grootte en locatie van het laatst geopende hoofdvenster"
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Path where last video got saved"
 msgstr "Pad waar de laatste video is opgeslagen"
+
+#~ msgid ""
+#~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
+#~ "not set Peek will automatically select a backend."
+#~ msgstr ""
+#~ "Selecteer het te gebruiken opname-backend (gnome-shell, ffmpeg of "
+#~ "avconv). Als u hier niets instelt, zal Peek automatisch een backend "
+#~ "selecteren."
 
 #~ msgid "peek"
 #~ msgstr "peek"

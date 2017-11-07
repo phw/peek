@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 08:49+0100\n"
+"POT-Creation-Date: 2017-11-07 15:10+0100\n"
 "PO-Revision-Date: 2017-07-10 18:36+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
@@ -28,48 +28,51 @@ msgid "Show the version of the program and exit"
 msgstr "Parodyti programos versiją ir išeiti"
 
 #: src/application.vala:65
-msgid ""
-"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
-"set Peek will automatically select a backend."
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
-"Pasirinkite įrašymui naudojamą vidinę pusę (gnome-shell, ffmpeg or avconv). "
-"Jei nenustatyta, Peek pasirinks vidinę pusę automatiškai."
 
 #: src/application.vala:66
 msgid "BACKEND"
 msgstr "VIDINĖ PUSĖ"
 
 #: src/application.vala:70
-msgid "Start recording in all running Peek instances."
+#, fuzzy
+msgid "Start recording in all running Peek instances"
 msgstr "Pradėti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
 #: src/application.vala:74
-msgid "Stop recording in all running Peek instances."
+#, fuzzy
+msgid "Stop recording in all running Peek instances"
 msgstr "Stabdyti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
 #: src/application.vala:78
-msgid "Toggle recording in all running Peek instances."
+#, fuzzy
+msgid "Toggle recording in all running Peek instances"
 msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
 
-#: src/application.vala:90 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:82
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:232
+#: src/application.vala:240
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nepavyko sukurti numatytojo ekrano rašytuvo.\n"
 
-#: src/application.vala:245
+#: src/application.vala:253
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nepavyko inicijuoti vidinės pusės %s.\n"
 
-#: src/application.vala:349
+#: src/application.vala:357
 msgid "Native Wayland backend is unsupported"
 msgstr "Sava Wayland vidinė pusė yra nepalaikoma"
 
-#: src/application.vala:351
+#: src/application.vala:359
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -84,41 +87,41 @@ msgstr ""
 "Išsamesnei informacijai, žiūrėkite Peek <a href='https://github.com/phw/"
 "peek#why-no-native-wayland-support'>DUK apie Wayland palaikymą</a>."
 
-#: src/ui/application-window.vala:189
+#: src/ui/application-window.vala:193
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Perteikiama…"
 
-#: src/ui/application-window.vala:190
+#: src/ui/application-window.vala:194
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:337
+#: src/ui/application-window.vala:341
 msgid "Rendering…"
 msgstr "Perteikiama…"
 
-#: src/ui/application-window.vala:485 src/ui/application-window.vala:490
+#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
 msgid "Save animation"
 msgstr "Įrašyti animaciją"
 
-#: src/ui/application-window.vala:486 src/ui/application-window.vala:493
+#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
 msgid "_Save"
 msgstr "Į_rašyti"
 
-#: src/ui/application-window.vala:487 src/ui/application-window.vala:491
+#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/ui/application-window.vala:578
+#: src/ui/application-window.vala:582
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/ui/application-window.vala:588
+#: src/ui/application-window.vala:592
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/ui/application-window.vala:590
+#: src/ui/application-window.vala:594
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
@@ -377,6 +380,13 @@ msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Path where last video got saved"
 msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
+
+#~ msgid ""
+#~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
+#~ "not set Peek will automatically select a backend."
+#~ msgstr ""
+#~ "Pasirinkite įrašymui naudojamą vidinę pusę (gnome-shell, ffmpeg or "
+#~ "avconv). Jei nenustatyta, Peek pasirinks vidinę pusę automatiškai."
 
 #~ msgid "peek"
 #~ msgstr "peek"

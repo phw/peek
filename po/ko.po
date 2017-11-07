@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 08:49+0100\n"
+"POT-Creation-Date: 2017-11-07 15:10+0100\n"
 "PO-Revision-Date: 2017-02-24 10:38+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/peek/translations/"
@@ -24,9 +24,7 @@ msgid "Show the version of the program and exit"
 msgstr "프로그램의 버전을 보여주고 종료합니다"
 
 #: src/application.vala:65
-msgid ""
-"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
-"set Peek will automatically select a backend."
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
 
 #: src/application.vala:66
@@ -34,36 +32,40 @@ msgid "BACKEND"
 msgstr ""
 
 #: src/application.vala:70
-msgid "Start recording in all running Peek instances."
+msgid "Start recording in all running Peek instances"
 msgstr ""
 
 #: src/application.vala:74
-msgid "Stop recording in all running Peek instances."
+msgid "Stop recording in all running Peek instances"
 msgstr ""
 
 #: src/application.vala:78
-msgid "Toggle recording in all running Peek instances."
+msgid "Toggle recording in all running Peek instances"
 msgstr ""
 
-#: src/application.vala:90 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:82
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr ""
 
-#: src/application.vala:232
+#: src/application.vala:240
 msgid "Unable to create default screen recorder.\n"
 msgstr ""
 
-#: src/application.vala:245
+#: src/application.vala:253
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr ""
 
-#: src/application.vala:349
+#: src/application.vala:357
 msgid "Native Wayland backend is unsupported"
 msgstr ""
 
-#: src/application.vala:351
+#: src/application.vala:359
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -72,41 +74,41 @@ msgid ""
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
 
-#: src/ui/application-window.vala:189
+#: src/ui/application-window.vala:193
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "렌더링 중…"
 
-#: src/ui/application-window.vala:190
+#: src/ui/application-window.vala:194
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:337
+#: src/ui/application-window.vala:341
 msgid "Rendering…"
 msgstr "렌더링 중…"
 
-#: src/ui/application-window.vala:485 src/ui/application-window.vala:490
+#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
 msgid "Save animation"
 msgstr "애니메이션 저장하기"
 
-#: src/ui/application-window.vala:486 src/ui/application-window.vala:493
+#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
 msgid "_Save"
 msgstr "_저장하기"
 
-#: src/ui/application-window.vala:487 src/ui/application-window.vala:491
+#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
 msgid "_Cancel"
 msgstr "_취소하기"
 
-#: src/ui/application-window.vala:578
+#: src/ui/application-window.vala:582
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "애니메이션이 %s로 저장됐습니다"
 
-#: src/ui/application-window.vala:588
+#: src/ui/application-window.vala:592
 msgid "Click here to show the saved file in your file manager."
 msgstr "여기를 눌러서 저장하세요."
 
-#: src/ui/application-window.vala:590
+#: src/ui/application-window.vala:594
 msgid "Show in file manager"
 msgstr "저장된 폴더 열기"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 08:49+0100\n"
+"POT-Creation-Date: 2017-11-07 15:10+0100\n"
 "PO-Revision-Date: 2017-11-04 18:43+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
@@ -24,48 +24,51 @@ msgid "Show the version of the program and exit"
 msgstr "Прикажи издање програма и изађи"
 
 #: src/application.vala:65
-msgid ""
-"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
-"set Peek will automatically select a backend."
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
-"Изаберите позадинца за снимање (gnome-shell, ffmpeg или avconv). Ако није "
-"подешено, Виркало ће само изабрати позадинца."
 
 #: src/application.vala:66
 msgid "BACKEND"
 msgstr "ПОЗАДИНАЦ"
 
 #: src/application.vala:70
-msgid "Start recording in all running Peek instances."
+#, fuzzy
+msgid "Start recording in all running Peek instances"
 msgstr "Крени са снимањем у свим покренутим виркалима."
 
 #: src/application.vala:74
-msgid "Stop recording in all running Peek instances."
+#, fuzzy
+msgid "Stop recording in all running Peek instances"
 msgstr "Стани са снимањем у свим покренутим виркалима."
 
 #: src/application.vala:78
-msgid "Toggle recording in all running Peek instances."
+#, fuzzy
+msgid "Toggle recording in all running Peek instances"
 msgstr "Промени стање снимања у свим покренутим виркалима."
 
-#: src/application.vala:90 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:82
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Виркало"
 
-#: src/application.vala:232
+#: src/application.vala:240
 msgid "Unable to create default screen recorder.\n"
 msgstr "Не могу да направим подразумеваног снимача екрана.\n"
 
-#: src/application.vala:245
+#: src/application.vala:253
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Не могу да покренем позадинца „%s“.\n"
 
-#: src/application.vala:349
+#: src/application.vala:357
 msgid "Native Wayland backend is unsupported"
 msgstr "Домаћи Вејленд позадинац није подржан"
 
-#: src/application.vala:351
+#: src/application.vala:359
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -81,41 +84,41 @@ msgstr ""
 "com/phw/peek#why-no-native-wayland-support'>везана за подршку на Вејленду</"
 "a>."
 
-#: src/ui/application-window.vala:189
+#: src/ui/application-window.vala:193
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:190
+#: src/ui/application-window.vala:194
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:337
+#: src/ui/application-window.vala:341
 msgid "Rendering…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:485 src/ui/application-window.vala:490
+#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
 msgid "Save animation"
 msgstr "Сачувај анимацију"
 
-#: src/ui/application-window.vala:486 src/ui/application-window.vala:493
+#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
 msgid "_Save"
 msgstr "_Сачувај"
 
-#: src/ui/application-window.vala:487 src/ui/application-window.vala:491
+#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
 msgid "_Cancel"
 msgstr "_Откажи"
 
-#: src/ui/application-window.vala:578
+#: src/ui/application-window.vala:582
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимација је сачувана као „%s“"
 
-#: src/ui/application-window.vala:588
+#: src/ui/application-window.vala:592
 msgid "Click here to show the saved file in your file manager."
 msgstr "Кликните овде да видите сачувану датотеку у вашем управнику датотека."
 
-#: src/ui/application-window.vala:590
+#: src/ui/application-window.vala:594
 msgid "Show in file manager"
 msgstr "Прикажи у управнику датотека"
 
@@ -374,6 +377,13 @@ msgstr "Величина и положај последње отвореног �
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Path where last video got saved"
 msgstr "Путања где је сачуван последњи видео"
+
+#~ msgid ""
+#~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
+#~ "not set Peek will automatically select a backend."
+#~ msgstr ""
+#~ "Изаберите позадинца за снимање (gnome-shell, ffmpeg или avconv). Ако није "
+#~ "подешено, Виркало ће само изабрати позадинца."
 
 #~ msgid "peek"
 #~ msgstr "peek"
