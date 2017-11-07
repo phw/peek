@@ -17,7 +17,6 @@ build:
 
   files:
     - https://ffmpeg.org/releases/ffmpeg-3.3.4.tar.xz
-    - https://github.com/ImageMagick/ImageMagick/archive/6.9.9-21.tar.gz
 
 script:
   # Build Peek
@@ -37,17 +36,9 @@ script:
   - ./configure --prefix=/usr --extra-ldflags="-L${BUILD_APPDIR}/usr/lib" --extra-cflags="-I${BUILD_APPDIR}/usr/include" --disable-debug --disable-static --enable-gpl --enable-libvpx --enable-libx264 --enable-shared --enable-libxcb --enable-libxcb-xfixes --disable-libxcb-shape --disable-ffplay --disable-ffprobe --disable-ffserver --disable-doc --disable-everything --enable-decoder=png --enable-decoder=rawvideo --enable-encoder=gif --enable-encoder=gif --enable-encoder=libvpx_vp8 --enable-encoder=libx264 --enable-encoder=pam --enable-encoder=png --enable-encoder=rawvideo --enable-demuxer=avi --enable-demuxer=image2 --enable-muxer=apng --enable-muxer=gif --enable-muxer=image2 --enable-muxer=mp4 --enable-muxer=rawvideo --enable-muxer=webm --enable-filter=crop --enable-filter=fps --enable-filter=palettegen --enable-filter=paletteuse --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
   - make
   - make DESTDIR=$BUILD_APPDIR install
-  # Build ImageMagick
-  - cd $BUILD_SOURCE_DIR
-  - tar -xf ImageMagick-6.9.9-21.tar.gz
-  - cd ImageMagick-6.9.9-21
-  - ./configure --prefix=/usr --enable-static=no --disable-docs --disable-deprecated --without-autotrace --without-bzlib --without-djvu --without-dps --without-fftw --without-fontconfig --without-fpx --without-freetype --without-gvc --without-jbig --without-jpeg --without-lcms --without-lzma --without-magick-plus-plus --without-openexr --without-openjp2 --without-pango --without-png --without-raqm --without-tiff --without-webp --without-wmf --without-x --without-xml --without-zlib --enable-filter=crop --enable-filter=scale --enable-protocol=file --enable-indev=xcbgrab
-  - make
-  - make DESTDIR=$BUILD_APPDIR install
   # Finalize AppDir
   - export LD_LIBRARY_PATH=${BUILD_APPDIR}/usr/lib:$LD_LIBRARY_PATH
   - linuxdeployqt ${BUILD_APPDIR}/usr/bin/ffmpeg -bundle-non-qt-libs
-  - linuxdeployqt ${BUILD_APPDIR}/usr/bin/convert -bundle-non-qt-libs
   - linuxdeployqt ${BUILD_APPDIR}/usr/bin/peek -bundle-non-qt-libs
   - glib-compile-schemas $BUILD_APPDIR/usr/share/glib-2.0/schemas
   - cp $BUILD_APPDIR/usr/share/applications/com.uploadedlobster.peek.desktop $BUILD_APPDIR

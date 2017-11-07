@@ -24,8 +24,6 @@ apps:
       - gnome-3-26-1604
   # ffmpeg:
   #   command: ffmpeg
-  # convert:
-  #   command: convert
 
 plugs:
   gnome-3-26-1604:
@@ -162,52 +160,3 @@ parts:
       - -usr/share/icons
       - -usr/share/locale
       - -usr/share/man
-
-  imagemagick:
-    plugin: autotools
-    source: https://github.com/ImageMagick/ImageMagick.git
-    source-type: git
-    source-tag: 6.9.9-21
-    configflags:
-      - --enable-static=no
-      - --disable-docs
-      - --disable-deprecated
-      - --without-autotrace
-      - --without-bzlib
-      - --without-djvu
-      - --without-dps
-      - --without-fftw
-      - --without-fontconfig
-      - --without-fpx
-      - --without-freetype
-      - --without-gvc
-      - --without-jbig
-      - --without-jpeg
-      - --without-lcms
-      - --without-lzma
-      - --without-magick-plus-plus
-      - --without-openexr
-      - --without-openjp2
-      - --without-pango
-      - --without-png
-      - --without-raqm
-      - --without-tiff
-      - --without-webp
-      - --without-wmf
-      - --without-x
-      - --without-xml
-      - --without-zlib
-    prime:
-      - -bin/ffplay
-      - -bin/ffprobe
-      - -bin/ffserver
-      - -bin/qt-faststart
-      - -include/
-      - -lib/pkgconfig
-      - -share/bug
-      - -share/doc
-      - -share/fonts
-      - -share/locale
-      - -share/man
-    install: |
-      sed -i s/avconv/ffmpeg/g $SNAPCRAFT_PART_INSTALL/etc/ImageMagick-6/delegates.xml
