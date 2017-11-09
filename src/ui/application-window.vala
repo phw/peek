@@ -64,7 +64,6 @@ namespace Peek.Ui {
     private File out_file;
     private RecordingArea active_recording_area;
     private string stop_button_label;
-    private string format;
     private signal void recording_finished ();
 
     private GLib.Settings settings;
@@ -153,21 +152,6 @@ namespace Peek.Ui {
         this, "save_folder",
         SettingsBindFlags.DEFAULT);
         
-      //Grab current format and udate the recorder button label to reflect the user's choice  
-      format=settings.get_string("recording-output-format");
-        if (format == "gif") {
-            record_button.set_label("Record as GIF");
-        }
-        else if (format == "apng") {
-            record_button.set_label("Record as APNG");
-        }
-        else if (format == "webm") {
-            record_button.set_label("Record as WebM");
-        }
-        else if (format == "mp4") {
-            record_button.set_label("Record as MP4");
-        }
-
       // Configure window
       this.set_keep_above (true);
       this.load_geometry ();
@@ -183,6 +167,7 @@ namespace Peek.Ui {
       // is configured that way.
       this.set_close_button_position ();
     }
+        
 
     public void hide_headerbar () {
       this.get_style_context ().add_class ("headerbar-hidden");
@@ -238,6 +223,25 @@ namespace Peek.Ui {
 
       return false;
     }
+    //set format
+    private string get_format_name (string format) {
+       switch (format) {
+         case OUTPUT_FORMAT_APNG: return _("APNG");
+         case OUTPUT_FORMAT_GIF: return _("GIF");
+         case OUTPUT_FORMAT_MP4: return _("MP4");
+         case OUTPUT_FORMAT_WEBM: return _("WebM");
+         default: return "";
+         }
+    }
+
+    private void select_format (string format) {
+      recorder.config.output_format = format;
+      var format_name = get_format_name (format);
+      record_button.set_label (_("Record as %s").printf (format_name));
+      pop_format.hide ();
+    }
+    
+          
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {
@@ -315,27 +319,19 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
-    	recorder.output_format="gif";
-	    record_button.set_label("Record as GIF");
-    	pop_format.hide();
-    	}
+       select_format("gif");
+       }
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
-    	recorder.output_format="apng";
-    	record_button.set_label("Record as APNG");
-    	pop_format.hide();
+       select_format("apng");
     	}
     [GtkCallback]
     private void on_webm_button_clicked (Button source) {
-    	recorder.output_format="webm";
-    	record_button.set_label("Record as WebM");
-    	pop_format.hide();
-    	}
+        select_format("webm");
+       }
     [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
-    	recorder.output_format="mp4";
-    	record_button.set_label("Record as MP4");
-    	pop_format.hide();
+       select_format("mp4");
     	}
 
     [GtkCallback]
@@ -474,10 +470,8 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
-	    var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
-	    var theme_name = theme.get_string ("gtk-theme");//find the users' theme
 	    var pop_style=pop_format.get_style_context();
-	    if ( theme_name == "Ambiance" ){
+	    if ( DesktopIntegration.get_theme_name() == "Ambiance" ){
 		    pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
 	    }
 	
