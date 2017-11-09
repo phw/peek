@@ -129,14 +129,15 @@
     "sources": [{
       "type": "git",
       "url": "https://github.com/ImageMagick/ImageMagick.git",
-      "branch": "6.9.9-12",
-      "commit": "8359cc4b039711baef43c3ea6108a801b11f1254"
+      "branch": "6.9.9-21",
+      "commit": "5260d11261b120d0ff52960e50f87f45e5e8ab31"
     }]
   }, {
     "name": "peek",
     "buildsystem": "cmake",
     "config-opts": [
-      "-DCMAKE_VERBOSE_MAKEFILE=TRUE"
+      "-DCMAKE_VERBOSE_MAKEFILE=TRUE",
+      "-DCMAKE_BUILD_TYPE=Release"
     ],
     "build-options" : {
       "cflags": "-L/app/lib"

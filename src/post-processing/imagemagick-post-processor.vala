@@ -7,14 +7,12 @@ This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
 */
 
+using Peek.Recording;
+
 namespace Peek.PostProcessing {
 
   [Version (deprecated = true, replacement = "FfmpegPostProcessor")]
-  public class ImagemagickPostProcessor : Object, PostProcessor {
-    public int framerate { get; set; default = 15; }
-
-    private Pid? pid = null;
-
+  public class ImagemagickPostProcessor : CliPostProcessor {
     private int memory_limit {
       get {
         int available_memory = Utils.get_available_system_memory ();
@@ -27,15 +25,15 @@ namespace Peek.PostProcessing {
       }
     }
 
-    public ImagemagickPostProcessor (int framerate) {
-      this.framerate = framerate;
+    private RecordingConfig config;
+
+    public ImagemagickPostProcessor (RecordingConfig config) {
+      this.config = config;
     }
 
-    public async File? process_async (File file) {
+    public override async Array<File>? process_async (Array<File> files) {
       try {
-        SourceFunc callback = process_async.callback;
-
-        double delay = (100.0 / framerate);
+        double delay = (100.0 / config.framerate);
         var output_file = Utils.create_temp_file ("gif");
         var temp_dir = Utils.get_temp_dir ();
 
@@ -47,47 +45,41 @@ namespace Peek.PostProcessing {
         debug ("Running ImageMagick convert\n    saving to: %s\n    temporary path: %s\n    memory limit: %d kiB",
           output_file, temp_dir, memory_limit);
 
-        string[] argv = {
+        string[] args = {
           "convert",
           "-debug", magick_debug,
           "-set", "delay", delay.to_string (),
           "-limit", "disk", "unlimited",
-          "-limit", "memory", "%dkiB".printf(memory_limit),
+          "-limit", "memory", "%dkiB".printf (memory_limit),
           "-layers", "Optimize",
           "-define", "registry:temporary-path=" + temp_dir,
-          file.get_path (),
-          output_file
         };
 
-        Process.spawn_async (null, argv, null,
-          SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out pid);
+        var argv = new Array<string> ();
+        argv.append_vals (args, args.length);
+        foreach (var file in files.data) {
+          argv.append_val (file.get_path ());
+        }
+        argv.append_val (output_file);
 
-        ChildWatch.add (pid, (pid, status) => {
-          // Triggered when the child indicated by pid exits
-          Process.close_pid (pid);
-          Idle.add ((owned) callback);
-          this.pid = null;
+        var status = yield spawn_command_async (argv.data);
 
-          if (!Utils.is_exit_status_success (status)) {
-            FileUtils.remove (output_file);
-          }
-        });
+        if (!Utils.is_exit_status_success (status)) {
+          FileUtils.remove (output_file);
+          return null;
+        }
 
-        yield;
-        return File.new_for_path (output_file);
-      } catch (SpawnError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return null;
+        var result = new Array<File> ();
+        result.append_val (File.new_for_path (output_file));
+        return result;
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
         return null;
       }
     }
 
-    public void cancel () {
-      if (pid != null) {
-        Posix.kill (pid, Posix.SIGINT);
-      }
+    public static bool is_available () {
+      return Utils.check_for_executable ("convert");
     }
   }
 

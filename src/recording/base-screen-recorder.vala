@@ -14,19 +14,11 @@ namespace Peek.Recording {
   public abstract class BaseScreenRecorder : Object, ScreenRecorder {
     protected string temp_file;
 
-    public bool is_recording { get; protected set; default = false; }
+    public bool is_recording { get; protected set; }
 
-    public string output_format { get; set; default = OUTPUT_FORMAT_GIF; }
+    public RecordingConfig config { get; protected set; }
 
-    public int framerate { get; set; default = DEFAULT_FRAMERATE; }
-
-    public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
-
-    public bool capture_mouse { get; set; default = true; }
-
-    public abstract bool record (RecordingArea area);
-
-    protected PostProcessor? active_post_processor = null;
+    private PostProcessor? active_post_processor = null;
 
     private bool _is_cancelling;
     protected bool is_cancelling {
@@ -34,6 +26,12 @@ namespace Peek.Recording {
         return _is_cancelling && !is_recording;
       }
     }
+
+    public BaseScreenRecorder () {
+      config = new RecordingConfig();
+    }
+
+    public abstract bool record (RecordingArea area);
 
     public void stop () {
       debug ("Recording stopped");
@@ -44,11 +42,15 @@ namespace Peek.Recording {
 
     protected void finalize_recording () {
       debug ("Started post processing");
-      run_post_processors_async.begin ((obj, res) => {
+      var pipeline = build_post_processor_pipeline ();
+      run_post_processors_async.begin (pipeline, (obj, res) => {
         var file = run_post_processors_async.end (res);
-        FileUtils.chmod (file.get_path (), 0644);
         debug ("Finished post processing");
-        recording_finished (file);
+
+        if (file != null) {
+          FileUtils.chmod (file.get_path (), 0644);
+          recording_finished (file);
+        }
       });
       recording_postprocess_started ();
     }
@@ -69,30 +71,40 @@ namespace Peek.Recording {
 
     protected abstract void stop_recording ();
 
-    protected virtual async File? run_post_processors_async () {
-      var file = File.new_for_path (temp_file);
+    protected virtual PostProcessingPipeline build_post_processor_pipeline () {
+      var pipeline = new PostProcessingPipeline ();
 
-      PostProcessor? post_processor = null;
-      if (output_format == OUTPUT_FORMAT_GIF) {
-        if (Environment.get_variable ("PEEK_POSTPROCESSOR") == "imagemagick") {
-          post_processor = new ImagemagickPostProcessor (framerate);
-        } else {
-          post_processor = new FfmpegPostProcessor (framerate, output_format);
+      if (config.output_format == OUTPUT_FORMAT_GIF) {
+        if (GifskiPostProcessor.is_available ()) {
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new GifskiPostProcessor (config));
+        } else if (FfmpegPostProcessor.is_available ()) {
+          pipeline.add (new FfmpegPostProcessor (config));
+        } else if (ImagemagickPostProcessor.is_available ()) {
+          pipeline.add (new ExtractFramesPostProcessor ());
+          pipeline.add (new ImagemagickPostProcessor (config));
         }
-      } else if (output_format == OUTPUT_FORMAT_APNG) {
-        post_processor = new FfmpegPostProcessor (framerate, output_format);
+      } else if (config.output_format == OUTPUT_FORMAT_APNG) {
+        pipeline.add (new FfmpegPostProcessor (config));
       }
 
-      if (post_processor != null) {
-        active_post_processor = post_processor;
-        file = yield post_processor.process_async (file);
-        active_post_processor = null;
-        remove_temp_file ();
-      }
+      return pipeline;
+    }
 
+    private async File? run_post_processors_async (PostProcessingPipeline pipeline) {
+      var files = new Array<File> ();
+      files.append_val (File.new_for_path (temp_file));
+
+      active_post_processor = pipeline;
+      files = yield pipeline.process_async (files);
+      active_post_processor = null;
       temp_file = null;
 
-      return file;
+      if (files == null || files.length == 0) {
+        return null;
+      }
+
+      return files.index (0);
     }
 
     protected void remove_temp_file () {

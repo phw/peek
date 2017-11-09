@@ -12,13 +12,7 @@ namespace Peek.Recording {
   public interface ScreenRecorder : Object {
     public abstract bool is_recording { get; protected set; }
 
-    public abstract string output_format { get; set; }
-
-    public abstract int framerate { get; set; }
-
-    public abstract int downsample { get; set; }
-
-    public abstract bool capture_mouse { get; set; }
+    public abstract RecordingConfig config { get; protected set; }
 
     public signal void recording_started ();
 

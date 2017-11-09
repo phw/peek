@@ -61,7 +61,10 @@ Or you can build with [ninja](https://ninja-build.org/):
 #### Generating the package
 A Debian package can be created with cmake on any system:
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
+    cmake \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DGSETTINGS_COMPILE=OFF ..
     make package
 
 ### Flatpak

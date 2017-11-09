@@ -16,7 +16,7 @@ namespace Peek {
 
     const uint GTK_STYLE_PROVIDER_PRIORITY_APPLICATION = 600;
 
-    private Gtk.Window main_window;
+    private ApplicationWindow main_window;
 
     private static Settings? settings = null;
 
@@ -29,6 +29,7 @@ namespace Peek {
         return settings;
       }
 
+#if DEBUG
       try {
         var settings_dir = "./data/";
         var schema_source = new SettingsSchemaSource.from_directory (settings_dir, null, false);
@@ -40,6 +41,7 @@ namespace Peek {
       catch (Error e) {
         debug ("Loading local settings failed: %s", e.message);
       }
+#endif
 
       if (settings == null) {
         settings = new Settings (APP_ID);
@@ -60,20 +62,24 @@ namespace Peek {
 
       add_main_option ("backend", 'b',
         OptionFlags.IN_MAIN, OptionArg.STRING,
-        _ ("Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not set Peek will automatically select a backend."),
+        _ ("Select the recording backend (gnome-shell, ffmpeg)"),
         _ ("BACKEND"));
 
       add_main_option ("start", 's',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Start recording in all running Peek instances."), null);
+        _ ("Start recording in all running Peek instances"), null);
 
       add_main_option ("stop", 'p',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Stop recording in all running Peek instances."), null);
+        _ ("Stop recording in all running Peek instances"), null);
 
       add_main_option ("toggle", 't',
         OptionFlags.IN_MAIN, OptionArg.NONE,
-        _ ("Toggle recording in all running Peek instances."), null);
+        _ ("Toggle recording in all running Peek instances"), null);
+
+      add_main_option ("no-headerbar", 0,
+        OptionFlags.IN_MAIN, OptionArg.NONE,
+        _ ("Start Peek without the header bar"), null);
     }
 
     public override void activate () {
@@ -95,7 +101,15 @@ namespace Peek {
       }
     }
 
+    public void request_quit () {
+      debug ("Application was requested to quit");
+      foreach (var window in this.get_windows ()) {
+        window.close ();
+      }
+    }
+
     public override void shutdown () {
+      debug ("Application got shutdown signal");
       foreach (var window in this.get_windows ()) {
         var recorder = (window as ApplicationWindow).recorder;
         recorder.cancel ();
@@ -139,6 +153,10 @@ namespace Peek {
         this.activate_action ("new-window", null);
       }
 
+      if (options.contains ("no-headerbar") && main_window != null) {
+        main_window.hide_headerbar ();
+      }
+
       return Posix.EXIT_SUCCESS;
     }
 
@@ -163,7 +181,7 @@ namespace Peek {
       add_action (action);
 
       action = new SimpleAction ("quit", null);
-      action.activate.connect (quit);
+      action.activate.connect (request_quit);
       add_action (action);
 
 #if ! DISABLE_OPEN_FILE_MANAGER

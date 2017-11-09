@@ -33,11 +33,12 @@ Simple screen recorder with an easy to use interface
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [How can I capture mouse clicks and/or key strokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
-  - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
+  - [How can I improve the quality of recorded GIF files](#how-can-i-improve-the-quality-of-recorded-gif-files)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
+  - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
   - [Why no native Wayland support?](#why-no-native-wayland-support)
 - [Contribute](#contribute)
@@ -70,8 +71,8 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - GTK+ >= 3.14
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
-- FFmpeg or libav-tools
-- ImageMagick (optional)
+- FFmpeg
+- [gifski](https://gif.ski/) (optional but recommended for improved GIF quality)
 
 ### Development
 
@@ -123,6 +124,11 @@ Once installed you can run Peek via its application icon in your desktop
 environment or from command line:
 
     snap run peek
+
+In case it fails to start with the message `You need to connect this snap to the gnome platform snap`
+do the following command via command-line:
+
+    sudo snap connect peek:gnome-3-26-1604 gnome-3-26-1604:gnome-3-26-1604
 
 Snaps should automatically update in the background. If this is not happening
 you can update Peek manually to the latest version:
@@ -176,7 +182,7 @@ Then build Peek and package it:
 This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
 current version). You can install it with dpkg:
 
-    sudo dpkg -i peek-x.y.z-Linux.deb
+    sudo dpkg -i peek-*-Linux.deb
 
 ### Fedora
 Fedora 25 users can use this repository:
@@ -234,30 +240,31 @@ in most distributions, so you can easily install with your package manager.
 Then start key-mon with `key-mon --visible_click`. The `--visible_click` option
 is for drawing small circles around mouse clicks.
 
-### My recorded GIFs flicker, what is wrong?
-Some users have experienced recorded windows flicker or other strange visual
-artifacts only visible in the recorded GIF. This is most likely a video driver
-issue. If you are using Intel video drivers switching between the SNA and UXA
-acceleration methods can help. For NVIDIA drivers changing the "Allow Flipping"
-setting in the NVIDIA control panel
-[was reported to help](https://github.com/phw/peek/issues/86).
+### How can I improve the quality of recorded GIF files
+To get the best possible quality you should install the [gifski](https://gif.ski/)
+GIF encoder. If available Peek will automatically use gifski and will provide
+a quality slider in the preferences dialog. The default value will give a
+balanced result between quality and file size. Set the quality to maximum if you
+want to get the highest possible quality even with thousands of colors. The file
+size will increase significantly, though (see below).
 
 ### Why are the GIF files so big?
-Peek is using ImageMagick to optimize the GIF files and reduce the file size.
-As was shown in
-[issue #3](https://github.com/phw/peek/issues/3#issuecomment-243872774)
-the resulting files are already small and compare well to other GIF recording
-software. In the end the GIF format is not well suited for doing large
-animations with a lot of changes and colors. For best results:
+The GIF format is highly inefficient and not well suited for doing large
+animations with a lot of changes and colors. Peek tries its best to reduce the
+file size by using FFmpeg or [gifski](https://gif.ski/) to generate optimized
+GIF files. For best results:
 
 - Use a lower frame rate. 10fps is the default and works well, but in many
   cases you can even get good results with lower framerates.
+- If you have [gifski](https://gif.ski/) installed you can adjust the GIF
+  quality in the preferences. A lower quality gives a smaller file size at the
+  expense of visual quality (see above).  
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
 - Record small areas or use the downsample option to scale the image. The GIF
   file format is not well suited for high resolution or full screen recording.
-- Avoid too many colors, since GIF is limited to a 256 color palette. This one
-  is not so much about file size but more about visual quality.
+- Avoid too many colors, since GIF is limited to a 256 color palette per frame.
+  This one is not so much about file size but more about visual quality.
 - If the above suggestions are not suitable for your use case, consider using
   WebM or MP4 format (see below).
 
@@ -277,9 +284,19 @@ online services as GIFs.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. However this does not work as intended on some window managers,
-most notably i3. If this does not work for you on any other window manager
-please open an [issue on Github](https://github.com/phw/peek/issues).
+recording. If you use i3 you should stack Peek with the window you intend to record
+or make sure all windows are floating and uncheck "Always on top" from the Peek settings.  
+If you want to be able to control the area when recording in i3 you can move Peek
+to the Scratchpad it will keep recording the area once you hide the window.
+If this does not work for you on any other window manager please open an [issue on GitHub](https://github.com/phw/peek/issues).
+
+### My recorded GIFs flicker, what is wrong?
+Some users have experienced recorded windows flicker or other strange visual
+artifacts only visible in the recorded GIF. This is most likely a video driver
+issue. If you are using Intel video drivers switching between the SNA and UXA
+acceleration methods can help. For NVIDIA drivers changing the "Allow Flipping"
+setting in the NVIDIA control panel
+[was reported to help](https://github.com/phw/peek/issues/86).
 
 ### On i3 the recording area is all black, how can I record anything?
 i3 does not support the X shape extension. In order to get a transparent

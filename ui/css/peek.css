@@ -3,3 +3,7 @@
   background-color: rgb(40, 44, 52);
   color: white;
 }
+
+.headerbar-hidden {
+  border-radius: 0;
+}

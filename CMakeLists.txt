@@ -53,6 +53,11 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 
 set(VALA_DEFINITIONS "")
 
+if(NOT CMAKE_BUILD_TYPE STREQUAL Release)
+  message (STATUS "Debug build")
+  list(APPEND VALA_DEFINITIONS "DEBUG")
+endif()
+
 # Check for GTK features
 if(${GTK_VERSION} VERSION_EQUAL "3.16" OR ${GTK_VERSION} VERSION_GREATER "3.16")
   message(STATUS "Compiling with features for GTK >= 3.16")
@@ -95,15 +100,20 @@ vala_precompile(VALA_C
     src/dbus/freedesktop-dbus.vala
     src/dbus/freedesktop-filemanager.vala
     src/dbus/gnome-shell-screencast.vala
+    src/post-processing/cli-post-processor.vala
+    src/post-processing/extract-frames-post-processor.vala
     src/post-processing/ffmpeg-post-processor.vala
+    src/post-processing/gifski-post-processor.vala
     src/post-processing/imagemagick-post-processor.vala
+    src/post-processing/post-processing-pipeline.vala
     src/post-processing/post-processor.vala
     src/recording/screen-recorder.vala
     src/recording/base-screen-recorder.vala
     src/recording/screen-recorder-factory.vala
     src/recording/recording-area.vala
+    src/recording/recording-config.vala
     src/recording/gnome-shell-dbus-recorder.vala
-    src/recording/command-line-screen-recorder.vala
+    src/recording/cli-screen-recorder.vala
     src/recording/avconv-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala
     src/ui/about-dialog.vala
@@ -170,9 +180,9 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg | libav-tools")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg")
 set(CPACK_DEBIAN_PACKAGE_RECOMMENDS "gstreamer1.0-plugins-good, gstreamer1.0-plugins-ugly")
-set(CPACK_DEBIAN_PACKAGE_SUGGESTS "imagemagick")
+set(CPACK_DEBIAN_PACKAGE_SUGGESTS "gifski")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 

@@ -51,6 +51,15 @@ namespace Peek.Ui {
     private Gtk.ComboBoxText recording_output_format_combo_box;
 
     [GtkChild]
+    private Gtk.Box recording_quality_box;
+
+    [GtkChild]
+    private Gtk.Adjustment recording_quality;
+
+    [GtkChild]
+    private Gtk.Scale recording_quality_scale;
+
+    [GtkChild]
     private Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
@@ -76,6 +85,10 @@ namespace Peek.Ui {
         recording_output_format_combo_box, "active_id",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-gifski-quality",
+        recording_quality, "value",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-start-delay",
         recording_start_delay, "value",
         SettingsBindFlags.DEFAULT);
@@ -91,6 +104,19 @@ namespace Peek.Ui {
       settings.bind ("recording-capture-mouse",
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
+
+      for (int i = 20; i <= 100; i += 20) {
+        recording_quality_scale.add_mark (i, PositionType.BOTTOM, null);
+      }
+
+      if (!PostProcessing.GifskiPostProcessor.is_available ()) {
+        recording_quality_box.hide ();
+      }
+
+      recording_output_format_combo_box.changed.connect (() => {
+        recording_quality_box.sensitive =
+          (recording_output_format_combo_box.active_id == OUTPUT_FORMAT_GIF);
+      });
 
       if (DesktopIntegration.is_x11_backend ()) {
         init_keybinding_editor ();

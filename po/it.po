@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-10-13 10:25+0200\n"
+"POT-Creation-Date: 2017-11-07 15:10+0100\n"
 "PO-Revision-Date: 2017-10-14 16:38+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Italian "
-"<https://hosted.weblate.org/projects/peek/translations/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/peek/"
+"translations/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,52 +21,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.17\n"
 
-#: src/application.vala:59
+#: src/application.vala:61
 msgid "Show the version of the program and exit"
 msgstr "Mostra la versione del programma ed esci"
 
-#: src/application.vala:63
-msgid ""
-"Select the recording backend to use (gnome-shell, ffmpeg or avconv). If not "
-"set Peek will automatically select a backend."
-msgstr "Seleziona il backend da usare (gnome-shell, ffmpeg o avconv). Se non lo"
-"selezioni Peek ne sceglierà una automaticamente."
+#: src/application.vala:65
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
+msgstr ""
 
-#: src/application.vala:64
+#: src/application.vala:66
 msgid "BACKEND"
 msgstr "BACKEND"
 
-#: src/application.vala:68
-msgid "Start recording in all running Peek instances."
+#: src/application.vala:70
+#, fuzzy
+msgid "Start recording in all running Peek instances"
 msgstr "Avvia la registrazione in tutte le istanze aperte di Peek."
 
-#: src/application.vala:72
-msgid "Stop recording in all running Peek instances."
+#: src/application.vala:74
+#, fuzzy
+msgid "Stop recording in all running Peek instances"
 msgstr "Ferma la registrazione in tutte le istanze aperte di Peek."
 
-#: src/application.vala:76
-msgid "Toggle recording in all running Peek instances."
+#: src/application.vala:78
+#, fuzzy
+msgid "Toggle recording in all running Peek instances"
 msgstr "Riavvia la registrazione in tutte le istanze aperte di Peek."
 
-#: src/application.vala:88 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:82
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:222
+#: src/application.vala:240
 msgid "Unable to create default screen recorder.\n"
 msgstr "Impossibile creare il registratore dello schermo.\n"
 
-#: src/application.vala:235
+#: src/application.vala:253
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Impossibile inizializzare il backend %s.\n"
 
-#: src/application.vala:339
+#: src/application.vala:357
 msgid "Native Wayland backend is unsupported"
 msgstr "Il backend nativo di Wayland non é supportato"
 
-#: src/application.vala:341
+#: src/application.vala:359
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -74,50 +78,60 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Stai eseguendo Peek nativamente su Wayland, che non è attualmente supportato. "
-"Per favore apri Peek usando XWayland settando <tt>GDK_BACKEND=x11</tt>.\n"
+"Stai eseguendo Peek nativamente su Wayland, che non è attualmente "
+"supportato. Per favore apri Peek usando XWayland settando "
+"<tt>GDK_BACKEND=x11</tt>.\n"
 "\n"
 "Per dettagli vedi Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ sul supporto a Wayland</a>."
 
-#: src/ui/application-window.vala:327
+#: src/ui/application-window.vala:193
+#, fuzzy
+msgid "Rendering animation…"
+msgstr "Renderizzando…"
+
+#: src/ui/application-window.vala:194
+msgid "Peek will close when rendering is finished."
+msgstr ""
+
+#: src/ui/application-window.vala:341
 msgid "Rendering…"
 msgstr "Renderizzando…"
 
-#: src/ui/application-window.vala:475 src/ui/application-window.vala:480
+#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
 msgid "Save animation"
 msgstr "Salva animazione"
 
-#: src/ui/application-window.vala:476 src/ui/application-window.vala:483
+#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
 msgid "_Save"
 msgstr "_Salva"
 
-#: src/ui/application-window.vala:477 src/ui/application-window.vala:481
+#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
 msgid "_Cancel"
 msgstr "_Annulla"
 
-#: src/ui/application-window.vala:568
+#: src/ui/application-window.vala:582
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animazione salvata come \"%s\""
 
-#: src/ui/application-window.vala:591
+#: src/ui/application-window.vala:592
 msgid "Click here to show the saved file in your file manager."
 msgstr "Premi qui per vedere il file salvato nel tuo file manager."
 
-#: src/ui/application-window.vala:593
+#: src/ui/application-window.vala:594
 msgid "Show in file manager"
 msgstr "Mostra nel file manager"
 
-#: src/ui/preferences-dialog.vala:116
+#: src/ui/preferences-dialog.vala:142
 msgid "deactivated"
 msgstr "disattivato"
 
-#: src/ui/preferences-dialog.vala:127 src/ui/preferences-dialog.vala:143
+#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
 msgid "Change"
 msgstr "Cambia"
 
-#: src/ui/preferences-dialog.vala:140
+#: src/ui/preferences-dialog.vala:166
 msgid "Press keys…"
 msgstr "Premi tasto…"
 
@@ -163,59 +177,63 @@ msgstr "_Informazioni"
 msgid "_Quit"
 msgstr "_Esci"
 
-#: ui/preferences.ui:70
+#: ui/preferences.ui:77
 msgid "User interface"
 msgstr "Interfaccia utente"
 
-#: ui/preferences.ui:83 data/com.uploadedlobster.peek.gschema.xml:7
+#: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
 msgstr "Apri il file manager dopo il salvataggio"
 
-#: ui/preferences.ui:108
+#: ui/preferences.ui:115
 msgid "Start / stop recording"
 msgstr "Avvia / ferma registrazione"
 
-#: ui/preferences.ui:162
+#: ui/preferences.ui:169
 msgid "Recording"
 msgstr "Registrando"
 
-#: ui/preferences.ui:185
+#: ui/preferences.ui:192
 msgid "Output format"
 msgstr "Formato di Output"
 
-#: ui/preferences.ui:200
+#: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: ui/preferences.ui:201
+#: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: ui/preferences.ui:202
+#: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: ui/preferences.ui:203
+#: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: ui/preferences.ui:231 data/com.uploadedlobster.peek.gschema.xml:44
-msgid "Delay in seconds before recording starts"
-msgstr "Ritardo in secondi prima dell'inizio della registrazione"
+#: ui/preferences.ui:238
+msgid "GIF quality"
+msgstr ""
 
-#: ui/preferences.ui:274
-msgid "Resolution downsampling"
-msgstr "Risoluzione del sottocampionamento"
-
-#: ui/preferences.ui:316 data/com.uploadedlobster.peek.gschema.xml:49
+#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
 msgstr "Frequenza fotogrammi"
 
-#: ui/preferences.ui:348
+#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
+msgid "Delay in seconds before recording starts"
+msgstr "Ritardo in secondi prima dell'inizio della registrazione"
+
+#: ui/preferences.ui:366
+msgid "Resolution downsampling"
+msgstr "Risoluzione del sottocampionamento"
+
+#: ui/preferences.ui:398
 msgid "Capture mouse cursor"
 msgstr "Cattura il cursore"
 
-#: ui/preferences.ui:379
+#: ui/preferences.ui:429
 msgid "Peek preferences"
 msgstr "Preferenze Peek"
 
@@ -240,12 +258,12 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
-"Peek rende facile creare brevi registrazioni di un'area dello schermo. E stato "
-" creato per essere usato per registrare aree di schermo, es. per mostrare "
-"facilmente le UI delle app o per riportare dei bug nei bug report. "
-"Con Peek è sufficiente collocare la finestra Peek sull'area che si desidera registrare "
-"e premere \"Registra\". Peek è ottimizzato per creare delle GIF animate, ma "
-"puoi anche registrare in WebM o MP4 se preferisci."
+"Peek rende facile creare brevi registrazioni di un'area dello schermo. E "
+"stato  creato per essere usato per registrare aree di schermo, es. per "
+"mostrare facilmente le UI delle app o per riportare dei bug nei bug report. "
+"Con Peek è sufficiente collocare la finestra Peek sull'area che si desidera "
+"registrare e premere \"Registra\". Peek è ottimizzato per creare delle GIF "
+"animate, ma puoi anche registrare in WebM o MP4 se preferisci."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -295,10 +313,15 @@ msgid "The main window to select the recording area"
 msgstr "La finestra principale per selezionare l'area di registrazione"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
+#, fuzzy
+msgid "Peek's preferences dialog"
+msgstr "Preferenze Peek"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
 msgstr "Peek si sta registrando da solo"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:77
+#: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
@@ -332,21 +355,32 @@ msgstr "Tasto globale per avviare la registrazione"
 msgid "Output file format"
 msgstr "Formato file in output"
 
-#: data/com.uploadedlobster.peek.gschema.xml:54
+#: data/com.uploadedlobster.peek.gschema.xml:44
+msgid "Quality setting for the gifski GIF encoder"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
 msgstr "Risoluzione del fattore di sottocampionamento"
 
-#: data/com.uploadedlobster.peek.gschema.xml:58
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Whether to capture the mouse cursor"
 msgstr "Se cattura il cursore del mouse"
 
-#: data/com.uploadedlobster.peek.gschema.xml:62
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Size and position of the last open main window"
 msgstr "Grandezza e posizione dell' ultima finestra principale aperta"
 
-#: data/com.uploadedlobster.peek.gschema.xml:66
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Path where last video got saved"
 msgstr "Posizione dove l'ultimo video è stato salvato"
+
+#~ msgid ""
+#~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
+#~ "not set Peek will automatically select a backend."
+#~ msgstr ""
+#~ "Seleziona il backend da usare (gnome-shell, ffmpeg o avconv). Se non "
+#~ "loselezioni Peek ne sceglierà una automaticamente."
 
 #~ msgid "peek"
 #~ msgstr "peek"

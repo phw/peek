@@ -20,6 +20,7 @@ namespace Peek.Recording {
     private const string DBUS_NAME = "org.gnome.Shell.Screencast";
 
     public GnomeShellDbusRecorder () throws IOError {
+      base();
       screencast = Bus.get_proxy_sync (
         BusType.SESSION,
         DBUS_NAME,
@@ -33,10 +34,10 @@ namespace Peek.Recording {
       bool success = false;
 
       var options = new HashTable<string, Variant> (null, null);
-      options.insert ("framerate", new Variant.int32 (framerate));
+      options.insert ("framerate", new Variant.int32 (config.framerate));
       options.insert ("pipeline", build_gst_pipeline (area));
 
-      if (!capture_mouse) {
+      if (!config.capture_mouse) {
         options.insert ("draw-cursor", false);
       }
 
@@ -47,7 +48,7 @@ namespace Peek.Recording {
 
         int width = area.width;
         int height = area.height;
-        if (output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OUTPUT_FORMAT_MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -124,11 +125,11 @@ namespace Peek.Recording {
       // GNOME Shell 3.24 will use vp9enc with same settings.
       var pipeline = new StringBuilder ();
 
-      if (downsample > 1) {
-        int width = area.width / downsample;
-        int height = area.height / downsample;
+      if (config.downsample > 1) {
+        int width = area.width / config.downsample;
+        int height = area.height / config.downsample;
 
-        if (output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OUTPUT_FORMAT_MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -137,15 +138,20 @@ namespace Peek.Recording {
           "videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
 
-      if (output_format == OUTPUT_FORMAT_WEBM) {
+      if (config.output_format == OUTPUT_FORMAT_WEBM) {
         pipeline.append ("vp8enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
-      } else if (output_format == OUTPUT_FORMAT_MP4) {
+      } else if (config.output_format == OUTPUT_FORMAT_MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
       } else {
-        pipeline.append ("videoconvert ! avimux");
+        // We could use lossless x264 here, but x264enc is part of
+        // gstreamer1.0-plugins-ugly and not always available.
+        // Being near lossless here is important to avoid color distortions in
+        // final GIF.
+        pipeline.append ("vp8enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("queue ! webmmux");
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
@@ -154,10 +160,11 @@ namespace Peek.Recording {
 
     private string get_temp_file_extension () {
       string extension;
-      if (output_format == OUTPUT_FORMAT_GIF || output_format == OUTPUT_FORMAT_APNG) {
-        extension = "avi";
+      if (config.output_format == OUTPUT_FORMAT_GIF
+        || config.output_format == OUTPUT_FORMAT_APNG) {
+        extension = "mkv";
       } else {
-        extension = Utils.get_file_extension_for_format (output_format);
+        extension = Utils.get_file_extension_for_format (config.output_format);
       }
 
       return extension;
