@@ -178,8 +178,6 @@ namespace Peek {
       return theme_name;
     }
 
-
-
 #if ! DISABLE_OPEN_FILE_MANAGER
     private static bool file_manager_highlights_file (AppInfo app_info) {
       var exe = app_info.get_executable ();
