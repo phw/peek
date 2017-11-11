@@ -95,8 +95,6 @@ namespace Peek.Ui {
         leave_recording_state ();
       });
 
-
-
       application.toggle_recording.connect (toggle_recording);
 
       application.start_recording.connect (prepare_start_recording);
@@ -230,7 +228,7 @@ namespace Peek.Ui {
         case OUTPUT_FORMAT_MP4: return _("MP4");
         case OUTPUT_FORMAT_WEBM: return _("WebM");
         default: return "";
-        }
+      }
     }
 
     private void select_format (string format) {
@@ -239,8 +237,6 @@ namespace Peek.Ui {
       record_button.set_label (_("Record as %s").printf (format_name));
       pop_format.hide ();
     }
-
-
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {
@@ -320,7 +316,7 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
       select_format("apng");
-     }
+    }
     [GtkCallback]
     private void on_webm_button_clicked (Button source) {
       select_format("webm");
@@ -466,10 +462,10 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
-        var pop_style=pop_format.get_style_context();
+        var pop_style = pop_format.get_style_context();
         if (DesktopIntegration.get_theme_name () == "Ambiance") {
           pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
-         }
+        }
         var pop_format_region = create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
