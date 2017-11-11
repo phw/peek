@@ -274,9 +274,9 @@ namespace Peek {
 
     private void load_stylesheets () {
       load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
-      if ( DesktopIntegration.get_theme_name() == "Ambiance" ){
+      if (DesktopIntegration.get_theme_name () == "Ambiance") {
         load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/ambiance.css");
-	   }
+      }
       if (DesktopIntegration.is_unity ()) {
         load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/unity.css");
       }

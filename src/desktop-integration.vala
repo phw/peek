@@ -171,14 +171,14 @@ namespace Peek {
       debug ("Desktop: %s", desktop);
       return desktop.contains (text);
     }
-    
+
     public static string get_theme_name () {
-        var theme = new GLib.Settings ("org.gnome.desktop.interface");//grab the users' settings
-	    var theme_name = theme.get_string ("gtk-theme");//find the users' theme
-	    return theme_name;
+      var theme = new GLib.Settings ("org.gnome.desktop.interface"); //grab the users' settings
+      var theme_name = theme.get_string ("gtk-theme"); //find the users' theme
+      return theme_name;
     }
-    
-    
+
+
 
 #if ! DISABLE_OPEN_FILE_MANAGER
     private static bool file_manager_highlights_file (AppInfo app_info) {
