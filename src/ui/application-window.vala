@@ -14,8 +14,6 @@ using Gtk;
 using Cairo;
 using Peek.Recording;
 
-
-
 namespace Peek.Ui {
 
   [GtkTemplate (ui = "/com/uploadedlobster/peek/application-window.ui")]
@@ -43,13 +41,13 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Button stop_button;
-    
+
     [GtkChild]
     private Popover pop_format;
-    
+
     [GtkChild]
     private MenuButton pop_format_menu;
-    
+
     [GtkChild]
     private Label size_indicator;
 
@@ -64,10 +62,10 @@ namespace Peek.Ui {
     private File out_file;
     private RecordingArea active_recording_area;
     private string stop_button_label;
+
     private signal void recording_finished ();
 
     private GLib.Settings settings;
-   
 
     private const int SMALL_WINDOW_SIZE = 300;
 
@@ -96,8 +94,8 @@ namespace Peek.Ui {
         this.in_file = null;
         leave_recording_state ();
       });
-      
-      
+
+
 
       application.toggle_recording.connect (toggle_recording);
 
@@ -151,7 +149,7 @@ namespace Peek.Ui {
       settings.bind ("persist-save-folder",
         this, "save_folder",
         SettingsBindFlags.DEFAULT);
-        
+
       // Configure window
       this.set_keep_above (true);
       this.load_geometry ();
@@ -167,7 +165,7 @@ namespace Peek.Ui {
       // is configured that way.
       this.set_close_button_position ();
     }
-        
+
 
     public void hide_headerbar () {
       this.get_style_context ().add_class ("headerbar-hidden");
@@ -223,15 +221,16 @@ namespace Peek.Ui {
 
       return false;
     }
+
     //set format
     private string get_format_name (string format) {
-       switch (format) {
-         case OUTPUT_FORMAT_APNG: return _("APNG");
-         case OUTPUT_FORMAT_GIF: return _("GIF");
-         case OUTPUT_FORMAT_MP4: return _("MP4");
-         case OUTPUT_FORMAT_WEBM: return _("WebM");
-         default: return "";
-         }
+      switch (format) {
+        case OUTPUT_FORMAT_APNG: return _("APNG");
+        case OUTPUT_FORMAT_GIF: return _("GIF");
+        case OUTPUT_FORMAT_MP4: return _("MP4");
+        case OUTPUT_FORMAT_WEBM: return _("WebM");
+        default: return "";
+        }
     }
 
     private void select_format (string format) {
@@ -240,8 +239,8 @@ namespace Peek.Ui {
       record_button.set_label (_("Record as %s").printf (format_name));
       pop_format.hide ();
     }
-    
-          
+
+
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {
@@ -313,26 +312,23 @@ namespace Peek.Ui {
         }
       }
     }
-    
-    
-    
 
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
-       select_format("gif");
-       }
+      select_format("gif");
+    }
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
-       select_format("apng");
-    	}
+      select_format("apng");
+     }
     [GtkCallback]
     private void on_webm_button_clicked (Button source) {
-        select_format("webm");
-       }
+      select_format("webm");
+    }
     [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
-       select_format("mp4");
-    	}
+      select_format("mp4");
+    }
 
     [GtkCallback]
     private void on_record_button_clicked (Button source) {
@@ -470,15 +466,13 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
-	    var pop_style=pop_format.get_style_context();
-	    if ( DesktopIntegration.get_theme_name() == "Ambiance" ){
-		    pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
-	    }
-	
-	  var pop_format_region = create_region_from_widget (pop_format);
-  	  window_region.union (pop_format_region);
-	  }
-
+        var pop_style=pop_format.get_style_context();
+        if (DesktopIntegration.get_theme_name () == "Ambiance") {
+          pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
+         }
+        var pop_format_region = create_region_from_widget (pop_format);
+        window_region.union (pop_format_region);
+      }
 
       // The fallback app menu overlaps the recording area
       var fallback_app_menu = get_fallback_app_menu ();
