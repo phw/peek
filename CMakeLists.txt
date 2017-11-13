@@ -130,6 +130,7 @@ vala_precompile(VALA_C
     src/ui/shortcut-label.vala
   PACKAGES
     gtk+-3.0
+    posix
   DEFINITIONS
     ${VALA_DEFINITIONS}
   CUSTOM_VAPIS
