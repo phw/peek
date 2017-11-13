@@ -37,15 +37,17 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.CheckButton interface_open_file_manager;
 
-    private ShortcutLabel keybinding_toggle_recording_accelerator;
-
     [GtkChild]
     private Gtk.Box keybinding_toggle_recording_box;
+
+#if HAS_KEYBINDER
+    private ShortcutLabel keybinding_toggle_recording_accelerator;
 
     [GtkChild]
     private Gtk.Box keybinding_toggle_recording_editor;
 
     private Gtk.ToggleButton keybinding_toggle_recording_button;
+#endif
 
     [GtkChild]
     private Gtk.ComboBoxText recording_output_format_combo_box;
@@ -118,17 +120,22 @@ namespace Peek.Ui {
           (recording_output_format_combo_box.active_id == OUTPUT_FORMAT_GIF);
       });
 
+#if HAS_KEYBINDER
       if (DesktopIntegration.is_x11_backend ()) {
         init_keybinding_editor ();
       } else {
         keybinding_toggle_recording_box.hide ();
       }
+#else
+      keybinding_toggle_recording_box.hide ();
+#endif
 
 #if DISABLE_OPEN_FILE_MANAGER
       interface_open_file_manager.hide();
 #endif
     }
 
+#if HAS_KEYBINDER
     public override bool delete_event (Gdk.EventAny event) {
       Application.keybindings_paused = false;
       return false;
@@ -195,6 +202,7 @@ namespace Peek.Ui {
     private static bool no_modifier_set (Gdk.ModifierType mods) {
       return (mods & Gtk.accelerator_get_default_mod_mask ()) == 0;
     }
+#endif
   }
 
 }

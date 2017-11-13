@@ -50,7 +50,9 @@ namespace Peek {
       return settings;
     }
 
+#if HAS_KEYBINDER
     public static bool keybindings_paused { get; set; default = false; }
+#endif
 
     public Application () {
       Object (application_id: APP_ID,
@@ -96,9 +98,11 @@ namespace Peek {
       force_app_menu ();
       register_actions ();
 
+#if HAS_KEYBINDER
       if (DesktopIntegration.is_x11_backend ()) {
         register_key_bindings ();
       }
+#endif
     }
 
     public void request_quit () {
@@ -115,7 +119,9 @@ namespace Peek {
         recorder.cancel ();
       }
 
+#if HAS_KEYBINDER
       unregister_key_bindings ();
+#endif
 
       base.shutdown ();
     }
@@ -191,6 +197,7 @@ namespace Peek {
 #endif
     }
 
+#if HAS_KEYBINDER
     private void register_key_bindings () {
       var settings = get_app_settings ();
 
@@ -231,6 +238,7 @@ namespace Peek {
         toggle_recording ();
       }
     }
+#endif
 
     private void new_window () {
       try {

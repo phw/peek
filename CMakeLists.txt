@@ -33,7 +33,7 @@ pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
 pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
-pkg_check_modules(KEYBINDER REQUIRED keybinder-3.0)
+pkg_check_modules(KEYBINDER keybinder-3.0)
 
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
@@ -52,10 +52,18 @@ GLIB_COMPILE_RESOURCES(GLIB_RESOURCES
 )
 
 set(VALA_DEFINITIONS "")
+set(VALA_CUSTOM_VAPIS "")
+
+list(APPEND VALA_CUSTOM_VAPIS "src/vapi/config.vapi")
 
 if(NOT CMAKE_BUILD_TYPE STREQUAL Release)
   message (STATUS "Debug build")
   list(APPEND VALA_DEFINITIONS "DEBUG")
+endif()
+
+if(${KEYBINDER_FOUND})
+  list(APPEND VALA_DEFINITIONS "HAS_KEYBINDER")
+  list(APPEND VALA_CUSTOM_VAPIS "src/vapi/keybinder-3.0.vapi")
 endif()
 
 # Check for GTK features
@@ -126,8 +134,7 @@ vala_precompile(VALA_C
   DEFINITIONS
     ${VALA_DEFINITIONS}
   CUSTOM_VAPIS
-    src/vapi/config.vapi
-    src/vapi/keybinder-3.0.vapi
+    ${VALA_CUSTOM_VAPIS}
   GENERATE_HEADER
     application
   OPTIONS
