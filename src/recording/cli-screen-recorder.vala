@@ -14,6 +14,7 @@ namespace Peek.Recording {
   public abstract class CliScreenRecorder : BaseScreenRecorder {
     protected Subprocess subprocess;
     protected OutputStream input;
+    protected int term_sig;
 
     protected bool spawn_record_command (string[] argv) {
       try {
@@ -26,6 +27,7 @@ namespace Peek.Recording {
             subprocess.wait_async.end (res);
             status = subprocess.get_exit_status ();
             success = subprocess.get_successful ();
+            term_sig = subprocess.get_term_sig ();
             debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
               subprocess.get_term_sig (), subprocess.get_exit_status (),
               subprocess.get_successful ().to_string ());
