@@ -115,7 +115,9 @@ namespace Peek.Recording {
     }
 
     protected override void stop_recording () {
-      Posix.kill (pid, Posix.SIGINT);
+      if (subprocess != null) {
+        subprocess.force_exit ();
+      }
     }
 
     protected override PostProcessingPipeline build_post_processor_pipeline () {
