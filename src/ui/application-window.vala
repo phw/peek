@@ -162,6 +162,10 @@ namespace Peek.Ui {
       // Make sure the close button is on the left if desktop environment
       // is configured that way.
       this.set_close_button_position ();
+      
+      // Set record button label
+      // Grab the current format and set the record label with the selected format
+      select_format ("%s".printf(this.recorder.config.output_format)); 
     }
 
 
