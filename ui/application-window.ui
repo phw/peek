@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0
+<!-- Generated with glade 3.20.1 
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -31,7 +31,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="tooltip_text" translatable="yes">Start recording</property>
-    <property name="icon_name">media-playback-start-symbolic</property>
+    <property name="icon_name">media-record-symbolic</property>
   </object>
   <object class="GtkImage" id="icon_stop_button">
     <property name="visible">True</property>
@@ -48,8 +48,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="default_height">250</property>
     <property name="icon_name">com.uploadedlobster.peek</property>
     <property name="show_menubar">False</property>
-    <signal name="screen-changed" handler="on_window_screen_changed" swapped="no"/>
     <signal name="draw" handler="on_window_draw" swapped="no"/>
+    <signal name="screen-changed" handler="on_window_screen_changed" swapped="no"/>
     <child>
       <object class="GtkBox" id="content_area">
         <property name="visible">True</property>
@@ -124,6 +124,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="homogeneous">True</property>
+            <property name="baseline_position">bottom</property>
             <property name="layout_style">start</property>
             <child>
               <object class="GtkButton" id="record_button">
@@ -131,6 +132,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="margin_left">45</property>
                 <property name="image">icon_record_button</property>
                 <property name="relief">half</property>
                 <property name="use_underline">True</property>
@@ -179,9 +181,106 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="non_homogeneous">True</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkMenuButton" id="pop_format_menu">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_right">45</property>
+                <property name="popover">pop_format</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
           </object>
         </child>
       </object>
     </child>
   </template>
+  <object class="GtkPopover" id="pop_format">
+    <property name="can_focus">False</property>
+    <property name="relative_to">record_button</property>
+    <child>
+      <object class="GtkButtonBox">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="orientation">vertical</property>
+        <property name="layout_style">start</property>
+        <child>
+          <object class="GtkButton" id="gif_button">
+            <property name="label" translatable="yes">GIF</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_gif_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="apng_button">
+            <property name="label" translatable="yes">APNG</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_apng_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="webm_button">
+            <property name="label" translatable="yes">WebM</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_webm_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="mp4_button">
+            <property name="label" translatable="yes">MP4</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_mp4_button_clicked" swapped="no"/>
+            <style>
+              <class name="format_button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
 </interface>

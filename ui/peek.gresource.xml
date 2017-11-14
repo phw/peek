@@ -10,5 +10,6 @@
     <!-- Stylesheets -->
     <file>css/peek.css</file>
     <file>css/unity.css</file>
+    <file>css/ambiance.css</file>
   </gresource>
 </gresources>

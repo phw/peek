@@ -43,6 +43,12 @@ namespace Peek.Ui {
     private Button stop_button;
 
     [GtkChild]
+    private Popover pop_format;
+
+    [GtkChild]
+    private MenuButton pop_format_menu;
+
+    [GtkChild]
     private Label size_indicator;
 
     [GtkChild]
@@ -156,7 +162,12 @@ namespace Peek.Ui {
       // Make sure the close button is on the left if desktop environment
       // is configured that way.
       this.set_close_button_position ();
+      
+      // Set record button label
+      // Grab the current format and set the record label with the selected format
+      select_format ("%s".printf(this.recorder.config.output_format)); 
     }
+
 
     public void hide_headerbar () {
       this.get_style_context ().add_class ("headerbar-hidden");
@@ -211,6 +222,24 @@ namespace Peek.Ui {
       this.save_geometry ();
 
       return false;
+    }
+
+    //set format
+    private string get_format_name (string format) {
+      switch (format) {
+        case OUTPUT_FORMAT_APNG: return _("APNG");
+        case OUTPUT_FORMAT_GIF: return _("GIF");
+        case OUTPUT_FORMAT_MP4: return _("MP4");
+        case OUTPUT_FORMAT_WEBM: return _("WebM");
+        default: return "";
+      }
+    }
+
+    private void select_format (string format) {
+      recorder.config.output_format = format;
+      var format_name = get_format_name (format);
+      record_button.set_label (_("Record as %s").printf (format_name));
+      pop_format.hide ();
     }
 
     [GtkCallback]
@@ -282,6 +311,23 @@ namespace Peek.Ui {
             }
         }
       }
+    }
+
+    [GtkCallback]
+    private void on_gif_button_clicked (Button source) {
+      select_format("gif");
+    }
+    [GtkCallback]
+    private void on_apng_button_clicked (Button source) {
+      select_format("apng");
+    }
+    [GtkCallback]
+    private void on_webm_button_clicked (Button source) {
+      select_format("webm");
+    }
+    [GtkCallback]
+    private void on_mp4_button_clicked (Button source) {
+      select_format("mp4");
     }
 
     [GtkCallback]
@@ -368,6 +414,7 @@ namespace Peek.Ui {
       if (!is_recording) {
         is_recording = true;
         size_indicator.opacity = 0.0;
+        pop_format_menu.hide();
         record_button.hide ();
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
           stop_button.set_label (stop_button_label);
@@ -386,6 +433,7 @@ namespace Peek.Ui {
       is_recording = false;
       is_postprocessing = false;
       stop_button.hide ();
+      pop_format_menu.show();
       record_button.show ();
       unfreeze_window_size ();
 
@@ -410,9 +458,21 @@ namespace Peek.Ui {
 
     private void update_input_shape () {
       // Set an input shape so that the recording view is not clickable
+
+
       var window_region = create_region_from_widget (recording_view.get_toplevel ());
       var recording_view_region = create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
+
+      //popover menu
+      if (pop_format.visible) {
+        var pop_style = pop_format.get_style_context();
+        if (DesktopIntegration.get_theme_name () == "Ambiance") {
+          pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
+        }
+        var pop_format_region = create_region_from_widget (pop_format);
+        window_region.union (pop_format_region);
+      }
 
       // The fallback app menu overlaps the recording area
       var fallback_app_menu = get_fallback_app_menu ();

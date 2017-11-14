@@ -1,0 +1,9 @@
+.peek-recording-view-overlay {
+  opacity: 0.8;
+  background-color: rgb(40, 44, 52);
+  color: white;
+}
+
+.format_button:hover{
+  background-color:#e55d2f;
+}
