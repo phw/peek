@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-11-15 06:43+0000\n"
+"PO-Revision-Date: 2017-11-15 07:29+0000\n"
 "Last-Translator: Alessandro <gort818@gmail.com>\n"
 "Language-Team: Italian "
 "<https://hosted.weblate.org/projects/peek/translations/it/>\n"
@@ -27,7 +27,7 @@ msgstr "Mostra la versione del programma ed esci"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Scegli il backend di registrazione (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -49,8 +49,9 @@ msgid "Toggle recording in all running Peek instances"
 msgstr "Riavvia la registrazione in tutte le istanze aperte di Peek."
 
 #: src/application.vala:84
+#, fuzzy
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Avvia peek senza il header bar"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -91,8 +92,9 @@ msgid "Rendering animation…"
 msgstr "Renderizzando…"
 
 #: src/ui/application-window.vala:206
+#, fuzzy
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek si chiuderà alla fine del rendering."
 
 #: src/ui/application-window.vala:230 ui/application-window.ui:234
 #: ui/preferences.ui:208
@@ -224,7 +226,7 @@ msgstr "Formato di Output"
 
 #: ui/preferences.ui:238
 msgid "GIF quality"
-msgstr ""
+msgstr "Qualità del GIF"
 
 #: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
@@ -370,7 +372,7 @@ msgstr "Formato file in output"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Impostazione di qualità per il codificatore del GIF gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
