@@ -165,7 +165,7 @@ namespace Peek.Ui {
 
       // Set record button label
       // Grab the current format and set the record label with the selected format
-      select_format ("%s".printf(this.recorder.config.output_format));
+      select_format (this.recorder.config.output_format);
     }
 
 
@@ -315,19 +315,19 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
-      select_format("gif");
+      select_format (OUTPUT_FORMAT_GIF);
     }
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
-      select_format("apng");
+      select_format (OUTPUT_FORMAT_APNG);
     }
     [GtkCallback]
     private void on_webm_button_clicked (Button source) {
-      select_format("webm");
+      select_format (OUTPUT_FORMAT_WEBM);
     }
     [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
-      select_format("mp4");
+      select_format (OUTPUT_FORMAT_MP4);
     }
 
     [GtkCallback]
