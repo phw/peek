@@ -3,15 +3,16 @@
 # Extract summary and description from AppStream file in the selectec locale.
 # Run as `print-description.py [locales]`, e.g. `print-description.py de it`.
 
-import sys
 import gi
+import os
 import re
+import sys
 gi.require_version('AppStreamGlib', '1.0')
 from gi.repository import AppStreamGlib
 from html2text import HTML2Text
+from subprocess import call
 
-# TODO: Use AppStream file from source tree (needs processing with gettext)
-appstream_file = "/usr/share/metainfo/com.uploadedlobster.peek.appdata.xml"
+appstream_tmp_file = '/tmp/com.uploadedlobster.peek.appdata.xml'
 
 default_locale = 'C'
 locales = [ default_locale ]
@@ -31,9 +32,20 @@ def format_description(text):
     text = re.sub(r"(\s*\n){3,}", "\n\n", text)
     return text
 
+def translate_appstream_template(output_file):
+    cwd = os.path.dirname(os.path.abspath(__file__))
+    appstream_template = os.path.join(cwd, '../data/com.uploadedlobster.peek.appdata.xml.in')
+    call([
+        'msgfmt', '--xml',
+        '--template', appstream_template,
+        '-d', os.path.join(cwd, '../po'),
+        '-o', appstream_tmp_file
+    ])
+
 # Parse AppStream file
+translate_appstream_template(appstream_tmp_file)
 app = AppStreamGlib.App.new()
-app.parse_file(appstream_file, AppStreamGlib.AppParseFlags.NONE)
+app.parse_file(appstream_tmp_file, AppStreamGlib.AppParseFlags.NONE)
 
 for locale in locales:
   name = app.get_name(locale) or app.get_name(default_locale)
@@ -57,3 +69,6 @@ for locale in locales:
     keywords=", ".join(keywords),
   )
   print(text)
+
+# Cleanup temp file
+os.remove(appstream_tmp_file)
