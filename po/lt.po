@@ -11,17 +11,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-07-10 18:36+0000\n"
+"PO-Revision-Date: 2017-11-15 22:40+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
-"translations/lt/>\n"
+"Language-Team: Lithuanian "
+"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
-"X-Generator: Weblate 2.16-dev\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -29,30 +29,27 @@ msgstr "Parodyti programos versiją ir išeiti"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Pasirinkti įrašinėjimo vidinę pusę (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
 msgstr "VIDINĖ PUSĖ"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Pradėti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
+msgstr "Pradėti įrašinėjimą visuose vykdomuose Peek egzemplioriuose"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Stabdyti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
+msgstr "Stabdyti įrašinėjimą visuose vykdomuose Peek egzemplioriuose"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose."
+msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Paleisti Peek be antraštės juostos"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -88,13 +85,12 @@ msgstr ""
 "peek#why-no-native-wayland-support'>DUK apie Wayland palaikymą</a>."
 
 #: src/ui/application-window.vala:205
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Perteikiama…"
+msgstr "Perteikiama animacija…"
 
 #: src/ui/application-window.vala:206
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Užbaigus perteikimą, Peek užsivers."
 
 #: src/ui/application-window.vala:230 ui/application-window.ui:234
 #: ui/preferences.ui:208
@@ -117,9 +113,9 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:241
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "Į_rašinėti"
+msgstr "Įrašinėti kaip %s"
 
 #: src/ui/application-window.vala:388
 msgid "Rendering…"
@@ -226,7 +222,7 @@ msgstr "Išvesties formatas"
 
 #: ui/preferences.ui:238
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF kokybė"
 
 #: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
 msgid "Framerate"
@@ -254,7 +250,7 @@ msgstr "Įrašinėti trumpus animuotus GIF paveikslus iš jūsų ekrano"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "ekrano įrašas;ekrano įrašymas;ekrano rašytuvas;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -330,9 +326,8 @@ msgid "The main window to select the recording area"
 msgstr "Pagrindinis langas, skirtas pasirinkti įrašinėjimo sritį"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Peek nuostatos"
+msgstr "Peek nuostatų dialogas"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
@@ -376,7 +371,7 @@ msgstr "Išvesties failo formatas"
 
 #: data/com.uploadedlobster.peek.gschema.xml:44
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Gifski GIF koduotuvo kokybės nustatymas"
 
 #: data/com.uploadedlobster.peek.gschema.xml:59
 msgid "Resolution downsampling factor"
