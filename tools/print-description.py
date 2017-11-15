@@ -15,10 +15,10 @@ from subprocess import call
 appstream_tmp_file = '/tmp/com.uploadedlobster.peek.appdata.xml'
 
 default_locale = 'C'
-locales = [ default_locale ]
+locales = [default_locale]
 
 if len(sys.argv) > 1:
-  locales = sys.argv[1:]
+    locales = sys.argv[1:]
 
 # Configure html2text
 html2text = HTML2Text()
@@ -27,14 +27,17 @@ html2text.ignore_links = True
 html2text.ignore_images = True
 html2text.ul_item_mark = '-'
 
+
 def format_description(text):
     text = html2text.handle(description).strip()
     text = re.sub(r"(\s*\n){3,}", "\n\n", text)
     return text
 
+
 def translate_appstream_template(output_file):
     cwd = os.path.dirname(os.path.abspath(__file__))
-    appstream_template = os.path.join(cwd, '../data/com.uploadedlobster.peek.appdata.xml.in')
+    appstream_template = os.path.join(
+        cwd, '../data/com.uploadedlobster.peek.appdata.xml.in')
     call([
         'msgfmt', '--xml',
         '--template', appstream_template,
@@ -42,18 +45,20 @@ def translate_appstream_template(output_file):
         '-o', appstream_tmp_file
     ])
 
+
 # Parse AppStream file
 translate_appstream_template(appstream_tmp_file)
 app = AppStreamGlib.App.new()
 app.parse_file(appstream_tmp_file, AppStreamGlib.AppParseFlags.NONE)
 
 for locale in locales:
-  name = app.get_name(locale) or app.get_name(default_locale)
-  summary = app.get_comment(locale) or app.get_comment(default_locale)
-  description = app.get_description(locale) or app.get_description(default_locale)
-  keywords = app.get_keywords(locale) or app.get_keywords(default_locale)
+    name = app.get_name(locale) or app.get_name(default_locale)
+    summary = app.get_comment(locale) or app.get_comment(default_locale)
+    description = app.get_description(
+        locale) or app.get_description(default_locale)
+    keywords = app.get_keywords(locale) or app.get_keywords(default_locale)
 
-  text = """
+    text = """
 {locale}
 {name}
 {summary}
@@ -62,13 +67,13 @@ for locale in locales:
 
 {keywords}
 ---""".format(
-    locale=locale,
-    name=name,
-    summary=summary,
-    description=format_description(description),
-    keywords=", ".join(keywords),
-  )
-  print(text)
+        locale=locale,
+        name=name,
+        summary=summary,
+        description=format_description(description),
+        keywords=", ".join(keywords),
+    )
+    print(text)
 
 # Cleanup temp file
 os.remove(appstream_tmp_file)
