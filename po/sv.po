@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-11-15 06:31+0000\n"
+"PO-Revision-Date: 2017-11-15 06:43+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish "
 "<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
@@ -112,7 +112,7 @@ msgstr "WebM"
 #: src/ui/application-window.vala:241
 #, c-format
 msgid "Record as %s"
-msgstr "_Spela in"
+msgstr "Spela in som %s"
 
 #: src/ui/application-window.vala:388
 msgid "Rendering…"
