@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# This file is distributed under the same license as the peek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: peek\n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
+"POT-Creation-Date: 2017-11-15 07:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: nap\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/application.vala:63
+msgid "Show the version of the program and exit"
+msgstr ""
+
+#: src/application.vala:67
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
+msgstr ""
+
+#: src/application.vala:68
+msgid "BACKEND"
+msgstr ""
+
+#: src/application.vala:72
+msgid "Start recording in all running Peek instances"
+msgstr ""
+
+#: src/application.vala:76
+msgid "Stop recording in all running Peek instances"
+msgstr ""
+
+#: src/application.vala:80
+msgid "Toggle recording in all running Peek instances"
+msgstr ""
+
+#: src/application.vala:84
+msgid "Start Peek without the header bar"
+msgstr ""
+
+#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
+#: data/com.uploadedlobster.peek.appdata.xml.in:7
+msgid "Peek"
+msgstr ""
+
+#: src/application.vala:248
+msgid "Unable to create default screen recorder.\n"
+msgstr ""
+
+#: src/application.vala:261
+#, c-format
+msgid "Unable to initialize backend %s.\n"
+msgstr ""
+
+#: src/application.vala:367
+msgid "Native Wayland backend is unsupported"
+msgstr ""
+
+#: src/application.vala:369
+msgid ""
+"You are running Peek natively on Wayland, this is currently unsupported. "
+"Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ about Wayland support</a>."
+msgstr ""
+
+#: src/ui/application-window.vala:205
+msgid "Rendering animation…"
+msgstr ""
+
+#: src/ui/application-window.vala:206
+msgid "Peek will close when rendering is finished."
+msgstr ""
+
+#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: ui/preferences.ui:208
+msgid "APNG"
+msgstr ""
+
+#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: ui/preferences.ui:207
+msgid "GIF"
+msgstr ""
+
+#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: ui/preferences.ui:210
+msgid "MP4"
+msgstr ""
+
+#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: ui/preferences.ui:209
+msgid "WebM"
+msgstr ""
+
+#: src/ui/application-window.vala:241
+#, c-format
+msgid "Record as %s"
+msgstr ""
+
+#: src/ui/application-window.vala:388
+msgid "Rendering…"
+msgstr ""
+
+#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
+msgid "Save animation"
+msgstr ""
+
+#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
+msgid "_Save"
+msgstr ""
+
+#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
+msgid "_Cancel"
+msgstr ""
+
+#: src/ui/application-window.vala:645
+#, c-format
+msgid "Animation saved as “%s”"
+msgstr ""
+
+#: src/ui/application-window.vala:655
+msgid "Click here to show the saved file in your file manager."
+msgstr ""
+
+#: src/ui/application-window.vala:657
+msgid "Show in file manager"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:149
+msgid "deactivated"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
+msgid "Change"
+msgstr ""
+
+#: src/ui/preferences-dialog.vala:173
+msgid "Press keys…"
+msgstr ""
+
+#: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
+msgid "Animated GIF recorder"
+msgstr ""
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr ""
+
+#: ui/application-window.ui:33 ui/application-window.ui:143
+msgid "Start recording"
+msgstr ""
+
+#: ui/application-window.ui:131
+msgid "_Record"
+msgstr ""
+
+#: ui/application-window.ui:159
+msgid "_Stop"
+msgstr ""
+
+#: ui/application-window.ui:170
+msgid "Stop recording"
+msgstr ""
+
+#: ui/gtk/menus.ui:7
+msgid "New _window"
+msgstr ""
+
+#: ui/gtk/menus.ui:14
+msgid "_Preferences"
+msgstr ""
+
+#: ui/gtk/menus.ui:21
+msgid "_About"
+msgstr ""
+
+#: ui/gtk/menus.ui:25
+msgid "_Quit"
+msgstr ""
+
+#: ui/preferences.ui:77
+msgid "User interface"
+msgstr ""
+
+#: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
+msgid "Open file manager after saving"
+msgstr ""
+
+#: ui/preferences.ui:115
+msgid "Start / stop recording"
+msgstr ""
+
+#: ui/preferences.ui:169
+msgid "Recording"
+msgstr ""
+
+#: ui/preferences.ui:192
+msgid "Output format"
+msgstr ""
+
+#: ui/preferences.ui:238
+msgid "GIF quality"
+msgstr ""
+
+#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
+msgid "Framerate"
+msgstr ""
+
+#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
+msgid "Delay in seconds before recording starts"
+msgstr ""
+
+#: ui/preferences.ui:366
+msgid "Resolution downsampling"
+msgstr ""
+
+#: ui/preferences.ui:398
+msgid "Capture mouse cursor"
+msgstr ""
+
+#: ui/preferences.ui:429
+msgid "Peek preferences"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:8
+msgid "com.uploadedlobster.peek"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:8
+msgid "Simple screen recorder with an easy to use interface"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:13
+msgid ""
+"Peek makes it easy to create short screencasts of a screen area. It was "
+"built for the specific use case of recording screen areas, e.g. for easily "
+"showing UI features of your own apps or for showing a bug in bug reports. "
+"With Peek you simply place the Peek window over the area you want to record "
+"and press \"Record\". Peek is optimized for generating animated GIFs, but "
+"you can also directly record to WebM or MP4 if you prefer."
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:22
+msgid "Features:"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:24
+msgid "Select a screen region to record"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:25
+msgid "Save recorded video as an optimized animated GIF"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:26
+msgid "Record directly to WebM or MP4 format"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:27
+msgid "Simple user interface optimized for the task"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:28
+msgid "Automatically downscale recorded videos"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:29
+msgid "Support for HiDPI screens"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:30
+msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:32
+msgid ""
+"Peek is not a general purpose screencast app with extended features but "
+"rather focuses on the single task of creating small, silent screencasts of "
+"an area of the screen for creating GIF animations or silent WebM or MP4 "
+"videos."
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:43
+msgid "The main window to select the recording area"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:47
+msgid "Peek's preferences dialog"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:51
+msgid "Peek is recording itself"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:81
+msgid "Philipp Wolfer"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:11
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops."
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:14
+msgid "\"Peek %Y-%m-%d %H-%M\""
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:15
+msgid ""
+"Default file name used. Can include date format specifiers. The extension "
+"will be added automatically."
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:19
+msgid "Prefer dark theme"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:23
+msgid "Global keybinding to toggle recording"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:39
+msgid "Output file format"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:44
+msgid "Quality setting for the gifski GIF encoder"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:59
+msgid "Resolution downsampling factor"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:63
+msgid "Whether to capture the mouse cursor"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:67
+msgid "Size and position of the last open main window"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:71
+msgid "Path where last video got saved"
+msgstr ""
