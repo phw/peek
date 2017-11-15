@@ -502,7 +502,9 @@ namespace Peek.Ui {
 
       this.forall ((child)  => {
         if (child is Gtk.Popover) {
-          fallback_app_menu = child;
+          if (child.get_name() == (null)) {
+            fallback_app_menu = child;
+          }
         }
       });
 
