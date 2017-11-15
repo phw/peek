@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 15:10+0100\n"
+"POT-Creation-Date: 2017-11-15 07:22+0100\n"
 "PO-Revision-Date: 2017-11-04 18:43+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
@@ -19,56 +19,56 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.18-dev\n"
 
-#: src/application.vala:61
+#: src/application.vala:63
 msgid "Show the version of the program and exit"
 msgstr "Прикажи издање програма и изађи"
 
-#: src/application.vala:65
+#: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
 
-#: src/application.vala:66
+#: src/application.vala:68
 msgid "BACKEND"
 msgstr "ПОЗАДИНАЦ"
 
-#: src/application.vala:70
+#: src/application.vala:72
 #, fuzzy
 msgid "Start recording in all running Peek instances"
 msgstr "Крени са снимањем у свим покренутим виркалима."
 
-#: src/application.vala:74
+#: src/application.vala:76
 #, fuzzy
 msgid "Stop recording in all running Peek instances"
 msgstr "Стани са снимањем у свим покренутим виркалима."
 
-#: src/application.vala:78
+#: src/application.vala:80
 #, fuzzy
 msgid "Toggle recording in all running Peek instances"
 msgstr "Промени стање снимања у свим покренутим виркалима."
 
-#: src/application.vala:82
+#: src/application.vala:84
 msgid "Start Peek without the header bar"
 msgstr ""
 
-#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Виркало"
 
-#: src/application.vala:240
+#: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
 msgstr "Не могу да направим подразумеваног снимача екрана.\n"
 
-#: src/application.vala:253
+#: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Не могу да покренем позадинца „%s“.\n"
 
-#: src/application.vala:357
+#: src/application.vala:367
 msgid "Native Wayland backend is unsupported"
 msgstr "Домаћи Вејленд позадинац није подржан"
 
-#: src/application.vala:359
+#: src/application.vala:369
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -84,53 +84,78 @@ msgstr ""
 "com/phw/peek#why-no-native-wayland-support'>везана за подршку на Вејленду</"
 "a>."
 
-#: src/ui/application-window.vala:193
+#: src/ui/application-window.vala:205
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:194
+#: src/ui/application-window.vala:206
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:341
+#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: ui/preferences.ui:208
+msgid "APNG"
+msgstr "APNG"
+
+#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: ui/preferences.ui:207
+msgid "GIF"
+msgstr "ГИФ"
+
+#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: ui/preferences.ui:210
+msgid "MP4"
+msgstr "МП4"
+
+#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: ui/preferences.ui:209
+msgid "WebM"
+msgstr "ВебМ видео"
+
+#: src/ui/application-window.vala:241
+#, fuzzy, c-format
+msgid "Record as %s"
+msgstr "_Снимај"
+
+#: src/ui/application-window.vala:388
 msgid "Rendering…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
+#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
 msgid "Save animation"
 msgstr "Сачувај анимацију"
 
-#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
+#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
 msgid "_Save"
 msgstr "_Сачувај"
 
-#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
+#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
 msgid "_Cancel"
 msgstr "_Откажи"
 
-#: src/ui/application-window.vala:582
+#: src/ui/application-window.vala:645
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимација је сачувана као „%s“"
 
-#: src/ui/application-window.vala:592
+#: src/ui/application-window.vala:655
 msgid "Click here to show the saved file in your file manager."
 msgstr "Кликните овде да видите сачувану датотеку у вашем управнику датотека."
 
-#: src/ui/application-window.vala:594
+#: src/ui/application-window.vala:657
 msgid "Show in file manager"
 msgstr "Прикажи у управнику датотека"
 
-#: src/ui/preferences-dialog.vala:142
+#: src/ui/preferences-dialog.vala:149
 msgid "deactivated"
 msgstr "непокренуто"
 
-#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
+#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
 msgid "Change"
 msgstr "Промени"
 
-#: src/ui/preferences-dialog.vala:166
+#: src/ui/preferences-dialog.vala:173
 msgid "Press keys…"
 msgstr "Притисни тастере…"
 
@@ -144,19 +169,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Марко М. Костић <marko.m.kostic@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:141
+#: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"
 msgstr "Крени са снимањем"
 
-#: ui/application-window.ui:130
+#: ui/application-window.ui:131
 msgid "_Record"
 msgstr "_Снимај"
 
-#: ui/application-window.ui:157
+#: ui/application-window.ui:159
 msgid "_Stop"
 msgstr "_Заустави"
 
-#: ui/application-window.ui:168
+#: ui/application-window.ui:170
 msgid "Stop recording"
 msgstr "Заустави снимање"
 
@@ -196,22 +221,6 @@ msgstr "Снимање"
 msgid "Output format"
 msgstr "Излазни формат"
 
-#: ui/preferences.ui:207
-msgid "GIF"
-msgstr "ГИФ"
-
-#: ui/preferences.ui:208
-msgid "APNG"
-msgstr "APNG"
-
-#: ui/preferences.ui:209
-msgid "WebM"
-msgstr "ВебМ видео"
-
-#: ui/preferences.ui:210
-msgid "MP4"
-msgstr "МП4"
-
 #: ui/preferences.ui:238
 msgid "GIF quality"
 msgstr ""
@@ -241,6 +250,10 @@ msgid "Record short animated GIF images from your screen"
 msgstr "Снимајте кратке анимиране ГИФ слике на вашем екрану"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 

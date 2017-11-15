@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 15:10+0100\n"
+"POT-Creation-Date: 2017-11-15 07:22+0100\n"
 "PO-Revision-Date: 2017-11-07 22:29+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Dutch "
-"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,53 +19,53 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18-dev\n"
 
-#: src/application.vala:61
+#: src/application.vala:63
 msgid "Show the version of the program and exit"
 msgstr "Applicatieversie weergeven en afsluiten"
 
-#: src/application.vala:65
+#: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr "Selecteer het opname-backend (gnome-shell, ffmpeg)"
 
-#: src/application.vala:66
+#: src/application.vala:68
 msgid "BACKEND"
 msgstr "BACKEND"
 
-#: src/application.vala:70
+#: src/application.vala:72
 msgid "Start recording in all running Peek instances"
 msgstr "Begin met opnemen in alle draaiende Peek-processen"
 
-#: src/application.vala:74
+#: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
 msgstr "Stop met opnemen in alle draaiende Peek-processen"
 
-#: src/application.vala:78
+#: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
 msgstr "Opnemen in alle draaiende Peek-processen in-/uitschakelen"
 
-#: src/application.vala:82
+#: src/application.vala:84
 msgid "Start Peek without the header bar"
 msgstr "Peek starten zonder kopbalk"
 
-#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:240
+#: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
 msgstr "Het creëren van de standaard schermopnemer is mislukt.\n"
 
-#: src/application.vala:253
+#: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Het initialiseren van %s-backend is mislukt.\n"
 
-#: src/application.vala:357
+#: src/application.vala:367
 msgid "Native Wayland backend is unsupported"
 msgstr "Het Wayland-backend wordt niet ondersteund"
 
-#: src/application.vala:359
+#: src/application.vala:369
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -79,54 +79,79 @@ msgstr ""
 "Meer informatie is te vinden in de <a href='https://github.com/phw/peek#why-"
 "no-native-wayland-support'>FAQ over Wayland-ondersteuning</a>."
 
-#: src/ui/application-window.vala:193
+#: src/ui/application-window.vala:205
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Bezig met renderen…"
 
-#: src/ui/application-window.vala:194
+#: src/ui/application-window.vala:206
 msgid "Peek will close when rendering is finished."
 msgstr "Peek zal worden afgesloten nadat het renderen is voltooid."
 
-#: src/ui/application-window.vala:341
+#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: ui/preferences.ui:208
+msgid "APNG"
+msgstr "APNG"
+
+#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: ui/preferences.ui:207
+msgid "GIF"
+msgstr "GIF"
+
+#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: ui/preferences.ui:210
+msgid "MP4"
+msgstr "MP4"
+
+#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: ui/preferences.ui:209
+msgid "WebM"
+msgstr "WebM"
+
+#: src/ui/application-window.vala:241
+#, fuzzy, c-format
+msgid "Record as %s"
+msgstr "_Opnemen"
+
+#: src/ui/application-window.vala:388
 msgid "Rendering…"
 msgstr "Bezig met renderen…"
 
-#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
+#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
 msgid "Save animation"
 msgstr "Animatie opslaan"
 
-#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
+#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
 msgid "_Save"
 msgstr "_Opslaan"
 
-#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
+#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
 msgid "_Cancel"
 msgstr "-Annuleren"
 
-#: src/ui/application-window.vala:582
+#: src/ui/application-window.vala:645
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "De animatie is opgeslagen als \"%s\""
 
-#: src/ui/application-window.vala:592
+#: src/ui/application-window.vala:655
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Klik hier om het opgeslagen bestand weer te geven in uw bestandsbeheerder."
 
-#: src/ui/application-window.vala:594
+#: src/ui/application-window.vala:657
 msgid "Show in file manager"
 msgstr "Weergeven in bestandsbeheerder"
 
-#: src/ui/preferences-dialog.vala:142
+#: src/ui/preferences-dialog.vala:149
 msgid "deactivated"
 msgstr "uitgeschakeld"
 
-#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
+#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
 msgid "Change"
 msgstr "Wijzigen"
 
-#: src/ui/preferences-dialog.vala:166
+#: src/ui/preferences-dialog.vala:173
 msgid "Press keys…"
 msgstr "Houdt toetsen ingedrukt…"
 
@@ -140,19 +165,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Heimen Stoffels"
 
-#: ui/application-window.ui:33 ui/application-window.ui:141
+#: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"
 msgstr "Opname starten"
 
-#: ui/application-window.ui:130
+#: ui/application-window.ui:131
 msgid "_Record"
 msgstr "_Opnemen"
 
-#: ui/application-window.ui:157
+#: ui/application-window.ui:159
 msgid "_Stop"
 msgstr "_Stoppen"
 
-#: ui/application-window.ui:168
+#: ui/application-window.ui:170
 msgid "Stop recording"
 msgstr "Opname stoppen"
 
@@ -192,22 +217,6 @@ msgstr "Opname"
 msgid "Output format"
 msgstr "Uitvoerformaat"
 
-#: ui/preferences.ui:207
-msgid "GIF"
-msgstr "GIF"
-
-#: ui/preferences.ui:208
-msgid "APNG"
-msgstr "APNG"
-
-#: ui/preferences.ui:209
-msgid "WebM"
-msgstr "WebM"
-
-#: ui/preferences.ui:210
-msgid "MP4"
-msgstr "MP4"
-
 #: ui/preferences.ui:238
 msgid "GIF quality"
 msgstr "GIF-kwaliteit"
@@ -237,6 +246,10 @@ msgid "Record short animated GIF images from your screen"
 msgstr "Korte bewegende GIF-afbeeldingen opnemen van uw scherm"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 

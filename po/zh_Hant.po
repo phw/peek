@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 15:10+0100\n"
+"POT-Creation-Date: 2017-11-15 07:22+0100\n"
 "PO-Revision-Date: 2017-11-07 14:43+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Chinese (Traditional) "
-"<https://hosted.weblate.org/projects/peek/translations/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"peek/translations/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,53 +19,53 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.18-dev\n"
 
-#: src/application.vala:61
+#: src/application.vala:63
 msgid "Show the version of the program and exit"
 msgstr "顯示程式版本後結束"
 
-#: src/application.vala:65
+#: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
 
-#: src/application.vala:66
+#: src/application.vala:68
 msgid "BACKEND"
 msgstr "後端名稱"
 
-#: src/application.vala:70
+#: src/application.vala:72
 msgid "Start recording in all running Peek instances"
 msgstr "讓所有執行中的 Peek 開始錄影"
 
-#: src/application.vala:74
+#: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
 msgstr "讓所有執行中的 Peek 停止錄影"
 
-#: src/application.vala:78
+#: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
 msgstr "切換所有執行中的 Peek 的錄影狀態"
 
-#: src/application.vala:82
+#: src/application.vala:84
 msgid "Start Peek without the header bar"
 msgstr ""
 
-#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:240
+#: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
 msgstr "無法建立預設的螢幕錄影器。\n"
 
-#: src/application.vala:253
+#: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "無法初始化後端 %s。\n"
 
-#: src/application.vala:357
+#: src/application.vala:367
 msgid "Native Wayland backend is unsupported"
 msgstr "尚未支援 Wayland 原生模式後端"
 
-#: src/application.vala:359
+#: src/application.vala:369
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -79,53 +79,78 @@ msgstr ""
 "更多細節請造訪有關 <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>Peek Wayland 支援的 FAQ</a>。"
 
-#: src/ui/application-window.vala:193
+#: src/ui/application-window.vala:205
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "正在輸出…"
 
-#: src/ui/application-window.vala:194
+#: src/ui/application-window.vala:206
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:341
+#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: ui/preferences.ui:208
+msgid "APNG"
+msgstr "APNG"
+
+#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: ui/preferences.ui:207
+msgid "GIF"
+msgstr "GIF"
+
+#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: ui/preferences.ui:210
+msgid "MP4"
+msgstr "MP4"
+
+#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: ui/preferences.ui:209
+msgid "WebM"
+msgstr "WebM"
+
+#: src/ui/application-window.vala:241
+#, fuzzy, c-format
+msgid "Record as %s"
+msgstr "錄影"
+
+#: src/ui/application-window.vala:388
 msgid "Rendering…"
 msgstr "正在輸出…"
 
-#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
+#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
 msgid "Save animation"
 msgstr "儲存動畫"
 
-#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
+#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
 msgid "_Save"
 msgstr "儲存"
 
-#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
+#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
 msgid "_Cancel"
 msgstr "取消"
 
-#: src/ui/application-window.vala:582
+#: src/ui/application-window.vala:645
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "動畫已儲存至 %s"
 
-#: src/ui/application-window.vala:592
+#: src/ui/application-window.vala:655
 msgid "Click here to show the saved file in your file manager."
 msgstr "點選這裡以在檔案管理器中顯示儲存的檔案。"
 
-#: src/ui/application-window.vala:594
+#: src/ui/application-window.vala:657
 msgid "Show in file manager"
 msgstr "在檔案管理器中顯示"
 
-#: src/ui/preferences-dialog.vala:142
+#: src/ui/preferences-dialog.vala:149
 msgid "deactivated"
 msgstr "已停用快速鍵"
 
-#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
+#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
 msgid "Change"
 msgstr "更改"
 
-#: src/ui/preferences-dialog.vala:166
+#: src/ui/preferences-dialog.vala:173
 msgid "Press keys…"
 msgstr "按下欲設定為快速鍵的按鍵…"
 
@@ -139,19 +164,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "coin3x"
 
-#: ui/application-window.ui:33 ui/application-window.ui:141
+#: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"
 msgstr "開始錄影"
 
-#: ui/application-window.ui:130
+#: ui/application-window.ui:131
 msgid "_Record"
 msgstr "錄影"
 
-#: ui/application-window.ui:157
+#: ui/application-window.ui:159
 msgid "_Stop"
 msgstr "停止"
 
-#: ui/application-window.ui:168
+#: ui/application-window.ui:170
 msgid "Stop recording"
 msgstr "停止錄影"
 
@@ -191,22 +216,6 @@ msgstr "錄影"
 msgid "Output format"
 msgstr "輸出格式"
 
-#: ui/preferences.ui:207
-msgid "GIF"
-msgstr "GIF"
-
-#: ui/preferences.ui:208
-msgid "APNG"
-msgstr "APNG"
-
-#: ui/preferences.ui:209
-msgid "WebM"
-msgstr "WebM"
-
-#: ui/preferences.ui:210
-msgid "MP4"
-msgstr "MP4"
-
 #: ui/preferences.ui:238
 msgid "GIF quality"
 msgstr ""
@@ -236,6 +245,10 @@ msgid "Record short animated GIF images from your screen"
 msgstr "從您的螢幕上錄製簡短的 GIF 動畫"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-07 15:10+0100\n"
+"POT-Creation-Date: 2017-11-15 07:22+0100\n"
 "PO-Revision-Date: 2017-10-13 09:24+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
@@ -19,57 +19,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.17-dev\n"
 
-#: src/application.vala:61
+#: src/application.vala:63
 msgid "Show the version of the program and exit"
 msgstr "Erakutsi programaren bertsioa eta irten"
 
-#: src/application.vala:65
+#: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
 msgstr ""
 
-#: src/application.vala:66
+#: src/application.vala:68
 msgid "BACKEND"
 msgstr "MOTORRA"
 
-#: src/application.vala:70
+#: src/application.vala:72
 #, fuzzy
 msgid "Start recording in all running Peek instances"
 msgstr "Hasi grabatzen martxan dauden Peek instantzia guztiak."
 
-#: src/application.vala:74
+#: src/application.vala:76
 #, fuzzy
 msgid "Stop recording in all running Peek instances"
 msgstr "Gelditu martxan dauden Peek instantzia guztien grabazioa."
 
-#: src/application.vala:78
+#: src/application.vala:80
 #, fuzzy
 msgid "Toggle recording in all running Peek instances"
 msgstr ""
 "Aktibatu/desaktibatu grabazioa martxan dauden Peek instantzia guztietan."
 
-#: src/application.vala:82
+#: src/application.vala:84
 msgid "Start Peek without the header bar"
 msgstr ""
 
-#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:240
+#: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
 msgstr "Ezin izan du lehenetsitako pantaila grabagailua sortu.\n"
 
-#: src/application.vala:253
+#: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Ezin izan du  %s 1 motorra abiarazi.\n"
 
-#: src/application.vala:357
+#: src/application.vala:367
 msgid "Native Wayland backend is unsupported"
 msgstr "Jatorrizko Wayland motorra ez da onartzen"
 
-#: src/application.vala:359
+#: src/application.vala:369
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -83,53 +83,78 @@ msgstr ""
 "Xehetasunetarako ikusi Peek <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'> 3 Wayland soportearen gaineko ohiko galderak</a> 4."
 
-#: src/ui/application-window.vala:193
+#: src/ui/application-window.vala:205
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Errendatzen…"
 
-#: src/ui/application-window.vala:194
+#: src/ui/application-window.vala:206
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:341
+#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: ui/preferences.ui:208
+msgid "APNG"
+msgstr "APNG"
+
+#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: ui/preferences.ui:207
+msgid "GIF"
+msgstr "GIF"
+
+#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: ui/preferences.ui:210
+msgid "MP4"
+msgstr "MP4"
+
+#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: ui/preferences.ui:209
+msgid "WebM"
+msgstr "WebM"
+
+#: src/ui/application-window.vala:241
+#, fuzzy, c-format
+msgid "Record as %s"
+msgstr "_Grabatu"
+
+#: src/ui/application-window.vala:388
 msgid "Rendering…"
 msgstr "Errendatzen…"
 
-#: src/ui/application-window.vala:489 src/ui/application-window.vala:494
+#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
 msgid "Save animation"
 msgstr "Gorde animazioa"
 
-#: src/ui/application-window.vala:490 src/ui/application-window.vala:497
+#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
 msgid "_Save"
 msgstr "_Gorde"
 
-#: src/ui/application-window.vala:491 src/ui/application-window.vala:495
+#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: src/ui/application-window.vala:582
+#: src/ui/application-window.vala:645
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "“%s 1” izenez gordetako animazioa"
 
-#: src/ui/application-window.vala:592
+#: src/ui/application-window.vala:655
 msgid "Click here to show the saved file in your file manager."
 msgstr "Sakatu hemen ikusteko gordetako fitxategia arakatzailean."
 
-#: src/ui/application-window.vala:594
+#: src/ui/application-window.vala:657
 msgid "Show in file manager"
 msgstr "Erakutsi fitxategien arakatzailean"
 
-#: src/ui/preferences-dialog.vala:142
+#: src/ui/preferences-dialog.vala:149
 msgid "deactivated"
 msgstr "desaktibatuta"
 
-#: src/ui/preferences-dialog.vala:153 src/ui/preferences-dialog.vala:169
+#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
 msgid "Change"
 msgstr "Aldatu"
 
-#: src/ui/preferences-dialog.vala:166
+#: src/ui/preferences-dialog.vala:173
 msgid "Press keys…"
 msgstr "Sakatu teklak…"
 
@@ -143,19 +168,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Alexander Gabilondo"
 
-#: ui/application-window.ui:33 ui/application-window.ui:141
+#: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"
 msgstr "Hasi grabatzen"
 
-#: ui/application-window.ui:130
+#: ui/application-window.ui:131
 msgid "_Record"
 msgstr "_Grabatu"
 
-#: ui/application-window.ui:157
+#: ui/application-window.ui:159
 msgid "_Stop"
 msgstr "_Gelditu"
 
-#: ui/application-window.ui:168
+#: ui/application-window.ui:170
 msgid "Stop recording"
 msgstr "Gelditu grabazioa"
 
@@ -195,22 +220,6 @@ msgstr "Grabatzen"
 msgid "Output format"
 msgstr "Irteera formatua"
 
-#: ui/preferences.ui:207
-msgid "GIF"
-msgstr "GIF"
-
-#: ui/preferences.ui:208
-msgid "APNG"
-msgstr "APNG"
-
-#: ui/preferences.ui:209
-msgid "WebM"
-msgstr "WebM"
-
-#: ui/preferences.ui:210
-msgid "MP4"
-msgstr "MP4"
-
 #: ui/preferences.ui:238
 msgid "GIF quality"
 msgstr ""
@@ -240,6 +249,10 @@ msgid "Record short animated GIF images from your screen"
 msgstr "Grabatu zure pantailaren gif animatu txikiak"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 
