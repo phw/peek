@@ -112,7 +112,7 @@ msgstr "WebM"
 #: src/ui/application-window.vala:241
 #, c-format
 msgid "Record as %s"
-msgstr "_Spela in"
+msgstr "_Spela in %s"
 
 #: src/ui/application-window.vala:388
 msgid "Rendering…"
