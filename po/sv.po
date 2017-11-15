@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-11-07 14:41+0000\n"
+"PO-Revision-Date: 2017-11-15 06:31+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
-"translations/sv/>\n"
+"Language-Team: Swedish "
+"<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,7 +110,7 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:241
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
 msgstr "_Spela in"
 
@@ -247,7 +247,7 @@ msgstr "Spela in korta animerade GIF-bilder från skärmen"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "skärminspelning;skärminspelare;skärmklipp;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
