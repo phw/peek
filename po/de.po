@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-11-07 14:13+0000\n"
+"PO-Revision-Date: 2017-11-15 06:34+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,9 +111,9 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:241
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "Auf_nehmen"
+msgstr "Auf_nehmen als %s"
 
 #: src/ui/application-window.vala:388
 msgid "Rendering…"
@@ -250,7 +250,7 @@ msgstr "Kurze GIF-Animationen vom Bildschirm aufnehmen"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "screencast;screen recorder;Bildschirmaufnahme;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
