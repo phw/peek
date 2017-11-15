@@ -8,6 +8,7 @@ This software is licensed under the GNU General Public License
 */
 
 using Gtk;
+using Cairo;
 
 namespace Peek {
 
@@ -35,6 +36,20 @@ namespace Peek {
       }
 
       return null;
+    }
+
+    public static Region create_region_from_widget (Widget widget) {
+      var rectangle = Cairo.RectangleInt () {
+        width = widget.get_allocated_width (),
+        height = widget.get_allocated_height ()
+      };
+
+      widget.translate_coordinates (
+        widget.get_toplevel(), 0, 0,
+        out rectangle.x, out rectangle.y);
+      var region = new Region.rectangle (rectangle);
+
+      return region;
     }
   }
 }

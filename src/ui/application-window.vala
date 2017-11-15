@@ -162,10 +162,10 @@ namespace Peek.Ui {
       // Make sure the close button is on the left if desktop environment
       // is configured that way.
       this.set_close_button_position ();
-      
+
       // Set record button label
       // Grab the current format and set the record label with the selected format
-      select_format ("%s".printf(this.recorder.config.output_format)); 
+      select_format ("%s".printf(this.recorder.config.output_format));
     }
 
 
@@ -460,8 +460,8 @@ namespace Peek.Ui {
       // Set an input shape so that the recording view is not clickable
 
 
-      var window_region = create_region_from_widget (recording_view.get_toplevel ());
-      var recording_view_region = create_region_from_widget (recording_view);
+      var window_region = GtkHelper.create_region_from_widget (recording_view.get_toplevel ());
+      var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
 
       //popover menu
@@ -470,14 +470,14 @@ namespace Peek.Ui {
         if (DesktopIntegration.get_theme_name () == "Ambiance") {
           pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
         }
-        var pop_format_region = create_region_from_widget (pop_format);
+        var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
 
       // The fallback app menu overlaps the recording area
       var fallback_app_menu = get_fallback_app_menu ();
       if (fallback_app_menu != null && fallback_app_menu.visible) {
-        var app_menu_region = create_region_from_widget (fallback_app_menu);
+        var app_menu_region = GtkHelper.create_region_from_widget (fallback_app_menu);
         window_region.union (app_menu_region);
       }
 
@@ -526,20 +526,6 @@ namespace Peek.Ui {
       this.set_size_request (0, 0);
       this.set_default_size (width, height);
       this.resizable = true;
-    }
-
-    private Region create_region_from_widget (Widget widget) {
-      var rectangle = Cairo.RectangleInt () {
-        width = widget.get_allocated_width (),
-        height = widget.get_allocated_height ()
-      };
-
-      widget.translate_coordinates (
-        widget.get_toplevel(), 0, 0,
-        out rectangle.x, out rectangle.y);
-      var region = new Region.rectangle (rectangle);
-
-      return region;
     }
 
     private RecordingArea get_recording_area () {
