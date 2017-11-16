@@ -124,6 +124,10 @@ namespace Peek.Ui {
         this.recorder.config, "output_format",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-gifski-enabled",
+        this.recorder.config, "gifski_enabled",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-gifski-quality",
         this.recorder.config, "gifski_quality",
         SettingsBindFlags.DEFAULT);

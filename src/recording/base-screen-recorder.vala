@@ -75,7 +75,7 @@ namespace Peek.Recording {
       var pipeline = new PostProcessingPipeline ();
 
       if (config.output_format == OUTPUT_FORMAT_GIF) {
-        if (GifskiPostProcessor.is_available ()) {
+        if (config.gifski_enabled && GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
           pipeline.add (new GifskiPostProcessor (config));
         } else if (FfmpegPostProcessor.is_available ()) {
