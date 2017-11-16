@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: 2017-11-15 07:29+0000\n"
+"PO-Revision-Date: 2017-11-16 07:43+0000\n"
 "Last-Translator: Alessandro <gort818@gmail.com>\n"
 "Language-Team: Italian "
 "<https://hosted.weblate.org/projects/peek/translations/it/>\n"
@@ -34,14 +34,12 @@ msgid "BACKEND"
 msgstr "BACKEND"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Avvia la registrazione in tutte le istanze aperte di Peek."
+msgstr "Avvia la registrazione in tutte le istanze aperte di Peek"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Ferma la registrazione in tutte le istanze aperte di Peek."
+msgstr "Ferma la registrazione in tutte le istanze aperte di Peek"
 
 #: src/application.vala:80
 #, fuzzy
@@ -49,9 +47,8 @@ msgid "Toggle recording in all running Peek instances"
 msgstr "Riavvia la registrazione in tutte le istanze aperte di Peek."
 
 #: src/application.vala:84
-#, fuzzy
 msgid "Start Peek without the header bar"
-msgstr "Avvia peek senza il header bar"
+msgstr "Avvia peek senza del header bar"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
