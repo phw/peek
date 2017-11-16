@@ -568,7 +568,7 @@ namespace Peek.Ui {
       var default_name = now.format (filename);
       chooser.set_current_name (default_name);
 
-      debug ("Showing file chooser");
+      debug ("Showing file chooser (%s)", chooser.get_type ().name ());
       if (chooser.run () == ResponseType.ACCEPT) {
         debug ("Selected file %s", chooser.get_uri ());
         this.out_file = chooser.get_file ();
