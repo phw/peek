@@ -48,8 +48,13 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_report_issue_button_clicked (Button source) {
       try {
+#if HAS_GTK_SHOW_URI_ON_WINDOW
         show_uri_on_window (
           this, ISSUE_TRACKER_URL, Gdk.CURRENT_TIME);
+#else
+        show_uri (
+          this.get_screen (), ISSUE_TRACKER_URL, Gdk.CURRENT_TIME);
+#endif
       } catch (Error e) {
         stdout.printf ("Error opening issue tracker URL: %s", e.message);
       }

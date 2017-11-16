@@ -87,6 +87,7 @@ if(${GTK_VERSION} VERSION_EQUAL "3.22" OR ${GTK_VERSION} VERSION_GREATER "3.22")
   message(STATUS "Compiling with features for GTK >= 3.22")
   set(REQUIRE_GTK "3.22")
   list(APPEND VALA_DEFINITIONS "HAS_GTK_SHORTCUT_LABEL")
+  list(APPEND VALA_DEFINITIONS "HAS_GTK_SHOW_URI_ON_WINDOW")
 endif()
 
 # Flags for disabling certain features
