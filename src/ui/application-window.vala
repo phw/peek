@@ -92,9 +92,11 @@ namespace Peek.Ui {
       this.recorder.recording_aborted.connect ((reason) => {
         if (reason != null) {
           stderr.printf ("Recording canceled: %s\n", reason.message);
+          ErrorDialog.present_single_instance (this, reason);
         } else {
           stderr.printf ("Recording canceled\n");
         }
+
         this.in_file = null;
         leave_recording_state ();
       });
