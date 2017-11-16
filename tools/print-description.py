@@ -42,7 +42,7 @@ def translate_appstream_template(output_file):
         'msgfmt', '--xml',
         '--template', appstream_template,
         '-d', os.path.join(cwd, '../po'),
-        '-o', appstream_tmp_file
+        '-o', output_file
     ])
 
 
