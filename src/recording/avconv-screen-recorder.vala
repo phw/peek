@@ -114,12 +114,6 @@ namespace Peek.Recording {
         Process.exit_status (status) == 255;
     }
 
-    protected override void stop_recording () {
-      if (subprocess != null) {
-        subprocess.force_exit ();
-      }
-    }
-
     protected override PostProcessingPipeline build_post_processor_pipeline () {
       var pipeline = new PostProcessingPipeline ();
 

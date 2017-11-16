@@ -78,6 +78,12 @@ namespace Peek.Recording {
       }
     }
 
+    protected override void stop_recording () {
+      if (subprocess != null) {
+        subprocess.force_exit ();
+      }
+    }
+
     protected virtual bool is_exit_status_success (int status) {
       return Utils.is_exit_status_success (status);
     }
