@@ -53,13 +53,19 @@ namespace Peek.Ui {
     private Gtk.ComboBoxText recording_output_format_combo_box;
 
     [GtkChild]
-    private Gtk.Box recording_quality_box;
+    private Gtk.Box recording_gifski_settings;
 
     [GtkChild]
-    private Gtk.Adjustment recording_quality;
+    private Gtk.CheckButton recording_gifski_enabled;
 
     [GtkChild]
-    private Gtk.Scale recording_quality_scale;
+    private Gtk.Box recording_gifski_quality_box;
+
+    [GtkChild]
+    private Gtk.Adjustment recording_gifski_quality;
+
+    [GtkChild]
+    private Gtk.Scale recording_gifski_quality_scale;
 
     [GtkChild]
     private Gtk.Adjustment recording_start_delay;
@@ -87,8 +93,12 @@ namespace Peek.Ui {
         recording_output_format_combo_box, "active_id",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-gifski-enabled",
+        recording_gifski_enabled, "active",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-gifski-quality",
-        recording_quality, "value",
+        recording_gifski_quality, "value",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("recording-start-delay",
@@ -107,18 +117,15 @@ namespace Peek.Ui {
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
 
+      on_gifski_toggled (recording_gifski_enabled);
+
       for (int i = 20; i <= 100; i += 20) {
-        recording_quality_scale.add_mark (i, PositionType.BOTTOM, null);
+        recording_gifski_quality_scale.add_mark (i, PositionType.BOTTOM, null);
       }
 
       if (!PostProcessing.GifskiPostProcessor.is_available ()) {
-        recording_quality_box.hide ();
+        recording_gifski_settings.hide ();
       }
-
-      recording_output_format_combo_box.changed.connect (() => {
-        recording_quality_box.sensitive =
-          (recording_output_format_combo_box.active_id == OUTPUT_FORMAT_GIF);
-      });
 
 #if HAS_KEYBINDER
       if (DesktopIntegration.is_x11_backend ()) {
@@ -133,6 +140,17 @@ namespace Peek.Ui {
 #if DISABLE_OPEN_FILE_MANAGER
       interface_open_file_manager.hide();
 #endif
+    }
+
+    [GtkCallback]
+    private void on_output_format_changed () {
+      recording_gifski_settings.sensitive =
+        (recording_output_format_combo_box.active_id == OUTPUT_FORMAT_GIF);
+    }
+
+    [GtkCallback]
+    private void on_gifski_toggled (ToggleButton source) {
+      recording_gifski_quality_box.sensitive = source.active;
     }
 
 #if HAS_KEYBINDER

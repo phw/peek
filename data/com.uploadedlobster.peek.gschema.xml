@@ -38,6 +38,10 @@
       <default>"gif"</default>
       <summary>Output file format</summary>
     </key>
+    <key name="recording-gifski-enabled" type="b">
+      <default>false</default>
+      <summary>Use gifski for high quality GIFs</summary>
+    </key>
     <key name="recording-gifski-quality" type="i">
       <range min="20" max="100"/>
       <default>60</default>
