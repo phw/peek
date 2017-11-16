@@ -20,7 +20,7 @@ namespace Peek.Recording {
 
     public signal void recording_finished (File file);
 
-    public signal void recording_aborted (int status);
+    public signal void recording_aborted (RecordingError? reason);
 
     public abstract bool record (RecordingArea area);
 

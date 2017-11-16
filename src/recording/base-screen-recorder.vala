@@ -51,7 +51,7 @@ namespace Peek.Recording {
           FileUtils.chmod (file.get_path (), 0644);
           recording_finished (file);
         } else {
-          recording_aborted (0);
+          recording_aborted (null);
         }
       });
       recording_postprocess_started ();
@@ -63,11 +63,11 @@ namespace Peek.Recording {
         is_recording = false;
         stop_recording ();
         remove_temp_file ();
-        recording_aborted (0);
+        recording_aborted (null);
       } else if (active_post_processor != null) {
         active_post_processor.cancel ();
         active_post_processor = null;
-        recording_aborted (0);
+        recording_aborted (null);
       }
     }
 

@@ -17,9 +17,9 @@ class TestCliScreenRecorder : CliScreenRecorder {
 void test_cancel () {
   var recorder = new TestCliScreenRecorder ();
   bool recording_aborted_called = false;
-  recorder.recording_aborted.connect ((status) => {
+  recorder.recording_aborted.connect ((reason) => {
     recording_aborted_called = true;
-    assert (status == 0);
+    assert (reason == null);
   });
 
   recorder.record (RecordingArea ());

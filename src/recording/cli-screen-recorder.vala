@@ -17,18 +17,23 @@ namespace Peek.Recording {
 
     protected bool spawn_record_command (string[] argv) {
       try {
+        string[] my_args = argv[0:argv.length];
         subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE);
         input = subprocess.get_stdin_pipe ();
         subprocess.wait_async.begin (null, (obj, res) => {
-          int status;
           bool success = false;
+          int status = 0;
+          int term_sig = 0;
           try {
             subprocess.wait_async.end (res);
-            status = subprocess.get_exit_status ();
             success = subprocess.get_successful ();
+            status = subprocess.get_exit_status ();
+            if (subprocess.get_if_signaled ()) {
+              term_sig = subprocess.get_term_sig ();
+            }
+
             debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
-              subprocess.get_term_sig (), subprocess.get_exit_status (),
-              subprocess.get_successful ().to_string ());
+              term_sig, status, success.to_string ());
           } catch (Error e) {
             stderr.printf ("Error: %s\n", e.message);
             status = -1;
@@ -44,9 +49,9 @@ namespace Peek.Recording {
               var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
               debug ("Temporary file %s, %" + int64.FORMAT + " bytes",
               temp_file, file_info.get_size ());
-              } catch (Error e) {
-                stderr.printf ("Error: %s\n", e.message);
-              }
+            } catch (Error e) {
+              stderr.printf ("Error: %s\n", e.message);
+            }
           }
 
           // If the recorder was cancelled no further action is required
@@ -55,7 +60,12 @@ namespace Peek.Recording {
           }
 
           if (!success) {
-            recording_aborted (status);
+            string message = "Command \"%s\" failed with status %i (received signal %i).".printf (
+              string.joinv (" ", my_args),
+              status,
+              term_sig);
+            var reason = new RecordingError.RECORDING_ABORTED (message);
+            recording_aborted (reason);
           } else {
             finalize_recording ();
           }

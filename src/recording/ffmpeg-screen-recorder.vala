@@ -111,7 +111,7 @@ namespace Peek.Recording {
         input.flush ();
       } catch (Error e) {
         stderr.printf ("Error: %s\n", e.message);
-        recording_aborted (0);
+        recording_aborted (new RecordingError.RECORDING_ABORTED (e.message));
       }
     }
   }

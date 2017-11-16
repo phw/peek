@@ -108,12 +108,12 @@ namespace Peek.Recording {
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
         if (!is_cancelling) {
-          recording_aborted (0);
+          recording_aborted (new RecordingError.RECORDING_ABORTED (e.message));
         }
       } catch (IOError e) {
         stderr.printf ("Error: %s\n", e.message);
         if (!is_cancelling) {
-          recording_aborted (0);
+          recording_aborted (new RecordingError.RECORDING_ABORTED (e.message));
         }
       }
     }
