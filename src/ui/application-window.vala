@@ -169,7 +169,7 @@ namespace Peek.Ui {
 
       // Set record button label
       // Grab the current format and set the record label with the selected format
-      select_format (this.recorder.config.output_format);
+      select_format (settings.get_string ("recording-output-format"));
     }
 
 
