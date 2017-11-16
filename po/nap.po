@@ -156,7 +156,7 @@ msgstr ""
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Alessandro Toia"
 
 #: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"

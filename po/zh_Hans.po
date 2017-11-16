@@ -165,7 +165,9 @@ msgstr "GIF 动画录制机"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Chunyang Xu, YFdyh000"
+msgstr ""
+"Chunyang Xu\n"
+"YFdyh000"
 
 #: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"

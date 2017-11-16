@@ -167,7 +167,9 @@ msgstr "Registratore di GIF animate"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Emanuele Antonio Faraone"
+msgstr ""
+"Emanuele Antonio Faraone\n"
+"Alessandro Toia"
 
 #: ui/application-window.ui:33 ui/application-window.ui:143
 msgid "Start recording"
