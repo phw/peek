@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-15 07:22+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2017-11-16 07:43+0000\n"
+"Last-Translator: Alessandro <gort818@gmail.com>\n"
+"Language-Team: Neapolitan "
+"<https://hosted.weblate.org/projects/peek/translations/nap/>\n"
 "Language: nap\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -26,7 +29,7 @@ msgstr ""
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
@@ -42,7 +45,7 @@ msgstr ""
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Cummencia Peek senza d' 'o header bar"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -92,17 +95,17 @@ msgstr ""
 #: src/ui/application-window.vala:232 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: src/ui/application-window.vala:233 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: src/ui/application-window.vala:241
 #, c-format
 msgid "Record as %s"
-msgstr ""
+msgstr "Riggistra comme %s"
 
 #: src/ui/application-window.vala:388
 msgid "Rendering…"
@@ -110,20 +113,20 @@ msgstr ""
 
 #: src/ui/application-window.vala:552 src/ui/application-window.vala:557
 msgid "Save animation"
-msgstr ""
+msgstr "Salva animazione"
 
 #: src/ui/application-window.vala:553 src/ui/application-window.vala:560
 msgid "_Save"
-msgstr ""
+msgstr "_Salva"
 
 #: src/ui/application-window.vala:554 src/ui/application-window.vala:558
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancella"
 
 #: src/ui/application-window.vala:645
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "l'Animazione salvata comme \"%s\""
 
 #: src/ui/application-window.vala:655
 msgid "Click here to show the saved file in your file manager."
@@ -131,7 +134,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:657
 msgid "Show in file manager"
-msgstr ""
+msgstr "Mustra dint' file manager"
 
 #: src/ui/preferences-dialog.vala:149
 msgid "deactivated"
@@ -139,7 +142,7 @@ msgstr ""
 
 #: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
 msgid "Change"
-msgstr ""
+msgstr "Cagne"
 
 #: src/ui/preferences-dialog.vala:173
 msgid "Press keys…"
@@ -161,11 +164,11 @@ msgstr ""
 
 #: ui/application-window.ui:131
 msgid "_Record"
-msgstr ""
+msgstr "_Riggista"
 
 #: ui/application-window.ui:159
 msgid "_Stop"
-msgstr ""
+msgstr "_Ferma"
 
 #: ui/application-window.ui:170
 msgid "Stop recording"
@@ -241,7 +244,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
@@ -311,7 +314,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:11
 msgid ""
