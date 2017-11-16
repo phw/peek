@@ -1,15 +1,20 @@
 # Version 1.?.? - 2017-??-??
+ * feat: Quick format selection in headerbar (#174)
  * feat: GIF conversion with gifski if installed for improved quality (#212, #179)
  * feat: GIF quality level can be set in preferences, if gifski is available (#212)
  * feat: GIF conversion with FFmpeg as default instead of ImageMagick (#125)
  * feat: Support APNG as output format (#108)
+ * feat: Command line parameter `--no-headerbar` (#203)
+ * feat: Show dialog with error details on recording errors (#49)
  * fix: Temporary files get unique name again (was broken in #161)
  * fix: Quitting application does not interrupt rendering (#189)
  * fix: Much smaller temporary file sizes
  * fix: Do not load local settings schema in release builds
- * i18n: Added Chinese (Traditional)
- * i18n: Updated translations for Esperanto, Italian, Norwegian Bokmål, Serbian,
-         Swedish
+ * i18n: Added Chinese (Traditional), Neapolitan
+ * i18n: Updated translations for Dutch, Esperanto, German, Italian, Lithuanian,
+         Norwegian Bokmål, Polish, Serbian, Swedish
+ * build: libkeybinder is now optional
+ * package: Reduced file size for Snap packages
 
 # Version 1.1.0 - 2017-10-05
  * feat: Transparent recording area without compositor (#147, #7)
