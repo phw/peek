@@ -163,3 +163,9 @@ parts:
       - -usr/share/icons
       - -usr/share/locale
       - -usr/share/man
+
+gifski:
+  plugin: rust
+  source: https://github.com/ImageOptim/gifski
+  rust-channel: stable
+  rust-features: [openmp]
