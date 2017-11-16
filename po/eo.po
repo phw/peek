@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 00:33+0100\n"
+"POT-Creation-Date: 2017-11-17 00:44+0100\n"
 "PO-Revision-Date: 2017-10-15 07:36+0000\n"
 "Last-Translator: Tirifto <tirifto@posteo.cz>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/peek/"
@@ -183,6 +183,27 @@ msgstr "_Haltigi"
 #: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "Haltigi registradon"
+
+#: ui/error-dialog.ui:8
+#, fuzzy
+msgid "Recording error"
+msgstr "Registrado"
+
+#: ui/error-dialog.ui:26
+msgid "Report issue"
+msgstr ""
+
+#: ui/error-dialog.ui:40
+msgid "Close"
+msgstr ""
+
+#: ui/error-dialog.ui:70
+msgid "An unexpected error occurred during recording. Recording was aborted."
+msgstr ""
+
+#: ui/error-dialog.ui:106
+msgid "Show details"
+msgstr ""
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"

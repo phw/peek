@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 00:33+0100\n"
+"POT-Creation-Date: 2017-11-17 00:44+0100\n"
 "PO-Revision-Date: 2017-10-18 06:40+0000\n"
 "Last-Translator: Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -185,6 +185,27 @@ msgstr "أوقف"
 #: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "أوقف التسجيل"
+
+#: ui/error-dialog.ui:8
+#, fuzzy
+msgid "Recording error"
+msgstr "التسجيل"
+
+#: ui/error-dialog.ui:26
+msgid "Report issue"
+msgstr ""
+
+#: ui/error-dialog.ui:40
+msgid "Close"
+msgstr ""
+
+#: ui/error-dialog.ui:70
+msgid "An unexpected error occurred during recording. Recording was aborted."
+msgstr ""
+
+#: ui/error-dialog.ui:106
+msgid "Show details"
+msgstr ""
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"

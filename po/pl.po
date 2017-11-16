@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 00:33+0100\n"
+"POT-Creation-Date: 2017-11-17 00:44+0100\n"
 "PO-Revision-Date: 2017-11-07 13:35+0000\n"
 "Last-Translator: Kuba Niewiarowski <jakub@niewiarowski.it>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
@@ -186,6 +186,27 @@ msgstr "_Stop"
 #: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "Przestań nagrywać"
+
+#: ui/error-dialog.ui:8
+#, fuzzy
+msgid "Recording error"
+msgstr "Nagrywanie"
+
+#: ui/error-dialog.ui:26
+msgid "Report issue"
+msgstr ""
+
+#: ui/error-dialog.ui:40
+msgid "Close"
+msgstr ""
+
+#: ui/error-dialog.ui:70
+msgid "An unexpected error occurred during recording. Recording was aborted."
+msgstr ""
+
+#: ui/error-dialog.ui:106
+msgid "Show details"
+msgstr ""
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
