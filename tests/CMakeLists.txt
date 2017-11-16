@@ -66,6 +66,7 @@ vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
     ../src/recording/base-screen-recorder.vala
     ../src/recording/cli-screen-recorder.vala
     ../src/defaults.vala
+    ../src/errordomain.vala
     ../src/utils.vala
   PACKAGES
     gtk+-3.0

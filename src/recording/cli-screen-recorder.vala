@@ -12,27 +12,33 @@ using Peek.PostProcessing;
 namespace Peek.Recording {
 
   public abstract class CliScreenRecorder : BaseScreenRecorder {
-    protected Pid pid;
-    protected IOChannel input;
+    protected Subprocess subprocess;
+    protected OutputStream input;
 
-    protected bool spawn_record_command (string[] args) {
+    protected bool spawn_record_command (string[] argv) {
       try {
-        int standard_input;
-        Process.spawn_async_with_pipes (null, args, null,
-          SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
-          null, out pid, out standard_input);
+        string[] my_args = argv[0:argv.length];
+        subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE);
+        input = subprocess.get_stdin_pipe ();
+        subprocess.wait_async.begin (null, (obj, res) => {
+          bool success = false;
+          int status = 0;
+          int term_sig = 0;
+          try {
+            subprocess.wait_async.end (res);
+            success = subprocess.get_successful ();
+            status = subprocess.get_exit_status ();
+            if (subprocess.get_if_signaled ()) {
+              term_sig = subprocess.get_term_sig ();
+            }
 
-        input = new IOChannel.unix_new (standard_input);
-
-        ChildWatch.add (pid, (pid, status) => {
-          // Triggered when the child indicated by pid exits
-          debug ("Recorder process closed");
-          Process.close_pid (pid);
-
-          // Temporary debugging for issue #83
-          debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
-            Process.term_sig (status), Process.exit_status (status),
-            Utils.is_exit_status_success (status).to_string ());
+            debug ("recording process exited, term_sig: %d, exit_status: %d, success: %s",
+              term_sig, status, success.to_string ());
+          } catch (Error e) {
+            stderr.printf ("Error: %s\n", e.message);
+            status = -1;
+            success = false;
+          }
 
           if (temp_file != null) {
             var file = File.new_for_path (temp_file);
@@ -40,9 +46,9 @@ namespace Peek.Recording {
               var file_info = file.query_info ("*", FileQueryInfoFlags.NONE);
               debug ("Temporary file %s, %" + int64.FORMAT + " bytes",
               temp_file, file_info.get_size ());
-              } catch (Error e) {
-                stderr.printf ("Error: %s\n", e.message);
-              }
+            } catch (Error e) {
+              stderr.printf ("Error: %s\n", e.message);
+            }
           }
 
           // If the recorder was cancelled no further action is required
@@ -50,17 +56,23 @@ namespace Peek.Recording {
             return;
           }
 
-          if (!is_exit_status_success (status)) {
-            recording_aborted (Process.exit_status (status));
+          if (!success) {
+            string message = Utils.get_command_failed_message (my_args, subprocess);
+            var reason = new RecordingError.RECORDING_ABORTED (message);
+            recording_aborted (reason);
           } else {
             finalize_recording ();
           }
+
+          subprocess = null;
+          input = null;
         });
+
 
         is_recording = true;
         recording_started ();
         return true;
-      } catch (SpawnError e) {
+      } catch (Error e) {
         stderr.printf ("Error: %s\n", e.message);
         return false;
       }

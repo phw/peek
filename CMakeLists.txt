@@ -78,6 +78,7 @@ if(${GTK_VERSION} VERSION_EQUAL "3.20" OR ${GTK_VERSION} VERSION_GREATER "3.20")
   set(REQUIRE_GTK "3.20")
 
   if(ENABLE_FILECHOOSERNATIVE OR DISABLE_OPEN_FILE_MANAGER)
+    message(STATUS "Compiling with Gtk.FileChooserNative")
     list(APPEND VALA_DEFINITIONS "HAS_GTK_FILECHOOSERNATIVE")
   endif()
 endif()
@@ -129,6 +130,7 @@ vala_precompile(VALA_C
     src/recording/ffmpeg-screen-recorder.vala
     src/ui/about-dialog.vala
     src/ui/application-window.vala
+    src/ui/error-dialog.vala
     src/ui/preferences-dialog.vala
     src/ui/shortcut-label.vala
   PACKAGES

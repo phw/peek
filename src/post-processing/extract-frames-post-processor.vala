@@ -14,8 +14,9 @@ namespace Peek.PostProcessing {
   */
   public class ExtractFramesPostProcessor : CliPostProcessor {
     private string executable = null;
+    private static Posix.Glob glob = Posix.Glob ();
 
-    public override async Array<File>? process_async (Array<File> files) {
+    public override async Array<File>? process_async (Array<File> files) throws RecordingError {
       var input_file = files.index (0);
       string[] args = {
         find_executable (), "-y",
@@ -23,20 +24,24 @@ namespace Peek.PostProcessing {
         get_png_filename_pattern (input_file, "%04d")
       };
 
-      int status = yield spawn_command_async (args);
-
-      var png_file_pattern = get_png_filename_pattern (input_file, "*");
-      var glob = Posix.Glob ();
-      glob.glob (png_file_pattern);
-
-      if (!Utils.is_exit_status_success (status)) {
-        foreach (string png_file_path in glob.pathv) {
-          FileUtils.remove (png_file_path);
-        }
-
-        return null;
+      try {
+        yield spawn_command_async (args);
+      } catch (RecordingError e) {
+        yield remove_output_files (input_file);
+        throw e;
       }
 
+      var output = get_png_output_files (input_file);
+      return output;
+    }
+
+    private static string get_png_filename_pattern (File input_file, string replacement) {
+      return input_file.get_path () + "." + replacement + ".png";
+    }
+
+    public static Array<File> get_png_output_files (File input_file) {
+      var png_file_pattern = get_png_filename_pattern (input_file, "*");
+      glob.glob (png_file_pattern);
       var output = new Array<File> ();
       foreach (string png_file_path in glob.pathv) {
         var file = File.new_for_path (png_file_path);
@@ -46,8 +51,15 @@ namespace Peek.PostProcessing {
       return output;
     }
 
-    private static string get_png_filename_pattern (File input_file, string replacement) {
-      return input_file.get_path () + "." + replacement + ".png";
+    private static async void remove_output_files (File input_file) {
+      var output = get_png_output_files (input_file);
+      foreach (File file in output.data) {
+        try {
+          yield file.delete_async ();
+        } catch (Error e) {
+          stderr.printf ("Error deleting temporary file %s: %s\n", file.get_path (), e.message);
+        }
+      }
     }
 
     private string find_executable () {

@@ -21,7 +21,7 @@ namespace Peek.PostProcessing {
       this.config = config;
     }
 
-    public override async Array<File>? process_async (Array<File> files) {
+    public override async Array<File>? process_async (Array<File> files) throws RecordingError {
       var input_file = files.index (0);
       var palette_file = yield generate_palette_async (input_file);
 
@@ -49,7 +49,7 @@ namespace Peek.PostProcessing {
       return Utils.check_for_executable ("ffmpeg");
     }
 
-    private async File? generate_palette_async (File file) {
+    private async File? generate_palette_async (File file) throws RecordingError {
       try {
         var palette_file = Utils.create_temp_file ("png");
 
@@ -60,21 +60,21 @@ namespace Peek.PostProcessing {
           palette_file
         };
 
-        var status = yield spawn_command_async (args);
-
-        if (!Utils.is_exit_status_success (status)) {
+        try {
+          yield spawn_command_async (args);
+        } catch (RecordingError e) {
           FileUtils.remove (palette_file);
-          return null;
+          throw e;
         }
 
         return File.new_for_path (palette_file);
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
-        return null;
+        throw new RecordingError.POSTPROCESSING_ABORTED (e.message);
       }
     }
 
-    private async File? generate_animation_async (File input_file, File palette_file) {
+    private async File? generate_animation_async (File input_file, File palette_file) throws RecordingError {
       try {
         var extension = Utils.get_file_extension_for_format (config.output_format);
         var output_file = Utils.create_temp_file (extension);
@@ -96,17 +96,16 @@ namespace Peek.PostProcessing {
 
         argv.append_val (output_file);
 
-        var status = yield spawn_command_async (argv.data);
-
-        if (!Utils.is_exit_status_success (status)) {
+        try {
+          yield spawn_command_async (argv.data);
+        } catch (RecordingError e) {
           FileUtils.remove (output_file);
-          return null;
+          throw e;
         }
 
         return File.new_for_path (output_file);
       } catch (FileError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return null;
+        throw new RecordingError.POSTPROCESSING_ABORTED (e.message);
       }
     }
   }

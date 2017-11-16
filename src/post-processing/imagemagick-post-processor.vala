@@ -31,7 +31,7 @@ namespace Peek.PostProcessing {
       this.config = config;
     }
 
-    public override async Array<File>? process_async (Array<File> files) {
+    public override async Array<File>? process_async (Array<File> files) throws RecordingError {
       try {
         double delay = (100.0 / config.framerate);
         var output_file = Utils.create_temp_file ("gif");
@@ -62,11 +62,11 @@ namespace Peek.PostProcessing {
         }
         argv.append_val (output_file);
 
-        var status = yield spawn_command_async (argv.data);
-
-        if (!Utils.is_exit_status_success (status)) {
+        try {
+          yield spawn_command_async (argv.data);
+        } catch (RecordingError e) {
           FileUtils.remove (output_file);
-          return null;
+          throw e;
         }
 
         var result = new Array<File> ();
@@ -74,7 +74,7 @@ namespace Peek.PostProcessing {
         return result;
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
-        return null;
+        throw new RecordingError.POSTPROCESSING_ABORTED (e.message);
       }
     }
 

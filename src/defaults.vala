@@ -20,4 +20,5 @@ namespace Peek {
   const string OUTPUT_FORMAT_WEBM = "webm";
   const string OUTPUT_FORMAT_MP4 = "mp4";
 
+  const string ISSUE_TRACKER_URL = "https://github.com/phw/peek/issues/new";
 }

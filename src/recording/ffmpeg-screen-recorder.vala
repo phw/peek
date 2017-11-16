@@ -105,16 +105,13 @@ namespace Peek.Recording {
 
     protected override void stop_recording () {
       try {
-        char[] command = { 'q' };
+        uint8[] command = { 'q' };
         size_t bytes_written;
-        input.write_chars (command, out bytes_written);
+        input.write_all (command, out bytes_written);
         input.flush ();
-      } catch (ConvertError e) {
+      } catch (Error e) {
         stderr.printf ("Error: %s\n", e.message);
-        recording_aborted (0);
-      } catch (IOChannelError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        recording_aborted (0);
+        recording_aborted (new RecordingError.RECORDING_ABORTED (e.message));
       }
     }
   }

@@ -15,4 +15,9 @@ namespace Peek {
     SCREEN_RECORDER_ERROR
   }
 
+  public errordomain RecordingError {
+    RECORDING_ABORTED,
+    POSTPROCESSING_ABORTED
+  }
+
 }
