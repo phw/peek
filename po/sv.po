@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-15 07:22+0100\n"
+"POT-Creation-Date: 2017-11-17 00:33+0100\n"
 "PO-Revision-Date: 2017-11-15 06:43+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: Swedish "
-"<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
+"translations/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,77 +81,77 @@ msgstr ""
 "För detaljerad info, se Peek <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'>FAQ om Wayland-stöd</a>."
 
-#: src/ui/application-window.vala:205
+#: src/ui/application-window.vala:215
 msgid "Rendering animation…"
 msgstr "Renderar animering…"
 
-#: src/ui/application-window.vala:206
+#: src/ui/application-window.vala:216
 msgid "Peek will close when rendering is finished."
 msgstr "Peek kommer att avslutas när renderingen är slutförd."
 
-#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: src/ui/application-window.vala:240 ui/application-window.ui:234
 #: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: src/ui/application-window.vala:241 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: src/ui/application-window.vala:242 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: src/ui/application-window.vala:243 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:241
+#: src/ui/application-window.vala:251
 #, c-format
 msgid "Record as %s"
 msgstr "Spela in som %s"
 
-#: src/ui/application-window.vala:388
+#: src/ui/application-window.vala:398
 msgid "Rendering…"
 msgstr "Renderar …"
 
-#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
+#: src/ui/application-window.vala:548 src/ui/application-window.vala:553
 msgid "Save animation"
 msgstr "Spara animering"
 
-#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
+#: src/ui/application-window.vala:549 src/ui/application-window.vala:556
 msgid "_Save"
 msgstr "_Spara"
 
-#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
+#: src/ui/application-window.vala:550 src/ui/application-window.vala:554
 msgid "_Cancel"
 msgstr "_Avbryt"
 
-#: src/ui/application-window.vala:645
+#: src/ui/application-window.vala:641
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animeringen sparad som \"%s\""
 
-#: src/ui/application-window.vala:655
+#: src/ui/application-window.vala:651
 msgid "Click here to show the saved file in your file manager."
 msgstr "Klicka här för att visa den sparade filen i din filhanterare."
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:653
 msgid "Show in file manager"
 msgstr "Visa i filhanteraren"
 
-#: src/ui/preferences-dialog.vala:149
+#: src/ui/preferences-dialog.vala:167
 msgid "deactivated"
 msgstr "inaktiverad"
 
-#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
+#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
 msgid "Change"
 msgstr "Ändra"
 
-#: src/ui/preferences-dialog.vala:173
+#: src/ui/preferences-dialog.vala:191
 msgid "Press keys…"
 msgstr "Tryck på tangenter…"
 
@@ -165,7 +165,7 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Åke Engelbrektson"
 
-#: ui/application-window.ui:33 ui/application-window.ui:143
+#: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
 msgstr "Starta inspelning"
 
@@ -173,11 +173,11 @@ msgstr "Starta inspelning"
 msgid "_Record"
 msgstr "_Spela in"
 
-#: ui/application-window.ui:159
+#: ui/application-window.ui:158
 msgid "_Stop"
 msgstr "_Stoppa"
 
-#: ui/application-window.ui:170
+#: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "Stoppa inspelning"
 
@@ -217,27 +217,31 @@ msgstr "Spelar in"
 msgid "Output format"
 msgstr "Utdataformat"
 
-#: ui/preferences.ui:238
+#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+msgid "Use gifski for high quality GIFs"
+msgstr ""
+
+#: ui/preferences.ui:260
 msgid "GIF quality"
 msgstr "GIF-kvalitet"
 
-#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
+#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
 msgstr "Bildfrekvens"
 
-#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
-msgid "Delay in seconds before recording starts"
-msgstr "Fördröjning i sekunder före inspelningsstart"
-
-#: ui/preferences.ui:366
+#: ui/preferences.ui:352
 msgid "Resolution downsampling"
 msgstr "Nersampling av upplösning"
 
-#: ui/preferences.ui:398
+#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+msgid "Delay in seconds before recording starts"
+msgstr "Fördröjning i sekunder före inspelningsstart"
+
+#: ui/preferences.ui:427
 msgid "Capture mouse cursor"
 msgstr "Spela in muspekaren"
 
-#: ui/preferences.ui:429
+#: ui/preferences.ui:458
 msgid "Peek preferences"
 msgstr "Peek-inställningar"
 
@@ -363,23 +367,23 @@ msgstr "Global tangentbindning för inspelning"
 msgid "Output file format"
 msgstr "Filformat för utdata"
 
-#: data/com.uploadedlobster.peek.gschema.xml:44
+#: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
 msgstr "Kvalitetsinställningar för GIF-kodaren gifski"
 
-#: data/com.uploadedlobster.peek.gschema.xml:59
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
 msgstr "Faktor för nersampling av upplösningen"
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Whether to capture the mouse cursor"
 msgstr "Om muspekaren skall spelas in"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Size and position of the last open main window"
 msgstr "Storlek och position för senast öppnade programfönster"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Path where last video got saved"
 msgstr "Sökväg till senast sparade video"
 

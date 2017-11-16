@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-15 07:22+0100\n"
+"POT-Creation-Date: 2017-11-17 00:33+0100\n"
 "PO-Revision-Date: 2017-02-24 10:41+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
@@ -75,78 +75,78 @@ msgid ""
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
 
-#: src/ui/application-window.vala:205
+#: src/ui/application-window.vala:215
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Podešavanje…"
 
-#: src/ui/application-window.vala:206
+#: src/ui/application-window.vala:216
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: src/ui/application-window.vala:240 ui/application-window.ui:234
 #: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: src/ui/application-window.vala:241 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: src/ui/application-window.vala:242 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: src/ui/application-window.vala:243 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:241
+#: src/ui/application-window.vala:251
 #, fuzzy, c-format
 msgid "Record as %s"
 msgstr "_Snimi"
 
-#: src/ui/application-window.vala:388
+#: src/ui/application-window.vala:398
 msgid "Rendering…"
 msgstr "Podešavanje…"
 
-#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
+#: src/ui/application-window.vala:548 src/ui/application-window.vala:553
 msgid "Save animation"
 msgstr "Pohrani animaciju"
 
-#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
+#: src/ui/application-window.vala:549 src/ui/application-window.vala:556
 msgid "_Save"
 msgstr "_Pohrani"
 
-#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
+#: src/ui/application-window.vala:550 src/ui/application-window.vala:554
 msgid "_Cancel"
 msgstr "_Prekini"
 
-#: src/ui/application-window.vala:645
+#: src/ui/application-window.vala:641
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija pohranjena kao “%s”"
 
-#: src/ui/application-window.vala:655
+#: src/ui/application-window.vala:651
 msgid "Click here to show the saved file in your file manager."
 msgstr "Klikni za prikaz pohranjene datoteke."
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:653
 msgid "Show in file manager"
 msgstr "Prikaži u upravitelju datoteka"
 
-#: src/ui/preferences-dialog.vala:149
+#: src/ui/preferences-dialog.vala:167
 msgid "deactivated"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
+#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
 msgid "Change"
 msgstr ""
 
-#: src/ui/preferences-dialog.vala:173
+#: src/ui/preferences-dialog.vala:191
 msgid "Press keys…"
 msgstr ""
 
@@ -160,7 +160,7 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "cromat"
 
-#: ui/application-window.ui:33 ui/application-window.ui:143
+#: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
 msgstr "Pokreni snimanje"
 
@@ -168,11 +168,11 @@ msgstr "Pokreni snimanje"
 msgid "_Record"
 msgstr "_Snimi"
 
-#: ui/application-window.ui:159
+#: ui/application-window.ui:158
 msgid "_Stop"
 msgstr "_Zaustavi"
 
-#: ui/application-window.ui:170
+#: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "Zaustavi snimanje"
 
@@ -213,27 +213,31 @@ msgstr "Snimanje"
 msgid "Output format"
 msgstr ""
 
-#: ui/preferences.ui:238
+#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+msgid "Use gifski for high quality GIFs"
+msgstr ""
+
+#: ui/preferences.ui:260
 msgid "GIF quality"
 msgstr ""
 
-#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
+#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
 msgstr "Brzina slike"
 
-#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
-msgid "Delay in seconds before recording starts"
-msgstr "Odgoda u sekundama prije početka snimanja"
-
-#: ui/preferences.ui:366
+#: ui/preferences.ui:352
 msgid "Resolution downsampling"
 msgstr "Reduciraj rezoluciju"
 
-#: ui/preferences.ui:398
+#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+msgid "Delay in seconds before recording starts"
+msgstr "Odgoda u sekundama prije početka snimanja"
+
+#: ui/preferences.ui:427
 msgid "Capture mouse cursor"
 msgstr ""
 
-#: ui/preferences.ui:429
+#: ui/preferences.ui:458
 msgid "Peek preferences"
 msgstr "Peek postavke"
 
@@ -353,24 +357,24 @@ msgstr ""
 msgid "Output file format"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:44
+#: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:59
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
 msgstr "Faktor reduciranja rezolucije"
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Whether to capture the mouse cursor"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 #, fuzzy
 msgid "Size and position of the last open main window"
 msgstr "Veličina i pozicija zadnjeg glavnog otvorenog prozora"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 #, fuzzy
 msgid "Path where last video got saved"
 msgstr "Putanja zadnjeg pogranjenog videa"

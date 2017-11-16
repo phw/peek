@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-15 07:22+0100\n"
+"POT-Creation-Date: 2017-11-17 00:33+0100\n"
 "PO-Revision-Date: 2017-06-29 07:50+0000\n"
 "Last-Translator: Kyodev <kyodev@yandex.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
@@ -96,80 +96,80 @@ msgstr ""
 "Pour plus de détails, voir la <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'>FAQ Peek sur le support de Wayland</a>."
 
-#: src/ui/application-window.vala:205
+#: src/ui/application-window.vala:215
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Rendu…"
 
-#: src/ui/application-window.vala:206
+#: src/ui/application-window.vala:216
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: src/ui/application-window.vala:240 ui/application-window.ui:234
 #: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: src/ui/application-window.vala:241 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: src/ui/application-window.vala:242 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: src/ui/application-window.vala:243 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:241
+#: src/ui/application-window.vala:251
 #, fuzzy, c-format
 msgid "Record as %s"
 msgstr "_Enregistrer"
 
-#: src/ui/application-window.vala:388
+#: src/ui/application-window.vala:398
 msgid "Rendering…"
 msgstr "Rendu…"
 
-#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
+#: src/ui/application-window.vala:548 src/ui/application-window.vala:553
 msgid "Save animation"
 msgstr "Sauvegarder l'animation"
 
-#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
+#: src/ui/application-window.vala:549 src/ui/application-window.vala:556
 msgid "_Save"
 msgstr "_Sauvegarder"
 
-#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
+#: src/ui/application-window.vala:550 src/ui/application-window.vala:554
 msgid "_Cancel"
 msgstr "_Annuler"
 
-#: src/ui/application-window.vala:645
+#: src/ui/application-window.vala:641
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation sauvegardée comme \"%s\""
 
-#: src/ui/application-window.vala:655
+#: src/ui/application-window.vala:651
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Cliquez ici pour afficher le fichier sauvegardé dans votre gestionnaire de "
 "fichiers."
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:653
 msgid "Show in file manager"
 msgstr "Afficher dans le gestionnaire de fichiers"
 
-#: src/ui/preferences-dialog.vala:149
+#: src/ui/preferences-dialog.vala:167
 msgid "deactivated"
 msgstr "désactivé"
 
-#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
+#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
 msgid "Change"
 msgstr "Changer"
 
-#: src/ui/preferences-dialog.vala:173
+#: src/ui/preferences-dialog.vala:191
 msgid "Press keys…"
 msgstr "Appuyez sur les touches…"
 
@@ -185,7 +185,7 @@ msgstr ""
 "Yoan Malié <hello@yoan-malie.fr>\n"
 "Mohamed Sakhri <mohamed.sakhri@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:143
+#: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
 msgstr "Commencer l'enregistrement"
 
@@ -193,11 +193,11 @@ msgstr "Commencer l'enregistrement"
 msgid "_Record"
 msgstr "_Enregistrer"
 
-#: ui/application-window.ui:159
+#: ui/application-window.ui:158
 msgid "_Stop"
 msgstr "_Arrêter"
 
-#: ui/application-window.ui:170
+#: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "Arrêter l'enregistrement"
 
@@ -237,27 +237,31 @@ msgstr "Enregistrement"
 msgid "Output format"
 msgstr "Format de sortie"
 
-#: ui/preferences.ui:238
+#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+msgid "Use gifski for high quality GIFs"
+msgstr ""
+
+#: ui/preferences.ui:260
 msgid "GIF quality"
 msgstr ""
 
-#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
+#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
 msgstr "Fréquence d'image"
 
-#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
-msgid "Delay in seconds before recording starts"
-msgstr "Délai en secondes avant le début de l'enregistrement"
-
-#: ui/preferences.ui:366
+#: ui/preferences.ui:352
 msgid "Resolution downsampling"
 msgstr "Facteur de réduction de la résolution"
 
-#: ui/preferences.ui:398
+#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+msgid "Delay in seconds before recording starts"
+msgstr "Délai en secondes avant le début de l'enregistrement"
+
+#: ui/preferences.ui:427
 msgid "Capture mouse cursor"
 msgstr "Capturer le curseur de la souris"
 
-#: ui/preferences.ui:429
+#: ui/preferences.ui:458
 msgid "Peek preferences"
 msgstr "Préférences de Peek"
 
@@ -388,23 +392,23 @@ msgstr "Raccourci clavier pour basculer l'enregistrement"
 msgid "Output file format"
 msgstr "Format du fichier de sortie"
 
-#: data/com.uploadedlobster.peek.gschema.xml:44
+#: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:59
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
 msgstr "Facteur de réduction de la résolution"
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Whether to capture the mouse cursor"
 msgstr "Qu'il s'agisse de capturer le curseur de la souris"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Size and position of the last open main window"
 msgstr "Taille et position de la dernière fenêtre principale ouverte"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Path where last video got saved"
 msgstr "Chemin où la dernière vidéo a été sauvegardée"
 

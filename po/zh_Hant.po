@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-15 07:22+0100\n"
+"POT-Creation-Date: 2017-11-17 00:33+0100\n"
 "PO-Revision-Date: 2017-11-07 14:43+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -79,78 +79,78 @@ msgstr ""
 "更多細節請造訪有關 <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>Peek Wayland 支援的 FAQ</a>。"
 
-#: src/ui/application-window.vala:205
+#: src/ui/application-window.vala:215
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "正在輸出…"
 
-#: src/ui/application-window.vala:206
+#: src/ui/application-window.vala:216
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:230 ui/application-window.ui:234
+#: src/ui/application-window.vala:240 ui/application-window.ui:234
 #: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:231 ui/application-window.ui:217
+#: src/ui/application-window.vala:241 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:232 ui/application-window.ui:268
+#: src/ui/application-window.vala:242 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:233 ui/application-window.ui:251
+#: src/ui/application-window.vala:243 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:241
+#: src/ui/application-window.vala:251
 #, fuzzy, c-format
 msgid "Record as %s"
 msgstr "錄影"
 
-#: src/ui/application-window.vala:388
+#: src/ui/application-window.vala:398
 msgid "Rendering…"
 msgstr "正在輸出…"
 
-#: src/ui/application-window.vala:552 src/ui/application-window.vala:557
+#: src/ui/application-window.vala:548 src/ui/application-window.vala:553
 msgid "Save animation"
 msgstr "儲存動畫"
 
-#: src/ui/application-window.vala:553 src/ui/application-window.vala:560
+#: src/ui/application-window.vala:549 src/ui/application-window.vala:556
 msgid "_Save"
 msgstr "儲存"
 
-#: src/ui/application-window.vala:554 src/ui/application-window.vala:558
+#: src/ui/application-window.vala:550 src/ui/application-window.vala:554
 msgid "_Cancel"
 msgstr "取消"
 
-#: src/ui/application-window.vala:645
+#: src/ui/application-window.vala:641
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "動畫已儲存至 %s"
 
-#: src/ui/application-window.vala:655
+#: src/ui/application-window.vala:651
 msgid "Click here to show the saved file in your file manager."
 msgstr "點選這裡以在檔案管理器中顯示儲存的檔案。"
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:653
 msgid "Show in file manager"
 msgstr "在檔案管理器中顯示"
 
-#: src/ui/preferences-dialog.vala:149
+#: src/ui/preferences-dialog.vala:167
 msgid "deactivated"
 msgstr "已停用快速鍵"
 
-#: src/ui/preferences-dialog.vala:160 src/ui/preferences-dialog.vala:176
+#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
 msgid "Change"
 msgstr "更改"
 
-#: src/ui/preferences-dialog.vala:173
+#: src/ui/preferences-dialog.vala:191
 msgid "Press keys…"
 msgstr "按下欲設定為快速鍵的按鍵…"
 
@@ -164,7 +164,7 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "coin3x"
 
-#: ui/application-window.ui:33 ui/application-window.ui:143
+#: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
 msgstr "開始錄影"
 
@@ -172,11 +172,11 @@ msgstr "開始錄影"
 msgid "_Record"
 msgstr "錄影"
 
-#: ui/application-window.ui:159
+#: ui/application-window.ui:158
 msgid "_Stop"
 msgstr "停止"
 
-#: ui/application-window.ui:170
+#: ui/application-window.ui:169
 msgid "Stop recording"
 msgstr "停止錄影"
 
@@ -216,27 +216,31 @@ msgstr "錄影"
 msgid "Output format"
 msgstr "輸出格式"
 
-#: ui/preferences.ui:238
+#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+msgid "Use gifski for high quality GIFs"
+msgstr ""
+
+#: ui/preferences.ui:260
 msgid "GIF quality"
 msgstr ""
 
-#: ui/preferences.ui:281 data/com.uploadedlobster.peek.gschema.xml:54
+#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
 msgstr "幀率"
 
-#: ui/preferences.ui:323 data/com.uploadedlobster.peek.gschema.xml:49
-msgid "Delay in seconds before recording starts"
-msgstr "錄影開始前的延遲秒數"
-
-#: ui/preferences.ui:366
+#: ui/preferences.ui:352
 msgid "Resolution downsampling"
 msgstr "解析度縮減倍率"
 
-#: ui/preferences.ui:398
+#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+msgid "Delay in seconds before recording starts"
+msgstr "錄影開始前的延遲秒數"
+
+#: ui/preferences.ui:427
 msgid "Capture mouse cursor"
 msgstr "錄製滑鼠游標"
 
-#: ui/preferences.ui:429
+#: ui/preferences.ui:458
 msgid "Peek preferences"
 msgstr "Peek 偏好設定"
 
@@ -357,23 +361,23 @@ msgstr "切換錄影狀態的快速鍵"
 msgid "Output file format"
 msgstr "輸出檔案格式"
 
-#: data/com.uploadedlobster.peek.gschema.xml:44
+#: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:59
+#: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
 msgstr "解析度縮減倍率"
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Whether to capture the mouse cursor"
 msgstr "是否一併錄製滑鼠游標"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Size and position of the last open main window"
 msgstr "最後開啟主視窗的大小與位置"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Path where last video got saved"
 msgstr "上一個影片儲存的路徑"
 
