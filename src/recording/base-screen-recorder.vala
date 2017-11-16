@@ -50,6 +50,8 @@ namespace Peek.Recording {
         if (file != null) {
           FileUtils.chmod (file.get_path (), 0644);
           recording_finished (file);
+        } else {
+          recording_aborted (0);
         }
       });
       recording_postprocess_started ();
