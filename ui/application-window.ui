@@ -132,7 +132,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="margin_left">45</property>
                 <property name="image">icon_record_button</property>
                 <property name="relief">half</property>
                 <property name="use_underline">True</property>
@@ -186,7 +185,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="margin_right">45</property>
+                <property name="halign">center</property>
                 <property name="popover">pop_format</property>
                 <child>
                   <placeholder/>
@@ -196,6 +195,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
                 <property name="position">2</property>
+                <property name="non_homogeneous">True</property>
               </packing>
             </child>
           </object>
