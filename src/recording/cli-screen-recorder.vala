@@ -40,9 +40,6 @@ namespace Peek.Recording {
             success = false;
           }
 
-          subprocess = null;
-          input = null;
-
           if (temp_file != null) {
             var file = File.new_for_path (temp_file);
             try {
@@ -60,15 +57,15 @@ namespace Peek.Recording {
           }
 
           if (!success) {
-            string message = "Command \"%s\" failed with status %i (received signal %i).".printf (
-              string.joinv (" ", my_args),
-              status,
-              term_sig);
+            string message = Utils.get_command_failed_message (my_args, subprocess);
             var reason = new RecordingError.RECORDING_ABORTED (message);
             recording_aborted (reason);
           } else {
             finalize_recording ();
           }
+
+          subprocess = null;
+          input = null;
         });
 
 

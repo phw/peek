@@ -16,7 +16,7 @@ namespace Peek.PostProcessing {
     // private Pid? pid = null;
     private Subprocess subprocess;
 
-    public abstract async Array<File>? process_async (Array<File> files);
+    public abstract async Array<File>? process_async (Array<File> files) throws RecordingError;
 
     public void cancel () {
       if (subprocess != null) {
@@ -24,17 +24,25 @@ namespace Peek.PostProcessing {
       }
     }
 
-    protected async int spawn_command_async (string[] argv) {
+    protected async int spawn_command_async (string[] argv) throws RecordingError {
       try {
         subprocess = new Subprocess.newv (argv, SubprocessFlags.NONE);
         yield subprocess.wait_async ();
-        int status = subprocess.get_status ();
-        subprocess = null;
-        return status;
       } catch (Error e) {
         stderr.printf ("Error: %s\n", e.message);
-        return -1;
+        string message = Utils.get_command_failed_message (argv, subprocess);
+        throw new RecordingError.POSTPROCESSING_ABORTED (message);
       }
+
+      int status = subprocess.get_status ();
+      if (!Utils.is_exit_status_success (status)) {
+        string message = Utils.get_command_failed_message (argv, subprocess);
+        subprocess = null;
+        throw new RecordingError.POSTPROCESSING_ABORTED (message);
+      }
+
+      subprocess = null;
+      return status;
     }
   }
 }

@@ -25,7 +25,7 @@ namespace Peek.PostProcessing {
       pipeline.append_val (post_processor);
     }
 
-    public async Array<File>? process_async (Array<File> files) {
+    public async Array<File>? process_async (Array<File> files) throws RecordingError {
       foreach (var post_processor in pipeline.data) {
         debug ("Running post processor %s with files %s", post_processor.get_type ().name (), files.length.to_string ());
 

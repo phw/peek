@@ -21,7 +21,7 @@ namespace Peek.PostProcessing {
       this.config = config;
     }
 
-    public override async Array<File>? process_async (Array<File> files) {
+    public override async Array<File>? process_async (Array<File> files) throws RecordingError {
       try {
         var extension = Utils.get_file_extension_for_format (OUTPUT_FORMAT_GIF);
         var output_file = Utils.create_temp_file (extension);
@@ -42,11 +42,11 @@ namespace Peek.PostProcessing {
           argv.append_val (file.get_path ());
         }
 
-        int status = yield spawn_command_async (argv.data);
-
-        if (!Utils.is_exit_status_success (status)) {
+        try {
+          yield spawn_command_async (argv.data);
+        } catch (RecordingError e) {
           FileUtils.remove (output_file);
-          return null;
+          throw e;
         }
 
         var result = new Array<File> ();
@@ -54,7 +54,7 @@ namespace Peek.PostProcessing {
         return result;
       } catch (FileError e) {
         stderr.printf ("Error: %s\n", e.message);
-        return null;
+        throw new RecordingError.POSTPROCESSING_ABORTED (e.message);
       }
     }
 

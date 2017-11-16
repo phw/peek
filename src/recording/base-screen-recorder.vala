@@ -44,14 +44,19 @@ namespace Peek.Recording {
       debug ("Started post processing");
       var pipeline = build_post_processor_pipeline ();
       run_post_processors_async.begin (pipeline, (obj, res) => {
-        var file = run_post_processors_async.end (res);
         debug ("Finished post processing");
-
-        if (file != null) {
-          FileUtils.chmod (file.get_path (), 0644);
-          recording_finished (file);
-        } else {
-          recording_aborted (null);
+        try {
+          var file = run_post_processors_async.end (res);
+          if (file != null) {
+            FileUtils.chmod (file.get_path (), 0644);
+            recording_finished (file);
+          } else {
+            var reason = new RecordingError.POSTPROCESSING_ABORTED (
+              "Missing output file after post processing.");
+            recording_aborted (reason);
+          }
+        } catch (RecordingError e) {
+          recording_aborted (e);
         }
       });
       recording_postprocess_started ();
@@ -93,7 +98,7 @@ namespace Peek.Recording {
       return pipeline;
     }
 
-    private async File? run_post_processors_async (PostProcessingPipeline pipeline) {
+    private async File? run_post_processors_async (PostProcessingPipeline pipeline) throws RecordingError {
       var files = new Array<File> ();
       files.append_val (File.new_for_path (temp_file));
 

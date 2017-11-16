@@ -124,6 +124,23 @@ namespace Peek {
 
       return -1;
     }
+
+    public static string get_command_failed_message (string[] argv, Subprocess? subprocess = null) {
+      int status = -1;
+      int term_sig = 0;
+
+      if (subprocess != null) {
+        status = subprocess.get_status ();
+        if (subprocess.get_if_signaled ()) {
+          term_sig = subprocess.get_term_sig ();
+        }
+      }
+
+      string message = "Command \"%s\" failed with status %i (received signal %i).".printf (
+        string.joinv (" ", argv), status, term_sig);
+
+      return message;
+    }
   }
 
 }
