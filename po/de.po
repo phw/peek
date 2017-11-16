@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 00:44+0100\n"
-"PO-Revision-Date: 2017-11-15 06:34+0000\n"
+"PO-Revision-Date: 2017-11-16 23:46+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,25 +185,26 @@ msgid "Stop recording"
 msgstr "Aufnahme anhalten"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Aufnahme"
+msgstr "Aufnahmefehler"
 
 #: ui/error-dialog.ui:26
 msgid "Report issue"
-msgstr ""
+msgstr "Fehler melden"
 
 #: ui/error-dialog.ui:40
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: ui/error-dialog.ui:70
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
+"Ein unerwarteter Fehler ist während der Aufnahme aufgetreten. Die Aufnahme "
+"wurde abgebrochen."
 
 #: ui/error-dialog.ui:106
 msgid "Show details"
-msgstr ""
+msgstr "Details anzeigen"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
