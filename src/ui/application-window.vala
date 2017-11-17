@@ -53,6 +53,9 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Label delay_indicator;
+    
+    [GtkChild]
+    private Label time_label;
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
@@ -251,6 +254,22 @@ namespace Peek.Ui {
       record_button.set_label (_("Record as %s").printf (format_name));
       pop_format.hide ();
     }
+    
+    async void update_time () {
+      double seconds;
+      Timer timer = new Timer ();
+      while (is_recording && stop_button.sensitive == true) {
+        seconds=(int)timer.elapsed();
+        //print ("Time Elasped %f s\n", timer.elapsed ());
+        time_label.show();
+        time_label.set_label(seconds.to_string()+" s");
+        Idle.add (update_time.callback);
+        yield;
+      }
+    }
+    
+    
+    
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {
@@ -369,6 +388,7 @@ namespace Peek.Ui {
             hide_handler = delay_indicator.hide.connect (() => {
               delay_indicator.disconnect (hide_handler);
               start_recording ();
+              update_time ();
             });
             delay_indicator.hide ();
             return false;
