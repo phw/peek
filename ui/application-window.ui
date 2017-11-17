@@ -202,6 +202,17 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="non_homogeneous">True</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkLabel" id="time_label">
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">label</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
           </object>
         </child>
       </object>
