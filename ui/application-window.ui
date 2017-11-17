@@ -205,7 +205,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <child>
               <object class="GtkLabel" id="time_label">
                 <property name="can_focus">False</property>
-                <property name="00:00" translatable="no">label</property>
+                <property name="label" translatable="no">00:00</property>
               </object>
               <packing>
                 <property name="expand">True</property>
