@@ -7,7 +7,6 @@
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Recording error</property>
     <property name="resizable">False</property>
-    <property name="modal">True</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
       <object class="GtkBox">
@@ -69,6 +68,8 @@
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">An unexpected error occurred during recording. Recording was aborted.</property>
                 <property name="wrap">True</property>
+                <property name="max_width_chars">70</property>
+                <property name="xalign">0</property>
               </object>
               <packing>
                 <property name="expand">True</property>
