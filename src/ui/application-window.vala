@@ -92,7 +92,10 @@ namespace Peek.Ui {
       this.recorder.recording_aborted.connect ((reason) => {
         if (reason != null) {
           stderr.printf ("Recording canceled: %s\n", reason.message);
-          ErrorDialog.present_single_instance (this, reason);
+          ErrorDialog.present_single_instance (
+            this,
+            _ ("An unexpected error occurred during recording. Recording was aborted."),
+            reason);
         } else {
           stderr.printf ("Recording canceled\n");
         }
@@ -609,12 +612,17 @@ namespace Peek.Ui {
 
             if (copy_success) {
               handle_saved_file (out_file);
-            } else if (!copy_success) {
-              stderr.printf ("Saving file %s failed.\n", out_file.get_uri ());
+            } else {
+              var message = "Saving file %s failed.".printf (out_file.get_uri ());
+              stderr.printf ("%s\n", message);
+              throw new IOError.FAILED (message);
             }
-          }
-          catch (Error e) {
+          } catch (Error e) {
             stderr.printf ("File save error: %s\n", e.message);
+            ErrorDialog.present_single_instance (
+              this,
+              _ ("The file could not be saved to the selected location."),
+              e);
           }
           finally {
             leave_recording_state ();

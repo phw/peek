@@ -57,16 +57,16 @@
         </child>
         <child>
           <object class="GtkBox">
+            <property name="width_request">500</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="border_width">12</property>
             <property name="orientation">vertical</property>
             <property name="spacing">12</property>
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="error_summary">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">An unexpected error occurred during recording. Recording was aborted.</property>
                 <property name="wrap">True</property>
                 <property name="max_width_chars">70</property>
                 <property name="xalign">0</property>

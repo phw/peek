@@ -16,7 +16,8 @@ namespace Peek.Ui {
 
     private static ErrorDialog? instance;
 
-    public static Dialog present_single_instance (Gtk.Window main_window, Error error) {
+    public static Dialog present_single_instance (
+      Gtk.Window main_window, string summary, Error error) {
       if (instance == null) {
         instance = new ErrorDialog ();
         instance.delete_event.connect ((event) => {
@@ -26,6 +27,7 @@ namespace Peek.Ui {
         });
       }
 
+      instance.summary = summary;
       instance.show_error (error);
       instance.transient_for = main_window;
       main_window.set_keep_above (false);
@@ -34,7 +36,19 @@ namespace Peek.Ui {
     }
 
     [GtkChild]
+    private Label error_summary;
+
+    [GtkChild]
     private TextBuffer error_details;
+
+    public string summary {
+      get {
+        return error_summary.label;
+      }
+      set {
+        error_summary.label = value;
+      }
+    }
 
     public void show_error (Error error) {
       error_details.text = error.message;
