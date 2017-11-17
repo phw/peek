@@ -23,8 +23,10 @@ apps:
       - home
       - gsettings
       - gnome-3-26-1604
-  # ffmpeg:
-  #   command: ffmpeg
+  ffmpeg:
+    command: ffmpeg
+  gifski:
+    command: gifski
 
 plugs:
   gnome-3-26-1604:
@@ -167,5 +169,6 @@ parts:
   gifski:
     plugin: rust
     source: https://github.com/ImageOptim/gifski.git
-    rust-channel: stable
+    # rust-channel: stable
+    rust-revision: 0.5.0
     rust-features: [openmp]
