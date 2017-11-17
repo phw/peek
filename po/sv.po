@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 00:44+0100\n"
-"PO-Revision-Date: 2017-11-15 06:43+0000\n"
+"PO-Revision-Date: 2017-11-17 04:18+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
-"translations/sv/>\n"
+"Language-Team: Swedish "
+"<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -182,25 +182,24 @@ msgid "Stop recording"
 msgstr "Stoppa inspelning"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Spelar in"
+msgstr "Inspelningsfel"
 
 #: ui/error-dialog.ui:26
 msgid "Report issue"
-msgstr ""
+msgstr "Rapportera problem"
 
 #: ui/error-dialog.ui:40
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: ui/error-dialog.ui:70
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "Ett oväntat fel inträffade vid inspelning. Inspelningen avbröts."
 
 #: ui/error-dialog.ui:106
 msgid "Show details"
-msgstr ""
+msgstr "Visa detaljerad info"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -240,7 +239,7 @@ msgstr "Utdataformat"
 
 #: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Använd gifski för för högkvalitativa GIF-filer"
 
 #: ui/preferences.ui:260
 msgid "GIF quality"
