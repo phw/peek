@@ -15,7 +15,7 @@ namespace Peek.Recording {
     protected Subprocess subprocess;
     protected OutputStream input;
 
-    protected bool spawn_record_command (string[] argv) {
+    protected void spawn_record_command (string[] argv) throws RecordingError {
       try {
         string[] my_args = argv[0:argv.length];
         subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE | SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_MERGE);
@@ -71,10 +71,8 @@ namespace Peek.Recording {
 
         is_recording = true;
         recording_started ();
-        return true;
       } catch (Error e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return false;
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       }
     }
 

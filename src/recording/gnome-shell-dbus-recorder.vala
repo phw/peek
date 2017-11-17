@@ -27,7 +27,7 @@ namespace Peek.Recording {
         "/org/gnome/Shell/Screencast");
     }
 
-    public override bool record (RecordingArea area) {
+    public override void record (RecordingArea area) throws RecordingError {
       // Cancel running recording
       cancel ();
 
@@ -60,21 +60,18 @@ namespace Peek.Recording {
         if (success) {
           stdout.printf ("Recording to file %s\n", temp_file);
         } else {
-          stdout.printf ("Could not start recording, already an active recording using org.gnome.Shell.Screencast?\n");
+          var message = "Could not start recording, already an active recording using org.gnome.Shell.Screencast?";
+          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message);
         }
       } catch (DBusError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return false;
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       } catch (IOError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return false;
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       } catch (FileError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return false;
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       }
 
       is_recording = success;
-      return success;
     }
 
     public static bool is_available () throws PeekError {

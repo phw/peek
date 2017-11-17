@@ -22,7 +22,7 @@ namespace Peek.Recording {
 
     public signal void recording_aborted (RecordingError? reason);
 
-    public abstract bool record (RecordingArea area);
+    public abstract void record (RecordingArea area) throws RecordingError;
 
     public abstract void stop ();
 

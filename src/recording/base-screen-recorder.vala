@@ -31,7 +31,7 @@ namespace Peek.Recording {
       config = new RecordingConfig();
     }
 
-    public abstract bool record (RecordingArea area);
+    public abstract void record (RecordingArea area) throws RecordingError;
 
     public void stop () {
       debug ("Recording stopped");

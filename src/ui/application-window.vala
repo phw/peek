@@ -418,8 +418,16 @@ namespace Peek.Ui {
       debug ("Recording area: %i, %i, %i, %i\n",
         area.left, area.top, area.width, area.height);
       active_recording_area = area;
-      if (!recorder.record (area)) {
+
+      try {
+        recorder.record (area);
+      } catch (RecordingError e) {
+        stderr.printf ("Failed to initialize recorder: %s\n", e.message);
         leave_recording_state ();
+        ErrorDialog.present_single_instance (
+          this,
+          _ ("Recording could not be started due to an unexpected error."),
+          e);
       }
     }
 

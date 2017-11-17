@@ -17,7 +17,7 @@ namespace Peek.Recording {
       cancel ();
     }
 
-    public override bool record (RecordingArea area) {
+    public override void record (RecordingArea area) throws RecordingError {
       try {
         // Cancel running recording
         cancel ();
@@ -79,10 +79,9 @@ namespace Peek.Recording {
           args.append_val ("-crf");
           args.append_val ("0");
         } else {
-          stderr.printf (
-            "Error: Output format %s no supported by avconv screen recorder.\n",
+          var message = "Error: Output format %s no supported by avconv screen recorder.".printf (
             config.output_format);
-          return false;
+          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message);
         }
 
         args.append_val ("-filter:v");
@@ -97,10 +96,9 @@ namespace Peek.Recording {
         args.append_val ("-y");
         args.append_val (temp_file);
 
-        return spawn_record_command (args.data);
+        spawn_record_command (args.data);
       } catch (FileError e) {
-        stderr.printf ("Error: %s\n", e.message);
-        return false;
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       }
     }
 

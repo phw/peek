@@ -1,12 +1,12 @@
+using Peek;
 using Peek.Recording;
 
 class TestCliScreenRecorder : CliScreenRecorder {
   public bool stop_command_called { get; set; default = false; }
 
-  public override bool record (RecordingArea area) {
+  public override void record (RecordingArea area) throws RecordingError {
     is_recording = true;
     stop_command_called = false;
-    return true;
   }
 
   protected override void stop_recording () {
@@ -22,7 +22,11 @@ void test_cancel () {
     assert (reason == null);
   });
 
-  recorder.record (RecordingArea ());
+  try {
+    recorder.record (RecordingArea ());
+  } catch (RecordingError e) {
+    assert (false);
+  }
 
   assert (recorder.is_recording);
   assert (!recorder.stop_command_called);

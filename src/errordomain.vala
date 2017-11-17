@@ -16,6 +16,7 @@ namespace Peek {
   }
 
   public errordomain RecordingError {
+    INITIALIZING_RECORDING_FAILED,
     RECORDING_ABORTED,
     POSTPROCESSING_ABORTED
   }
