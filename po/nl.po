@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-17 10:02+0000\n"
+"PO-Revision-Date: 2017-11-17 19:05+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
-"nl/>\n"
+"Language-Team: Dutch "
+"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -124,7 +124,7 @@ msgstr "Bezig met renderen…"
 
 #: src/ui/application-window.vala:429
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "De opname kan niet worden gestart vanwege een onverwachte fout."
 
 #: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
@@ -140,7 +140,7 @@ msgstr "-Annuleren"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Het bestand kan niet worden opgeslagen naar de geselecteerde locatie."
 
 #: src/ui/application-window.vala:657
 #, c-format
