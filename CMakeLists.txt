@@ -5,6 +5,22 @@ set (PEEK_VERSION_MAJOR 1)
 set (PEEK_VERSION_MINOR 1)
 set (PEEK_VERSION_PATCH 0)
 
+# Get full Peek version
+IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
+  FIND_PACKAGE(Git)
+  IF(GIT_FOUND)
+    EXECUTE_PROCESS(
+      COMMAND ${GIT_EXECUTABLE} describe --tags
+      WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+      OUTPUT_VARIABLE "PEEK_VERSION_FULL"
+      ERROR_QUIET
+      OUTPUT_STRIP_TRAILING_WHITESPACE)
+    MESSAGE( STATUS "Git version: ${PEEK_VERSION_FULL}" )
+  ELSE(GIT_FOUND)
+    SET(PEEK_VERSION_FULL "${PEEK_VERSION_MAJOR}.${PEEK_VERSION_MINOR}.${PEEK_VERSION_PATCH}")
+  ENDIF(GIT_FOUND)
+ENDIF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
+
 # Include macros for Vala and GLib
 list(APPEND CMAKE_MODULE_PATH
   ${CMAKE_SOURCE_DIR}/cmake
@@ -152,7 +168,7 @@ vala_precompile(VALA_C
 # Compile C code
 add_definitions(-DGETTEXT_PACKAGE="${PROJECT_NAME}")
 add_definitions(-DLOCALEDIR="${LOCALEDIR}")
-add_definitions(-DVERSION="${PEEK_VERSION_MAJOR}.${PEEK_VERSION_MINOR}.${PEEK_VERSION_PATCH}")
+add_definitions(-DVERSION="${PEEK_VERSION_FULL}")
 add_definitions(-Wno-deprecated-declarations)
 add_definitions(-Wno-incompatible-pointer-types)
 add_definitions(-Wformat)

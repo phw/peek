@@ -33,7 +33,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Peek</property>
-    <property name="version">@PEEK_VERSION_MAJOR@.@PEEK_VERSION_MINOR@.@PEEK_VERSION_PATCH@</property>
+    <property name="version">@PEEK_VERSION_FULL@</property>
     <property name="comments" translatable="yes">Animated GIF recorder</property>
     <property name="website">https://github.com/phw/peek</property>
     <property name="authors">Philipp Wolfer</property>
