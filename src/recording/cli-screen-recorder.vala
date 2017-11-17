@@ -18,7 +18,7 @@ namespace Peek.Recording {
     protected bool spawn_record_command (string[] argv) {
       try {
         string[] my_args = argv[0:argv.length];
-        subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE);
+        subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE | SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_MERGE);
         input = subprocess.get_stdin_pipe ();
         subprocess.wait_async.begin (null, (obj, res) => {
           bool success = false;

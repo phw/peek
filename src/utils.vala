@@ -128,18 +128,45 @@ namespace Peek {
     public static string get_command_failed_message (string[] argv, Subprocess? subprocess = null) {
       int status = -1;
       int term_sig = 0;
+      string? output = null;
 
       if (subprocess != null) {
         status = subprocess.get_status ();
         if (subprocess.get_if_signaled ()) {
           term_sig = subprocess.get_term_sig ();
         }
+
+        var stdout_pipe = subprocess.get_stdout_pipe ();
+        if (stdout_pipe != null) {
+          output = read_instream_as_utf8 (stdout_pipe);
+        }
       }
 
       string message = "Command \"%s\" failed with status %i (received signal %i).".printf (
         string.joinv (" ", argv), status, term_sig);
 
+      if (output != null) {
+        message += "\n\nOutput:\n%s".printf (output);
+      }
+
       return message;
+    }
+
+    private static string? read_instream_as_utf8 (InputStream stream) {
+      var output = new StringBuilder ();
+      var dis = new DataInputStream (stream);
+      string line;
+
+      try {
+        while ((line = dis.read_line_utf8 ()) != null) {
+          output.append (line);
+        }
+      } catch (IOError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        return null;
+      }
+
+      return output.str;
     }
   }
 
