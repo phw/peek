@@ -53,18 +53,27 @@ namespace Peek.Recording {
           } else {
             var reason = new RecordingError.POSTPROCESSING_ABORTED (
               "Missing output file after post processing.");
-            recording_aborted (reason);
+            handle_postprocessing_failed (reason);
           }
         } catch (RecordingError e) {
-          recording_aborted (e);
+          handle_postprocessing_failed (e);
         }
       });
       recording_postprocess_started ();
     }
 
+    private void handle_postprocessing_failed (RecordingError reason) {
+      if (_is_cancelling) {
+        _is_cancelling = false;
+        return;
+      } else {
+        recording_aborted (reason);
+      }
+    }
+
     public void cancel () {
+      _is_cancelling = true;
       if (is_recording) {
-        _is_cancelling = true;
         is_recording = false;
         stop_recording ();
         remove_temp_file ();
