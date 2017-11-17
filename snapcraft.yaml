@@ -169,6 +169,6 @@ parts:
   gifski:
     plugin: rust
     source: https://github.com/ImageOptim/gifski.git
-    # rust-channel: stable
-    rust-revision: 0.5.0
+    source-tag: 0.5.0
+    rust-channel: stable
     rust-features: [openmp]
