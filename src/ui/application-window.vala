@@ -390,7 +390,6 @@ namespace Peek.Ui {
             hide_handler = delay_indicator.hide.connect (() => {
               delay_indicator.disconnect (hide_handler);
               start_recording ();
-              update_time ();
             });
             delay_indicator.hide ();
             return false;
@@ -433,6 +432,7 @@ namespace Peek.Ui {
     }
 
     private void start_recording () {
+      update_time ();
       var area = get_recording_area ();
       debug ("Recording area: %i, %i, %i, %i\n",
         area.left, area.top, area.width, area.height);
