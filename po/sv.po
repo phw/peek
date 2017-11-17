@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-17 16:39+0000\n"
+"PO-Revision-Date: 2017-11-17 19:59+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish "
 "<https://hosted.weblate.org/projects/peek/translations/sv/>\n"
@@ -61,11 +61,11 @@ msgstr "Kan inte skapa standardinspelare.\n"
 #: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr "Kan inte starta gränssnittet %s.\n"
+msgstr "Kan inte starta bakgrundsgränssnittet %s.\n"
 
 #: src/application.vala:367
 msgid "Native Wayland backend is unsupported"
-msgstr "Inbyggt Wayland-gränssnitt stöds inte"
+msgstr "Wayland-gränssnittet stöds inte"
 
 #: src/application.vala:369
 msgid ""
@@ -75,8 +75,8 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Du kör Peek på inbyggt Wayland, detta stöds inte för närvarande. Starta Peek "
-"med XWayland genom inställningen <tt>GDK_BACKEND=x11</tt>.\n"
+"Du kör Peek på Wayland, detta stöds inte för närvarande. Starta Peek med "
+"XWayland genom inställningen <tt>GDK_BACKEND=x11</tt>.\n"
 "\n"
 "För detaljerad info, se Peek <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'>FAQ om Wayland-stöd</a>."
