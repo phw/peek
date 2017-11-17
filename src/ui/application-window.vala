@@ -259,7 +259,7 @@ namespace Peek.Ui {
       int seconds=0;
       Timeout.add_seconds_full (GLib.Priority.LOW,1, () => {
         seconds +=1;
-        if (is_recording && stop_button.sensitive == true) {
+        if (is_recording ) {
           time_label.show();
           time_label.set_label("%02d:%02d".printf (seconds / 60, seconds % 60));
           return true;
@@ -267,10 +267,7 @@ namespace Peek.Ui {
         time_label.hide();
         return false;
       });
-    }
-    
-    
-    
+    }  
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {
