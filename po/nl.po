@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 00:44+0100\n"
+"POT-Creation-Date: 2017-11-17 17:24+0100\n"
 "PO-Revision-Date: 2017-11-17 10:02+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
-"Language-Team: Dutch "
-"<https://hosted.weblate.org/projects/peek/translations/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
+"nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,66 +79,80 @@ msgstr ""
 "Meer informatie is te vinden in de <a href='https://github.com/phw/peek#why-"
 "no-native-wayland-support'>FAQ over Wayland-ondersteuning</a>."
 
-#: src/ui/application-window.vala:215
+#: src/ui/application-window.vala:97
+msgid "An unexpected error occurred during recording. Recording was aborted."
+msgstr ""
+"Er is een onverwachte fout opgetreden tijdens de opname. De opname is "
+"afgebroken."
+
+#: src/ui/application-window.vala:218
 msgid "Rendering animation…"
 msgstr "Bezig met renderen van animatie…"
 
-#: src/ui/application-window.vala:216
+#: src/ui/application-window.vala:219
 msgid "Peek will close when rendering is finished."
 msgstr "Peek zal worden afgesloten nadat het renderen is voltooid."
 
-#: src/ui/application-window.vala:240 ui/application-window.ui:234
+#: src/ui/application-window.vala:243 ui/application-window.ui:234
 #: ui/preferences.ui:208
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:241 ui/application-window.ui:217
+#: src/ui/application-window.vala:244 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:242 ui/application-window.ui:268
+#: src/ui/application-window.vala:245 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:243 ui/application-window.ui:251
+#: src/ui/application-window.vala:246 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:251
+#: src/ui/application-window.vala:254
 #, c-format
 msgid "Record as %s"
 msgstr "Opnemen als %s"
 
-#: src/ui/application-window.vala:398
+#: src/ui/application-window.vala:401
 msgid "Rendering…"
 msgstr "Bezig met renderen…"
 
-#: src/ui/application-window.vala:548 src/ui/application-window.vala:553
+#: src/ui/application-window.vala:429
+msgid "Recording could not be started due to an unexpected error."
+msgstr ""
+
+#: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
 msgstr "Animatie opslaan"
 
-#: src/ui/application-window.vala:549 src/ui/application-window.vala:556
+#: src/ui/application-window.vala:560 src/ui/application-window.vala:567
 msgid "_Save"
 msgstr "_Opslaan"
 
-#: src/ui/application-window.vala:550 src/ui/application-window.vala:554
+#: src/ui/application-window.vala:561 src/ui/application-window.vala:565
 msgid "_Cancel"
 msgstr "-Annuleren"
 
-#: src/ui/application-window.vala:641
+#: src/ui/application-window.vala:632
+msgid "The file could not be saved to the selected location."
+msgstr ""
+
+#: src/ui/application-window.vala:657
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "De animatie is opgeslagen als \"%s\""
 
-#: src/ui/application-window.vala:651
+#: src/ui/application-window.vala:667
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Klik hier om het opgeslagen bestand weer te geven in uw bestandsbeheerder."
 
-#: src/ui/application-window.vala:653
+#: src/ui/application-window.vala:669
 msgid "Show in file manager"
 msgstr "Weergeven in bestandsbeheerder"
 
@@ -184,21 +198,15 @@ msgstr "Opname stoppen"
 msgid "Recording error"
 msgstr "Opnamefout"
 
-#: ui/error-dialog.ui:26
+#: ui/error-dialog.ui:25
 msgid "Report issue"
 msgstr "Probleem rapporteren"
 
-#: ui/error-dialog.ui:40
+#: ui/error-dialog.ui:39
 msgid "Close"
 msgstr "Sluiten"
 
-#: ui/error-dialog.ui:70
-msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
-"Er is een onverwachte fout opgetreden tijdens de opname. De opname is "
-"afgebroken."
-
-#: ui/error-dialog.ui:106
+#: ui/error-dialog.ui:107
 msgid "Show details"
 msgstr "Details weergeven"
 
