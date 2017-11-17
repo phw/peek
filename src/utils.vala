@@ -158,7 +158,7 @@ namespace Peek {
       string line;
 
       try {
-        while ((line = dis.read_line_utf8 ()) != null) {
+        while ((line = dis.read_line_utf8 (null)) != null) {
           output.append (line);
         }
       } catch (IOError e) {
