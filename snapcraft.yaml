@@ -23,8 +23,10 @@ apps:
       - home
       - gsettings
       - gnome-3-26-1604
-  # ffmpeg:
-  #   command: ffmpeg
+  ffmpeg:
+    command: ffmpeg
+  gifski:
+    command: gifski
 
 plugs:
   gnome-3-26-1604:
