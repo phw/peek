@@ -259,17 +259,18 @@ namespace Peek.Ui {
       pop_format.hide ();
     }
     
-    async void update_time () {
-      double seconds;
-      Timer timer = new Timer ();
-      while (is_recording && stop_button.sensitive == true) {
-        seconds=(int)timer.elapsed();
-        //print ("Time Elasped %f s\n", timer.elapsed ());
-        time_label.show();
-        time_label.set_label(seconds.to_string()+" s");
-        Idle.add (update_time.callback);
-        yield;
-      }
+    private void update_time () {
+      int seconds=0;
+      Timeout.add_seconds_full (GLib.Priority.LOW,1, () => {
+        seconds +=1;
+        if (is_recording && stop_button.sensitive == true) {
+          time_label.show();
+          time_label.set_label("%02d:%02d".printf (seconds / 60, seconds % 60));
+          return true;
+        }
+        time_label.hide();
+        return false;
+      });
     }
     
     
