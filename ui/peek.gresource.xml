@@ -12,5 +12,7 @@
     <file>css/peek.css</file>
     <file>css/unity.css</file>
     <file>css/ambiance.css</file>
+    <file>css/breeze.css</file>
+    <file>css/breeze-dark.css</file>
   </gresource>
 </gresources>

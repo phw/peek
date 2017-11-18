@@ -280,17 +280,25 @@ namespace Peek {
       AboutDialog.present_single_instance (main_window);
     }
 
-    private void load_stylesheets () {
-      load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/peek.css");
-      if (DesktopIntegration.get_theme_name () == "Ambiance") {
-        load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/ambiance.css");
+    private static void load_stylesheets () {
+      load_stylesheet_by_name ("peek");
+      string theme = DesktopIntegration.get_theme_name ();
+      debug ("GTK theme: %s", theme);
+      if (theme == "Ambiance" || theme == "Breeze" || theme == "Breeze-Dark") {
+        load_stylesheet_by_name (theme.down ());
       }
+
       if (DesktopIntegration.is_unity ()) {
-        load_stylesheet_from_uri ("resource:///com/uploadedlobster/peek/css/unity.css");
+        load_stylesheet_by_name ("unity");
       }
     }
 
-    private void load_stylesheet_from_uri (string uri) {
+    private static void load_stylesheet_by_name (string name) {
+      var uri = "resource:///com/uploadedlobster/peek/css/%s.css".printf (name);
+      load_stylesheet_from_uri (uri);
+    }
+
+    private static void load_stylesheet_from_uri (string uri) {
       var provider = new Gtk.CssProvider ();
       try {
         var file = File.new_for_uri (uri);

@@ -1,0 +1,11 @@
+/* Add additional margin to allow easier resizing, see https://github.com/phw/peek/issues/199 */
+
+.solid-csd {
+  margin: 4px;
+  background-color: rgb(71, 80, 87);
+  background-image: linear-gradient(rgb(85, 96, 104), rgb(71, 80, 87) 39px);
+}
+
+.solid-csd .peek-content-area {
+  background-color: rgb(71, 80, 87);
+}

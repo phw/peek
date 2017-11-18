@@ -101,6 +101,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="position">1</property>
               </packing>
             </child>
+            <style>
+              <class name="peek-recording-view"/>
+            </style>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -110,6 +113,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         </child>
         <style>
           <class name="background"/>
+          <class name="peek-content-area"/>
         </style>
       </object>
     </child>
@@ -220,7 +224,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_gif_button_clicked" swapped="no"/>
             <style>
-              <class name="format_button"/>
+              <class name="peek-format-button"/>
             </style>
           </object>
           <packing>
@@ -237,7 +241,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_apng_button_clicked" swapped="no"/>
             <style>
-              <class name="format_button"/>
+              <class name="peek-format-button"/>
             </style>
           </object>
           <packing>
@@ -254,7 +258,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_webm_button_clicked" swapped="no"/>
             <style>
-              <class name="format_button"/>
+              <class name="peek-format-button"/>
             </style>
           </object>
           <packing>
@@ -271,7 +275,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_mp4_button_clicked" swapped="no"/>
             <style>
-              <class name="format_button"/>
+              <class name="peek-format-button"/>
             </style>
           </object>
           <packing>
