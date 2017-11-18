@@ -173,9 +173,40 @@ namespace Peek {
     }
 
     public static string get_theme_name () {
-      var theme = new GLib.Settings ("org.gnome.desktop.interface"); //grab the users' settings
-      var theme_name = theme.get_string ("gtk-theme"); //find the users' theme
+      string theme_name = "";
+      if (is_plasma ()) {
+        theme_name = get_theme_name_from_settings_file ();
+      }
+
+      if (theme_name == "") {
+        var settings = new GLib.Settings ("org.gnome.desktop.interface");
+        theme_name = settings.get_string ("gtk-theme");
+      }
+
       return theme_name;
+    }
+
+    private static string? get_theme_name_from_settings_file () {
+      var gtk3_settings_file = Path.build_filename (
+        Environment.get_home_dir (), ".config/gtk-3.0/settings.ini"
+      );
+      string contents;
+
+      try {
+        if (FileUtils.get_contents (gtk3_settings_file, out contents)) {
+          MatchInfo match;
+          var regex = new Regex ("^gtk-theme-name=(.*)$", RegexCompileFlags.MULTILINE);
+          if (regex.match (contents, 0, out match)) {
+            return match.fetch (1);
+          }
+        }
+      } catch (FileError e) {
+        stderr.printf ("Error: %s\n", e.message);
+      } catch (RegexError e) {
+        stderr.printf ("Error: %s\n", e.message);
+      }
+
+      return "";
     }
 
 #if ! DISABLE_OPEN_FILE_MANAGER
