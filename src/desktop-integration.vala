@@ -148,7 +148,7 @@ namespace Peek {
       string desktop_session = Environment.get_variable ("XDG_SESSION_DESKTOP")
         ?? Environment.get_variable ("DESKTOP_SESSION")
         ?? "";
-      return desktop_session == "plasma";
+      return desktop_session.contains ("plasma");
     }
 
     public static bool is_wayland () {
