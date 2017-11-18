@@ -110,6 +110,11 @@ namespace Peek.Ui {
 
       application.stop_recording.connect (prepare_stop_recording);
 
+      // Update record button label when recording format changes
+      this.recorder.config.notify["output-format"].connect ((pspec) => {
+        select_format (this.recorder.config.output_format);
+      });
+
       // Bind settings
       settings = Peek.Application.get_app_settings ();
 
@@ -175,10 +180,6 @@ namespace Peek.Ui {
       // Make sure the close button is on the left if desktop environment
       // is configured that way.
       this.set_close_button_position ();
-
-      // Set record button label
-      // Grab the current format and set the record label with the selected format
-      select_format (settings.get_string ("recording-output-format"));
     }
 
 
