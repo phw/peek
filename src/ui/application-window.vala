@@ -265,7 +265,7 @@ namespace Peek.Ui {
           headerbar.set_title("%02d:%02d".printf (seconds / 60, seconds % 60));
           return true;
         }
-        headerbat.set_title("");
+        headerbar.set_title("");
         return false;
       });
     }  
