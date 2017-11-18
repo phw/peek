@@ -54,8 +54,6 @@ namespace Peek.Ui {
     [GtkChild]
     private Label delay_indicator;
     
-    [GtkChild]
-    private Label time_label;
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
@@ -260,11 +258,10 @@ namespace Peek.Ui {
       Timeout.add_seconds_full (GLib.Priority.LOW,1, () => {
         seconds +=1;
         if (is_recording ) {
-          time_label.show();
-          time_label.set_label("%02d:%02d".printf (seconds / 60, seconds % 60));
+          headerbar.set_title("%02d:%02d".printf (seconds / 60, seconds % 60));
           return true;
         }
-        time_label.hide();
+        headerbat.set_title("");
         return false;
       });
     }  
