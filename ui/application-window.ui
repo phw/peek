@@ -127,7 +127,8 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
           <object class="GtkButtonBox" id="action_button_box">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="homogeneous">True</property>
+            <property name="halign">start</property>
+            <property name="hexpand">True</property>
             <property name="baseline_position">bottom</property>
             <property name="layout_style">start</property>
             <child>
@@ -205,12 +206,18 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <child>
               <object class="GtkLabel" id="time_label">
                 <property name="can_focus">False</property>
-                <property name="label" translatable="no">00:00</property>
+                <property name="halign">center</property>
+                <property name="margin_left">6</property>
+                <property name="label">00:00</property>
+                <property name="justify">center</property>
+                <property name="single_line_mode">True</property>
+                <property name="track_visited_links">False</property>
               </object>
               <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
                 <property name="position">3</property>
+                <property name="non_homogeneous">True</property>
               </packing>
             </child>
           </object>
