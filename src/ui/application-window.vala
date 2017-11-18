@@ -254,9 +254,9 @@ namespace Peek.Ui {
     }
     
     private void update_time () {
-      int seconds=0;
+      int seconds = 0;
       Timeout.add_seconds_full (GLib.Priority.LOW,1, () => {
-        seconds +=1;
+        seconds += 1;
         if (is_recording ) {
           headerbar.set_title("%02d:%02d".printf (seconds / 60, seconds % 60));
           return true;
