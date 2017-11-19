@@ -113,7 +113,7 @@ namespace Peek.Ui {
 
       // Update record button label when recording format changes
       this.recorder.config.notify["output-format"].connect ((pspec) => {
-        select_format (this.recorder.config.output_format);
+        update_format_label ();
       });
 
       // Bind settings
@@ -252,8 +252,12 @@ namespace Peek.Ui {
 
     private void select_format (string format) {
       recorder.config.output_format = format;
-      var format_name = get_format_name (format);
-      record_button.set_label (_("Record as %s").printf (format_name));
+      update_format_label ();
+    }
+
+    private void update_format_label () {
+      var format_name = get_format_name (recorder.config.output_format);
+      record_button.set_label (_ ("Record as %s").printf (format_name));
       pop_format.hide ();
     }
     
