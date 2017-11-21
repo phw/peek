@@ -275,6 +275,7 @@ namespace Peek.Ui {
           return true;
         }
 
+        time_indicator_timeout = 0;
         headerbar.set_title ("");
         return false;
       });
