@@ -3,13 +3,17 @@
  * feat: GIF conversion with gifski if installed for improved quality (#212, #179)
  * feat: GIF quality level can be set in preferences, if gifski is available (#212)
  * feat: GIF conversion with FFmpeg as default instead of ImageMagick (#125)
+ * feat: Display elapsed time in headerbar (#214)
+ * feat: Display an animated spinner while post processing (#58)
  * feat: Support APNG as output format (#108)
  * feat: Command line parameter `--no-headerbar` (#203)
  * feat: Show dialog with error details on recording errors (#49)
  * fix: Temporary files get unique name again (was broken in #161)
  * fix: Quitting application does not interrupt rendering (#189)
  * fix: Much smaller temporary file sizes
+ * fix: Recording could be stopped before it had actually started
  * fix: Do not load local settings schema in release builds
+ * fix: On Plasma with Breeze theme Peek window was hard to resize (#199)
  * i18n: Added Chinese (Traditional), Neapolitan
  * i18n: Updated translations for Dutch, Esperanto, German, Italian, Lithuanian,
          Norwegian Bokmål, Polish, Serbian, Swedish
