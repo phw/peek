@@ -267,6 +267,11 @@ namespace Peek.Ui {
         if (is_recording && !this.is_postprocessing) {
           var seconds = recorder.elapsed_seconds;
           headerbar.set_title (Utils.format_time (seconds));
+
+          if (seconds > 0) {
+            stop_button.sensitive = true;
+          }
+
           return true;
         }
 
@@ -462,7 +467,7 @@ namespace Peek.Ui {
           stop_button.set_label (stop_button_label);
         }
 
-        stop_button.sensitive = true;
+        stop_button.sensitive = false;
         stop_button.show ();
         freeze_window_size ();
         set_keep_above (true);
