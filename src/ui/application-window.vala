@@ -267,11 +267,6 @@ namespace Peek.Ui {
         if (is_recording && !this.is_postprocessing) {
           var seconds = recorder.elapsed_seconds;
           headerbar.set_title (Utils.format_time (seconds));
-
-          if (seconds > 0) {
-            stop_button.sensitive = true;
-          }
-
           return true;
         }
 
@@ -388,8 +383,6 @@ namespace Peek.Ui {
         delay_indicator.set_text (delay.to_string ());
         delay_indicator.show ();
         size_indicator.hide ();
-        stop_button.set_label (_ ("Cancel"));
-        stop_button.sensitive = true;
         delay_indicator_timeout = Timeout.add (1000, () => {
           delay -= 1;
 
@@ -399,7 +392,6 @@ namespace Peek.Ui {
             hide_handler = delay_indicator.hide.connect (() => {
               delay_indicator.disconnect (hide_handler);
               stop_button.set_label (stop_button_label);
-              stop_button.sensitive = false;
               start_recording ();
             });
             delay_indicator.hide ();
@@ -487,7 +479,7 @@ namespace Peek.Ui {
           stop_button.set_label (stop_button_label);
         }
 
-        stop_button.sensitive = false;
+        stop_button.sensitive = true;
         stop_button.show ();
         freeze_window_size ();
         set_keep_above (true);
