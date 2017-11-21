@@ -57,6 +57,7 @@ namespace Peek.Ui {
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
+    private uint time_indicator_timeout = 0;
     private bool is_recording = false;
     private bool is_postprocessing = false;
     private File in_file;
@@ -234,6 +235,10 @@ namespace Peek.Ui {
         Source.remove (delay_indicator_timeout);
       }
 
+      if (time_indicator_timeout != 0) {
+        Source.remove (time_indicator_timeout);
+      }
+
       this.save_geometry ();
 
       return false;
@@ -263,7 +268,7 @@ namespace Peek.Ui {
 
     private void update_time () {
       headerbar.set_title (Utils.format_time (0));
-      Timeout.add_full (GLib.Priority.LOW, 500, () => {
+      time_indicator_timeout = Timeout.add_full (GLib.Priority.LOW, 500, () => {
         if (is_recording && !this.is_postprocessing) {
           var seconds = recorder.elapsed_seconds;
           headerbar.set_title (Utils.format_time (seconds));
