@@ -18,7 +18,7 @@ int main (string[] args) {
   Environment.set_variable ("GDK_BACKEND", "x11", false);
 
   // Setup gettext
-  Intl.setlocale(LocaleCategory.ALL, "");
+  Intl.setlocale (LocaleCategory.ALL, "");
   Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
   Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   Intl.textdomain (GETTEXT_PACKAGE);

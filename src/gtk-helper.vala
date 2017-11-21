@@ -45,7 +45,7 @@ namespace Peek {
       };
 
       widget.translate_coordinates (
-        widget.get_toplevel(), 0, 0,
+        widget.get_toplevel (), 0, 0,
         out rectangle.x, out rectangle.y);
       var region = new Region.rectangle (rectangle);
 

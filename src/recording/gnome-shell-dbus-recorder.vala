@@ -20,7 +20,7 @@ namespace Peek.Recording {
     private const string DBUS_NAME = "org.gnome.Shell.Screencast";
 
     public GnomeShellDbusRecorder () throws IOError {
-      base();
+      base ();
       screencast = Bus.get_proxy_sync (
         BusType.SESSION,
         DBUS_NAME,

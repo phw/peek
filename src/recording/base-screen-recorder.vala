@@ -41,7 +41,7 @@ namespace Peek.Recording {
     }
 
     public BaseScreenRecorder () {
-      config = new RecordingConfig();
+      config = new RecordingConfig ();
     }
 
     public void record (RecordingArea area) throws RecordingError {

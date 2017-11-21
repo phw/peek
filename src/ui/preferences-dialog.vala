@@ -138,7 +138,7 @@ namespace Peek.Ui {
 #endif
 
 #if DISABLE_OPEN_FILE_MANAGER
-      interface_open_file_manager.hide();
+      interface_open_file_manager.hide ();
 #endif
     }
 

@@ -18,7 +18,7 @@ namespace Peek.Recording {
     public static RecordingArea create_for_widget (Gtk.Widget recording_view) {
       var recording_view_window = recording_view.get_window ();
 
-      var area = RecordingArea() {
+      var area = RecordingArea () {
         widget = recording_view,
         width = recording_view.get_allocated_width (),
         height = recording_view.get_allocated_height ()
@@ -29,8 +29,8 @@ namespace Peek.Recording {
 
       // Add relative widget coordinates
       int relative_left, relative_top;
-      recording_view.translate_coordinates (recording_view.get_toplevel(), 0, 0,
-        out relative_left, out relative_top);
+      recording_view.translate_coordinates (recording_view.get_toplevel (),
+        0, 0, out relative_left, out relative_top);
 
       area.left = (area.left + relative_left);
       area.top = (area.top + relative_top);

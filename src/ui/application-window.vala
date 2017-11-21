@@ -242,10 +242,10 @@ namespace Peek.Ui {
     //set format
     private string get_format_name (string format) {
       switch (format) {
-        case OUTPUT_FORMAT_APNG: return _("APNG");
-        case OUTPUT_FORMAT_GIF: return _("GIF");
-        case OUTPUT_FORMAT_MP4: return _("MP4");
-        case OUTPUT_FORMAT_WEBM: return _("WebM");
+        case OUTPUT_FORMAT_APNG: return _ ("APNG");
+        case OUTPUT_FORMAT_GIF: return _ ("GIF");
+        case OUTPUT_FORMAT_MP4: return _ ("MP4");
+        case OUTPUT_FORMAT_WEBM: return _ ("WebM");
         default: return "";
       }
     }
@@ -456,7 +456,7 @@ namespace Peek.Ui {
       if (!is_recording) {
         is_recording = true;
         size_indicator.opacity = 0.0;
-        pop_format_menu.hide();
+        pop_format_menu.hide ();
         record_button.hide ();
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
           stop_button.set_label (stop_button_label);
@@ -475,7 +475,7 @@ namespace Peek.Ui {
       is_recording = false;
       is_postprocessing = false;
       stop_button.hide ();
-      pop_format_menu.show();
+      pop_format_menu.show ();
       record_button.show ();
       unfreeze_window_size ();
 
@@ -508,9 +508,9 @@ namespace Peek.Ui {
 
       //popover menu
       if (pop_format.visible) {
-        var pop_style = pop_format.get_style_context();
+        var pop_style = pop_format.get_style_context ();
         if (DesktopIntegration.get_theme_name () == "Ambiance") {
-          pop_style.add_class(Gtk.STYLE_CLASS_TITLEBAR);
+          pop_style.add_class (Gtk.STYLE_CLASS_TITLEBAR);
         }
         var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
@@ -544,7 +544,7 @@ namespace Peek.Ui {
 
       this.forall ((child)  => {
         if (child is Gtk.Popover) {
-          if (child.get_name() == (null)) {
+          if (child.get_name () == (null)) {
             fallback_app_menu = child;
           }
         }
@@ -775,10 +775,10 @@ namespace Peek.Ui {
           h = 0;
       get_position (out x, out y);
       get_size (out w, out h);
-      builder.add_value (new Variant.int32(x));
-      builder.add_value (new Variant.int32(y));
-      builder.add_value (new Variant.int32(w));
-      builder.add_value (new Variant.int32(h));
+      builder.add_value (new Variant.int32 (x));
+      builder.add_value (new Variant.int32 (y));
+      builder.add_value (new Variant.int32 (w));
+      builder.add_value (new Variant.int32 (h));
       settings.set_value ("persist-window-geometry", builder.end ());
     }
 
