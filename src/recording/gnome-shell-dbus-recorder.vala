@@ -27,10 +27,7 @@ namespace Peek.Recording {
         "/org/gnome/Shell/Screencast");
     }
 
-    public override void record (RecordingArea area) throws RecordingError {
-      // Cancel running recording
-      cancel ();
-
+    public override void start_recording (RecordingArea area) throws RecordingError {
       bool success = false;
 
       var options = new HashTable<string, Variant> (null, null);

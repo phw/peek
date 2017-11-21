@@ -14,11 +14,8 @@ namespace Peek.Recording {
       cancel ();
     }
 
-    public override void record (RecordingArea area) throws RecordingError {
+    public override void start_recording (RecordingArea area) throws RecordingError {
       try {
-        // Cancel running recording
-        cancel ();
-
         string display = Environment.get_variable ("DISPLAY");
         if (display == null) {
           display = ":0";

@@ -14,6 +14,8 @@ namespace Peek.Recording {
 
     public abstract RecordingConfig config { get; protected set; }
 
+    public abstract int64 elapsed_seconds { get; }
+
     public signal void recording_started ();
 
     public signal void recording_postprocess_started ();

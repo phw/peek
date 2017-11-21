@@ -53,7 +53,7 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Label delay_indicator;
-    
+
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
@@ -260,19 +260,20 @@ namespace Peek.Ui {
       record_button.set_label (_ ("Record as %s").printf (format_name));
       pop_format.hide ();
     }
-    
+
     private void update_time () {
-      int seconds = 0;
-      Timeout.add_seconds_full (GLib.Priority.LOW,1, () => {
-        seconds += 1;
+      headerbar.set_title (Utils.format_time (0));
+      Timeout.add_full (GLib.Priority.LOW, 500, () => {
         if (is_recording && !this.is_postprocessing) {
-          headerbar.set_title("%02d:%02d".printf (seconds / 60, seconds % 60));
+          var seconds = recorder.elapsed_seconds;
+          headerbar.set_title (Utils.format_time (seconds));
           return true;
         }
-        headerbar.set_title("");
+
+        headerbar.set_title ("");
         return false;
       });
-    }  
+    }
 
     [GtkCallback]
     public void on_window_screen_changed (Gdk.Screen? previous_screen) {

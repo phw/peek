@@ -168,6 +168,12 @@ namespace Peek {
 
       return output.str;
     }
+
+    private const string NUMBER_FORMAT = "%02" + int64.FORMAT_MODIFIER + "d";
+    private const string TIME_FORMAT = NUMBER_FORMAT + ":" + NUMBER_FORMAT;
+    public static string format_time (int64 seconds) {
+      return TIME_FORMAT.printf (seconds / 60, seconds % 60);
+    }
   }
 
 }

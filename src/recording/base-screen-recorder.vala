@@ -27,11 +27,29 @@ namespace Peek.Recording {
       }
     }
 
+    private DateTime? start_time = null;
+
+    public int64 elapsed_seconds {
+      get {
+        if (start_time == null) {
+          return 0;
+        }
+
+        var now = new DateTime.now_local ();
+        return now.to_unix () - start_time.to_unix ();
+      }
+    }
+
     public BaseScreenRecorder () {
       config = new RecordingConfig();
     }
 
-    public abstract void record (RecordingArea area) throws RecordingError;
+    public void record (RecordingArea area) throws RecordingError {
+      // Cancel running recording
+      cancel ();
+      start_recording (area);
+      start_time = new DateTime.now_local ();
+    }
 
     public void stop () {
       debug ("Recording stopped");
@@ -73,6 +91,7 @@ namespace Peek.Recording {
 
     public void cancel () {
       _is_cancelling = true;
+      start_time = null;
       if (is_recording) {
         is_recording = false;
         stop_recording ();
@@ -85,6 +104,7 @@ namespace Peek.Recording {
       }
     }
 
+    protected abstract void start_recording (RecordingArea area) throws RecordingError;
     protected abstract void stop_recording ();
 
     protected virtual PostProcessingPipeline build_post_processor_pipeline () {
