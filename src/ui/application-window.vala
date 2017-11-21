@@ -421,13 +421,29 @@ namespace Peek.Ui {
         return;
       } else {
         stop_button.sensitive = false;
-
-        if (get_window_width () >= SMALL_WINDOW_SIZE) {
-          stop_button.set_label (_ ("Rendering…"));
-        }
-
+        show_spinner ();
         recorder.stop ();
       }
+    }
+
+    private void show_spinner () {
+      var box = new Box (Gtk.Orientation.HORIZONTAL, 6);
+
+      var spinner = new Spinner ();
+      spinner.active = true;
+      box.pack_start (spinner, false, false, 0);
+
+      if (get_window_width () >= SMALL_WINDOW_SIZE) {
+        var label = new Gtk.Label (_ ("Rendering…"));
+        box.pack_start (label, false, false, 0);
+      }
+
+      box.show_all ();
+      headerbar.set_custom_title (box);
+    }
+
+    private void hide_spinner () {
+      headerbar.set_custom_title (null);
     }
 
     private void toggle_recording () {
@@ -483,6 +499,7 @@ namespace Peek.Ui {
       pop_format_menu.show ();
       record_button.show ();
       unfreeze_window_size ();
+      hide_spinner ();
 
       if (in_file != null) {
         debug ("Deleting temp file %s\n", in_file.get_uri ());
