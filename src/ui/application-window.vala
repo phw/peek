@@ -388,6 +388,8 @@ namespace Peek.Ui {
         delay_indicator.set_text (delay.to_string ());
         delay_indicator.show ();
         size_indicator.hide ();
+        stop_button.set_label (_ ("Cancel"));
+        stop_button.sensitive = true;
         delay_indicator_timeout = Timeout.add (1000, () => {
           delay -= 1;
 
@@ -396,6 +398,8 @@ namespace Peek.Ui {
             ulong hide_handler = 0;
             hide_handler = delay_indicator.hide.connect (() => {
               delay_indicator.disconnect (hide_handler);
+              stop_button.set_label (stop_button_label);
+              stop_button.sensitive = false;
               start_recording ();
             });
             delay_indicator.hide ();
