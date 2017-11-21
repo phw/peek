@@ -4,7 +4,7 @@ using Peek.Recording;
 class TestCliScreenRecorder : CliScreenRecorder {
   public bool stop_command_called { get; set; default = false; }
 
-  public override void record (RecordingArea area) throws RecordingError {
+  public override void start_recording (RecordingArea area) throws RecordingError {
     is_recording = true;
     stop_command_called = false;
   }
