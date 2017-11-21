@@ -27,16 +27,16 @@ namespace Peek.Recording {
       }
     }
 
-    private DateTime? start_time = null;
+    private int64 start_time = 0;
 
     public int64 elapsed_seconds {
       get {
-        if (start_time == null) {
+        if (start_time == 0) {
           return 0;
         }
 
-        var now = new DateTime.now_local ();
-        return now.to_unix () - start_time.to_unix ();
+        var now = get_monotonic_time ();
+        return (now - start_time) / 1000000;
       }
     }
 
@@ -48,7 +48,7 @@ namespace Peek.Recording {
       // Cancel running recording
       cancel ();
       start_recording (area);
-      start_time = new DateTime.now_local ();
+      start_time = get_monotonic_time ();
     }
 
     public void stop () {
@@ -96,7 +96,7 @@ namespace Peek.Recording {
 
     public void cancel () {
       _is_cancelling = true;
-      start_time = null;
+      start_time = 0;
       if (is_recording) {
         is_recording = false;
         stop_recording ();

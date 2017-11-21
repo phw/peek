@@ -340,8 +340,8 @@ namespace Peek.Ui {
               size_indicator.opacity = 0.0;
               update_input_shape ();
               return false;
-              });
-            }
+            });
+          }
         }
       }
     }
@@ -383,7 +383,7 @@ namespace Peek.Ui {
         delay_indicator.set_text (delay.to_string ());
         delay_indicator.show ();
         size_indicator.hide ();
-        delay_indicator_timeout = Timeout.add (1000, () => {
+        delay_indicator_timeout = Timeout.add_seconds (1, () => {
           delay -= 1;
 
           if (delay == 0) {
