@@ -34,13 +34,16 @@ namespace Peek.PostProcessing {
         }
 
         active_post_processor = post_processor;
-        var new_files = yield post_processor.process_async (files);
-
-        foreach (var file in files.data) {
-          try {
-            yield file.delete_async ();
-          } catch (Error e) {
-            stderr.printf ("Error deleting temporary file %s: %s\n", file.get_path (), e.message);
+        Array<File>? new_files = null;
+        try {
+          new_files = yield post_processor.process_async (files);
+        } finally {
+          foreach (var file in files.data) {
+            try {
+              yield file.delete_async ();
+            } catch (Error e) {
+              stderr.printf ("Error deleting temporary file %s: %s\n", file.get_path (), e.message);
+            }
           }
         }
 
