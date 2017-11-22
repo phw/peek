@@ -15,7 +15,6 @@ void test_get_available_system_memory () {
 
 void main (string[] args) {
   Test.init (ref args);
-  Gtk.init (ref args);
 
   Test.add_func ("/utils/test_make_even", test_make_even);
   Test.add_func ("/utils/get_available_system_memory", test_get_available_system_memory);

@@ -50,7 +50,6 @@ void test_equals () {
 
 void main (string[] args) {
   Test.init (ref args);
-  Gtk.init (ref args);
 
   Test.add_func (
     "/screen-recorder/recording-area/test_equals",

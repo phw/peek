@@ -12,7 +12,6 @@ void test_get_video_folder () {
 
 void main (string[] args) {
   Test.init (ref args);
-  Gtk.init (ref args);
 
   Test.add_func ("/desktop-integration/test_get_video_folder", test_get_video_folder);
 
