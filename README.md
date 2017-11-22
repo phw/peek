@@ -92,17 +92,17 @@ distributions:
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 
 ### Flatpak
-Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/).
+Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/).
 To install, either download
-[peek-stable.flatpakref](http://flatpak.uploadedlobster.com/peek-stable.flatpakref)
+[com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
 and open it with GNOME Software or install via command line:
 
-    flatpak install --user http://flatpak.uploadedlobster.com/peek-stable.flatpakref
+    flatpak install --user https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
-Once installed you can run Peek via its application icon in your desktop
-environment or from command line:
+It is available for most current distributions. Once installed you can run Peek
+via its application icon in your desktop environment or from command line:
 
     flatpak run com.uploadedlobster.peek
 
