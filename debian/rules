@@ -12,6 +12,6 @@ export VALAFLAGS:=$(foreach w,$(CPPFLAGS) $(CFLAGS) $(LDFLAGS),-X $(w))
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DGSETTINGS_COMPILE=OFF
+	dh_auto_configure -- -DGSETTINGS_COMPILE=OFF -DCMAKE_BUILD_TYPE=Release -DENABLE_FILECHOOSERNATIVE=ON
 
 override_dh_auto_test:

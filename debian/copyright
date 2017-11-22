@@ -28,7 +28,7 @@ Files:     .gitignore
            po/POTFILES.in
            sync-translations.sh
            tests/CMakeLists.txt
-           tests/screen-recorder/test-command-line-screen-recorder.vala
+           tests/screen-recorder/test-cli-screen-recorder.vala
            tests/screen-recorder/test-recording-area.vala
            tests/test-desktop-integration.vala
            ui/css/peek.css
@@ -38,7 +38,7 @@ Files:     .gitignore
            src/main.vala
            src/preferences-dialog.vala
            src/recording/avconv-screen-recorder.vala
-           src/recording/command-line-screen-recorder.vala
+           src/recording/cli-screen-recorder.vala
            src/recording/ffmpeg-screen-recorder.vala
            src/recording/recording-area.vala
            src/recording/screen-recorder.vala
