@@ -102,8 +102,8 @@
     },
     "sources": [{
       "type": "archive",
-      "url": "https://github.com/ImageOptim/gifski/archive/0.5.0.tar.gz",
-      "sha256": "6cf9a69ad141c6bf61f6f8b5ba507c06aaf0d401351768d2cd790fe27d6a9de7"
+      "url": "https://github.com/ImageOptim/gifski/archive/0.6.2.tar.gz",
+      "sha256": "4f0379aa05a5e99fd6a9efb851efa7553e9663ec800ac7247fb7e26505a4b225"
     },
     {
       "type": "archive",
@@ -121,7 +121,7 @@
     }],
     "build-commands": [
       "rust/install.sh --prefix=/app",
-      "cargo build --release --features=openmp",
+      "cargo build --release",
       "install -Dm755 target/release/gifski /app/bin/gifski"
     ],
     "post-install": [
