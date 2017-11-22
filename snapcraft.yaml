@@ -171,4 +171,4 @@ parts:
     source: https://github.com/ImageOptim/gifski.git
     source-tag: 0.6.2
     rust-channel: stable
-    rust-features: [openmp]
+    # rust-features: [openmp]
