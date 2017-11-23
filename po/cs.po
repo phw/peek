@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-23 15:41+0000\n"
+"PO-Revision-Date: 2017-11-24 16:45+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech "
 "<https://hosted.weblate.org/projects/peek/translations/cs/>\n"
@@ -246,7 +246,7 @@ msgstr "Výstupní formát"
 
 #: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Use gifski for high quality GIFs"
-msgstr "Použijte 'gifski' pro vysoce kvalitní GIF"
+msgstr "Použijte \"gifski\" pro vysoce kvalitní GIF"
 
 #: ui/preferences.ui:260
 msgid "GIF quality"
@@ -397,7 +397,7 @@ msgstr "Výchozí formát souboru"
 
 #: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
-msgstr "Nastavení GIF kvality pro 'gifski' kodér"
+msgstr "Nastavení GIF kvality pro \"gifski\" kodér"
 
 #: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
