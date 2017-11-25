@@ -59,6 +59,26 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
+* Sat Nov 25 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.0
+- Quick format selection in headerbar (#174)
+- GIF conversion with gifski if installed for improved quality (#212, #179)
+- GIF quality level can be set in preferences, if gifski is available (#212)
+- GIF conversion with FFmpeg as default instead of ImageMagick (#125)
+- Display elapsed time in headerbar (#214)
+- Display an animated spinner while post processing (#58)
+- Support APNG as output format (#108)
+- Command line parameter `--no-headerbar` (#203)
+- Show dialog with error details on recording errors (#49)
+- Temporary files get unique name again (was broken in #161)
+- Quitting application does not interrupt rendering (#189)
+- Much smaller temporary file sizes
+- Recording could be stopped before it had actually started
+- Do not load local settings schema in release builds
+- On Plasma with Breeze theme Peek window was hard to resize (#199)
+- Added Chinese (Traditional), Neapolitan
+- Updated translations for Dutch, Esperanto, German, Italian, Lithuanian, Norwegian Bokmål, Polish, Serbian, Swedish
+- libkeybinder is now optional
+
 * Thu Oct 05 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.1.0
 - Transparent recording area without compositor
 - Unusual default permissions

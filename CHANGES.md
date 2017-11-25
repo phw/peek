@@ -1,4 +1,4 @@
-# Version 1.?.? - 2017-??-??
+# Version 1.2.0 - 2017-11-25
  * feat: Quick format selection in headerbar (#174)
  * feat: GIF conversion with gifski if installed for improved quality (#212, #179)
  * feat: GIF quality level can be set in preferences, if gifski is available (#212)
@@ -15,8 +15,8 @@
  * fix: Do not load local settings schema in release builds
  * fix: On Plasma with Breeze theme Peek window was hard to resize (#199)
  * i18n: Added Chinese (Traditional), Neapolitan
- * i18n: Updated translations for Dutch, Esperanto, German, Italian, Lithuanian,
-         Norwegian Bokmål, Polish, Serbian, Swedish
+ * i18n: Updated translations for Czech, Dutch, Esperanto, German, Italian,
+         Lithuanian, Norwegian Bokmål, Polish, Serbian, Swedish
  * build: libkeybinder is now optional
  * package: Reduced file size for Snap packages
 
