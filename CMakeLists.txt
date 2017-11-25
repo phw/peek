@@ -2,7 +2,7 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 1)
-set (PEEK_VERSION_MINOR 1)
+set (PEEK_VERSION_MINOR 2)
 set (PEEK_VERSION_PATCH 0)
 
 # Get full Peek version
@@ -147,15 +147,16 @@ vala_precompile(VALA_C
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processing-pipeline.vala
     src/post-processing/post-processor.vala
-    src/recording/screen-recorder.vala
+    src/recording/avconv-screen-recorder.vala
     src/recording/base-screen-recorder.vala
-    src/recording/screen-recorder-factory.vala
+    src/recording/cli-screen-recorder.vala
+    src/recording/ffmpeg-screen-recorder.vala
+    src/recording/ffmpeg.vala
+    src/recording/gnome-shell-dbus-recorder.vala
     src/recording/recording-area.vala
     src/recording/recording-config.vala
-    src/recording/gnome-shell-dbus-recorder.vala
-    src/recording/cli-screen-recorder.vala
-    src/recording/avconv-screen-recorder.vala
-    src/recording/ffmpeg-screen-recorder.vala
+    src/recording/screen-recorder-factory.vala
+    src/recording/screen-recorder.vala
     src/ui/about-dialog.vala
     src/ui/application-window.vala
     src/ui/error-dialog.vala
