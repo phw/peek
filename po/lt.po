@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-15 22:40+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
-"translations/lt/>\n"
+"PO-Revision-Date: 2017-11-25 15:04+0000\n"
+"Last-Translator: Kornelijus <kornelijus.github@gmail.com>\n"
+"Language-Team: Lithuanian "
+"<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
 "X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:63
@@ -86,7 +86,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:97
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "Įrašinėjimo metu įvyko netikėta klaida. Įrašinėjimas buvo atšauktas."
 
 #: src/ui/application-window.vala:218
 msgid "Rendering animation…"
@@ -127,7 +127,7 @@ msgstr "Perteikiama…"
 
 #: src/ui/application-window.vala:429
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "Įrašinėjimas negalėjo būti pradėtas dėl netikėtos klaidos."
 
 #: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
@@ -143,7 +143,7 @@ msgstr "_Atsisakyti"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Failas negalėjo būti išsaugotas į pasirinktą vietą."
 
 #: src/ui/application-window.vala:657
 #, c-format
@@ -186,7 +186,7 @@ msgstr "Pradėti įrašinėjimą"
 
 #: ui/application-window.ui:131
 msgid "_Record"
-msgstr "Į_rašinėti"
+msgstr "_Įrašinėti"
 
 #: ui/application-window.ui:158
 msgid "_Stop"
@@ -197,21 +197,20 @@ msgid "Stop recording"
 msgstr "Stabdyti įrašinėjimą"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Įrašinėjimas"
+msgstr "Įrašinėjimo klaida"
 
 #: ui/error-dialog.ui:25
 msgid "Report issue"
-msgstr ""
+msgstr "Pranešti apie problemą"
 
 #: ui/error-dialog.ui:39
 msgid "Close"
-msgstr ""
+msgstr "Uždaryti"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr ""
+msgstr "Parodyti išsamią informaciją"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -251,7 +250,7 @@ msgstr "Išvesties formatas"
 
 #: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Naudoti gifski aukštos kokybės GIFams"
 
 #: ui/preferences.ui:260
 msgid "GIF quality"
