@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-26 13:53+0000\n"
+"PO-Revision-Date: 2017-11-27 06:32+0000\n"
 "Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
 "Language-Team: French "
 "<https://hosted.weblate.org/projects/peek/translations/fr/>\n"
@@ -133,8 +133,7 @@ msgstr "Rendu…"
 
 #: src/ui/application-window.vala:429
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
-"L'enregistrement n'a pas pu être démarré en raison d'une erreur inattendue."
+msgstr "L'enregistrement n'a pas pu démarré en raison d'une erreur inattendue."
 
 #: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
@@ -169,7 +168,7 @@ msgstr "Afficher dans le gestionnaire de fichiers"
 
 #: src/ui/preferences-dialog.vala:167
 msgid "deactivated"
-msgstr "désactivé"
+msgstr "Désactivé"
 
 #: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
 msgid "Change"
@@ -189,7 +188,8 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr ""
 "Yoan Malié <hello@yoan-malie.fr>\n"
-"Mohamed Sakhri <mohamed.sakhri@gmail.com>"
+"Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
+"JeanDeLaMouche <urgau@numericable.fr>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
