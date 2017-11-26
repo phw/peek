@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-26 15:04+0000\n"
+"PO-Revision-Date: 2017-11-27 06:33+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian "
 "<https://hosted.weblate.org/projects/peek/translations/sr/>\n"
@@ -101,17 +101,17 @@ msgstr "APNG"
 #: src/ui/application-window.vala:244 ui/application-window.ui:217
 #: ui/preferences.ui:207
 msgid "GIF"
-msgstr "ГИФ"
+msgstr "GIF"
 
 #: src/ui/application-window.vala:245 ui/application-window.ui:268
 #: ui/preferences.ui:210
 msgid "MP4"
-msgstr "МП4"
+msgstr "MP4"
 
 #: src/ui/application-window.vala:246 ui/application-window.ui:251
 #: ui/preferences.ui:209
 msgid "WebM"
-msgstr "ВебМ видео"
+msgstr "WebM видео"
 
 #: src/ui/application-window.vala:254
 #, c-format
@@ -169,7 +169,7 @@ msgstr "Притисни тастере…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr "Снимач анимираних ГИФ-ова"
+msgstr "Снимач анимираних GIF-ова"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
@@ -275,7 +275,7 @@ msgstr "Поставке Виркала"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Снимајте кратке анимиране ГИФ слике на вашем екрану"
+msgstr "Снимајте кратке анимиране GIF слике на вашем екрану"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -306,8 +306,8 @@ msgstr ""
 "снимања графичких делова сопственог програма или за потребе пријаве грешке у "
 "неком програму. Са Виркалом је само потребно да поставите прозор Виркала над "
 "површином коју желите да снимите и да кликнте на „Снимај“. Виркало је "
-"оптимизовано за стварање анимираних ГИФ-ова али такође можете директно "
-"снимати у ВебМ видео или МП4, ако желите."
+"оптимизовано за стварање анимираних GIF-ова али такође можете директно "
+"снимати у WebM видео или MP4, ако желите."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -319,11 +319,11 @@ msgstr "Бирање области за снимање"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Чување снимљеног видеа као оптимизовани анимирани ГИФ"
+msgstr "Чување снимљеног видеа као оптимизовани анимирани GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr "Директно снимање у ВебМ или МП4 формат"
+msgstr "Директно снимање у WebM или MP4 формат"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
@@ -350,8 +350,8 @@ msgid ""
 msgstr ""
 "Виркало није опште наменско решење за снимање радне површине, са напредним "
 "могућностима, већ се усредсређује на одређени циљ а то је стварање малих, "
-"тихих снимака одређених делова екрана зарад стварања ГИФ анимација или тихих "
-"ВебМ или МП4 видео записа."
+"тихих снимака одређених делова екрана зарад стварања GIF анимација или тихих "
+"WebM или MP4 видео записа."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
