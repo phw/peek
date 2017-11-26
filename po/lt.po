@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-25 15:04+0000\n"
+"PO-Revision-Date: 2017-11-27 06:32+0000\n"
 "Last-Translator: Kornelijus <kornelijus.github@gmail.com>\n"
 "Language-Team: Lithuanian "
 "<https://hosted.weblate.org/projects/peek/translations/lt/>\n"
@@ -135,11 +135,11 @@ msgstr "Įrašyti animaciją"
 
 #: src/ui/application-window.vala:560 src/ui/application-window.vala:567
 msgid "_Save"
-msgstr "Į_rašyti"
+msgstr "_Įrašyti"
 
 #: src/ui/application-window.vala:561 src/ui/application-window.vala:565
 msgid "_Cancel"
-msgstr "_Atsisakyti"
+msgstr "_Atšaukti"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
@@ -172,13 +172,15 @@ msgstr "Paspauskite klavišus…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr "Animuotas GIF rašytuvas"
+msgstr "Animuotų GIF įrašytuvas"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Moo"
+msgstr ""
+"Moo\n"
+"Kornelijus"
 
 #: ui/application-window.ui:33 ui/application-window.ui:142
 msgid "Start recording"
@@ -258,7 +260,7 @@ msgstr "GIF kokybė"
 
 #: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
-msgstr "Kadrų dažnis"
+msgstr "Kadrų per sekundę"
 
 #: ui/preferences.ui:352
 msgid "Resolution downsampling"
