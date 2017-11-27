@@ -99,6 +99,10 @@
   }, {
     "name": "gifski",
     "buildsystem": "simple",
+    "build-options": {
+      "build-args": ["--share=network"]
+    },
+    "skip-arches": ["aarch64", "arm"],
     "sources": [{
       "type": "archive",
       "url": "https://github.com/ImageOptim/gifski/archive/0.6.2.tar.gz",
@@ -111,9 +115,6 @@
   }, {
     "name": "peek",
     "buildsystem": "cmake",
-    "build-options": {
-      "build-args": ["--share=network"]
-    },
     "config-opts": [
       "-DCMAKE_VERBOSE_MAKEFILE=TRUE",
       "-DCMAKE_BUILD_TYPE=Release"
