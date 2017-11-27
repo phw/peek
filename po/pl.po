@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-27 10:15+0000\n"
-"Last-Translator: Kuba Niewiarowski <jakub@niewiarowski.it>\n"
+"PO-Revision-Date: 2017-11-27 10:24+0000\n"
+"Last-Translator: Dawid Dziurla <dawidd0811@gmail.com>\n"
 "Language-Team: Polish "
 "<https://hosted.weblate.org/projects/peek/translations/pl/>\n"
 "Language: pl\n"
@@ -283,7 +283,7 @@ msgstr "Nagraj krótkie animowane obrazy GIF z twojego ekranu"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "zrzut ekranu;rejestrator ekranu;przechwytywanie ekranu;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
