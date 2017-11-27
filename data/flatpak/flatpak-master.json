@@ -3,6 +3,7 @@
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.26",
   "sdk": "org.gnome.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.rust-stable"],
   "branch": "master",
   "command": "peek",
   "finish-args": [
@@ -21,7 +22,8 @@
   "build-options": {
     "cflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
     "cxxflags": "-O2 -g -fstack-protector-strong -D_FORTIFY_SOURCE=2",
-    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now"
+    "ldflags": "-fstack-protector-strong -Wl,-z,relro,-z,now",
+    "append-path": "/usr/lib/sdk/rust-stable/bin"
   },
   "cleanup": [
     "/include",
@@ -104,28 +106,10 @@
       "type": "archive",
       "url": "https://github.com/ImageOptim/gifski/archive/0.6.2.tar.gz",
       "sha256": "4f0379aa05a5e99fd6a9efb851efa7553e9663ec800ac7247fb7e26505a4b225"
-    },
-    {
-      "type": "archive",
-      "url": "https://static.rust-lang.org/dist/rust-1.21.0-x86_64-unknown-linux-gnu.tar.gz",
-      "sha256": "b41e70e018402bc04d02fde82f91bea24428e6be432f0df12ac400cfb03108e8",
-      "only-arches": ["x86_64"],
-      "dest": "rust"
-    },
-    {
-      "type": "archive",
-      "url": "https://static.rust-lang.org/dist/rust-1.21.0-i686-unknown-linux-gnu.tar.gz",
-      "sha256": "b7caed0f602cdb8ef22e0bfa9125a65bec411e15c0b8901d937e43303ec7dbee",
-      "only-arches": ["i386"],
-      "dest": "rust"
     }],
     "build-commands": [
-      "rust/install.sh --prefix=/app",
       "cargo build --release",
       "install -Dm755 target/release/gifski /app/bin/gifski"
-    ],
-    "post-install": [
-      "/app/lib/rustlib/uninstall.sh"
     ]
   }, {
     "name": "peek",
