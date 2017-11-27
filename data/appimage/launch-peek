@@ -3,7 +3,16 @@ SCRIPT=$(readlink -f "$0")
 BIN_DIR=$(dirname "$SCRIPT")
 BASE_DIR=$(readlink -f "$BIN_DIR/../..")
 
+if [ -z "$XDG_CONFIG_DIRS" ]
+then
+  XDG_CONFIG_DIRS=/etc/xdg
+fi
 export XDG_CONFIG_DIRS=$BASE_DIR/usr/etc:$XDG_CONFIG_DIRS
+
+if [ -z "$XDG_DATA_DIRS" ]
+then
+  XDG_DATA_DIRS=/usr/local/share/:/usr/share/
+fi
 export XDG_DATA_DIRS=$BASE_DIR/usr/share/:$XDG_DATA_DIRS
 export PATH=$BIN_DIR:$PATH
 
