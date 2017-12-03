@@ -1,3 +1,10 @@
+peek (1.2.1-0) mx; urgency=low
+
+  * New upstream release:
+    - Updated translations for Arabic, Czech, Esperanto, French, Lithuanian, Norwegian Bokmål, Polish, Serbian
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Sun, 03 Dec 2017 17:19:00 +0100
+
 peek (1.2.0-0) mx; urgency=medium
 
   * New upstream release:
