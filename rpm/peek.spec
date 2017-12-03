@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.2.0
+Version:        1.2.1
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
@@ -59,6 +59,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
+* Sun Dec 03 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.1
+- Updated translations for Arabic, Czech, Esperanto, French, Lithuanian, Norwegian Bokmål, Polish, Serbian
+
 * Sat Nov 25 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.0
 - Quick format selection in headerbar (#174)
 - GIF conversion with gifski if installed for improved quality (#212, #179)

@@ -1,3 +1,7 @@
+# Version 1.2.1 - 2017-12-03
+ * i18n: Updated translations for Arabic, Czech, Esperanto, French, Lithuanian,
+         Norwegian Bokmål, Polish, Serbian
+
 # Version 1.2.0 - 2017-11-25
  * feat: Quick format selection in headerbar (#174)
  * feat: GIF conversion with gifski if installed for improved quality (#212, #179)
