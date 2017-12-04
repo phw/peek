@@ -172,3 +172,13 @@ parts:
     source-tag: 0.6.2
     rust-channel: stable
     # rust-features: [openmp]
+    build: |
+      if [ `arch` = "x86_64" ] || [ `arch` = "i386" ]
+      then
+        export RUST_PATH=../rust
+        export RUSTC=${RUST_PATH}/bin/rustc
+        export RUSTDOC=${RUST_PATH}/bin/rustdoc
+        ${RUST_PATH}/bin/cargo install -j4 --root "${SNAPCRAFT_PART_INSTALL}" --path .
+      else
+        echo "Not building gifksi on $(arch)"
+      fi
