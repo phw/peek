@@ -25,8 +25,8 @@ apps:
       - gnome-3-26-1604
   ffmpeg:
     command: ffmpeg
-  gifski:
-    command: gifski
+  # gifski:
+  #   command: gifski
 
 plugs:
   gnome-3-26-1604:
@@ -173,12 +173,12 @@ parts:
     rust-channel: stable
     # rust-features: [openmp]
     build: |
-      if [ `arch` = "x86_64" ] || [ `arch` = "i386" ]
+      if [ `arch` = "x86_64" ] || [ `arch` = "i686" ]
       then
         export RUST_PATH=../rust
         export RUSTC=${RUST_PATH}/bin/rustc
         export RUSTDOC=${RUST_PATH}/bin/rustdoc
-        ${RUST_PATH}/bin/cargo install -j4 --root "${SNAPCRAFT_PART_INSTALL}" --path .
+        ${RUST_PATH}/bin/cargo install -j$(nproc --all) --root "${SNAPCRAFT_PART_INSTALL}" --path .
       else
         echo "Not building gifksi on $(arch)"
       fi
