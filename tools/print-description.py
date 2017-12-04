@@ -1,6 +1,27 @@
 #!/bin/env python3
 
-# Extract summary and description from AppStream file in the selectec locale.
+# Copyright (c) 2017 Philipp Wolfer <ph.wolfer@gmail.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# Extract summary and description from AppStream file in the selected locale.
 # Run as `print-description.py [locales]`, e.g. `print-description.py de it`.
 
 import gi
@@ -12,10 +33,11 @@ from gi.repository import AppStreamGlib
 from html2text import HTML2Text
 from subprocess import call
 
-appstream_tmp_file = '/tmp/com.uploadedlobster.peek.appdata.xml'
+APP_ID = 'com.uploadedlobster.peek'
+APPSTREAM_TMP_FILE = '/tmp/%s.appdata.xml' % APP_ID
 
-default_locale = 'C'
-locales = [default_locale]
+DEFAULT_LOCALE = 'C'
+locales = [DEFAULT_LOCALE]
 
 if len(sys.argv) > 1:
     locales = sys.argv[1:]
@@ -37,7 +59,7 @@ def format_description(text):
 def translate_appstream_template(output_file):
     cwd = os.path.dirname(os.path.abspath(__file__))
     appstream_template = os.path.join(
-        cwd, '../data/com.uploadedlobster.peek.appdata.xml.in')
+        cwd, '../data/%s.appdata.xml.in' % APP_ID)
     call([
         'msgfmt', '--xml',
         '--template', appstream_template,
@@ -47,16 +69,16 @@ def translate_appstream_template(output_file):
 
 
 # Parse AppStream file
-translate_appstream_template(appstream_tmp_file)
+translate_appstream_template(APPSTREAM_TMP_FILE)
 app = AppStreamGlib.App.new()
-app.parse_file(appstream_tmp_file, AppStreamGlib.AppParseFlags.NONE)
+app.parse_file(APPSTREAM_TMP_FILE, AppStreamGlib.AppParseFlags.NONE)
 
 for locale in locales:
-    name = app.get_name(locale) or app.get_name(default_locale)
-    summary = app.get_comment(locale) or app.get_comment(default_locale)
+    name = app.get_name(locale) or app.get_name(DEFAULT_LOCALE)
+    summary = app.get_comment(locale) or app.get_comment(DEFAULT_LOCALE)
     description = app.get_description(
-        locale) or app.get_description(default_locale)
-    keywords = app.get_keywords(locale) or app.get_keywords(default_locale)
+        locale) or app.get_description(DEFAULT_LOCALE)
+    keywords = app.get_keywords(locale) or app.get_keywords(DEFAULT_LOCALE)
 
     text = """
 {locale}
@@ -76,4 +98,4 @@ for locale in locales:
     print(text)
 
 # Cleanup temp file
-os.remove(appstream_tmp_file)
+os.remove(APPSTREAM_TMP_FILE)
