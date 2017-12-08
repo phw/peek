@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-12-08 11:49+0000\n"
+"PO-Revision-Date: 2017-12-09 12:50+0000\n"
 "Last-Translator: Luiz Felipe <luiz.felipe_95@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://hosted.weblate.org/projects/peek/translations/pt_BR/>\n"
@@ -49,7 +49,7 @@ msgstr "Alternar a gravação em todas as instâncias Peek em execução."
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Iniciar o Peek sem a barra de cabeçalho"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -90,9 +90,8 @@ msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 
 #: src/ui/application-window.vala:218
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Renderizando…"
+msgstr "Renderizando animação…"
 
 #: src/ui/application-window.vala:219
 msgid "Peek will close when rendering is finished."
@@ -366,9 +365,8 @@ msgid "The main window to select the recording area"
 msgstr "A janela principal para selecionar a área de gravação"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Preferências do Peek"
+msgstr "Janela de preferências do Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
