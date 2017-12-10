@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-12-10 06:06+0000\n"
+"PO-Revision-Date: 2017-12-11 06:45+0000\n"
 "Last-Translator: bdfish <lipanXJ@gmail.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://hosted.weblate.org/projects/peek/translations/zh_Hans/>\n"
@@ -89,7 +89,7 @@ msgstr "渲染中…"
 
 #: src/ui/application-window.vala:219
 msgid "Peek will close when rendering is finished."
-msgstr "渲染完成后关闭Peek"
+msgstr "渲染完成后关闭Peek。"
 
 #: src/ui/application-window.vala:243 ui/application-window.ui:234
 #: ui/preferences.ui:208
@@ -138,7 +138,7 @@ msgstr "取消(_C)"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
-msgstr "文件无法存储到所选路径"
+msgstr "文件无法存储到所选路径。"
 
 #: src/ui/application-window.vala:657
 #, c-format
