@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-25 14:26+0000\n"
+"PO-Revision-Date: 2017-12-11 03:58+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://hosted.weblate.org/projects/peek/translations/nb/>\n"
@@ -33,17 +33,14 @@ msgid "BACKEND"
 msgstr "BAKENDE"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
 msgstr "Start opptak i alle kjørende Peek-instanser"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
 msgstr "Stopp opptak i alle kjørende Peek-instanser"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
 msgstr "Veksle opptakstilstand i alle kjørende Peek-instanser"
 
@@ -66,7 +63,6 @@ msgid "Unable to initialize backend %s.\n"
 msgstr "Klarte ikke å igangsette bakende %s.\n"
 
 #: src/application.vala:367
-#, fuzzy
 msgid "Native Wayland backend is unsupported"
 msgstr "Stedsegen Wayland-bakende ustøttet"
 
