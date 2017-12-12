@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-10-13 09:24+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
-"Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
-"eu/>\n"
+"PO-Revision-Date: 2017-12-12 21:12+0000\n"
+"Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
+"Language-Team: Basque "
+"<https://hosted.weblate.org/projects/peek/translations/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17-dev\n"
+"X-Generator: Weblate 2.18-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -25,31 +25,27 @@ msgstr "Erakutsi programaren bertsioa eta irten"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Hautatu grabatzeko motorra (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
 msgstr "MOTORRA"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Hasi grabatzen martxan dauden Peek instantzia guztiak."
+msgstr "Hasi grabatzen martxan dauden Peek instantzia guztiak"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Gelditu martxan dauden Peek instantzia guztien grabazioa."
+msgstr "Gelditu martxan dauden Peek instantzia guztien grabazioa"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr ""
-"Aktibatu/desaktibatu grabazioa martxan dauden Peek instantzia guztietan."
+msgstr "Aktibatu/desaktibatu grabazioa martxan dauden Peek instantzia guztietan"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Abiatu Peek goiburuko barrarik gabe"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -86,15 +82,15 @@ msgstr ""
 #: src/ui/application-window.vala:97
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
+"Uste gabeko errorea gertatu da grabatzean. Grabazioa bertan behera geratu da."
 
 #: src/ui/application-window.vala:218
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Errendatzen…"
+msgstr "Animazioa errendatzen…"
 
 #: src/ui/application-window.vala:219
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek itxi egingo da errendatzea bukatzean."
 
 #: src/ui/application-window.vala:243 ui/application-window.ui:234
 #: ui/preferences.ui:208
@@ -117,9 +113,9 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:254
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "_Grabatu"
+msgstr "Grabatu honela %s"
 
 #: src/ui/application-window.vala:401
 msgid "Rendering…"
@@ -127,7 +123,7 @@ msgstr "Errendatzen…"
 
 #: src/ui/application-window.vala:429
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "Ezin izan da grabazioa hasi uste gabeko errore bat dela medio."
 
 #: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
@@ -143,7 +139,7 @@ msgstr "_Utzi"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Fitxategia ezin izan da hautatutako tokian gorde."
 
 #: src/ui/application-window.vala:657
 #, c-format
@@ -197,21 +193,20 @@ msgid "Stop recording"
 msgstr "Gelditu grabazioa"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Grabatzen"
+msgstr "Errorea grabatzean"
 
 #: ui/error-dialog.ui:25
 msgid "Report issue"
-msgstr ""
+msgstr "Arazoaren berri eman"
 
 #: ui/error-dialog.ui:39
 msgid "Close"
-msgstr ""
+msgstr "Itxi"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr ""
+msgstr "Erakutsi xehetasunak"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -251,11 +246,11 @@ msgstr "Irteera formatua"
 
 #: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Erabili gifski kalitate handiko GIFetarako"
 
 #: ui/preferences.ui:260
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF kalitatea"
 
 #: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
@@ -283,16 +278,15 @@ msgstr "Grabatu zure pantailaren gif animatu txikiak"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "pantaila grabazioa;pantaila grabagailua;pantaila kaptura;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
 msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
-#, fuzzy
 msgid "Simple screen recorder with an easy to use interface"
-msgstr "Pantailaren GIF animatuen bidezko grabagailu erabilerraza"
+msgstr "Pantailaren  grabagailu erabilerraza"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -359,9 +353,8 @@ msgid "The main window to select the recording area"
 msgstr "Grabatzeko area duen leiho nagusia"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Peek hobespenak"
+msgstr "Peek-en hobespenen elkarrizketa-koadroa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
@@ -405,7 +398,7 @@ msgstr "Irteerako fitxategi formatua"
 
 #: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "gifski GIF kodetzailearen kalitate ezarpenak"
 
 #: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
