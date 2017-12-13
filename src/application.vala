@@ -344,7 +344,7 @@ namespace Peek {
       if (!decoration_layout.contains ("menu")) {
           string prefix = "menu:";
           if (decoration_layout.contains (":")) {
-              prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
+            prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
           }
 
           settings.gtk_decoration_layout = prefix + decoration_layout;
@@ -370,8 +370,11 @@ namespace Peek {
     }
 
     private void show_wayland_warning (Gtk.Window parent) {
+      // FIXME: Calling this with "%s", "" avoids C compilation warning.
+      // Passing null would be cleaner, but currently not possible
+      // (https://bugzilla.gnome.org/show_bug.cgi?id=791570)
       var msg = new Gtk.MessageDialog (parent, Gtk.DialogFlags.MODAL,
-        Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, "");
+        Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, "%s", "");
       msg.text = _ ("Native Wayland backend is unsupported");
       msg.secondary_use_markup = true;
       msg.secondary_text = _ ("You are running Peek natively on Wayland, this is currently unsupported. Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n\nFor Details see the Peek <a href='https://github.com/phw/peek#why-no-native-wayland-support'>FAQ about Wayland support</a>.");
