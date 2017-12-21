@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-07-21 06:28+0000\n"
+"PO-Revision-Date: 2017-12-21 17:00+0100\n"
 "Last-Translator: Anton Shestakov <av6@dwimlabs.net>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.16-dev\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -28,30 +28,27 @@ msgstr "Показать версию программы и выйти"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Выбрать службу записи (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
 msgstr "СЛУЖБА ЗАПИСИ"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Начать запись во всех запущенных окнах Peek."
+msgstr "Начать запись во всех запущенных окнах Peek"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Остановить запись во всех запущенных окнах Peek."
+msgstr "Остановить запись во всех запущенных окнах Peek"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr "Переключить состояние записи во всех запущенных окнах Peek."
+msgstr "Переключить состояние записи во всех запущенных окнах Peek"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Запускать Peek без заголовка"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -87,16 +84,15 @@ msgstr ""
 
 #: src/ui/application-window.vala:97
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "Непредвиденная ошибка во время записи. Запись оборвана."
 
 #: src/ui/application-window.vala:218
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Отрисовка…"
+msgstr "Обработка анимации…"
 
 #: src/ui/application-window.vala:219
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek закроется после завершения обработки."
 
 #: src/ui/application-window.vala:243 ui/application-window.ui:234
 #: ui/preferences.ui:208
@@ -119,9 +115,9 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:254
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "_Запись"
+msgstr "Записать как %s"
 
 #: src/ui/application-window.vala:401
 msgid "Rendering…"
@@ -129,7 +125,7 @@ msgstr "Отрисовка…"
 
 #: src/ui/application-window.vala:429
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "Невозможно начать записи из-за непредвиденной ошибки"
 
 #: src/ui/application-window.vala:559 src/ui/application-window.vala:564
 msgid "Save animation"
@@ -145,7 +141,7 @@ msgstr "_Отмена"
 
 #: src/ui/application-window.vala:632
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Файл не может быть сохранён в выбранном месте"
 
 #: src/ui/application-window.vala:657
 #, c-format
@@ -199,21 +195,20 @@ msgid "Stop recording"
 msgstr "Остановить запись"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Запись"
+msgstr "Ошибка записи"
 
 #: ui/error-dialog.ui:25
 msgid "Report issue"
-msgstr ""
+msgstr "Сообщить об ошибке"
 
 #: ui/error-dialog.ui:39
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr ""
+msgstr "Подробнее"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -253,11 +248,11 @@ msgstr "Формат выходного файла"
 
 #: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Использовать gifski для высококачественных GIF"
 
 #: ui/preferences.ui:260
 msgid "GIF quality"
-msgstr ""
+msgstr "Качество GIF"
 
 #: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
 msgid "Framerate"
@@ -285,7 +280,7 @@ msgstr "Записывайте короткие анимированные GIF �
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -359,9 +354,8 @@ msgid "The main window to select the recording area"
 msgstr "Главное окно для выбора записываемой области"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Настройки Peek"
+msgstr "Диалог настроек Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
@@ -405,7 +399,7 @@ msgstr "Формат выходного файла"
 
 #: data/com.uploadedlobster.peek.gschema.xml:48
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Настройка качества для gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:63
 msgid "Resolution downsampling factor"
