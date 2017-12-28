@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2017-11-17 17:24+0100\n"
-"PO-Revision-Date: 2017-11-17 16:27+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2017-12-28 14:37+0000\n"
+"Last-Translator: anonymous <>\n"
 "Language-Team: German "
 "<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18-dev\n"
+"X-Generator: Weblate 2.19-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -190,7 +190,7 @@ msgstr "Aufnahme starten"
 
 #: ui/application-window.ui:131
 msgid "_Record"
-msgstr "Auf_nehmen"
+msgstr "_Aufnehmen"
 
 #: ui/application-window.ui:158
 msgid "_Stop"
@@ -270,7 +270,7 @@ msgstr "Auflösung verringern"
 
 #: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
 msgid "Delay in seconds before recording starts"
-msgstr "Verzögerung in Sekunden vor dem Start der Aufnahme"
+msgstr "Verzögerung in Sekunden bevor die Aufnahme startet"
 
 #: ui/preferences.ui:427
 msgid "Capture mouse cursor"
