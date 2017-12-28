@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2017-12-28 14:37+0000\n"
+"PO-Revision-Date: 2018-01-23 22:03+0000\n"
 "Last-Translator: anonymous <>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
-"de/>\n"
+"Language-Team: German "
+"<https://hosted.weblate.org/projects/peek/translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -242,7 +242,7 @@ msgstr "Dateimanager nach dem Speichern öffnen"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Desktop-Benachrichtigung nach dem Speichern anzeigen"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
