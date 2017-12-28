@@ -89,7 +89,6 @@
       "sources": [{
         "type": "git",
         "url": "https://git.videolan.org/git/x264.git",
-        "branch": "stable",
         "commit": "aaa9aa83a111ed6f1db253d5afa91c5fc844583f"
       }],
       "cleanup": [
