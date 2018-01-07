@@ -32,7 +32,7 @@ Simple screen recorder with an easy to use interface
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
-  - [How can I capture mouse clicks and/or key strokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
+  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
   - [How can I improve the quality of recorded GIF files](#how-can-i-improve-the-quality-of-recorded-gif-files)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
@@ -51,7 +51,7 @@ Simple screen recorder with an easy to use interface
 ## About
 Peek makes it easy to create short screencasts of a screen area. It was built
 for the specific use case of recording screen areas, e.g. for easily showing UI
-features of your own apps or for showing a bug in bug reports. With Peek you
+features of your own apps or for showing a bug in bug reports. With Peek, you
 simply place the Peek window over the area you want to record and press
 "Record". Peek is optimized for generating animated GIFs, but you can also
 directly record to WebM or MP4 if you prefer.
@@ -102,7 +102,7 @@ and open it with GNOME Software or install via command line:
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
 It is available for most current distributions. Once installed you can run Peek
-via its application icon in your desktop environment or from command line:
+via its application icon in your desktop environment or from the command line:
 
     flatpak run com.uploadedlobster.peek
 
@@ -142,7 +142,7 @@ To test the latest development version install Peek from the edge channel:
 ### AppImage
 Peek [AppImage](https://appimage.org/) packages are available on the
 [release page](https://github.com/phw/peek/releases). To run download the
-`.AppImage` file and set it executable, than just run it. You can name the file
+`.AppImage` file and set it executable, then just run it. You can name the file
 however you want, e.g. you can name it just `peek` and place it in `$HOME/bin`
 for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit/wiki)
 for more information on how to use AppImages and integrate them with your system.
@@ -167,7 +167,7 @@ available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
 ### Debian
 There are no official Debian packages, yet, but you can easily create your own
-.deb package for Peek. First install the build dependencies:
+.deb package for Peek. First, install the build dependencies:
 
     sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
 
@@ -225,7 +225,7 @@ You can build and install Peek using CMake:
     # Run directly from source
     ./peek
 
-    # Install system wide
+    # Install system-wide
     sudo make install
 
 You can uninstall Peek again by running `sudo make uninstall` from within the
@@ -233,7 +233,7 @@ build directory.
 
 
 ## Frequently Asked Questions
-### How can I capture mouse clicks and/or key strokes?
+### How can I capture mouse clicks and/or keystrokes?
 Peek does not support this natively. But you could install an external tool
 like [key-mon](https://github.com/critiqjo/key-mon) which is usually included
 in most distributions, so you can easily install with your package manager.
@@ -262,7 +262,7 @@ GIF files. For best results:
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
 - Record small areas or use the downsample option to scale the image. The GIF
-  file format is not well suited for high resolution or full screen recording.
+  file format is not well suited for high resolution or full-screen recording.
 - Avoid too many colors, since GIF is limited to a 256 color palette per frame.
   This one is not so much about file size but more about visual quality.
 - If the above suggestions are not suitable for your use case, consider using
@@ -300,7 +300,7 @@ setting in the NVIDIA control panel
 
 ### On i3 the recording area is all black, how can I record anything?
 i3 does not support the X shape extension. In order to get a transparent
-recording area you have to run a compositor such as Compton.
+recording area, you have to run a compositor such as Compton.
 
 ### Why no native Wayland support?
 Wayland has two restrictions that make it hard for Peek to support Wayland
@@ -318,15 +318,15 @@ natively:
    applications. There is not even a coordinate system for windows at all. Again
    this is intentional, as they are not needed in many cases and you do not need
    to follow restrictions imposed by the traditional assumption that the screen
-   is a rectangular area (e.g. you can have circular screens or [lay out windows
+   is a rectangular area (e.g. you can have circular screens or [layout windows
    in 3D space](https://www.youtube.com/watch?v=_FjuPn7MXMs)).
 
-Unfortunately the whole concept of the Peek UI is that the window position
-itself is used to obtain the recording coordinates. That means for now there
+Unfortunately, the whole concept of the Peek UI is that the window position
+itself is used to obtain the recording coordinates. That means, for now, there
 cannot be any fully native Wayland support without special support for this
 use case by the compositor.
 
-It is however possible to use Peek in a GNOME Shell Wayland session using
+It is, however, possible to use Peek in a GNOME Shell Wayland session using
 XWayland by launching Peek with the X11 backend:
 
     GDK_BACKEND=x11 peek
