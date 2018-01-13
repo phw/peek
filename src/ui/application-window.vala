@@ -750,6 +750,8 @@ namespace Peek.Ui {
     private void handle_saved_file (File file) {
       save_preferred_save_folder (file);
 
+      copy_image_to_clipboard (file);
+
 #if ! DISABLE_OPEN_FILE_MANAGER
       if (this.visible && open_file_manager) {
         DesktopIntegration.launch_file_manager (file);
@@ -759,6 +761,39 @@ namespace Peek.Ui {
 #else
       show_file_saved_notification (file);
 #endif
+    }
+
+    public void copy_image_to_clipboard (File file) {
+      try {
+        var display = get_display ();
+        var clipboard = Clipboard.get_for_display (display, Gdk.SELECTION_CLIPBOARD);
+        var pixbuf = new Gdk.PixbufAnimation.from_file (file.get_path ());
+        clipboard.set_image (pixbuf);
+        // TargetEntry[] targets = {
+        //   TargetEntry () {
+        //     target = "image/gif",
+        //     info = 0
+        //   }
+        // };
+        // bool success = clipboard.set_with_owner (targets,
+        //   (clipboard, selection_data, info, owner) => {
+        //     stdout.printf("ClipboardGetFunc\n");
+        //     File f = (File)owner;
+        //     selection_data.set_uris ({
+        //       f.get_uri ()
+        //     });
+        //   },
+        //   (clipboard, user_data_or_owner) => {
+        //     stdout.printf("ClipboardClearFunc\n");
+        //   },
+        //   file);
+        // clipboard.set_can_store (targets);
+        clipboard.store ();
+        debug ("Image %s copied to clipboard", file.get_uri ());
+        // stdout.printf("Image %s copied to clipboard: %s\n", file.get_uri (), success.to_string ());
+      } catch (Error e) {
+        stderr.printf ("Could not save image in clipboard: %s\n", e.message);
+      }
     }
 
     private void show_file_saved_notification (File file) {
