@@ -1,3 +1,6 @@
+# Version 1.2.2 - 2018-??-??
+ * fix: Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
+
 # Version 1.2.1 - 2017-12-03
  * i18n: Updated translations for Arabic, Czech, Esperanto, French, Lithuanian,
          Norwegian Bokmål, Polish, Serbian

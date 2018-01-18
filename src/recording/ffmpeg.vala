@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -29,8 +29,12 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("libx264");
       args.append_val ("-preset:v");
       args.append_val ("fast");
-      args.append_val ("-profile:v");
-      args.append_val ("baseline");
+      if (!has_10bit_libx264 ()) {
+        args.append_val ("-profile:v");
+        args.append_val ("baseline");
+      } else {
+        stderr.printf ("Warning: libx264 compiled with 10bit support, baseline profile not available. The recorded MP4 might not be playable on all devices.\n");
+      }
       args.append_val ("-pix_fmt");
       args.append_val ("yuv420p");
     } else {
@@ -42,5 +46,25 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("-crf");
       args.append_val ("0");
     }
+  }
+
+  private bool has_10bit_libx264 () {
+    string[] args = {
+      "ffmpeg", "-h", "encoder=libx264"
+    };
+
+    int status;
+    string output;
+
+    try {
+      Process.spawn_sync (null, args, null,
+        SpawnFlags.SEARCH_PATH,
+        null, out output, null, out status);
+      return output.index_of ("10le") != -1;
+    } catch (SpawnError e) {
+      debug ("Error: %s", e.message);
+    }
+
+    return false;
   }
 }
