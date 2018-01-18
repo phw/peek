@@ -83,7 +83,7 @@ namespace Peek.Ui {
         show_uri (this.get_screen (), url, Gdk.CURRENT_TIME);
 #endif
       } catch (Error e) {
-        stdout.printf ("Error opening issue tracker URL: %s", e.message);
+        stderr.printf ("Error opening issue tracker URL: %s", e.message);
       }
     }
 

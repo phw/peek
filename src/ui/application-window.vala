@@ -524,8 +524,6 @@ namespace Peek.Ui {
 
     private void update_input_shape () {
       // Set an input shape so that the recording view is not clickable
-
-
       var window_region = GtkHelper.create_region_from_widget (recording_view.get_toplevel ());
       var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
