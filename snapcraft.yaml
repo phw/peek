@@ -17,12 +17,13 @@ apps:
     command: desktop-launch launch-peek
     desktop: share/applications/com.uploadedlobster.peek.desktop
     plugs:
-      - x11
+      - desktop
+      - gnome-3-26-1604
+      - gsettings
+      - home
       - unity7
       - wayland
-      - home
-      - gsettings
-      - gnome-3-26-1604
+      - x11
   ffmpeg:
     command: ffmpeg
   # gifski:
