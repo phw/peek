@@ -116,6 +116,8 @@ To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
 ### Snappy
+**Attention:** *The Snap package currently does **not run on Wayland** as the Snap sandbox does not allow Peek to access any available screen recording capabilities (see [issue #245](https://github.com/phw/peek/issues/245)). Please use X11 instead or use one of the other installation options such as Flatpak, PPA, AppImage or from source.*
+
 Peek can be installed on all distributions supporting [snappy](https://snapcraft.io/docs/core/install).
 To install, either install the GNOME content snap (gnome-3-26-1604) and the Peek snap from your software center (if the software center supports snappy) or install via command line:
 
