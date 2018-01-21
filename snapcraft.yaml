@@ -105,7 +105,7 @@ parts:
 
   ffmpeg:
     plugin: autotools
-    source: https://ffmpeg.org/releases/ffmpeg-3.4.tar.xz
+    source: https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz
     configflags:
       - --prefix=/usr
       - --disable-debug
@@ -170,7 +170,7 @@ parts:
   gifski:
     plugin: rust
     source: https://github.com/ImageOptim/gifski.git
-    source-tag: 0.6.2
+    source-tag: 0.7.3
     rust-channel: stable
     # rust-features: [openmp]
     build: |
@@ -179,7 +179,7 @@ parts:
         export RUST_PATH=../rust
         export RUSTC=${RUST_PATH}/bin/rustc
         export RUSTDOC=${RUST_PATH}/bin/rustdoc
-        ${RUST_PATH}/bin/cargo install -j$(nproc --all) --root "${SNAPCRAFT_PART_INSTALL}" --path .
+        ${RUST_PATH}/bin/cargo install -j$(nproc --all) --features=openmp --root "${SNAPCRAFT_PART_INSTALL}" --path .
       else
         echo "Not building gifksi on $(arch)"
       fi
