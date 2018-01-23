@@ -1,5 +1,8 @@
 # Version 1.2.2 - 2018-??-??
+ * feat: Option to enable/disable desktop notifications after saving (#21)
  * fix: Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
+ * i18n: Updated translations for Basque, Chinese (Simplified), German,
+         Norwegian Bokmål, Portuguese (Brazil), Russian
 
 # Version 1.2.1 - 2017-12-03
  * i18n: Updated translations for Arabic, Czech, Esperanto, French, Lithuanian,
