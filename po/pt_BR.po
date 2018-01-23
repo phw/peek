@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 17:24+0100\n"
+"POT-Creation-Date: 2018-01-23 22:56+0100\n"
 "PO-Revision-Date: 2017-12-09 12:50+0000\n"
 "Last-Translator: Luiz Felipe <luiz.felipe_95@hotmail.com>\n"
-"Language-Team: Portuguese (Brazil) "
-"<https://hosted.weblate.org/projects/peek/translations/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
+"translations/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,11 +65,11 @@ msgstr "Não é possível criar o gravador de tela padrão.\n"
 msgid "Unable to initialize backend %s.\n"
 msgstr "Não é possível inicializar o backend %s.\n"
 
-#: src/application.vala:367
+#: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
 msgstr "O backend Wayland nativo não é suportado"
 
-#: src/application.vala:369
+#: src/application.vala:380
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -85,90 +85,90 @@ msgstr ""
 "native-wayland-support'>as perguntas frequentes do Peek sobre o suporte a "
 "Wayland support</a>."
 
-#: src/ui/application-window.vala:97
+#: src/ui/application-window.vala:101
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 
-#: src/ui/application-window.vala:218
+#: src/ui/application-window.vala:227
 msgid "Rendering animation…"
 msgstr "Renderizando animação…"
 
-#: src/ui/application-window.vala:219
+#: src/ui/application-window.vala:228
 msgid "Peek will close when rendering is finished."
 msgstr "Peek irá fechar quando a renderização terminar."
 
-#: src/ui/application-window.vala:243 ui/application-window.ui:234
-#: ui/preferences.ui:208
+#: src/ui/application-window.vala:256 ui/application-window.ui:241
+#: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:244 ui/application-window.ui:217
-#: ui/preferences.ui:207
+#: src/ui/application-window.vala:257 ui/application-window.ui:224
+#: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:245 ui/application-window.ui:268
-#: ui/preferences.ui:210
+#: src/ui/application-window.vala:258 ui/application-window.ui:275
+#: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:246 ui/application-window.ui:251
-#: ui/preferences.ui:209
+#: src/ui/application-window.vala:259 ui/application-window.ui:258
+#: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:254
+#: src/ui/application-window.vala:271
 #, c-format
 msgid "Record as %s"
 msgstr "Gravar como %s"
 
-#: src/ui/application-window.vala:401
+#: src/ui/application-window.vala:445
 msgid "Rendering…"
 msgstr "Renderizando…"
 
-#: src/ui/application-window.vala:429
+#: src/ui/application-window.vala:479
 msgid "Recording could not be started due to an unexpected error."
 msgstr "A gravação não pôde iniciar por conta de um erro inesperado."
 
-#: src/ui/application-window.vala:559 src/ui/application-window.vala:564
+#: src/ui/application-window.vala:608 src/ui/application-window.vala:613
 msgid "Save animation"
 msgstr "Salvar animação"
 
-#: src/ui/application-window.vala:560 src/ui/application-window.vala:567
+#: src/ui/application-window.vala:609 src/ui/application-window.vala:616
 msgid "_Save"
 msgstr "_Salvar"
 
-#: src/ui/application-window.vala:561 src/ui/application-window.vala:565
+#: src/ui/application-window.vala:610 src/ui/application-window.vala:614
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/ui/application-window.vala:632
+#: src/ui/application-window.vala:681
 msgid "The file could not be saved to the selected location."
 msgstr "A arquivo não pôde ser salvo no local selecionado."
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:708
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animação salva como “%s”"
 
-#: src/ui/application-window.vala:667
+#: src/ui/application-window.vala:718
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Clique aqui para exibir o arquivo salvo no seu gerenciador de arquivos."
 
-#: src/ui/application-window.vala:669
+#: src/ui/application-window.vala:720
 msgid "Show in file manager"
 msgstr "Exibir no gerenciador de arquivos"
 
-#: src/ui/preferences-dialog.vala:167
+#: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
 msgstr "desativado"
 
-#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
+#: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
 msgstr "Alterar"
 
-#: src/ui/preferences-dialog.vala:191
+#: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
 msgstr "Pressione teclas…"
 
@@ -186,19 +186,19 @@ msgstr ""
 "Fábio Nogueira <fnogueira@gnome.org>\n"
 "Luiz Felipe Pereira <felipe.95p@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:142
+#: ui/application-window.ui:33 ui/application-window.ui:147
 msgid "Start recording"
 msgstr "Iniciar gravação"
 
-#: ui/application-window.ui:131
+#: ui/application-window.ui:137
 msgid "_Record"
 msgstr "_Gravar"
 
-#: ui/application-window.ui:158
+#: ui/application-window.ui:163
 msgid "_Stop"
 msgstr "_Parar"
 
-#: ui/application-window.ui:169
+#: ui/application-window.ui:173
 msgid "Stop recording"
 msgstr "Parar gravação"
 
@@ -242,43 +242,47 @@ msgstr "Interface de usuário"
 msgid "Open file manager after saving"
 msgstr "Abrir o gerenciador de arquivos após salvar"
 
-#: ui/preferences.ui:115
+#: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
+msgid "Show desktop notification after saving"
+msgstr ""
+
+#: ui/preferences.ui:131
 msgid "Start / stop recording"
 msgstr "Iniciar / parar gravação"
 
-#: ui/preferences.ui:169
+#: ui/preferences.ui:185
 msgid "Recording"
 msgstr "Gravando"
 
-#: ui/preferences.ui:192
+#: ui/preferences.ui:208
 msgid "Output format"
 msgstr "Formato de saída"
 
-#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+#: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
 msgstr ""
 
-#: ui/preferences.ui:260
+#: ui/preferences.ui:276
 msgid "GIF quality"
 msgstr ""
 
-#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
+#: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
 msgstr "Taxa de quadros"
 
-#: ui/preferences.ui:352
+#: ui/preferences.ui:368
 msgid "Resolution downsampling"
 msgstr "Redução de resolução"
 
-#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+#: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
 msgstr "Atraso em segundos antes do início da gravação"
 
-#: ui/preferences.ui:427
+#: ui/preferences.ui:443
 msgid "Capture mouse cursor"
 msgstr "Capturar cursor do mouse"
 
-#: ui/preferences.ui:458
+#: ui/preferences.ui:474
 msgid "Peek preferences"
 msgstr "Preferências do Peek"
 
@@ -376,7 +380,7 @@ msgstr "O Peek está se gravando"
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
-#: data/com.uploadedlobster.peek.gschema.xml:11
+#: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
@@ -384,11 +388,11 @@ msgstr ""
 "Tempo em milissegundos pelo qual o tamanho da área de gravação é exibido "
 "após uma parada de redimensionamento."
 
-#: data/com.uploadedlobster.peek.gschema.xml:14
+#: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %d-%m-%Y %H-%M\""
 
-#: data/com.uploadedlobster.peek.gschema.xml:15
+#: data/com.uploadedlobster.peek.gschema.xml:19
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
@@ -396,37 +400,41 @@ msgstr ""
 "Nome padrão de arquivo utilizado. Pode incluir especificadores de formato de "
 "data. A extensão será adicionada automaticamente."
 
-#: data/com.uploadedlobster.peek.gschema.xml:19
+#: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
 msgstr "Preferir tema escuro"
 
-#: data/com.uploadedlobster.peek.gschema.xml:23
+#: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
 msgstr "Atalhos globais do teclado para alternar a gravação"
 
-#: data/com.uploadedlobster.peek.gschema.xml:39
+#: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
 msgstr "Formato do arquivo de saída"
 
-#: data/com.uploadedlobster.peek.gschema.xml:48
+#: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
 msgstr "Fator de redução de resolução"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
 msgstr "Deseja capturar capturar o cursor do mouse"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
 msgstr "Tamanho e posição da última janela principal aberta"
 
-#: data/com.uploadedlobster.peek.gschema.xml:75
+#: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "Caminho onde o último vídeo foi salvo"
+
+#, fuzzy
+#~ msgid "Show notification after saving"
+#~ msgstr "Abrir o gerenciador de arquivos após salvar"
 
 #~ msgid ""
 #~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "

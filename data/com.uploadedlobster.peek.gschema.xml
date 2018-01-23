@@ -8,7 +8,7 @@
     </key>
     <key name="interface-show-notification" type="b">
       <default>true</default>
-      <summary>Show notification after saving</summary>
+      <summary>Show desktop notification after saving</summary>
     </key>
     <key name="interface-size-indicator-delay" type="i">
       <default>1600</default>

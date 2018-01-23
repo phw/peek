@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2017-11-17 17:24+0100\n"
+"POT-Creation-Date: 2018-01-23 22:56+0100\n"
 "PO-Revision-Date: 2017-12-11 06:45+0000\n"
 "Last-Translator: bdfish <lipanXJ@gmail.com>\n"
-"Language-Team: Chinese (Simplified) "
-"<https://hosted.weblate.org/projects/peek/translations/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"peek/translations/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,11 +61,11 @@ msgstr "无法创建默认屏幕记录器。\n"
 msgid "Unable to initialize backend %s.\n"
 msgstr "无法初始化 %s 后端。\n"
 
-#: src/application.vala:367
+#: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
 msgstr "不支持原生 Wayland 后端"
 
-#: src/application.vala:369
+#: src/application.vala:380
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -79,89 +79,89 @@ msgstr ""
 "更多细节见 Peek <a href='https://github.com/phw/peek#why-no-native-wayland-"
 "support'>有关 Wayland 支持的常见问题</a>。"
 
-#: src/ui/application-window.vala:97
+#: src/ui/application-window.vala:101
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr "出现未知错误，录制被中止。"
 
-#: src/ui/application-window.vala:218
+#: src/ui/application-window.vala:227
 msgid "Rendering animation…"
 msgstr "渲染中…"
 
-#: src/ui/application-window.vala:219
+#: src/ui/application-window.vala:228
 msgid "Peek will close when rendering is finished."
 msgstr "渲染完成后关闭Peek。"
 
-#: src/ui/application-window.vala:243 ui/application-window.ui:234
-#: ui/preferences.ui:208
+#: src/ui/application-window.vala:256 ui/application-window.ui:241
+#: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:244 ui/application-window.ui:217
-#: ui/preferences.ui:207
+#: src/ui/application-window.vala:257 ui/application-window.ui:224
+#: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:245 ui/application-window.ui:268
-#: ui/preferences.ui:210
+#: src/ui/application-window.vala:258 ui/application-window.ui:275
+#: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:246 ui/application-window.ui:251
-#: ui/preferences.ui:209
+#: src/ui/application-window.vala:259 ui/application-window.ui:258
+#: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:254
+#: src/ui/application-window.vala:271
 #, c-format
 msgid "Record as %s"
 msgstr "录制 %s"
 
-#: src/ui/application-window.vala:401
+#: src/ui/application-window.vala:445
 msgid "Rendering…"
 msgstr "渲染中…"
 
-#: src/ui/application-window.vala:429
+#: src/ui/application-window.vala:479
 msgid "Recording could not be started due to an unexpected error."
 msgstr "由于未知错误,无法开始录制."
 
-#: src/ui/application-window.vala:559 src/ui/application-window.vala:564
+#: src/ui/application-window.vala:608 src/ui/application-window.vala:613
 msgid "Save animation"
 msgstr "保存动画"
 
-#: src/ui/application-window.vala:560 src/ui/application-window.vala:567
+#: src/ui/application-window.vala:609 src/ui/application-window.vala:616
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: src/ui/application-window.vala:561 src/ui/application-window.vala:565
+#: src/ui/application-window.vala:610 src/ui/application-window.vala:614
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/ui/application-window.vala:632
+#: src/ui/application-window.vala:681
 msgid "The file could not be saved to the selected location."
 msgstr "文件无法存储到所选路径。"
 
-#: src/ui/application-window.vala:657
+#: src/ui/application-window.vala:708
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "动画已保存在“%s”"
 
-#: src/ui/application-window.vala:667
+#: src/ui/application-window.vala:718
 msgid "Click here to show the saved file in your file manager."
 msgstr "点击这里将在你的文件管理中显示已保存的文件。"
 
-#: src/ui/application-window.vala:669
+#: src/ui/application-window.vala:720
 msgid "Show in file manager"
 msgstr "在文件管理器中显示"
 
-#: src/ui/preferences-dialog.vala:167
+#: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
 msgstr "已停用"
 
-#: src/ui/preferences-dialog.vala:178 src/ui/preferences-dialog.vala:194
+#: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
 msgstr "更改"
 
-#: src/ui/preferences-dialog.vala:191
+#: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
 msgstr "请按键…"
 
@@ -178,19 +178,19 @@ msgstr ""
 "YFdyh000\n"
 "panli"
 
-#: ui/application-window.ui:33 ui/application-window.ui:142
+#: ui/application-window.ui:33 ui/application-window.ui:147
 msgid "Start recording"
 msgstr "开始录制"
 
-#: ui/application-window.ui:131
+#: ui/application-window.ui:137
 msgid "_Record"
 msgstr "录制(_R)"
 
-#: ui/application-window.ui:158
+#: ui/application-window.ui:163
 msgid "_Stop"
 msgstr "停止(_S)"
 
-#: ui/application-window.ui:169
+#: ui/application-window.ui:173
 msgid "Stop recording"
 msgstr "停止录制"
 
@@ -234,43 +234,47 @@ msgstr "用户界面"
 msgid "Open file manager after saving"
 msgstr "保存之后打开文件管理器"
 
-#: ui/preferences.ui:115
+#: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
+msgid "Show desktop notification after saving"
+msgstr ""
+
+#: ui/preferences.ui:131
 msgid "Start / stop recording"
 msgstr "开始/停止录制"
 
-#: ui/preferences.ui:169
+#: ui/preferences.ui:185
 msgid "Recording"
 msgstr "正在录制"
 
-#: ui/preferences.ui:192
+#: ui/preferences.ui:208
 msgid "Output format"
 msgstr "输出格式"
 
-#: ui/preferences.ui:235 data/com.uploadedlobster.peek.gschema.xml:43
+#: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
 msgstr "使用 gifski 录制高质量的 GIFs"
 
-#: ui/preferences.ui:260
+#: ui/preferences.ui:276
 msgid "GIF quality"
 msgstr "GIF 清晰度"
 
-#: ui/preferences.ui:310 data/com.uploadedlobster.peek.gschema.xml:58
+#: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
 msgstr "帧率"
 
-#: ui/preferences.ui:352
+#: ui/preferences.ui:368
 msgid "Resolution downsampling"
 msgstr "缩减像素采样的清晰度"
 
-#: ui/preferences.ui:394 data/com.uploadedlobster.peek.gschema.xml:53
+#: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
 msgstr "录制开始前延迟的秒数"
 
-#: ui/preferences.ui:427
+#: ui/preferences.ui:443
 msgid "Capture mouse cursor"
 msgstr "录制鼠标光标"
 
-#: ui/preferences.ui:458
+#: ui/preferences.ui:474
 msgid "Peek preferences"
 msgstr "Peek 偏好设置"
 
@@ -342,7 +346,9 @@ msgid ""
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
-msgstr "Peek 不是一个拥有扩展功能的通用屏幕录制应用，它唯一的功能就是在屏幕上录制小巧无声的 GIF，MP4和WebM视频。"
+msgstr ""
+"Peek 不是一个拥有扩展功能的通用屏幕录制应用，它唯一的功能就是在屏幕上录制小巧"
+"无声的 GIF，MP4和WebM视频。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
@@ -360,53 +366,57 @@ msgstr "Peek 正在录制自身"
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
-#: data/com.uploadedlobster.peek.gschema.xml:11
+#: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr "当调整结束后，录制区域将会以毫秒为单位显示大小。"
 
-#: data/com.uploadedlobster.peek.gschema.xml:14
+#: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
 msgstr "\"Peek %Y-%m-%d %H-%M\""
 
-#: data/com.uploadedlobster.peek.gschema.xml:15
+#: data/com.uploadedlobster.peek.gschema.xml:19
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr "默认使用的文件名。可以包含日期格式说明符。扩展名将自动追加。"
 
-#: data/com.uploadedlobster.peek.gschema.xml:19
+#: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
 msgstr "偏好暗色主题"
 
-#: data/com.uploadedlobster.peek.gschema.xml:23
+#: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
 msgstr "切换录制状态的全局快捷键"
 
-#: data/com.uploadedlobster.peek.gschema.xml:39
+#: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
 msgstr "文件输出格式"
 
-#: data/com.uploadedlobster.peek.gschema.xml:48
+#: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
 msgstr "gifski编码器的清晰度设置"
 
-#: data/com.uploadedlobster.peek.gschema.xml:63
+#: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
 msgstr "缩减像素采样的清晰度倍数"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
 msgstr "是否录制鼠标光标"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
 msgstr "上次录制时主窗口大小和位置"
 
-#: data/com.uploadedlobster.peek.gschema.xml:75
+#: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "上次保存视频的路径"
+
+#, fuzzy
+#~ msgid "Show notification after saving"
+#~ msgstr "保存之后打开文件管理器"
 
 #~ msgid ""
 #~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
