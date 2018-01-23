@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -21,6 +21,8 @@ namespace Peek.Ui {
     public ScreenRecorder recorder { get; construct set; }
 
     public bool open_file_manager { get; set; }
+
+    public bool show_notification { get; set; }
 
     public int size_indicator_delay { get; set; }
 
@@ -122,6 +124,10 @@ namespace Peek.Ui {
 
       settings.bind ("interface-open-file-manager",
         this, "open_file_manager",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("interface-show-notification",
+        this, "show_notification",
         SettingsBindFlags.DEFAULT);
 
       settings.bind ("interface-size-indicator-delay",
@@ -696,6 +702,8 @@ namespace Peek.Ui {
     }
 
     private void show_file_saved_notification (File file) {
+      if (this.visible && !show_notification) return;
+
       var message = new StringBuilder ("");
       message.printf (_ ("Animation saved as “%s”"), file.get_basename ());
 

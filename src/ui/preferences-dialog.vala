@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -36,6 +36,9 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Gtk.CheckButton interface_open_file_manager;
+
+    [GtkChild]
+    private Gtk.CheckButton interface_show_notification;
 
     [GtkChild]
     private Gtk.Box keybinding_toggle_recording_box;
@@ -89,6 +92,10 @@ namespace Peek.Ui {
         interface_open_file_manager, "active",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("interface-show-notification",
+        interface_show_notification, "active",
+        SettingsBindFlags.DEFAULT);
+
       settings.bind ("recording-output-format",
         recording_output_format_combo_box, "active_id",
         SettingsBindFlags.DEFAULT);
@@ -117,6 +124,7 @@ namespace Peek.Ui {
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
 
+      on_interface_open_file_manager_toggled (interface_open_file_manager);
       on_gifski_toggled (recording_gifski_enabled);
 
       for (int i = 20; i <= 100; i += 20) {
@@ -139,6 +147,13 @@ namespace Peek.Ui {
 
 #if DISABLE_OPEN_FILE_MANAGER
       interface_open_file_manager.hide ();
+#endif
+    }
+
+    [GtkCallback]
+    private void on_interface_open_file_manager_toggled (ToggleButton source) {
+#if ! DISABLE_OPEN_FILE_MANAGER
+      interface_show_notification.sensitive = !source.active;
 #endif
     }
 

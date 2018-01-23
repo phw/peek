@@ -6,6 +6,10 @@
       <default>false</default>
       <summary>Open file manager after saving</summary>
     </key>
+    <key name="interface-show-notification" type="b">
+      <default>true</default>
+      <summary>Show notification after saving</summary>
+    </key>
     <key name="interface-size-indicator-delay" type="i">
       <default>1600</default>
       <summary>Time in milliseconds for which the recording area size is displayed after resizing stops.</summary>
