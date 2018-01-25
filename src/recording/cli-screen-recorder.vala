@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -20,13 +20,12 @@ namespace Peek.Recording {
         string[] my_args = argv[0:argv.length];
         subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE | SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_MERGE);
         input = subprocess.get_stdin_pipe ();
-        subprocess.wait_async.begin (null, (obj, res) => {
+        subprocess.wait_check_async.begin (null, (obj, res) => {
           bool success = false;
           int status = 0;
           int term_sig = 0;
           try {
-            subprocess.wait_async.end (res);
-            success = subprocess.get_successful ();
+            success = subprocess.wait_check_async.end (res);
             status = subprocess.get_exit_status ();
             if (subprocess.get_if_signaled ()) {
               term_sig = subprocess.get_term_sig ();
