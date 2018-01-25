@@ -46,6 +46,9 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("-crf");
       args.append_val ("0");
     }
+
+    args.append_val ("-r");
+    args.append_val (config.framerate.to_string ());
   }
 
   private bool has_10bit_libx264 () {

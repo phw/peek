@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -30,7 +30,7 @@ namespace Peek.Recording {
         args.append_val ("-show_region");
         args.append_val ("0");
         args.append_val ("-framerate");
-        args.append_val (config.framerate.to_string ());
+        args.append_val (int.max (config.framerate, 6).to_string ());
         args.append_val ("-video_size");
         args.append_val (area.width.to_string () + "x" + area.height.to_string ());
 
