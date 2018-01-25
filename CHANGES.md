@@ -1,8 +1,9 @@
 # Version 1.2.2 - 2018-??-??
  * feat: Option to enable/disable desktop notifications after saving (#21)
  * fix: Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
- * i18n: Updated translations for Basque, Chinese (Simplified), German,
-         Norwegian Bokmål, Portuguese (Brazil), Russian
+ * fix: Recording 1fps with Ffmpeg does not fail anymore (#249)
+ * i18n: Updated translations for Basque, Chinese (Simplified), Czech, Dutch,
+         German, Norwegian Bokmål, Polish, Portuguese (Brazil), Russian, Swedish
 
 # Version 1.2.1 - 2017-12-03
  * i18n: Updated translations for Arabic, Czech, Esperanto, French, Lithuanian,
@@ -92,7 +93,7 @@
  * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
        the recording
  * ui: Add `--backend` command line parameter to manually choose recording
-       backend (`gnome-shell`, `ffmpeg` or `avcodec` for now)
+       backend (`gnome-shell`, `ffmpeg` or `avconv` for now)
  * ui: Hide button label on small window width. Allows for smaller recording area.
  * misc: Use org.freedesktop.FileManager1 DBus service for launching file manager.
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
@@ -119,7 +120,7 @@
  * recording: Add resolution downsampling option (#32)
  * recording: Minimal frame rate is now 1fps
  * recording: Smaller temporary files by using libx264rgb instead of huffyuv (#2)
- * recording: Support for avconf, if ffmpeg is unavailable (#56)
+ * recording: Support for avconv, if ffmpeg is unavailable (#56)
  * i18n: Chinese (Simplified) translation
  * i18n: Croatian translation
  * i18n: Czech translation
