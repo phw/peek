@@ -189,9 +189,16 @@ current version). You can install it with dpkg:
     sudo dpkg -i peek-*-Linux.deb
 
 ### Fedora
-Fedora 25 users can use this repository:
+For Fedora 25 add this repository:
 
-    sudo dnf config-manager --add-repo http://download.opensuse.org/repositories/home:/Bajoja/Fedora_25/home:Bajoja.repo
+    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_25/home:phiwo:peek.repo
+
+For Fedora 26 add this repository:
+
+    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
+
+Then install Peek with:
+
     sudo dnf install peek
 
 To install the required `ffmpeg` package you can use the RPM Fusion free
