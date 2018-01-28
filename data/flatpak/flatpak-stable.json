@@ -125,7 +125,7 @@
     "sources": [{
       "type": "git",
       "url": "../..",
-      "branch": "1.2.1"
+      "branch": "1.2.2"
     }],
     "modules": [{
       "name": "keybinder3",

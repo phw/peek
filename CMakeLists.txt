@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 1)
 set (PEEK_VERSION_MINOR 2)
-set (PEEK_VERSION_PATCH 1)
+set (PEEK_VERSION_PATCH 2)
 
 # Get full Peek version
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)

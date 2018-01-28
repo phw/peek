@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.2.1
+Version:        1.2.2
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
@@ -59,6 +59,12 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
+* Sun Jan 28 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.2
+- Option to enable/disable desktop notifications after saving (#21)
+- Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
+- Recording 1fps with Ffmpeg does not fail anymore (#249)
+- Updated translations for Arabic, Basque, Chinese (Simplified), Czech, Dutch, Esperanto, German, Norwegian Bokmål, Polish, Portuguese (Brazil), Russian, Swedish
+
 * Sun Dec 03 2017 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.1
 - Updated translations for Arabic, Czech, Esperanto, French, Lithuanian, Norwegian Bokmål, Polish, Serbian
 

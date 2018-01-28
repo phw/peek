@@ -1,9 +1,10 @@
-# Version 1.2.2 - 2018-??-??
+# Version 1.2.2 - 2018-01-28
  * feat: Option to enable/disable desktop notifications after saving (#21)
  * fix: Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
  * fix: Recording 1fps with Ffmpeg does not fail anymore (#249)
- * i18n: Updated translations for Basque, Chinese (Simplified), Czech, Dutch,
-         German, Norwegian Bokmål, Polish, Portuguese (Brazil), Russian, Swedish
+ * i18n: Updated translations for Arabic, Basque, Chinese (Simplified), Czech,
+         Dutch, Esperanto, German, Norwegian Bokmål, Polish, Portuguese (Brazil),
+         Russian, Swedish
 
 # Version 1.2.1 - 2017-12-03
  * i18n: Updated translations for Arabic, Czech, Esperanto, French, Lithuanian,
