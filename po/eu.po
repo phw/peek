@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2017-12-12 21:12+0000\n"
+"PO-Revision-Date: 2018-01-29 15:28+0000\n"
 "Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
-"Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
-"eu/>\n"
+"Language-Team: Basque "
+"<https://hosted.weblate.org/projects/peek/translations/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18-dev\n"
+"X-Generator: Weblate 2.19-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -96,7 +96,7 @@ msgstr "Peek itxi egingo da errendatzea bukatzean."
 #: src/ui/application-window.vala:256 ui/application-window.ui:241
 #: ui/preferences.ui:224
 msgid "APNG"
-msgstr "APNG"
+msgstr "PNG"
 
 #: src/ui/application-window.vala:257 ui/application-window.ui:224
 #: ui/preferences.ui:223
@@ -235,7 +235,7 @@ msgstr "Ireki fitxategien arakatzailea gorde ondoren"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Erakutsi mahaigaineko jakinarazpena gorde ondoren"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
