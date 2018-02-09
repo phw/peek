@@ -51,7 +51,7 @@ html2text.ul_item_mark = '-'
 
 
 def format_description(text):
-    text = html2text.handle(description).strip()
+    text = html2text.handle(text).strip()
     text = re.sub(r"(\s*\n){3,}", "\n\n", text)
     return text
 
