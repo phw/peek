@@ -14,7 +14,7 @@ From inside the Peek source folder run:
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
     make
 
-Or you can build with [ninja](https://ninja-build.org/):
+Or you can build with [Ninja](https://ninja-build.org/):
 
     cmake -DCMAKE_INSTALL_PREFIX=/usr -GNinja ..
     ninja
@@ -87,13 +87,3 @@ Generate a `.flatpak` file for single file distribution:
 
     flatpak build-bundle flatpak-repo peek-1.0.0-0.flatpak \
       com.uploadedlobster.peek stable
-
-### Snappy
-
-Build snappy package with:
-
-    snapcraft
-
-Install the package with:
-
-    sudo snap install --dangerous peek_0.9.1+git_amd64.snap
