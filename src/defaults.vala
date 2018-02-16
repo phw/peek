@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -15,10 +15,27 @@ namespace Peek {
   const int DEFAULT_DOWNSAMPLE = 1;
   const int DEFAULT_GIFSKI_QUALITY = 60;
 
-  const string OUTPUT_FORMAT_APNG = "apng";
-  const string OUTPUT_FORMAT_GIF = "gif";
-  const string OUTPUT_FORMAT_WEBM = "webm";
-  const string OUTPUT_FORMAT_MP4 = "mp4";
-
   const string ISSUE_TRACKER_URL = "https://github.com/phw/peek/issues/new";
+
+  public enum OutputFormat {
+    APNG,
+    GIF,
+    MP4,
+    WEBM;
+
+    public string to_string() {
+      switch (this) {
+        case APNG:
+          return "apng";
+        case GIF:
+          return "gif";
+        case WEBM:
+          return "webm";
+        case MP4:
+          return "mp4";
+        default:
+          assert_not_reached ();
+      }
+    }
+  }
 }

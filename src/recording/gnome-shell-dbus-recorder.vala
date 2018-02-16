@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -45,7 +45,7 @@ namespace Peek.Recording {
 
         int width = area.width;
         int height = area.height;
-        if (config.output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OutputFormat.MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -123,7 +123,7 @@ namespace Peek.Recording {
         int width = area.width / config.downsample;
         int height = area.height / config.downsample;
 
-        if (config.output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OutputFormat.MP4) {
           width = Utils.make_even (width);
           height = Utils.make_even (height);
         }
@@ -132,10 +132,10 @@ namespace Peek.Recording {
           "videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
 
-      if (config.output_format == OUTPUT_FORMAT_WEBM) {
+      if (config.output_format == OutputFormat.WEBM) {
         pipeline.append ("vp8enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
-      } else if (config.output_format == OUTPUT_FORMAT_MP4) {
+      } else if (config.output_format == OutputFormat.MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
         pipeline.append ("video/x-h264, profile=baseline ! ");
         pipeline.append ("queue ! mp4mux");
@@ -154,8 +154,8 @@ namespace Peek.Recording {
 
     private string get_temp_file_extension () {
       string extension;
-      if (config.output_format == OUTPUT_FORMAT_GIF
-        || config.output_format == OUTPUT_FORMAT_APNG) {
+      if (config.output_format == OutputFormat.GIF
+        || config.output_format == OutputFormat.APNG) {
         extension = "mkv";
       } else {
         extension = Utils.get_file_extension_for_format (config.output_format);

@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -115,7 +115,7 @@ namespace Peek.Recording {
     protected virtual PostProcessingPipeline build_post_processor_pipeline () {
       var pipeline = new PostProcessingPipeline ();
 
-      if (config.output_format == OUTPUT_FORMAT_GIF) {
+      if (config.output_format == OutputFormat.GIF) {
         if (config.gifski_enabled && GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
           pipeline.add (new GifskiPostProcessor (config));
@@ -125,7 +125,7 @@ namespace Peek.Recording {
           pipeline.add (new ExtractFramesPostProcessor ());
           pipeline.add (new ImagemagickPostProcessor (config));
         }
-      } else if (config.output_format == OUTPUT_FORMAT_APNG) {
+      } else if (config.output_format == OutputFormat.APNG) {
         pipeline.add (new FfmpegPostProcessor (config));
       }
 

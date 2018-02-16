@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -75,19 +75,8 @@ namespace Peek {
       return false;
     }
 
-    public static string get_file_extension_for_format (string output_format) {
-      switch (output_format) {
-        case OUTPUT_FORMAT_WEBM:
-          return "webm";
-        case OUTPUT_FORMAT_MP4:
-          return "mp4";
-        case OUTPUT_FORMAT_APNG:
-          return "apng";
-        case OUTPUT_FORMAT_GIF:
-          return "gif";
-        default:
-          return "";
-      }
+    public static string get_file_extension_for_format (OutputFormat output_format) {
+      return output_format.to_string ();
     }
 
     public static bool string_is_empty (string? str) {

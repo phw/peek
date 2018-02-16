@@ -44,7 +44,7 @@ namespace Peek.Recording {
 
         args.append_val ("-filter:v");
         var filter = "scale=iw/" + config.downsample.to_string () + ":-1";
-        if (config.output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OutputFormat.MP4) {
           filter += ", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)";
         }
 

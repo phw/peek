@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -48,7 +48,7 @@ namespace Peek.Recording {
 
         string extension;
 
-        if (config.output_format == OUTPUT_FORMAT_WEBM) {
+        if (config.output_format == OutputFormat.WEBM) {
           extension = Utils.get_file_extension_for_format (config.output_format);
           args.append_val ("-codec:v");
           // args.append_val ("libvpx-vp9");
@@ -61,13 +61,13 @@ namespace Peek.Recording {
           args.append_val ("13");
           args.append_val ("-b:v");
           args.append_val ("1M");
-        } else if (config.output_format == OUTPUT_FORMAT_MP4) {
+        } else if (config.output_format == OutputFormat.MP4) {
           extension = Utils.get_file_extension_for_format (config.output_format);
           args.append_val ("-codec:v");
           args.append_val ("libx264");
           args.append_val ("-preset");
           args.append_val ("fast");
-        } else if (config.output_format == OUTPUT_FORMAT_GIF) {
+        } else if (config.output_format == OutputFormat.GIF) {
           extension = "mkv";
           args.append_val ("-codec:v");
           args.append_val ("libx264");
@@ -77,13 +77,13 @@ namespace Peek.Recording {
           args.append_val ("0");
         } else {
           var message = "Error: Output format %s no supported by avconv screen recorder.".printf (
-            config.output_format);
+            config.output_format.to_string ());
           throw new RecordingError.INITIALIZING_RECORDING_FAILED (message);
         }
 
         args.append_val ("-filter:v");
         var filter = "scale=iw/" + config.downsample.to_string () + ":-1";
-        if (config.output_format == OUTPUT_FORMAT_MP4) {
+        if (config.output_format == OutputFormat.MP4) {
           filter += ", crop=iw-mod(iw\\,2):ih-mod(ih\\,2)";
         }
 
@@ -112,7 +112,7 @@ namespace Peek.Recording {
     protected override PostProcessingPipeline build_post_processor_pipeline () {
       var pipeline = new PostProcessingPipeline ();
 
-      if (config.output_format == OUTPUT_FORMAT_GIF) {
+      if (config.output_format == OutputFormat.GIF) {
         if (config.gifski_enabled && GifskiPostProcessor.is_available ()) {
           pipeline.add (new ExtractFramesPostProcessor ());
           pipeline.add (new GifskiPostProcessor (config));

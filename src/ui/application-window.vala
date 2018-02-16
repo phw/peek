@@ -251,17 +251,17 @@ namespace Peek.Ui {
     }
 
     //set format
-    private string get_format_name (string format) {
+    private string get_format_name (OutputFormat format) {
       switch (format) {
-        case OUTPUT_FORMAT_APNG: return _ ("APNG");
-        case OUTPUT_FORMAT_GIF: return _ ("GIF");
-        case OUTPUT_FORMAT_MP4: return _ ("MP4");
-        case OUTPUT_FORMAT_WEBM: return _ ("WebM");
+        case OutputFormat.APNG: return _ ("APNG");
+        case OutputFormat.GIF: return _ ("GIF");
+        case OutputFormat.MP4: return _ ("MP4");
+        case OutputFormat.WEBM: return _ ("WebM");
         default: return "";
       }
     }
 
-    private void select_format (string format) {
+    private void select_format (OutputFormat format) {
       recorder.config.output_format = format;
       update_format_label ();
     }
@@ -360,19 +360,22 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_gif_button_clicked (Button source) {
-      select_format (OUTPUT_FORMAT_GIF);
+      select_format (OutputFormat.GIF);
     }
+
     [GtkCallback]
     private void on_apng_button_clicked (Button source) {
-      select_format (OUTPUT_FORMAT_APNG);
+      select_format (OutputFormat.APNG);
     }
+
     [GtkCallback]
     private void on_webm_button_clicked (Button source) {
-      select_format (OUTPUT_FORMAT_WEBM);
+      select_format (OutputFormat.WEBM);
     }
+
     [GtkCallback]
     private void on_mp4_button_clicked (Button source) {
-      select_format (OUTPUT_FORMAT_MP4);
+      select_format (OutputFormat.MP4);
     }
 
     [GtkCallback]

@@ -10,7 +10,7 @@ This software is licensed under the GNU General Public License
 namespace Peek.Recording.Ffmpeg {
   public void add_output_parameters (
     Array<string> args, RecordingConfig config, out string extension) {
-    if (config.output_format == OUTPUT_FORMAT_WEBM) {
+    if (config.output_format == OutputFormat.WEBM) {
       extension = Utils.get_file_extension_for_format (config.output_format);
       args.append_val ("-codec:v");
       // args.append_val ("libvpx-vp9");
@@ -23,7 +23,7 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("13");
       args.append_val ("-b:v");
       args.append_val ("1M");
-    } else if (config.output_format == OUTPUT_FORMAT_MP4) {
+    } else if (config.output_format == OutputFormat.MP4) {
       extension = Utils.get_file_extension_for_format (config.output_format);
       args.append_val ("-codec:v");
       args.append_val ("libx264");

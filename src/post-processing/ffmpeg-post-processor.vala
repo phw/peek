@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -89,7 +89,7 @@ namespace Peek.PostProcessing {
         var argv = new Array<string> ();
         argv.append_vals (args, args.length);
 
-        if (config.output_format == OUTPUT_FORMAT_APNG) {
+        if (config.output_format == OutputFormat.APNG) {
           argv.append_val ("-plays");
           argv.append_val ("0");
         }

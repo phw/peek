@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -23,7 +23,7 @@ namespace Peek.PostProcessing {
 
     public override async Array<File>? process_async (Array<File> files) throws RecordingError {
       try {
-        var extension = Utils.get_file_extension_for_format (OUTPUT_FORMAT_GIF);
+        var extension = Utils.get_file_extension_for_format (OutputFormat.GIF);
         var output_file = Utils.create_temp_file (extension);
 
         debug ("Running gifski\n    saving to: %s\n    quality: %d\n",

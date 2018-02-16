@@ -160,7 +160,7 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_output_format_changed () {
       recording_gifski_settings.sensitive =
-        (recording_output_format_combo_box.active_id == OUTPUT_FORMAT_GIF);
+        (recording_output_format_combo_box.active_id == OutputFormat.GIF.to_string ());
     }
 
     [GtkCallback]
