@@ -585,6 +585,12 @@ namespace Peek.Ui {
     }
 
     private void freeze_window_size () {
+      // Workaround for https://github.com/phw/peek/issues/269
+      if (DesktopIntegration.is_xfce ()) {
+        debug ("Window size freezing disabled on Xfce");
+        return;
+      }
+
       var width = this.get_allocated_width ();
       var height = this.get_allocated_height ();
       debug ("freeze_window_size w: %d, h: %d", width, height);
@@ -593,6 +599,12 @@ namespace Peek.Ui {
     }
 
     private void unfreeze_window_size () {
+      // Workaround for https://github.com/phw/peek/issues/269
+      if (DesktopIntegration.is_xfce ()) {
+        debug ("Window size freezing disabled on Xfce");
+        return;
+      }
+
       var width = this.get_allocated_width ();
       var height = this.get_allocated_height ();
       debug ("unfreeze_window_size w: %d, h: %d", width, height);
