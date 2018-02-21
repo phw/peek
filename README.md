@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
 [![Join the chat at https://gitter.im/phw/peek](https://badges.gitter.im/phw/peek.svg)](https://gitter.im/phw/peek?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Open Source Helpers](https://www.codetriage.com/phw/peek/badges/users.svg)](https://www.codetriage.com/phw/peek)
 
 ![Peek recording itself](https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif)
 
