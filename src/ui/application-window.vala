@@ -348,9 +348,12 @@ namespace Peek.Ui {
         if (!is_recording) {
           var shortcut =Application.get_app_settings();
           string keys =shortcut.get_string("keybinding-toggle-recording");
+          string last=keys.substring(-1).up();
           keys=keys.replace("<","").replace(">","+");
           keys=keys.replace("Primary","Crtl");
-          shortcut_label.set_text("Start/Stop: " +keys);
+          var test = new StringBuilder(keys);
+          test.overwrite(test.len-1,last);
+          shortcut_label.set_text("Start/Stop: " +test.str);
           shortcut_label.show();
           
           var size_label = new StringBuilder ();
