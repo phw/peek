@@ -106,6 +106,9 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">0</property>
+                <style>
+                  <class name="peek-recording-view-overlay"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>
