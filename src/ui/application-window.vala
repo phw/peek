@@ -55,7 +55,9 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Label delay_indicator;
-
+    
+    [GtkChild]
+    private Label shortcut_label;
 
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
@@ -330,12 +332,27 @@ namespace Peek.Ui {
         if (get_window_width () < SMALL_WINDOW_SIZE) {
           GtkHelper.hide_button_label (record_button);
           GtkHelper.hide_button_label (stop_button);
+          //Set the scale of shortcut_label
+          Pango.AttrList attrs = new Pango.AttrList (); 
+          attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL)); 
+          shortcut_label.attributes = attrs;
         } else {
           GtkHelper.show_button_label (record_button);
           GtkHelper.show_button_label (stop_button);
+          //Set the scale of shortcut_label
+          Pango.AttrList attrs = new Pango.AttrList (); 
+          attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE)); 
+          shortcut_label.attributes = attrs;
         }
 
         if (!is_recording) {
+          var shortcut =Application.get_app_settings();
+          string keys =shortcut.get_string("keybinding-toggle-recording");
+          keys=keys.replace("<","").replace(">","+");
+          keys=keys.replace("Primary","Crtl");
+          shortcut_label.set_text("Start/Stop: " +keys);
+          shortcut_label.show();
+          
           var size_label = new StringBuilder ();
           size_label.printf ("%i x %i", area.width, area.height);
           size_indicator.set_text (size_label.str);
@@ -346,10 +363,12 @@ namespace Peek.Ui {
           }
 
           if (!recorder.is_recording) {
+            shortcut_label.opacity = 1.0;
             size_indicator.opacity = 1.0;
             size_indicator_timeout = Timeout.add (size_indicator_delay, () => {
               size_indicator_timeout = 0;
               size_indicator.opacity = 0.0;
+              shortcut_label.opacity = 0.0;
               update_input_shape ();
               return false;
             });
@@ -398,6 +417,7 @@ namespace Peek.Ui {
         delay_indicator.set_text (delay.to_string ());
         delay_indicator.show ();
         size_indicator.hide ();
+        shortcut_label.hide ();
         delay_indicator_timeout = Timeout.add_seconds (1, () => {
           delay -= 1;
 
@@ -488,6 +508,7 @@ namespace Peek.Ui {
       if (!is_recording) {
         is_recording = true;
         size_indicator.opacity = 0.0;
+        shortcut_label.opacity = 0.0;
         pop_format_menu.hide ();
         record_button.hide ();
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
