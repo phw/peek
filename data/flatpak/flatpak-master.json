@@ -60,7 +60,7 @@
       "--enable-encoder=libx264",
       "--enable-encoder=png",
       "--enable-demuxer=image2",
-      "--enable-demuxer=webm",
+      "--enable-demuxer=matroska",
       "--enable-muxer=apng",
       "--enable-muxer=gif",
       "--enable-muxer=image2",
@@ -76,8 +76,8 @@
     ],
     "sources": [{
       "type": "archive",
-      "url": "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
-      "sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
+      "url": "https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz",
+      "sha256": "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
     }],
     "modules": [{
       "name": "libx264",
@@ -103,8 +103,8 @@
     "skip-arches": ["aarch64", "arm"],
     "sources": [{
       "type": "archive",
-      "url": "https://github.com/ImageOptim/gifski/archive/0.7.3.tar.gz",
-      "sha256": "0db038fa91764295b0caf473bfc09e577b926260f5f116687600ae7140811721"
+      "url": "https://github.com/ImageOptim/gifski/archive/0.8.0.tar.gz",
+      "sha256": "f3cab822dd41de17ba4fdc3b8d379b469404573b1a4adcb5f9c9385a7a927760"
     }],
     "build-commands": [
       "cargo build --release --features=openmp",
