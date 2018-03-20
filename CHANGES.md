@@ -1,7 +1,18 @@
+# Version 1.?.? - 2018-0?-??
+ * feat: libx264 is no longer required when just recording GIF / APNG with FFmpeg back end
+ * feat: Removed avconv / libav backend and ImageMagick post processor
+ * misc: Added sources for DBus interfaces (#296)
+ * fix: Fixed lossy artifacts increasing GIF size when using gnome-shell recorder (#288)
+ * fix: Do not freeze window size on Xfce (#269)
+ * i18n: Fixed names of Chinese localization files (#294)
+ * i18n: Updated translations for Basque, Chinese (Simplified), Lithuanian,
+         Norwegian Bokmål, Russian, Serbian, Ukrainian
+ * packaging: Removed Snapcraft build
+
 # Version 1.2.2 - 2018-01-28
  * feat: Option to enable/disable desktop notifications after saving (#21)
  * fix: Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)
- * fix: Recording 1fps with Ffmpeg does not fail anymore (#249)
+ * fix: Recording 1fps with FFmpeg does not fail anymore (#249)
  * i18n: Updated translations for Arabic, Basque, Chinese (Simplified), Czech,
          Dutch, Esperanto, German, Norwegian Bokmål, Polish, Portuguese (Brazil),
          Russian, Swedish
@@ -59,7 +70,7 @@
  * fix: Closing window while recording could leave temp files behind
  * fix: KDE Plasma and XFCE were showing an empty button in notification
  * fix: Place close button on the left on all desktops configured this way (#129)
- * fix: Cinammon showing notification with icon
+ * fix: Cinnamon showing notification with icon
  * i18n: Indonesian and Serbian translation
  * i18n: Updated translations for Basque, Esperanto, French, Portuguese (Brazil),
          Russian and Ukrainian
@@ -94,7 +105,7 @@
  * ui: Add `--start`, `--stop` and `--toggle` command line parameters to control
        the recording
  * ui: Add `--backend` command line parameter to manually choose recording
-       backend (`gnome-shell`, `ffmpeg` or `avconv` for now)
+       back end (`gnome-shell`, `ffmpeg` or `avconv` for now)
  * ui: Hide button label on small window width. Allows for smaller recording area.
  * misc: Use org.freedesktop.FileManager1 DBus service for launching file manager.
  * fix: Fixed a possible race condition that could lead to empty or broken files (#1)
