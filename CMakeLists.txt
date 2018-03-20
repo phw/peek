@@ -221,7 +221,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg, gstreamer1.0-plugins-good")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg, gstreamer1.0-plugins-good (>= 1.2)")
 set(CPACK_DEBIAN_PACKAGE_RECOMMENDS "gstreamer1.0-plugins-ugly")
 set(CPACK_DEBIAN_PACKAGE_SUGGESTS "gifski")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")

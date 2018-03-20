@@ -142,9 +142,9 @@ namespace Peek.Recording {
       } else {
         // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.
-        // Being near lossless here is important to avoid color distortions in
-        // final GIF.
-        pipeline.append ("vp8enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
+        // Being near lossless here is important to avoid color distortions and
+        // dirty frames in the final GIF.
+        pipeline.append ("vp9enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
       }
 
@@ -156,7 +156,7 @@ namespace Peek.Recording {
       string extension;
       if (config.output_format == OutputFormat.GIF
         || config.output_format == OutputFormat.APNG) {
-        extension = "mkv";
+        extension = "webm";
       } else {
         extension = Utils.get_file_extension_for_format (config.output_format);
       }
