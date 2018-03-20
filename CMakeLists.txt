@@ -147,7 +147,6 @@ vala_precompile(VALA_C
     src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processing-pipeline.vala
     src/post-processing/post-processor.vala
-    src/recording/avconv-screen-recorder.vala
     src/recording/base-screen-recorder.vala
     src/recording/cli-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala
