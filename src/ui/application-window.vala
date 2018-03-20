@@ -56,7 +56,7 @@ namespace Peek.Ui {
     [GtkChild]
     private Label delay_indicator;
 
-
+    private uint start_recording_event_source = 0;
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
     private uint time_indicator_timeout = 0;
@@ -233,16 +233,24 @@ namespace Peek.Ui {
         return true;
       }
 
+      if (start_recording_event_source != 0) {
+        Source.remove (start_recording_event_source);
+        start_recording_event_source = 0;
+      }
+
       if (size_indicator_timeout != 0) {
         Source.remove (size_indicator_timeout);
+        size_indicator_timeout = 0;
       }
 
       if (delay_indicator_timeout != 0) {
         Source.remove (delay_indicator_timeout);
+        delay_indicator_timeout = 0;
       }
 
       if (time_indicator_timeout != 0) {
         Source.remove (time_indicator_timeout);
+        time_indicator_timeout = 0;
       }
 
       this.save_geometry ();
@@ -407,6 +415,7 @@ namespace Peek.Ui {
             hide_handler = delay_indicator.hide.connect (() => {
               delay_indicator.disconnect (hide_handler);
               stop_button.set_label (stop_button_label);
+              delay_indicator.queue_draw ();
               start_recording ();
             });
             delay_indicator.hide ();
@@ -427,6 +436,10 @@ namespace Peek.Ui {
       if (delay_indicator_timeout != 0) {
         Source.remove (delay_indicator_timeout);
         delay_indicator_timeout = 0;
+        leave_recording_state ();
+      } else if (start_recording_event_source != 0) {
+        Source.remove (start_recording_event_source);
+        start_recording_event_source = 0;
         leave_recording_state ();
       } else if (!recorder.is_recording) {
         return;
@@ -466,22 +479,30 @@ namespace Peek.Ui {
     }
 
     private void start_recording () {
-      update_time ();
-      var area = get_recording_area ();
-      debug ("Recording area: %i, %i, %i, %i\n",
+      // Actually start the recording on next idle time, making sure
+      // all queued painting happens before this.
+      start_recording_event_source = Idle.add_full (Priority.HIGH_IDLE, () => {
+        Source.remove (start_recording_event_source);
+        start_recording_event_source = 0;
+        update_time ();
+        var area = get_recording_area ();
+        debug ("Recording area: %i, %i, %i, %i\n",
         area.left, area.top, area.width, area.height);
-      active_recording_area = area;
+        active_recording_area = area;
 
-      try {
-        recorder.record (area);
-      } catch (RecordingError e) {
-        stderr.printf ("Failed to initialize recorder: %s\n", e.message);
-        leave_recording_state ();
-        ErrorDialog.present_single_instance (
-          this,
-          _ ("Recording could not be started due to an unexpected error."),
-          e);
-      }
+        try {
+          recorder.record (area);
+          return true;
+        } catch (RecordingError e) {
+          stderr.printf ("Failed to initialize recorder: %s\n", e.message);
+          leave_recording_state ();
+          ErrorDialog.present_single_instance (
+            this,
+            _ ("Recording could not be started due to an unexpected error."),
+            e);
+          return false;
+        }
+      });
     }
 
     private void enter_recording_state () {
