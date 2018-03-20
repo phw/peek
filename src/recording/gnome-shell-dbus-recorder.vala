@@ -111,6 +111,7 @@ namespace Peek.Recording {
           // sometimes fails.
           wait_timeout = Timeout.add_full (GLib.Priority.LOW, 400, () => {
             Source.remove (wait_timeout);
+            wait_timeout = 0;
             finalize_recording ();
             return true;
           });
