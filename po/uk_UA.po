@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2018-03-13 20:41+0000\n"
-"Last-Translator: Максим Якимчук <xpinovo@gmail.com>\n"
+"PO-Revision-Date: 2018-03-20 08:59+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
 "translations/uk/>\n"
 "Language: uk_UA\n"
@@ -121,7 +121,7 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:271
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
 msgstr "Записувати як %s"
 
