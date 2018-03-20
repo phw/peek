@@ -55,8 +55,7 @@ Or you can build with [Ninja](https://ninja-build.org/):
  - libgtk-3-0 (>= 3.14)
  - libglib2.0 (>= 2.38)
  - libkeybinder-3.0-0
- - ffmpeg | libav-tools
- - imagemagick
+ - ffmpeg
 
 #### Generating the package
 A Debian package can be created with cmake on any system:

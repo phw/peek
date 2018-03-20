@@ -144,7 +144,6 @@ vala_precompile(VALA_C
     src/post-processing/extract-frames-post-processor.vala
     src/post-processing/ffmpeg-post-processor.vala
     src/post-processing/gifski-post-processor.vala
-    src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processing-pipeline.vala
     src/post-processing/post-processor.vala
     src/recording/base-screen-recorder.vala
