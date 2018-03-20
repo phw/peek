@@ -117,6 +117,7 @@ namespace Peek.Recording {
       // Default pipeline is for GNOME Shell up to 2.22:
       // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
       // GNOME Shell 3.24 will use vp9enc with same settings.
+      // See https://gitlab.gnome.org/GNOME/gnome-shell/blob/master/src/shell-recorder.c#L149
       var pipeline = new StringBuilder ();
 
       if (config.downsample > 1) {
@@ -133,7 +134,7 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("vp8enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
       } else if (config.output_format == OutputFormat.MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");

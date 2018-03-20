@@ -55,7 +55,6 @@
       "--enable-encoder=apng",
       "--enable-encoder=ffvhuff",
       "--enable-encoder=gif",
-      "--enable-encoder=libvpx_vp8",
       "--enable-encoder=libvpx_vp9",
       "--enable-encoder=libx264",
       "--enable-encoder=png",

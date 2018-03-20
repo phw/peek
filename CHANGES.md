@@ -1,4 +1,5 @@
 # Version 1.?.? - 2018-0?-??
+ * feat: Use VP9 instead of VP8 for WebM recording (#293)
  * feat: libx264 is no longer required when just recording GIF / APNG with FFmpeg back end
  * feat: Removed avconv / libav backend and ImageMagick post processor
  * misc: Added sources for DBus interfaces (#296)

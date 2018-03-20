@@ -13,8 +13,7 @@ namespace Peek.Recording.Ffmpeg {
     if (config.output_format == OutputFormat.WEBM) {
       extension = Utils.get_file_extension_for_format (config.output_format);
       args.append_val ("-codec:v");
-      // args.append_val ("libvpx-vp9");
-      args.append_val ("libvpx");
+      args.append_val ("libvpx-vp9");
       args.append_val ("-qmin");
       args.append_val ("10");
       args.append_val ("-qmax");
