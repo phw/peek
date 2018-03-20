@@ -19,12 +19,20 @@ namespace Peek.Recording {
 
     private const string DBUS_NAME = "org.gnome.Shell.Screencast";
 
+    private uint wait_timeout = 0;
+
     public GnomeShellDbusRecorder () throws IOError {
       base ();
       screencast = Bus.get_proxy_sync (
         BusType.SESSION,
         DBUS_NAME,
         "/org/gnome/Shell/Screencast");
+    }
+
+    ~GnomeShellDbusRecorder () {
+      if (wait_timeout != 0) {
+        Source.remove (wait_timeout);
+      }
     }
 
     protected override void start_recording (RecordingArea area) throws RecordingError {
@@ -97,7 +105,15 @@ namespace Peek.Recording {
       try {
         screencast.stop_screencast ();
         if (!is_cancelling) {
-          finalize_recording ();
+          // Add a small timeout after GNOME Shell recorder was stopped.
+          // The recorder will stop the GST pipeline, but there might be still
+          // some cleanup / finalization to do. Without this the post-processing
+          // sometimes fails.
+          wait_timeout = Timeout.add_full (GLib.Priority.LOW, 400, () => {
+            Source.remove (wait_timeout);
+            finalize_recording ();
+            return true;
+          });
         }
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
