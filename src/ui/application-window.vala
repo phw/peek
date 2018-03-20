@@ -311,7 +311,6 @@ namespace Peek.Ui {
     [GtkCallback]
     private bool on_window_draw (Widget widget, Context ctx) {
       update_input_shape ();
-
       return false;
     }
 
@@ -320,7 +319,6 @@ namespace Peek.Ui {
       // Stance out the transparent inner part
       ctx.set_operator (Operator.CLEAR);
       ctx.paint ();
-
       return false;
     }
 
@@ -518,6 +516,7 @@ namespace Peek.Ui {
         stop_button.sensitive = true;
         stop_button.show ();
         freeze_window_size ();
+        update_input_shape ();
         set_keep_above (true);
       }
     }
@@ -530,6 +529,7 @@ namespace Peek.Ui {
       stop_button.hide ();
       pop_format_menu.show ();
       record_button.show ();
+      update_input_shape ();
       unfreeze_window_size ();
       hide_spinner ();
 
@@ -553,12 +553,15 @@ namespace Peek.Ui {
     }
 
     private void update_input_shape () {
-      // Set an input shape so that the recording view is not clickable
       var window_region = GtkHelper.create_region_from_widget (recording_view.get_toplevel ());
-      var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
-      window_region.subtract (recording_view_region);
 
-      //popover menu
+      // Set an input shape so that the recording view is not clickable
+      if (is_recording) {
+        var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
+        window_region.subtract (recording_view_region);
+      }
+
+      // Popover menu
       if (pop_format.visible) {
         var pop_style = pop_format.get_style_context ();
         if (DesktopIntegration.get_theme_name () == "Ambiance") {
