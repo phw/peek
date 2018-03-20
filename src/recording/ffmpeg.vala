@@ -38,13 +38,11 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("-pix_fmt");
       args.append_val ("yuv420p");
     } else {
-      extension = "mkv";
+      extension = "webm";
       args.append_val ("-codec:v");
-      args.append_val ("libx264rgb");
-      args.append_val ("-preset:v");
-      args.append_val ("ultrafast");
-      args.append_val ("-crf");
-      args.append_val ("0");
+      args.append_val ("libvpx-vp9");
+      args.append_val ("-lossless");
+      args.append_val ("1");
     }
 
     args.append_val ("-r");
