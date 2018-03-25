@@ -115,32 +115,10 @@ To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
 ### Snappy
-**Attention:** *The Snap package currently does **not run on Wayland** as the Snap sandbox does not allow Peek to access any available screen recording capabilities (see [issue #245](https://github.com/phw/peek/issues/245)). Please use X11 instead or use one of the other installation options such as Flatpak, PPA, AppImage or from source.*
-
-Peek can be installed on all distributions supporting [snappy](https://snapcraft.io/docs/core/install).
-To install, either install the GNOME content snap (gnome-3-26-1604) and the Peek snap from your software center (if the software center supports snappy) or install via command line:
-
-    sudo snap install gnome-3-26-1604
-    sudo snap install peek
-
-Once installed you can run Peek via its application icon in your desktop
-environment or from command line:
-
-    snap run peek
-
-In case it fails to start with the message `You need to connect this snap to the gnome platform snap`
-do the following command via command-line:
-
-    sudo snap connect peek:gnome-3-26-1604 gnome-3-26-1604:gnome-3-26-1604
-
-Snaps should automatically update in the background. If this is not happening
-you can update Peek manually to the latest version:
-
-    sudo snap refresh peek
-
-To test the latest development version install Peek from the edge channel:
-
-    sudo snap install peek --edge
+Peek no longer has officially supported Snap packages, see
+[the announcement](https://www.reddit.com/r/Ubuntu/comments/870bcn/snap_support_for_peek_screen_recorder_discontinued/).
+Please consider using the Flatpak or AppImage versions or use the Ubuntu PPA
+if you are using Ubuntu.
 
 ### AppImage
 Peek [AppImage](https://appimage.org/) packages are available on the
