@@ -41,6 +41,8 @@ namespace Peek.Recording {
               e.message);
           }
 #endif
+        case "sway":
+          return new SwayScreenRecorder ();
         case "ffmpeg":
           return new FfmpegScreenRecorder ();
         default:

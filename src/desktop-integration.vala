@@ -148,9 +148,12 @@ namespace Peek {
       return xdg_current_desktop_contains ("KDE");
     }
 
+    public static bool is_sway () {
+      return environment_variable_is_not_empy ("SWAYSOCK");
+    }
+
     public static bool is_wayland () {
-      string? wayland_display = Environment.get_variable ("WAYLAND_DISPLAY");
-      return wayland_display != null && wayland_display != "";
+      return environment_variable_is_not_empy ("WAYLAND_DISPLAY");
     }
 
     public static bool is_x11_backend () {
@@ -204,6 +207,11 @@ namespace Peek {
       }
 
       return "";
+    }
+
+    private static bool environment_variable_is_not_empy (string name) {
+      string? variable = Environment.get_variable (name);
+      return variable != null && variable != "";
     }
 
 #if ! DISABLE_OPEN_FILE_MANAGER

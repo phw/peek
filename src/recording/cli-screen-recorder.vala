@@ -15,10 +15,18 @@ namespace Peek.Recording {
     protected Subprocess subprocess;
     protected OutputStream input;
 
-    protected void spawn_record_command (string[] argv) throws RecordingError {
+    protected void spawn_record_command (string[] argv, HashTable<string, string>? env = null) throws RecordingError {
+      var launcher = new SubprocessLauncher (SubprocessFlags.STDIN_PIPE | SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_MERGE);
+
+      if (env != null) {
+        env.foreach ((key, val) => {
+          launcher.setenv (key, val, true);
+        });
+      }
+
       try {
         string[] my_args = argv[0:argv.length];
-        subprocess = new Subprocess.newv (argv, SubprocessFlags.STDIN_PIPE | SubprocessFlags.STDOUT_PIPE | SubprocessFlags.STDERR_MERGE);
+        subprocess = launcher.spawnv (argv);
         input = subprocess.get_stdin_pipe ();
         subprocess.wait_check_async.begin (null, (obj, res) => {
           bool success = false;
