@@ -19,10 +19,10 @@ Package: peek
 Architecture: any
 Depends: ${misc:Depends},
  ${shlibs:Depends},
- ffmpeg | libav-tools,
- gstreamer1.0-plugins-good
+ ffmpeg,
+ gstreamer1.0-plugins-good (>= 1.2)
 Recommends: gstreamer1.0-plugins-ugly
-Suggests: imagemagick
+Suggests: gifski
 Description: Simple screen recorder with an easy to use interface
  Peek makes it easy to create short screencasts of a screen area. It was built
  for the specific use case of recording screen areas, e.g. for easily showing
