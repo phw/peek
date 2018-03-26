@@ -59,7 +59,7 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
-* Sun Jan 25 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.0
+* Sun Mar 25 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.0
 - feat: Use VP9 instead of VP8 for WebM recording (#293)
 - feat: libx264 is no longer required when just recording GIF / APNG with FFmpeg back end
 - feat: Removed avconv / libav backend and ImageMagick post processor
