@@ -49,6 +49,7 @@
       "--disable-ffserver",
       "--disable-doc",
       "--disable-everything",
+      "--enable-bsf=vp9_superframe",
       "--enable-decoder=libvpx_vp9",
       "--enable-decoder=png",
       "--enable-decoder=rawvideo",
