@@ -22,6 +22,8 @@ namespace Peek.Recording.Ffmpeg {
       args.append_val ("13");
       args.append_val ("-b:v");
       args.append_val ("1M");
+      args.append_val ("-pix_fmt");
+      args.append_val ("yuv420p");
     } else if (config.output_format == OutputFormat.MP4) {
       extension = Utils.get_file_extension_for_format (config.output_format);
       args.append_val ("-codec:v");
