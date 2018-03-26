@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2018-03-26 05:28+0000\n"
+"PO-Revision-Date: 2018-03-26 20:26+0000\n"
 "Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
 "fr/>\n"
@@ -249,7 +249,7 @@ msgstr "Ouvrir le gestionnaire de fichiers après la sauvegarde"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr "Afficher une notification après avoir sauvegarder."
+msgstr "Afficher une notification après avoir sauvegarder"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
