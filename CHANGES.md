@@ -1,5 +1,8 @@
-# Version 1.3.1 - 2018-03-27
-* fix: Use yuv420p for VP9 encoding (#299)
+# Version 1.3.1 - 2018-03-29
+ * fix: Use yuv420p for VP9 encoding (#299)
+ * fix: Disable animations and transitions on recording view overlays (#208)
+ * i18n: Updated French and Russian translations
+ * packaging: Build ffmpeg with vp9_superframe for Flatpak and AppImage
 
 # Version 1.3.0 - 2018-03-25
  * feat: Use VP9 instead of VP8 for WebM recording (#293)

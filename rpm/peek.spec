@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.3.0
+Version:        1.3.1
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
@@ -59,6 +59,11 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
+* Thu Mar 29 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.1
+- fix: Use yuv420p for VP9 encoding (#299)
+- fix: Disable animations and transitions on recording view overlays (#208)
+- i18n: Updated French and Russian translations
+
 * Sun Mar 25 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.0
 - feat: Use VP9 instead of VP8 for WebM recording (#293)
 - feat: libx264 is no longer required when just recording GIF / APNG with FFmpeg back end
