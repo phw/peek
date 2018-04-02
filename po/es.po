@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2018-04-02 15:01+0000\n"
+"PO-Revision-Date: 2018-04-02 16:06+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/peek/"
 "translations/es/>\n"
@@ -32,19 +32,19 @@ msgstr "Seleccionar el soporte para grabar (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr "BACKEND"
+msgstr "SOPORTE"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr "Iniciar la grabación en todas las instancias de Peek"
+msgstr "Iniciar la grabación en todas las instancias de Peek en ejecución"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr "Detener la grabación en todas las instancias de Peek"
+msgstr "Detener la grabación en todas las instancias de Peek en ejecución"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr "Cambiar la grabación en todas las instancias de Peek"
+msgstr "Cambiar la grabación en todas las instancias de Peek en ejecución"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
@@ -57,16 +57,16 @@ msgstr "Peek"
 
 #: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
-msgstr "No se puede crear la grabadora de pantalla predeterminada.\n"
+msgstr "No se puede crear el grabador de pantalla predeterminado.\n"
 
 #: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr "No se puede inicializar el backend %s.\n"
+msgstr "No se puede inicializar el soporte %s.\n"
 
 #: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
-msgstr "El backend nativo de Wayland no está soportado"
+msgstr "El soporte nativo de Wayland no está soportado"
 
 #: src/application.vala:380
 msgid ""
@@ -76,12 +76,12 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Estás ejecutando Peek nativamente en Wayland, esto no está soportado "
-"actualmente. Comience Peek usando XWayland estableciendo <tt> "
-"1GDK_BACKEND=x11</tt>.\n"
+"Está ejecutando Peek de manera nativa en Wayland, esto no está soportado "
+"actualmente. Comience Peek usando XWayland estableciendo "
+"<tt>GDK_BACKEND=x11</tt>.\n"
 "\n"
-"Para más detalles, vea el Peek <a href='https://github.com/phw/peek#why-no-"
-"native-wayland-support'>preguntas frecuentes sobre el apoyo de Wayland</a>."
+"Vea para más detalles las <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>preguntas frecuentes sobre el soporte a Wayland</a> de Peek."
 
 #: src/ui/application-window.vala:101
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -123,7 +123,7 @@ msgstr "Grabar como %s"
 
 #: src/ui/application-window.vala:445
 msgid "Rendering…"
-msgstr "Renderizando…"
+msgstr "Convirtiendo…"
 
 #: src/ui/application-window.vala:479
 msgid "Recording could not be started due to an unexpected error."
@@ -156,7 +156,7 @@ msgstr "Pulse aquí para mostrar el archivo guardado en el gestor de archivos."
 
 #: src/ui/application-window.vala:720
 msgid "Show in file manager"
-msgstr "Mostrar en gestor de archivos"
+msgstr "Mostrar en el gestor de archivos"
 
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
@@ -180,7 +180,8 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr ""
 "Adolfo Jayme-Barrientos \n"
-"Holman Calderón <halecalderon@gmail.com>"
+"Holman Calderón <halecalderon@gmail.com>\n"
+"advocatux"
 
 #: ui/application-window.ui:33 ui/application-window.ui:147
 msgid "Start recording"
@@ -232,11 +233,11 @@ msgstr "_Salir"
 
 #: ui/preferences.ui:77
 msgid "User interface"
-msgstr "Interfaz del usuario"
+msgstr "Interfaz de usuario"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Abrir gestor de archivos después de guardar"
+msgstr "Abrir el gestor de archivos después de guardar"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
@@ -264,11 +265,11 @@ msgstr "Calidad del GIF"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Cantidad de fotogramas"
+msgstr "Fotogramas por segundo"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
-msgstr "Disminución de resolución"
+msgstr "Reducción de la resolución de muestreo"
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
@@ -284,7 +285,7 @@ msgstr "Preferencias de Peek"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Graba pequeños gifs animados de tu pantalla"
+msgstr "Grabe GIF animados cortos desde su pantalla"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -296,7 +297,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr "Grabador de pantalla simple con una interfaz fácil de usar"
+msgstr "Grabador de pantalla sencillo con una interfaz fácil de usar"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -308,17 +309,16 @@ msgid ""
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
 "Peek hace que sea fácil crear screencasts cortos de un área de pantalla. Fue "
-"construido para el caso de uso específico de las áreas de la pantalla de "
-"grabación, por ejemplo, para mostrar fácilmente las características de "
-"interfaz de usuario de sus propias aplicaciones o para mostrar un error en "
-"los informes de error. Con Peek simplemente coloque la ventana Peek sobre el "
-"área que desea grabar y presione \"Grabar\". Peek está optimizado para "
-"generar GIFs animados, pero también puede grabar directamente en WebM o MP4 "
-"si lo prefiere."
+"construido para el caso de uso específico de grabación de áreas de pantalla, "
+"p.ej. para mostrar fácilmente las características de interfaz de usuario de "
+"sus propias aplicaciones o para mostrar un error en los informes de errores. "
+"Con Peek simplemente coloque la ventana de Peek sobre el área que quiere "
+"grabar y pulse \"Grabar\". Peek está optimizado para generar GIFs animados, "
+"pero también puede grabar directamente en WebM o MP4 si lo prefiere."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr "Caracteristicas:"
+msgstr "Características:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
@@ -326,7 +326,7 @@ msgstr "Seleccione una región de pantalla para grabar"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Guardar video grabado como un GIF animado optimizado"
+msgstr "Guardar vídeo grabado como un GIF animado optimizado"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
@@ -338,7 +338,7 @@ msgstr "Interfaz de usuario sencilla optimizada para la tarea"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr "Baja automáticamente los videos grabados"
+msgstr "Reducir automáticamente la escala de los vídeos grabados"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
@@ -346,7 +346,9 @@ msgstr "Soporte para pantallas HiDPI"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr "Funciona dentro de una sesión GNOME Shell Wayland (usando XWayland)"
+msgstr ""
+"Funciona dentro de una sesión de Wayland en el intérprete de GNOME (usando "
+"XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -355,10 +357,10 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
-"Peek no es una aplicación de screencast de uso general con funciones "
-"ampliadas, sino que se centra en la única tarea de crear screencasts "
-"pequeños y silenciosos de un área de la pantalla para crear animaciones GIF "
-"o videos silenciosos de formato WebM o MP4."
+"Peek no es una aplicación de screencast de propósito general de "
+"características ampliadas, sino que se centra en la única tarea de crear "
+"screencasts pequeños y silenciosos de un área de la pantalla para crear "
+"animaciones GIF o vídeos silenciosos en formato WebM o MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
@@ -370,7 +372,7 @@ msgstr "Diálogo de preferencias de Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
-msgstr "Peek se está grabando"
+msgstr "Peek se está grabando a sí mismo"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
@@ -382,7 +384,7 @@ msgid ""
 "resizing stops."
 msgstr ""
 "Intervalo en milisegundos por el que se muestra el tamaño del área de "
-"grabación después de finalizar el redimensionando."
+"grabación después de finalizar el redimensionamiento."
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -402,7 +404,7 @@ msgstr "Preferir el tema oscuro"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr "Enlace de clave global para activar la grabación"
+msgstr "Asignación de tecla global para alternar la grabación"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
