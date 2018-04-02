@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-01-23 22:56+0100\n"
-"PO-Revision-Date: 2018-04-02 16:06+0000\n"
+"PO-Revision-Date: 2018-04-03 09:31+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/peek/"
 "translations/es/>\n"
@@ -404,7 +404,7 @@ msgstr "Preferir el tema oscuro"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr "Asignación de tecla global para alternar la grabación"
+msgstr "Asignación de tecla global para iniciar y detener la grabación"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
@@ -416,15 +416,15 @@ msgstr "Configuración de calidad para el codificador de GIF gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
-msgstr "Factor de disminución de resolución"
+msgstr "Factor de reducción de la resolución del muestreo"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr "Si desea capturar el cursor del ratón"
+msgstr "Si capturar o no el cursor del ratón"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
-msgstr "Tamaño y posición de la ventana principal abierta más recientemente"
+msgstr "Tamaño y posición de la última ventana principal abierta"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
