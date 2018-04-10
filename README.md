@@ -330,12 +330,12 @@ Or you can help in development and translation.
 ### Development
 You are welcome to contribute code and provide pull requests for Peek. The
 easiest way to start is looking at the open issues tagged with
-[up-for-grabs](https://github.com/phw/peek/labels/up-for-grabs). Those are
+[good first issue](https://github.com/phw/peek/labels/good%20first%20issue). Those are
 open issues which are not too difficult to solve and can be started without
 too much knowledge about the code.
 
 Another good starting point are issues tagged with
-[help-wanted](https://github.com/phw/peek/labels/help-wanted). Those issues are
+[help wanted](https://github.com/phw/peek/labels/help%20wanted). Those issues are
 probably harder to solve, but for some reason I cannot work on it for now and
 would love to see somebody jump in.
 
@@ -357,7 +357,7 @@ for your language. The translator credits are shown in Peek's About dialog.
 
 
 ## License
-Peek Copyright © 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright © 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 Peek is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
