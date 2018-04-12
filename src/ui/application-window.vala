@@ -329,7 +329,7 @@ namespace Peek.Ui {
         update_input_shape ();
         var area = get_recording_area ();
 
-        if (get_window_width () < SMALL_WINDOW_SIZE) {
+        if (area.width < SMALL_WINDOW_SIZE) {
           GtkHelper.hide_button_label (record_button);
           GtkHelper.hide_button_label (stop_button);
           //Set the scale of shortcut_label
@@ -346,15 +346,14 @@ namespace Peek.Ui {
         }
 
         if (!is_recording) {
+          //Shortcut recording hint 
           var shortcut =Application.get_app_settings();
-          string keys =shortcut.get_string("keybinding-toggle-recording");
-          string last=keys.substring(-1).up();
-          keys=keys.replace("<","").replace(">","+");
-          keys=keys.replace("Primary","Crtl");
-          var test = new StringBuilder(keys);
-          test.overwrite(test.len-1,last);
-          shortcut_label.set_text("Start/Stop: " +test.str);
-          shortcut_label.show();
+          string keys =shortcut.get_string ("keybinding-toggle-recording");
+          uint accelerator_key;
+          Gdk.ModifierType accelerator_mods;
+          Gtk.accelerator_parse (keys, out accelerator_key, out accelerator_mods);
+          var shortcut_hint = Gtk.accelerator_get_label (accelerator_key, accelerator_mods);
+          shortcut_label.set_text ("Start/Stop: " + shortcut_hint);
           
           var size_label = new StringBuilder ();
           size_label.printf ("%i x %i", area.width, area.height);
