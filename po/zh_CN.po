@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-04-12 14:39+0000\n"
+"PO-Revision-Date: 2018-04-13 15:35+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hans/>\n"
@@ -127,7 +127,7 @@ msgstr "渲染中…"
 
 #: src/ui/application-window.vala:524
 msgid "Recording could not be started due to an unexpected error."
-msgstr "由于未知错误,无法开始录制."
+msgstr "由于未知错误，无法开始录制。"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:673
 msgid "Save animation"
@@ -181,7 +181,8 @@ msgid "translator-credits"
 msgstr ""
 "Chunyang Xu\n"
 "YFdyh000\n"
-"panli"
+"panli\n"
+"Boyuan Yang"
 
 #: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
@@ -343,7 +344,7 @@ msgstr "支持 HiDPI 屏幕"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr "可以在 GNOME Shell Wayland 会话内使用(使用 XWayland)"
+msgstr "可以在 GNOME Shell Wayland 会话内使用（使用 XWayland）"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -351,9 +352,7 @@ msgid ""
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
-msgstr ""
-"Peek 不是一个拥有扩展功能的通用屏幕录制应用，它唯一的功能就是在屏幕上录制小巧"
-"无声的 GIF，MP4和WebM视频。"
+msgstr "Peek 不是一个拥有扩展功能的通用屏幕录制程序，它仅仅专注于在屏幕上录制小型、无声的 GIF、MP4 或 WebM 视频。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
