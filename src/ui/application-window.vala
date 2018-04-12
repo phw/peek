@@ -55,7 +55,7 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Label delay_indicator;
-    
+
     [GtkChild]
     private Label shortcut_label;
 
@@ -338,32 +338,32 @@ namespace Peek.Ui {
         update_input_shape ();
         var area = get_recording_area ();
 
+        // Set the scale of shortcut_label
+        Pango.AttrList attrs = new Pango.AttrList ();
+
         if (area.width < SMALL_WINDOW_SIZE) {
           GtkHelper.hide_button_label (record_button);
           GtkHelper.hide_button_label (stop_button);
-          //Set the scale of shortcut_label
-          Pango.AttrList attrs = new Pango.AttrList (); 
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL)); 
-          shortcut_label.attributes = attrs;
+          attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL));
         } else {
           GtkHelper.show_button_label (record_button);
           GtkHelper.show_button_label (stop_button);
-          //Set the scale of shortcut_label
-          Pango.AttrList attrs = new Pango.AttrList (); 
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE)); 
-          shortcut_label.attributes = attrs;
+          attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE));
         }
 
+        shortcut_label.attributes = attrs;
+
         if (!is_recording) {
-          //Shortcut recording hint 
-          var shortcut =Application.get_app_settings();
-          string keys =shortcut.get_string ("keybinding-toggle-recording");
+          // Shortcut recording hint
+          var shortcut = Application.get_app_settings ();
+          string keys = shortcut.get_string ("keybinding-toggle-recording");
           uint accelerator_key;
           Gdk.ModifierType accelerator_mods;
           Gtk.accelerator_parse (keys, out accelerator_key, out accelerator_mods);
           var shortcut_hint = Gtk.accelerator_get_label (accelerator_key, accelerator_mods);
           shortcut_label.set_text ("Start/Stop: " + shortcut_hint);
-          
+          shortcut_label.show ();
+
           var size_label = new StringBuilder ();
           size_label.printf ("%i x %i", area.width, area.height);
           size_indicator.set_text (size_label.str);
