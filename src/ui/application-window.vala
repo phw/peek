@@ -361,7 +361,7 @@ namespace Peek.Ui {
           Gdk.ModifierType accelerator_mods;
           Gtk.accelerator_parse (keys, out accelerator_key, out accelerator_mods);
           var shortcut_hint = Gtk.accelerator_get_label (accelerator_key, accelerator_mods);
-          shortcut_label.set_text ("Start/Stop: " + shortcut_hint);
+          shortcut_label.set_text (_ ("Start / Stop: %s").printf (shortcut_hint));
           shortcut_label.show ();
 
           var size_label = new StringBuilder ();

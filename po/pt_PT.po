@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2018-01-23 22:56+0100\n"
+"POT-Creation-Date: 2018-04-12 11:25+0200\n"
 "PO-Revision-Date: 2017-04-22 19:33+0000\n"
 "Last-Translator: Steeven Lopes <steevenlopes@outlook.com>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
@@ -79,79 +79,84 @@ msgid ""
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
 
-#: src/ui/application-window.vala:101
+#: src/ui/application-window.vala:104
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 
-#: src/ui/application-window.vala:227
+#: src/ui/application-window.vala:230
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Renderizando…"
 
-#: src/ui/application-window.vala:228
+#: src/ui/application-window.vala:231
 msgid "Peek will close when rendering is finished."
 msgstr ""
 
-#: src/ui/application-window.vala:256 ui/application-window.ui:241
+#: src/ui/application-window.vala:267 ui/application-window.ui:256
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:257 ui/application-window.ui:224
+#: src/ui/application-window.vala:268 ui/application-window.ui:239
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:258 ui/application-window.ui:275
+#: src/ui/application-window.vala:269 ui/application-window.ui:290
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:259 ui/application-window.ui:258
+#: src/ui/application-window.vala:270 ui/application-window.ui:273
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:271
+#: src/ui/application-window.vala:282
 #, fuzzy, c-format
 msgid "Record as %s"
 msgstr "_Gravar"
 
-#: src/ui/application-window.vala:445
+#: src/ui/application-window.vala:364
+#, c-format
+msgid "Start / Stop: %s"
+msgstr ""
+
+#: src/ui/application-window.vala:484
 msgid "Rendering…"
 msgstr "Renderizando…"
 
-#: src/ui/application-window.vala:479
+#: src/ui/application-window.vala:524
 msgid "Recording could not be started due to an unexpected error."
 msgstr ""
 
-#: src/ui/application-window.vala:608 src/ui/application-window.vala:613
+#: src/ui/application-window.vala:668 src/ui/application-window.vala:673
 msgid "Save animation"
 msgstr "Guardar animação"
 
-#: src/ui/application-window.vala:609 src/ui/application-window.vala:616
+#: src/ui/application-window.vala:669 src/ui/application-window.vala:676
 msgid "_Save"
 msgstr "_Guardar"
 
-#: src/ui/application-window.vala:610 src/ui/application-window.vala:614
+#: src/ui/application-window.vala:670 src/ui/application-window.vala:674
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/ui/application-window.vala:681
+#: src/ui/application-window.vala:741
 msgid "The file could not be saved to the selected location."
 msgstr ""
 
-#: src/ui/application-window.vala:708
+#: src/ui/application-window.vala:768
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animação guardada como “%s”"
 
-#: src/ui/application-window.vala:718
+#: src/ui/application-window.vala:778
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
 "Clique aqui para mostrar o ficheiro guardado no seu gestor de ficheiros."
 
-#: src/ui/application-window.vala:720
+#: src/ui/application-window.vala:780
 msgid "Show in file manager"
 msgstr "Mostrar no gestor de ficheiros"
 
@@ -177,19 +182,19 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Steeven Lopes <steevenlopes@outlook.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:147
+#: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
 msgstr "Iniciar gravação"
 
-#: ui/application-window.ui:137
+#: ui/application-window.ui:152
 msgid "_Record"
 msgstr "_Gravar"
 
-#: ui/application-window.ui:163
+#: ui/application-window.ui:178
 msgid "_Stop"
 msgstr "_Parar"
 
-#: ui/application-window.ui:173
+#: ui/application-window.ui:188
 msgid "Stop recording"
 msgstr "Parar gravação"
 
