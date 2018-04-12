@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-04-12 10:06+0000\n"
+"PO-Revision-Date: 2018-04-13 10:40+0000\n"
 "Last-Translator: Kuba Niewiarowski <jakub@niewiarowski.it>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
 "pl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.0-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -184,7 +184,9 @@ msgstr "Animowana nagrywarka GIF"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Dawid Dziurla <dawidd0811@gmail.com>"
+msgstr ""
+"Dawid Dziurla <dawidd0811@gmail.com>\n"
+"Kuba Niewiarowski <jakub@niewiarowski.it>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
