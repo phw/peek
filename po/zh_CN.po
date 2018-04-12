@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-02-10 07:30+0000\n"
-"Last-Translator: bdfish <lipanXJ@gmail.com>\n"
+"PO-Revision-Date: 2018-04-12 14:39+0000\n"
+"Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.19-dev\n"
+"X-Generator: Weblate 3.0-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -119,7 +119,7 @@ msgstr "录制 %s"
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "开始/停止：%s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
