@@ -21,8 +21,6 @@ namespace Peek.Recording {
 #endif
       if (FfmpegScreenRecorder.is_available ()) {
         recorder = "ffmpeg";
-      } else if (AvconvScreenRecorder.is_available ()) {
-        recorder = "avconv";
       } else {
         throw new PeekError.NO_SUITABLE_SCREEN_RECORDER (
           "No suitable screen recorder found");
@@ -45,8 +43,6 @@ namespace Peek.Recording {
 #endif
         case "ffmpeg":
           return new FfmpegScreenRecorder ();
-        case "avconv":
-          return new AvconvScreenRecorder ();
         default:
           throw new PeekError.UNKNOWN_SCREEN_RECORDER (
             "Unknown screen recorder " + name);

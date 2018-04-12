@@ -1,7 +1,7 @@
 ##
 # Find module for the Vala compiler (valac)
 #
-# This module determines wheter a Vala compiler is installed on the current
+# This module determines whether a Vala compiler is installed on the current
 # system and where its executable is.
 #
 # Call the module using "find_package(Vala) from within your CMakeLists.txt.

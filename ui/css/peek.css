@@ -2,6 +2,8 @@
   opacity: 0.8;
   background-color: rgb(40, 44, 52);
   color: white;
+  transition: none;
+  animation: none;
 }
 
 .headerbar-hidden {

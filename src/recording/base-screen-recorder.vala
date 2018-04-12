@@ -121,9 +121,6 @@ namespace Peek.Recording {
           pipeline.add (new GifskiPostProcessor (config));
         } else if (FfmpegPostProcessor.is_available ()) {
           pipeline.add (new FfmpegPostProcessor (config));
-        } else if (ImagemagickPostProcessor.is_available ()) {
-          pipeline.add (new ExtractFramesPostProcessor ());
-          pipeline.add (new ImagemagickPostProcessor (config));
         }
       } else if (config.output_format == OutputFormat.APNG) {
         pipeline.add (new FfmpegPostProcessor (config));

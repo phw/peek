@@ -7,8 +7,8 @@
 #
 # The first parameter provided is a variable, which will be filled with a list
 # of c files outputted by the vala compiler. This list can than be used in
-# conjuction with functions like "add_executable" or others to create the
-# neccessary compile rules with CMake.
+# conjunction with functions like "add_executable" or others to create the
+# necessary compile rules with CMake.
 #
 # The following sections may be specified afterwards to provide certain options
 # to the vala compiler:

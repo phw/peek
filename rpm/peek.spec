@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.2.2
+Version:        1.3.1
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
@@ -17,7 +17,7 @@ BuildRequires:  libappstream-glib
 BuildRequires:  txt2man
 BuildRequires:  gzip
 Requires:       ffmpeg
-Requires:       gstreamer1-plugins-good
+Requires:       gstreamer1-plugins-good >= 1.2
 Recommends:     gstreamer1-plugins-ugly
 Suggests:       gifski
 
@@ -59,6 +59,22 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*.appdat
 
 
 %changelog
+* Thu Mar 29 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.1
+- fix: Use yuv420p for VP9 encoding (#299)
+- fix: Disable animations and transitions on recording view overlays (#208)
+- i18n: Updated French and Russian translations
+
+* Sun Mar 25 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.3.0
+- feat: Use VP9 instead of VP8 for WebM recording (#293)
+- feat: libx264 is no longer required when just recording GIF / APNG with FFmpeg back end
+- feat: Removed avconv / libav backend and ImageMagick post processor
+- misc: Added sources for DBus interfaces (#296)
+- fix: Fixed lossy artifacts increasing GIF size when using gnome-shell recorder (#288)
+- fix: Fixed countdown sometimes appearing in recording (#208)
+- fix: Do not freeze window size on Xfce (#269)
+- i18n: Fixed names of Chinese localization files (#294)
+- i18n: Updated translations for Basque, Chinese (Simplified), Lithuanian, Norwegian Bokmål, Russian, Serbian, Ukrainian
+
 * Sun Jan 28 2018 Philipp Wolfer <ph.wolfer@gmail.com> -1.2.2
 - Option to enable/disable desktop notifications after saving (#21)
 - Do not use H.264 baseline profile if libx264 was compiled with 10bit (#248)

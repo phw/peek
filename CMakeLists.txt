@@ -2,8 +2,8 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 1)
-set (PEEK_VERSION_MINOR 2)
-set (PEEK_VERSION_PATCH 2)
+set (PEEK_VERSION_MINOR 3)
+set (PEEK_VERSION_PATCH 1)
 
 # Get full Peek version
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
@@ -144,10 +144,8 @@ vala_precompile(VALA_C
     src/post-processing/extract-frames-post-processor.vala
     src/post-processing/ffmpeg-post-processor.vala
     src/post-processing/gifski-post-processor.vala
-    src/post-processing/imagemagick-post-processor.vala
     src/post-processing/post-processing-pipeline.vala
     src/post-processing/post-processor.vala
-    src/recording/avconv-screen-recorder.vala
     src/recording/base-screen-recorder.vala
     src/recording/cli-screen-recorder.vala
     src/recording/ffmpeg-screen-recorder.vala
@@ -221,7 +219,7 @@ set(CPACK_PACKAGE_VERSION_MINOR ${PEEK_VERSION_MINOR})
 set(CPACK_PACKAGE_VERSION_PATCH ${PEEK_VERSION_PATCH})
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Peek")
 
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg, gstreamer1.0-plugins-good")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-0 (>= ${REQUIRE_GTK}), libglib2.0-0 (>= 2.38), libkeybinder-3.0-0, ffmpeg, gstreamer1.0-plugins-good (>= 1.2)")
 set(CPACK_DEBIAN_PACKAGE_RECOMMENDS "gstreamer1.0-plugins-ugly")
 set(CPACK_DEBIAN_PACKAGE_SUGGESTS "gifski")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")

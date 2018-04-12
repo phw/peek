@@ -19,12 +19,20 @@ namespace Peek.Recording {
 
     private const string DBUS_NAME = "org.gnome.Shell.Screencast";
 
+    private uint wait_timeout = 0;
+
     public GnomeShellDbusRecorder () throws IOError {
       base ();
       screencast = Bus.get_proxy_sync (
         BusType.SESSION,
         DBUS_NAME,
         "/org/gnome/Shell/Screencast");
+    }
+
+    ~GnomeShellDbusRecorder () {
+      if (wait_timeout != 0) {
+        Source.remove (wait_timeout);
+      }
     }
 
     protected override void start_recording (RecordingArea area) throws RecordingError {
@@ -97,7 +105,16 @@ namespace Peek.Recording {
       try {
         screencast.stop_screencast ();
         if (!is_cancelling) {
-          finalize_recording ();
+          // Add a small timeout after GNOME Shell recorder was stopped.
+          // The recorder will stop the GST pipeline, but there might be still
+          // some cleanup / finalization to do. Without this the post-processing
+          // sometimes fails.
+          wait_timeout = Timeout.add_full (GLib.Priority.LOW, 400, () => {
+            Source.remove (wait_timeout);
+            wait_timeout = 0;
+            finalize_recording ();
+            return true;
+          });
         }
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
@@ -117,6 +134,7 @@ namespace Peek.Recording {
       // Default pipeline is for GNOME Shell up to 2.22:
       // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
       // GNOME Shell 3.24 will use vp9enc with same settings.
+      // See https://gitlab.gnome.org/GNOME/gnome-shell/blob/master/src/shell-recorder.c#L149
       var pipeline = new StringBuilder ();
 
       if (config.downsample > 1) {
@@ -133,7 +151,7 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("vp8enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
       } else if (config.output_format == OutputFormat.MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
@@ -142,9 +160,9 @@ namespace Peek.Recording {
       } else {
         // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.
-        // Being near lossless here is important to avoid color distortions in
-        // final GIF.
-        pipeline.append ("vp8enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
+        // Being near lossless here is important to avoid color distortions and
+        // dirty frames in the final GIF.
+        pipeline.append ("vp9enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
         pipeline.append ("queue ! webmmux");
       }
 
@@ -156,7 +174,7 @@ namespace Peek.Recording {
       string extension;
       if (config.output_format == OutputFormat.GIF
         || config.output_format == OutputFormat.APNG) {
-        extension = "mkv";
+        extension = "webm";
       } else {
         extension = Utils.get_file_extension_for_format (config.output_format);
       }

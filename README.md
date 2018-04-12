@@ -4,7 +4,6 @@
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
-[![Join the chat at https://gitter.im/phw/peek](https://badges.gitter.im/phw/peek.svg)](https://gitter.im/phw/peek?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Peek recording itself](https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif)
 
@@ -93,7 +92,7 @@ distributions:
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 
 ### Flatpak
-Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/).
+Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
 To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
 and open it with GNOME Software or install via command line:
@@ -115,32 +114,10 @@ To test the latest development version you can install
 [peek-master.flatpakref](http://flatpak.uploadedlobster.com/peek-master.flatpakref)
 
 ### Snappy
-**Attention:** *The Snap package currently does **not run on Wayland** as the Snap sandbox does not allow Peek to access any available screen recording capabilities (see [issue #245](https://github.com/phw/peek/issues/245)). Please use X11 instead or use one of the other installation options such as Flatpak, PPA, AppImage or from source.*
-
-Peek can be installed on all distributions supporting [snappy](https://snapcraft.io/docs/core/install).
-To install, either install the GNOME content snap (gnome-3-26-1604) and the Peek snap from your software center (if the software center supports snappy) or install via command line:
-
-    sudo snap install gnome-3-26-1604
-    sudo snap install peek
-
-Once installed you can run Peek via its application icon in your desktop
-environment or from command line:
-
-    snap run peek
-
-In case it fails to start with the message `You need to connect this snap to the gnome platform snap`
-do the following command via command-line:
-
-    sudo snap connect peek:gnome-3-26-1604 gnome-3-26-1604:gnome-3-26-1604
-
-Snaps should automatically update in the background. If this is not happening
-you can update Peek manually to the latest version:
-
-    sudo snap refresh peek
-
-To test the latest development version install Peek from the edge channel:
-
-    sudo snap install peek --edge
+Peek no longer has officially supported Snap packages, see
+[the announcement](https://www.reddit.com/r/Ubuntu/comments/870bcn/snap_support_for_peek_screen_recorder_discontinued/).
+Please consider using the Flatpak or AppImage versions or use the Ubuntu PPA
+if you are using Ubuntu.
 
 ### AppImage
 Peek [AppImage](https://appimage.org/) packages are available on the
@@ -353,12 +330,12 @@ Or you can help in development and translation.
 ### Development
 You are welcome to contribute code and provide pull requests for Peek. The
 easiest way to start is looking at the open issues tagged with
-[up-for-grabs](https://github.com/phw/peek/labels/up-for-grabs). Those are
+[good first issue](https://github.com/phw/peek/labels/good%20first%20issue). Those are
 open issues which are not too difficult to solve and can be started without
 too much knowledge about the code.
 
 Another good starting point are issues tagged with
-[help-wanted](https://github.com/phw/peek/labels/help-wanted). Those issues are
+[help wanted](https://github.com/phw/peek/labels/help%20wanted). Those issues are
 probably harder to solve, but for some reason I cannot work on it for now and
 would love to see somebody jump in.
 
@@ -380,7 +357,7 @@ for your language. The translator credits are shown in Peek's About dialog.
 
 
 ## License
-Peek Copyright © 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright © 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 Peek is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
