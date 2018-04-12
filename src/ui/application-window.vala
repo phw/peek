@@ -767,33 +767,60 @@ namespace Peek.Ui {
       try {
         var display = get_display ();
         var clipboard = Clipboard.get_for_display (display, Gdk.SELECTION_CLIPBOARD);
-        var pixbuf = new Gdk.PixbufAnimation.from_file (file.get_path ());
-        clipboard.set_image (pixbuf);
-        // TargetEntry[] targets = {
-        //   TargetEntry () {
-        //     target = "image/gif",
-        //     info = 0
-        //   }
-        // };
-        // bool success = clipboard.set_with_owner (targets,
-        //   (clipboard, selection_data, info, owner) => {
-        //     stdout.printf("ClipboardGetFunc\n");
-        //     File f = (File)owner;
-        //     selection_data.set_uris ({
-        //       f.get_uri ()
-        //     });
-        //   },
-        //   (clipboard, user_data_or_owner) => {
-        //     stdout.printf("ClipboardClearFunc\n");
-        //   },
-        //   file);
-        // clipboard.set_can_store (targets);
+        TargetEntry[] targets = {
+          TargetEntry () {
+            target = "x-special/gnome-copied-files",
+            info = 0
+          },
+          TargetEntry () {
+            target = "text/uri-list",
+            info = 0
+          },
+          TargetEntry () {
+            target = "text/html",
+            info = 0
+          }
+        };
+
+        bool success = clipboard.set_with_owner (targets,
+          (clipboard, selection_data, info, owner) => {
+            var target = selection_data.get_target ();
+            string content = ((File)owner).get_uri ();
+            if (target == Gdk.Atom.intern ("x-special/gnome-copied-files", true)) {
+              content = "copy\n%s".printf (content);
+            } else if (target == Gdk.Atom.intern ("text/html", true)) {
+              content = convertFileToHtml ((File)owner);
+            }
+
+            stdout.printf ("ClipboardGetFunc:\ntarget = %s\ndata = %s\n", target.name (), content);
+            selection_data.set (target, 8, content.data);
+          },
+          (clipboard, user_data_or_owner) => {
+            stdout.printf ("ClipboardClearFunc\n");
+          },
+          file);
+        clipboard.set_can_store (targets);
         clipboard.store ();
         debug ("Image %s copied to clipboard", file.get_uri ());
-        // stdout.printf("Image %s copied to clipboard: %s\n", file.get_uri (), success.to_string ());
+        stdout.printf("Image %s copied to clipboard: %s\n", file.get_uri (), success.to_string ());
       } catch (Error e) {
         stderr.printf ("Could not save image in clipboard: %s\n", e.message);
       }
+    }
+
+    private static string convertFileToHtml (File file) {
+      string content = "";
+
+      uint8[] contents;
+      string etag_out;
+      if (file.load_contents (null, out contents, out etag_out)) {
+        var info = file.query_info ("standard::*", 0);
+        var b64 = Base64.encode (contents);
+        content = "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><img alt=\"\" src=\"data:%s;base64,%s\">"
+          .printf (info.get_content_type (), b64);
+      }
+
+      return content;
     }
 
     private void show_file_saved_notification (File file) {
