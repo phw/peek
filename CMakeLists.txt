@@ -61,12 +61,17 @@ pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
 pkg_check_modules(GLIB2 REQUIRED glib-2.0>=2.38)
 pkg_check_modules(GMODULE REQUIRED gmodule-2.0)
 pkg_check_modules(KEYBINDER keybinder-3.0)
+pkg_check_modules(LIBSOUP libsoup-2.4)
+pkg_check_modules(JSON_GLIB json-glib-1.0)
 
 add_definitions(${GTK_CFLAGS} ${GTK_CFLAGS_OTHER})
 link_libraries(${GTK_LIBRARIES})
 link_libraries(${KEYBINDER_LIBRARIES})
 link_directories(${GTK_LIBRARY_DIRS})
-
+include_directories(${LIBSOUP_INCLUDE_DIRS})
+include_directories(${JSON_GLIB_INCLUDE_DIRS})
+link_libraries(${LIBSOUP_LDFLAGS})
+link_libraries(${JSON_GLIB_LDFLAGS})
 # compile glib resource files to c code
 configure_file (
   "${PROJECT_SOURCE_DIR}/ui/about.ui.in"
@@ -163,6 +168,8 @@ vala_precompile(VALA_C
   PACKAGES
     gtk+-3.0
     posix
+	libsoup-2.4
+    json-glib-1.0
   DEFINITIONS
     ${VALA_DEFINITIONS}
   CUSTOM_VAPIS
