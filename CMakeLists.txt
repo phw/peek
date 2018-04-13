@@ -168,7 +168,7 @@ vala_precompile(VALA_C
   PACKAGES
     gtk+-3.0
     posix
-	libsoup-2.4
+    libsoup-2.4
     json-glib-1.0
   DEFINITIONS
     ${VALA_DEFINITIONS}
