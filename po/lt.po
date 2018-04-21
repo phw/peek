@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-02-03 20:09+0000\n"
+"PO-Revision-Date: 2018-04-21 19:02+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
 "translations/lt/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 2.19-dev\n"
+"X-Generator: Weblate 3.0-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -125,7 +125,7 @@ msgstr "Įrašinėti kaip %s"
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Pradėti / Stabdyti: %s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
