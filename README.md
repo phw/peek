@@ -69,7 +69,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - GTK+ >= 3.14
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
-- FFmpeg
+- FFmpeg >= 3
 - GStreamer 'Good' plugins (for recording on GNOME Shell)
 - GStreamer 'Ugly' plugins (for MP4 recording on GNOME Shell)
 - [gifski](https://gif.ski/) (optional but recommended for improved GIF quality)
