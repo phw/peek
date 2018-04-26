@@ -46,7 +46,6 @@
       "--disable-libxcb-shape",
       "--disable-ffplay",
       "--disable-ffprobe",
-      "--disable-ffserver",
       "--disable-doc",
       "--disable-everything",
       "--enable-bsf=vp9_superframe",
@@ -76,8 +75,8 @@
     ],
     "sources": [{
       "type": "archive",
-      "url": "https://ffmpeg.org/releases/ffmpeg-3.4.2.tar.xz",
-      "sha256": "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
+      "url": "https://ffmpeg.org/releases/ffmpeg-4.0.tar.xz",
+      "sha256": "ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f"
     }],
     "modules": [{
       "name": "libx264",
