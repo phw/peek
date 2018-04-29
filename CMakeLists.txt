@@ -165,10 +165,11 @@ vala_precompile(VALA_C
     src/ui/error-dialog.vala
     src/ui/preferences-dialog.vala
     src/ui/shortcut-label.vala
+    src/ui/share-dialog.vala
   PACKAGES
     gtk+-3.0
     posix
-    libsoup-2.4
+	libsoup-2.4
     json-glib-1.0
   DEFINITIONS
     ${VALA_DEFINITIONS}
@@ -233,3 +234,4 @@ set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_SECTION "video")
 
 include(CPack)
+
