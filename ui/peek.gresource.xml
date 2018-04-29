@@ -7,6 +7,8 @@
     <file preprocess="xml-stripblanks">preferences.ui</file>
     <file preprocess="xml-stripblanks">about.ui</file>
     <file preprocess="xml-stripblanks">gtk/menus.ui</file>
+    <file preprocess="xml-stripblanks">imgur.ui</file>
+
 
     <!-- Stylesheets -->
     <file>css/peek.css</file>
