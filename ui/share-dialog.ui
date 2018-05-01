@@ -11,6 +11,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="hexpand">True</property>
+        <property name="spacing">4</property>
         <child type="title">
           <object class="GtkLabel">
             <property name="visible">True</property>
@@ -20,11 +21,11 @@
         </child>
         <child>
           <object class="GtkButton" id="confirm_option">
-            <property name="label">gtk-ok</property>
+            <property name="label" translatable="yes">OK</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="use_stock">True</property>
+            <property name="hexpand">False</property>
             <signal name="clicked" handler="on_confirm_option_clicked" swapped="no"/>
           </object>
           <packing>
@@ -49,13 +50,14 @@
     </child>
     <child>
       <object class="GtkListBox" id="options_list">
+        <property name="width_request">500</property>
+        <property name="height_request">100</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="margin_left">6</property>
         <property name="margin_right">6</property>
         <property name="margin_top">6</property>
         <property name="margin_bottom">6</property>
-        <signal name="realize" handler="on_options_list_realize" swapped="no"/>
         <signal name="row-selected" handler="on_options_list_row_selected" swapped="no"/>
         <child>
           <object class="GtkListBoxRow" id="row_1">
