@@ -713,6 +713,8 @@ namespace Peek.Ui {
       // Close the FileChooserDialog:
       chooser.close ();
       #endif
+      
+      chooser.destroy();
     }
 
     private void try_save_file () {
