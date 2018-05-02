@@ -6,6 +6,8 @@
     <property name="can_focus">False</property>
     <property name="border_width">0</property>
     <property name="modal">True</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="gravity">center</property>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar1">
         <property name="visible">True</property>
