@@ -56,6 +56,7 @@ namespace Peek.Ui {
       if(file_type == "webm" || file_type == "mp4"){
           row_1.set_selectable(false);
           check_1.hide();
+          debug("WebM and Mp4 files are not supported with in imgur upload api");
       }else {
           row_1.set_selectable(true);
           check_1.show();
