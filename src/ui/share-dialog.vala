@@ -106,7 +106,7 @@ namespace Peek.Ui {
 #endif
 
 
-         this.hide_on_delete();
+         this.close();
        }catch(Error e) {
           error("%s", e.message);
             }
