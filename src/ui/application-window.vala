@@ -193,7 +193,7 @@ namespace Peek.Ui {
       // is configured that way.
       this.set_close_button_position ();
     }
-    
+
     public  string get_file(){
     return out_file.get_uri();
     }
@@ -713,8 +713,8 @@ namespace Peek.Ui {
       // Close the FileChooserDialog:
       chooser.close ();
       #endif
-      
       chooser.destroy();
+
     }
 
     private void try_save_file () {
@@ -755,14 +755,14 @@ namespace Peek.Ui {
     }
 
     private void handle_saved_file (File file) {
-      save_preferred_save_folder (file);
-      string out_file=get_file();
-      string out_file_ext = Utils.get_file_extension_for_format (
-        recorder.config.output_format);
+    string out_file=get_file();
+    //new ShareDialog(out_file);
       ShareDialog.present_single_instance(this);
-      ShareDialog.get_file_ext(out_file_ext);
       ShareDialog.filename(out_file);
-      
+      save_preferred_save_folder (file);
+
+
+
 #if ! DISABLE_OPEN_FILE_MANAGER
       if (this.visible && open_file_manager) {
         DesktopIntegration.launch_file_manager (file);
