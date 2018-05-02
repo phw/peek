@@ -25,14 +25,10 @@ namespace Peek.Ui {
     }
 
     public static string file { get; set; }
-    public static string file_type { get; set; }
+
 
     public static void filename (string out_file) {
         file=out_file;
-	}
-    
-    public static void get_file_ext (string file_ext) {
-        file_type=file_ext;
 	}
 
     [GtkChild]
@@ -52,8 +48,8 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_options_list_row_selected () {
-      var selection = options_list.get_selected_row ();
-      if (selection == row_1) {
+    var selection = options_list.get_selected_row ();
+    if (selection == row_1) {
         check_1.show();
         check_2.hide();
     } else if (selection == row_2 ){
@@ -92,14 +88,8 @@ namespace Peek.Ui {
           string link = root_object.get_object_member ("data")
                                    .get_string_member ("link");
           debug(link);
-#if HAS_GTK_SHOW_URI_ON_WINDOW
           Gtk.show_uri_on_window(instance, link, Gdk.CURRENT_TIME);
-#else
-          Gtk.show_uri(null, link, Gdk.CURRENT_TIME);
-#endif
-          
-
-         this.hide_on_delete();
+          this.hide_on_delete();
        }catch(Error e) {
           error("%s", e.message);
             }
