@@ -25,10 +25,14 @@ namespace Peek.Ui {
     }
 
     public static string file { get; set; }
-
+    public static string file_type { get; set; }
 
     public static void filename (string out_file) {
         file=out_file;
+	}
+    
+    public static void get_file_ext (string file_ext) {
+        file_type=file_ext;
 	}
 
     [GtkChild]
@@ -48,8 +52,8 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_options_list_row_selected () {
-    var selection = options_list.get_selected_row ();
-    if (selection == row_1) {
+      var selection = options_list.get_selected_row ();
+      if (selection == row_1) {
         check_1.show();
         check_2.hide();
     } else if (selection == row_2 ){
