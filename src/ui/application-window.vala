@@ -713,8 +713,8 @@ namespace Peek.Ui {
       // Close the FileChooserDialog:
       chooser.close ();
       #endif
-      chooser.destroy();
 
+      chooser.destroy();
     }
 
     private void try_save_file () {
@@ -755,12 +755,13 @@ namespace Peek.Ui {
     }
 
     private void handle_saved_file (File file) {
-    string out_file=get_file();
-    //new ShareDialog(out_file);
-      ShareDialog.present_single_instance(this);
-      ShareDialog.filename(out_file);
       save_preferred_save_folder (file);
-
+      string out_file=get_file();
+      string out_file_ext = Utils.get_file_extension_for_format (
+        recorder.config.output_format);
+      ShareDialog.get_file_ext(out_file_ext);
+      ShareDialog.filename(out_file);
+      ShareDialog.present_single_instance(this);
 
 
 #if ! DISABLE_OPEN_FILE_MANAGER
