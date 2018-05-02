@@ -88,8 +88,14 @@ namespace Peek.Ui {
           string link = root_object.get_object_member ("data")
                                    .get_string_member ("link");
           debug(link);
+#if HAS_GTK_SHOW_URI_ON_WINDOW
           Gtk.show_uri_on_window(instance, link, Gdk.CURRENT_TIME);
-          this.hide_on_delete();
+#else
+          Gtk.show_uri(null, link, Gdk.CURRENT_TIME);
+#endif
+          
+
+         this.hide_on_delete();
        }catch(Error e) {
           error("%s", e.message);
             }
