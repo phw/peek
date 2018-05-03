@@ -53,10 +53,19 @@ peek_deps = [
 
 gnome = import('gnome')
 
+configuration_data = configuration_data()
+configuration_data.set('PEEK_VERSION_FULL', meson.project_version())
+about_ui_file = configure_file(
+  input: '../ui/about.ui.in',
+  output: 'about.ui',
+  configuration: configuration_data
+)
+
 peek_sources += gnome.compile_resources('peek-resources',
   '../ui/peek.gresource.xml',
   source_dir: '../ui/',
-  c_name: 'peek'
+  c_name: 'peek',
+  dependencies: [about_ui_file]
 )
 
 executable('peek', peek_sources,
