@@ -51,3 +51,6 @@ configure_file(
   configuration: configuration_data,
   install_dir: join_paths(get_option('datadir'), 'dbus-1/services')
 )
+
+subdir('icons')
+subdir('man')
