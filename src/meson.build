@@ -44,6 +44,7 @@ vala_args = [
   '--header', 'application.h',
   '--use-header',
   '--includedir', '../..',
+  '--gresourcesdir', meson.current_build_dir(),
 ]
 
 # Options
