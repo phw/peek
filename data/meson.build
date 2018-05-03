@@ -39,3 +39,15 @@ if compile_schemas.found()
     args: ['--strict', '--dry-run', meson.current_source_dir()]
   )
 endif
+
+configuration_data = configuration_data()
+# FIXME: That variable name is used as long as we have both cmake and meson builds
+configuration_data.set(
+  'CMAKE_INSTALL_FULL_BINDIR',
+  join_paths(get_option('prefix'), get_option('bindir')))
+configure_file(
+  input: 'com.uploadedlobster.peek.service.in',
+  output: 'com.uploadedlobster.peek.service',
+  configuration: configuration_data,
+  install_dir: join_paths(get_option('datadir'), 'dbus-1/services')
+)

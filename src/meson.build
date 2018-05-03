@@ -34,7 +34,7 @@ peek_sources = [
 
 add_project_arguments([
     '-DGETTEXT_PACKAGE="' + meson.project_name() + '"',
-    '-DLOCALEDIR="/usr/share/locale"',
+    '-DLOCALEDIR="' + join_paths(get_option('prefix'), get_option('localedir')) + '"',
     '-DVERSION="' + meson.project_version() + '"',
   ], language: 'c')
 
@@ -99,6 +99,7 @@ if not enable_open_file_manager
   vala_args += ['-D', 'DISABLE_OPEN_FILE_MANAGER']
 endif
 
+# Resource files
 configuration_data = configuration_data()
 configuration_data.set('PEEK_VERSION_FULL', meson.project_version())
 about_ui_file = configure_file(
