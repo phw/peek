@@ -33,25 +33,70 @@ peek_sources = [
 ]
 
 add_project_arguments([
-    '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
-  ], language: 'vala')
-
-add_project_arguments([
     '-DGETTEXT_PACKAGE="' + meson.project_name() + '"',
     '-DLOCALEDIR="/usr/share/locale"',
     '-DVERSION="' + meson.project_version() + '"',
   ], language: 'c')
+
+vala_args = [
+  '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
+  '--pkg', 'posix',
+  '--header', 'application.h',
+  '--use-header',
+  '--includedir', '../..',
+]
+
+# Options
+enable_filechoosernative = get_option('enable-filechoosernative')
+enable_gnome_shell = get_option('enable-gnome-shell')
+enable_open_file_manager = get_option('enable-open-file-manager')
+
+# Dependencies
+gtk = dependency('gtk+-3.0', version: '>= 3.14')
+keybinder = dependency('keybinder-3.0', required: false)
 
 peek_deps = [
   dependency('cairo'),
   dependency('gio-2.0', version: '>= 2.42'),
   dependency('glib-2.0', version: '>= 2.38'),
   dependency('gmodule-2.0'),
-  dependency('gtk+-3.0', version: '>= 3.14'),
-  dependency('keybinder-3.0'),
+  gtk,
 ]
 
-gnome = import('gnome')
+if keybinder.found()
+  peek_deps += keybinder
+  vala_args += ['-D', 'HAS_KEYBINDER']
+endif
+
+# Feature configuration
+if gtk.version().version_compare('>= 3.16')
+  message('Compiling with features for GTK >= 3.16')
+  vala_args += ['-D', 'HAS_GTK_LABEL_XALIGN']
+endif
+
+if gtk.version().version_compare('>= 3.20')
+  message('Compiling with features for GTK >= 3.20')
+  if enable_filechoosernative
+    message('Compiling with Gtk.FileChooserNative')
+    vala_args += ['-D', 'HAS_GTK_FILECHOOSERNATIVE']
+  endif
+endif
+
+if gtk.version().version_compare('>= 3.22')
+  message('Compiling with features for GTK >= 3.22')
+  vala_args += ['-D', 'HAS_GTK_SHORTCUT_LABEL']
+  vala_args += ['-D', 'HAS_GTK_SHOW_URI_ON_WINDOW']
+endif
+
+if not enable_gnome_shell
+  message('GNOME Shell recorder disabled by configuration')
+  vala_args += ['-D', 'DISABLE_GNOME_SHELL']
+endif
+
+if not enable_open_file_manager
+  message('File manager integration disabled by configuration')
+  vala_args += ['-D', 'DISABLE_OPEN_FILE_MANAGER']
+endif
 
 configuration_data = configuration_data()
 configuration_data.set('PEEK_VERSION_FULL', meson.project_version())
@@ -61,6 +106,8 @@ about_ui_file = configure_file(
   configuration: configuration_data
 )
 
+gnome = import('gnome')
+
 peek_sources += gnome.compile_resources('peek-resources',
   '../ui/peek.gresource.xml',
   source_dir: '../ui/',
@@ -69,13 +116,7 @@ peek_sources += gnome.compile_resources('peek-resources',
 )
 
 executable('peek', peek_sources,
-  vala_args: [
-    '--target-glib=2.50',
-    '--pkg', 'posix',
-    '--header', 'application.h',
-    '--use-header',
-    '--includedir', '../..',
-  ],
+  vala_args: vala_args,
   dependencies: peek_deps,
   install: true,
 )
