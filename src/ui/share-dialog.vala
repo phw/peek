@@ -55,18 +55,21 @@ namespace Peek.Ui {
       var selection = options_list.get_selected_row ();
       if(file_type == "webm" || file_type == "mp4"){
           row_1.set_selectable(false);
+          check_2.show();
           check_1.hide();
+          options_list.select_row(row_2);
           debug("WebM and Mp4 files are not supported with in imgur upload api");
       }else {
           row_1.set_selectable(true);
           check_1.show();
+          if (selection == row_1) {
+            check_2.hide();
+         }else if (selection == row_2 ){
+            check_2.show();
+            check_1.hide();
+            }
       }
-      if (selection == row_1) {
-        check_2.hide();
-    } else if (selection == row_2 ){
-        check_2.show();
-        check_1.hide();
-    }
+
 
     }
     [GtkCallback]
