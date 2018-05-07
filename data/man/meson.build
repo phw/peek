@@ -1,5 +1,5 @@
 txt2man = find_program('txt2man', required: false)
-gzip = find_program('txt2man', required: false)
+gzip = find_program('gzip', required: false)
 
 if not txt2man.found()
   message('txt2man not found; man pages will not be generated.')
