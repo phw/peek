@@ -33,6 +33,12 @@ install_data('com.uploadedlobster.peek.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 
+if get_option('install-unity-schema')
+  install_data('com.canonical.Unity.gschema.xml',
+    install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
+  )
+endif
+
 compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()
   test('Validate schema file', compile_schemas,
