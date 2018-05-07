@@ -32,12 +32,6 @@ peek_sources = [
   'vapi/config.vapi',
 ]
 
-add_project_arguments([
-    '-DGETTEXT_PACKAGE="' + meson.project_name() + '"',
-    '-DLOCALEDIR="' + join_paths(get_option('prefix'), get_option('localedir')) + '"',
-    '-DVERSION="' + meson.project_version() + '"',
-  ], language: 'c')
-
 vala_args = [
   '--vapidir', join_paths(meson.current_source_dir(), 'vapi'),
   '--pkg', 'posix',

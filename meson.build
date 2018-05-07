@@ -3,11 +3,15 @@ project('peek', ['c', 'vala'],
   meson_version: '>= 0.40.0',
 )
 
+add_project_arguments([
+    '-DVERSION="' + meson.project_version() + '"',
+  ], language: 'c')
+
 i18n = import('i18n')
 
 subdir('data')
+subdir('po')
 subdir('src')
 subdir('tests')
-subdir('po')
 
 meson.add_install_script('build-aux/meson/postinstall.py')
