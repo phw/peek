@@ -1,6 +1,6 @@
 project('peek', ['c', 'vala'],
   version: '1.3.1',
-  meson_version: '>= 0.40.0',
+  meson_version: '>= 0.37.0',
 )
 
 add_project_arguments([

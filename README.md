@@ -77,7 +77,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ### Development
 
 - Vala compiler >= 0.22
-- CMake >= 2.8.8
+- Meson >= 0.37.0
 - Gettext (>= 0.19 for localized .desktop entry)
 - txt2man (optional for building man page)
 

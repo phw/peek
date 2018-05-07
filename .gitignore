@@ -1,5 +1,6 @@
 *~
 build/
+builddir/
 build_*/
 
 CMakeCache.txt
