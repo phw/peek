@@ -1,3 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-txt2man "$@" > ${MESON_BUILD_ROOT}/${MESON_SUBDIR}/peek.1
+PROJECT=$1
+VERSION=$2
+INPUT=$3
+OUTPUT=$4
+
+txt2man -t "$PROJECT" -r "$VERSION" \
+  -s 1 -v "User commands" \
+  "$INPUT" | gzip > "$OUTPUT"
