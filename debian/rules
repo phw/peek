@@ -12,4 +12,4 @@ export VALAFLAGS:=$(foreach w,$(CPPFLAGS) $(CFLAGS) $(LDFLAGS),-X $(w))
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- --buildtype=release -Denable-filechoosernative=true
+	dh_auto_configure -O--buildsystem=meson -- --buildtype=release -Denable-filechoosernative=true
