@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-04-12 09:51+0000\n"
+"PO-Revision-Date: 2018-05-13 05:35+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
 "cs/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.0-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -179,7 +179,7 @@ msgstr "Nahrává dění na obrazovce do formátu GIF"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Tomáš Průcha <pruchatomas@gmail.com>"
+msgstr "Tomáš Průcha"
 
 #: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
