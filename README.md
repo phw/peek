@@ -201,23 +201,21 @@ See the [Repology package list](https://repology.org/metapackage/peek/packages)
 for a list of Peek packages for various distributions.
 
 ### From source
-You can build and install Peek using CMake:
+You can build and install Peek using Meson with Ninja:
 
     git clone https://github.com/phw/peek.git
-    mkdir peek/build
-    cd peek/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-    make
+    cd peek
+    meson --prefix=/usr/local builddir
+    cd builddir
+    ninja
 
     # Run directly from source
     ./peek
 
     # Install system-wide
-    sudo make install
+    sudo ninja install
 
-You can uninstall Peek again by running `sudo make uninstall` from within the
-build directory.
-
+*Note: `ninja` might be called `ninja-build` on some distributions.*
 
 ## Frequently Asked Questions
 ### How can I capture mouse clicks and/or keystrokes?
