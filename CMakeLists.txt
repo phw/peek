@@ -48,11 +48,6 @@ set (GettextTranslate_ALL TRUE)
 if (NOT DEFINED LOCALEDIR)
   set (LOCALEDIR ${CMAKE_INSTALL_FULL_LOCALEDIR})
 endif ()
-
-execute_process(
-  COMMAND sh -c "for t in po/*.po; do echo -n \"$(basename \"$t\" .po) \"; done"
-  WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-  OUTPUT_FILE "po/LINGUAS")
 include(GettextTranslate)
 
 # Check dependencies
