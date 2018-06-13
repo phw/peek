@@ -17,6 +17,10 @@ add_test(
   test-desktop-integration
   ${PROJECT_NAME}-test-desktop-integration)
 
+add_dependencies(
+  ${PROJECT_NAME}-test-desktop-integration
+  ${PROJECT_NAME})
+
 # /utils/
 vala_precompile(VALA_TEST_UTILS_C
     test-utils.vala
@@ -34,6 +38,10 @@ add_test(
   test-utils
   ${PROJECT_NAME}-test-utils)
 
+add_dependencies(
+  ${PROJECT_NAME}-test-utils
+  ${PROJECT_NAME})
+
 # /screen-recorder/recording-area/
 vala_precompile(VALA_TEST_RECORDING_AREA_C
     screen-recorder/test-recording-area.vala
@@ -49,6 +57,10 @@ add_executable(
 add_test(
   screen-recorder-test-recording-area
   ${PROJECT_NAME}-screen-recorder-test-recording-area)
+
+add_dependencies(
+  ${PROJECT_NAME}-screen-recorder-test-recording-area
+  ${PROJECT_NAME})
 
 # /screen-recorder/cli-screen-recorder/
 vala_precompile(VALA_TEST_COMMAND_LINE_SCREEN_RECORDER_C
@@ -79,3 +91,7 @@ add_executable(
 add_test(
   test-screen-recorder-cli-screen-recorder
   ${PROJECT_NAME}-test-screen-recorder-cli-screen-recorder)
+
+add_dependencies(
+  ${PROJECT_NAME}-test-screen-recorder-cli-screen-recorder
+  ${PROJECT_NAME})
