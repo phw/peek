@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-04-12 09:53+0000\n"
+"PO-Revision-Date: 2018-06-29 09:36+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
 "nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -54,12 +54,12 @@ msgstr "Peek"
 
 #: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
-msgstr "Het creëren van de standaard schermopnemer is mislukt.\n"
+msgstr "Het creëren van de standaard schermopname is mislukt.\n"
 
 #: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr "Het initialiseren van %s-backend is mislukt.\n"
+msgstr "Het initialiseren van het backend '%s' is mislukt.\n"
 
 #: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
@@ -73,11 +73,13 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"U draait Peek direct op Wayland. Dit wordt momenteel niet ondersteund. Start "
-"Peek via XWayland door de optie <tt>GDK_BACKEND=x11</tt> te gebruiken.\n"
+"Je draait Peek direct op Wayland. Dit wordt momenteel niet ondersteund. "
+"Start Peek via XWayland door de optie <tt>GDK_BACKEND=x11</tt> te gebruiken."
+"\n"
 "\n"
 "Meer informatie is te vinden in de <a href='https://github.com/phw/peek#why-"
-"no-native-wayland-support'>FAQ over Wayland-ondersteuning</a>."
+"no-native-wayland-support'>veelgestelde vragen over Wayland-"
+"ondersteuning</a>."
 
 #: src/ui/application-window.vala:104
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -159,7 +161,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:780
 msgid "Show in file manager"
-msgstr "Weergeven in bestandsbeheerder"
+msgstr "Tonen in bestandsbeheerder"
 
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
@@ -171,7 +173,7 @@ msgstr "Wijzigen"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr "Houdt toetsen ingedrukt…"
+msgstr "Druk op de toetsen…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -213,7 +215,7 @@ msgstr "Sluiten"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr "Details weergeven"
+msgstr "Details tonen"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -241,7 +243,7 @@ msgstr "Bestandsbeheerder openen na opslaan"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr "Bureaubladmelding weergeven na opslaan"
+msgstr "Bureaubladmelding tonen na opslaan"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
@@ -265,7 +267,7 @@ msgstr "GIF-kwaliteit"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Verversingssnelheid"
+msgstr "Ververssnelheid"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
@@ -273,7 +275,7 @@ msgstr "Resolutie van ruisreductie"
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
-msgstr "Vertraging (in seconden) vóór opnemen"
+msgstr "Vertraging (in seconden) voordat de opname start"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
@@ -285,7 +287,7 @@ msgstr "Peek-voorkeuren"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Korte bewegende GIF-afbeeldingen opnemen van uw scherm"
+msgstr "Korte, bewegende GIF-afbeeldingen opnemen op je scherm"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -297,8 +299,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
-"Simpele, schermopname-applicatie met een eenvoudig te bedienen uiterlijk"
+msgstr "Simpele, eenvoudig te bedienen schermopname-applicatie"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -309,13 +310,12 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
-"Peek maakt het opnemen van korte screencasts van een deel van het scherm erg "
-"makkelijk. Het is gebouwd met het gebruiksdoel om delen van schermen op te "
-"nemen, bijv. om de werking van uw apps te weergeven of een opname te maken "
-"voor een fout(bug)rapport. Met Peek plaatst u simpelweg het venster over het "
-"op te nemen gebied en drukt op \"Opnemen\". Peek is geoptimaliseerd voor het "
-"genereren van geanimeerde GIF's, maar u kunt ook, indien gewenst, direct "
-"opnemen naar WebM of MP4."
+"Peek maakt het opnemen van korte screencasts van een deel van het scherm "
+"gemakkelijk. Het is gebouwd om delen van schermen op te nemen, bijv. om de "
+"werking van je apps te tonen of om een opname te maken voor een bugmelding. "
+"Plaats simpelweg het Peek-venster over het op te nemen gebied en drukt op \""
+"Opnemen\". Peek is geoptimaliseerd voor het genereren van geanimeerde GIF's, "
+"maar je kunt ook, indien gewenst, direct opnemen naar WebM of MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -323,12 +323,12 @@ msgstr "Mogelijkheden:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr "Selecteer een op te nemen gebied op het scherm"
+msgstr "Selecteer een op te nemen schermgebied"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
 msgstr ""
-"Sla een opgenomen video op als een geoptimaliseerd, geanimeerd GIF-bestand"
+"Sla een opgenomen video op als een geoptimaliseerd, bewegend GIF-bestand"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
@@ -358,9 +358,8 @@ msgid ""
 "videos."
 msgstr ""
 "Peek is geen algemene screencast-app met uitgebreide mogelijkheden. Peek "
-"focust op de taak op het creëren van kleine, stille screencasts van een "
-"gedeelde van het scherm voor het creëren van GIF-animaties of stille WebM- "
-"of MP4-video's."
+"focust op het creëren van kleine, stille screencasts van een gedeelte van "
+"het scherm voor het creëren van GIF-animaties of stille WebM- of MP4-video's."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
@@ -383,8 +382,8 @@ msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
-"Tijd (in milliseconden) dat de opnamegebiedsgrootte moet worden weergegeven "
-"na het herschalen."
+"Tijd (in milliseconden) dat de opnamegebiedsgrootte moet worden getoond na "
+"het verkleinen/vergroten."
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -395,16 +394,16 @@ msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
-"Te gebruiken standaard naam. Mag datumopmaak bevatten. De bestandsextensie "
+"Te gebruiken standaardnaam. Mag datumopmaak bevatten. De bestandsextensie "
 "zal automatisch worden toegevoegd."
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
-msgstr "Voorkeur geven aan donker thema"
+msgstr "Donker thema"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr "Algemene sneltoets om opname in of uit te schakelen"
+msgstr "Algemene sneltoets om opname te starten/stoppen"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
