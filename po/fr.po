@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-03-26 20:26+0000\n"
+"PO-Revision-Date: 2018-06-28 22:39+0000\n"
 "Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
 "fr/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.20-dev\n"
+"X-Generator: Weblate 3.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -130,7 +130,7 @@ msgstr "Enregistrer en %s"
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Marche / Arrêt : %s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
