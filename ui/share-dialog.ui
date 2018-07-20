@@ -62,7 +62,7 @@
         <property name="margin_bottom">6</property>
         <signal name="row-selected" handler="on_options_list_row_selected" swapped="no"/>
         <child>
-          <object class="GtkListBoxRow" id="row_1">
+          <object class="GtkListBoxRow" id="imgur_row">
             <property name="width_request">100</property>
             <property name="height_request">80</property>
             <property name="visible">True</property>
@@ -105,7 +105,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkListBoxRow" id="row_2">
+          <object class="GtkListBoxRow" id="open_file_row">
             <property name="width_request">100</property>
             <property name="height_request">80</property>
             <property name="visible">True</property>
