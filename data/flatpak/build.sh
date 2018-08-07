@@ -24,7 +24,7 @@ build_for_arch () {
     --gpg-sign=B539AD7A5763EE9C1C2E4DE24C14923F47BF1A02 \
     --force-clean \
     --arch=${ARCH} \
-    com.uploadedlobster.peek_${ARCH} flatpak-${BRANCH}.json
+    com.uploadedlobster.peek_${ARCH} flatpak-${BRANCH}.yml
 
   if [ $? -eq 0 ];then
     echo -e "\e[0;32mBuild \e[1;32m${ARCH}\e[0;32m success!\e[0m\n"
