@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-08-15 01:56+0000\n"
-"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"PO-Revision-Date: 2018-08-29 11:03+0000\n"
+"Last-Translator: YAMADA Shinichirou "
+"<yamada_strong_yamada_nice_64bit@yahoo.co.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/peek/"
 "translations/ja/>\n"
 "Language: ja\n"
@@ -178,7 +179,7 @@ msgstr "アニメーション GIF レコーダー"
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
@@ -307,10 +308,10 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
-"Peek で画面領域の短いスクリーンキャストを簡単に作成することができます。Peek は、皆さん自身のアプリの UI "
-"の機能を簡単に表示したりやバグレポートにおいてバグを表示したりといった、画面領域の録画の特定の使用のために作成されています。Peek を使えば、単に "
-"Peek のウィンドウを録画したい領域の上に移動させて「録画」を押すだけ。Peek はアニメーション GIF を生成するのに最適化されていますが、"
-"WebM や MP4 がよければ直接それらの形式で録画することもできます。"
+"Peek は、指定した画面領域の短いスクリーンキャストを簡単に作成することができます。特定の用途（アプリの UI や機能に関する説明、バグ報告など）"
+"で画面領域を録画するために Peek は作成されました。Peek の使い方はシンプルで、録画したい領域に Peek "
+"のウィンドウを移動させて「録画」を押すだけです。Peek はアニメーション GIF を生成するのに最適化されていますが、WebM や MP4 "
+"で直接録画することもできます。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -404,7 +405,7 @@ msgstr "gifski GIF エンコーダーで使用される画質設定"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "解像度ダウンサンプル係数"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
