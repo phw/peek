@@ -146,8 +146,19 @@ If you want to use the latest development version there is also a
 available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
 ### Debian
-There are no official Debian packages, yet, but you can easily create your own
-.deb package for Peek. First, install the build dependencies:
+There are official Debian packages for Debian 10 ("Buster") via main repository
+and packages for Debian 9 ("Stretch") via
+[`stretch-backports`](https://packages.debian.org/stretch-backports/peek) repository.
+Please refer to [Debian Backports Website](https://backports.debian.org/)
+for detailed usage of `stretch-backports` repository.
+        
+After enabling `stretch-backports` for Debian 9 (Debian 10 or `Sid` doesn't need
+any tweaks at all), installation can be done by simply typing:
+
+    sudo apt install peek
+
+Besides, you can also create your own `.deb` package for Peek easily.
+First, install the build dependencies:
 
     sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
 
@@ -160,9 +171,9 @@ Then build Peek and package it:
     make package
 
 This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
-current version). You can install it with dpkg:
+current version). You can install it with `apt`:
 
-    sudo dpkg -i peek-*-Linux.deb
+    sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
 For Fedora 25 add this repository:
