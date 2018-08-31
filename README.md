@@ -22,7 +22,6 @@ Simple screen recorder with an easy to use interface
   - [Flatpak](#flatpak)
   - [Snappy](#snappy)
   - [AppImage](#appimage)
-  - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
   - [Fedora](#fedora)
@@ -87,6 +86,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 Peek is available in official package repositories for the following
 distributions:
 
+- [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
@@ -126,12 +126,6 @@ Peek [AppImage](https://appimage.org/) packages are available on the
 however you want, e.g. you can name it just `peek` and place it in `$HOME/bin`
 for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit/wiki)
 for more information on how to use AppImages and integrate them with your system.
-
-### Arch Linux
-For Arch Linux
-[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
-can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to install
-the latest development version.
 
 ### Ubuntu
 You can install the latest versions of Peek from the
