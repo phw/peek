@@ -154,7 +154,7 @@ any tweaks at all), installation can be done by simply typing:
 Besides, you can also create your own `.deb` package for Peek easily.
 First, install the build dependencies:
 
-    sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
+    sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man ffmpeg
 
 Then build Peek and package it:
 
