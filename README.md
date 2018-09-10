@@ -174,7 +174,7 @@ For Fedora 25 add this repository:
 
     sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_25/home:phiwo:peek.repo
 
-For Fedora 26 add this repository:
+For Fedora 26 and later, add this repository:
 
     sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
 
