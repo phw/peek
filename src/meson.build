@@ -28,6 +28,7 @@ peek_sources = [
   'ui/application-window.vala',
   'ui/error-dialog.vala',
   'ui/preferences-dialog.vala',
+  'ui/share-dialog.vala',
   'ui/shortcut-label.vala',
   'vapi/config.vapi',
 ]
@@ -55,6 +56,8 @@ peek_deps = [
   dependency('gio-2.0', version: '>= 2.42'),
   dependency('glib-2.0', version: '>= 2.38'),
   dependency('gmodule-2.0'),
+  dependency('libsoup-2.4'),
+  dependency('json-glib-1.0'),
   gtk,
 ]
 
