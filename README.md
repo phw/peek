@@ -97,7 +97,7 @@ To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
 and open it with GNOME Software or install via command line:
 
-    flatpak install --user https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+    flatpak install flathub com.uploadedlobster.peek
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
