@@ -100,7 +100,11 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_options_list_row_selected () {
       var selection = options_list.get_selected_row ();
-      if(file_type == "webm" || file_type == "mp4"){
+      //string[] white_list = {"gif", "apng"};
+      var white_list = new List<string> ();
+      white_list.append ("gif");
+      white_list.append ("apng");
+      if (!white_list.data.contains(file_type) )  {
         imgur_row.set_selectable(false);
         imgur_row.hide();
         check_2.show();
