@@ -370,7 +370,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr "Das Hauptfenster, mit dem der Aufnahmebereich ausgewählt wird"
+msgstr "Aufnahmebereich mit dem Hauptfenster wählen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek's preferences dialog"

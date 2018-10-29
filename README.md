@@ -22,7 +22,6 @@ Simple screen recorder with an easy to use interface
   - [Flatpak](#flatpak)
   - [Snappy](#snappy)
   - [AppImage](#appimage)
-  - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
   - [Debian](#debian)
   - [Fedora](#fedora)
@@ -69,7 +68,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - GTK+ >= 3.14
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
-- FFmpeg
+- FFmpeg >= 3
 - GStreamer 'Good' plugins (for recording on GNOME Shell)
 - GStreamer 'Ugly' plugins (for MP4 recording on GNOME Shell)
 - [gifski](https://gif.ski/) (optional but recommended for improved GIF quality)
@@ -77,7 +76,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ### Development
 
 - Vala compiler >= 0.22
-- CMake >= 2.8.8
+- Meson >= 0.37.0
 - Gettext (>= 0.19 for localized .desktop entry)
 - txt2man (optional for building man page)
 
@@ -87,6 +86,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 Peek is available in official package repositories for the following
 distributions:
 
+- [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
@@ -127,12 +127,6 @@ however you want, e.g. you can name it just `peek` and place it in `$HOME/bin`
 for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit/wiki)
 for more information on how to use AppImages and integrate them with your system.
 
-### Arch Linux
-For Arch Linux
-[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
-can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to install
-the latest development version.
-
 ### Ubuntu
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
@@ -146,8 +140,19 @@ If you want to use the latest development version there is also a
 available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
 ### Debian
-There are no official Debian packages, yet, but you can easily create your own
-.deb package for Peek. First, install the build dependencies:
+There are official Debian packages for Debian 10 ("Buster") via main repository
+and packages for Debian 9 ("Stretch") via
+[`stretch-backports`](https://packages.debian.org/stretch-backports/peek) repository.
+Please refer to [Debian Backports Website](https://backports.debian.org/)
+for detailed usage of `stretch-backports` repository.
+        
+After enabling `stretch-backports` for Debian 9 (Debian 10 or `Sid` doesn't need
+any tweaks at all), installation can be done by simply typing:
+
+    sudo apt install peek
+
+Besides, you can also create your own `.deb` package for Peek easily.
+First, install the build dependencies:
 
     sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
 
@@ -160,9 +165,9 @@ Then build Peek and package it:
     make package
 
 This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
-current version). You can install it with dpkg:
+current version). You can install it with `apt`:
 
-    sudo dpkg -i peek-*-Linux.deb
+    sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
 For Fedora 25 add this repository:
@@ -201,23 +206,21 @@ See the [Repology package list](https://repology.org/metapackage/peek/packages)
 for a list of Peek packages for various distributions.
 
 ### From source
-You can build and install Peek using CMake:
+You can build and install Peek using Meson with Ninja:
 
     git clone https://github.com/phw/peek.git
-    mkdir peek/build
-    cd peek/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-    make
+    cd peek
+    meson --prefix=/usr/local builddir
+    cd builddir
+    ninja
 
     # Run directly from source
     ./peek
 
     # Install system-wide
-    sudo make install
+    sudo ninja install
 
-You can uninstall Peek again by running `sudo make uninstall` from within the
-build directory.
-
+*Note: `ninja` might be called `ninja-build` on some distributions.*
 
 ## Frequently Asked Questions
 ### How can I capture mouse clicks and/or keystrokes?

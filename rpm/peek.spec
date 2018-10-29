@@ -16,7 +16,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 BuildRequires:  txt2man
 BuildRequires:  gzip
-Requires:       ffmpeg
+Requires:       ffmpeg >= 3
 Requires:       gstreamer1-plugins-good >= 1.2
 Recommends:     gstreamer1-plugins-ugly
 Suggests:       gifski

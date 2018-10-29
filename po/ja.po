@@ -1,53 +1,52 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
-# Åke Engelbrektson, 2016
-# Åke Engelbrektson, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Peek\n"
+"Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-04-12 11:06+0000\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
-"translations/sv/>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2018-08-29 11:03+0000\n"
+"Last-Translator: YAMADA Shinichirou "
+"<yamada_strong_yamada_nice_64bit@yahoo.co.jp>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/peek/"
+"translations/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.2-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
-msgstr "Visa programversion och avsluta"
+msgstr "プログラムのバージョンを表示して終了します"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "Välj inspelningsprogram"
+msgstr "録画に使用するバックエンド（gnome-shell、ffmpeg）を選択します"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr "GRÄNSSNITT"
+msgstr "バックエンド"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr "Börja spela in i alla startade Peek-instanser"
+msgstr "実行中のすべての Peek のインスタンスで録画を開始します"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr "Sluta spela in i alla startade Peek-instanser"
+msgstr "実行中のすべての Peek のインスタンスで録画を停止します"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr "Inspelning av/på i alla startade Peek-instanser"
+msgstr "実行中のすべての Peek のインスタンスで録画の開始と停止を切り替えます"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr "Starta Peek utan menyfält"
+msgstr "ヘッダーバーなしで Peek を開始します"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -56,16 +55,16 @@ msgstr "Peek"
 
 #: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
-msgstr "Kan inte skapa standardinspelare.\n"
+msgstr "デフォルトのスクリーンレコーダーを作成できませんでした。\n"
 
 #: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr "Kan inte starta bakgrundsgränssnittet %s.\n"
+msgstr "バックエンド %s を初期化できませんでした。\n"
 
 #: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
-msgstr "Wayland-gränssnittet stöds inte"
+msgstr "ネイティブ Wayland バックエンドはサポートされていません"
 
 #: src/application.vala:380
 msgid ""
@@ -75,23 +74,23 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Du kör Peek på Wayland, detta stöds inte för närvarande. Starta Peek med "
-"XWayland genom inställningen <tt>GDK_BACKEND=x11</tt>.\n"
+"Peek をネイティブな Wayland 上で実行しています。これは現在サポートされていません。<tt>GDK_BACKEND=x11</tt> "
+"を設定し、XWayland を使用して Peek を起動してください。\n"
 "\n"
-"För detaljerad info, se Peek <a href='https://github.com/phw/peek#why-no-"
-"native-wayland-support'>FAQ om Wayland-stöd</a>."
+"詳細については Peek の <a href='https://github.com/phw/peek#why-no-native-wayland-"
+"support'>Wayland に関する FAQ</a> をお読みください。"
 
 #: src/ui/application-window.vala:104
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr "Ett oväntat fel inträffade vid inspelning. Inspelningen avbröts."
+msgstr "録画中に予期しないエラーが発生しました。録画は中止されました。"
 
 #: src/ui/application-window.vala:230
 msgid "Rendering animation…"
-msgstr "Renderar animering…"
+msgstr "アニメーションをレンダリングしています…"
 
 #: src/ui/application-window.vala:231
 msgid "Peek will close when rendering is finished."
-msgstr "Peek kommer att avslutas när renderingen är slutförd."
+msgstr "レンダリングが完了すると Peek は閉じます。"
 
 #: src/ui/application-window.vala:267 ui/application-window.ui:256
 #: ui/preferences.ui:224
@@ -116,179 +115,181 @@ msgstr "WebM"
 #: src/ui/application-window.vala:282
 #, c-format
 msgid "Record as %s"
-msgstr "Spela in som %s"
+msgstr "%s 形式で録画"
 
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr "Start / Stopp: %s"
+msgstr "開始/終了: %s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
-msgstr "Renderar …"
+msgstr "レンダリングしています…"
 
 #: src/ui/application-window.vala:524
 msgid "Recording could not be started due to an unexpected error."
-msgstr "Inspelningen kan inte startas på grund av ett oväntat fel."
+msgstr "予期しないエラーのため録画を開始できませんでした。"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:673
 msgid "Save animation"
-msgstr "Spara animering"
+msgstr "アニメーションを保存"
 
 #: src/ui/application-window.vala:669 src/ui/application-window.vala:676
 msgid "_Save"
-msgstr "_Spara"
+msgstr "保存(_S)"
 
 #: src/ui/application-window.vala:670 src/ui/application-window.vala:674
 msgid "_Cancel"
-msgstr "_Avbryt"
+msgstr "キャンセル(_C)"
 
 #: src/ui/application-window.vala:741
 msgid "The file could not be saved to the selected location."
-msgstr "Filen kan inte sparas på den anvisade platsen."
+msgstr "ファイルを選択された場所に保存することができませんでした。"
 
 #: src/ui/application-window.vala:768
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr "Animeringen sparad som \"%s\""
+msgstr "アニメーションは \"%s\" という名前で保存されました"
 
 #: src/ui/application-window.vala:778
 msgid "Click here to show the saved file in your file manager."
-msgstr "Klicka här för att visa den sparade filen i din filhanterare."
+msgstr "ファイルマネージャーで保存されたファイルを表示するにはここをクリックしてください。"
 
 #: src/ui/application-window.vala:780
 msgid "Show in file manager"
-msgstr "Visa i filhanteraren"
+msgstr "ファイルマネージャーで表示"
 
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr "inaktiverad"
+msgstr "なし"
 
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
-msgstr "Ändra"
+msgstr "変更"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr "Tryck på tangenter…"
+msgstr "キーを押してください…"
 
 #: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr "Animerad GIF-inspelare"
+msgstr "アニメーション GIF レコーダー"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Åke Engelbrektson"
+msgstr "Ryo Nakano"
 
 #: ui/application-window.ui:33 ui/application-window.ui:162
 msgid "Start recording"
-msgstr "Starta inspelning"
+msgstr "録画を開始します"
 
 #: ui/application-window.ui:152
 msgid "_Record"
-msgstr "_Spela in"
+msgstr "録画(_R)"
 
 #: ui/application-window.ui:178
 msgid "_Stop"
-msgstr "_Stoppa"
+msgstr "停止(_S)"
 
 #: ui/application-window.ui:188
 msgid "Stop recording"
-msgstr "Stoppa inspelning"
+msgstr "録画を停止します"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
-msgstr "Inspelningsfel"
+msgstr "録画エラー"
 
 #: ui/error-dialog.ui:25
 msgid "Report issue"
-msgstr "Rapportera problem"
+msgstr "問題を報告"
 
 #: ui/error-dialog.ui:39
 msgid "Close"
-msgstr "Stäng"
+msgstr "閉じる"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr "Visa detaljerad info"
+msgstr "詳細を表示"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
-msgstr "Nytt _fönster"
+msgstr "新しいウィンドウ(_W)"
 
 #: ui/gtk/menus.ui:14
 msgid "_Preferences"
-msgstr "_Inställningar"
+msgstr "設定(_P)"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr "_Om"
+msgstr "このアプリケーションについて(_A)"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
-msgstr "_Avsluta"
+msgstr "終了(_Q)"
 
 #: ui/preferences.ui:77
 msgid "User interface"
-msgstr "Användargränssnitt"
+msgstr "ユーザーインターフェース"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Öppna filhanteraren efter sparad fil"
+msgstr "保存後にファイルマネージャーを開く"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr "Visa skrivbordsavisering efter sparande"
+msgstr "保存後にデスクトップ通知を表示する"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr "Starta inspelning"
+msgstr "録画を開始/終了"
 
 #: ui/preferences.ui:185
 msgid "Recording"
-msgstr "Spelar in"
+msgstr "録画"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr "Utdataformat"
+msgstr "出力形式"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Använd gifski för för högkvalitativa GIF-filer"
+msgstr "より高画質の GIF にするために gifski を使用する"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr "GIF-kvalitet"
+msgstr "GIF の画質"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Bildfrekvens"
+msgstr "フレームレート"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
-msgstr "Nersampling av upplösning"
+msgstr "解像度のダウンサンプリング"
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
-msgstr "Fördröjning i sekunder före inspelningsstart"
+msgstr "録画開始までの遅延秒数"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
-msgstr "Spela in muspekaren"
+msgstr "マウスカーソルをキャプチャーする"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
-msgstr "Peek-inställningar"
+msgstr "Peek の設定"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Spela in korta animerade GIF-bilder från skärmen"
+msgstr "スクリーンから短いアニメーション GIF イメージを録画します"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr "skärminspelning;skärminspelare;skärmklipp;GIF;WebM;APNG;"
+msgstr ""
+"スクリーンキャスト;スクリーンレコーダー;スクリーンキャプチャー;screencast;screen recorder;screen "
+"capture;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -296,7 +297,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr "Enkel skärminspelare med ett användarvänligt gränssnitt"
+msgstr "使いやすいインターフェースを備えたシンプルなスクリーンレコーダー"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -307,44 +308,42 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
-"Peek gör det enkelt att skapa korta inspelningar av ett område på skärmen. "
-"Det byggdes specifikt för att enkelt visa funktioner i dina egna program, "
-"eller för att spela in underlag till felrapporter. Med Peek kan du enkelt "
-"placera Peek-fönstret över det område du vill spela in och trycka på \"Spela "
-"in\". Peek är optimerad för att generera animerade GIF-filer, men du kan "
-"också spela in direkt till WebM eller MP4, om du föredrar det."
+"Peek は、指定した画面領域の短いスクリーンキャストを簡単に作成することができます。特定の用途（アプリの UI や機能に関する説明、バグ報告など）"
+"で画面領域を録画するために Peek は作成されました。Peek の使い方はシンプルで、録画したい領域に Peek "
+"のウィンドウを移動させて「録画」を押すだけです。Peek はアニメーション GIF を生成するのに最適化されていますが、WebM や MP4 "
+"で直接録画することもできます。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr "Funktioner:"
+msgstr "機能:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr "Välj ett skärmområde för inspelning"
+msgstr "録画する画面領域を選択します"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Spara videon som optimerad, animerad GIF-fil"
+msgstr "録画されたビデオを最適化されたアニメーション GIF として保存します"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr "Spela in direkt i WebM- eller MP4-formatet"
+msgstr "WebM や MP4 形式に直接録画します"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr "Enkelt användargränssnitt, optimerat för uppgiften"
+msgstr "タスクに最適化されたシンプルなユーザーインターフェース"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr "Automatisk nedskalning av inspelad video"
+msgstr "録画されたビデオを自動的にダウンスケールします"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr "Stöd för HiDPI-skärmar"
+msgstr "HiDPI スクリーンをサポート"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr "Fungerar i en GNOME Wayland-session (med hjälp av XWayland)"
+msgstr "XWayland を使用して GNOME Shell Wayland セッション内で動作します"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -353,22 +352,20 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
-"Peek är inte ett generellt skärminspelningsprogram med utökade funktioner, "
-"utan fokuserar snarare på den enda uppgiften att skapa små, tysta "
-"inspelningar av ett område på skärmen, för att sedan skapa GIF-animeringar "
-"eller tysta WebM- eller MP4-videor."
+"Peek は拡張された機能を持った汎用目的のスクリーンキャストアプリではなく、むしろ GIF アニメーションや無音の WebM/MP4 "
+"ビデオを作成するという目的で画面領域の小さくて無音のスクリーンキャストを作成するという単一のタスクに焦点を当てています。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr "Huvudfönster för att välja inspelningsområde"
+msgstr "録画範囲を選択するメインウィンドウ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek's preferences dialog"
-msgstr "Peek-inställningar"
+msgstr "Peek の設定ダイアログ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
-msgstr "Peek spelar in sig självt"
+msgstr "Peek が Peek 自身を録画しています"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
@@ -378,9 +375,7 @@ msgstr "Philipp Wolfer"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
-msgstr ""
-"Tid i millisekunder, som inspelningsområdets storlek visas, efter slutförd "
-"storleksändring."
+msgstr "サイズ調整が終わったあと録画領域のサイズが表示されるまでの時間（ミリ秒）。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -390,58 +385,36 @@ msgstr "\"Peek %Y-%m-%d %H-%M\""
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "Standardfilnamn som används. Kan inkludera specificerat datumformat."
+msgstr "デフォルトのファイル名に使用されます。日時書式指定文字列を含めることができます。拡張子が自動的に追加されます。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
-msgstr "Föredra mörkt tema"
+msgstr "ダークテーマを使用します"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr "Global tangentbindning för inspelning"
+msgstr "録画状態を切り替えるためのグローバルキーバインド"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
-msgstr "Filformat för utdata"
+msgstr "出力されるファイルの形式"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr "Kvalitetsinställningar för GIF-kodaren gifski"
+msgstr "gifski GIF エンコーダーで使用される画質設定"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
-msgstr "Faktor för nersampling av upplösningen"
+msgstr "解像度ダウンサンプル係数"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr "Om muspekaren skall spelas in"
+msgstr "マウスカーソルをキャプチャーするかどうか"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
-msgstr "Storlek och position för senast öppnade programfönster"
+msgstr "最後に開かれたメインウィンドウのサイズと位置"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
-msgstr "Sökväg till senast sparade video"
-
-#, fuzzy
-#~ msgid "Show notification after saving"
-#~ msgstr "Öppna filhanteraren efter sparad fil"
-
-#~ msgid ""
-#~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
-#~ "not set Peek will automatically select a backend."
-#~ msgstr ""
-#~ "Välj inspelningsgränssnitt (gnome-shell, ffmpeg or avconv). Om inte, "
-#~ "kommer Peek att välja ett gränssnitt automatiskt."
-
-#~ msgid "peek"
-#~ msgstr "peek"
-
-#, fuzzy
-#~ msgid "Open file manager after saving."
-#~ msgstr "Öppna filhanteraren efter sparad fil"
-
-#, fuzzy
-#~ msgid "Delay in seconds before recording starts."
-#~ msgstr "Fördröjning i sekunder före inspelningsstart"
+msgstr "最後のビデオが保存された場所のパス"
