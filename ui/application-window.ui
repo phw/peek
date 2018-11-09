@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.3
+<!-- Generated with glade 3.22.1 
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -38,6 +38,51 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="can_focus">False</property>
     <property name="icon_name">media-playback-stop-symbolic</property>
   </object>
+  <object class="GtkPopover" id="pop_menu">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkButtonBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="layout_style">start</property>
+        <child>
+          <object class="GtkButton" id="preferences_button">
+            <property name="label" translatable="yes">Preferences</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_preferences_button_clicked" swapped="no"/>
+            <style>
+              <class name="peek-format-button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="about_button">
+            <property name="label" translatable="yes">About</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_about_button_clicked" swapped="no"/>
+            <style>
+              <class name="peek-format-button"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <template class="PeekUiApplicationWindow" parent="GtkApplicationWindow">
     <property name="width_request">60</property>
     <property name="height_request">60</property>
@@ -50,6 +95,126 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="show_menubar">False</property>
     <signal name="draw" handler="on_window_draw" swapped="no"/>
     <signal name="screen-changed" handler="on_window_screen_changed" swapped="no"/>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="has_subtitle">False</property>
+        <property name="spacing">0</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <object class="GtkButtonBox" id="action_button_box">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hexpand">False</property>
+            <property name="vexpand">False</property>
+            <property name="baseline_position">bottom</property>
+            <property name="layout_style">spread</property>
+            <child>
+              <object class="GtkButton" id="stop_button">
+                <property name="label" translatable="yes">_Stop</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="no_show_all">True</property>
+                <property name="image">icon_stop_button</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_stop_button_clicked" swapped="no"/>
+                <child internal-child="accessible">
+                  <object class="AtkObject" id="stop_button-atkobject">
+                    <property name="AtkObject::accessible-name" translatable="yes">Stop recording</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="destructive-action"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+                <property name="non_homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuButton" id="pop_format_menu">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="halign">start</property>
+                <property name="popover">pop_format</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+                <property name="non_homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="record_button">
+                <property name="label" translatable="yes">_Record</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">icon_record_button</property>
+                <property name="use_underline">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="on_record_button_clicked" swapped="no"/>
+                <child internal-child="accessible">
+                  <object class="AtkObject" id="record_button-atkobject">
+                    <property name="AtkObject::accessible-name" translatable="yes">Start recording</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="suggested-action"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+                <property name="non_homogeneous">True</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuButton">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="popover">pop_menu</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="icon_name">open-menu-symbolic</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="pack_type">end</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
     <child>
       <object class="GtkBox" id="content_area">
         <property name="visible">True</property>
@@ -130,95 +295,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
           <class name="background"/>
           <class name="peek-content-area"/>
         </style>
-      </object>
-    </child>
-    <child type="titlebar">
-      <object class="GtkHeaderBar" id="headerbar">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="has_subtitle">False</property>
-        <property name="spacing">0</property>
-        <property name="show_close_button">True</property>
-        <property name="decoration_layout">menu:close</property>
-        <child>
-          <object class="GtkButtonBox" id="action_button_box">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="halign">start</property>
-            <property name="vexpand">False</property>
-            <property name="baseline_position">bottom</property>
-            <child>
-              <object class="GtkButton" id="record_button">
-                <property name="label" translatable="yes">_Record</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="image">icon_record_button</property>
-                <property name="use_underline">True</property>
-                <property name="always_show_image">True</property>
-                <signal name="clicked" handler="on_record_button_clicked" swapped="no"/>
-                <child internal-child="accessible">
-                  <object class="AtkObject" id="record_button-atkobject">
-                    <property name="AtkObject::accessible-name" translatable="yes">Start recording</property>
-                  </object>
-                </child>
-                <style>
-                  <class name="suggested-action"/>
-                </style>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-                <property name="non_homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="stop_button">
-                <property name="label" translatable="yes">_Stop</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="no_show_all">True</property>
-                <property name="image">icon_stop_button</property>
-                <property name="use_underline">True</property>
-                <property name="always_show_image">True</property>
-                <signal name="clicked" handler="on_stop_button_clicked" swapped="no"/>
-                <child internal-child="accessible">
-                  <object class="AtkObject" id="stop_button-atkobject">
-                    <property name="AtkObject::accessible-name" translatable="yes">Stop recording</property>
-                  </object>
-                </child>
-                <style>
-                  <class name="destructive-action"/>
-                </style>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-                <property name="non_homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkMenuButton" id="pop_format_menu">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="halign">start</property>
-                <property name="popover">pop_format</property>
-                <child>
-                  <placeholder/>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-                <property name="non_homogeneous">True</property>
-              </packing>
-            </child>
-          </object>
-        </child>
       </object>
     </child>
     <style>
