@@ -137,24 +137,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               </packing>
             </child>
             <child>
-              <object class="GtkMenuButton" id="pop_format_menu">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="halign">start</property>
-                <property name="popover">pop_format</property>
-                <child>
-                  <placeholder/>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-                <property name="non_homogeneous">True</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkButton" id="record_button">
                 <property name="label" translatable="yes">_Record</property>
                 <property name="visible">True</property>
@@ -175,6 +157,24 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
               </object>
               <packing>
                 <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+                <property name="non_homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuButton" id="pop_format_menu">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="halign">start</property>
+                <property name="popover">pop_format</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
                 <property name="fill">True</property>
                 <property name="position">3</property>
                 <property name="non_homogeneous">True</property>
