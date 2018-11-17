@@ -29,7 +29,7 @@ Simple screen recorder with an easy to use interface
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
-  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
+  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-keystrokes)
   - [How can I improve the quality of recorded GIF files](#how-can-i-improve-the-quality-of-recorded-gif-files)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
