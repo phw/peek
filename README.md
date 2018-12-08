@@ -90,6 +90,7 @@ distributions:
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
+- [Solus](https://dev.getsol.us/source/peek/)
 
 ### Flatpak
 Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
@@ -195,10 +196,9 @@ package also available from RPM Fusion free:
     sudo dnf install gstreamer1-plugins-ugly
 
 ### Solus
+Solus users can simply install with:
 
-For Solus users just run:
-
-	sudo eopkg install peek
+	sudo eopkg it peek
 
 
 ### Other distributions
