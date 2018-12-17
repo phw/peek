@@ -601,20 +601,12 @@ namespace Peek.Ui {
 
       //format popover
       if (pop_format.visible) {
-        var pop_style = pop_format.get_style_context ();
-        if (DesktopIntegration.get_theme_name () == "Ambiance") {
-          pop_style.add_class (Gtk.STYLE_CLASS_TITLEBAR);
-        }
         var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
 
       //menu popover
       if (pop_menu.visible) {
-        var pop_style = pop_menu.get_style_context ();
-        if (DesktopIntegration.get_theme_name () == "Ambiance") {
-          pop_style.add_class (Gtk.STYLE_CLASS_TITLEBAR);
-        }
         var pop_menu_region = GtkHelper.create_region_from_widget (pop_menu);
         window_region.union (pop_menu_region);
       }
