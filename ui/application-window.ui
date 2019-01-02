@@ -100,7 +100,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="has_subtitle">False</property>
-        <property name="spacing">0</property>
+        <property name="spacing">6</property>
         <property name="show_close_button">True</property>
         <child>
           <object class="GtkButtonBox" id="action_button_box">
