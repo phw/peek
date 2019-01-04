@@ -26,6 +26,7 @@ Simple screen recorder with an easy to use interface
   - [Debian](#debian)
   - [Fedora](#fedora)
   - [Solus](#solus)
+  - [Arch Linux](#arch-linux)
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -199,6 +200,19 @@ package also available from RPM Fusion free:
 Solus users can simply install with:
 
 	sudo eopkg it peek
+
+### Arch Linux
+Arch Linux users can simply install with:
+
+	sudo pacman -S peek
+	
+For GNOME Shell recording there are some optional packages you can choose from:
+   
+       gst-plugins-good: Recording under Gnome Shell
+       gst-plugins-ugly: MP4 output under Gnome Shell
+       gifski: High quality GIF animations with thousands of colors
+       
+If you have a package manager for AUR (or fetch from AUR manually) the git version is available [here](https://aur.archlinux.org/packages/peek-git)
 
 
 ### Other distributions
