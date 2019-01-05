@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2017-12-09 12:50+0000\n"
-"Last-Translator: Luiz Felipe <luiz.felipe_95@hotmail.com>\n"
+"PO-Revision-Date: 2019-01-06 21:07+0000\n"
+"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18-dev\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -26,26 +26,23 @@ msgstr "Exibe a versão do programa e sai"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Selecione o backend de gravação (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
 msgstr "BACKEND"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
-msgstr "Iniciar gravação em todas as instâncias do Peek em execução."
+msgstr "Iniciar gravação em todas as instâncias do Peek em execução"
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Parar gravação em todas as instâncias do Peek em execução."
+msgstr "Parar gravação em todas as instâncias do Peek em execução"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr "Alternar a gravação em todas as instâncias Peek em execução."
+msgstr "Alternar a gravação em todas as instâncias Peek em execução"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
@@ -67,7 +64,7 @@ msgstr "Não é possível inicializar o backend %s.\n"
 
 #: src/application.vala:378
 msgid "Native Wayland backend is unsupported"
-msgstr "O backend Wayland nativo não é suportado"
+msgstr "Não há suporte para o backend Wayland nativo"
 
 #: src/application.vala:380
 msgid ""
@@ -77,17 +74,18 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Você está rodando o Peek nativamente no Wayland, isto atualmente não é "
+"Você está executando o Peek nativamente no Wayland, isto atualmente não é "
 "suportado. Por favor, inicie o Peek usando o XWayland definindo "
 "<tt>GDK_BACKEND=x11</tt>.\n"
 "\n"
-"Para maiores detalhes veja <a href='https://github.com/phw/peek#why-no-"
-"native-wayland-support'>as perguntas frequentes do Peek sobre o suporte a "
-"Wayland support</a>."
+"Para mais detalhes veja <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>as perguntas frequentes do Peek sobre o suporte a "
+"Wayland</a>."
 
 #: src/ui/application-window.vala:104
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
+"Ocorreu um erro inesperado durante a gravação. A gravação foi cancelada."
 
 #: src/ui/application-window.vala:230
 msgid "Rendering animation…"
@@ -125,7 +123,7 @@ msgstr "Gravar como %s"
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Iniciar/Parar %s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
@@ -249,7 +247,7 @@ msgstr "Abrir o gerenciador de arquivos após salvar"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Mostrar notificação na área de trabalho depois de salvar"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
@@ -265,11 +263,11 @@ msgstr "Formato de saída"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Use o gifski para GIFs de alta qualidade"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "Qualidade do GIF"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
@@ -297,7 +295,7 @@ msgstr "Grave pequenas GIFs animadas a partir da sua tela"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "screencast;gravação de tela;captura de tela;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -338,7 +336,7 @@ msgstr "Salvar vídeo gravado como uma GIF animada otimizada"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr "Gravar diretamente para WebM ou formato MP4"
+msgstr "Gravar diretamente para o formato WebM ou MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
@@ -419,7 +417,7 @@ msgstr "Formato do arquivo de saída"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Configuração da qualidade do codificador de GIF do gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
@@ -427,7 +425,7 @@ msgstr "Fator de redução de resolução"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr "Deseja capturar capturar o cursor do mouse"
+msgstr "Se deseja capturar o cursor do mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
