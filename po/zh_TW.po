@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2017-11-07 14:43+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2019-01-15 05:21+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18-dev\n"
+"X-Generator: Weblate 3.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -25,7 +25,7 @@ msgstr "顯示程式版本後結束"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "選擇錄製後端（gnome shell、ffmpeg）"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -45,7 +45,7 @@ msgstr "切換所有執行中的 Peek 的錄影狀態"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "開始不帶標題列的瀏覽"
 
 #: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -81,16 +81,15 @@ msgstr ""
 
 #: src/ui/application-window.vala:104
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "錄製過程中發生意外錯誤。錄製被中止。"
 
 #: src/ui/application-window.vala:230
-#, fuzzy
 msgid "Rendering animation…"
 msgstr "正在輸出…"
 
 #: src/ui/application-window.vala:231
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "渲染完成後，Peek將自動關閉。"
 
 #: src/ui/application-window.vala:267 ui/application-window.ui:256
 #: ui/preferences.ui:224
@@ -113,14 +112,14 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:282
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "錄影"
+msgstr "錄影為 %s"
 
 #: src/ui/application-window.vala:364
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "開始/停止：%s"
 
 #: src/ui/application-window.vala:484
 msgid "Rendering…"
@@ -128,7 +127,7 @@ msgstr "正在輸出…"
 
 #: src/ui/application-window.vala:524
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "由於意外錯誤，無法啟動錄製。"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:673
 msgid "Save animation"
@@ -144,7 +143,7 @@ msgstr "取消"
 
 #: src/ui/application-window.vala:741
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "無法將檔案保存到所選位置。"
 
 #: src/ui/application-window.vala:768
 #, c-format
@@ -198,21 +197,20 @@ msgid "Stop recording"
 msgstr "停止錄影"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "錄影"
+msgstr "錄影錯誤"
 
 #: ui/error-dialog.ui:25
 msgid "Report issue"
-msgstr ""
+msgstr "報告問題"
 
 #: ui/error-dialog.ui:39
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: ui/error-dialog.ui:107
 msgid "Show details"
-msgstr ""
+msgstr "顯示細節"
 
 #: ui/gtk/menus.ui:7
 msgid "New _window"
@@ -240,7 +238,7 @@ msgstr "儲存後自動在檔案管理器中開啟"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "保存後顯示通知"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
@@ -256,11 +254,11 @@ msgstr "輸出格式"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "使用 gifski 製作高品質的 GIF"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF品質"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
@@ -288,7 +286,7 @@ msgstr "從您的螢幕上錄製簡短的 GIF 動畫"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "螢幕截圖;螢幕錄製;螢幕截圖;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -359,7 +357,6 @@ msgid "The main window to select the recording area"
 msgstr "選擇錄影區塊的主要視窗"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
 msgstr "Peek 偏好設定"
 
@@ -401,7 +398,7 @@ msgstr "輸出檔案格式"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "gifski GIF編碼器的品質設定"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
