@@ -7,7 +7,9 @@ License:        GPLv3
 URL:            https://github.com/phw/peek
 Source0:        https://github.com/phw/peek/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires:  gcc
 BuildRequires:  cmake
+BuildRequires:  vala
 BuildRequires:  vala-devel
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
