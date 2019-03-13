@@ -66,7 +66,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ## Requirements
 ### Runtime
 
-- GTK+ >= 3.14
+- GTK+ >= 3.20
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
 - FFmpeg >= 3
@@ -147,7 +147,7 @@ and packages for Debian 9 ("Stretch") via
 [`stretch-backports`](https://packages.debian.org/stretch-backports/peek) repository.
 Please refer to [Debian Backports Website](https://backports.debian.org/)
 for detailed usage of `stretch-backports` repository.
-        
+
 After enabling `stretch-backports` for Debian 9 (Debian 10 or `Sid` doesn't need
 any tweaks at all), installation can be done by simply typing:
 
