@@ -5,7 +5,6 @@ src/ui/preferences-dialog.vala
 ui/about.ui
 ui/application-window.ui
 ui/error-dialog.ui
-ui/gtk/menus.ui
 ui/preferences.ui
 data/com.uploadedlobster.peek.desktop.in
 data/com.uploadedlobster.peek.appdata.xml.in
