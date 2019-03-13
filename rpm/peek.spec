@@ -12,7 +12,7 @@ BuildRequires:  cmake
 BuildRequires:  vala
 BuildRequires:  vala-devel
 BuildRequires:  gettext
-BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
+BuildRequires:  pkgconfig(gtk+-3.0) >= 3.20
 BuildRequires:  pkgconfig(keybinder-3.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib

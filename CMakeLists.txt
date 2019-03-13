@@ -54,7 +54,7 @@ include(GettextTranslate)
 find_package(Vala 0.22 REQUIRED)
 
 find_package(PkgConfig)
-set(REQUIRE_GTK "3.14")
+set(REQUIRE_GTK "3.20")
 pkg_check_modules(GTK REQUIRED gtk+-3.0>=${REQUIRE_GTK})
 pkg_check_modules(CAIRO REQUIRED cairo)
 pkg_check_modules(GIO REQUIRED gio-2.0>=2.42)
@@ -94,12 +94,6 @@ if(${KEYBINDER_FOUND})
 endif()
 
 # Check for GTK features
-if(${GTK_VERSION} VERSION_EQUAL "3.16" OR ${GTK_VERSION} VERSION_GREATER "3.16")
-  message(STATUS "Compiling with features for GTK >= 3.16")
-  set(REQUIRE_GTK "3.16")
-  list(APPEND VALA_DEFINITIONS "HAS_GTK_LABEL_XALIGN")
-endif()
-
 if(${GTK_VERSION} VERSION_EQUAL "3.20" OR ${GTK_VERSION} VERSION_GREATER "3.20")
   message(STATUS "Compiling with features for GTK >= 3.20")
   set(REQUIRE_GTK "3.20")
