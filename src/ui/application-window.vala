@@ -422,16 +422,20 @@ namespace Peek.Ui {
     }
 
     [GtkCallback]
+    private void on_new_window_button_clicked (Button source) {
+      pop_menu.hide ();
+      this.application.activate_action ("new-window", null);
+    }
+
+    [GtkCallback]
     private void on_preferences_button_clicked (Button source) {
       pop_menu.hide ();
-
       PreferencesDialog.present_single_instance (this);
     }
 
     [GtkCallback]
     private void on_about_button_clicked (Button source) {
       pop_menu.hide ();
-
       AboutDialog.present_single_instance (this);
     }
 

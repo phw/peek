@@ -22,7 +22,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
 
 -->
 <interface>
-  <requires lib="gtk+" version="3.14"/>
+  <requires lib="gtk+" version="3.20"/>
   <!-- interface-license-type gplv3 -->
   <!-- interface-name Peek -->
   <!-- interface-copyright Philipp Wolfer <ph.wolfer@gmail.com> -->
@@ -40,22 +40,19 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
   </object>
   <object class="GtkPopover" id="pop_menu">
     <property name="can_focus">False</property>
+    <property name="border_width">9</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
-        <property name="margin">12</property>
         <child>
-          <object class="GtkModelButton" id="preferences_button">
-            <property name="label" translatable="yes">Preferences</property>
+          <object class="GtkModelButton" id="new_window_button">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_preferences_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="text" translatable="yes">New window</property>
+            <signal name="clicked" handler="on_new_window_button_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -64,20 +61,42 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="about_button">
-            <property name="label" translatable="yes">About Peek</property>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton" id="preferences_button">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="on_about_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="text" translatable="yes">Preferences</property>
+            <signal name="clicked" handler="on_preferences_button_clicked" swapped="no"/>
           </object>
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton" id="about_button">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="text" translatable="yes">About Peek</property>
+            <signal name="clicked" handler="on_about_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
@@ -100,7 +119,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="has_subtitle">False</property>
-        <property name="spacing">6</property>
         <property name="show_close_button">True</property>
         <child>
           <object class="GtkButtonBox" id="action_button_box">
@@ -308,14 +326,14 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">True</property>
+        <property name="border_width">9</property>
         <property name="orientation">vertical</property>
-        <property name="margin">6</property>
         <child>
           <object class="GtkModelButton" id="gif_button">
-            <property name="label" translatable="yes">GIF</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="text" translatable="yes">GIF</property>
             <signal name="clicked" handler="on_gif_button_clicked" swapped="no"/>
             <style>
               <class name="peek-format-button"/>
@@ -329,10 +347,10 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         </child>
         <child>
           <object class="GtkModelButton" id="apng_button">
-            <property name="label" translatable="yes">APNG</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="text" translatable="yes">APNG</property>
             <signal name="clicked" handler="on_apng_button_clicked" swapped="no"/>
             <style>
               <class name="peek-format-button"/>
@@ -346,10 +364,10 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         </child>
         <child>
           <object class="GtkModelButton" id="webm_button">
-            <property name="label" translatable="yes">WebM</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="text" translatable="yes">WebM</property>
             <signal name="clicked" handler="on_webm_button_clicked" swapped="no"/>
             <style>
               <class name="peek-format-button"/>
@@ -363,10 +381,10 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         </child>
         <child>
           <object class="GtkModelButton" id="mp4_button">
-            <property name="label" translatable="yes">MP4</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <property name="text" translatable="yes">MP4</property>
             <signal name="clicked" handler="on_mp4_button_clicked" swapped="no"/>
             <style>
               <class name="peek-format-button"/>
