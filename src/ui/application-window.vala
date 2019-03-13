@@ -264,7 +264,7 @@ namespace Peek.Ui {
       return false;
     }
 
-    //set format
+    // Set file format
     private string get_format_name (OutputFormat format) {
       switch (format) {
         case OutputFormat.APNG: return _ ("APNG");
@@ -603,23 +603,16 @@ namespace Peek.Ui {
       var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
 
-      //format popover
+      // Format popover
       if (pop_format.visible) {
         var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
 
-      //menu popover
+      // Menu popover
       if (pop_menu.visible) {
         var pop_menu_region = GtkHelper.create_region_from_widget (pop_menu);
         window_region.union (pop_menu_region);
-      }
-
-      // The fallback app menu overlaps the recording area
-      var fallback_app_menu = get_fallback_app_menu ();
-      if (fallback_app_menu != null && fallback_app_menu.visible) {
-        var app_menu_region = GtkHelper.create_region_from_widget (fallback_app_menu);
-        window_region.union (app_menu_region);
       }
 
       this.input_shape_combine_region (window_region);
@@ -632,24 +625,6 @@ namespace Peek.Ui {
           this.shape_combine_region (null);
         }
       }
-    }
-
-    private Widget? get_fallback_app_menu () {
-      if (this.application.prefers_app_menu ()) {
-        return null;
-      }
-
-      Widget fallback_app_menu = null;
-
-      this.forall ((child)  => {
-        if (child is Gtk.Popover) {
-          if (child.get_name () == (null)) {
-            fallback_app_menu = child;
-          }
-        }
-      });
-
-      return fallback_app_menu;
     }
 
     private void freeze_window_size () {

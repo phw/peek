@@ -106,7 +106,6 @@ modules:
     buildsystem: meson
     config-opts:
       - --buildtype=release
-      - -Dinstall-unity-schema=true
     build-options:
       cflags: -L/app/lib
     sources:
