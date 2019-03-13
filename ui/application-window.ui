@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 
+<!-- Generated with glade 3.22.1
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -202,29 +202,17 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
           </object>
         </child>
         <child>
-          <object class="GtkBox">
+          <object class="GtkMenuButton">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="popover">pop_menu</property>
             <child>
-              <object class="GtkMenuButton">
+              <object class="GtkImage">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="popover">pop_menu</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="icon_name">open-menu-symbolic</property>
-                  </object>
-                </child>
+                <property name="can_focus">False</property>
+                <property name="icon_name">open-menu-symbolic</property>
               </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="pack_type">end</property>
-                <property name="position">0</property>
-              </packing>
             </child>
           </object>
           <packing>
