@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2019-01-06 21:07+0000\n"
-"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
+"PO-Revision-Date: 2019-04-23 18:48+0000\n"
+"Last-Translator: Rui Mendes <xz9@protonmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.4-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -231,7 +231,7 @@ msgstr "_Preferências"
 
 #: ui/gtk/menus.ui:21
 msgid "_About"
-msgstr "_Sobre"
+msgstr "Sobr_e"
 
 #: ui/gtk/menus.ui:25
 msgid "_Quit"
@@ -319,7 +319,7 @@ msgstr ""
 "exemplo, para facilmente mostrar os recursos de UI de seus próprios "
 "aplicativos ou para mostrar um erro no relatório de erros. Com o Peek você "
 "simplesmente coloca a janela Peek sobre a área que deseja gravar e pressiona "
-"\"Gravar\". O peek é otimizado para gerar GIFs animadas, mas se você "
+"\"Gravar\". O Peek é otimizado para gerar GIFs animadas, mas se você "
 "preferir, também pode gravar diretamente para WebM ou MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
