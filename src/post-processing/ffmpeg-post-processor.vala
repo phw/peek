@@ -79,15 +79,19 @@ namespace Peek.PostProcessing {
         var extension = Utils.get_file_extension_for_format (config.output_format);
         var output_file = Utils.create_temp_file (extension);
 
-        string[] args = {
-          "ffmpeg", "-y",
-          "-i", input_file.get_path (),
-          "-i", palette_file.get_path (),
-          "-filter_complex", "fps=%d,paletteuse".printf (config.framerate)
-        };
-
         var argv = new Array<string> ();
-        argv.append_vals (args, args.length);
+
+        argv.append_val ("ffmpeg");
+        argv.append_val ("-y");
+
+        argv.append_val ("-i");
+        argv.append_val (input_file.get_path ());
+
+        argv.append_val ("-i");
+        argv.append_val (palette_file.get_path ());
+
+        argv.append_val ("-filter_complex");
+        argv.append_val ("fps=%d,paletteuse".printf (config.framerate));
 
         if (config.output_format == OutputFormat.APNG) {
           argv.append_val ("-plays");
