@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-03-15 11:07+0100\n"
-"PO-Revision-Date: 2019-05-08 09:49+0000\n"
+"PO-Revision-Date: 2019-05-09 13:50+0000\n"
 "Last-Translator: Ozan Akman <info@ozanakman.com.tr>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/peek/"
 "translations/tr/>\n"
@@ -363,7 +363,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
