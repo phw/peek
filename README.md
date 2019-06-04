@@ -23,6 +23,7 @@ Simple screen recorder with an easy to use interface
   - [Snappy](#snappy)
   - [AppImage](#appimage)
   - [Ubuntu](#ubuntu)
+  - [ElementaryOS](#elementaryos)
   - [Debian](#debian)
   - [Fedora](#fedora)
   - [Solus](#solus)
