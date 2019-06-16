@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-06-28 22:39+0000\n"
-"Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
+"POT-Creation-Date: 2018-04-12 11:25+0200\n"
+"PO-Revision-Date: 2019-06-16 11:44+0000\n"
+"Last-Translator: Clément Fournier <clement.fournier76@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.1-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -91,7 +91,7 @@ msgstr ""
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
-"Une erreur inattendue s'est produit pendant l'enregistrement. "
+"Une erreur inattendue s'est produite pendant l'enregistrement. "
 "L'enregistrement a été annulé."
 
 #: src/ui/application-window.vala:233
@@ -138,7 +138,7 @@ msgstr "Rendu…"
 
 #: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
-msgstr "L'enregistrement n'a pas pu démarré en raison d'une erreur inattendue."
+msgstr "L'enregistrement n'a pas pu démarrer en raison d'une erreur inattendue."
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
@@ -257,7 +257,7 @@ msgstr "Ouvrir le gestionnaire de fichiers après la sauvegarde"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr "Afficher une notification après avoir sauvegarder"
+msgstr "Afficher une notification après avoir sauvegardé"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
@@ -301,7 +301,7 @@ msgstr "Préférences de Peek"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Enregistrer des courtes images GIF animés de votre écran"
+msgstr "Enregistrer de courtes images animées GIF de votre écran"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -313,7 +313,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr "Simple enregistreur d'écran avec interface facile à utiliser"
+msgstr "Enregistreur d'écran simple avec une interface facile d'utilisation"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -342,7 +342,7 @@ msgstr "Sélectionnez une zone d'écran à enregistrer"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Sauver la vidéo enregistrée en GIF animés optimisés"
+msgstr "Sauvegarder la vidéo enregistrée en un GIF animé optimisé"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
@@ -372,9 +372,9 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
-"Peek n'est pas une application de capture vidéo d'écran à usage général avec "
+"Peek n'est pas une application de capture vidéo d'écran d'usage général avec "
 "des fonctionnalités étendues, mais se concentre plutôt sur la simple tâche "
-"de créer des petites vidéos silencieuses d'une zone d'écran pour créer des "
+"de créer de courtes vidéos silencieuses d'une zone d'écran pour créer des "
 "animations GIF, des vidéos WebM ou MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
