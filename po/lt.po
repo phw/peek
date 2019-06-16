@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2018-04-12 11:25+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-16 13:36+0200\n"
 "PO-Revision-Date: 2018-04-21 19:02+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
@@ -52,25 +52,25 @@ msgstr "Perjungti įrašinėjimą visuose vykdomuose Peek egzemplioriuose"
 msgid "Start Peek without the header bar"
 msgstr "Paleisti Peek be antraštės juostos"
 
-#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:248
+#: src/application.vala:244
 msgid "Unable to create default screen recorder.\n"
 msgstr "Nepavyko sukurti numatytojo ekrano rašytuvo.\n"
 
-#: src/application.vala:261
+#: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Nepavyko inicijuoti vidinės pusės %s.\n"
 
-#: src/application.vala:378
+#: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
 msgstr "Sava Wayland vidinė pusė yra nepalaikoma"
 
-#: src/application.vala:380
+#: src/application.vala:328
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -85,89 +85,93 @@ msgstr ""
 "Išsamesnei informacijai, žiūrėkite Peek <a href='https://github.com/phw/"
 "peek#why-no-native-wayland-support'>DUK apie Wayland palaikymą</a>."
 
-#: src/ui/application-window.vala:104
+#: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr "Įrašinėjimo metu įvyko netikėta klaida. Įrašinėjimas buvo atšauktas."
 
-#: src/ui/application-window.vala:230
+#: src/ui/application-window.vala:233
 msgid "Rendering animation…"
 msgstr "Perteikiama animacija…"
 
-#: src/ui/application-window.vala:231
+#: src/ui/application-window.vala:234
 msgid "Peek will close when rendering is finished."
 msgstr "Užbaigus perteikimą, Peek užsivers."
 
-#: src/ui/application-window.vala:267 ui/application-window.ui:256
+#: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:268 ui/application-window.ui:239
+#: src/ui/application-window.vala:271 ui/application-window.ui:326
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:269 ui/application-window.ui:290
+#: src/ui/application-window.vala:272 ui/application-window.ui:377
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:273
+#: src/ui/application-window.vala:273 ui/application-window.ui:360
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:282
+#: src/ui/application-window.vala:285
 #, c-format
 msgid "Record as %s"
 msgstr "Įrašinėti kaip %s"
 
-#: src/ui/application-window.vala:364
+#: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Pradėti / Stabdyti: %s"
 
-#: src/ui/application-window.vala:484
+#: src/ui/application-window.vala:505
 msgid "Rendering…"
 msgstr "Perteikiama…"
 
-#: src/ui/application-window.vala:524
+#: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Įrašinėjimas negalėjo būti pradėtas dėl netikėtos klaidos."
 
-#: src/ui/application-window.vala:668 src/ui/application-window.vala:673
+#: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
 msgstr "Įrašyti animaciją"
 
-#: src/ui/application-window.vala:669 src/ui/application-window.vala:676
+#: src/ui/application-window.vala:667 src/ui/application-window.vala:674
 msgid "_Save"
 msgstr "_Įrašyti"
 
-#: src/ui/application-window.vala:670 src/ui/application-window.vala:674
+#: src/ui/application-window.vala:668 src/ui/application-window.vala:672
 msgid "_Cancel"
 msgstr "_Atšaukti"
 
-#: src/ui/application-window.vala:741
+#: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
 msgstr "Failas negalėjo būti išsaugotas į pasirinktą vietą."
 
-#: src/ui/application-window.vala:768
+#: src/ui/application-window.vala:766
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animacija įrašyta kaip \"%s\""
 
-#: src/ui/application-window.vala:778
+#. Unity does not allow actions on notifications, so we disable
+#. notification actions there.
+#: src/ui/application-window.vala:776
 msgid "Click here to show the saved file in your file manager."
 msgstr "Spustelėkite čia, norėdami įrašytą failą rodyti failų tvarkytuvėje."
 
-#: src/ui/application-window.vala:780
+#: src/ui/application-window.vala:778
 msgid "Show in file manager"
 msgstr "Rodyti failų tvarkytuvėje"
 
+#. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
 msgstr "išjungta"
 
+#. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
 msgstr "Pakeisti"
@@ -176,33 +180,48 @@ msgstr "Pakeisti"
 msgid "Press keys…"
 msgstr "Paspauskite klavišus…"
 
-#: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
+#: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
 msgstr "Animuotų GIF įrašytuvas"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
-#: ui/about.ui:40
+#: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr ""
 "Moo\n"
 "Kornelijus"
 
-#: ui/application-window.ui:33 ui/application-window.ui:162
+#: ui/application-window.ui:33 ui/application-window.ui:171
 msgid "Start recording"
 msgstr "Pradėti įrašinėjimą"
 
-#: ui/application-window.ui:152
-msgid "_Record"
-msgstr "_Įrašinėti"
+#: ui/application-window.ui:54
+#, fuzzy
+msgid "New window"
+msgstr "Naujas _langas"
 
-#: ui/application-window.ui:178
+#: ui/application-window.ui:79
+#, fuzzy
+msgid "Preferences"
+msgstr "_Nuostatos"
+
+#: ui/application-window.ui:93
+#, fuzzy
+msgid "About Peek"
+msgstr "_Apie"
+
+#: ui/application-window.ui:135
 msgid "_Stop"
 msgstr "_Stabdyti"
 
-#: ui/application-window.ui:188
+#: ui/application-window.ui:145
 msgid "Stop recording"
 msgstr "Stabdyti įrašinėjimą"
+
+#: ui/application-window.ui:161
+msgid "_Record"
+msgstr "_Įrašinėti"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
@@ -219,22 +238,6 @@ msgstr "Uždaryti"
 #: ui/error-dialog.ui:107
 msgid "Show details"
 msgstr "Parodyti išsamią informaciją"
-
-#: ui/gtk/menus.ui:7
-msgid "New _window"
-msgstr "Naujas _langas"
-
-#: ui/gtk/menus.ui:14
-msgid "_Preferences"
-msgstr "_Nuostatos"
-
-#: ui/gtk/menus.ui:21
-msgid "_About"
-msgstr "_Apie"
-
-#: ui/gtk/menus.ui:25
-msgid "_Quit"
-msgstr "_Išeiti"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -432,6 +435,9 @@ msgstr "Paskiausiai atverto pagrindinio lango dydis ir vieta"
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "Kelias, kuriame buvo įrašytas paskiausias vaizdo įrašas"
+
+#~ msgid "_Quit"
+#~ msgstr "_Išeiti"
 
 #, fuzzy
 #~ msgid "Show notification after saving"

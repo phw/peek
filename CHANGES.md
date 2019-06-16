@@ -8,10 +8,10 @@
 - fix: Fixed double free error after ffmpeg recording (#419)
 - misc: Raised minimum Gtk version to 3.20
 - i18n: Updated translations for Basque, Chinese (simplified),
-  Chinese (traditional), Czech, Dutch, French, German, Italian, Lithuanian,
-  Norwegian Bokmål, Polish, Portuguese (Brazil), Russian, Serbian, Spanish,
-  Swedish
-- i18n: New translations for Japanese
+  Chinese (traditional), Czech, Dutch, Esperanto, French, German, Italian,
+  Lithuanian, Norwegian Bokmål, Polish, Portuguese (Brazil),
+  Portuguese (Portugal), Russian, Serbian, Spanish, Swedish
+- i18n: New translations for Japanese and Turkish
 - build: New Meson based build (old CMake build is deprecated and will be
   removed in release 1.5)
 - build: Autogenerate po/LINGUAS

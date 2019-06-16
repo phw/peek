@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2018-04-12 11:25+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-16 13:36+0200\n"
 "PO-Revision-Date: 2018-01-28 08:34+0000\n"
 "Last-Translator: Mutaz Tayyeb AbuSaad <wahshy1414@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -51,25 +51,25 @@ msgstr "تبديل حالة التسجيل في جميع نوافذ Peek الم�
 msgid "Start Peek without the header bar"
 msgstr "تشغيل Peek بدون شريط العناوين"
 
-#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:248
+#: src/application.vala:244
 msgid "Unable to create default screen recorder.\n"
 msgstr "تعذر إنشاء مسجل الشاشة الافتراضي.\n"
 
-#: src/application.vala:261
+#: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "تعذر تهيئة أداة التسجيل %s.\n"
 
-#: src/application.vala:378
+#: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
 msgstr "خلفية وايلاند المحلية غير مدعومة"
 
-#: src/application.vala:380
+#: src/application.vala:328
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -82,89 +82,93 @@ msgstr ""
 "لمزيد من التفاصيل زر صفحة Peek  <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'> للأسئلة الشائعة عن دعم وايلاند</a>."
 
-#: src/ui/application-window.vala:104
+#: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr "حدث خطأ غير متوقع أثناء التسجيل. تم إيقاف التسجيل."
 
-#: src/ui/application-window.vala:230
+#: src/ui/application-window.vala:233
 msgid "Rendering animation…"
 msgstr "جار عرض الرسوم المتحركة …"
 
-#: src/ui/application-window.vala:231
+#: src/ui/application-window.vala:234
 msgid "Peek will close when rendering is finished."
 msgstr "سيتم إغلاق Peek عند الانتهاء من العرض."
 
-#: src/ui/application-window.vala:267 ui/application-window.ui:256
+#: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:268 ui/application-window.ui:239
+#: src/ui/application-window.vala:271 ui/application-window.ui:326
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:269 ui/application-window.ui:290
+#: src/ui/application-window.vala:272 ui/application-window.ui:377
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:273
+#: src/ui/application-window.vala:273 ui/application-window.ui:360
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:282
+#: src/ui/application-window.vala:285
 #, c-format
 msgid "Record as %s"
 msgstr "سجل ﻛ %s"
 
-#: src/ui/application-window.vala:364
+#: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
 msgstr ""
 
-#: src/ui/application-window.vala:484
+#: src/ui/application-window.vala:505
 msgid "Rendering…"
 msgstr "يُحوِّل…"
 
-#: src/ui/application-window.vala:524
+#: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
 msgstr "تعذر بدء التسجيل بسبب حدوث خطأ غير متوقع."
 
-#: src/ui/application-window.vala:668 src/ui/application-window.vala:673
+#: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
 msgstr "احفظ الملف"
 
-#: src/ui/application-window.vala:669 src/ui/application-window.vala:676
+#: src/ui/application-window.vala:667 src/ui/application-window.vala:674
 msgid "_Save"
 msgstr "احفظ"
 
-#: src/ui/application-window.vala:670 src/ui/application-window.vala:674
+#: src/ui/application-window.vala:668 src/ui/application-window.vala:672
 msgid "_Cancel"
 msgstr "ألغِ"
 
-#: src/ui/application-window.vala:741
+#: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
 msgstr "لا يمكن حفظ الملف في الموقع المحدد."
 
-#: src/ui/application-window.vala:768
+#: src/ui/application-window.vala:766
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "تم حفظ الملف باسم \"%s\""
 
-#: src/ui/application-window.vala:778
+#. Unity does not allow actions on notifications, so we disable
+#. notification actions there.
+#: src/ui/application-window.vala:776
 msgid "Click here to show the saved file in your file manager."
 msgstr "انقر هنا لإظهار الملف المحفوظ في مدير الملفات."
 
-#: src/ui/application-window.vala:780
+#: src/ui/application-window.vala:778
 msgid "Show in file manager"
 msgstr "اظهر في مدير الملفات"
 
+#. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
 msgstr "معطلة"
 
+#. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
 msgstr "تغيير"
@@ -173,31 +177,46 @@ msgstr "تغيير"
 msgid "Press keys…"
 msgstr "اظغط على تجميعة المفاتيح…"
 
-#: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
+#: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
 msgstr "مسجل صور متحركة"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
-#: ui/about.ui:40
+#: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr "Mohamed Sakhri <mohamed.sakhri@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:162
+#: ui/application-window.ui:33 ui/application-window.ui:171
 msgid "Start recording"
 msgstr "ابدأ التسجيل"
 
-#: ui/application-window.ui:152
-msgid "_Record"
-msgstr "سجِّل"
+#: ui/application-window.ui:54
+#, fuzzy
+msgid "New window"
+msgstr "نافذة جديدة"
 
-#: ui/application-window.ui:178
+#: ui/application-window.ui:79
+#, fuzzy
+msgid "Preferences"
+msgstr "التفضيلات"
+
+#: ui/application-window.ui:93
+#, fuzzy
+msgid "About Peek"
+msgstr "عن البرنامج"
+
+#: ui/application-window.ui:135
 msgid "_Stop"
 msgstr "أوقف"
 
-#: ui/application-window.ui:188
+#: ui/application-window.ui:145
 msgid "Stop recording"
 msgstr "أوقف التسجيل"
+
+#: ui/application-window.ui:161
+msgid "_Record"
+msgstr "سجِّل"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
@@ -214,22 +233,6 @@ msgstr "إغلاق"
 #: ui/error-dialog.ui:107
 msgid "Show details"
 msgstr "إظهار التفاصيل"
-
-#: ui/gtk/menus.ui:7
-msgid "New _window"
-msgstr "نافذة جديدة"
-
-#: ui/gtk/menus.ui:14
-msgid "_Preferences"
-msgstr "التفضيلات"
-
-#: ui/gtk/menus.ui:21
-msgid "_About"
-msgstr "عن البرنامج"
-
-#: ui/gtk/menus.ui:25
-msgid "_Quit"
-msgstr "أغلق"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -427,6 +430,9 @@ msgstr "حجم ومكان آخر نافذة رئيسية مفتوحة"
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "مسار آخر ملف تم حفظه"
+
+#~ msgid "_Quit"
+#~ msgstr "أغلق"
 
 #, fuzzy
 #~ msgid "Show notification after saving"
