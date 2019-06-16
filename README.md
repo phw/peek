@@ -36,6 +36,7 @@ Simple screen recorder with an easy to use interface
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"](#recording-gnome-shell-shows-could-not-start-recording-already-an-active-recording-using-orggnomeshellscreencast)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
@@ -218,13 +219,13 @@ Solus users can simply install with:
 Arch Linux users can simply install with:
 
 	sudo pacman -S peek
-	
+
 For GNOME Shell recording there are some optional packages you can choose from:
-   
+
        gst-plugins-good: Recording under Gnome Shell
        gst-plugins-ugly: MP4 output under Gnome Shell
        gifski: High quality GIF animations with thousands of colors
-       
+
 If you have a package manager for AUR (or fetch from AUR manually) the git version is available [here](https://aur.archlinux.org/packages/peek-git)
 
 
@@ -298,6 +299,22 @@ Peek allows you to record in both WebM and MP4 format, just choose your
 preferred output format in the preferences. Both are well supported by modern
 browsers, even though they are still not as universally supported by tools and
 online services as GIFs.
+
+### Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"
+
+This usually indicates an error while starting the built-in GNOME shell recorder.
+Unfortunately Peek does not receive any error details, to find out more about
+this issues look at the GNOME Shell log output in `journalctl`.
+
+A common cuase for this is that the GNOME Shell recorder is already running,
+either because it was started via the GNOME Shell keyboard shortcut or by
+another application.
+
+If this error is shown when trying to record MP4 a common cause is that you are
+missing the GStreamer ugly plugins, which provide MP4 encoding. Please refer to
+the documentation of your distribution on how to install these.
+
+See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
