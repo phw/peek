@@ -77,7 +77,7 @@ namespace Peek.Ui {
 
     private GLib.Settings settings;
 
-    private const int SMALL_WINDOW_SIZE = 300;
+    private const int SMALL_WINDOW_SIZE = 380;
 
     public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
