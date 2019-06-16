@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2019-04-29 11:46+0000\n"
-"Last-Translator: CurlingTongs <o11577482@nwytg.net>\n"
+"PO-Revision-Date: 2019-06-16 11:46+0000\n"
+"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
 "de/>\n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -200,19 +200,16 @@ msgid "Start recording"
 msgstr "Aufnahme starten"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Neues _Fenster"
+msgstr "Neues Fenster"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Einstellungen"
+msgstr "Einstellungen"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Info"
+msgstr "Info"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
