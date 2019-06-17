@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-12-03 08:15+0000\n"
+"PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/peek/"
 "translations/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.3\n"
+"X-Generator: Weblate 3.7\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -192,19 +192,16 @@ msgid "Start recording"
 msgstr "録画を開始します"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "新しいウィンドウ(_W)"
+msgstr "新しいウィンドウ"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "設定(_P)"
+msgstr "設定"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "このアプリケーションについて(_A)"
+msgstr "このアプリケーションについて"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
