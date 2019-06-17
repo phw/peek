@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-06-29 09:36+0000\n"
+"PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
 "nl/>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1-dev\n"
+"X-Generator: Weblate 3.7\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
-msgstr "Applicatieversie weergeven en afsluiten"
+msgstr "Applicatieversie tonen en afsluiten"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "Selecteer het opname-backend (gnome-shell, ffmpeg)"
+msgstr "Kies het opname-backend (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -139,11 +139,11 @@ msgstr "Animatie opslaan"
 
 #: src/ui/application-window.vala:667 src/ui/application-window.vala:674
 msgid "_Save"
-msgstr "_Opslaan"
+msgstr "Op_slaan"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:672
 msgid "_Cancel"
-msgstr "-Annuleren"
+msgstr "_Annuleren"
 
 #: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
@@ -194,19 +194,16 @@ msgid "Start recording"
 msgstr "Opname starten"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Nieuw _venster"
+msgstr "Nieuw venster"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Voorkeuren"
+msgstr "Voorkeuren"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Over"
+msgstr "Over Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
