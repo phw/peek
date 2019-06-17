@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-04-12 11:06+0000\n"
+"PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.7\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -191,19 +191,16 @@ msgid "Start recording"
 msgstr "Starta inspelning"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Nytt _fönster"
+msgstr "Nytt fönster"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Inställningar"
+msgstr "Inställningar"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Om"
+msgstr "Om Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
@@ -413,7 +410,7 @@ msgstr "Kvalitetsinställningar för GIF-kodaren gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
-msgstr "Faktor för nersampling av upplösningen"
+msgstr "Faktor för nerskalning av upplösningen"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
