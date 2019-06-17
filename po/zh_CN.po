@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-04-17 02:34+0000\n"
+"PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0-dev\n"
+"X-Generator: Weblate 3.7\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -193,19 +193,16 @@ msgid "Start recording"
 msgstr "开始录制"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "新建窗口(_W)"
+msgstr "新建窗口"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "首选项(_P)"
+msgstr "首选项"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "关于(_A)"
+msgstr "关于"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
