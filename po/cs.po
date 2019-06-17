@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-05-13 05:35+0000\n"
+"PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
 "cs/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0-dev\n"
+"X-Generator: Weblate 3.7\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -190,19 +190,16 @@ msgid "Start recording"
 msgstr "Spustit nahrávání"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "_Nové okno"
+msgstr "Nové okno"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Předvolby"
+msgstr "Předvolby"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_O aplikaci"
+msgstr "O aplikaci"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
