@@ -186,11 +186,11 @@ current version). You can install it with `apt`:
     sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
-For Fedora 25 add this repository:
+Peek is available in the default repositories (Fedora 30 and later):
 
-    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_25/home:phiwo:peek.repo
+    sudo dnf install peek
 
-For Fedora 26 and later, add this repository:
+For versions earlier than 30, add this repository:
 
     sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
 
