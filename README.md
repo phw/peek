@@ -90,6 +90,7 @@ Peek is available in official package repositories for the following
 distributions:
 
 - [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
+- [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
@@ -186,15 +187,7 @@ current version). You can install it with `apt`:
     sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
-Peek is available in the default repositories (Fedora 30 and later):
-
-    sudo dnf install peek
-
-For versions earlier than 30, add this repository:
-
-    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
-
-Then install Peek with:
+Peek is available in the default repositories (Fedora 29 and later):
 
     sudo dnf install peek
 
