@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-04-12 16:18+0000\n"
+"PO-Revision-Date: 2019-07-03 19:01+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -192,19 +192,16 @@ msgid "Start recording"
 msgstr "Начать запись"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Новое _окно"
+msgstr "Новое окно"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Настройки"
+msgstr "Настройки"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_О программе"
+msgstr "О программе"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
