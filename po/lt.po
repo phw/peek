@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-04-21 19:02+0000\n"
+"PO-Revision-Date: 2019-07-07 10:01+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/peek/"
 "translations/lt/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 3.0-dev\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -197,19 +197,16 @@ msgid "Start recording"
 msgstr "Pradėti įrašinėjimą"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Naujas _langas"
+msgstr "Naujas langas"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Nuostatos"
+msgstr "Nuostatos"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Apie"
+msgstr "Apie Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
