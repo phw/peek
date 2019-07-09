@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2019-05-09 13:50+0000\n"
-"Last-Translator: Ozan Akman <info@ozanakman.com.tr>\n"
+"PO-Revision-Date: 2019-07-10 11:01+0000\n"
+"Last-Translator: SolmzU <netiztv@ya.ru>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/peek/"
 "translations/tr/>\n"
 "Language: tr\n"
@@ -17,11 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/application.vala:63
+#, fuzzy
 msgid "Show the version of the program and exit"
-msgstr "Program versiyonunu göster ve kapat"
+msgstr "Program sürümünü göster ve kapat"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
