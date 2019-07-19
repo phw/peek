@@ -9,19 +9,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-03-20 08:59+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2019-07-20 14:06+0000\n"
+"Last-Translator: prolinux ukraine <prolinux@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
 "translations/uk/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.20-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -36,23 +36,20 @@ msgid "BACKEND"
 msgstr "ПІСЛЯПРОЦЕСОР"
 
 #: src/application.vala:72
-#, fuzzy
 msgid "Start recording in all running Peek instances"
 msgstr "Розпочати запис в усіх запущених копіях Peek."
 
 #: src/application.vala:76
-#, fuzzy
 msgid "Stop recording in all running Peek instances"
-msgstr "Зупинити запис в усіх запущених копіях Peek."
+msgstr "Зупинити запис в усіх запущених копіях Peek"
 
 #: src/application.vala:80
-#, fuzzy
 msgid "Toggle recording in all running Peek instances"
-msgstr "Перемикнути запис в усіх запущених копіях Peek."
+msgstr "Перемикнути запис в усіх запущених копіях Peek"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Запускати Peek без заголовка"
 
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -89,7 +86,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "Несподівана помилка запису. Запис припинено."
 
 #: src/ui/application-window.vala:233
 #, fuzzy
@@ -98,7 +95,7 @@ msgstr "Візуалізація…"
 
 #: src/ui/application-window.vala:234
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek закриється після обробки."
 
 #: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
@@ -136,7 +133,7 @@ msgstr "Візуалізація…"
 
 #: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "Неможливо почати запис через непередбачувану помилку."
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
