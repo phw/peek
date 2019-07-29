@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-06-16 13:36+0200\n"
-"PO-Revision-Date: 2018-07-28 08:31+0000\n"
-"Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
+"PO-Revision-Date: 2019-08-01 05:11+0000\n"
+"Last-Translator: Alex Gabilondo <alexgabi@disroot.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
 "eu/>\n"
 "Language: eu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -191,19 +191,16 @@ msgid "Start recording"
 msgstr "Hasi grabatzen"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "_Leiho berria"
+msgstr "Leiho berria"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Hobespenak"
+msgstr "Hobespenak"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Honi buruz"
+msgstr "Honi buruz"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
