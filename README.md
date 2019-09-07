@@ -23,17 +23,20 @@ Simple screen recorder with an easy to use interface
   - [Snappy](#snappy)
   - [AppImage](#appimage)
   - [Ubuntu](#ubuntu)
+  - [ElementaryOS](#elementaryos)
   - [Debian](#debian)
   - [Fedora](#fedora)
   - [Solus](#solus)
+  - [Arch Linux](#arch-linux)
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
-  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
+  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-keystrokes)
   - [How can I improve the quality of recorded GIF files](#how-can-i-improve-the-quality-of-recorded-gif-files)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"](#recording-gnome-shell-shows-could-not-start-recording-already-an-active-recording-using-orggnomeshellscreencast)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
@@ -65,7 +68,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ## Requirements
 ### Runtime
 
-- GTK+ >= 3.14
+- GTK+ >= 3.20
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
 - FFmpeg >= 3
@@ -90,6 +93,7 @@ distributions:
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
+- [Solus](https://dev.getsol.us/source/peek/)
 
 ### Flatpak
 Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
@@ -97,7 +101,7 @@ To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
 and open it with GNOME Software or install via command line:
 
-    flatpak install --user https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+    flatpak install flathub com.uploadedlobster.peek
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
@@ -139,13 +143,25 @@ If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
 available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
+### ElementaryOS
+Adding PPA repositories requires the package `software-properties-common`
+
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:peek-developers/stable
+    sudo apt update
+    sudo apt install peek
+
+If you want to use the latest development version there is also a
+[PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
+available. Use the repository `ppa:peek-developers/daily` in the above commands.
+
 ### Debian
 There are official Debian packages for Debian 10 ("Buster") via main repository
 and packages for Debian 9 ("Stretch") via
 [`stretch-backports`](https://packages.debian.org/stretch-backports/peek) repository.
 Please refer to [Debian Backports Website](https://backports.debian.org/)
 for detailed usage of `stretch-backports` repository.
-        
+
 After enabling `stretch-backports` for Debian 9 (Debian 10 or `Sid` doesn't need
 any tweaks at all), installation can be done by simply typing:
 
@@ -170,11 +186,11 @@ current version). You can install it with `apt`:
     sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
-For Fedora 25 add this repository:
+Peek is available in the default repositories (Fedora 30 and later):
 
-    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_25/home:phiwo:peek.repo
+    sudo dnf install peek
 
-For Fedora 26 add this repository:
+For versions earlier than 30, add this repository:
 
     sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
 
@@ -195,10 +211,22 @@ package also available from RPM Fusion free:
     sudo dnf install gstreamer1-plugins-ugly
 
 ### Solus
+Solus users can simply install with:
 
-For Solus users just run:
+	sudo eopkg it peek
 
-	sudo eopkg install peek
+### Arch Linux
+Arch Linux users can simply install with:
+
+	sudo pacman -S peek
+
+For GNOME Shell recording there are some optional packages you can choose from:
+
+       gst-plugins-good: Recording under Gnome Shell
+       gst-plugins-ugly: MP4 output under Gnome Shell
+       gifski: High quality GIF animations with thousands of colors
+
+If you have a package manager for AUR (or fetch from AUR manually) the git version is available [here](https://aur.archlinux.org/packages/peek-git)
 
 
 ### Other distributions
@@ -271,6 +299,22 @@ Peek allows you to record in both WebM and MP4 format, just choose your
 preferred output format in the preferences. Both are well supported by modern
 browsers, even though they are still not as universally supported by tools and
 online services as GIFs.
+
+### Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"
+
+This usually indicates an error while starting the built-in GNOME shell recorder.
+Unfortunately Peek does not receive any error details, to find out more about
+this issues look at the GNOME Shell log output in `journalctl`.
+
+A common cuase for this is that the GNOME Shell recorder is already running,
+either because it was started via the GNOME Shell keyboard shortcut or by
+another application.
+
+If this error is shown when trying to record MP4 a common cause is that you are
+missing the GStreamer ugly plugins, which provide MP4 encoding. Please refer to
+the documentation of your distribution on how to install these.
+
+See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are

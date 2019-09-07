@@ -1,3 +1,21 @@
+# Version 1.4.0 - 2019-0?-??
+- feat: Move app menu into application Window (#391, #438)
+- feat: New application icon following new GNOME icon guidelines (#114, #390)
+- feat: Set window type hint to UTILITY (ensures window gets opened as floating
+  on tiling window managers)
+- feat: Show shortcut hint in main window (#234, #285)
+- feat: Added Recorder, Video and AudioVideo to desktop files categories (#340)
+- fix: Fixed double free error after ffmpeg recording (#419)
+- misc: Raised minimum Gtk version to 3.20
+- i18n: Updated translations for Basque, Chinese (simplified),
+  Chinese (traditional), Czech, Dutch, Esperanto, French, German, Italian,
+  Lithuanian, Norwegian Bokmål, Polish, Portuguese (Brazil),
+  Portuguese (Portugal), Russian, Serbian, Spanish, Swedish
+- i18n: New translations for Japanese and Turkish
+- build: New Meson based build (old CMake build is deprecated and will be
+  removed in release 1.5)
+- build: Autogenerate po/LINGUAS
+
 # Version 1.3.1 - 2018-03-29
 - fix: Use yuv420p for VP9 encoding (#299)
 - fix: Disable animations and transitions on recording view overlays (#208)

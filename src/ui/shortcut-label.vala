@@ -46,9 +46,7 @@ namespace Peek.Ui {
       this.accelerator = accelerator;
 
       halign = Gtk.Align.START;
-      #if HAS_GTK_LABEL_XALIGN
       xalign = 0;
-      #endif
     }
   }
 

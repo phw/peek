@@ -36,7 +36,7 @@ From inside the Peek source folder run:
 #### Build requirements
  - meson (>= 0.37.0)
  - valac (>= 0.22)
- - libgtk-3-dev (>= 3.14)
+ - libgtk-3-dev (>= 3.20)
  - libkeybinder-3.0-dev
  - libxml2-utils
  - gettext (>= 0.19 for localized .desktop entry)
@@ -44,7 +44,7 @@ From inside the Peek source folder run:
  - gzip (optional for building man page)
 
 #### Runtime requirements
- - libgtk-3-0 (>= 3.14)
+ - libgtk-3-0 (>= 3.20)
  - libglib2.0 (>= 2.38)
  - libkeybinder-3.0-0
  - ffmpeg >= 3

@@ -90,12 +90,8 @@ namespace Peek {
 
     public override void startup () {
       base.startup ();
-
       load_stylesheets ();
-
       Environment.set_application_name (_ ("Peek"));
-
-      force_app_menu ();
       register_actions ();
 
 #if HAS_KEYBINDER
@@ -320,54 +316,6 @@ namespace Peek {
       DesktopIntegration.launch_file_manager (file);
     }
 #endif
-
-    /**
-    * Forces the app menu in the decoration layouts so in environments without an app-menu
-    * it will be rendered by GTK as part of the window.
-    *
-    * Applies if:
-    *  - disabled Gtk/ShellShowsAppMenu setting
-    *  - no 'menu' setting in Gtk/DecorationLayout
-    */
-    private void force_app_menu () {
-      var settings = Gtk.Settings.get_default ();
-
-      if (settings == null) {
-          warning ("Could not fetch Gtk default settings");
-          return ;
-      }
-
-      string decoration_layout = settings.gtk_decoration_layout ?? "";
-      debug ("Decoration layout: %s", decoration_layout);
-
-      // Make sure the menu is part of the decoration
-      if (!decoration_layout.contains ("menu")) {
-          string prefix = "menu:";
-          if (decoration_layout.contains (":")) {
-            prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
-          }
-
-          settings.gtk_decoration_layout = prefix + decoration_layout;
-      }
-
-      // Unity specific workaround, force app menu in window when
-      // setting to display menus in titlebar in Unity is active
-      if (DesktopIntegration.is_unity ()) {
-        var schema_source = SettingsSchemaSource.get_default ();
-        SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
-        if (schema != null && schema.has_key ("integrated-menus")) {
-          var unity = new Settings.full (schema, null, null);
-          if (unity.get_boolean ("integrated-menus")) {
-            debug ("Unity with integrated menus");
-            settings.gtk_shell_shows_app_menu = false;
-          } else {
-            debug ("Unity with global menus");
-          }
-        } else {
-          debug ("Could not load schema com.canonical.Unity");
-        }
-      }
-    }
 
     private void show_wayland_warning (Gtk.Window parent) {
       // FIXME: Calling this with "%s", "" avoids C compilation warning.

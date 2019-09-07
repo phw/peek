@@ -19,7 +19,7 @@ appstream_file = i18n.merge_file(
   output: 'com.uploadedlobster.peek.appdata.xml',
   po_dir: '../po',
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'appdata')
+  install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
 appstream_util = find_program('appstream-util', required: false)
@@ -32,12 +32,6 @@ endif
 install_data('com.uploadedlobster.peek.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
-
-if get_option('install-unity-schema')
-  install_data('com.canonical.Unity.gschema.xml',
-    install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
-  )
-endif
 
 compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()

@@ -72,10 +72,4 @@ configure_file (
 
 install(FILES ${CMAKE_BINARY_DIR}/data/com.uploadedlobster.peek.service DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/dbus-1/services)
 
-# Copy build data FILES
-file(
-  COPY com.canonical.Unity.gschema.xml
-  DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/extra/
-)
-
 add_subdirectory(man)

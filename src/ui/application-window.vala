@@ -60,6 +60,9 @@ namespace Peek.Ui {
     [GtkChild]
     private Label shortcut_label;
 
+    [GtkChild]
+    private Popover pop_menu;
+
     private uint start_recording_event_source = 0;
     private uint size_indicator_timeout = 0;
     private uint delay_indicator_timeout = 0;
@@ -75,7 +78,7 @@ namespace Peek.Ui {
 
     private GLib.Settings settings;
 
-    private const int SMALL_WINDOW_SIZE = 300;
+    private const int SMALL_WINDOW_SIZE = 380;
 
     public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
@@ -266,7 +269,7 @@ namespace Peek.Ui {
       return false;
     }
 
-    //set format
+    // Set file format
     private string get_format_name (OutputFormat format) {
       switch (format) {
         case OutputFormat.APNG: return _ ("APNG");
@@ -421,6 +424,24 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_stop_button_clicked (Button source) {
       prepare_stop_recording ();
+    }
+
+    [GtkCallback]
+    private void on_new_window_button_clicked (Button source) {
+      pop_menu.hide ();
+      this.application.activate_action ("new-window", null);
+    }
+
+    [GtkCallback]
+    private void on_preferences_button_clicked (Button source) {
+      pop_menu.hide ();
+      PreferencesDialog.present_single_instance (this);
+    }
+
+    [GtkCallback]
+    private void on_about_button_clicked (Button source) {
+      pop_menu.hide ();
+      AboutDialog.present_single_instance (this);
     }
 
     private void prepare_start_recording () {
@@ -587,21 +608,16 @@ namespace Peek.Ui {
       var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
 
-      //popover menu
+      // Format popover
       if (pop_format.visible) {
-        var pop_style = pop_format.get_style_context ();
-        if (DesktopIntegration.get_theme_name () == "Ambiance") {
-          pop_style.add_class (Gtk.STYLE_CLASS_TITLEBAR);
-        }
         var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
 
-      // The fallback app menu overlaps the recording area
-      var fallback_app_menu = get_fallback_app_menu ();
-      if (fallback_app_menu != null && fallback_app_menu.visible) {
-        var app_menu_region = GtkHelper.create_region_from_widget (fallback_app_menu);
-        window_region.union (app_menu_region);
+      // Menu popover
+      if (pop_menu.visible) {
+        var pop_menu_region = GtkHelper.create_region_from_widget (pop_menu);
+        window_region.union (pop_menu_region);
       }
 
       this.input_shape_combine_region (window_region);
@@ -614,24 +630,6 @@ namespace Peek.Ui {
           this.shape_combine_region (null);
         }
       }
-    }
-
-    private Widget? get_fallback_app_menu () {
-      if (this.application.prefers_app_menu ()) {
-        return null;
-      }
-
-      Widget fallback_app_menu = null;
-
-      this.forall ((child)  => {
-        if (child is Gtk.Popover) {
-          if (child.get_name () == (null)) {
-            fallback_app_menu = child;
-          }
-        }
-      });
-
-      return fallback_app_menu;
     }
 
     private void freeze_window_size () {

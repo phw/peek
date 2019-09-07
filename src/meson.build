@@ -48,7 +48,7 @@ enable_gnome_shell = get_option('enable-gnome-shell')
 enable_open_file_manager = get_option('enable-open-file-manager')
 
 # Dependencies
-gtk = dependency('gtk+-3.0', version: '>= 3.14')
+gtk = dependency('gtk+-3.0', version: '>= 3.20')
 keybinder = dependency('keybinder-3.0', required: false)
 
 peek_deps = [
@@ -67,11 +67,6 @@ if keybinder.found()
 endif
 
 # Feature configuration
-if gtk.version().version_compare('>= 3.16')
-  message('Compiling with features for GTK >= 3.16')
-  vala_args += ['-D', 'HAS_GTK_LABEL_XALIGN']
-endif
-
 if gtk.version().version_compare('>= 3.20')
   message('Compiling with features for GTK >= 3.20')
   if enable_filechoosernative
