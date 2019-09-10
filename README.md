@@ -314,6 +314,8 @@ If this error is shown when trying to record MP4 a common cause is that you are
 missing the [GStreamer ugly](https://gstreamer.freedesktop.org/modules/gst-plugins-ugly.html)
 plugins, which provide MP4 encoding. Please refer to the documentation of your
 distribution on how to install these.
+Do note that you have to logout and login for Peek to recognize the new installed libraries
+if you are running the Wayland display server.
 
 See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
 
