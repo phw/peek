@@ -306,13 +306,14 @@ This usually indicates an error while starting the built-in GNOME shell recorder
 Unfortunately Peek does not receive any error details, to find out more about
 this issues look at the GNOME Shell log output in `journalctl`.
 
-A common cuase for this is that the GNOME Shell recorder is already running,
+A common cause for this is that the GNOME Shell recorder is already running,
 either because it was started via the GNOME Shell keyboard shortcut or by
 another application.
 
 If this error is shown when trying to record MP4 a common cause is that you are
-missing the GStreamer ugly plugins, which provide MP4 encoding. Please refer to
-the documentation of your distribution on how to install these.
+missing the [GStreamer ugly](https://gstreamer.freedesktop.org/modules/gst-plugins-ugly.html)
+plugins, which provide MP4 encoding. Please refer to the documentation of your
+distribution on how to install these.
 
 See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
 
@@ -360,7 +361,7 @@ itself is used to obtain the recording coordinates. That means, for now, there
 cannot be any fully native Wayland support without special support for this
 use case by the compositor.
 
-It is, however, possible to use Peek in a GNOME Shell Wayland session using
+However, it is possible to use Peek in a GNOME Shell Wayland session using
 XWayland by launching Peek with the X11 backend:
 
     GDK_BACKEND=x11 peek
