@@ -1,4 +1,5 @@
 option('build-tests',              type : 'boolean', value : true)
+option('enable-keybinder',         type : 'feature', value : 'auto')
 option('enable-filechoosernative', type : 'boolean', value : false)
 option('enable-gnome-shell',       type : 'boolean', value : true)
 option('enable-open-file-manager', type : 'boolean', value : true)
