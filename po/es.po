@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2018-04-12 10:32+0000\n"
+"PO-Revision-Date: 2019-09-24 09:26+0000\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/peek/"
 "translations/es/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.20\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -197,19 +197,16 @@ msgid "Start recording"
 msgstr "Comenzar a grabar"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "_Ventana nueva"
+msgstr "Ventana nueva"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Preferencias"
+msgstr "Preferencias"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Acerca de"
+msgstr "Acerca de Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
@@ -242,6 +239,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Lea las <a href=\"https://github.com/phw/peek#frequently-asked-questions\">"
+"preguntas frecuentes</a> antes de informar de este problema. Si no encuentra "
+"allí la respuesta a su problema, informe con el mayor detalle posible sobre "
+"lo que estaba haciendo cuando ocurrió."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
