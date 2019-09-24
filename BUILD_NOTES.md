@@ -34,7 +34,7 @@ From inside the Peek source folder run:
 ### Debian package
 
 #### Build requirements
- - meson (>= 0.37.0)
+ - meson (>= 0.47.0)
  - valac (>= 0.22)
  - libgtk-3-dev (>= 3.20)
  - libkeybinder-3.0-dev

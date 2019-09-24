@@ -50,7 +50,7 @@ enable_open_file_manager = get_option('enable-open-file-manager')
 
 # Dependencies
 gtk = dependency('gtk+-3.0', version: '>= 3.20')
-keybinder = dependency('keybinder-3.0', required: false)
+keybinder = dependency('keybinder-3.0', required: get_option('enable-keybinder'))
 
 peek_deps = [
   dependency('cairo'),
