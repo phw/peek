@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.1 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.14"/>
   <object class="GtkTextBuffer" id="error_details"/>
@@ -8,6 +8,9 @@
     <property name="title" translatable="yes">Recording error</property>
     <property name="resizable">False</property>
     <property name="type_hint">dialog</property>
+    <child>
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox">
         <property name="can_focus">False</property>
@@ -78,6 +81,22 @@
               </packing>
             </child>
             <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Please read the &lt;a href="https://github.com/phw/peek#frequently-asked-questions"&gt;FAQs&lt;/a&gt; before reporting this issue. If the FAQs do not answer your issue please report it and provide as much details as possible on what you were doing when the issue occurred.</property>
+                <property name="use_markup">True</property>
+                <property name="wrap">True</property>
+                <property name="max_width_chars">70</property>
+                <property name="xalign">0</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkExpander" id="error_details_container">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -111,7 +130,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
@@ -122,9 +141,6 @@
           </packing>
         </child>
       </object>
-    </child>
-    <child>
-      <placeholder/>
     </child>
   </template>
 </interface>
