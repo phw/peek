@@ -65,8 +65,16 @@ namespace Peek.Recording {
         if (success) {
           stdout.printf ("Recording to file %s\n", temp_file);
         } else {
-          var message = "Could not start recording, already an active recording using org.gnome.Shell.Screencast?";
-          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message);
+          var message = new StringBuilder ();
+          message.append("Could not start GNOME Shell recorder.\n\n");
+          if (config.output_format == OutputFormat.MP4) {
+            message.append("Make sure you have the GStreamer ugly plugins installed for MP4 recording.");
+          } else {
+            message.append("Missing codec or another active screen recording using org.gnome.Shell.Screencast?");
+          }
+
+          message.append("\n\nPlease see the FAQ at https://github.com/phw/peek#what-is-the-cause-for-could-not-start-gnome-shell-recorder-errors");
+          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message.str);
         }
       } catch (DBusError e) {
         throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);

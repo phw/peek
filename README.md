@@ -36,7 +36,7 @@ Simple screen recorder with an easy to use interface
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
-  - [Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"](#recording-gnome-shell-shows-could-not-start-recording-already-an-active-recording-using-orggnomeshellscreencast)
+  - [What is the cause for "Could not start GNOME Shell recorder" errors?](#what-is-the-cause-for-could-not-start-gnome-shell-recorder-errors)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
@@ -300,7 +300,7 @@ preferred output format in the preferences. Both are well supported by modern
 browsers, even though they are still not as universally supported by tools and
 online services as GIFs.
 
-### Recording GNOME Shell shows "Could not start recording, already an active recording using org.gnome.Shell.Screencast?"
+### What is the cause for "Could not start GNOME Shell recorder" errors?
 
 This usually indicates an error while starting the built-in GNOME shell recorder.
 Unfortunately Peek does not receive any error details, to find out more about
