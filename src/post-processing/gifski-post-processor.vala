@@ -29,15 +29,19 @@ namespace Peek.PostProcessing {
         debug ("Running gifski\n    saving to: %s\n    quality: %d\n",
           output_file, config.gifski_quality);
 
-        string[] args = {
-          "gifski",
-          "--fps", config.framerate.to_string (),
-          "--quality", config.gifski_quality.to_string (),
-          "-o", output_file
-        };
-
         var argv = new Array<string> ();
-        argv.append_vals (args, args.length);
+
+        argv.append_val ("gifski");
+
+        argv.append_val ("--fps");
+        argv.append_val (config.framerate.to_string ());
+
+        argv.append_val ("--quality");
+        argv.append_val (config.gifski_quality.to_string ());
+
+        argv.append_val ("-o");
+        argv.append_val (output_file);
+
         foreach (var file in files.data) {
           argv.append_val (file.get_path ());
         }
