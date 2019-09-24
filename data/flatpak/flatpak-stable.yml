@@ -1,6 +1,6 @@
 app-id: com.uploadedlobster.peek
 runtime: org.gnome.Platform
-runtime-version: '3.32'
+runtime-version: '3.34'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -72,8 +72,8 @@ modules:
       - --enable-indev=xcbgrab
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.0.tar.xz
-        sha256: ed945daf40b124e77a685893cc025d086f638bc703183460aff49508edb3a43f
+        url: https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz
+        sha256: cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4
     modules:
       - name: yasm
         cleanup: "*"
@@ -88,7 +88,7 @@ modules:
         sources:
           - type: git
             url: https://git.videolan.org/git/x264.git
-            commit: aaa9aa83a111ed6f1db253d5afa91c5fc844583f
+            commit: 72db437770fd1ce3961f624dd57a8e75ff65ae0b
         cleanup:
           - /bin/x264
 
@@ -102,8 +102,8 @@ modules:
       - arm
     sources:
       - type: archive
-        url: https://github.com/ImageOptim/gifski/archive/0.8.0.tar.gz
-        sha256: f3cab822dd41de17ba4fdc3b8d379b469404573b1a4adcb5f9c9385a7a927760
+        url: https://github.com/ImageOptim/gifski/archive/0.9.1.tar.gz
+        sha256: f39a6e510e825bf4b43aebd1d7fb581d3b59a11bf7521bf6f507d4b0fa684b76
     build-commands:
       - cargo build --release --features=openmp --verbose
       - install -Dm755 target/release/gifski /app/bin/gifski
@@ -117,7 +117,7 @@ modules:
     sources:
       - type: git
         url: ../..
-        branch: 1.3.1
+        branch: 1.4.0
     modules:
       - name: keybinder3
         sources:

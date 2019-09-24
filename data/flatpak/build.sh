@@ -35,7 +35,7 @@ build_for_arch () {
 }
 
 build_for_arch x86_64
-build_for_arch i386
+# build_for_arch i386
 
 echo -e "\e[0;36mCopying flatpakref files\e[0m"
 cp -v *.flatpakref ${LOCAL_REPO}
