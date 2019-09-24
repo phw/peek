@@ -1,11 +1,14 @@
-# Version 1.4.0 - 2019-0?-??
+# Version 1.4.0 - 2019-09-24
 - feat: Move app menu into application Window (#391, #438)
 - feat: New application icon following new GNOME icon guidelines (#114, #390)
 - feat: Set window type hint to UTILITY (ensures window gets opened as floating
   on tiling window managers)
 - feat: Show shortcut hint in main window (#234, #285)
 - feat: Added Recorder, Video and AudioVideo to desktop files categories (#340)
+- feat: Improved the error message shown on GNOME Shell recording issues
+- feat: Provide more details in error reports
 - fix: Fixed double free error after ffmpeg recording (#419)
+- fix: Fixed building with Vala 0.46.1 (#501)
 - misc: Raised minimum Gtk version to 3.20
 - i18n: Updated translations for Basque, Chinese (simplified),
   Chinese (traditional), Czech, Dutch, Esperanto, French, German, Italian,
