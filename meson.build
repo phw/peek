@@ -1,5 +1,5 @@
 project('peek', ['c', 'vala'],
-  version: '1.3.1',
+  version: '1.4.0',
   meson_version: '>= 0.37.0',
 )
 

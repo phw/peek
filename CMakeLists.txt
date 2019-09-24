@@ -2,8 +2,8 @@ project("peek" C)
 cmake_minimum_required(VERSION 2.6)
 
 set (PEEK_VERSION_MAJOR 1)
-set (PEEK_VERSION_MINOR 3)
-set (PEEK_VERSION_PATCH 1)
+set (PEEK_VERSION_MINOR 4)
+set (PEEK_VERSION_PATCH 0)
 
 # Get full Peek version
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/.git)
