@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-12 11:25+0200\n"
+"POT-Creation-Date: 2019-09-24 09:26+0200\n"
 "PO-Revision-Date: 2019-06-16 11:44+0000\n"
 "Last-Translator: Clément Fournier <clement.fournier76@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
@@ -138,7 +138,8 @@ msgstr "Rendu…"
 
 #: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
-msgstr "L'enregistrement n'a pas pu démarrer en raison d'une erreur inattendue."
+msgstr ""
+"L'enregistrement n'a pas pu démarrer en raison d'une erreur inattendue."
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
@@ -235,15 +236,23 @@ msgstr "_Enregistrer"
 msgid "Recording error"
 msgstr "Erreur lors de l'enregistrement"
 
-#: ui/error-dialog.ui:25
+#: ui/error-dialog.ui:28
 msgid "Report issue"
 msgstr "Signaler un problème"
 
-#: ui/error-dialog.ui:39
+#: ui/error-dialog.ui:42
 msgid "Close"
 msgstr "Quitter"
 
-#: ui/error-dialog.ui:107
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+
+#: ui/error-dialog.ui:126
 msgid "Show details"
 msgstr "Afficher les détails"
 

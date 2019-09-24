@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-16 13:36+0200\n"
+"POT-Creation-Date: 2019-09-24 09:26+0200\n"
 "PO-Revision-Date: 2019-01-15 05:21+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -219,15 +219,23 @@ msgstr "錄影"
 msgid "Recording error"
 msgstr "錄影錯誤"
 
-#: ui/error-dialog.ui:25
+#: ui/error-dialog.ui:28
 msgid "Report issue"
 msgstr "報告問題"
 
-#: ui/error-dialog.ui:39
+#: ui/error-dialog.ui:42
 msgid "Close"
 msgstr "關閉"
 
-#: ui/error-dialog.ui:107
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+
+#: ui/error-dialog.ui:126
 msgid "Show details"
 msgstr "顯示細節"
 

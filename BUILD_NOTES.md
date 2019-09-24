@@ -25,8 +25,8 @@ From inside the Peek source folder run:
 
 ### Update translations
 
-    make update-po
-    make peek.pot-update
+    ninja peek-update-po
+    ninja peek-pot
 
 
 ## Packaging

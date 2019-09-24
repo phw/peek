@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2019-06-16 13:36+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-24 09:26+0200\n"
 "PO-Revision-Date: 2019-06-16 11:46+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
@@ -227,15 +227,23 @@ msgstr "_Aufnehmen"
 msgid "Recording error"
 msgstr "Aufnahmefehler"
 
-#: ui/error-dialog.ui:25
+#: ui/error-dialog.ui:28
 msgid "Report issue"
 msgstr "Fehler melden"
 
-#: ui/error-dialog.ui:39
+#: ui/error-dialog.ui:42
 msgid "Close"
 msgstr "Schließen"
 
-#: ui/error-dialog.ui:107
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+
+#: ui/error-dialog.ui:126
 msgid "Show details"
 msgstr "Details anzeigen"
 

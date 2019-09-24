@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2019-06-16 13:36+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-24 09:26+0200\n"
 "PO-Revision-Date: 2019-06-18 20:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/peek/"
@@ -220,15 +220,23 @@ msgstr "_Ta opp"
 msgid "Recording error"
 msgstr "Opptaksfeil"
 
-#: ui/error-dialog.ui:25
+#: ui/error-dialog.ui:28
 msgid "Report issue"
 msgstr "Rapporter problem"
 
-#: ui/error-dialog.ui:39
+#: ui/error-dialog.ui:42
 msgid "Close"
 msgstr "Lukk"
 
-#: ui/error-dialog.ui:107
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+
+#: ui/error-dialog.ui:126
 msgid "Show details"
 msgstr "Vis detaljer"
 
