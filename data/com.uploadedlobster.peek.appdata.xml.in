@@ -5,9 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Peek</name>
-  <summary>
-    Simple screen recorder with an easy to use interface
-  </summary>
+  <summary>Simple screen recorder with an easy to use interface</summary>
 
   <description>
     <p>
