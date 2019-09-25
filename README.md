@@ -92,6 +92,7 @@ distributions:
 - [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
 - [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
+- [NixOS](https://nixos.org/nixos/packages.html?channel=nixos-unstable&query=%5Epeek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 - [Solus](https://dev.getsol.us/source/peek/)
@@ -269,7 +270,7 @@ GIF files. For best results:
   cases you can even get good results with lower framerates.
 - If you have [gifski](https://gif.ski/) installed you can adjust the GIF
   quality in the preferences. A lower quality gives a smaller file size at the
-  expense of visual quality (see above).  
+  expense of visual quality (see above).
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
 - Record small areas or use the downsample option to scale the image. The GIF
@@ -315,7 +316,7 @@ See also issue [#287](https://github.com/phw/peek/issues/287) for related discus
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
 recording. If you use i3 you should stack Peek with the window you intend to record
-or make sure all windows are floating and uncheck "Always on top" from the Peek settings.  
+or make sure all windows are floating and uncheck "Always on top" from the Peek settings.
 If you want to be able to control the area when recording in i3 you can move Peek
 to the Scratchpad it will keep recording the area once you hide the window.
 If this does not work for you on any other window manager please open an [issue on GitHub](https://github.com/phw/peek/issues).
