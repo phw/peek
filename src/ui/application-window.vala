@@ -107,6 +107,12 @@ namespace Peek.Ui {
             _ ("An unexpected error occurred during recording. Recording was aborted."),
             reason);
         } else {
+        
+         if (DesktopIntegration.is_plasma () ) {
+            headerbar.set_custom_title (null);
+            headerbar.set_title ("Peek");
+         }
+         
           stderr.printf ("Recording canceled\n");
         }
 
