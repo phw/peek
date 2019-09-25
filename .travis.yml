@@ -1,6 +1,5 @@
-sudo: false
 language: c
-dist: trusty
+dist: bionic
 
 services:
   - docker
