@@ -6,19 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/peek/"
+"translations/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "Näytä ohjelman versio ja poistu"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
@@ -47,7 +50,7 @@ msgstr ""
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
-msgstr ""
+msgstr "Peek"
 
 #: src/application.vala:244
 msgid "Unable to create default screen recorder.\n"
@@ -56,11 +59,11 @@ msgstr ""
 #: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Taustaosan %s alustaminen epäonnistui.\n"
 
 #: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Natiivi Wayland-taustaosa ei ole tuettu"
 
 #: src/application.vala:328
 msgid ""
@@ -86,22 +89,22 @@ msgstr ""
 #: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
 msgid "APNG"
-msgstr ""
+msgstr "APNG"
 
 #: src/ui/application-window.vala:271 ui/application-window.ui:326
 #: ui/preferences.ui:223
 msgid "GIF"
-msgstr ""
+msgstr "GIF"
 
 #: src/ui/application-window.vala:272 ui/application-window.ui:377
 #: ui/preferences.ui:226
 msgid "MP4"
-msgstr ""
+msgstr "MP4"
 
 #: src/ui/application-window.vala:273 ui/application-window.ui:360
 #: ui/preferences.ui:225
 msgid "WebM"
-msgstr ""
+msgstr "WebM"
 
 #: src/ui/application-window.vala:285
 #, c-format
@@ -111,7 +114,7 @@ msgstr ""
 #: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Käynnistä/pysäytä: %s"
 
 #: src/ui/application-window.vala:505
 msgid "Rendering…"
@@ -123,19 +126,19 @@ msgstr ""
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
-msgstr ""
+msgstr "Tallenna animaatio"
 
 #: src/ui/application-window.vala:667 src/ui/application-window.vala:674
 msgid "_Save"
-msgstr ""
+msgstr "_Tallenna"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:672
 msgid "_Cancel"
-msgstr ""
+msgstr "_Peru"
 
 #: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Tiedostoa ei voitu tallentaa valittuun sijaintiin."
 
 #: src/ui/application-window.vala:766
 #, c-format
@@ -146,11 +149,11 @@ msgstr ""
 #. notification actions there.
 #: src/ui/application-window.vala:776
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
+msgstr "Napsauta tästä nähdäksesi tallennetun tiedoston tiedostonhallinnassa."
 
 #: src/ui/application-window.vala:778
 msgid "Show in file manager"
-msgstr ""
+msgstr "Näytä tiedostonhallinnassa"
 
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
@@ -160,11 +163,11 @@ msgstr ""
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
-msgstr ""
+msgstr "Vaihda"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr ""
+msgstr "Paina näppäimiä…"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -174,47 +177,47 @@ msgstr ""
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Jiri Grönroos"
 
 #: ui/application-window.ui:33 ui/application-window.ui:171
 msgid "Start recording"
-msgstr ""
+msgstr "Käynnistä nauhoittaminen"
 
 #: ui/application-window.ui:54
 msgid "New window"
-msgstr ""
+msgstr "Uusi ikkuna"
 
 #: ui/application-window.ui:79
 msgid "Preferences"
-msgstr ""
+msgstr "Asetukset"
 
 #: ui/application-window.ui:93
 msgid "About Peek"
-msgstr ""
+msgstr "Tietoja - Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
-msgstr ""
+msgstr "_Pysäytä"
 
 #: ui/application-window.ui:145
 msgid "Stop recording"
-msgstr ""
+msgstr "Pysäytä nauhoittaminen"
 
 #: ui/application-window.ui:161
 msgid "_Record"
-msgstr ""
+msgstr "_Nauhoita"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
-msgstr ""
+msgstr "Nauhoitusvirhe"
 
 #: ui/error-dialog.ui:28
 msgid "Report issue"
-msgstr ""
+msgstr "Ilmoita ongelmasta"
 
 #: ui/error-dialog.ui:42
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: ui/error-dialog.ui:87
 msgid ""
@@ -226,43 +229,43 @@ msgstr ""
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
-msgstr ""
+msgstr "Näytä tiedot"
 
 #: ui/preferences.ui:77
 msgid "User interface"
-msgstr ""
+msgstr "Käyttöliittymä"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "Avaa tiedostonhallinta tallentamisen jälkeen"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Näytä työpöytäilmoitus tallentamisen jälkeen"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr ""
+msgstr "Käynnistä/pysäytä nauhoittaminen"
 
 #: ui/preferences.ui:185
 msgid "Recording"
-msgstr ""
+msgstr "Nauhoittaminen"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr ""
+msgstr "Muoto"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Käytä gifski:tä korkealaatuisia GIF-tiedostoja varten"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF-laatu"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr ""
+msgstr "Kuvanopeus"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
@@ -270,19 +273,19 @@ msgstr ""
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "Viive sekunneissa ennen nauhoittamisen aloittamista"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Nauhoita hiiren osoitin"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
-msgstr ""
+msgstr "Peekin asetukset"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr ""
+msgstr "Nauhoita lyhyitä GIF-animaatioita näytöltäsi"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -290,11 +293,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Yksinkertainen näyttönauhoitin helppokäyttöisellä käyttöliittymällä"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -308,19 +311,19 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Ominaisuudet:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Valitse nauhoitettava alue näytöltä"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Tallenna nauhoitettu video optimoituna GIF-animaationa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Nauhoita suoraan WebM- tai MP4-muotoihin"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
@@ -332,11 +335,11 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Tuki HiDPI-näytöille"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Toimii Gnome Shell Wayland -istunnossa (käyttäen XWaylandia)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -352,15 +355,15 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 msgid "Peek's preferences dialog"
-msgstr ""
+msgstr "Peekin asetusikkuna"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek nauhoittaa itseään"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
@@ -380,7 +383,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "Suosi tummaa teemaa"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
@@ -400,7 +403,7 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Nauhoitetaanko hiiren osoitin"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
@@ -408,4 +411,4 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "Polku mihin viimeisin video tallennettiin"
