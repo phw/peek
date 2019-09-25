@@ -287,16 +287,18 @@ namespace Peek.Ui {
     }
 
     private void update_time () {
-      headerbar.set_title (Utils.format_time (0));
+      var title = new Gtk.Label (Utils.format_time (0));
+      title.show ();
+      headerbar.set_custom_title (title);
       time_indicator_timeout = Timeout.add_full (GLib.Priority.LOW, 500, () => {
         if (is_recording && !this.is_postprocessing) {
           var seconds = recorder.elapsed_seconds;
-          headerbar.set_title (Utils.format_time (seconds));
+          title.label = Utils.format_time (seconds);
           return true;
         }
 
         time_indicator_timeout = 0;
-        headerbar.set_title ("");
+        headerbar.set_custom_title (null);
         return false;
       });
     }
