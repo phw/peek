@@ -297,6 +297,12 @@ namespace Peek.Ui {
 
         time_indicator_timeout = 0;
         headerbar.set_title ("");
+         
+        if (DesktopIntegration.is_plasma () ) {
+          headerbar.set_custom_title (null);
+          headerbar.set_title ("Peek");
+        }
+        
         return false;
       });
     }
