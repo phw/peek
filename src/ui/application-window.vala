@@ -181,9 +181,10 @@ namespace Peek.Ui {
         SettingsBindFlags.DEFAULT);
 
       // Configure window
-      if (DesktopIntegration.is_plasma () ) {
-        type_hint =NORMAL;
+      if (DesktopIntegration.is_tiling  () ){
+        this.type_hint= UTILITY;
       }
+
       this.set_keep_above (true);
       this.load_geometry ();
       this.on_window_screen_changed (null);
