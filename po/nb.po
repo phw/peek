@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"PO-Revision-Date: 2019-10-01 00:56+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/peek/"
 "translations/nb_NO/>\n"
@@ -200,9 +200,8 @@ msgid "Preferences"
 msgstr "Alternativer"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Om"
+msgstr "Om Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
