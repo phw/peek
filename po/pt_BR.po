@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2019-04-23 18:48+0000\n"
-"Last-Translator: Rui Mendes <xz9@protonmail.com>\n"
+"PO-Revision-Date: 2019-10-09 04:58+0000\n"
+"Last-Translator: Bruno P. Kinoshita <brunodepaulak@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -84,8 +84,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
-"Ocorreu um erro inesperado durante a gravação. A gravação foi cancelada."
+msgstr "Um erro inexperado ocorreu durante a gravação. A gravação foi abortada."
 
 #: src/ui/application-window.vala:233
 msgid "Rendering animation…"
@@ -198,19 +197,16 @@ msgid "Start recording"
 msgstr "Iniciar gravação"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Nova _janela"
+msgstr "Nova  janela"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Preferências"
+msgstr "Preferências"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "Sobr_e"
+msgstr "Sobre o Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
@@ -243,6 +239,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Por favor leia a <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">lista de perguntas frequentes</a> antes de postar o seu "
+"problema. Se a sua pergunta não estiver na lista, inclua uma descrição "
+"detalhada sobre o que você estava fazendo quando o problema ocorreu."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
