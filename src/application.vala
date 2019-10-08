@@ -264,7 +264,7 @@ namespace Peek {
     }
 
     private void set_window_size () {
-      
+      SetWindowSizeDialog.present_single_instance(main_window);
     }
 
     private void show_window (ScreenRecorder recorder) {
