@@ -174,6 +174,10 @@ namespace Peek {
       action.activate.connect (new_window_with_backend);
       add_action (action);
 
+      action = new SimpleAction ("set-window-size", null);
+      action.activate.connect (set_window_size);
+      add_action (action);
+
       action = new SimpleAction ("preferences", null);
       action.activate.connect (show_preferences);
       add_action (action);
@@ -257,6 +261,10 @@ namespace Peek {
         stderr.printf (_ ("Unable to initialize backend %s.\n"), backend_name);
         stderr.printf (e.message);
       }
+    }
+
+    private void set_window_size () {
+      
     }
 
     private void show_window (ScreenRecorder recorder) {

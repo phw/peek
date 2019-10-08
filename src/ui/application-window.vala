@@ -430,6 +430,12 @@ namespace Peek.Ui {
     }
 
     [GtkCallback]
+    private void on_set_window_size_button_clicked (Button source) {
+      pop_menu.hide ();
+      this.application.activate_action ("set-window-size", null);
+    }
+
+    [GtkCallback]
     private void on_preferences_button_clicked (Button source) {
       pop_menu.hide ();
       PreferencesDialog.present_single_instance (this);
