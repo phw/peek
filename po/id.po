@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2017-04-29 08:59+0000\n"
-"Last-Translator: Mohamad Hasan Al Banna <se7entime@protonmail.com>\n"
+"PO-Revision-Date: 2019-10-12 10:52+0000\n"
+"Last-Translator: Muhammad Fauzi <fauzi.padlaw@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/peek/"
 "translations/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.14-dev\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -25,27 +25,27 @@ msgstr "Tampilkan versi program dan keluar"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Pilih perekam backend (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr ""
+msgstr "BACKEND"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr ""
+msgstr "Mulai merekam dalam semua instance Peek yang berjalan"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr ""
+msgstr "Berhenti merekam semua instance Peek yang berjalan"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr ""
+msgstr "Beralih merekam semua instance Peek yang berjalan"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Jalankan Peek tanpa header bar"
 
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -54,16 +54,16 @@ msgstr "Peek"
 
 #: src/application.vala:244
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Tidak bisa membuat perekam layar default.\n"
 
 #: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Tidak bisa menginisialisasikan backend %s.\n"
 
 #: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Backend Native Wayland tidak didukung"
 
 #: src/application.vala:328
 msgid ""
@@ -73,10 +73,18 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Anda sedang menjalankan Peek bawaan pada Wayland, ini tidak didukung lagi "
+"sekarang. Silakan jalankan Peek menggunakan XWayland dengan pengaturan "
+"<tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"Untuk lebih lengkap lihat <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ tentang dukungan Wayland</a> Peek."
 
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
+"Sebuah galat yang tidak diharapkan muncul selama merekam. Perekaman "
+"dibatalkan."
 
 #: src/ui/application-window.vala:233
 #, fuzzy
@@ -85,7 +93,7 @@ msgstr "Membuat…"
 
 #: src/ui/application-window.vala:234
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek akan tertutup ketika proses pembuatan selesai."
 
 #: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
@@ -115,7 +123,7 @@ msgstr "_Rekam"
 #: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Mulai/Berhenti: %s"
 
 #: src/ui/application-window.vala:505
 msgid "Rendering…"
@@ -124,6 +132,7 @@ msgstr "Membuat…"
 #: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
 msgstr ""
+"Perekaman tidak bisa dimulai dikarenakan sebuah galat yang tidak diharapkan."
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
@@ -139,7 +148,7 @@ msgstr "_Batal"
 
 #: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Berkas tidak bisa disimpan ke lokasi terpilih."
 
 #: src/ui/application-window.vala:766
 #, c-format
@@ -159,16 +168,16 @@ msgstr "Tampilkan dimanajer berkas"
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr ""
+msgstr "dinonaktifkan"
 
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
-msgstr ""
+msgstr "Rubah"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr ""
+msgstr "Tekan tombol…"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -185,19 +194,16 @@ msgid "Start recording"
 msgstr "Mulai perekaman"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Jendela _Baru"
+msgstr "Jendela baru"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Preferensi"
+msgstr "Preferensi"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_Tentang"
+msgstr "Tentang"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
@@ -212,17 +218,16 @@ msgid "_Record"
 msgstr "_Rekam"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Merekam"
+msgstr "Galat merekam"
 
 #: ui/error-dialog.ui:28
 msgid "Report issue"
-msgstr ""
+msgstr "Laporkan masalah"
 
 #: ui/error-dialog.ui:42
 msgid "Close"
-msgstr ""
+msgstr "Tutup"
 
 #: ui/error-dialog.ui:87
 msgid ""
@@ -231,10 +236,14 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Silakan baca <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> sebelum melaporkan masalah ini. Jika FAQs tidak "
+"mengatasi masalah Anda, silakan laporkan dan sertakan serinci mungkin apa "
+"yang sedang Anda lakukan ketika masalah muncul."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
-msgstr ""
+msgstr "Tampilkan rincian"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -246,12 +255,11 @@ msgstr "Buka manajer berkas setelah disimpan"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Tampilkan notifikasi desktop setelah penyimpanan"
 
 #: ui/preferences.ui:131
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Mulai perekaman"
+msgstr "Mulai/Hentikan perekaman"
 
 #: ui/preferences.ui:185
 msgid "Recording"
@@ -259,15 +267,15 @@ msgstr "Merekam"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr ""
+msgstr "Format keluaran"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Gunakan gifski untuk GIF berkualitas tinggi"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "Kualitas GIF"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
@@ -283,7 +291,7 @@ msgstr "Jeda beberapa detik sebelum memulai perekaman"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Tangkap kursor tetikus"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
@@ -303,7 +311,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Perekam layar sederhana dengan antarmuka yang mudah digunakan"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -317,19 +325,19 @@ msgstr ""
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Fitur-fitur:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Pilih area layar untuk direkam"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Simpan video terekam sebagai sebuah animasi GIF yang teroptimasi"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Rekam langsung menjadi format WebM or MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
