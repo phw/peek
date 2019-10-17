@@ -107,7 +107,7 @@ and open it with GNOME Software or install via command line:
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
-It is available for most current distributions. Once installed you can run Peek
+It is available for most current distributions. Once installed, you can run Peek
 via its application icon in your desktop environment or from the command line:
 
     flatpak run com.uploadedlobster.peek
