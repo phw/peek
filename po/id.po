@@ -2,7 +2,7 @@
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# WellArt
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
@@ -322,6 +322,13 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek membuatnya mudah untuk membuat layar pendek dari area layar. Itu tadi"
+"dibuat untuk kasus penggunaan khusus area layar perekaman, mis. untuk mudah"
+"Menampilkan fitur UI aplikasi Anda sendiri atau untuk menampilkan bug dalam laporan bug."
+"Dengan Peek kamu cukup letakkan jendela Peek di atas area yang ingin kamu rekam"
+"dan tekan \"Rekam\". Peek dioptimalkan untuk menghasilkan animasi GIF, tetapi"
+"Anda juga dapat langsung merekam ke WebM atau MP4 jika Anda mau."
+
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
@@ -341,19 +348,19 @@ msgstr "Rekam langsung menjadi format WebM or MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Antarmuka pengguna sederhana yang dioptimalkan untuk tugas"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Automatis menurunkan skala rekaman video"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Dukungan untuk layar HiDPI"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Bekerja di dalam sesi GNOME Shell Wayland (menggunakan XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -362,10 +369,14 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek bukan aplikasi screencast yang umum dengan fitur yang diperluas tetapi"
+"Agak fokus pada satu tugas untuk menciptakan screencasts kecil dan sunyi"
+"area layar untuk membuat animasi GIF atau WebM atau MP4"
+"video."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Jendela utama untuk memilih area perekaman"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
 #, fuzzy
@@ -374,7 +385,7 @@ msgstr "Preferensi Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek sedang merekam sendiri"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
@@ -408,15 +419,15 @@ msgstr "Pilih tema gelap"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Pengaturan tombol global untuk mengatur rekaman"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
-msgstr ""
+msgstr "Format berkas yang dihasilkan"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Pengaturan kualitas untuk encoder GIF gifski"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
@@ -424,7 +435,7 @@ msgstr "Faktor resolusi downsampling"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Apakah akan merekam kursor mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
