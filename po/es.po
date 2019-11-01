@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2019-09-24 09:26+0000\n"
-"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"PO-Revision-Date: 2019-11-02 18:03+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/peek/"
 "translations/es/>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -28,11 +28,11 @@ msgstr "Mostrar la versión del programa y salir"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "Seleccionar el soporte para grabar (gnome-shell, ffmpeg)"
+msgstr "Seleccione el motor de grabación (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr "SOPORTE"
+msgstr "MOTOR"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
@@ -62,11 +62,11 @@ msgstr "No se puede crear el grabador de pantalla predeterminado.\n"
 #: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr "No se puede inicializar el soporte %s.\n"
+msgstr "No se puede inicializar el motor %s.\n"
 
 #: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
-msgstr "El soporte nativo de Wayland no está soportado"
+msgstr "No se admite el motor nativo de Wayland"
 
 #: src/application.vala:328
 msgid ""
@@ -76,12 +76,13 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Está ejecutando Peek de manera nativa en Wayland, esto no está soportado "
-"actualmente. Comience Peek usando XWayland estableciendo "
+"Está ejecutando Peek de manera nativa bajo Wayland; por el momento no se "
+"admite esta combinación. Inicie Peek con XWayland estableciendo "
 "<tt>GDK_BACKEND=x11</tt>.\n"
 "\n"
-"Vea para más detalles las <a href='https://github.com/phw/peek#why-no-native-"
-"wayland-support'>preguntas frecuentes sobre el soporte a Wayland</a> de Peek."
+"Para obtener más detalles, consulte las <a href='https://github.com/phw/peek"
+"#why-no-native-wayland-support'>preguntas frecuentes sobre la compatibilidad "
+"con Wayland</a> de Peek."
 
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -124,7 +125,7 @@ msgstr "Grabar como %s"
 #: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
-msgstr "Iniciar / Parar: %s"
+msgstr "Iniciar/parar: %s"
 
 #: src/ui/application-window.vala:505
 msgid "Rendering…"
@@ -262,7 +263,7 @@ msgstr "Mostrar notificación de escritorio después de guardar"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr "Iniciar / detener la grabación"
+msgstr "Iniciar/parar la grabación"
 
 #: ui/preferences.ui:185
 msgid "Recording"
@@ -274,11 +275,11 @@ msgstr "Formato de salida"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Usar gifski para GIFs de alta calidad"
+msgstr "Utilizar gifski para GIF de alta calidad"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr "Calidad del GIF"
+msgstr "Calidad de GIF"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
@@ -359,13 +360,12 @@ msgstr "Reducir automáticamente la escala de los vídeos grabados"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr "Soporte para pantallas HiDPI"
+msgstr "Compatibilidad con pantallas HiDPI"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr ""
-"Funciona dentro de una sesión de Wayland en el intérprete de GNOME (usando "
-"XWayland)"
+"Funciona dentro de una sesión de GNOME Shell en Wayland (mediante XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
