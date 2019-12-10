@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"PO-Revision-Date: 2019-12-11 16:45+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
 "cs/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -267,7 +267,7 @@ msgstr "Výstupní formát"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Použijte „gifski“ pro vysoce kvalitní GIF"
+msgstr "Použít „gifski“ pro vysoce kvalitní GIF"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
