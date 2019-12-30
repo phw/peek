@@ -6,19 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2017-02-24 10:41+0000\n"
-"Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
+"PO-Revision-Date: 2019-12-31 13:21+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
 "translations/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.12-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.10\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -26,27 +26,27 @@ msgstr "Prikaži verziju programa i izađi"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Odaberi pozadinski program za snimanje (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr ""
+msgstr "POZADINSKI_PROGRAM"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr ""
+msgstr "Pokreni snimanje u svim pokrenutim Peek instancama"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr ""
+msgstr "Zaustavi snimanje u svim pokrenutim Peek instancama"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr ""
+msgstr "Pokreni ili zaustavi snimanje u svim pokrenutim Peek instancama"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "Pokreni Peek bez trake zaglavlja"
 
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -55,16 +55,16 @@ msgstr "Peek"
 
 #: src/application.vala:244
 msgid "Unable to create default screen recorder.\n"
-msgstr ""
+msgstr "Nije moguće stvoriti standardnog snimača ekrana.\n"
 
 #: src/application.vala:257
 #, c-format
 msgid "Unable to initialize backend %s.\n"
-msgstr ""
+msgstr "Nije moguće pokrenuti pozadinski program %s.\n"
 
 #: src/application.vala:326
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "Izvorni pozadinski program Wayland nije podržan"
 
 #: src/application.vala:328
 msgid ""
@@ -74,19 +74,23 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"Pokrećeš Peek izvorno na Waylandu, to trenutačno nije podržano. Pokreni Peek "
+"pomoću XWaylanda postavljanjem <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"Za detalje pogledaj Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>često posavljena pitanja o podršci za Wayland</a>."
 
 #: src/ui/application-window.vala:107
 msgid "An unexpected error occurred during recording. Recording was aborted."
-msgstr ""
+msgstr "Dogodila se neočekivana greška tijekom snimanja. Snimanje je prekinuto."
 
 #: src/ui/application-window.vala:233
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Podešavanje…"
+msgstr "Iscrtavanje animacije …"
 
 #: src/ui/application-window.vala:234
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek će se zatvoriti kad iscrtavanje završi."
 
 #: src/ui/application-window.vala:270 ui/application-window.ui:343
 #: ui/preferences.ui:224
@@ -109,30 +113,30 @@ msgid "WebM"
 msgstr "WebM"
 
 #: src/ui/application-window.vala:285
-#, fuzzy, c-format
+#, c-format
 msgid "Record as %s"
-msgstr "_Snimi"
+msgstr "Snimi kao %s"
 
 #: src/ui/application-window.vala:367
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Pokreni/Zaustavi: %s"
 
 #: src/ui/application-window.vala:505
 msgid "Rendering…"
-msgstr "Podešavanje…"
+msgstr "Iscrtavanje …"
 
 #: src/ui/application-window.vala:545
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "Nije bilo moguće pokrenuti snimanje zbog neočekivane greške."
 
 #: src/ui/application-window.vala:666 src/ui/application-window.vala:671
 msgid "Save animation"
-msgstr "Pohrani animaciju"
+msgstr "Spremi animaciju"
 
 #: src/ui/application-window.vala:667 src/ui/application-window.vala:674
 msgid "_Save"
-msgstr "_Pohrani"
+msgstr "_Spremi"
 
 #: src/ui/application-window.vala:668 src/ui/application-window.vala:672
 msgid "_Cancel"
@@ -140,7 +144,7 @@ msgstr "_Prekini"
 
 #: src/ui/application-window.vala:739
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Nije bilo moguće spremiti datoteku na odabrano mjesto."
 
 #: src/ui/application-window.vala:766
 #, c-format
@@ -160,16 +164,16 @@ msgstr "Prikaži u upravitelju datoteka"
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr ""
+msgstr "deaktivirano"
 
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
-msgstr ""
+msgstr "Promijeni"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr ""
+msgstr "Pritisni tipke …"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -179,26 +183,25 @@ msgstr "Snimač GIF animacija"
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "cromat"
+msgstr ""
+"cromat\n"
+"Milo Ivir <mail@milotype.de>, 2019."
 
 #: ui/application-window.ui:33 ui/application-window.ui:171
 msgid "Start recording"
 msgstr "Pokreni snimanje"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Novi_prozor"
+msgstr "Novi prozor"
 
 #: ui/application-window.ui:79
-#, fuzzy
 msgid "Preferences"
-msgstr "_Postavke"
+msgstr "Postavke"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "About Peek"
-msgstr "_O programu"
+msgstr "O programu Peek"
 
 #: ui/application-window.ui:135
 msgid "_Stop"
@@ -213,17 +216,16 @@ msgid "_Record"
 msgstr "_Snimi"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Snimanje"
+msgstr "Greška u snimanju"
 
 #: ui/error-dialog.ui:28
 msgid "Report issue"
-msgstr ""
+msgstr "Prijavi problem"
 
 #: ui/error-dialog.ui:42
 msgid "Close"
-msgstr ""
+msgstr "Zatvori"
 
 #: ui/error-dialog.ui:87
 msgid ""
@@ -232,10 +234,14 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Prije prijavljivanja ovog problema pročitaj <a href=\"https://github.com/phw/"
+"peek#frequently-asked-questions\"> često postavljena pitanja</a>. Ako tamo "
+"ne nađeš odgovor za tvoj problem, prijavi ga i navedi što više detalja o "
+"tvojim radnjama kad je došlo do problema."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
-msgstr ""
+msgstr "Prikaži detalje"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -247,12 +253,11 @@ msgstr "Otvori upravitelj datoteka nakon pohrane"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Prikaži upozorenja nakon spremanja"
 
 #: ui/preferences.ui:131
-#, fuzzy
 msgid "Start / stop recording"
-msgstr "Pokreni snimanje"
+msgstr "Pokreni/Zaustavi snimanje"
 
 #: ui/preferences.ui:185
 msgid "Recording"
@@ -260,19 +265,19 @@ msgstr "Snimanje"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr ""
+msgstr "Izlazni format"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "Koristi gifski za visoku kvalitetu GIF-ova"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "GIF kvaliteta"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Brzina slike"
+msgstr "Broj slika po kadru"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
@@ -284,7 +289,7 @@ msgstr "Odgoda u sekundama prije početka snimanja"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "Uključi kursor miša u snimku"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
@@ -292,11 +297,11 @@ msgstr "Peek postavke"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "Snimi kratku GIF animaciju slika s pozadine"
+msgstr "Snimi kratke GIF animacije s ekrana"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "prezentacija ekrana;snimanje ekrana;GIF;WebM;APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -304,7 +309,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "Program za snimanje ekrana s jednostavnim sučeljem"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:13
 msgid ""
@@ -315,38 +320,45 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek olakšava stvaranje kratkih videa za područja ekrana. Izgrađen je baš za "
+"snimanje područja ekrana, primjerice za jednostavno prikazivanje funkcija "
+"korisničkog sučelja vlastitih programa ili za prikazivanje greške u "
+"izvještajima o greškama. S Peekom jednostavno stavi Peek prozor preko "
+"područja koje želiš snimiti i pritisni „Snimi”. Peek je optimiran za "
+"generiranje animiranih GIF-ova, ali ako ti je draže, možeš snimati i izravno "
+"u WebM ili MP4 format."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Features:"
-msgstr ""
+msgstr "Funkcije:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "Odaberi područje ekrana koje želiš snimiti"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Save recorded video as an optimized animated GIF"
-msgstr ""
+msgstr "Spremi snimljeni video kao optimiran animirani GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "Snimaj direktno u WebM ili MP4 format"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "Jednostavno sučelje optimirano za ovaj posao"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "Automatski smanji veličinu snimljenih videa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:29
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "Podrška za HiDPI ekrane"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr ""
+msgstr "Radi unutar GNOME Shell Wayland sesije (koristi XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:32
 msgid ""
@@ -355,60 +367,61 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Peek nije program opće namjene za generiranje kratkih videa s proširenim "
+"značajkama, već se jedino fokusira na stvaranja malih videa od područja "
+"ekrana, u obliku bezvučnih GIF animacija, WebM ili MP4 video zapisa."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:43
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "Glavni prozor za odabir područja snimanja"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:47
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Peek postavke"
+msgstr "Dijalog Peek postavki"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:51
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "Peek snima samog sebe"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:81
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
-#, fuzzy
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
-"Vrijeme prikazano u milisekundama za područje snimanja prikazano nakon "
-"završene promjene veličine"
+"Vrijeme u milisekundama za prikaz veličine snimanog područja nakon što se "
+"promjena veličine zaustavi."
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr "\"Peek %Y-%m-%d %H-%M\""
+msgstr "„Peek %d. %m. %Y., %H:%M”"
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
-#, fuzzy
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
-msgstr "Koristi se zadani naziv. Može sadržavati oznake datumskog formata."
+msgstr ""
+"Koristi se standardno ime. Može sadržavati oznake datumskog formata. "
+"Datotečni nastavak će se automatski dodati."
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
-#, fuzzy
 msgid "Prefer dark theme"
-msgstr "Preferiraj tamnu temu"
+msgstr "Preferiraj tamni dizajn"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "Globalni prečaci za pokretanje i zaustavljanje snimanja"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
-msgstr ""
+msgstr "Format izlazne datoteke"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "Postavke za kvalitetu gifski GIF dekodera"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
@@ -416,17 +429,15 @@ msgstr "Faktor reduciranja rezolucije"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "Treba li uključiti kursor miša u snimku"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
-#, fuzzy
 msgid "Size and position of the last open main window"
-msgstr "Veličina i pozicija zadnjeg glavnog otvorenog prozora"
+msgstr "Veličina i pozicija zadnje otvorenog glavnog prozora"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
-#, fuzzy
 msgid "Path where last video got saved"
-msgstr "Putanja zadnjeg pogranjenog videa"
+msgstr "Putanja zadnjeg spremljenog videa"
 
 #~ msgid "_Quit"
 #~ msgstr "_Izlaz"
