@@ -101,7 +101,7 @@ distributions:
 Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
 To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
-and open it with GNOME Software or install via command line:
+and open it with GNOME Software or install via command line (first time flatpak users need to follow the [flatpak/flathub setup instructions](https://flatpak.org/setup/) first):
 
     flatpak install flathub com.uploadedlobster.peek
 
