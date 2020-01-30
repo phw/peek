@@ -31,6 +31,7 @@ namespace Peek.Ui {
     public string default_file_name_format { get; set; }
 
     public string save_folder { get; set; }
+   // public string get_file {get; set;}
 
     [GtkChild]
     private HeaderBar headerbar;
@@ -194,6 +195,10 @@ namespace Peek.Ui {
       // Make sure the close button is on the left if desktop environment
       // is configured that way.
       this.set_close_button_position ();
+    }
+
+    public  string get_file(){
+    return out_file.get_uri();
     }
 
 
@@ -708,6 +713,8 @@ namespace Peek.Ui {
       // Close the FileChooserDialog:
       chooser.close ();
       #endif
+
+      chooser.destroy();
     }
 
     private void try_save_file () {
@@ -749,6 +756,12 @@ namespace Peek.Ui {
 
     private void handle_saved_file (File file) {
       save_preferred_save_folder (file);
+      string out_file_ext = Utils.get_file_extension_for_format (
+        recorder.config.output_format);
+      ShareDialog.get_file_ext(out_file_ext);
+      ShareDialog.filename(file);
+      ShareDialog.present_single_instance(this);
+
 
 #if ! DISABLE_OPEN_FILE_MANAGER
       if (this.visible && open_file_manager) {

@@ -6,6 +6,7 @@
     <file preprocess="xml-stripblanks">error-dialog.ui</file>
     <file preprocess="xml-stripblanks">preferences.ui</file>
     <file preprocess="xml-stripblanks">about.ui</file>
+    <file preprocess="xml-stripblanks">share-dialog.ui</file>
 
     <!-- Stylesheets -->
     <file>css/peek.css</file>
