@@ -188,6 +188,11 @@ current version). You can install it with `apt`:
     sudo apt install ./peek-*-Linux.deb
 
 ### Fedora
+**Note: Fedora by default does not provide the required `ffmpeg` package in its
+repositories. For this reason it is recommended for Fedora users to install Peek
+with Flatpak, see above. If you prefer to install Peek from the repositories
+you should install `ffmpeg` separately as described below.**
+
 Peek is available in the default repositories (Fedora 29 and later):
 
     sudo dnf install peek
