@@ -23,7 +23,7 @@ namespace Peek.Recording {
         recorder = "ffmpeg";
       } else {
         throw new PeekError.NO_SUITABLE_SCREEN_RECORDER (
-          _ ("No suitable screen recorder found."));
+          _ ("Peek requires FFmpeg or running GNOME Shell session."));
       }
 
       stdout.printf ("Using screen recorder backend %s\n", recorder);
