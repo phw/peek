@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 21:29+0100\n"
+"POT-Creation-Date: 2020-02-09 21:35+0100\n"
 "PO-Revision-Date: 2018-01-28 08:34+0000\n"
 "Last-Translator: Mutaz Tayyeb AbuSaad <wahshy1414@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -86,6 +86,14 @@ msgstr ""
 "باستخدام XWayland عن طريق تفعيل الخاصية <tt>GDK_BACKEND=x11</tt>\n"
 "لمزيد من التفاصيل زر صفحة Peek  <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'> للأسئلة الشائعة عن دعم وايلاند</a>."
+
+#: src/recording/screen-recorder-factory.vala:26
+msgid "Peek requires FFmpeg or running GNOME Shell session."
+msgstr ""
+
+#: src/recording/screen-recorder-factory.vala:47
+msgid "FFmpeg executable not found."
+msgstr ""
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."

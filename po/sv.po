@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 21:29+0100\n"
+"POT-Creation-Date: 2020-02-09 21:35+0100\n"
 "PO-Revision-Date: 2020-02-09 20:26+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
@@ -85,6 +85,14 @@ msgstr ""
 "\n"
 "För detaljerad info, se Peek <a href='https://github.com/phw/peek#why-no-"
 "native-wayland-support'>FAQ om Wayland-stöd</a>."
+
+#: src/recording/screen-recorder-factory.vala:26
+msgid "Peek requires FFmpeg or running GNOME Shell session."
+msgstr ""
+
+#: src/recording/screen-recorder-factory.vala:47
+msgid "FFmpeg executable not found."
+msgstr ""
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
