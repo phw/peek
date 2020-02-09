@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2019-09-24 09:26+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-09 10:45+0100\n"
 "PO-Revision-Date: 2019-09-24 09:26+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
@@ -55,20 +55,20 @@ msgstr "Peek ohne Kopfleiste starten"
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:244
+#: src/application.vala:248
 msgid "Unable to create default screen recorder.\n"
 msgstr "Standard-Bildschirmrekorder konnte nicht erstellt werden.\n"
 
-#: src/application.vala:257
+#: src/application.vala:261
 #, c-format
 msgid "Unable to initialize backend %s.\n"
 msgstr "Backend %s konnte nicht initialisiert werden.\n"
 
-#: src/application.vala:326
+#: src/application.vala:334
 msgid "Native Wayland backend is unsupported"
 msgstr "Natives Wayland-Backend wird nicht unterstützt"
 
-#: src/application.vala:328
+#: src/application.vala:336
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -97,22 +97,22 @@ msgstr "Animation wird erstellt …"
 msgid "Peek will close when rendering is finished."
 msgstr "Peek wird beendet, sobald die Erstellung abgeschlossen ist."
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:343
+#: src/ui/application-window.vala:270 ui/application-window.ui:357
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:271 ui/application-window.ui:326
+#: src/ui/application-window.vala:271 ui/application-window.ui:340
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:272 ui/application-window.ui:377
+#: src/ui/application-window.vala:272 ui/application-window.ui:391
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:273 ui/application-window.ui:360
+#: src/ui/application-window.vala:273 ui/application-window.ui:374
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
@@ -122,49 +122,49 @@ msgstr "WebM"
 msgid "Record as %s"
 msgstr "Auf_nehmen als %s"
 
-#: src/ui/application-window.vala:367
+#: src/ui/application-window.vala:369
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Start / Stopp: %s"
 
-#: src/ui/application-window.vala:505
+#: src/ui/application-window.vala:513
 msgid "Rendering…"
 msgstr "Wird erstellt …"
 
-#: src/ui/application-window.vala:545
+#: src/ui/application-window.vala:553
 msgid "Recording could not be started due to an unexpected error."
 msgstr ""
 "Die Aufnahme konnte aufgrund eines unerwarteten Fehlers nicht gestartet "
 "werden."
 
-#: src/ui/application-window.vala:666 src/ui/application-window.vala:671
+#: src/ui/application-window.vala:674 src/ui/application-window.vala:679
 msgid "Save animation"
 msgstr "Animation speichern"
 
-#: src/ui/application-window.vala:667 src/ui/application-window.vala:674
+#: src/ui/application-window.vala:675 src/ui/application-window.vala:682
 msgid "_Save"
 msgstr "_Speichern"
 
-#: src/ui/application-window.vala:668 src/ui/application-window.vala:672
+#: src/ui/application-window.vala:676 src/ui/application-window.vala:680
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/ui/application-window.vala:739
+#: src/ui/application-window.vala:747
 msgid "The file could not be saved to the selected location."
 msgstr "Die Datei konnte nicht am ausgewählten Ort gespeichert werden."
 
-#: src/ui/application-window.vala:766
+#: src/ui/application-window.vala:774
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation als »%s« gespeichert"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:776
+#: src/ui/application-window.vala:784
 msgid "Click here to show the saved file in your file manager."
 msgstr "Hier klicken, um die Datei in der Dateiverwaltung anzuzeigen."
 
-#: src/ui/application-window.vala:778
+#: src/ui/application-window.vala:786
 msgid "Show in file manager"
 msgstr "In Ordner anzeigen"
 
@@ -195,7 +195,7 @@ msgstr ""
 "Alexander Wunschik <mail@wunschik.it>\n"
 "Mario Blättermann <mario.blaettermann@gmail.com>"
 
-#: ui/application-window.ui:33 ui/application-window.ui:171
+#: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
 msgstr "Aufnahme starten"
 
@@ -203,23 +203,28 @@ msgstr "Aufnahme starten"
 msgid "New window"
 msgstr "Neues Fenster"
 
-#: ui/application-window.ui:79
+#: ui/application-window.ui:68
+#, fuzzy
+msgid "Set window size"
+msgstr "Neues Fenster"
+
+#: ui/application-window.ui:93
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ui/application-window.ui:93
+#: ui/application-window.ui:107
 msgid "About Peek"
 msgstr "Info"
 
-#: ui/application-window.ui:135
+#: ui/application-window.ui:149
 msgid "_Stop"
 msgstr "_Stopp"
 
-#: ui/application-window.ui:145
+#: ui/application-window.ui:159
 msgid "Stop recording"
 msgstr "Aufnahme anhalten"
 
-#: ui/application-window.ui:161
+#: ui/application-window.ui:175
 msgid "_Record"
 msgstr "_Aufnehmen"
 
@@ -320,7 +325,7 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr ""
 "Einfacher Bildschirmrekorder mit einer einfach zu bedienenden Oberfläche"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:13
+#: data/com.uploadedlobster.peek.appdata.xml.in:11
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -338,39 +343,39 @@ msgstr ""
 "»Aufnehmen«. Peek wurde für das Erzeugen von animierten GIFs optimiert, kann "
 "aber auch direkt im WebM- oder MP4-Format aufnehmen."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:22
+#: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
 msgstr "Merkmale:"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:24
+#: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
 msgstr "Eine Bildschirmregion zum Aufnehmen wählen"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:25
+#: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
 msgstr "Das aufgenommene Video als optimiertes animiertes GIF speichern"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:26
+#: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
 msgstr "Direkt im WebM- oder MP4-Format aufnehmen"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:27
+#: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
 msgstr "Eine Benutzeroberfläche, die für den Anwendungsfall optimiert ist"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:28
+#: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Automatically downscale recorded videos"
 msgstr "Aufgenommene Videos automatisch skalieren"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:29
+#: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Support for HiDPI screens"
 msgstr "Unterstützung für hochauflösende Bildschirme"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:30
+#: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Funktioniert in GNOME Shell mit Wayland (mit XWayland)"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:32
+#: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
@@ -382,19 +387,19 @@ msgstr ""
 "Bildschirmaufzeichnungen eines Bildschirmbereichs, um daraus GIF-Animationen "
 "oder stumme WebM- bzw. MP4-Videos zu erstellen."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:43
+#: data/com.uploadedlobster.peek.appdata.xml.in:41
 msgid "The main window to select the recording area"
 msgstr "Aufnahmebereich mit dem Hauptfenster wählen"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:47
+#: data/com.uploadedlobster.peek.appdata.xml.in:45
 msgid "Peek's preferences dialog"
 msgstr "Einstellungsdialog von Peek"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:51
+#: data/com.uploadedlobster.peek.appdata.xml.in:49
 msgid "Peek is recording itself"
 msgstr "Peek nimmt sich selbst auf"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:81
+#: data/com.uploadedlobster.peek.appdata.xml.in:79
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
