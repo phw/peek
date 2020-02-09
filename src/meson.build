@@ -26,6 +26,7 @@ peek_sources = [
   'recording/screen-recorder.vala',
   'ui/about-dialog.vala',
   'ui/application-window.vala',
+  'ui/set-window-size-dialog.vala',
   'ui/error-dialog.vala',
   'ui/preferences-dialog.vala',
   'ui/shortcut-label.vala',
