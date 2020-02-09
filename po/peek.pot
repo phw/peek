@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:36+0100\n"
+"POT-Creation-Date: 2020-02-09 17:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -199,7 +199,7 @@ msgid "Preferences"
 msgstr ""
 
 #: ui/application-window.ui:107
-msgid "About Peek"
+msgid "About"
 msgstr ""
 
 #: ui/application-window.ui:149
