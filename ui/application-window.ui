@@ -217,7 +217,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
           </object>
         </child>
         <child>
-          <object class="GtkMenuButton">
+          <object class="GtkMenuButton" id="pop_menu_button">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>

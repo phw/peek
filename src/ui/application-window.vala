@@ -72,6 +72,9 @@ namespace Peek.Ui {
     private Label shortcut_label;
 
     [GtkChild]
+    private ToggleButton pop_menu_button;
+
+    [GtkChild]
     private Popover pop_menu;
 
     private uint start_recording_event_source = 0;
@@ -600,6 +603,7 @@ namespace Peek.Ui {
         shortcut_label.opacity = 0.0;
         pop_format_menu.hide ();
         record_button.hide ();
+        pop_menu_button.set_sensitive (false);
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
           stop_button.set_label (stop_button_label);
         }
@@ -620,6 +624,7 @@ namespace Peek.Ui {
       stop_button.hide ();
       pop_format_menu.show ();
       record_button.show ();
+      pop_menu_button.set_sensitive (true);
       unfreeze_window_size ();
       hide_spinner ();
 
