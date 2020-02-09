@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:36+0100\n"
-"PO-Revision-Date: 2020-02-09 20:13+0000\n"
+"PO-Revision-Date: 2020-02-09 20:26+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
@@ -27,7 +27,7 @@ msgstr "Visa programversion och avsluta"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "Välj inspelningsprogram"
+msgstr "Välj inspelningsprogram (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -57,7 +57,7 @@ msgstr "Peek"
 #: src/application.vala:248
 #, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Kan inte starta bakgrundsgränssnittet: %s"
+msgstr "Kan inte starta inspelningsgränssnittet: %s"
 
 #: src/application.vala:264
 #, c-format
@@ -66,7 +66,7 @@ msgstr "Kan inte starta inspelningsgränssnittet %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr "Inspelningsmodulen är inte tillgänglig"
+msgstr "Inspelningsgränssnittet är inte tillgängligt"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
