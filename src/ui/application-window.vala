@@ -135,11 +135,6 @@ namespace Peek.Ui {
 
       application.stop_recording.connect (prepare_stop_recording);
 
-      // Update record button label when recording format changes
-      this.recorder.config.notify["output-format"].connect ((pspec) => {
-        update_format_label ();
-      });
-
       // Bind settings
       settings = Peek.Application.get_app_settings ();
 
@@ -195,6 +190,11 @@ namespace Peek.Ui {
         this, "save_folder",
         SettingsBindFlags.DEFAULT);
 
+      // Update record button label when recording format changes
+      this.recorder.config.notify["output-format"].connect ((pspec) => {
+        update_format_label ();
+      });
+
       // Configure window
       this.set_keep_above (true);
       this.load_geometry ();
@@ -202,6 +202,7 @@ namespace Peek.Ui {
 
       this.show.connect (() => {
         show_size_indicator ();
+        update_format_label ();
       });
 
       stop_button_label = stop_button.label;
