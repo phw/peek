@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:38+0100\n"
-"PO-Revision-Date: 2019-09-24 09:26+0000\n"
+"PO-Revision-Date: 2020-02-09 17:08+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
 "de/>\n"
@@ -56,18 +56,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Backend %s konnte nicht initialisiert werden.\n"
+msgstr "Standard Aufnahme-Backend konnte nicht initialisiert werden: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Backend %s konnte nicht initialisiert werden.\n"
+msgstr "Aufnahme-Backend %s konnte nicht initialisiert werden: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Aufnahme-Backend nicht verfügbar"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
