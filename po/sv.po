@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-09 17:38+0100\n"
 "PO-Revision-Date: 2020-02-09 12:32+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -200,9 +200,8 @@ msgid "New window"
 msgstr "Nytt fönster"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Sett fönsterstorlek"
+msgstr "Ange fönsterstorlek"
 
 #: ui/application-window.ui:93
 msgid "Preferences"

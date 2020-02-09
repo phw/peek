@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -209,9 +209,8 @@ msgid "New window"
 msgstr "Neues Fenster"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Neues Fenster"
+msgstr "Fenstergröße setzen"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
