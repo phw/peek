@@ -43,6 +43,7 @@ namespace Peek.Ui {
     private Window window;
 
     private SetWindowSizeDialog (Window window) {
+      Object (use_header_bar: 1);
       this.window = window;
     }
 
@@ -69,6 +70,12 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_set_size_button_clicked (Button source) {
       window.resize (width + 2, height + 2);
+      this.close ();
+    }
+
+    [GtkCallback]
+    private void on_cancel_button_clicked (Button source) {
+      this.close ();
     }
   }
 }
