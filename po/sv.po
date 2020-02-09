@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:36+0100\n"
-"PO-Revision-Date: 2020-02-09 12:32+0000\n"
+"PO-Revision-Date: 2020-02-09 20:13+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
@@ -55,18 +55,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Kan inte starta bakgrundsgränssnittet %s.\n"
+msgstr "Kan inte starta bakgrundsgränssnittet: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Kan inte starta bakgrundsgränssnittet %s.\n"
+msgstr "Kan inte starta inspelningsgränssnittet %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Inspelningsmodulen är inte tillgänglig"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -304,22 +304,20 @@ msgid "Peek preferences"
 msgstr "Peek-inställningar"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Avbryt"
+msgstr "Avbryt"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Sett fönsterstorlek"
+msgstr "Ange storlek"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Bredd"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Höjd"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
