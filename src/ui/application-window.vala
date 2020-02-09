@@ -283,6 +283,8 @@ namespace Peek.Ui {
     private void update_format_label () {
       var format_name = get_format_name (recorder.config.output_format);
       record_button.set_label (_ ("Record as %s").printf (format_name));
+      var area = get_recording_area ();
+      update_ui_size (area);
       pop_format.hide ();
     }
 
@@ -342,21 +344,7 @@ namespace Peek.Ui {
       if (this.get_realized ()) {
         update_input_shape ();
         var area = get_recording_area ();
-
-        // Set the scale of shortcut_label
-        Pango.AttrList attrs = new Pango.AttrList ();
-
-        if (area.width < SMALL_WINDOW_SIZE) {
-          GtkHelper.hide_button_label (record_button);
-          GtkHelper.hide_button_label (stop_button);
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL));
-        } else {
-          GtkHelper.show_button_label (record_button);
-          GtkHelper.show_button_label (stop_button);
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE));
-        }
-
-        shortcut_label.attributes = attrs;
+        update_ui_size (area);
 
         if (!is_recording) {
           // Shortcut recording hint
@@ -391,6 +379,23 @@ namespace Peek.Ui {
           }
         }
       }
+    }
+
+    private void update_ui_size (RecordingArea area) {
+      // Set the scale of shortcut_label
+      Pango.AttrList attrs = new Pango.AttrList ();
+
+      if (area.width < SMALL_WINDOW_SIZE) {
+        GtkHelper.hide_button_label (record_button);
+        GtkHelper.hide_button_label (stop_button);
+        attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL));
+      } else {
+        GtkHelper.show_button_label (record_button);
+        GtkHelper.show_button_label (stop_button);
+        attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE));
+      }
+
+      shortcut_label.attributes = attrs;
     }
 
     [GtkCallback]
