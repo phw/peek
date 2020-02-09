@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 10:45+0100\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"PO-Revision-Date: 2020-02-09 16:37+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
 "nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -198,9 +198,8 @@ msgid "New window"
 msgstr "Nieuw venster"
 
 #: ui/application-window.ui:68
-#, fuzzy
 msgid "Set window size"
-msgstr "Nieuw venster"
+msgstr "Venstergrootte instellen"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
