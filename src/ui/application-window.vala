@@ -352,6 +352,32 @@ namespace Peek.Ui {
       show_size_indicator ();
     }
 
+    public RecordingArea get_recording_area () {
+      return RecordingArea.create_for_widget (recording_view);
+    }
+
+    public void resize_recording_area (int width, int height) {
+      if (is_recording) {
+        return;
+      }
+
+      int window_width;
+      int window_height;
+      get_size (out window_width, out window_height);
+      var area = this.get_recording_area ();
+
+      // Update the UI elements to reflect the future window size
+      update_ui_size (RecordingArea () {
+        width = width,
+        height = height
+      });
+
+      // Resize the window so that the recording areas results in the requested size.
+      this.resize (
+        width + (window_width - area.width),
+        height + (window_height - area.height));
+    }
+
     private void show_size_indicator () {
       if (this.get_realized ()) {
         update_input_shape ();
@@ -580,6 +606,7 @@ namespace Peek.Ui {
 
         stop_button.sensitive = true;
         stop_button.show ();
+        SetWindowSizeDialog.close_instance ();
         freeze_window_size ();
         set_keep_above (true);
       }
@@ -672,10 +699,6 @@ namespace Peek.Ui {
       this.set_size_request (0, 0);
       this.set_default_size (width, height);
       this.resizable = true;
-    }
-
-    private RecordingArea get_recording_area () {
-      return RecordingArea.create_for_widget (recording_view);
     }
 
     private void show_file_chooser () {

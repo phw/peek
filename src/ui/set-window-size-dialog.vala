@@ -15,7 +15,7 @@ namespace Peek.Ui {
 
     private static SetWindowSizeDialog? instance;
 
-    public static Dialog present_single_instance (Gtk.Window main_window) {
+    public static Dialog present_single_instance (ApplicationWindow main_window) {
       if (instance == null) {
         instance = new SetWindowSizeDialog (main_window);
         instance.delete_event.connect ((event) => {
@@ -24,14 +24,19 @@ namespace Peek.Ui {
         });
       }
 
-      int new_width, new_height;
-      main_window.get_size (out new_width, out new_height);
-      instance.width = new_width - 2;
-      instance.height = new_height - 2;
+      var area = main_window.get_recording_area ();
+      instance.height = area.height;
+      instance.width = area.width;
 
       instance.transient_for = main_window;
       instance.present ();
       return instance;
+    }
+
+    public static void close_instance () {
+      if (instance != null) {
+        instance.close ();
+      }
     }
 
     [GtkChild]
@@ -40,9 +45,9 @@ namespace Peek.Ui {
     [GtkChild]
     private Adjustment height_adjustment;
 
-    private Window window;
+    private ApplicationWindow window;
 
-    private SetWindowSizeDialog (Window window) {
+    private SetWindowSizeDialog (ApplicationWindow window) {
       Object (use_header_bar: 1);
       this.window = window;
     }
@@ -69,7 +74,7 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_set_size_button_clicked (Button source) {
-      window.resize (width + 2, height + 2);
+      window.resize_recording_area (width, height);
       this.close ();
     }
 
