@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"PO-Revision-Date: 2020-02-10 06:52+0000\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hans/>\n"
@@ -53,18 +53,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "无法初始化 %s 后端。\n"
+msgstr "无法初始化录制后端：%s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "无法初始化 %s 后端。\n"
+msgstr "无法初始化录制后端 %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "录制后端不可用"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -86,11 +86,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek 需要系统上事先安装 FFmpeg 或者正在运行 GNOME Shell 会话。"
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "未找到 FFmpeg 可执行文件。"
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -313,22 +313,20 @@ msgid "Peek preferences"
 msgstr "Peek 首选项"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "取消(_C)"
+msgstr "取消"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "新建窗口"
+msgstr "设置大小"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
