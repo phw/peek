@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:36+0100\n"
-"PO-Revision-Date: 2020-02-09 17:17+0000\n"
+"PO-Revision-Date: 2020-02-09 19:51+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
 "de/>\n"
@@ -218,7 +218,7 @@ msgstr "Einstellungen"
 
 #: ui/application-window.ui:107
 msgid "About Peek"
-msgstr "Info"
+msgstr "Info zu Peek"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
