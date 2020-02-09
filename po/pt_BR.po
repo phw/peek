@@ -312,9 +312,8 @@ msgid "Peek preferences"
 msgstr "Preferências do Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Cancelar"
+msgstr "Cancelar"
 
 #: ui/set-window-size-dialog.ui:36
 #, fuzzy
@@ -323,7 +322,7 @@ msgstr "Nova  janela"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Largura"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"

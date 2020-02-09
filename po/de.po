@@ -56,18 +56,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Backend %s konnte nicht initialisiert werden.\n"
+msgstr "Standard Aufnahme-Backend konnte nicht initialisiert werden: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Backend %s konnte nicht initialisiert werden.\n"
+msgstr "Aufnahme-Backend %s konnte nicht initialisiert werden: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Aufnahme-Backend nicht verfügbar"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
