@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:36+0100\n"
-"PO-Revision-Date: 2019-09-24 09:26+0000\n"
+"PO-Revision-Date: 2020-02-09 17:17+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
 "de/>\n"
@@ -369,7 +369,7 @@ msgstr "Merkmale:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
-msgstr "Eine Bildschirmregion zum Aufnehmen wählen"
+msgstr "Ein Bildschirmbereich zum Aufnehmen wählen"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
