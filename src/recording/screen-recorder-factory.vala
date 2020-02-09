@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2017-2020 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -23,7 +23,7 @@ namespace Peek.Recording {
         recorder = "ffmpeg";
       } else {
         throw new PeekError.NO_SUITABLE_SCREEN_RECORDER (
-          "No suitable screen recorder found");
+          _ ("No suitable screen recorder found."));
       }
 
       stdout.printf ("Using screen recorder backend %s\n", recorder);
@@ -42,6 +42,10 @@ namespace Peek.Recording {
           }
 #endif
         case "ffmpeg":
+          if (!FfmpegScreenRecorder.is_available ()) {
+            throw new PeekError.SCREEN_RECORDER_ERROR (
+              _ ("ffmpeg executable not found."));
+          }
           return new FfmpegScreenRecorder ();
         default:
           throw new PeekError.UNKNOWN_SCREEN_RECORDER (
