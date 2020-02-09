@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2020-02-09 17:36+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-09 21:29+0100\n"
 "PO-Revision-Date: 2020-02-09 19:51+0000\n"
 "Last-Translator: Philipp Wolfer <ph.wolfer@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/peek/translations/"
@@ -94,82 +94,82 @@ msgstr ""
 "Ein unerwarteter Fehler ist während der Aufnahme aufgetreten. Die Aufnahme "
 "wurde abgebrochen."
 
-#: src/ui/application-window.vala:248
+#: src/ui/application-window.vala:249
 msgid "Rendering animation…"
 msgstr "Animation wird erstellt …"
 
-#: src/ui/application-window.vala:249
+#: src/ui/application-window.vala:250
 msgid "Peek will close when rendering is finished."
 msgstr "Peek wird beendet, sobald die Erstellung abgeschlossen ist."
 
-#: src/ui/application-window.vala:285 ui/application-window.ui:353
+#: src/ui/application-window.vala:286 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:286 ui/application-window.ui:337
+#: src/ui/application-window.vala:287 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:287 ui/application-window.ui:387
+#: src/ui/application-window.vala:288 ui/application-window.ui:387
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:288 ui/application-window.ui:370
+#: src/ui/application-window.vala:289 ui/application-window.ui:370
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:300
+#: src/ui/application-window.vala:301
 #, c-format
 msgid "Record as %s"
 msgstr "Auf_nehmen als %s"
 
-#: src/ui/application-window.vala:398
+#: src/ui/application-window.vala:399
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Start / Stopp: %s"
 
-#: src/ui/application-window.vala:552
+#: src/ui/application-window.vala:553
 msgid "Rendering…"
 msgstr "Wird erstellt …"
 
-#: src/ui/application-window.vala:592
+#: src/ui/application-window.vala:593
 msgid "Recording could not be started due to an unexpected error."
 msgstr ""
 "Die Aufnahme konnte aufgrund eines unerwarteten Fehlers nicht gestartet "
 "werden."
 
-#: src/ui/application-window.vala:712 src/ui/application-window.vala:717
+#: src/ui/application-window.vala:713 src/ui/application-window.vala:718
 msgid "Save animation"
 msgstr "Animation speichern"
 
-#: src/ui/application-window.vala:713 src/ui/application-window.vala:720
+#: src/ui/application-window.vala:714 src/ui/application-window.vala:721
 msgid "_Save"
 msgstr "_Speichern"
 
-#: src/ui/application-window.vala:714 src/ui/application-window.vala:718
+#: src/ui/application-window.vala:715 src/ui/application-window.vala:719
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: src/ui/application-window.vala:785
+#: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
 msgstr "Die Datei konnte nicht am ausgewählten Ort gespeichert werden."
 
-#: src/ui/application-window.vala:812
+#: src/ui/application-window.vala:813
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animation als »%s« gespeichert"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:822
+#: src/ui/application-window.vala:823
 msgid "Click here to show the saved file in your file manager."
 msgstr "Hier klicken, um die Datei in der Dateiverwaltung anzuzeigen."
 
-#: src/ui/application-window.vala:824
+#: src/ui/application-window.vala:825
 msgid "Show in file manager"
 msgstr "In Ordner anzeigen"
 
