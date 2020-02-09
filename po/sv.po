@@ -8,10 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 10:45+0100\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"PO-Revision-Date: 2020-02-09 12:32+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -197,7 +197,7 @@ msgstr "Nytt fönster"
 #: ui/application-window.ui:68
 #, fuzzy
 msgid "Set window size"
-msgstr "Nytt fönster"
+msgstr "Sett fönsterstorlek"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
