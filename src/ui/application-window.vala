@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2020 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -46,6 +46,18 @@ namespace Peek.Ui {
 
     [GtkChild]
     private Popover pop_format;
+
+    [GtkChild]
+    private RadioButton gif_button;
+
+    [GtkChild]
+    private RadioButton apng_button;
+
+    [GtkChild]
+    private RadioButton webm_button;
+
+    [GtkChild]
+    private RadioButton mp4_button;
 
     [GtkChild]
     private MenuButton pop_format_menu;
@@ -399,23 +411,16 @@ namespace Peek.Ui {
     }
 
     [GtkCallback]
-    private void on_gif_button_clicked (Button source) {
-      select_format (OutputFormat.GIF);
-    }
-
-    [GtkCallback]
-    private void on_apng_button_clicked (Button source) {
-      select_format (OutputFormat.APNG);
-    }
-
-    [GtkCallback]
-    private void on_webm_button_clicked (Button source) {
-      select_format (OutputFormat.WEBM);
-    }
-
-    [GtkCallback]
-    private void on_mp4_button_clicked (Button source) {
-      select_format (OutputFormat.MP4);
+    private void on_format_selection_toggled () {
+      if (gif_button.get_active ()) {
+        select_format (OutputFormat.GIF);
+      } else if (apng_button.get_active ()) {
+        select_format (OutputFormat.APNG);
+      } else if (webm_button.get_active ()) {
+        select_format (OutputFormat.WEBM);
+      } else if (mp4_button.get_active ()) {
+        select_format (OutputFormat.MP4);
+      }
     }
 
     [GtkCallback]

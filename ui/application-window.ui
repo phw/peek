@@ -333,69 +333,68 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
         <property name="border_width">9</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkModelButton" id="gif_button">
+          <object class="GtkRadioButton" id="gif_button">
+            <property name="label" translatable="yes">GIF</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="text" translatable="yes">GIF</property>
-            <signal name="clicked" handler="on_gif_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_format_selection_toggled" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="apng_button">
+          <object class="GtkRadioButton" id="apng_button">
+            <property name="label" translatable="yes">APNG</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="text" translatable="yes">APNG</property>
-            <signal name="clicked" handler="on_apng_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">gif_button</property>
+            <signal name="toggled" handler="on_format_selection_toggled" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="webm_button">
+          <object class="GtkRadioButton" id="webm_button">
+            <property name="label" translatable="yes">WebM</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="text" translatable="yes">WebM</property>
-            <signal name="clicked" handler="on_webm_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">gif_button</property>
+            <signal name="toggled" handler="on_format_selection_toggled" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">2</property>
           </packing>
         </child>
         <child>
-          <object class="GtkModelButton" id="mp4_button">
+          <object class="GtkRadioButton" id="mp4_button">
+            <property name="label" translatable="yes">MP4</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="text" translatable="yes">MP4</property>
-            <signal name="clicked" handler="on_mp4_button_clicked" swapped="no"/>
-            <style>
-              <class name="peek-format-button"/>
-            </style>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">gif_button</property>
+            <signal name="toggled" handler="on_format_selection_toggled" swapped="no"/>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">3</property>
           </packing>
