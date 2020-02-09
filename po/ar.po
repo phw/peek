@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2018-01-28 08:34+0000\n"
 "Last-Translator: Mutaz Tayyeb AbuSaad <wahshy1414@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/peek/translations/"
@@ -213,7 +213,7 @@ msgstr "التفضيلات"
 
 #: ui/application-window.ui:107
 #, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "عن البرنامج"
 
 #: ui/application-window.ui:149

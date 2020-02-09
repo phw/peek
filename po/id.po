@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2019-11-16 19:04+0000\n"
 "Last-Translator: wellart <wella.design@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/peek/"
@@ -211,8 +211,7 @@ msgid "Preferences"
 msgstr "Preferensi"
 
 #: ui/application-window.ui:107
-#, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "Tentang"
 
 #: ui/application-window.ui:149

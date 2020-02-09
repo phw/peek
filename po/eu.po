@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2019-12-02 23:05+0000\n"
 "Last-Translator: S <sendoasojo@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
@@ -209,8 +209,7 @@ msgid "Preferences"
 msgstr "Hobespenak"
 
 #: ui/application-window.ui:107
-#, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "Honi buruz"
 
 #: ui/application-window.ui:149

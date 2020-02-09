@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2018-04-13 10:40+0000\n"
 "Last-Translator: Kuba Niewiarowski <jakub@niewiarowski.it>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
@@ -218,7 +218,7 @@ msgstr "_Preferencje"
 
 #: ui/application-window.ui:107
 #, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "_O programie"
 
 #: ui/application-window.ui:149

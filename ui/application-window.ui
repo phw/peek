@@ -104,7 +104,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="text" translatable="yes">About</property>
+            <property name="text" translatable="yes">About Peek</property>
             <signal name="clicked" handler="on_about_button_clicked" swapped="no"/>
           </object>
           <packing>

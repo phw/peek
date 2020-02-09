@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2020-01-12 02:21+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
@@ -211,8 +211,7 @@ msgid "Preferences"
 msgstr "Postavke"
 
 #: ui/application-window.ui:107
-#, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "O programu Peek"
 
 #: ui/application-window.ui:149

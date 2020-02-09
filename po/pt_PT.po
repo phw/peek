@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2019-04-23 18:49+0000\n"
 "Last-Translator: Rui Mendes <xz9@protonmail.com>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
@@ -216,7 +216,7 @@ msgstr "_Preferências"
 
 #: ui/application-window.ui:107
 #, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "Sobr_e"
 
 #: ui/application-window.ui:149

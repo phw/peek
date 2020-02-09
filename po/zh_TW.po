@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 17:38+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2020-01-15 12:21+0000\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -209,8 +209,7 @@ msgid "Preferences"
 msgstr "偏好設定"
 
 #: ui/application-window.ui:107
-#, fuzzy
-msgid "About"
+msgid "About Peek"
 msgstr "關於 Peek"
 
 #: ui/application-window.ui:149
