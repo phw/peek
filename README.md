@@ -101,7 +101,8 @@ distributions:
 Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
 To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
-and open it with GNOME Software or install via command line (first time flatpak users need to follow the [flatpak/flathub setup instructions](https://flatpak.org/setup/) first):
+and open it with GNOME Software or install via command line (first time flatpak
+users need to follow the [flatpak/flathub setup instructions](https://flatpak.org/setup/) first):
 
     flatpak install flathub com.uploadedlobster.peek
 
@@ -160,8 +161,8 @@ available. Use the repository `ppa:peek-developers/daily` in the above commands.
 ### Debian
 There are official Debian packages for Debian 10 ("Buster") via main repository
 and packages for Debian 9 ("Stretch") via
-[`stretch-backports`](https://packages.debian.org/stretch-backports/peek) repository.
-Please refer to [Debian Backports Website](https://backports.debian.org/)
+[`stretch-backports`](https://packages.debian.org/stretch-backports/peek)
+repository. Please refer to [Debian Backports Website](https://backports.debian.org/)
 for detailed usage of `stretch-backports` repository.
 
 After enabling `stretch-backports` for Debian 9 (Debian 10 or `Sid` doesn't need
@@ -212,20 +213,21 @@ package also available from RPM Fusion free:
 ### Solus
 Solus users can simply install with:
 
-	sudo eopkg it peek
+    sudo eopkg it peek
 
 ### Arch Linux
 Arch Linux users can simply install with:
 
-	sudo pacman -S peek
+    sudo pacman -S peek
 
 For GNOME Shell recording there are some optional packages you can choose from:
 
-       gst-plugins-good: Recording under Gnome Shell
-       gst-plugins-ugly: MP4 output under Gnome Shell
-       gifski: High quality GIF animations with thousands of colors
+    gst-plugins-good: Recording under Gnome Shell
+    gst-plugins-ugly: MP4 output under Gnome Shell
+    gifski: High quality GIF animations with thousands of colors
 
-If you have a package manager for AUR (or fetch from AUR manually) the git version is available [here](https://aur.archlinux.org/packages/peek-git)
+If you have a package manager for AUR (or fetch from AUR manually) the git
+version is available [here](https://aur.archlinux.org/packages/peek-git)
 
 
 ### Other distributions
@@ -301,9 +303,9 @@ online services as GIFs.
 
 ### What is the cause for "Could not start GNOME Shell recorder" errors?
 
-This usually indicates an error while starting the built-in GNOME shell recorder.
-Unfortunately Peek does not receive any error details, to find out more about
-this issues look at the GNOME Shell log output in `journalctl`.
+This usually indicates an error while starting the built-in GNOME shell
+recorder. Unfortunately Peek does not receive any error details, to find out
+more about this issues look at the GNOME Shell log output in `journalctl`.
 
 A common cause for this is that the GNOME Shell recorder is already running,
 either because it was started via the GNOME Shell keyboard shortcut or by
@@ -313,18 +315,19 @@ If this error is shown when trying to record MP4 a common cause is that you are
 missing the [GStreamer ugly](https://gstreamer.freedesktop.org/modules/gst-plugins-ugly.html)
 plugins, which provide MP4 encoding. Please refer to the documentation of your
 distribution on how to install these.
-Do note that you have to logout and login for Peek to recognize the new installed libraries
-if you are running the Wayland display server.
+Do note that you have to logout and login for Peek to recognize the new
+installed libraries if you are running the Wayland display server.
 
 See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
 
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. If you use i3 you should stack Peek with the window you intend to record
-or make sure all windows are floating and uncheck "Always on top" from the Peek settings.
-If you want to be able to control the area when recording in i3 you can move Peek
-to the Scratchpad it will keep recording the area once you hide the window.
-If this does not work for you on any other window manager please open an [issue on GitHub](https://github.com/phw/peek/issues).
+recording. If you use i3 you should stack Peek with the window you intend to
+record or make sure all windows are floating and uncheck "Always on top" from
+the Peek settings. If you want to be able to control the area when recording
+in i3 you can move Peek to the Scratchpad it will keep recording the area once
+you hide the window. If this does not work for you on any other window manager
+please open an [issue on GitHub](https://github.com/phw/peek/issues).
 
 ### My recorded GIFs flicker, what is wrong?
 Some users have experienced recorded windows flicker or other strange visual
@@ -379,9 +382,9 @@ Or you can help in development and translation.
 ### Development
 You are welcome to contribute code and provide pull requests for Peek. The
 easiest way to start is looking at the open issues tagged with
-[good first issue](https://github.com/phw/peek/labels/good%20first%20issue). Those are
-open issues which are not too difficult to solve and can be started without
-too much knowledge about the code.
+[good first issue](https://github.com/phw/peek/labels/good%20first%20issue).
+Those are open issues which are not too difficult to solve and can be started
+without too much knowledge about the code.
 
 Another good starting point are issues tagged with
 [help wanted](https://github.com/phw/peek/labels/help%20wanted). Those issues are
