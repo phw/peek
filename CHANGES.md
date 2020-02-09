@@ -1,3 +1,16 @@
+# Version 1.5.0 - 2020-02-??
+- feat: Dialog to set recording area size (#246, #519)
+- feat: Use radio buttons for format selection to easily show selected format
+- fix: Show error dialog on startup if recording backend is unavailable (#539)
+- fix: Fix missing title in taskbar on KDE Plasma (#349)
+- fix: Changing output format in small UI mode resizes the window
+- fix: Disable menu during recording
+- i18n: Renamed "About Peek" to just "About"
+- i18n: New translations for Finnish and Hebrew
+- i18n: Updated translations for Basque, Chinese (Simplified),
+  Chinese (Traditional), Croation, Czech, Dutch, French, German, Indonesian,
+  Lithuanian, Norwegian Bokmål, Portuguese (Brazil), Spanish and Swedish
+
 # Version 1.4.0 - 2019-09-24
 - feat: Move app menu into application Window (#391, #438)
 - feat: New application icon following new GNOME icon guidelines (#114, #390)
