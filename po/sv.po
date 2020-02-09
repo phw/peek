@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 10:45+0100\n"
-"PO-Revision-Date: 2020-02-09 12:32+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-02-09 16:37+0000\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -195,9 +195,8 @@ msgid "New window"
 msgstr "Nytt fönster"
 
 #: ui/application-window.ui:68
-#, fuzzy
 msgid "Set window size"
-msgstr "Sett fönsterstorlek"
+msgstr "Ange fönsterstorlek"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
