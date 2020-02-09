@@ -72,11 +72,12 @@ modules:
       - --enable-indev=xcbgrab
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.2.1.tar.xz
-        sha256: cec7c87e9b60d174509e263ac4011b522385fd0775292e1670ecc1180c9bb6d4
+        url: https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz
+        sha256: cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c
     modules:
       - name: yasm
-        cleanup: "*"
+        cleanup:
+          - "*"
         sources:
           - type: archive
             url: http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
@@ -88,7 +89,7 @@ modules:
         sources:
           - type: git
             url: https://git.videolan.org/git/x264.git
-            commit: 72db437770fd1ce3961f624dd57a8e75ff65ae0b
+            commit: 1771b556ee45207f8711744ccbd5d42a3949b14c
         cleanup:
           - /bin/x264
 
@@ -102,8 +103,8 @@ modules:
       - arm
     sources:
       - type: archive
-        url: https://github.com/ImageOptim/gifski/archive/0.9.1.tar.gz
-        sha256: f39a6e510e825bf4b43aebd1d7fb581d3b59a11bf7521bf6f507d4b0fa684b76
+        url: https://github.com/ImageOptim/gifski/archive/0.10.2.tar.gz
+        sha256: 3ec058c9d62c5411155d1c9a59fe23d282eb569b480cf8aeeaba522ead82b250
     build-commands:
       - cargo build --release --features=openmp --verbose
       - install -Dm755 target/release/gifski /app/bin/gifski
