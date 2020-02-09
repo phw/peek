@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 10:45+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2018-05-12 20:06+0000\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
@@ -53,19 +53,24 @@ msgid "Peek"
 msgstr "Виркало"
 
 #: src/application.vala:248
-msgid "Unable to create default screen recorder.\n"
-msgstr "Не могу да направим подразумеваног снимача екрана.\n"
-
-#: src/application.vala:261
-#, c-format
-msgid "Unable to initialize backend %s.\n"
+#, fuzzy, c-format
+msgid "Unable to initialize default recording backend: %s"
 msgstr "Не могу да покренем позадинца „%s“.\n"
 
-#: src/application.vala:334
+#: src/application.vala:264
+#, fuzzy, c-format
+msgid "Unable to initialize recording backend %s: %s"
+msgstr "Не могу да покренем позадинца „%s“.\n"
+
+#: src/application.vala:335
+msgid "Recording backend unavailable"
+msgstr ""
+
+#: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
 msgstr "Домаћи Вејленд позадинац није подржан"
 
-#: src/application.vala:336
+#: src/application.vala:340
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -81,85 +86,85 @@ msgstr ""
 "com/phw/peek#why-no-native-wayland-support'>везана за подршку на Вејленду</"
 "a>."
 
-#: src/ui/application-window.vala:107
+#: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 "Неочеивакана грешка се догодила приликом снимања. Снимање је прекинуто."
 
-#: src/ui/application-window.vala:233
+#: src/ui/application-window.vala:248
 msgid "Rendering animation…"
 msgstr "Исцртавам анимацију…"
 
-#: src/ui/application-window.vala:234
+#: src/ui/application-window.vala:249
 msgid "Peek will close when rendering is finished."
 msgstr "Виркало ће се затворити након што се исцртавање заврши."
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:357
+#: src/ui/application-window.vala:285 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:271 ui/application-window.ui:340
+#: src/ui/application-window.vala:286 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:272 ui/application-window.ui:391
+#: src/ui/application-window.vala:287 ui/application-window.ui:387
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:273 ui/application-window.ui:374
+#: src/ui/application-window.vala:288 ui/application-window.ui:370
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM видео"
 
-#: src/ui/application-window.vala:285
+#: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
 msgstr "Снимај као %s"
 
-#: src/ui/application-window.vala:369
+#: src/ui/application-window.vala:398
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Покрени/заустави: %s"
 
-#: src/ui/application-window.vala:513
+#: src/ui/application-window.vala:552
 msgid "Rendering…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:553
+#: src/ui/application-window.vala:592
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Снимање није започето због неочекиване грешке."
 
-#: src/ui/application-window.vala:674 src/ui/application-window.vala:679
+#: src/ui/application-window.vala:712 src/ui/application-window.vala:717
 msgid "Save animation"
 msgstr "Сачувај анимацију"
 
-#: src/ui/application-window.vala:675 src/ui/application-window.vala:682
+#: src/ui/application-window.vala:713 src/ui/application-window.vala:720
 msgid "_Save"
 msgstr "_Сачувај"
 
-#: src/ui/application-window.vala:676 src/ui/application-window.vala:680
+#: src/ui/application-window.vala:714 src/ui/application-window.vala:718
 msgid "_Cancel"
 msgstr "_Откажи"
 
-#: src/ui/application-window.vala:747
+#: src/ui/application-window.vala:785
 msgid "The file could not be saved to the selected location."
 msgstr "Нисам могао да сачувам датотеку у изабрано место."
 
-#: src/ui/application-window.vala:774
+#: src/ui/application-window.vala:812
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимација је сачувана као „%s“"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:784
+#: src/ui/application-window.vala:822
 msgid "Click here to show the saved file in your file manager."
 msgstr "Кликните овде да видите сачувану датотеку у вашем управнику датотека."
 
-#: src/ui/application-window.vala:786
+#: src/ui/application-window.vala:824
 msgid "Show in file manager"
 msgstr "Прикажи у управнику датотека"
 
@@ -196,7 +201,7 @@ msgstr "Крени са снимањем"
 msgid "New window"
 msgstr "_Нови прозор"
 
-#: ui/application-window.ui:68
+#: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
 #, fuzzy
 msgid "Set window size"
 msgstr "_Нови прозор"
@@ -298,6 +303,24 @@ msgstr "Сними показивач миша"
 #: ui/preferences.ui:474
 msgid "Peek preferences"
 msgstr "Поставке Виркала"
+
+#: ui/set-window-size-dialog.ui:27
+#, fuzzy
+msgid "Cancel"
+msgstr "_Откажи"
+
+#: ui/set-window-size-dialog.ui:36
+#, fuzzy
+msgid "Set size"
+msgstr "_Нови прозор"
+
+#: ui/set-window-size-dialog.ui:89
+msgid "Width"
+msgstr ""
+
+#: ui/set-window-size-dialog.ui:127
+msgid "Height"
+msgstr ""
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -446,6 +469,9 @@ msgstr "Величина и положај последње отвореног �
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "Путања где је сачуван последњи видео"
+
+#~ msgid "Unable to create default screen recorder.\n"
+#~ msgstr "Не могу да направим подразумеваног снимача екрана.\n"
 
 #~ msgid "_Quit"
 #~ msgstr "_Изађи"

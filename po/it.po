@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-09 10:45+0100\n"
+"POT-Creation-Date: 2020-02-09 17:36+0100\n"
 "PO-Revision-Date: 2018-04-21 21:38+0000\n"
 "Last-Translator: Ale-Ma <alemassimiani@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/peek/"
@@ -56,19 +56,24 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-msgid "Unable to create default screen recorder.\n"
-msgstr "Impossibile creare il registratore dello schermo.\n"
-
-#: src/application.vala:261
-#, c-format
-msgid "Unable to initialize backend %s.\n"
+#, fuzzy, c-format
+msgid "Unable to initialize default recording backend: %s"
 msgstr "Impossibile inizializzare il backend %s.\n"
 
-#: src/application.vala:334
+#: src/application.vala:264
+#, fuzzy, c-format
+msgid "Unable to initialize recording backend %s: %s"
+msgstr "Impossibile inizializzare il backend %s.\n"
+
+#: src/application.vala:335
+msgid "Recording backend unavailable"
+msgstr ""
+
+#: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
 msgstr "Il backend nativo di Wayland non é supportato"
 
-#: src/application.vala:336
+#: src/application.vala:340
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -83,89 +88,89 @@ msgstr ""
 "Per dettagli vedi Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ sul supporto a Wayland</a>."
 
-#: src/ui/application-window.vala:107
+#: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 "Un errore imprevisto si è verificato durante la registrazione. La "
 "registrazione è stata annullata."
 
-#: src/ui/application-window.vala:233
+#: src/ui/application-window.vala:248
 #, fuzzy
 msgid "Rendering animation…"
 msgstr "Renderizzando…"
 
-#: src/ui/application-window.vala:234
+#: src/ui/application-window.vala:249
 #, fuzzy
 msgid "Peek will close when rendering is finished."
 msgstr "Peek si chiuderà alla fine del rendering."
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:357
+#: src/ui/application-window.vala:285 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:271 ui/application-window.ui:340
+#: src/ui/application-window.vala:286 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:272 ui/application-window.ui:391
+#: src/ui/application-window.vala:287 ui/application-window.ui:387
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:273 ui/application-window.ui:374
+#: src/ui/application-window.vala:288 ui/application-window.ui:370
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:285
+#: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
 msgstr "_Registra come %s"
 
-#: src/ui/application-window.vala:369
+#: src/ui/application-window.vala:398
 #, c-format
 msgid "Start / Stop: %s"
 msgstr ""
 
-#: src/ui/application-window.vala:513
+#: src/ui/application-window.vala:552
 msgid "Rendering…"
 msgstr "Renderizzando…"
 
-#: src/ui/application-window.vala:553
+#: src/ui/application-window.vala:592
 msgid "Recording could not be started due to an unexpected error."
 msgstr ""
 "La registrazione non si è potuta avviare a causa di un errore imprevisto."
 
-#: src/ui/application-window.vala:674 src/ui/application-window.vala:679
+#: src/ui/application-window.vala:712 src/ui/application-window.vala:717
 msgid "Save animation"
 msgstr "Salva animazione"
 
-#: src/ui/application-window.vala:675 src/ui/application-window.vala:682
+#: src/ui/application-window.vala:713 src/ui/application-window.vala:720
 msgid "_Save"
 msgstr "_Salva"
 
-#: src/ui/application-window.vala:676 src/ui/application-window.vala:680
+#: src/ui/application-window.vala:714 src/ui/application-window.vala:718
 msgid "_Cancel"
 msgstr "_Annulla"
 
-#: src/ui/application-window.vala:747
+#: src/ui/application-window.vala:785
 msgid "The file could not be saved to the selected location."
 msgstr ""
 
-#: src/ui/application-window.vala:774
+#: src/ui/application-window.vala:812
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animazione salvata come \"%s\""
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:784
+#: src/ui/application-window.vala:822
 msgid "Click here to show the saved file in your file manager."
 msgstr "Premi qui per vedere il file salvato nel tuo file manager."
 
-#: src/ui/application-window.vala:786
+#: src/ui/application-window.vala:824
 msgid "Show in file manager"
 msgstr "Mostra nel file manager"
 
@@ -204,7 +209,7 @@ msgstr "Inizia registrazione"
 msgid "New window"
 msgstr "Nuova _finestra"
 
-#: ui/application-window.ui:68
+#: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
 #, fuzzy
 msgid "Set window size"
 msgstr "Nuova _finestra"
@@ -308,6 +313,24 @@ msgstr "Cattura il cursore"
 #: ui/preferences.ui:474
 msgid "Peek preferences"
 msgstr "Preferenze Peek"
+
+#: ui/set-window-size-dialog.ui:27
+#, fuzzy
+msgid "Cancel"
+msgstr "_Annulla"
+
+#: ui/set-window-size-dialog.ui:36
+#, fuzzy
+msgid "Set size"
+msgstr "Nuova _finestra"
+
+#: ui/set-window-size-dialog.ui:89
+msgid "Width"
+msgstr ""
+
+#: ui/set-window-size-dialog.ui:127
+msgid "Height"
+msgstr ""
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -450,6 +473,9 @@ msgstr "Grandezza e posizione dell' ultima finestra principale aperta"
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
 msgstr "Posizione dove l'ultimo video è stato salvato"
+
+#~ msgid "Unable to create default screen recorder.\n"
+#~ msgstr "Impossibile creare il registratore dello schermo.\n"
 
 #~ msgid "_Quit"
 #~ msgstr "_Esci"
