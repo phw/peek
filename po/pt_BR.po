@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 17:38+0100\n"
-"PO-Revision-Date: 2019-10-09 04:58+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-02-09 17:08+0000\n"
+"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -216,9 +216,8 @@ msgid "Preferences"
 msgstr "Preferências"
 
 #: ui/application-window.ui:107
-#, fuzzy
 msgid "About"
-msgstr "Sobre o Peek"
+msgstr "Sobre"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
@@ -313,9 +312,8 @@ msgid "Peek preferences"
 msgstr "Preferências do Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Cancelar"
+msgstr "Cancelar"
 
 #: ui/set-window-size-dialog.ui:36
 #, fuzzy
@@ -324,7 +322,7 @@ msgstr "Nova  janela"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Largura"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
