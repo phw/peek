@@ -44,7 +44,7 @@ namespace Peek.Recording {
         case "ffmpeg":
           if (!FfmpegScreenRecorder.is_available ()) {
             throw new PeekError.SCREEN_RECORDER_ERROR (
-              _ ("ffmpeg executable not found."));
+              _ ("FFmpeg executable not found."));
           }
           return new FfmpegScreenRecorder ();
         default:

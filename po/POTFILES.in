@@ -1,4 +1,5 @@
 src/application.vala
+src/recording/screen-recorder-factory.vala
 src/ui/about-dialog.vala
 src/ui/application-window.vala
 src/ui/preferences-dialog.vala
