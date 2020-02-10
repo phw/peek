@@ -5,13 +5,14 @@
 # Translators:
 # andreas-xavier <andreas-xavier@ubuntu-it.org>, 2016
 # Emanuele Antonio Faraone <emanueleant03@gmail.com>, 2016-2017
+# Albano Battistella <albano_battistella@hotmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2018-04-21 21:38+0000\n"
-"Last-Translator: Ale-Ma <alemassimiani@gmail.com>\n"
+"PO-Revision-Date: 2020-02-10 18:38+0100\n"
+"Last-Translator: AlbanoBattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/peek/"
 "translations/it/>\n"
 "Language: it\n"
@@ -58,16 +59,16 @@ msgstr "Peek"
 #: src/application.vala:248
 #, fuzzy, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Impossibile inizializzare il backend %s.\n"
+msgstr Impossibile inizializzare il backend di registrazione predefinito: %s"
 
 #: src/application.vala:264
 #, fuzzy, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Impossibile inizializzare il backend %s.\n"
+msgstr "Impossibile inizializzare il backend di registrazione%s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Backend di registrazione non disponibile"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -90,11 +91,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek richiede FFmpeg o l'esecuzione della sessione della shell di GNOME."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Eseguibile FFmpeg non trovato."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -103,12 +104,10 @@ msgstr ""
 "registrazione è stata annullata."
 
 #: src/ui/application-window.vala:249
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Renderizzando…"
+msgstr "Rendering animazione ..."
 
 #: src/ui/application-window.vala:250
-#, fuzzy
 msgid "Peek will close when rendering is finished."
 msgstr "Peek si chiuderà alla fine del rendering."
 
@@ -140,7 +139,7 @@ msgstr "_Registra come %s"
 #: src/ui/application-window.vala:399
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Avvia / Ferma: %s"
 
 #: src/ui/application-window.vala:553
 msgid "Rendering…"
@@ -165,7 +164,7 @@ msgstr "_Annulla"
 
 #: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Non è stato possibile salvare il file nella posizione selezionata."
 
 #: src/ui/application-window.vala:813
 #, c-format
@@ -207,30 +206,27 @@ msgid "translator-credits"
 msgstr ""
 "Emanuele Antonio Faraone\n"
 "Alessandro Toia"
+"Albano Battistella"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
 msgstr "Inizia registrazione"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Nuova _finestra"
+msgstr "Nuova finestra"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Nuova _finestra"
+msgstr "Imposta la dimensione della finestra"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "Preferences"
-msgstr "_Preferenze"
+msgstr "Preferenze"
 
 #: ui/application-window.ui:107
-#, fuzzy
 msgid "About Peek"
-msgstr "_Informazioni"
+msgstr "Informazioni su Peek"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
@@ -245,7 +241,6 @@ msgid "_Record"
 msgstr "_Registra"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
 msgstr "Errore di registrazione"
 
@@ -264,6 +259,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+Si prega di leggere <a href = \ "https://github.com/phw/peek#frequently-asked-"
+"domande \"> Domande frequenti </a> prima di segnalare questo problema. Se le domande frequenti non rispondono "
+"al tuo problema, segnalalo e fornisci quanti più dettagli possibili su cosa"
+"stavi facendo quando si è verificato il problema."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
@@ -278,7 +277,6 @@ msgid "Open file manager after saving"
 msgstr "Apri il file manager dopo il salvataggio"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
-#, fuzzy
 msgid "Show desktop notification after saving"
 msgstr "Mostra una notifica desktop dopo il salvataggio"
 
@@ -323,22 +321,20 @@ msgid "Peek preferences"
 msgstr "Preferenze Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Annulla"
+msgstr "Annulla"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Nuova _finestra"
+msgstr "Imposta dimensione"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Larghezza"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Altezza"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -346,7 +342,7 @@ msgstr "Registra piccole animazioni GIF dal tuo schermo"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr ""
+msgstr "screencast; registratore dello schermo; cattura dello schermo; GIF; WebM; APNG;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -420,9 +416,8 @@ msgid "The main window to select the recording area"
 msgstr "La finestra principale per selezionare l'area di registrazione"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:45
-#, fuzzy
 msgid "Peek's preferences dialog"
-msgstr "Preferenze Peek"
+msgstr "Preferenze di dialogo Peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:49
 msgid "Peek is recording itself"
@@ -488,9 +483,8 @@ msgstr "Posizione dove l'ultimo video è stato salvato"
 #~ msgid "_Quit"
 #~ msgstr "_Esci"
 
-#, fuzzy
 #~ msgid "Show notification after saving"
-#~ msgstr "Apri il file manager dopo il salvataggio"
+#~ msgstr "Mostra notifica dopo il salvataggio"
 
 #~ msgid ""
 #~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
@@ -502,10 +496,8 @@ msgstr "Posizione dove l'ultimo video è stato salvato"
 #~ msgid "peek"
 #~ msgstr "peek"
 
-#, fuzzy
 #~ msgid "Open file manager after saving."
 #~ msgstr "Apri il file manager dopo il salvataggio"
 
-#, fuzzy
 #~ msgid "Delay in seconds before recording starts."
-#~ msgstr "Tempo in secondi prima dell'inizio della registrazione"
+#~ msgstr "TRitardo in secondi prima dell'inizio della registrazione."
