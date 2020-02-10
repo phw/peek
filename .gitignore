@@ -1,7 +1,8 @@
 *~
-build/
-builddir/
-build_*/
+/build/
+/builddir/
+/build_*/
+/.vscode/
 
 CMakeCache.txt
 CMakeFiles/*
