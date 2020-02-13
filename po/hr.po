@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-01-12 02:21+0000\n"
+"PO-Revision-Date: 2020-02-14 01:50+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
 "translations/hr/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -54,18 +54,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Nije moguće pokrenuti pozadinski program %s.\n"
+msgstr "Nije moguće pokrenuti standardni pozadinski program za snimanje: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Nije moguće pokrenuti pozadinski program %s.\n"
+msgstr "Nije moguće pokrenuti pozadinski program za snimanje %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Pozadinski program za snimanje nije dostupan"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -87,11 +87,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek zahtijeva FFmpeg ili pokretanje sesije GNOME ljuske."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Izvršni FFmpeg nije pronađen."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -210,9 +210,8 @@ msgid "New window"
 msgstr "Novi prozor"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Novi prozor"
+msgstr "Postavi veličinu prozora"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -315,22 +314,20 @@ msgid "Peek preferences"
 msgstr "Peek postavke"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Prekini"
+msgstr "Odustani"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Novi prozor"
+msgstr "Postavi veličinu"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Širina"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Visina"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
