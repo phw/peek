@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-12-02 23:05+0000\n"
-"Last-Translator: S <sendoasojo@gmail.com>\n"
+"PO-Revision-Date: 2020-02-16 14:50+0000\n"
+"Last-Translator: Alex Gabilondo <alexgabi@disroot.org>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/peek/translations/"
 "eu/>\n"
 "Language: eu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -54,18 +54,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Ezin izan du  %s 1 motorra abiarazi.\n"
+msgstr "Ezin izan du berezko grabazio-motorra abiarazi: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Ezin izan du  %s 1 motorra abiarazi.\n"
+msgstr "Ezin izan du grabazio-motorra abiarazi: %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Grabatzeko motorra ez dago eskuragarri"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -79,19 +79,20 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Ari zara Peek erabiltzen Wayland gainean eta gaur egun hori ez da onartzen.  "
-"Hasi Peek XWayland erabiliz ezarpen hauekin  <tt> 1GDK_BACKEND=x11</tt> 2.\n"
+"Peek Wayland gainean erabiltzen ari zara eta gaur egun hori ez da onartzen. "
+"Hasi Peek XWayland bidez erabiltzen ezarpen hauekin <tt>GDK_BACKEND=x11</tt>."
+"\n"
 "\n"
 "Xehetasunetarako ikusi Peek <a href='https://github.com/phw/peek#why-no-"
-"native-wayland-support'> 3 Wayland soportearen gaineko ohiko galderak</a> 4."
+"native-wayland-support'>  Wayland gaineko ohiko galderak</a>."
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek-ek FFmpeg edo GNOME Shell saioa martxan behar du."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "FFmpeg exekutagarria ez da aurkitu."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -208,9 +209,8 @@ msgid "New window"
 msgstr "Leiho berria"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Leiho berria"
+msgstr "Ezarri leihoaren tamaina"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -313,22 +313,20 @@ msgid "Peek preferences"
 msgstr "Peek hobespenak"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Utzi"
+msgstr "Utzi"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Leiho berria"
+msgstr "Ezarri tamaina"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Zabalera"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Altuera"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
