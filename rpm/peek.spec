@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.4.0
+Version:        1.5.0
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
