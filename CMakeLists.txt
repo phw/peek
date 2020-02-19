@@ -151,6 +151,7 @@ vala_precompile(VALA_C
     src/recording/screen-recorder.vala
     src/ui/about-dialog.vala
     src/ui/application-window.vala
+    src/ui/set-window-size-dialog.vala
     src/ui/error-dialog.vala
     src/ui/preferences-dialog.vala
     src/ui/shortcut-label.vala
