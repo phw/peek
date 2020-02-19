@@ -1,3 +1,6 @@
+# Version 1.5.1 - 2020-02-19
+- build: Fixed building with CMake
+
 # Version 1.5.0 - 2020-02-18
 - feat: Dialog to set recording area size (#246, #519)
 - feat: Use radio buttons for format selection to easily show selected format
