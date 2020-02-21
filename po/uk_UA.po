@@ -9,19 +9,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-07-20 14:06+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-02-22 20:32+0000\n"
+"Last-Translator: Tymofij Lytvynenko <till.svit@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
 "translations/uk/>\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -29,7 +29,7 @@ msgstr "Показати версію програми і вийти"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "Виберіть джерело запису (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -57,18 +57,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Неможливо ініціалізувати післяпроцесор %s.\n"
+msgstr "Не вдається започаткувати резервний усталений сервер запису: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Неможливо ініціалізувати післяпроцесор %s.\n"
+msgstr "Неможливо започаткувати резервний файл запису %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Запис не доступний"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -91,20 +91,19 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek rвимагає FFmpeg або запуск GNOME Shell сесії."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Виконуваний файл FFmpeg не знайдено."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr "Несподівана помилка запису. Запис припинено."
 
 #: src/ui/application-window.vala:249
-#, fuzzy
 msgid "Rendering animation…"
-msgstr "Візуалізація…"
+msgstr "Відмальовування анімації…"
 
 #: src/ui/application-window.vala:250
 msgid "Peek will close when rendering is finished."
@@ -138,7 +137,7 @@ msgstr "Записувати як %s"
 #: src/ui/application-window.vala:399
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Запуск/Зупин: %s"
 
 #: src/ui/application-window.vala:553
 msgid "Rendering…"
@@ -162,7 +161,7 @@ msgstr "_Скасувати"
 
 #: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "Не вдалося зберегти файл у вибраному розташуванні."
 
 #: src/ui/application-window.vala:813
 #, c-format
@@ -210,24 +209,20 @@ msgid "Start recording"
 msgstr "Почати запис"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "Нове _вікно"
+msgstr "Нове вікно"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Нове _вікно"
+msgstr "Встановити розмір вікна"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "Preferences"
-msgstr "_Налаштування"
+msgstr "Налаштування"
 
 #: ui/application-window.ui:107
-#, fuzzy
 msgid "About Peek"
-msgstr "_Про"
+msgstr "Про Peek"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
@@ -242,17 +237,16 @@ msgid "_Record"
 msgstr "_Запис"
 
 #: ui/error-dialog.ui:8
-#, fuzzy
 msgid "Recording error"
-msgstr "Запис"
+msgstr "Помилка запису"
 
 #: ui/error-dialog.ui:28
 msgid "Report issue"
-msgstr ""
+msgstr "Повідомити про проблему"
 
 #: ui/error-dialog.ui:42
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: ui/error-dialog.ui:87
 msgid ""
@@ -261,10 +255,15 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Прочитайте, будь ласка <a href=\"https://github.com/phw/peek#frequently-"
+"asked-questions\">FAQs</a>перш ніж повідомити про це питання. Якщо поширені "
+"запитання не відповідають на вашу проблему, повідомте про це та надайте "
+"якомога більше докладних відомостей про те, що ви робили, коли сталася "
+"проблема."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
-msgstr ""
+msgstr "Показати подробиці"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -276,7 +275,7 @@ msgstr "Відкрити менеджер файлів після збереже
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "Показувати сповіщення на робочому столі після збереження"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
