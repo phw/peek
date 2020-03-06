@@ -1,3 +1,21 @@
+peek (1.5.1-0) mx; urgency=low
+
+  * New upstream release 1.5.1
+    - build: Fixed building with CMake
+  * New upstream release 1.5.0
+    - feat: Dialog to set recording area size (#246, #519)
+    - feat: Use radio buttons for format selection to easily show selected format
+    - fix: Show error dialog on startup if recording backend is unavailable (#539)
+    - fix: Fix missing title in taskbar on KDE Plasma (#349)
+    - fix: Changing output format in small UI mode resizes the window
+    - fix: Disable menu during recording
+    - i18n: New translations for Finnish and Hebrew
+    - i18n: Updated translations for Basque, Chinese (Simplified),
+      Chinese (Traditional), Croation, Czech, Dutch, French, German, Indonesian,
+      Lithuanian, Norwegian Bokmål, Portuguese (Brazil), Spanish and Swedish
+
+ -- Philipp Wolfer <ph.wolfer@gmail.com>  Fri, 06 Mar 2019 09:12:00 +0100
+
 peek (1.4.0-0) mx; urgency=low
 
   * New upstream release 1.4.0
