@@ -1,3 +1,6 @@
+# Version 1.5.2 - 2020-??-??
+- fix: Fix format selection popover updating on format change
+
 # Version 1.5.1 - 2020-02-19
 - build: Fixed building with CMake
 

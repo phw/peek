@@ -293,12 +293,27 @@ namespace Peek.Ui {
 
     private void select_format (OutputFormat format) {
       recorder.config.output_format = format;
-      update_format_label ();
     }
 
     private void update_format_label () {
       var format_name = get_format_name (recorder.config.output_format);
       record_button.set_label (_ ("Record as %s").printf (format_name));
+
+      switch (recorder.config.output_format) {
+        case OutputFormat.GIF:
+          gif_button.set_active (true);
+          break;
+        case OutputFormat.APNG:
+          apng_button.set_active (true);
+          break;
+        case OutputFormat.WEBM:
+          webm_button.set_active (true);
+          break;
+        case OutputFormat.MP4:
+          mp4_button.set_active (true);
+          break;
+      }
+
       var area = get_recording_area ();
       update_ui_size (area);
       pop_format.hide ();
