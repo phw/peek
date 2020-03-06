@@ -111,8 +111,10 @@ namespace Peek {
     public override void shutdown () {
       debug ("Application got shutdown signal");
       foreach (var window in this.get_windows ()) {
-        var recorder = (window as ApplicationWindow).recorder;
-        recorder.cancel ();
+        var app_window = (window as ApplicationWindow);
+        if (app_window != null) {
+          app_window.recorder.cancel ();
+        }
       }
 
 #if HAS_KEYBINDER
