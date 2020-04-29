@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-10-09 04:58+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-04-30 02:11+0000\n"
+"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -54,18 +54,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Não é possível inicializar o backend %s.\n"
+msgstr "Não é possível inicializar o backend de gravação padrão: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Não é possível inicializar o backend %s.\n"
+msgstr "Não é possível inicializar o backend de gravação %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Backend de gravação indisponível"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -89,11 +89,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek requer o FFmpeg ou uma sessão em execução do GNOME Shell."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Executável do FFmpeg não encontrado."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -215,9 +215,8 @@ msgid "New window"
 msgstr "Nova  janela"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Nova janela"
+msgstr "Definir tamanho da janela"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -324,9 +323,8 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Nova  janela"
+msgstr "Definir tamanho"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
