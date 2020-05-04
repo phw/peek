@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-04-15 05:11+0000\n"
-"Last-Translator: strixaluco <maddox@i.ua>\n"
+"PO-Revision-Date: 2020-05-05 19:11+0000\n"
+"Last-Translator: ihor_ck <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
 "translations/uk/>\n"
 "Language: uk_UA\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -41,11 +41,11 @@ msgstr "Розпочати запис в усіх запущених копія�
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr "Зупинити запис в усіх запущених копіях Peek"
+msgstr "Зупинити запис у всіх запущених вікнах Peek"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr "Перемикнути запис в усіх запущених копіях Peek"
+msgstr "Перемикнути запис у всіх запущених вікнах Peek"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
@@ -91,7 +91,7 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr "Peek rвимагає FFmpeg або запуск GNOME Shell сесії."
+msgstr "Peek вимагає FFmpeg або запуск сеансу GNOME Shell."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
@@ -202,7 +202,8 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr ""
 "Boris Sikora <sikora.boris@gmail.com>\n"
-"strixaluco"
+"strixaluco\n"
+"Ihor Hordiichuk <igor_ck@outlook.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -218,7 +219,7 @@ msgstr "Встановити розмір вікна"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
-msgstr "Налаштування"
+msgstr "Параметри"
 
 #: ui/application-window.ui:107
 msgid "About Peek"
@@ -255,11 +256,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
-"Прочитайте, будь ласка <a href=\"https://github.com/phw/peek#frequently-"
-"asked-questions\">FAQs</a>перш ніж повідомити про це питання. Якщо поширені "
-"запитання не відповідають на вашу проблему, повідомте про це та надайте "
-"якомога більше докладних відомостей про те, що ви робили, коли сталася "
-"проблема."
+"Будь ласка, прочитайте <a href=\"https://github.com/phw/peek#frequently-"
+"asked-questions\">ЧаПи</a>перш ніж повідомити про цю проблему. Якщо ви не "
+"знайшли відповідь у ЧаП , повідомте про проблему та надайте якнайдокладніші "
+"відомості про ваші дії, коли сталася проблема."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
@@ -279,7 +279,7 @@ msgstr "Показувати сповіщення на робочому стол
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr "Почати запис"
+msgstr "Почати / зупинити запис"
 
 #: ui/preferences.ui:185
 msgid "Recording"
@@ -291,7 +291,7 @@ msgstr "Виходовий формат"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Використовувати gifski для високоякісних GIFів"
+msgstr "Скористатися gifski для високоякісних GIFів"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
@@ -299,7 +299,7 @@ msgstr "Якість GIF"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Кадрова частота"
+msgstr "Частота кадрів"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
@@ -315,7 +315,7 @@ msgstr "Захоплювати вказівник миші"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
-msgstr "Налаштування Peek"
+msgstr "Параметри Peek"
 
 #: ui/set-window-size-dialog.ui:27
 msgid "Cancel"
@@ -349,7 +349,7 @@ msgstr "com.uploadedlobster.peek"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr "Простий записувач оживлених GIF зі зручним інтерфейсом"
+msgstr "Простий записувач екрана зі зручним інтерфейсом"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
 msgid ""
@@ -360,14 +360,21 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"Peek дозволяє легко створювати короткі відеоролики вибраної області екрана. "
+"Його створено для випадків, коли необхідно записати окремі частини екрана, "
+"наприклад, для легкого показу функцій інтерфейсу ваших власних програм або "
+"для показу знайдених вад у звітах про помилки. З Peek ви просто розміщуєте "
+"вікно Peek над областю, яку ви хочете записати й натискаєте \"Записувати як\""
+". Peek оптимізований для створення анімованих GIF, але ви також можете "
+"записувати відеоролики у форматі WebM або MP4, якщо ви надаєте їм перевагу."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
-msgstr "Властивості:"
+msgstr "Функції:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
-msgstr "Позначення довільних ділянок екрану для запису"
+msgstr "Запис довільних ділянок екрана"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
@@ -375,7 +382,7 @@ msgstr "Збереження відео у форматі оптимізован
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
-msgstr "Запис напряму у форматі WebM або MP4"
+msgstr "Запис безпосередньо у форматі WebM або MP4"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -400,6 +407,10 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"Основним завданням Peek не є запис екрана з розширеними функціями, він "
+"фокусується на одному завданні — створення коротких, німих анімованих "
+"записів окремих частин екрана у форматі GIF або німих відео у форматах WebM "
+"або MP4."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:41
 msgid "The main window to select the recording area"
