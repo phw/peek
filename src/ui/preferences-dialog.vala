@@ -82,6 +82,9 @@ namespace Peek.Ui {
     [GtkChild]
     private Gtk.CheckButton recording_capture_mouse;
 
+    [GtkChild]
+    private Gtk.CheckButton should_auto_save;
+
 
     public PreferencesDialog () {
       Object ();
@@ -122,6 +125,10 @@ namespace Peek.Ui {
 
       settings.bind ("recording-capture-mouse",
         recording_capture_mouse, "active",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("should-auto-save",
+        should_auto_save, "active",
         SettingsBindFlags.DEFAULT);
 
       on_interface_open_file_manager_toggled (interface_open_file_manager);
