@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-03-05 15:33+0000\n"
+"PO-Revision-Date: 2020-06-14 22:41+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
 "translations/hr/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -163,17 +163,17 @@ msgstr "Nije bilo moguće spremiti datoteku na odabrano mjesto."
 #: src/ui/application-window.vala:813
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr "Animacija pohranjena kao “%s”"
+msgstr "Animacija je spremljena kao „%s”"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
 #: src/ui/application-window.vala:823
 msgid "Click here to show the saved file in your file manager."
-msgstr "Klikni za prikaz pohranjene datoteke."
+msgstr "Klikni ovdje za prikaz spremljene datoteke u upravljaču datoteka."
 
 #: src/ui/application-window.vala:825
 msgid "Show in file manager"
-msgstr "Prikaži u upravitelju datoteka"
+msgstr "Prikaži u upravljaču datoteka"
 
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
@@ -263,7 +263,7 @@ msgstr "Prikaži detalje"
 
 #: ui/preferences.ui:77
 msgid "User interface"
-msgstr "Grafičko sučelje"
+msgstr "Korisničko sučelje"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
