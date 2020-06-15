@@ -10,10 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
-"Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
+"PO-Revision-Date: 2020-06-16 17:41+0000\n"
+"Last-Translator: alteregoart <arthur.dion@yahoo.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.1.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -58,20 +58,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr ""
-"Unable to initialize backend %s (Impossible d'initialiser le backend).\n"
+msgstr "Impossible d'initialiser le backend par défaut : %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr ""
-"Unable to initialize backend %s (Impossible d'initialiser le backend).\n"
+msgstr "Impossible d'initialiser le backend pour enregistrer %s : %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Backend d'enregistrement non disponible"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -95,10 +93,11 @@ msgstr ""
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
 msgstr ""
+"Peek nécessite FFmpeg ou une session de GNOME Shell en cours d'exécution."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "L'exécutable FFmpeg est introuvable."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -211,7 +210,8 @@ msgid "translator-credits"
 msgstr ""
 "Yoan Malié <hello@yoan-malie.fr>\n"
 "Mohamed Sakhri <mohamed.sakhri@gmail.com>\n"
-"JeanDeLaMouche <urgau@numericable.fr>"
+"JeanDeLaMouche <urgau@numericable.fr>\n"
+"alteregoart"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -222,9 +222,8 @@ msgid "New window"
 msgstr "Nouvelle fenêtre"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Nouvelle fenêtre"
+msgstr "Choisir la taille de la fenêtre"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -327,22 +326,20 @@ msgid "Peek preferences"
 msgstr "Préférences de Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Annuler"
+msgstr "Annuler"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Nouvelle fenêtre"
+msgstr "Choisir la taille"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Largeur"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Hauteur"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -350,7 +347,7 @@ msgstr "Enregistrer de courtes images animées GIF de votre écran"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
-msgstr "screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr "enregistrement d'écran ;captured'écran ;GIF ;WebM ;APNG ;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
@@ -371,7 +368,7 @@ msgid ""
 msgstr ""
 "Peek facilite la création de courtes captures vidéo d'une zone d'écran. Il a "
 "été conçu pour le cas spécifique d'enregistrement de zones d'écran, par "
-"exemple pour afficher facilement les fonctionnalités  UI de vos applications "
+"exemple pour afficher facilement les fonctionnalités UI de vos applications "
 "ou pour montrer un bug dans des rapports. Avec Peek, vous placez simplement "
 "la fenêtre de Peek sur la zone que vous souhaitez enregistrer et cliquez sur "
 "\"Enregistrer\". Peek est optimisé pour générer des GIF animés, mais vous "
