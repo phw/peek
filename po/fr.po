@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
 "PO-Revision-Date: 2020-06-16 17:41+0000\n"
-"Last-Translator: alteregoart <arthur.dion@yahoo.fr>\n"
+"Last-Translator: JeanDeLaMouche <urgau@numericable.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/peek/translations/"
 "fr/>\n"
 "Language: fr\n"
@@ -29,7 +29,7 @@ msgstr "Affiche la version du programme et quitter"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "Sélectionner l'encoder (gnome-shell, ffmpeg)"
+msgstr "Sélectionner le moteur d'enregistrement (gnome-shell, ffmpeg)"
 
 #: src/application.vala:68
 msgid "BACKEND"
