@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-02-11 19:50+0000\n"
+"PO-Revision-Date: 2020-06-18 10:41+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/peek/"
 "translations/nb_NO/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.1.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -61,7 +61,7 @@ msgstr "Klarte ikke å igangsette bakende %s.\n"
 #: src/application.vala:264
 #, fuzzy, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Klarte ikke å igangsette bakende %s.\n"
+msgstr "Klarte ikke å igangsette opptaks-bakende %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
