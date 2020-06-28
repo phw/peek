@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
 "PO-Revision-Date: 2020-06-29 17:41+0000\n"
-"Last-Translator: Szylu <chipolade@gmail.com>\n"
+"Last-Translator: Michal Biesiada <blade-14@o2.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/peek/translations/"
 "pl/>\n"
 "Language: pl\n"
@@ -91,7 +91,7 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek wymaga FFmpeg lub uruchomienia sesji powłoki GNOME."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
