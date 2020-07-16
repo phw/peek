@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-04-06 12:09+0000\n"
-"Last-Translator: Mihail Iosilevitch <yosik@tutanota.com>\n"
+"PO-Revision-Date: 2020-07-18 15:41+0000\n"
+"Last-Translator: Igor Polyakov <igorpolyakov@protonmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -56,9 +56,9 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Невозможно инициализировать службу записи %s.\n"
+msgstr "Невозможно инициализировать службу записи: %s"
 
 #: src/application.vala:264
 #, c-format
@@ -209,7 +209,6 @@ msgid "New window"
 msgstr "Новое окно"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
 msgstr "Установить размер окна"
 
