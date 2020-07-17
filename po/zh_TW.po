@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-01-15 12:21+0000\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"PO-Revision-Date: 2020-07-18 15:41+0000\n"
+"Last-Translator: WhiredPlanck <fungdaat31@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -53,18 +53,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "無法初始化 %s 後端。\n"
+msgstr "無法初始化 %s 後端"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "無法初始化 %s 後端。\n"
+msgstr "無法初始化 %s 後端：%s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "錄製後端不可用"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -86,11 +86,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek 需要 FFmpeg 或執行于 GNOME Shell 會話中。"
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "找不到 FFmpeg 可執行檔案。"
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -197,7 +197,8 @@ msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
 msgstr ""
 "coin3x\n"
-"pan93412"
+"pan93412\n"
+"WhiredPlanck"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -208,9 +209,8 @@ msgid "New window"
 msgstr "開新視窗"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "開新視窗"
+msgstr "設定窗格大小"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -312,22 +312,20 @@ msgid "Peek preferences"
 msgstr "Peek 偏好設定"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "取消(_C)"
+msgstr "取消"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "開新視窗"
+msgstr "設定尺寸"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "寬度"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "高度"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
