@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-09-27 06:54+0000\n"
+"PO-Revision-Date: 2020-08-03 17:41+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/peek/"
 "translations/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -81,11 +81,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek vaatii FFmpegin tai käynnissä olevan GNOME Shell -istunnon."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "FFmpeg:in suoritustiedostoa ei löytynyt."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -93,11 +93,11 @@ msgstr ""
 
 #: src/ui/application-window.vala:249
 msgid "Rendering animation…"
-msgstr ""
+msgstr "Renderöidään animaatiota…"
 
 #: src/ui/application-window.vala:250
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "Peek sulkeutuu, kun renderöinti valmistuu."
 
 #: src/ui/application-window.vala:286 ui/application-window.ui:353
 #: ui/preferences.ui:224
@@ -122,7 +122,7 @@ msgstr "WebM"
 #: src/ui/application-window.vala:301
 #, c-format
 msgid "Record as %s"
-msgstr ""
+msgstr "Nauhoita %s-muotoon"
 
 #: src/ui/application-window.vala:399
 #, c-format
@@ -131,7 +131,7 @@ msgstr "Käynnistä/pysäytä: %s"
 
 #: src/ui/application-window.vala:553
 msgid "Rendering…"
-msgstr ""
+msgstr "Renderöidään…"
 
 #: src/ui/application-window.vala:593
 msgid "Recording could not be started due to an unexpected error."
@@ -156,7 +156,7 @@ msgstr "Tiedostoa ei voitu tallentaa valittuun sijaintiin."
 #: src/ui/application-window.vala:813
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "Animaatio tallennettu nimellä “%s”"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
@@ -171,7 +171,7 @@ msgstr "Näytä tiedostonhallinnassa"
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr ""
+msgstr "ei käytössä"
 
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
@@ -184,7 +184,7 @@ msgstr "Paina näppäimiä…"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "Animoidun GIF-tiedoston tallennin"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui.in:40
@@ -201,9 +201,8 @@ msgid "New window"
 msgstr "Uusi ikkuna"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Uusi ikkuna"
+msgstr "Aseta ikkunan koko"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -302,22 +301,20 @@ msgid "Peek preferences"
 msgstr "Peekin asetukset"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Peru"
+msgstr "Peru"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Uusi ikkuna"
+msgstr "Aseta koko"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Leveys"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Korkeus"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
