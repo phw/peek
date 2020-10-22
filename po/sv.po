@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-02-10 05:47+0000\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"PO-Revision-Date: 2020-10-23 23:26+0000\n"
+"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.3.1\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -285,7 +285,7 @@ msgstr "Utdataformat"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Använd gifski för för högkvalitativa GIF-filer"
+msgstr "Använd gifski för högkvalitativa GIF-filer"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
