@@ -6,31 +6,34 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:32+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-11-29 16:29+0000\n"
+"Last-Translator: Oymate <dhruboadittya96@gmail.com>\n"
+"Language-Team: Bengali <https://hosted.weblate.org/projects/peek/"
+"translations/bn/>\n"
 "Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "প্রোগ্রামটির সংস্করণ দেখাও এবং বের"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "রেকর্ডিংয়ের ব্যাকএন্ড নির্বাচন করো (গ্নোম-শেল, এফএফএমপেগ)"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr ""
+msgstr "ব্যাকএন্ড"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr ""
+msgstr "সমস্ত চলমান পীক দৃষ্টান্তে রেকর্ডিং শুরু করো"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
@@ -119,7 +122,7 @@ msgstr ""
 #: src/ui/application-window.vala:301
 #, c-format
 msgid "Record as %s"
-msgstr ""
+msgstr "%s হিসাবে রেকর্ড"
 
 #: src/ui/application-window.vala:399
 #, c-format
@@ -128,7 +131,7 @@ msgstr ""
 
 #: src/ui/application-window.vala:553
 msgid "Rendering…"
-msgstr ""
+msgstr "রেন্ডার হচ্ছে…"
 
 #: src/ui/application-window.vala:593
 msgid "Recording could not be started due to an unexpected error."
@@ -139,8 +142,9 @@ msgid "Save animation"
 msgstr ""
 
 #: src/ui/application-window.vala:714 src/ui/application-window.vala:721
+#, fuzzy
 msgid "_Save"
-msgstr ""
+msgstr "_সংরক্ষণ"
 
 #: src/ui/application-window.vala:715 src/ui/application-window.vala:719
 msgid "_Cancel"
@@ -181,13 +185,13 @@ msgstr ""
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "অ্যানিমেটেড গিফ রেকর্ডার"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "Github, Weblate, Gitlab- Oymat"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -211,7 +215,7 @@ msgstr ""
 
 #: ui/application-window.ui:149
 msgid "_Stop"
-msgstr ""
+msgstr "_থামো"
 
 #: ui/application-window.ui:159
 msgid "Stop recording"
