@@ -70,6 +70,10 @@
       <default>true</default>
       <summary>Whether to capture the mouse cursor</summary>
     </key>
+    <key name="recording-capture-sound" type="b">
+      <default>true</default>
+      <summary>Whether to capture sound from default PULSE input device</summary>
+    </key>
     <key name="persist-window-geometry" type="(iiii)">
       <default>(-1,-1,500,300)</default>
       <summary>Size and position of the last open main window</summary>

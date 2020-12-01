@@ -159,12 +159,18 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
-        pipeline.append ("queue ! webmmux");
+        pipeline.append ("videoconvert ! queue ! videorate ! vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! ");
+        if (config.capture_sound) {
+          pipeline.append ("mux. pulsesrc ! queue !  audioconvert ! vorbisenc ! ");
+        }
+        pipeline.append ("queue ! mux. webmmux name=mux");
       } else if (config.output_format == OutputFormat.MP4) {
-        pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
-        pipeline.append ("video/x-h264, profile=baseline ! ");
-        pipeline.append ("queue ! mp4mux");
+        pipeline.append ("videoconvert ! queue ! videorate ! x264enc speed-preset=fast threads=%T ! ");
+        pipeline.append ("video/x-h264, profile=baseline ! queue !");
+        if (config.capture_sound) {
+          pipeline.append ("mux. pulsesrc ! queue !  audioconvert ! lamemp3enc ! ");
+        }
+        pipeline.append ("queue ! mux. mp4mux name=mux");
       } else {
         // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.
@@ -175,6 +181,7 @@ namespace Peek.Recording {
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
+      debug ("Debug with gst-launch-1.0 --gst-debug=3 ximagesrc %s ! filesink location=screencast", pipeline.str);
       return pipeline.str;
     }
 
