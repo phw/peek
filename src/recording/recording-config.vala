@@ -13,6 +13,7 @@ namespace Peek.Recording {
     public int framerate { get; set; default = DEFAULT_FRAMERATE; }
     public int downsample { get; set; default = DEFAULT_DOWNSAMPLE; }
     public bool capture_mouse { get; set; default = true; }
+    public bool capture_sound { get; set; default = true; }
     public bool gifski_enabled { get; set; default = false; }
     public int gifski_quality { get; set; default = DEFAULT_GIFSKI_QUALITY; }
   }
