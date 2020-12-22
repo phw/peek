@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2019-09-24 09:26+0200\n"
-"PO-Revision-Date: 2020-11-13 11:28+0000\n"
+"PO-Revision-Date: 2020-12-23 13:29+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/peek/translations/"
 "he/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -183,7 +183,7 @@ msgstr "תוכנה להקלטת GIF"
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "עומר טוכפלד"
 
 #: ui/application-window.ui:33 ui/application-window.ui:171
 msgid "Start recording"
