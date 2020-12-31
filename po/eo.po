@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-06-19 23:00+0000\n"
-"Last-Translator: Tirifto <tirifto@posteo.cz>\n"
+"PO-Revision-Date: 2021-01-01 22:29+0000\n"
+"Last-Translator: Jorge Maldonado Ventura <jorgesumle@freakspot.net>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/peek/"
 "translations/eo/>\n"
 "Language: eo\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -53,18 +53,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Ne eblas funkciigi registrilon %s.\n"
+msgstr "Ne eblas funkciigi defaŭltan registrilon: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Ne eblas funkciigi registrilon %s.\n"
+msgstr "Ne eblas funkciigi registrilon %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Registrilo ne disponebla"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -86,11 +86,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek bezonas je FFmpeg aŭ ruli seancon de GNOME Shell."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Plenumebla FFmpeg-dosiero ne trovita."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -207,9 +207,8 @@ msgid "New window"
 msgstr "Nova fenestro"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Nova fenestro"
+msgstr "Agordi grandon de fenestro"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -250,6 +249,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Bonvolu legi la <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">respondaron</a> antaŭ informi pri ĉi tiu problemo. Se la "
+"respondaro ne solvas vian problemon, raportu ĝin kaj donu laŭeble detalojn "
+"pri tio, kion vi estis farante, kiam la problemo okazis."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
@@ -308,22 +311,20 @@ msgid "Peek preferences"
 msgstr "Agordoj de Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Nuligi"
+msgstr "Nuligi"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Nova fenestro"
+msgstr "Agordi grandon"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Larĝo"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Alto"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
