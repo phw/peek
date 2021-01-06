@@ -5,10 +5,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2018-05-12 20:06+0000\n"
-"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
+"PO-Revision-Date: 2021-01-07 10:29+0000\n"
+"Last-Translator: Burek <jokxa@hotmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
 "translations/sr/>\n"
 "Language: sr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.0-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -53,14 +53,14 @@ msgid "Peek"
 msgstr "Виркало"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Не могу да покренем позадинца „%s“.\n"
+msgstr "Не могу да покренем позадинца „%s“"
 
 #: src/application.vala:264
 #, fuzzy, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Не могу да покренем позадинца „%s“.\n"
+msgstr "Не могу да покренем позадинца %s:%s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
@@ -87,12 +87,13 @@ msgstr ""
 "a>."
 
 #: src/recording/screen-recorder-factory.vala:26
+#, fuzzy
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Пик захтева ФФмпег или већ покренуту ГНОМЕ шел сесију"
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "Извршна датотека ФФмпег није пронађена."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -205,24 +206,20 @@ msgid "Start recording"
 msgstr "Крени са снимањем"
 
 #: ui/application-window.ui:54
-#, fuzzy
 msgid "New window"
-msgstr "_Нови прозор"
+msgstr "Нови прозор"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "_Нови прозор"
+msgstr "Подесите величину прозора"
 
 #: ui/application-window.ui:93
-#, fuzzy
 msgid "Preferences"
-msgstr "_Поставке"
+msgstr "Поставке"
 
 #: ui/application-window.ui:107
-#, fuzzy
 msgid "About Peek"
-msgstr "_О програму"
+msgstr "О програму"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
@@ -255,6 +252,10 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"Молимо прочитајте <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">ЧПП</a> пре него што пријавите овај проблем. Ако ЧПП не помогну "
+"око вашег проблема, молимо пријавите и детаљно опишите како је проблем "
+"настао."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
@@ -313,22 +314,21 @@ msgid "Peek preferences"
 msgstr "Поставке Виркала"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Откажи"
+msgstr "Откажи"
 
 #: ui/set-window-size-dialog.ui:36
 #, fuzzy
 msgid "Set size"
-msgstr "_Нови прозор"
+msgstr "Прилагодите величину"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Висина"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
