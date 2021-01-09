@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-06-18 10:41+0000\n"
+"PO-Revision-Date: 2021-01-10 07:32+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/peek/"
 "translations/nb_NO/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1.1-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -359,7 +359,7 @@ msgstr ""
 "bygg med den hensikt å ta opp skjermområder. F.eks. for å enkelt vise "
 "grensesnittsfunksjoner av programmer, eller for å vise en feil i en "
 "feilrapport. Med Peek kan du med letthet plassere Peek-vinduet over området "
-"du ønsker å ta opp og trykke \"Ta opp\". Peek er optimisert for å generere "
+"du ønsker å ta opp og trykke \"Ta opp\". Peek er optimalisert for å generere "
 "animerte GIF-filer, men du kan også ta opp direkte til WebM eller MP4 hvis "
 "du foretrekker det."
 
@@ -373,7 +373,7 @@ msgstr "Velg et skjermområde å ta opp"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "Lagre innspilt video som optimisert animert GIF-fil"
+msgstr "Lagre innspilt video som optimalisert animert GIF-fil"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
