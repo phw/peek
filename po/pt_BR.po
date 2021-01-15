@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-04-30 02:11+0000\n"
-"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
+"PO-Revision-Date: 2021-01-16 21:32+0000\n"
+"Last-Translator: Gustavo Costa <gusta@null.net>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/peek/"
 "translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.2\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -212,7 +212,7 @@ msgstr "Iniciar gravação"
 
 #: ui/application-window.ui:54
 msgid "New window"
-msgstr "Nova  janela"
+msgstr "Nova janela"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
 msgid "Set window size"
