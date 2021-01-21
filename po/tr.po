@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-09-19 23:39+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2021-01-22 06:24+0000\n"
+"Last-Translator: Bedirhan Tuhana GAYRETLİ <v30xythedev@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/peek/"
 "translations/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -41,7 +41,7 @@ msgstr "Çalışan tüm Peek oturumlarında kaydı durdur"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr "Çalışan tüm Peek örneklerinde kaydı aç/kapat"
+msgstr "Çalışan tüm Peek oturumlarında kaydı aç/kapat"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
@@ -55,12 +55,12 @@ msgstr "Peek"
 #: src/application.vala:248
 #, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Öntanımlı kayıt altyapısı başlatılamadı: %s"
+msgstr "Varsayılan kayıt altyapısı başlatılamadı: %s"
 
 #: src/application.vala:264
 #, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Kayıt altyapısı \"%s\" başlatılamadı: %s"
+msgstr "%s kayıt altyapısı başlatılamadı: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
@@ -145,7 +145,7 @@ msgstr "Beklenmedik bir hata nedeniyle kayıt başlatılamadı."
 
 #: src/ui/application-window.vala:713 src/ui/application-window.vala:718
 msgid "Save animation"
-msgstr "Animasyon kaydet"
+msgstr "Animasyonu kaydet"
 
 #: src/ui/application-window.vala:714 src/ui/application-window.vala:721
 msgid "_Save"
@@ -157,7 +157,7 @@ msgstr "_İptal"
 
 #: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
-msgstr "Dosya, seçilen yere kaydedilemedi."
+msgstr "Dosya, seçilen konuma kaydedilemedi."
 
 #: src/ui/application-window.vala:813
 #, c-format
@@ -168,7 +168,7 @@ msgstr "Animasyon, %s olarak kaydedildi"
 #. notification actions there.
 #: src/ui/application-window.vala:823
 msgid "Click here to show the saved file in your file manager."
-msgstr "Kaydedilmiş dosyayı görmek için buraya tıklayınız."
+msgstr "Kaydedilmiş dosyayı dosya yöneticisinde görmek için buraya tıklayınız."
 
 #: src/ui/application-window.vala:825
 msgid "Show in file manager"
@@ -177,7 +177,7 @@ msgstr "Dosya yöneticisinde göster"
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr "Devre dışı"
+msgstr "devre dışı"
 
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
@@ -186,7 +186,7 @@ msgstr "Değiştir"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr "Kısayol tuşlarına basınız…"
+msgstr "Tuşlara basınız…"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
@@ -196,7 +196,7 @@ msgstr "Animasyonlu GIF kaydedici"
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Oğuz Ersen"
+msgstr "Oğuz Ersen, Bedirhan Tuhana"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -250,9 +250,9 @@ msgid ""
 "you were doing when the issue occurred."
 msgstr ""
 "Bu sorunu bildirmeden önce lütfen <a href=\"https://github.com/phw/peek"
-"#frequently-asked-questions\">Sık Sorulan Soruları</a> okuyun. Bu sorununuzu "
-"yanıtlamazsa, lütfen sorunu bildirin ve sorun oluştuğunda ne yaptığınızla "
-"ilgili mümkün olduğunca fazla ayrıntı sağlayın."
+"#frequently-asked-questions\">Sıkça Sorulan Soruları</a> okuyun. Bu "
+"sorununuzu yanıtlamazsa, lütfen sorunu bildirin ve sorun oluştuğunda ne "
+"yaptığınızla ilgili mümkün olduğunca fazla ayrıntı sağlayın."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
@@ -272,11 +272,11 @@ msgstr "Kaydettikten sonra masaüstü bildirimi göster"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr "Kayda başla / durdur"
+msgstr "Kaydı başlat / durdur"
 
 #: ui/preferences.ui:185
 msgid "Recording"
-msgstr "Kayıt"
+msgstr "Kaydediliyor"
 
 #: ui/preferences.ui:208
 msgid "Output format"
@@ -292,7 +292,7 @@ msgstr "GIF kalitesi"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr "Kare hızı (Framerate)"
+msgstr "Kare hızı (FPS)"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
@@ -300,7 +300,7 @@ msgstr "Çözünürlük örnekleme"
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
-msgstr "Kayda başlamadan önce geri sayım (saniye)"
+msgstr "Kayda başlamadan önceki saniye cinsinden geri sayım"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
@@ -365,7 +365,7 @@ msgstr "Özellikler:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
-msgstr "Kayıt için bir ekran alanı seçiniz"
+msgstr "Kayıt için bir ekranda bir alan seçiniz"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
@@ -373,7 +373,7 @@ msgstr "Oluşturulmuş videoyu optimize edilmiş GIF olarak kaydet"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
-msgstr "Doğrudan WeBM veya MP4 biçiminde kaydedin"
+msgstr "Doğrudan WebM veya MP4 biçiminde kaydedin"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -436,7 +436,7 @@ msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
-"Kullanılan öntanımlı dosya adı. Tarih biçim belirteçleri içerebilir. Uzantı "
+"Kullanılan varsayılan dosya adı. Tarih biçim belirteçleri içerebilir. Uzantı "
 "otomatik olarak eklenecektir."
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
@@ -449,11 +449,11 @@ msgstr "Kaydı açmak/kapatmak için küresel tuş ataması"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
-msgstr "Çıktı dosya biçimi"
+msgstr "Dosya çıktı biçimi"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr "gifski GIF kodlayıcı için kalite ayarı"
+msgstr "Gifski GIF kodlayıcı için kalite ayarı"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
@@ -469,4 +469,4 @@ msgstr "Son açık ana pencerenin boyutu ve konumu"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
-msgstr "Son videonun kaydedildiği yol"
+msgstr "Son videonun kaydedildiği dosya yolu"
