@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2020-10-19 18:29+0000\n"
+"PO-Revision-Date: 2021-01-26 22:32+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
 "translations/uk/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -160,7 +160,7 @@ msgstr "_Скасувати"
 
 #: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
-msgstr "Не вдалося зберегти файл у вибраному розташуванні."
+msgstr "Не вдалося зберегти файл до вибраного розташування."
 
 #: src/ui/application-window.vala:813
 #, c-format
