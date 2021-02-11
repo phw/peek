@@ -143,7 +143,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="hexpand">False</property>
             <property name="vexpand">False</property>
             <property name="baseline_position">bottom</property>
-            <property name="layout_style">spread</property>
+            <property name="layout_style">expand</property>
             <child>
               <object class="GtkButton" id="stop_button">
                 <property name="label" translatable="yes">_Stop</property>
