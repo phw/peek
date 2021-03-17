@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:35+0100\n"
-"PO-Revision-Date: 2019-11-16 19:04+0000\n"
-"Last-Translator: wellart <wella.design@gmail.com>\n"
+"PO-Revision-Date: 2021-03-18 05:18+0000\n"
+"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/peek/"
 "translations/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -53,18 +53,18 @@ msgid "Peek"
 msgstr "Peek"
 
 #: src/application.vala:248
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Tidak bisa menginisialisasikan backend %s.\n"
+msgstr "Tidak bisa menginisialisasikan backend: %s"
 
 #: src/application.vala:264
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr "Tidak bisa menginisialisasikan backend %s.\n"
+msgstr "Tidak bisa menginisialisasikan rekaman backend %s: %s"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "Rekaman backend tidak tersedia"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
@@ -87,11 +87,11 @@ msgstr ""
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "Peek memerlukan FFmpeg atau menjalankan sesi GNOME Shell."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "FFmpeg tidak ditemukan."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
@@ -210,9 +210,8 @@ msgid "New window"
 msgstr "Jendela baru"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
-#, fuzzy
 msgid "Set window size"
-msgstr "Jendela baru"
+msgstr "Atur ukuran jendela"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
@@ -315,22 +314,20 @@ msgid "Peek preferences"
 msgstr "Preferensi Peek"
 
 #: ui/set-window-size-dialog.ui:27
-#, fuzzy
 msgid "Cancel"
-msgstr "_Batal"
+msgstr "Batal"
 
 #: ui/set-window-size-dialog.ui:36
-#, fuzzy
 msgid "Set size"
-msgstr "Jendela baru"
+msgstr "Atur ukuran"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "Lebar"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "Tinggi"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
