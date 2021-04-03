@@ -6,66 +6,69 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2020-02-09 21:32+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-04-04 09:26+0000\n"
+"Last-Translator: Dilip <dilip.cauti@gmail.com>\n"
+"Language-Team: Malayalam <https://hosted.weblate.org/projects/peek/"
+"translations/ml/>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
-msgstr ""
+msgstr "പ്രോഗ്രാമിന്റെ പതിപ്പ് പ്രദർശിപ്പിച്ചു പുറത്തുകടക്കുക"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr ""
+msgstr "റെക്കോർഡ് നുള്ള ശക്തി തിരഞ്ഞെടുക്കുക (ഗ്നോം-ഷെൽ, എഫ്എഫ് എംപെഗ് )"
 
 #: src/application.vala:68
 msgid "BACKEND"
-msgstr ""
+msgstr "അണിയറ"
 
 #: src/application.vala:72
 msgid "Start recording in all running Peek instances"
-msgstr ""
+msgstr "പ്രവർത്തിക്കുന്ന എല്ലാ പീക്ക് ജാലകങ്ങളിലും റെക്കോർഡിംഗ് ആരംഭിക്കുക"
 
 #: src/application.vala:76
 msgid "Stop recording in all running Peek instances"
-msgstr ""
+msgstr "പ്രവർത്തിക്കുന്ന എല്ലാ പീക്ക് രൂപങ്ങളിലും റെക്കോർഡിംഗ് നിർത്തുക"
 
 #: src/application.vala:80
 msgid "Toggle recording in all running Peek instances"
-msgstr ""
+msgstr "പ്രവർത്തിക്കുന്ന എല്ലാ പീക്ക് രൂപങ്ങളിലും റെക്കോർഡിംഗ് ടോഗിൾ ചെയ്യുക"
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr ""
+msgstr "തലക്കെട്ട് പെട്ടി ഇല്ലാതെ പീക്ക് ആരംഭിക്കുക"
 
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
-msgstr ""
+msgstr "പീക്ക്"
 
 #: src/application.vala:248
 #, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr ""
+msgstr "സ്ഥിരസ്ഥിതി റെക്കോർഡിംഗ് അണിയറ സമാരംഭിക്കാനായില്ല:%s"
 
 #: src/application.vala:264
 #, c-format
 msgid "Unable to initialize recording backend %s: %s"
-msgstr ""
+msgstr "%s:%s റെക്കോർഡിംഗ് അണിയറ സമാരംഭിക്കാനായില്ല"
 
 #: src/application.vala:335
 msgid "Recording backend unavailable"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് അണിയറ ലഭ്യമല്ല"
 
 #: src/application.vala:339
 msgid "Native Wayland backend is unsupported"
-msgstr ""
+msgstr "അണിയറയിൽ സ്ഥാനിയായ വേലാൻഡ് പിന്തുണയ്ക്കുന്നില്ല"
 
 #: src/application.vala:340
 msgid ""
@@ -75,163 +78,173 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
+"നിങ്ങൾ വൈലാൻഡിൽ പ്രാദേശികമായി പീക്ക് പ്രവർത്തിപ്പിക്കുന്നു, ഇത് നിലവിൽ "
+"പിന്തുണയ്‌ക്കില്ല. <tt> GDK_BACKEND = x11 </tt> സജ്ജമാക്കി XWayland "
+"ഉപയോഗിച്ച് പീക്ക് ആരംഭിക്കുക.\n"
+"\n"
+"വിശദാംശങ്ങൾക്ക് പീക്ക് <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'> വെയ്‌ലാന്റ് പിന്തുണയെക്കുറിച്ചുള്ള പതിവുചോദ്യങ്ങൾ </a> "
+"കാണുക."
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
+msgstr "പീക്കിന് എഫ്എഫ്എംപെഗ് അല്ലെങ്കിൽ ഗ്നോം ഷെൽ സെഷൻ ആവശ്യമാണ്."
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
-msgstr ""
+msgstr "ഉപയോഗിക്കാവുന്ന എഫ്എഫ്എംപെഗ് കണ്ടെത്തിയിട്ടില്ല."
 
 #: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
+"റെക്കോർഡിംഗ് സമയത്ത് ഒരു അപ്രതീക്ഷിത പിശക് സംഭവിച്ചു. റെക്കോർഡിംഗ് "
+"നിർത്തലാക്കി."
 
 #: src/ui/application-window.vala:249
 msgid "Rendering animation…"
-msgstr ""
+msgstr "ചലിക്കും ചിത്രം നിർമിക്കുന്നു…"
 
 #: src/ui/application-window.vala:250
 msgid "Peek will close when rendering is finished."
-msgstr ""
+msgstr "നിർമാണം പൂർത്തിയാകുമ്പോൾ പീക്ക് അടയ്ക്കും."
 
 #: src/ui/application-window.vala:286 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
-msgstr ""
+msgstr "എപിഎൻജി"
 
 #: src/ui/application-window.vala:287 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
-msgstr ""
+msgstr "ജിഐഎഫ്"
 
 #: src/ui/application-window.vala:288 ui/application-window.ui:387
 #: ui/preferences.ui:226
 msgid "MP4"
-msgstr ""
+msgstr "എംപി4"
 
 #: src/ui/application-window.vala:289 ui/application-window.ui:370
 #: ui/preferences.ui:225
 msgid "WebM"
-msgstr ""
+msgstr "വെബ്എം"
 
 #: src/ui/application-window.vala:301
 #, c-format
 msgid "Record as %s"
-msgstr ""
+msgstr "ഇങ്ങിനെ റെക്കോർഡ് ചെയ്യുക %s"
 
 #: src/ui/application-window.vala:399
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "ആരംഭിക്കുക / നിർത്തുക:%s"
 
 #: src/ui/application-window.vala:553
 msgid "Rendering…"
-msgstr ""
+msgstr "നിർമിക്കുന്നു…"
 
 #: src/ui/application-window.vala:593
 msgid "Recording could not be started due to an unexpected error."
-msgstr ""
+msgstr "അപ്രതീക്ഷിത പിശക് കാരണം റെക്കോർഡിംഗ് ആരംഭിക്കാനായില്ല."
 
 #: src/ui/application-window.vala:713 src/ui/application-window.vala:718
 msgid "Save animation"
-msgstr ""
+msgstr "ചലിക്കും ചിത്രം സേവ് ചെയ്യുക"
 
 #: src/ui/application-window.vala:714 src/ui/application-window.vala:721
 msgid "_Save"
-msgstr ""
+msgstr "_സേവ്"
 
 #: src/ui/application-window.vala:715 src/ui/application-window.vala:719
 msgid "_Cancel"
-msgstr ""
+msgstr "_ റദ്ദാക്കുക"
 
 #: src/ui/application-window.vala:786
 msgid "The file could not be saved to the selected location."
-msgstr ""
+msgstr "തിരഞ്ഞെടുത്ത സ്ഥാനത്തേക്ക് ഫയൽ സേവ് ചെയ്യാൻ കഴിഞ്ഞില്ല."
 
 #: src/ui/application-window.vala:813
 #, c-format
 msgid "Animation saved as “%s”"
-msgstr ""
+msgstr "ചലിക്കും ചിത്രം \"%s\" ആയി സേവ് ചെയ്തു"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
 #: src/ui/application-window.vala:823
 msgid "Click here to show the saved file in your file manager."
 msgstr ""
+"നിങ്ങളുടെ ഫയൽ മാനേജറിൽ സേവ് ചെയ്ത ഫയൽ കാണിക്കുന്നതിന് ഇവിടെ ക്ലിക്കു ചെയ്യുക."
 
 #: src/ui/application-window.vala:825
 msgid "Show in file manager"
-msgstr ""
+msgstr "ഫയൽ മാനേജറിൽ കാണിക്കുക"
 
 #. Display the configured shortcut to the user
 #: src/ui/preferences-dialog.vala:182
 msgid "deactivated"
-msgstr ""
+msgstr "നിർജ്ജീവമാക്കി"
 
 #. Add a button to change the keyboard shortcut
 #: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
 msgid "Change"
-msgstr ""
+msgstr "മാറ്റുക"
 
 #: src/ui/preferences-dialog.vala:206
 msgid "Press keys…"
-msgstr ""
+msgstr "കീകൾ അമർത്തുക…"
 
 #: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
-msgstr ""
+msgstr "ചലിക്കുന്ന ജിഐഎഫ് റെക്കോർഡർ"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr ""
+msgstr "വിവർത്തകൻ-അംഗീകാരം"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് ആരംഭിക്കുക"
 
 #: ui/application-window.ui:54
 msgid "New window"
-msgstr ""
+msgstr "പുതിയ ജാലകം"
 
 #: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
 msgid "Set window size"
-msgstr ""
+msgstr "ജാലക വലുപ്പം തീരുമാനിക്കുക"
 
 #: ui/application-window.ui:93
 msgid "Preferences"
-msgstr ""
+msgstr "താത്പര്യങ്ങൾ"
 
 #: ui/application-window.ui:107
 msgid "About Peek"
-msgstr ""
+msgstr "പീക്കിനെ പറ്റി"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
-msgstr ""
+msgstr "_നിർത്തുക"
 
 #: ui/application-window.ui:159
 msgid "Stop recording"
-msgstr ""
+msgstr "റെക്കോർഡിങ് നിർത്തുക"
 
 #: ui/application-window.ui:175
 msgid "_Record"
-msgstr ""
+msgstr "_ റെക്കോർഡ്"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് പിശക്"
 
 #: ui/error-dialog.ui:28
 msgid "Report issue"
-msgstr ""
+msgstr "പ്രശ്നം റിപ്പോർട്ട് ചെയ്യുക"
 
 #: ui/error-dialog.ui:42
 msgid "Close"
-msgstr ""
+msgstr "അടയ്ക്കുക"
 
 #: ui/error-dialog.ui:87
 msgid ""
@@ -240,94 +253,102 @@ msgid ""
 "your issue please report it and provide as much details as possible on what "
 "you were doing when the issue occurred."
 msgstr ""
+"ഈ പ്രശ്നം റിപ്പോർട്ടുചെയ്യുന്നതിന് മുമ്പ് ദയവായി <a href=\"https://github."
+"com/phw/peek#frequently-asked-questions\"> പതിവുചോദ്യങ്ങൾ </a> വായിക്കുക. "
+"പതിവുചോദ്യങ്ങൾ നിങ്ങളുടെ പ്രശ്നത്തിന് ഉത്തരം നൽകുന്നില്ലെങ്കിൽ, ദയവായി അത് "
+"റിപ്പോർട്ടുചെയ്യുക, പ്രശ്നം സംഭവിക്കുമ്പോൾ നിങ്ങൾ എന്താണ് ചെയ്തതെന്ന് "
+"കഴിയുന്നത്ര വിശദാംശങ്ങൾ നൽകുക."
 
 #: ui/error-dialog.ui:126
 msgid "Show details"
-msgstr ""
+msgstr "വിശദാംശങ്ങൾ കാണിക്കുക"
 
 #: ui/preferences.ui:77
 msgid "User interface"
-msgstr ""
+msgstr "സമ്പർക്ക മുഖം"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr ""
+msgstr "സേവ് ചെയ്തതിന് ശേഷം ഫയൽ മാനേജർ തുറക്കുക"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
-msgstr ""
+msgstr "സേവ് ചെയ്തതിന് ശേഷം ഡെസ്ക്ടോപ്പ് അറിയിപ്പ് കാണിക്കുക"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് ആരംഭിക്കുക / നിർത്തുക"
 
 #: ui/preferences.ui:185
 msgid "Recording"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ്"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr ""
+msgstr "പുറത്തേക്ക് വരുന്ന ഫോർമാറ്റ്"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr ""
+msgstr "ഉയർന്ന നിലവാരമുള്ള GIF- കൾക്കായി gifski ഉപയോഗിക്കുക"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
-msgstr ""
+msgstr "ജിഫ് നിലവാരം"
 
 #: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
 msgid "Framerate"
-msgstr ""
+msgstr "ഫ്രെയിംറേറ്റ്"
 
 #: ui/preferences.ui:368
 msgid "Resolution downsampling"
-msgstr ""
+msgstr "മിഴിവ് കുറയ്ക്കൽ"
 
 #: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
 msgid "Delay in seconds before recording starts"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് ആരംഭിക്കുന്നതിന് നിമിഷങ്ങൾ കാലതാമസം"
 
 #: ui/preferences.ui:443
 msgid "Capture mouse cursor"
-msgstr ""
+msgstr "മൗസ് കഴ്‌സർ കാണിക്കുക"
 
 #: ui/preferences.ui:474
 msgid "Peek preferences"
-msgstr ""
+msgstr "പീക്കിനായുള്ള താത്പര്യങ്ങൾ"
 
 #: ui/set-window-size-dialog.ui:27
 msgid "Cancel"
-msgstr ""
+msgstr "റദ്ദാക്കുക"
 
 #: ui/set-window-size-dialog.ui:36
 msgid "Set size"
-msgstr ""
+msgstr "അളവ് സജ്ജമാക്കുക"
 
 #: ui/set-window-size-dialog.ui:89
 msgid "Width"
-msgstr ""
+msgstr "വീതി"
 
 #: ui/set-window-size-dialog.ui:127
 msgid "Height"
-msgstr ""
+msgstr "ഉയരം"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
 msgstr ""
+"നിങ്ങളുടെ സ്ക്രീനിൽ നിന്ന് ഹ്രസ്വ ജിഐഎഫ് ചലിക്കും ചിത്രങ്ങൾ റെക്കോർഡുചെയ്യുക"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
 msgstr ""
+"സ്‌ക്രീൻകാസ്റ്റ്; സ്‌ക്രീൻ റെക്കോർഡർ; സ്‌ക്രീൻ ക്യാപ്‌ചർ; ജിഫ് ; വെബ്‌എം; "
+"എപിഎൻജി;"
 
 #: data/com.uploadedlobster.peek.desktop.in:8
 msgid "com.uploadedlobster.peek"
-msgstr ""
+msgstr "കോം.അപ്‌ലോഡ്ഡ്ലോബ്സ്റ്റർ.പീക്ക്"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
-msgstr ""
+msgstr "ഉപയോഗിക്കാൻ എളുപ്പമുള്ള സമ്പർക്കമുഖമുള്ള ലളിതമായ സ്ക്രീൻ റെക്കോർഡർ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
 msgid ""
@@ -338,38 +359,50 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM or MP4 if you prefer."
 msgstr ""
+"ഒരു സ്‌ക്രീൻ ഏരിയയുടെ ഹ്രസ്വ സ്‌ക്രീൻകാസ്റ്റുകൾ സൃഷ്‌ടിക്കുന്നത് പീക്ക് "
+"എളുപ്പമാക്കുന്നു. സ്‌ക്രീൻ ഏരിയകൾ റെക്കോർഡുചെയ്യുന്നതിന്റെ പ്രത്യേക "
+"ഉപയോഗത്തിനായി ഇത് നിർമ്മിച്ചതാണ്, ഉദാ. നിങ്ങളുടെ സ്വന്തം അപ്ലിക്കേഷനുകളുടെ യു"
+"ഐ സവിശേഷതകൾ എളുപ്പത്തിൽ കാണിക്കുന്നതിനോ ബഗ് റിപ്പോർട്ടുകളിൽ ഒരു ബഗ് "
+"കാണിക്കുന്നതിനോ. പീക്ക് ഉപയോഗിച്ച് നിങ്ങൾ റെക്കോർഡുചെയ്യാൻ ആഗ്രഹിക്കുന്ന "
+"സ്ഥലത്ത് പീക്ക് വിൻഡോ സ്ഥാപിച്ച് \"റെക്കോർഡ്\" അമർത്തുക. ആനിമേറ്റുചെയ്‌ത GIF-"
+" കൾ സൃഷ്‌ടിക്കുന്നതിന് പീക്ക് ഒപ്റ്റിമൈസ് ചെയ്‌തിരിക്കുന്നു, എന്നാൽ "
+"നിങ്ങൾക്ക് താൽപ്പര്യമുണ്ടെങ്കിൽ നേരിട്ട് വെബ്‌എം അല്ലെങ്കിൽ എം‌പി 4 ലേക്ക് "
+"റെക്കോർഡുചെയ്യാനും കഴിയും."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
-msgstr ""
+msgstr "സൗകര്യങ്ങൾ:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
-msgstr ""
+msgstr "റെക്കോർഡുചെയ്യാൻ ഒരു സ്‌ക്രീൻ പ്രദേശം തിരഞ്ഞെടുക്കുക"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
 msgstr ""
+"മെച്ചപ്പെടുത്തിയ ചലിക്കും ചിത്ര ജിഫ് ആയി റെക്കോർഡുചെയ്‌ത വീഡിയോ സേവ് ചെയ്യുക"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
-msgstr ""
+msgstr "വെബ്എം അല്ലെങ്കിൽ എംപി4 ഫോർമാറ്റിലേക്ക് നേരിട്ട് റെക്കോർഡുചെയ്യുക"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
-msgstr ""
+msgstr "ജോലിക്കായി മെച്ചപ്പെടുത്തിയ ലളിതമായ സമ്പർക്കമുഖം"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Automatically downscale recorded videos"
-msgstr ""
+msgstr "റെക്കോർഡുചെയ്‌ത വീഡിയോകൾ യാന്ത്രികമായി തരംതാഴ്ത്തുക"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Support for HiDPI screens"
-msgstr ""
+msgstr "HiDPI സ്ക്രീനുകൾക്കുള്ള പിന്തുണ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr ""
+"ഒരു ഗ്നോം ഷെൽ വയലാന്റ് സെഷനുള്ളിൽ പ്രവർത്തിക്കുന്നു (എക്സ് വേലാൻഡ് "
+"ഉപയോഗിച്ച്)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid ""
@@ -378,67 +411,76 @@ msgid ""
 "an area of the screen for creating GIF animations or silent WebM or MP4 "
 "videos."
 msgstr ""
+"വിപുലീകൃത സവിശേഷതകളുള്ള ഒരു പൊതു ആവശ്യത്തിനുള്ള സ്‌ക്രീൻകാസ്റ്റ് "
+"അപ്ലിക്കേഷനല്ല പീക്ക്, മറിച്ച് ജിഐഎഫ് ആനിമേഷനുകൾ അല്ലെങ്കിൽ നിശബ്‌ദ വെബ്‌എം "
+"അല്ലെങ്കിൽ എംപി 4 വീഡിയോകൾ സൃഷ്‌ടിക്കുന്നതിനായി സ്‌ക്രീനിന്റെ ഒരു "
+"പ്രദേശത്തിന്റെ ചെറുതും നിശബ്‌ദവുമായ സ്‌ക്രീൻകാസ്റ്റുകൾ സൃഷ്‌ടിക്കുന്നതിനുള്ള "
+"ഏക ചുമതലയിൽ ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്നു."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:41
 msgid "The main window to select the recording area"
-msgstr ""
+msgstr "റെക്കോർഡിംഗ് സ്ഥലം തിരഞ്ഞെടുക്കുന്നതിനുള്ള പ്രധാന ജാലകം"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:45
 msgid "Peek's preferences dialog"
-msgstr ""
+msgstr "പീക്കിനായുള്ള താത്പര്യങ്ങൾ രേഖപ്പെടുത്തുന്ന സ്ഥലം"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:49
 msgid "Peek is recording itself"
-msgstr ""
+msgstr "പീക്ക് സ്വയം റെക്കോർഡുചെയ്യുന്നു"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:79
 msgid "Philipp Wolfer"
-msgstr ""
+msgstr "ഫിലിപ്പ് വോൾഫർ"
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
 msgstr ""
+"സ്റ്റോപ്പുകളുടെ വലുപ്പം മാറ്റിയ ശേഷം റെക്കോർഡിംഗ് ഏരിയ അളവ് പ്രദർശിപ്പിക്കുന്"
+"ന സമയം മില്ലിസെക്കൻഡിൽ."
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
-msgstr ""
+msgstr "\"പീക്ക്% Y-% m-% d% H-% M\""
 
 #: data/com.uploadedlobster.peek.gschema.xml:19
 msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
+"സ്ഥിരസ്ഥിതി ഫയൽ നാമം ഉപയോഗിച്ചു. തീയതി ഫോർമാറ്റ് സവിശേഷതകൾ ഉൾപ്പെടുത്താം. "
+"വിപുലീകരണം സ്വപ്രേരിതമായി ചേർക്കും."
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
 msgid "Prefer dark theme"
-msgstr ""
+msgstr "ഇരുണ്ട ഉടുപ്പ് തിരഞ്ഞെടുക്കുക"
 
 #: data/com.uploadedlobster.peek.gschema.xml:27
 msgid "Global keybinding to toggle recording"
-msgstr ""
+msgstr "റെക്കോർഡിങ് ടോഗിൾ ചെയ്യാനുള്ള ആഗോള കീ ബൈൻഡിംഗ്"
 
 #: data/com.uploadedlobster.peek.gschema.xml:43
 msgid "Output file format"
-msgstr ""
+msgstr "പുറത്തേക്ക് വരുന്ന ഫയലിന്റെ ഘടന"
 
 #: data/com.uploadedlobster.peek.gschema.xml:52
 msgid "Quality setting for the gifski GIF encoder"
-msgstr ""
+msgstr "ജിഫ്‌സ്‌കി ജിഫ് എൻ‌കോഡറിനായുള്ള ഗുണനിലവാര ക്രമീകരണം"
 
 #: data/com.uploadedlobster.peek.gschema.xml:67
 msgid "Resolution downsampling factor"
-msgstr ""
+msgstr "മിഴിവ് കുറയ്ക്കുന്നതിനുള്ള ഘടകം"
 
 #: data/com.uploadedlobster.peek.gschema.xml:71
 msgid "Whether to capture the mouse cursor"
-msgstr ""
+msgstr "മൗസ് കഴ്‌സർ ക്യാപ്‌ചർ ചെയ്യണമോ എന്ന്"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Size and position of the last open main window"
-msgstr ""
+msgstr "അവസാനം തുറന്ന പ്രധാന ജാലകത്തിന്റെ വലുപ്പവും സ്ഥാനവും"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Path where last video got saved"
-msgstr ""
+msgstr "അവസാനം വീഡിയോ സേവ് ചെയ്ത പാത"
