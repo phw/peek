@@ -90,7 +90,7 @@ Peek is available in official package repositories for the following
 distributions:
 
 - [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
-- [Debian](https://packages.debian.org/buster/peek)
+- [Debian](https://tracker.debian.org/pkg/peek)
 - [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
 - [NixOS](https://nixos.org/nixos/packages.html?channel=nixos-unstable&query=%5Epeek)
