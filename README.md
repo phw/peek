@@ -79,7 +79,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ### Development
 
 - Vala compiler >= 0.22
-- Meson >= 0.37.0
+- Meson >= 0.47.0
 - Gettext (>= 0.19 for localized .desktop entry)
 - txt2man (optional for building man page)
 
