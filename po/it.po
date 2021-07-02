@@ -5,6 +5,7 @@
 # Translators:
 # andreas-xavier <andreas-xavier@ubuntu-it.org>, 2016
 # Emanuele Antonio Faraone <emanueleant03@gmail.com>, 2016-2017
+# Albano Battistella <albano_battistella@hotmail.com>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
@@ -484,24 +485,21 @@ msgstr "Percorso dove l'ultimo video è stato salvato"
 #~ msgid "_Quit"
 #~ msgstr "_Esci"
 
-#, fuzzy
 #~ msgid "Show notification after saving"
-#~ msgstr "Apri il file manager dopo il salvataggio"
+#~ msgstr "Mostra notifica dopo il salvataggio"
 
 #~ msgid ""
 #~ "Select the recording backend to use (gnome-shell, ffmpeg or avconv). If "
 #~ "not set Peek will automatically select a backend."
 #~ msgstr ""
 #~ "Seleziona il backend da usare (gnome-shell, ffmpeg o avconv). Se non "
-#~ "loselezioni Peek ne sceglierà una automaticamente."
+#~ "lo selezioni Peek ne sceglierà uno automaticamente."
 
 #~ msgid "peek"
 #~ msgstr "peek"
 
-#, fuzzy
 #~ msgid "Open file manager after saving."
-#~ msgstr "Apri il file manager dopo il salvataggio"
+#~ msgstr "Apri il file manager dopo aver salvato."
 
-#, fuzzy
 #~ msgid "Delay in seconds before recording starts."
-#~ msgstr "Tempo in secondi prima dell'inizio della registrazione"
+#~ msgstr "Ritardo in secondi prima dell'inizio della registrazione."
