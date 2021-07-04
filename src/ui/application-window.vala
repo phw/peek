@@ -32,6 +32,8 @@ namespace Peek.Ui {
 
     public string save_folder { get; set; }
 
+    public bool should_auto_save { get; set; }
+
     [GtkChild]
     private HeaderBar headerbar;
 
@@ -106,7 +108,11 @@ namespace Peek.Ui {
 
       this.recorder.recording_postprocess_started.connect (() => {
         is_postprocessing = true;
-        show_file_chooser ();
+        if (should_auto_save) {
+            auto_save ();
+        } else {
+            show_file_chooser ();
+        }
       });
 
       this.recorder.recording_finished.connect ((file) => {
@@ -188,6 +194,10 @@ namespace Peek.Ui {
 
       settings.bind ("persist-save-folder",
         this, "save_folder",
+        SettingsBindFlags.DEFAULT);
+
+      settings.bind ("should-auto-save",
+        this, "should_auto_save",
         SettingsBindFlags.DEFAULT);
 
       // Update record button label when recording format changes
@@ -552,12 +562,12 @@ namespace Peek.Ui {
         return;
       } else {
         stop_button.sensitive = false;
-        show_spinner ();
+        show_spinner ("Rendering…");
         recorder.stop ();
       }
     }
 
-    private void show_spinner () {
+    private void show_spinner (string message) {
       var box = new Box (Gtk.Orientation.HORIZONTAL, 6);
 
       var spinner = new Spinner ();
@@ -565,7 +575,7 @@ namespace Peek.Ui {
       box.pack_start (spinner, false, false, 0);
 
       if (get_window_width () >= SMALL_WINDOW_SIZE) {
-        var label = new Gtk.Label (_ ("Rendering…"));
+        var label = new Gtk.Label (_ (message));
         box.pack_start (label, false, false, 0);
       }
 
@@ -720,6 +730,30 @@ namespace Peek.Ui {
       this.set_size_request (0, 0);
       this.set_default_size (width, height);
       this.resizable = true;
+    }
+
+    private void auto_save () {
+      show_spinner ("Auto saving…");
+      string extension = Utils.get_file_extension_for_format (
+        recorder.config.output_format);
+
+      var folder = load_preferred_save_folder ();
+
+      var now = new DateTime.now_local ();
+      string filestem = now.format (default_file_name_format);
+      string filename = filestem + "." + extension;
+
+      File file = File.new_build_filename (folder, filename);
+      int filecounter = 0;
+      while (file.query_exists ()) {
+        filecounter++;
+        filename = filestem + " (" + filecounter.to_string() +  ")." + extension;
+        file = File.new_build_filename (folder, filename);
+      }
+
+      debug ("Autosaving file %s", file.get_uri ());
+      this.out_file = file;
+      try_save_file ();
     }
 
     private void show_file_chooser () {

@@ -78,5 +78,9 @@
       <default>""</default>
       <summary>Path where last video got saved</summary>
     </key>
+    <key name="should-auto-save" type="b">
+      <default>false</default>
+      <summary>Auto save after recording</summary>
+    </key>
   </schema>
 </schemalist>
