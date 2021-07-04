@@ -135,6 +135,15 @@ for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit
 for more information on how to use AppImages and integrate them with your system.
 
 ### Ubuntu
+
+#### Ubuntu 20.10+
+
+Peek is available in official repositories.
+
+    sudo apt install peek
+    
+#### Before Ubuntu 20.10
+
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
 
