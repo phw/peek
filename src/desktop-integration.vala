@@ -127,6 +127,22 @@ namespace Peek {
 
       return folder;
     }
+    public static bool is_tiling () {
+      var tiling_window =true;
+      var de_list = new List<string> ();
+      de_list.append ("Unity");
+      de_list.append ("GNOME");
+      de_list.append ("X-Cinnamon");
+      de_list.append ("XFCE");
+      de_list.append ("KDE");
+      foreach (string element in de_list) {
+        if ( xdg_current_desktop_contains (element) ) {
+          tiling_window = false;
+          stdout.printf ("Using %s Desktop Environment\n", element);
+        }
+      }
+      return tiling_window;
+    }
 
     public static bool is_unity () {
       return xdg_current_desktop_contains ("Unity");

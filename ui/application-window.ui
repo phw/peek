@@ -125,7 +125,7 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
     <property name="default_width">440</property>
     <property name="default_height">250</property>
     <property name="icon_name">com.uploadedlobster.peek</property>
-    <property name="type_hint">utility</property>
+    <property name="type_hint">normal</property>
     <property name="show_menubar">False</property>
     <signal name="draw" handler="on_window_draw" swapped="no"/>
     <signal name="screen-changed" handler="on_window_screen_changed" swapped="no"/>
