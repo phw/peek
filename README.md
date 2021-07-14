@@ -135,11 +135,8 @@ for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit
 for more information on how to use AppImages and integrate them with your system.
 
 ### Ubuntu
-You can install the latest versions of Peek from the
-[Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
+Install the latest versions of Peek with this:
 
-    sudo add-apt-repository ppa:peek-developers/stable
-    sudo apt update
     sudo apt install peek
 
 If you want to use the latest development version there is also a
