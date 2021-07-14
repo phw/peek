@@ -135,7 +135,7 @@ for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit
 for more information on how to use AppImages and integrate them with your system.
 
 ### Ubuntu
-Install the latest versions of Peek with this:
+Install the latest version of Peek with this:
 
     sudo apt install peek
 
