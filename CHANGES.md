@@ -13,7 +13,7 @@
 - fix: Disable menu during recording
 - i18n: New translations for Finnish and Hebrew
 - i18n: Updated translations for Basque, Chinese (Simplified),
-  Chinese (Traditional), Croation, Czech, Dutch, French, German, Indonesian,
+  Chinese (Traditional), Croatian, Czech, Dutch, French, German, Indonesian,
   Lithuanian, Norwegian Bokmål, Portuguese (Brazil), Spanish and Swedish
 
 # Version 1.4.0 - 2019-09-24
