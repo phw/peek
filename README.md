@@ -1,6 +1,6 @@
 # Peek - an animated GIF recorder
 [![GitHub release](https://img.shields.io/github/release/phw/peek.svg)](https://github.com/phw/peek/releases)
-[![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
@@ -98,7 +98,7 @@ distributions:
 - [Solus](https://dev.getsol.us/source/peek/)
 
 ### Flatpak
-Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
+Peek can be installed on all distributions supporting [Flatpak](https://flatpak.org) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
 To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
 and open it with GNOME Software or install via command line (first time flatpak
@@ -422,4 +422,4 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Peek.  If not, see <http://www.gnu.org/licenses/>.
+along with Peek.  If not, see <https://www.gnu.org/licenses/>.
