@@ -9,7 +9,7 @@ This software is licensed under the GNU General Public License
 
 #if ! DISABLE_GNOME_SHELL
 
-using Gnome.Shell;
+using Gnome.ShellNS;
 using Peek.PostProcessing;
 
 namespace Peek.Recording {
