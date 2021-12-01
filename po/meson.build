@@ -6,6 +6,6 @@ add_project_arguments([
   ], language: 'c')
 
 run_target('peek-update-linguas',
-  command : ['python', '-c',
+  command : ['python3', '-c',
   'import os; print(" ".join((f[:-3] for f in sorted(os.listdir(".")) if f.endswith(".po"))), file=open("LINGUAS", "w"))'
 ])
