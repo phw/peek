@@ -35,55 +35,55 @@ namespace Peek.Ui {
     private GLib.Settings settings;
 
     [GtkChild]
-    private Gtk.CheckButton interface_open_file_manager;
+    private unowned Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
-    private Gtk.CheckButton interface_show_notification;
+    private unowned Gtk.CheckButton interface_show_notification;
 
     [GtkChild]
-    private Gtk.Box keybinding_toggle_recording_box;
+    private unowned Gtk.Box keybinding_toggle_recording_box;
 
 #if HAS_KEYBINDER
     private ShortcutLabel keybinding_toggle_recording_accelerator;
 
     [GtkChild]
-    private Gtk.Box keybinding_toggle_recording_editor;
+    private unowned Gtk.Box keybinding_toggle_recording_editor;
 
     private Gtk.ToggleButton keybinding_toggle_recording_button;
 #endif
 
     [GtkChild]
-    private Gtk.ComboBoxText recording_output_format_combo_box;
+    private unowned Gtk.ComboBoxText recording_output_format_combo_box;
 
     [GtkChild]
-    private Gtk.Box recording_gifski_settings;
+    private unowned Gtk.Box recording_gifski_settings;
 
     [GtkChild]
-    private Gtk.CheckButton recording_gifski_enabled;
+    private unowned Gtk.CheckButton recording_gifski_enabled;
 
     [GtkChild]
-    private Gtk.Box recording_gifski_quality_box;
+    private unowned Gtk.Box recording_gifski_quality_box;
 
     [GtkChild]
-    private Gtk.Adjustment recording_gifski_quality;
+    private unowned Gtk.Adjustment recording_gifski_quality;
 
     [GtkChild]
-    private Gtk.Scale recording_gifski_quality_scale;
+    private unowned Gtk.Scale recording_gifski_quality_scale;
 
     [GtkChild]
-    private Gtk.Adjustment recording_start_delay;
+    private unowned Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
-    private Gtk.Adjustment recording_framerate;
+    private unowned Gtk.Adjustment recording_framerate;
 
     [GtkChild]
-    private Gtk.Adjustment recording_downsample;
+    private unowned Gtk.Adjustment recording_downsample;
 
     [GtkChild]
-    private Gtk.CheckButton recording_capture_mouse;
+    private unowned Gtk.CheckButton recording_capture_mouse;
 
     [GtkChild]
-    private Gtk.CheckButton recording_capture_sound;
+    private unowned Gtk.CheckButton recording_capture_sound;
 
 
     public PreferencesDialog () {

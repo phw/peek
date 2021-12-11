@@ -40,10 +40,10 @@ namespace Peek.Ui {
     }
 
     [GtkChild]
-    private Adjustment width_adjustment;
+    private unowned Adjustment width_adjustment;
 
     [GtkChild]
-    private Adjustment height_adjustment;
+    private unowned Adjustment height_adjustment;
 
     private ApplicationWindow window;
 

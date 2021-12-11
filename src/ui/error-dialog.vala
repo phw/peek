@@ -36,13 +36,13 @@ namespace Peek.Ui {
     }
 
     [GtkChild]
-    private Label error_summary;
+    private unowned Label error_summary;
 
     [GtkChild]
-    private TextBuffer error_details;
+    private unowned TextBuffer error_details;
 
     [GtkChild]
-    private Expander error_details_container;
+    private unowned Expander error_details_container;
 
     private Error? error = null;
 

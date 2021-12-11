@@ -33,49 +33,49 @@ namespace Peek.Ui {
     public string save_folder { get; set; }
 
     [GtkChild]
-    private HeaderBar headerbar;
+    private unowned HeaderBar headerbar;
 
     [GtkChild]
-    private Widget recording_view;
+    private unowned Widget recording_view;
 
     [GtkChild]
-    private Button record_button;
+    private unowned Button record_button;
 
     [GtkChild]
-    private Button stop_button;
+    private unowned Button stop_button;
 
     [GtkChild]
-    private Popover pop_format;
+    private unowned Popover pop_format;
 
     [GtkChild]
-    private RadioButton gif_button;
+    private unowned RadioButton gif_button;
 
     [GtkChild]
-    private RadioButton apng_button;
+    private unowned RadioButton apng_button;
 
     [GtkChild]
-    private RadioButton webm_button;
+    private unowned RadioButton webm_button;
 
     [GtkChild]
-    private RadioButton mp4_button;
+    private unowned RadioButton mp4_button;
 
     [GtkChild]
-    private MenuButton pop_format_menu;
+    private unowned MenuButton pop_format_menu;
 
     [GtkChild]
-    private Label size_indicator;
+    private unowned Label size_indicator;
 
     [GtkChild]
-    private Label delay_indicator;
+    private unowned Label delay_indicator;
 
     [GtkChild]
-    private Label shortcut_label;
+    private unowned Label shortcut_label;
 
     [GtkChild]
-    private ToggleButton pop_menu_button;
+    private unowned ToggleButton pop_menu_button;
 
     [GtkChild]
-    private Popover pop_menu;
+    private unowned Popover pop_menu;
 
     private uint start_recording_event_source = 0;
     private uint size_indicator_timeout = 0;
