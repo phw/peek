@@ -142,7 +142,7 @@ Install the latest version of Peek with this:
 
 If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
-available. Use the repository `ppa:peek-developers/daily` in the above commands.
+available.
 
 ### ElementaryOS
 Adding PPA repositories requires the package `software-properties-common`
