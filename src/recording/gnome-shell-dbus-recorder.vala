@@ -1,7 +1,8 @@
 /*
-Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
-
 This file is part of Peek.
+
+Copyright (c) 2017-2018, 2021 by Philipp Wolfer <ph.wolfer@gmail.com>
+Copyright (c) 2021 Andreas Dangel <andreas.dangel@adangel.org>
 
 This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
@@ -100,6 +101,12 @@ namespace Peek.Recording {
           BusType.SESSION,
           "org.freedesktop.DBus",
           "/org/freedesktop/DBus");
+        try {
+          // The service might need to get started before being available
+          dbus.start_service_by_name (DBUS_NAME, 0);
+        } catch (DBusError e) {
+          return false;
+        }
         return dbus.name_has_owner (DBUS_NAME);
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
