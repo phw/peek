@@ -9,7 +9,8 @@ This software is licensed under the GNU General Public License
 
 #if ! DISABLE_GNOME_SHELL
 
-using Gnome.Shell;
+using Gnome;
+using Gnome.ShellNS;
 using Peek.PostProcessing;
 
 namespace Peek.Recording {
@@ -109,6 +110,23 @@ namespace Peek.Recording {
       }
     }
 
+    private static bool is_gnome_40_or_higher () throws RecordingError {
+      if (!DesktopIntegration.is_gnome ()) {
+        return false;
+      }
+
+      try {
+        Gnome.Shell gnomeShell = Bus.get_proxy_sync (
+          BusType.SESSION,
+          "org.gnome.Shell",
+          "/org/gnome/Shell");
+        return int.parse (gnomeShell.shell_version.split ( "." )[0] ) >= 40;
+      } catch (IOError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
+      }
+    }
+
     protected override void stop_recording () {
       try {
         screencast.stop_screencast ();
@@ -137,13 +155,20 @@ namespace Peek.Recording {
       }
     }
 
-    private string build_gst_pipeline (RecordingArea area) {
+    private string build_gst_pipeline (RecordingArea area) throws RecordingError {
 
       // Default pipeline is for GNOME Shell up to 2.22:
       // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
       // GNOME Shell 3.24 will use vp9enc with same settings.
       // See https://gitlab.gnome.org/GNOME/gnome-shell/blob/master/src/shell-recorder.c#L149
+      // Gnome Shell 40:
+      // https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/dbusServices/screencast/screencastService.js#L26
+      // https://gitlab.gnome.org/GNOME/gnome-shell/-/commit/51bf7ec17617a9ed056dd563afdb98e17da07373
       var pipeline = new StringBuilder ();
+
+      if (is_gnome_40_or_higher ()) {
+        pipeline.append ("videoconvert chroma-mode=GST_VIDEO_CHROMA_MODE_NONE dither=GST_VIDEO_DITHER_NONE matrix-mode=GST_VIDEO_MATRIX_MODE_OUTPUT_ONLY n-threads=%T ! queue ! ");
+      }
 
       if (config.downsample > 1) {
         int width = area.width / config.downsample;

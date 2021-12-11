@@ -9,6 +9,7 @@ peek_sources = [
   'dbus/freedesktop-dbus.vala',
   'dbus/freedesktop-filemanager.vala',
   'dbus/gnome-shell-screencast.vala',
+  'dbus/gnome-shell.vala',
   'post-processing/cli-post-processor.vala',
   'post-processing/extract-frames-post-processor.vala',
   'post-processing/ffmpeg-post-processor.vala',
