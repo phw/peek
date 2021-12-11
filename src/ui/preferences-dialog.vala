@@ -131,6 +131,8 @@ namespace Peek.Ui {
         recording_capture_sound, "active",
         SettingsBindFlags.DEFAULT);
 
+
+      on_output_format_changed ();
       on_interface_open_file_manager_toggled (interface_open_file_manager);
       on_gifski_toggled (recording_gifski_enabled);
 
@@ -166,13 +168,17 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_output_format_changed () {
-      recording_gifski_settings.sensitive =
-        (recording_output_format_combo_box.active_id == OutputFormat.GIF.to_string ());
+      recording_gifski_settings.sensitive = is_format (OutputFormat.GIF);
+      recording_capture_sound.sensitive = is_format (OutputFormat.MP4) || is_format (OutputFormat.WEBM);
     }
 
     [GtkCallback]
     private void on_gifski_toggled (ToggleButton source) {
       recording_gifski_quality_box.sensitive = source.active;
+    }
+
+    private bool is_format (OutputFormat format) {
+      return recording_output_format_combo_box.active_id == format.to_string ();
     }
 
 #if HAS_KEYBINDER
