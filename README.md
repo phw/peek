@@ -244,7 +244,7 @@ You can build and install Peek using Meson with Ninja:
     ninja
 
     # Run directly from source
-    ./peek
+    ./src/peek
 
     # Install system-wide
     sudo ninja install
