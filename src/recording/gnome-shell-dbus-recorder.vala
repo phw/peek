@@ -191,16 +191,16 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("videoconvert ! queue ! videorate ! vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! ");
+        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! ");
         if (config.capture_sound) {
-          pipeline.append ("mux. pulsesrc ! queue !  audioconvert ! vorbisenc ! ");
+          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! vorbisenc ! ");
         }
         pipeline.append ("queue ! mux. webmmux name=mux");
       } else if (config.output_format == OutputFormat.MP4) {
-        pipeline.append ("videoconvert ! queue ! videorate ! x264enc speed-preset=fast threads=%T ! ");
+        pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
         pipeline.append ("video/x-h264, profile=baseline ! queue !");
         if (config.capture_sound) {
-          pipeline.append ("mux. pulsesrc ! queue !  audioconvert ! lamemp3enc ! ");
+          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! lamemp3enc ! ");
         }
         pipeline.append ("queue ! mux. mp4mux name=mux");
       } else {
