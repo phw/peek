@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2020-02-09 21:35+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-11 17:10+0100\n"
 "PO-Revision-Date: 2021-01-26 22:32+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/peek/"
@@ -56,25 +56,25 @@ msgstr "Запускати Peek без заголовка"
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:248
+#: src/application.vala:250
 #, c-format
 msgid "Unable to initialize default recording backend: %s"
 msgstr "Не вдається започаткувати типовий сервер запису: %s"
 
-#: src/application.vala:264
+#: src/application.vala:266
 #, c-format
 msgid "Unable to initialize recording backend %s: %s"
 msgstr "Неможливо започаткувати резервний файл запису %s: %s"
 
-#: src/application.vala:335
+#: src/application.vala:337
 msgid "Recording backend unavailable"
 msgstr "Виходовий буфер запису не доступний"
 
-#: src/application.vala:339
+#: src/application.vala:341
 msgid "Native Wayland backend is unsupported"
 msgstr "Робота безпосередньо на Wayland не підтримується"
 
-#: src/application.vala:340
+#: src/application.vala:342
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -128,66 +128,66 @@ msgstr "MP4"
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:301
+#: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
 msgstr "Записувати як %s"
 
-#: src/ui/application-window.vala:399
+#: src/ui/application-window.vala:414
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Запуск/Зупин: %s"
 
-#: src/ui/application-window.vala:553
+#: src/ui/application-window.vala:568
 msgid "Rendering…"
 msgstr "Візуалізація…"
 
-#: src/ui/application-window.vala:593
+#: src/ui/application-window.vala:608
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Неможливо почати запис через непередбачувану помилку."
 
-#: src/ui/application-window.vala:713 src/ui/application-window.vala:718
+#: src/ui/application-window.vala:728 src/ui/application-window.vala:733
 msgid "Save animation"
 msgstr "Зберегти анімацію"
 
-#: src/ui/application-window.vala:714 src/ui/application-window.vala:721
+#: src/ui/application-window.vala:729 src/ui/application-window.vala:736
 msgid "_Save"
 msgstr "_Зберегти"
 
-#: src/ui/application-window.vala:715 src/ui/application-window.vala:719
+#: src/ui/application-window.vala:730 src/ui/application-window.vala:734
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: src/ui/application-window.vala:786
+#: src/ui/application-window.vala:801
 msgid "The file could not be saved to the selected location."
 msgstr "Не вдалося зберегти файл до вибраного розташування."
 
-#: src/ui/application-window.vala:813
+#: src/ui/application-window.vala:828
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анімацію буде збережено як \"%s\""
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:823
+#: src/ui/application-window.vala:838
 msgid "Click here to show the saved file in your file manager."
 msgstr "Натисніть тут, щоб показати збережений файл у менеджері файлів."
 
-#: src/ui/application-window.vala:825
+#: src/ui/application-window.vala:840
 msgid "Show in file manager"
 msgstr "Показати в менеджері файлів"
 
 #. Display the configured shortcut to the user
-#: src/ui/preferences-dialog.vala:182
+#: src/ui/preferences-dialog.vala:189
 msgid "deactivated"
 msgstr "вимкнено"
 
 #. Add a button to change the keyboard shortcut
-#: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
+#: src/ui/preferences-dialog.vala:200 src/ui/preferences-dialog.vala:216
 msgid "Change"
 msgstr "Змінити"
 
-#: src/ui/preferences-dialog.vala:206
+#: src/ui/preferences-dialog.vala:213
 msgid "Press keys…"
 msgstr "Натисніть клавіші…"
 
@@ -312,7 +312,11 @@ msgstr "Затримка у секундах перед початком зап�
 msgid "Capture mouse cursor"
 msgstr "Захоплювати вказівник миші"
 
-#: ui/preferences.ui:474
+#: ui/preferences.ui:458
+msgid "Capture sound from default PULSE device"
+msgstr ""
+
+#: ui/preferences.ui:489
 msgid "Peek preferences"
 msgstr "Параметри Peek"
 
@@ -342,10 +346,6 @@ msgstr ""
 "скрінкаст;захоплення екрану;запис екрану;записувач екрану;screencast;screen "
 "recorder;screen capture;GIF;WebM;APNG;"
 
-#: data/com.uploadedlobster.peek.desktop.in:8
-msgid "com.uploadedlobster.peek"
-msgstr "com.uploadedlobster.peek"
-
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
 msgstr "Простий записувач екрана зі зручним інтерфейсом"
@@ -363,8 +363,8 @@ msgstr ""
 "Його створено для випадків, коли необхідно записати окремі частини екрана, "
 "наприклад, для легкого показу функцій інтерфейсу ваших власних програм або "
 "для показу знайдених вад у звітах про помилки. З Peek ви просто розміщуєте "
-"вікно Peek над областю, яку ви хочете записати й натискаєте \"Записувати як\""
-". Peek оптимізований для створення анімованих GIF, але ви також можете "
+"вікно Peek над областю, яку ви хочете записати й натискаєте \"Записувати як"
+"\". Peek оптимізований для створення анімованих GIF, але ви також можете "
 "записувати відеоролики у форматі WebM або MP4, якщо ви надаєте їм перевагу."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
@@ -471,12 +471,19 @@ msgid "Whether to capture the mouse cursor"
 msgstr "Захоплювати вказівник миші"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
+msgid "Whether to capture sound from default PULSE input device"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Size and position of the last open main window"
 msgstr "Розмір і позиція головного вікна з часу останнього відкриття"
 
-#: data/com.uploadedlobster.peek.gschema.xml:79
+#: data/com.uploadedlobster.peek.gschema.xml:83
 msgid "Path where last video got saved"
 msgstr "Шлях, за яким відео було збережено востаннє"
+
+#~ msgid "com.uploadedlobster.peek"
+#~ msgstr "com.uploadedlobster.peek"
 
 #~ msgid "Unable to create default screen recorder.\n"
 #~ msgstr "Неможливо створити типовий записувач екрану\n"
