@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-11 17:10+0100\n"
-"PO-Revision-Date: 2020-11-08 02:26+0000\n"
+"PO-Revision-Date: 2021-12-11 17:26+0100\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/peek/"
 "translations/it/>\n"
@@ -205,7 +205,8 @@ msgid "translator-credits"
 msgstr ""
 "Emanuele Antonio Faraone\n"
 "Alessandro Toia\n"
-"Ivan Danza"
+"Ivan Danza\n"
+"Albano Battistella"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -318,7 +319,7 @@ msgstr "Cattura il cursore"
 
 #: ui/preferences.ui:458
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Cattura l'audio dal dispositivo PULSE predefinito"
 
 #: ui/preferences.ui:489
 msgid "Peek preferences"
@@ -473,7 +474,7 @@ msgstr "Se attivo cattura il cursore del mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Se catturare l'audio dal dispositivo di input PULSE predefinito"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Size and position of the last open main window"
