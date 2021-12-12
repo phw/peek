@@ -1,6 +1,6 @@
 app-id: com.uploadedlobster.peek
 runtime: org.gnome.Platform
-runtime-version: '3.36'
+runtime-version: '41'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -12,6 +12,7 @@ finish-args:
   - --env=GDK_BACKEND=x11
   - --socket=wayland
   - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.gnome.Shell
   - --talk-name=org.gnome.Shell.Screencast
   - --filesystem=home
   - --metadata=X-DConf=migrate-path=/com/uploadedlobster/peek/
@@ -69,8 +70,8 @@ modules:
       - --enable-indev=xcbgrab
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.2.2.tar.xz
-        sha256: cb754255ab0ee2ea5f66f8850e1bd6ad5cac1cd855d0a2f4990fb8c668b0d29c
+        url: https://ffmpeg.org/releases/ffmpeg-4.2.5.tar.xz
+        sha256: 574e66a7caa4b08c1d2c0e26a79559cdd23732cbc57894bd74df3989c35594c9
     modules:
       - name: yasm
         cleanup:
@@ -85,7 +86,7 @@ modules:
           - --enable-shared
         sources:
           - type: git
-            url: https://git.videolan.org/git/x264.git
+            url: https://code.videolan.org/videolan/x264.git
             commit: 1771b556ee45207f8711744ccbd5d42a3949b14c
         cleanup:
           - /bin/x264
@@ -100,8 +101,8 @@ modules:
       - arm
     sources:
       - type: archive
-        url: https://github.com/ImageOptim/gifski/archive/0.10.2.tar.gz
-        sha256: 3ec058c9d62c5411155d1c9a59fe23d282eb569b480cf8aeeaba522ead82b250
+        url: https://github.com/ImageOptim/gifski/archive/refs/tags/1.5.0.tar.gz
+        sha256: a55b285410c1558a5b6489b01d8dea1e28206220d383e6a2aa710378dfdc182c
     build-commands:
       - cargo build --release --features=openmp --verbose
       - install -Dm755 target/release/gifski /app/bin/gifski
