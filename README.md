@@ -171,24 +171,6 @@ any tweaks at all), installation can be done by simply typing:
 
     sudo apt install peek
 
-Besides, you can also create your own `.deb` package for Peek easily.
-First, install the build dependencies:
-
-    sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
-
-Then build Peek and package it:
-
-    git clone https://github.com/phw/peek.git
-    mkdir peek/build
-    cd peek/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
-    make package
-
-This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
-current version). You can install it with `apt`:
-
-    sudo apt install ./peek-*-Linux.deb
-
 ### Fedora
 **Note: Fedora by default does not provide the required `ffmpeg` package in its
 repositories. For this reason it is recommended for Fedora users to install Peek
