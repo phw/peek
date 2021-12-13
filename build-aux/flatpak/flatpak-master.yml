@@ -73,8 +73,8 @@ modules:
       - --enable-indev=xcbgrab
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.2.5.tar.xz
-        sha256: 574e66a7caa4b08c1d2c0e26a79559cdd23732cbc57894bd74df3989c35594c9
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz
+        sha256: eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02
     modules:
       - name: yasm
         cleanup:
@@ -90,7 +90,7 @@ modules:
         sources:
           - type: git
             url: https://code.videolan.org/videolan/x264.git
-            commit: 1771b556ee45207f8711744ccbd5d42a3949b14c
+            commit: 5db6aa6cab1b146e07b60cc1736a01f21da01154
         cleanup:
           - /bin/x264
 

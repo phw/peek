@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 LOCAL_REPO=${HOME}/flatpak-repos/peek
 
 if [ -z "$1" ]; then
