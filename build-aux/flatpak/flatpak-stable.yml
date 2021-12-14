@@ -15,6 +15,7 @@ finish-args:
   - --talk-name=org.gnome.Shell
   - --talk-name=org.gnome.Shell.Screencast
   - --filesystem=home
+  - --filesystem=xdg-videos
   - --metadata=X-DConf=migrate-path=/com/uploadedlobster/peek/
   - --env=LD_LIBRARY_PATH=/app/lib
 build-options:
