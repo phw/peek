@@ -117,7 +117,7 @@ modules:
     sources:
       - type: git
         url: ../..
-        branch: 1.4.0
+        branch: 1.5.1
     modules:
       - name: keybinder3
         sources:
