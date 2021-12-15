@@ -97,6 +97,7 @@ distributions:
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 - [Solus](https://dev.getsol.us/source/peek/)
+- [Ubuntu](https://packages.ubuntu.com/focal/peek)
 
 ### Flatpak
 Peek can be installed on all distributions supporting [Flatpak](https://flatpak.org) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
@@ -136,16 +137,13 @@ for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit
 for more information on how to use AppImages and integrate them with your system.
 
 ### Ubuntu
-You can install the latest versions of Peek from the
-[Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
+Install the latest version of Peek with this:
 
-    sudo add-apt-repository ppa:peek-developers/stable
-    sudo apt update
     sudo apt install peek
 
 If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
-available. Use the repository `ppa:peek-developers/daily` in the above commands.
+available.
 
 ### ElementaryOS
 Adding PPA repositories requires the package `software-properties-common`
