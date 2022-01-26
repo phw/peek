@@ -1,0 +1,129 @@
+name: peek
+version: git
+adopt-info: peek
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  peek:
+    command: usr/bin/peek
+    desktop: share/applications/com.uploadedlobster.peek.desktop
+    common-id: com.uploadedlobster.peek.desktop
+    extensions: [gnome-3-28]
+    plugs:
+      - gsettings
+      - home
+  ffmpeg:
+    command: ffmpeg
+
+slots:
+  session-dbus-interface:
+    interface: dbus
+    name: com.uploadedlobster.peek
+    bus: session
+
+parts:
+  peek:
+    plugin: meson
+    meson-parameters:
+      - --prefix=/usr
+      - -Dbuild-tests=false
+      - -Denable-filechoosernative=false
+      - -Denable-gnome-shell=false
+      - -Denable-open-file-manager=false
+    source: .
+    source-type: git
+    parse-info: [usr/share/metainfo/com.uploadedlobster.peek.appdata.xml]
+    build-packages:
+      - libgtk-3-dev
+      - libkeybinder-3.0-dev
+      - gettext
+      - valac
+    stage-packages:
+      - libcanberra-gtk3-module
+      - libkeybinder-3.0-0
+    override-pull: |
+      snapcraftctl pull
+      sed -i.bak -e 's|Icon=com.uploadedlobster.peek$|Icon=${SNAP}/usr/share/icons/hicolor/scalable/apps/com.uploadedlobster.peek.svg|g' data/com.uploadedlobster.peek.desktop.in
+    prime:
+      - -usr/lib/pkgconfig
+      - -usr/lib/*-linux-*/dri
+      - -usr/lib/*-linux-*/libasound*
+      - -usr/lib/*-linux-*/libgnutls*
+      - -usr/lib/*-linux-*/libicu*
+      - -usr/lib/*-linux-*/libLLVM*
+      - -usr/lib/*-linux-*/libX11*
+      - -usr/share/alsa
+      - -usr/share/bug
+      - -usr/share/doc
+      - -usr/share/fonts
+      - -usr/share/man
+      - -usr/share/mime
+      - -usr/share/libthai
+      - -usr/share/lintian
+      - -usr/share/pkgconfig
+      - -usr/share/sounds
+      - -usr/share/X11
+
+  ffmpeg:
+    plugin: autotools
+    source: https://ffmpeg.org/releases/ffmpeg-4.0.tar.xz
+    configflags:
+      - --prefix=/usr
+      - --disable-debug
+      - --disable-static
+      - --enable-gpl
+      - --enable-libvpx
+      - --enable-libx264
+      - --enable-shared
+      - --enable-libxcb
+      - --enable-libxcb-xfixes
+      - --disable-libxcb-shape
+      - --disable-ffplay
+      - --disable-ffprobe
+      - --disable-doc
+      - --disable-everything
+      - --enable-bsf=vp9_superframe
+      - --enable-decoder=libvpx_vp9
+      - --enable-decoder=png
+      - --enable-decoder=rawvideo
+      - --enable-encoder=apng
+      - --enable-encoder=ffvhuff
+      - --enable-encoder=gif
+      - --enable-encoder=libvpx_vp9
+      - --enable-encoder=libx264
+      - --enable-encoder=png
+      - --enable-demuxer=image2
+      - --enable-demuxer=matroska
+      - --enable-muxer=apng
+      - --enable-muxer=gif
+      - --enable-muxer=image2
+      - --enable-muxer=mp4
+      - --enable-muxer=webm
+      - --enable-filter=crop
+      - --enable-filter=fps
+      - --enable-filter=palettegen
+      - --enable-filter=paletteuse
+      - --enable-filter=scale
+      - --enable-protocol=file
+      - --enable-indev=xcbgrab
+    build-packages:
+      - libx264-dev
+      - libvpx-dev
+      - yasm
+    stage-packages:
+      - libx264-152
+      - libvpx5
+      - libxcb-xfixes0
+    prime:
+      - -usr/include
+      - -usr/lib/pkgconfig
+      - -usr/share/applications
+      - -usr/share/bug
+      - -usr/share/doc
+      - -usr/share/fonts
+      - -usr/share/ffmpeg/examples
+      - -usr/share/icons
+      - -usr/share/locale
+      - -usr/share/man

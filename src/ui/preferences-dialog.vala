@@ -35,52 +35,55 @@ namespace Peek.Ui {
     private GLib.Settings settings;
 
     [GtkChild]
-    private Gtk.CheckButton interface_open_file_manager;
+    private unowned Gtk.CheckButton interface_open_file_manager;
 
     [GtkChild]
-    private Gtk.CheckButton interface_show_notification;
+    private unowned Gtk.CheckButton interface_show_notification;
 
     [GtkChild]
-    private Gtk.Box keybinding_toggle_recording_box;
+    private unowned Gtk.Box keybinding_toggle_recording_box;
 
 #if HAS_KEYBINDER
     private ShortcutLabel keybinding_toggle_recording_accelerator;
 
     [GtkChild]
-    private Gtk.Box keybinding_toggle_recording_editor;
+    private unowned Gtk.Box keybinding_toggle_recording_editor;
 
     private Gtk.ToggleButton keybinding_toggle_recording_button;
 #endif
 
     [GtkChild]
-    private Gtk.ComboBoxText recording_output_format_combo_box;
+    private unowned Gtk.ComboBoxText recording_output_format_combo_box;
 
     [GtkChild]
-    private Gtk.Box recording_gifski_settings;
+    private unowned Gtk.Box recording_gifski_settings;
 
     [GtkChild]
-    private Gtk.CheckButton recording_gifski_enabled;
+    private unowned Gtk.CheckButton recording_gifski_enabled;
 
     [GtkChild]
-    private Gtk.Box recording_gifski_quality_box;
+    private unowned Gtk.Box recording_gifski_quality_box;
 
     [GtkChild]
-    private Gtk.Adjustment recording_gifski_quality;
+    private unowned Gtk.Adjustment recording_gifski_quality;
 
     [GtkChild]
-    private Gtk.Scale recording_gifski_quality_scale;
+    private unowned Gtk.Scale recording_gifski_quality_scale;
 
     [GtkChild]
-    private Gtk.Adjustment recording_start_delay;
+    private unowned Gtk.Adjustment recording_start_delay;
 
     [GtkChild]
-    private Gtk.Adjustment recording_framerate;
+    private unowned Gtk.Adjustment recording_framerate;
 
     [GtkChild]
-    private Gtk.Adjustment recording_downsample;
+    private unowned Gtk.Adjustment recording_downsample;
 
     [GtkChild]
-    private Gtk.CheckButton recording_capture_mouse;
+    private unowned Gtk.CheckButton recording_capture_mouse;
+
+    [GtkChild]
+    private unowned Gtk.CheckButton recording_capture_sound;
 
 
     public PreferencesDialog () {
@@ -124,6 +127,12 @@ namespace Peek.Ui {
         recording_capture_mouse, "active",
         SettingsBindFlags.DEFAULT);
 
+      settings.bind ("recording-capture-sound",
+        recording_capture_sound, "active",
+        SettingsBindFlags.DEFAULT);
+
+
+      on_output_format_changed ();
       on_interface_open_file_manager_toggled (interface_open_file_manager);
       on_gifski_toggled (recording_gifski_enabled);
 
@@ -159,13 +168,17 @@ namespace Peek.Ui {
 
     [GtkCallback]
     private void on_output_format_changed () {
-      recording_gifski_settings.sensitive =
-        (recording_output_format_combo_box.active_id == OutputFormat.GIF.to_string ());
+      recording_gifski_settings.sensitive = is_format (OutputFormat.GIF);
+      recording_capture_sound.sensitive = is_format (OutputFormat.MP4) || is_format (OutputFormat.WEBM);
     }
 
     [GtkCallback]
     private void on_gifski_toggled (ToggleButton source) {
       recording_gifski_quality_box.sensitive = source.active;
+    }
+
+    private bool is_format (OutputFormat format) {
+      return recording_output_format_combo_box.active_id == format.to_string ();
     }
 
 #if HAS_KEYBINDER

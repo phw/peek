@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
+# This file is distributed under the same license as the peek package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: peek\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-11 17:10+0100\n"
+"PO-Revision-Date: 2020-02-10 06:52+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/peek/"
+"translations/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11-dev\n"
+
+#: src/application.vala:63
+msgid "Show the version of the program and exit"
+msgstr "プログラムのバージョンを表示して終了します"
+
+#: src/application.vala:67
+msgid "Select the recording backend (gnome-shell, ffmpeg)"
+msgstr "録画に使用するバックエンド（gnome-shell、ffmpeg）を選択します"
+
+#: src/application.vala:68
+msgid "BACKEND"
+msgstr "バックエンド"
+
+#: src/application.vala:72
+msgid "Start recording in all running Peek instances"
+msgstr "実行中のすべての Peek のインスタンスで録画を開始します"
+
+#: src/application.vala:76
+msgid "Stop recording in all running Peek instances"
+msgstr "実行中のすべての Peek のインスタンスで録画を停止します"
+
+#: src/application.vala:80
+msgid "Toggle recording in all running Peek instances"
+msgstr "実行中のすべての Peek のインスタンスで録画の開始と停止を切り替えます"
+
+#: src/application.vala:84
+msgid "Start Peek without the header bar"
+msgstr "ヘッダーバーなしで Peek を開始します"
+
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
+#: data/com.uploadedlobster.peek.appdata.xml.in:7
+msgid "Peek"
+msgstr "Peek"
+
+#: src/application.vala:250
+#, c-format
+msgid "Unable to initialize default recording backend: %s"
+msgstr "デフォルトの録画バックエンドを初期化できません: %s"
+
+#: src/application.vala:266
+#, c-format
+msgid "Unable to initialize recording backend %s: %s"
+msgstr "録画バックエンド %s を初期化できません: %s"
+
+#: src/application.vala:337
+msgid "Recording backend unavailable"
+msgstr "録画バックエンドが利用できません"
+
+#: src/application.vala:341
+msgid "Native Wayland backend is unsupported"
+msgstr "ネイティブ Wayland バックエンドはサポートされていません"
+
+#: src/application.vala:342
+msgid ""
+"You are running Peek natively on Wayland, this is currently unsupported. "
+"Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
+"\n"
+"For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>FAQ about Wayland support</a>."
+msgstr ""
+"Peek をネイティブな Wayland 上で実行しています。これは現在サポートされていま"
+"せん。<tt>GDK_BACKEND=x11</tt> を設定し、XWayland を使用して Peek を起動して"
+"ください。\n"
+"\n"
+"詳細については Peek の <a href='https://github.com/phw/peek#why-no-native-"
+"wayland-support'>Wayland に関する FAQ</a> をお読みください。"
+
+#: src/recording/screen-recorder-factory.vala:26
+msgid "Peek requires FFmpeg or running GNOME Shell session."
+msgstr ""
+"Peek の実行には、FFmpeg か、実行中の GNOME シェルセッションが必要です。"
+
+#: src/recording/screen-recorder-factory.vala:47
+msgid "FFmpeg executable not found."
+msgstr "FFmpeg の実行ファイルが見つかりません。"
+
+#: src/ui/application-window.vala:122
+msgid "An unexpected error occurred during recording. Recording was aborted."
+msgstr "録画中に予期しないエラーが発生しました。録画は中止されました。"
+
+#: src/ui/application-window.vala:249
+msgid "Rendering animation…"
+msgstr "アニメーションをレンダリングしています…"
+
+#: src/ui/application-window.vala:250
+msgid "Peek will close when rendering is finished."
+msgstr "レンダリングが完了すると Peek は閉じます。"
+
+#: src/ui/application-window.vala:286 ui/application-window.ui:353
+#: ui/preferences.ui:224
+msgid "APNG"
+msgstr "APNG"
+
+#: src/ui/application-window.vala:287 ui/application-window.ui:337
+#: ui/preferences.ui:223
+msgid "GIF"
+msgstr "GIF"
+
+#: src/ui/application-window.vala:288 ui/application-window.ui:387
+#: ui/preferences.ui:226
+msgid "MP4"
+msgstr "MP4"
+
+#: src/ui/application-window.vala:289 ui/application-window.ui:370
+#: ui/preferences.ui:225
+msgid "WebM"
+msgstr "WebM"
+
+#: src/ui/application-window.vala:300
+#, c-format
+msgid "Record as %s"
+msgstr "%s 形式で録画"
+
+#: src/ui/application-window.vala:414
+#, c-format
+msgid "Start / Stop: %s"
+msgstr "開始/終了: %s"
+
+#: src/ui/application-window.vala:568
+msgid "Rendering…"
+msgstr "レンダリングしています…"
+
+#: src/ui/application-window.vala:608
+msgid "Recording could not be started due to an unexpected error."
+msgstr "予期しないエラーのため録画を開始できませんでした。"
+
+#: src/ui/application-window.vala:728 src/ui/application-window.vala:733
+msgid "Save animation"
+msgstr "アニメーションを保存"
+
+#: src/ui/application-window.vala:729 src/ui/application-window.vala:736
+msgid "_Save"
+msgstr "保存(_S)"
+
+#: src/ui/application-window.vala:730 src/ui/application-window.vala:734
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+#: src/ui/application-window.vala:801
+msgid "The file could not be saved to the selected location."
+msgstr "ファイルを選択された場所に保存することができませんでした。"
+
+#: src/ui/application-window.vala:828
+#, c-format
+msgid "Animation saved as “%s”"
+msgstr "アニメーションは \"%s\" という名前で保存されました"
+
+#. Unity does not allow actions on notifications, so we disable
+#. notification actions there.
+#: src/ui/application-window.vala:838
+msgid "Click here to show the saved file in your file manager."
+msgstr ""
+"ファイルマネージャーで保存されたファイルを表示するにはここをクリックしてくだ"
+"さい。"
+
+#: src/ui/application-window.vala:840
+msgid "Show in file manager"
+msgstr "ファイルマネージャーで表示"
+
+#. Display the configured shortcut to the user
+#: src/ui/preferences-dialog.vala:189
+msgid "deactivated"
+msgstr "なし"
+
+#. Add a button to change the keyboard shortcut
+#: src/ui/preferences-dialog.vala:200 src/ui/preferences-dialog.vala:216
+msgid "Change"
+msgstr "変更"
+
+#: src/ui/preferences-dialog.vala:213
+msgid "Press keys…"
+msgstr "キーを押してください…"
+
+#: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
+msgid "Animated GIF recorder"
+msgstr "アニメーション GIF レコーダー"
+
+#. Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: ui/about.ui.in:40
+msgctxt "Translator credits in about dialog"
+msgid "translator-credits"
+msgstr "Ryo Nakano"
+
+#: ui/application-window.ui:33 ui/application-window.ui:185
+msgid "Start recording"
+msgstr "録画を開始します"
+
+#: ui/application-window.ui:54
+msgid "New window"
+msgstr "新しいウィンドウ"
+
+#: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
+msgid "Set window size"
+msgstr "ウィンドウサイズを設定"
+
+#: ui/application-window.ui:93
+msgid "Preferences"
+msgstr "設定"
+
+#: ui/application-window.ui:107
+msgid "About Peek"
+msgstr "このアプリケーションについて"
+
+#: ui/application-window.ui:149
+msgid "_Stop"
+msgstr "停止(_S)"
+
+#: ui/application-window.ui:159
+msgid "Stop recording"
+msgstr "録画を停止します"
+
+#: ui/application-window.ui:175
+msgid "_Record"
+msgstr "録画(_R)"
+
+#: ui/error-dialog.ui:8
+msgid "Recording error"
+msgstr "録画エラー"
+
+#: ui/error-dialog.ui:28
+msgid "Report issue"
+msgstr "問題を報告"
+
+#: ui/error-dialog.ui:42
+msgid "Close"
+msgstr "閉じる"
+
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+"この問題を報告する前に、<a href=\"https://github.com/phw/peek#frequently-"
+"asked-questions\">FAQ</a> をお読みください。FAQ では問題が解決しない場合は、"
+"いつ何をしていた時に問題が発生したかを、可能な限り詳細に示して報告してくださ"
+"い。"
+
+#: ui/error-dialog.ui:126
+msgid "Show details"
+msgstr "詳細を表示"
+
+#: ui/preferences.ui:77
+msgid "User interface"
+msgstr "ユーザーインターフェース"
+
+#: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
+msgid "Open file manager after saving"
+msgstr "保存後にファイルマネージャーを開く"
+
+#: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
+msgid "Show desktop notification after saving"
+msgstr "保存後にデスクトップ通知を表示"
+
+#: ui/preferences.ui:131
+msgid "Start / stop recording"
+msgstr "録画を開始/終了"
+
+#: ui/preferences.ui:185
+msgid "Recording"
+msgstr "録画"
+
+#: ui/preferences.ui:208
+msgid "Output format"
+msgstr "出力形式"
+
+#: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
+msgid "Use gifski for high quality GIFs"
+msgstr "より高画質の GIF にするために gifski を使う"
+
+#: ui/preferences.ui:276
+msgid "GIF quality"
+msgstr "GIF の画質"
+
+#: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
+msgid "Framerate"
+msgstr "フレームレート"
+
+#: ui/preferences.ui:368
+msgid "Resolution downsampling"
+msgstr "解像度のダウンサンプリング"
+
+#: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
+msgid "Delay in seconds before recording starts"
+msgstr "録画開始までの遅延秒数"
+
+#: ui/preferences.ui:443
+msgid "Capture mouse cursor"
+msgstr "マウスカーソルをキャプチャー"
+
+#: ui/preferences.ui:458
+msgid "Capture sound from default PULSE device"
+msgstr ""
+
+#: ui/preferences.ui:489
+msgid "Peek preferences"
+msgstr "Peek の設定"
+
+#: ui/set-window-size-dialog.ui:27
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: ui/set-window-size-dialog.ui:36
+msgid "Set size"
+msgstr "サイズを設定"
+
+#: ui/set-window-size-dialog.ui:89
+msgid "Width"
+msgstr "幅"
+
+#: ui/set-window-size-dialog.ui:127
+msgid "Height"
+msgstr "高さ"
+
+#: data/com.uploadedlobster.peek.desktop.in:6
+msgid "Record short animated GIF images from your screen"
+msgstr "スクリーンから短いアニメーション GIF イメージを録画します"
+
+#: data/com.uploadedlobster.peek.desktop.in:7
+msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
+msgstr ""
+"スクリーンキャスト;スクリーンレコーダー;スクリーンキャプチャー;screencast;"
+"screen recorder;screen capture;GIF;WebM;APNG;"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:8
+msgid "Simple screen recorder with an easy to use interface"
+msgstr "使いやすいインターフェースを備えたシンプルなスクリーンレコーダー"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:11
+msgid ""
+"Peek makes it easy to create short screencasts of a screen area. It was "
+"built for the specific use case of recording screen areas, e.g. for easily "
+"showing UI features of your own apps or for showing a bug in bug reports. "
+"With Peek you simply place the Peek window over the area you want to record "
+"and press \"Record\". Peek is optimized for generating animated GIFs, but "
+"you can also directly record to WebM or MP4 if you prefer."
+msgstr ""
+"Peek は、指定した画面領域の短いスクリーンキャストを簡単に作成することができま"
+"す。特定の用途（アプリの UI や機能に関する説明、バグ報告など）で画面領域を録"
+"画するために Peek は作成されました。Peek の使い方はシンプルで、録画したい領域"
+"に Peek のウィンドウを移動させて「録画」を押すだけです。Peek はアニメーショ"
+"ン GIF を生成するのに最適化されていますが、WebM や MP4 で直接録画することもで"
+"きます。"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:20
+msgid "Features:"
+msgstr "機能:"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:22
+msgid "Select a screen region to record"
+msgstr "録画する画面領域を選択します"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:23
+msgid "Save recorded video as an optimized animated GIF"
+msgstr "録画されたビデオを最適化されたアニメーション GIF として保存します"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:24
+msgid "Record directly to WebM or MP4 format"
+msgstr "WebM や MP4 形式に直接録画します"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:25
+msgid "Simple user interface optimized for the task"
+msgstr "タスクに最適化されたシンプルなユーザーインターフェース"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:26
+msgid "Automatically downscale recorded videos"
+msgstr "録画されたビデオを自動的にダウンスケールします"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:27
+msgid "Support for HiDPI screens"
+msgstr "HiDPI スクリーンをサポート"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:28
+msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
+msgstr "XWayland を使用して GNOME Shell Wayland セッション内で動作します"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:30
+msgid ""
+"Peek is not a general purpose screencast app with extended features but "
+"rather focuses on the single task of creating small, silent screencasts of "
+"an area of the screen for creating GIF animations or silent WebM or MP4 "
+"videos."
+msgstr ""
+"Peek は拡張された機能を持った汎用目的のスクリーンキャストアプリではなく、むし"
+"ろ GIF アニメーションや無音の WebM/MP4 ビデオを作成するという目的で画面領域の"
+"小さくて無音のスクリーンキャストを作成するという単一のタスクに焦点を当ててい"
+"ます。"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:41
+msgid "The main window to select the recording area"
+msgstr "録画範囲を選択するメインウィンドウ"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:45
+msgid "Peek's preferences dialog"
+msgstr "Peek の設定ダイアログ"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:49
+msgid "Peek is recording itself"
+msgstr "Peek が Peek 自身を録画しています"
+
+#: data/com.uploadedlobster.peek.appdata.xml.in:79
+msgid "Philipp Wolfer"
+msgstr "Philipp Wolfer"
+
+#: data/com.uploadedlobster.peek.gschema.xml:15
+msgid ""
+"Time in milliseconds for which the recording area size is displayed after "
+"resizing stops."
+msgstr ""
+"サイズ調整が終わったあと録画領域のサイズが表示されるまでの時間（ミリ秒）。"
+
+#: data/com.uploadedlobster.peek.gschema.xml:18
+msgid "\"Peek %Y-%m-%d %H-%M\""
+msgstr "\"Peek %Y-%m-%d %H-%M\""
+
+#: data/com.uploadedlobster.peek.gschema.xml:19
+msgid ""
+"Default file name used. Can include date format specifiers. The extension "
+"will be added automatically."
+msgstr ""
+"デフォルトのファイル名に使用されます。日時書式指定文字列を含めることができま"
+"す。拡張子が自動的に追加されます。"
+
+#: data/com.uploadedlobster.peek.gschema.xml:23
+msgid "Prefer dark theme"
+msgstr "ダークテーマを使用します"
+
+#: data/com.uploadedlobster.peek.gschema.xml:27
+msgid "Global keybinding to toggle recording"
+msgstr "録画状態を切り替えるためのグローバルキーバインド"
+
+#: data/com.uploadedlobster.peek.gschema.xml:43
+msgid "Output file format"
+msgstr "出力されるファイルの形式"
+
+#: data/com.uploadedlobster.peek.gschema.xml:52
+msgid "Quality setting for the gifski GIF encoder"
+msgstr "gifski GIF エンコーダーで使用される画質設定"
+
+#: data/com.uploadedlobster.peek.gschema.xml:67
+msgid "Resolution downsampling factor"
+msgstr "解像度ダウンサンプル係数"
+
+#: data/com.uploadedlobster.peek.gschema.xml:71
+msgid "Whether to capture the mouse cursor"
+msgstr "マウスカーソルをキャプチャーするかどうか"
+
+#: data/com.uploadedlobster.peek.gschema.xml:75
+msgid "Whether to capture sound from default PULSE input device"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:79
+msgid "Size and position of the last open main window"
+msgstr "最後に開かれたメインウィンドウのサイズと位置"
+
+#: data/com.uploadedlobster.peek.gschema.xml:83
+msgid "Path where last video got saved"
+msgstr "最後のビデオが保存された場所のパス"
+
+#~ msgid "com.uploadedlobster.peek"
+#~ msgstr "com.uploadedlobster.peek"
+
+#~ msgid "Unable to create default screen recorder.\n"
+#~ msgstr "デフォルトのスクリーンレコーダーを作成できませんでした。\n"
+
+#~ msgid "_Quit"
+#~ msgstr "終了(_Q)"

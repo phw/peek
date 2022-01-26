@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2017 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2020 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -90,12 +90,8 @@ namespace Peek {
 
     public override void startup () {
       base.startup ();
-
       load_stylesheets ();
-
       Environment.set_application_name (_ ("Peek"));
-
-      force_app_menu ();
       register_actions ();
 
 #if HAS_KEYBINDER
@@ -115,8 +111,10 @@ namespace Peek {
     public override void shutdown () {
       debug ("Application got shutdown signal");
       foreach (var window in this.get_windows ()) {
-        var recorder = (window as ApplicationWindow).recorder;
-        recorder.cancel ();
+        var app_window = (window as ApplicationWindow);
+        if (app_window != null) {
+          app_window.recorder.cancel ();
+        }
       }
 
 #if HAS_KEYBINDER
@@ -176,6 +174,10 @@ namespace Peek {
 
       action = new SimpleAction ("new-window-with-backend", VariantType.STRING);
       action.activate.connect (new_window_with_backend);
+      add_action (action);
+
+      action = new SimpleAction ("set-window-size", null);
+      action.activate.connect (set_window_size);
       add_action (action);
 
       action = new SimpleAction ("preferences", null);
@@ -245,31 +247,41 @@ namespace Peek {
         var recorder = ScreenRecorderFactory.create_default_screen_recorder ();
         show_window (recorder);
       } catch (PeekError e) {
-        stderr.printf (_ ("Unable to create default screen recorder.\n"));
+        var msg = _ ("Unable to initialize default recording backend: %s").printf (
+          e.message);
+        stderr.printf ("%s\n", msg);
+        show_recording_backend_warning (msg);
       }
     }
 
     private void new_window_with_backend (Variant? backend) {
       size_t length;
       string backend_name = backend.get_string (out length);
-      stdout.printf ("Requested screen recorder backend %s\n", backend_name);
+      stdout.printf ("Requested screen recording backend %s\n", backend_name);
 
       try {
         var recorder = ScreenRecorderFactory.create_screen_recorder (backend_name);
         show_window (recorder);
       } catch (PeekError e) {
-        stderr.printf (_ ("Unable to initialize backend %s.\n"), backend_name);
-        stderr.printf (e.message);
+        var msg = _ ("Unable to initialize recording backend %s: %s").printf (
+          backend_name, e.message);
+        stderr.printf ("%s\n", msg);
+        show_recording_backend_warning (msg);
       }
     }
 
+    private void set_window_size () {
+      SetWindowSizeDialog.present_single_instance(main_window);
+    }
+
     private void show_window (ScreenRecorder recorder) {
+      if (DesktopIntegration.is_wayland_backend ()) {
+        show_wayland_warning ();
+        return;
+      }
+
       main_window = new ApplicationWindow (this, recorder);
       main_window.present ();
-
-      if (DesktopIntegration.is_wayland_backend ()) {
-        show_wayland_warning (main_window);
-      }
     }
 
     private void show_preferences () {
@@ -321,67 +333,26 @@ namespace Peek {
     }
 #endif
 
-    /**
-    * Forces the app menu in the decoration layouts so in environments without an app-menu
-    * it will be rendered by GTK as part of the window.
-    *
-    * Applies if:
-    *  - disabled Gtk/ShellShowsAppMenu setting
-    *  - no 'menu' setting in Gtk/DecorationLayout
-    */
-    private void force_app_menu () {
-      var settings = Gtk.Settings.get_default ();
-
-      if (settings == null) {
-          warning ("Could not fetch Gtk default settings");
-          return ;
-      }
-
-      string decoration_layout = settings.gtk_decoration_layout ?? "";
-      debug ("Decoration layout: %s", decoration_layout);
-
-      // Make sure the menu is part of the decoration
-      if (!decoration_layout.contains ("menu")) {
-          string prefix = "menu:";
-          if (decoration_layout.contains (":")) {
-            prefix = decoration_layout.has_prefix (":") ? "menu" : "menu,";
-          }
-
-          settings.gtk_decoration_layout = prefix + decoration_layout;
-      }
-
-      // Unity specific workaround, force app menu in window when
-      // setting to display menus in titlebar in Unity is active
-      if (DesktopIntegration.is_unity ()) {
-        var schema_source = SettingsSchemaSource.get_default ();
-        SettingsSchema? schema = schema_source.lookup ("com.canonical.Unity", false);
-        if (schema != null && schema.has_key ("integrated-menus")) {
-          var unity = new Settings.full (schema, null, null);
-          if (unity.get_boolean ("integrated-menus")) {
-            debug ("Unity with integrated menus");
-            settings.gtk_shell_shows_app_menu = false;
-          } else {
-            debug ("Unity with global menus");
-          }
-        } else {
-          debug ("Could not load schema com.canonical.Unity");
-        }
-      }
+    private void show_recording_backend_warning (string msg) {
+      show_startup_warning (_ ("Recording backend unavailable"), msg);
     }
 
-    private void show_wayland_warning (Gtk.Window parent) {
+    private void show_wayland_warning () {
+      var title = _ ("Native Wayland backend is unsupported");
+      var text = _ ("You are running Peek natively on Wayland, this is currently unsupported. Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n\nFor Details see the Peek <a href='https://github.com/phw/peek#why-no-native-wayland-support'>FAQ about Wayland support</a>.");
+      show_startup_warning (title, text);
+    }
+
+    private void show_startup_warning (string title, string text) {
       // FIXME: Calling this with "%s", "" avoids C compilation warning.
       // Passing null would be cleaner, but currently not possible
       // (https://bugzilla.gnome.org/show_bug.cgi?id=791570)
-      var msg = new Gtk.MessageDialog (parent, Gtk.DialogFlags.MODAL,
+      var msg = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL,
         Gtk.MessageType.WARNING, Gtk.ButtonsType.OK, "%s", "");
-      msg.text = _ ("Native Wayland backend is unsupported");
+      msg.text = title;
       msg.secondary_use_markup = true;
-      msg.secondary_text = _ ("You are running Peek natively on Wayland, this is currently unsupported. Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n\nFor Details see the Peek <a href='https://github.com/phw/peek#why-no-native-wayland-support'>FAQ about Wayland support</a>.");
-      msg.response.connect ((response_id) => {
-        parent.destroy ();
-      });
-      msg.show ();
+      msg.secondary_text = text;
+      msg.run ();
     }
   }
 

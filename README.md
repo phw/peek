@@ -1,6 +1,6 @@
 # Peek - an animated GIF recorder
 [![GitHub release](https://img.shields.io/github/release/phw/peek.svg)](https://github.com/phw/peek/releases)
-[![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3+](https://img.shields.io/badge/license-GPL%20v3%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Packaging status](https://repology.org/badge/tiny-repos/peek.svg)](https://repology.org/metapackage/peek/packages)
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
@@ -22,19 +22,21 @@ Simple screen recorder with an easy to use interface
   - [Flatpak](#flatpak)
   - [Snappy](#snappy)
   - [AppImage](#appimage)
-  - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
+  - [ElementaryOS](#elementaryos)
   - [Debian](#debian)
   - [Fedora](#fedora)
   - [Solus](#solus)
+  - [Arch Linux](#arch-linux)
   - [Other distributions](#other-distributions)
   - [From source](#from-source)
 - [Frequently Asked Questions](#frequently-asked-questions)
-  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-key-strokes)
+  - [How can I capture mouse clicks and/or keystrokes?](#how-can-i-capture-mouse-clicks-andor-keystrokes)
   - [How can I improve the quality of recorded GIF files](#how-can-i-improve-the-quality-of-recorded-gif-files)
   - [Why are the GIF files so big?](#why-are-the-gif-files-so-big)
   - [If GIF is so bad why use it at all?](#if-gif-is-so-bad-why-use-it-at-all)
   - [What about WebM or MP4? Those are well supported on the web.](#what-about-webm-or-mp4-those-are-well-supported-on-the-web)
+  - [What is the cause for "Could not start GNOME Shell recorder" errors?](#what-is-the-cause-for-could-not-start-gnome-shell-recorder-errors)
   - [Why can't I interact with the UI elements inside the recording area?](#why-cant-i-interact-with-the-ui-elements-inside-the-recording-area)
   - [My recorded GIFs flicker, what is wrong?](#my-recorded-gifs-flicker-what-is-wrong)
   - [On i3 the recording area is all black, how can I record anything?](#on-i3-the-recording-area-is-all-black-how-can-i-record-anything)
@@ -66,10 +68,10 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ## Requirements
 ### Runtime
 
-- GTK+ >= 3.14
+- GTK+ >= 3.20
 - GLib >= 2.38
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
-- FFmpeg
+- FFmpeg >= 3
 - GStreamer 'Good' plugins (for recording on GNOME Shell)
 - GStreamer 'Ugly' plugins (for MP4 recording on GNOME Shell)
 - [gifski](https://gif.ski/) (optional but recommended for improved GIF quality)
@@ -77,7 +79,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 ### Development
 
 - Vala compiler >= 0.22
-- CMake >= 2.8.8
+- Meson >= 0.47.0
 - Gettext (>= 0.19 for localized .desktop entry)
 - txt2man (optional for building man page)
 
@@ -87,21 +89,27 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 Peek is available in official package repositories for the following
 distributions:
 
+- [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
+- [Debian](https://tracker.debian.org/pkg/peek)
+- [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
+- [NixOS](https://nixos.org/nixos/packages.html?channel=nixos-unstable&query=%5Epeek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
+- [Solus](https://dev.getsol.us/source/peek/)
 
 ### Flatpak
-Peek can be installed on all distributions supporting [Flatpak](http://flatpak.org/) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
+Peek can be installed on all distributions supporting [Flatpak](https://flatpak.org) from [Flathub](https://flathub.org/apps/details/com.uploadedlobster.peek).
 To install, either download
 [com.uploadedlobster.peek.flatpakref](https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref)
-and open it with GNOME Software or install via command line:
+and open it with GNOME Software or install via command line (first time flatpak
+users need to follow the [flatpak/flathub setup instructions](https://flatpak.org/setup/) first):
 
-    flatpak install --user https://flathub.org/repo/appstream/com.uploadedlobster.peek.flatpakref
+    flatpak install flathub com.uploadedlobster.peek
 
 For full functionality you should also install
 [xdg-desktop-portal-gtk](https://github.com/flatpak/xdg-desktop-portal-gtk).
-It is available for most current distributions. Once installed you can run Peek
+It is available for most current distributions. Once installed, you can run Peek
 via its application icon in your desktop environment or from the command line:
 
     flatpak run com.uploadedlobster.peek
@@ -127,12 +135,6 @@ however you want, e.g. you can name it just `peek` and place it in `$HOME/bin`
 for easy access. See the [AppImage wiki](https://github.com/AppImage/AppImageKit/wiki)
 for more information on how to use AppImages and integrate them with your system.
 
-### Arch Linux
-For Arch Linux
-[peek](https://aur.archlinux.org/packages/peek/) is available in the AUR. You
-can also use [peek-git](https://aur.archlinux.org/packages/peek-git/) to install
-the latest development version.
-
 ### Ubuntu
 You can install the latest versions of Peek from the
 [Ubuntu PPA](https://code.launchpad.net/~peek-developers/+archive/ubuntu/stable).
@@ -145,35 +147,37 @@ If you want to use the latest development version there is also a
 [PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
 available. Use the repository `ppa:peek-developers/daily` in the above commands.
 
+### ElementaryOS
+Adding PPA repositories requires the package `software-properties-common`
+
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:peek-developers/stable
+    sudo apt update
+    sudo apt install peek
+
+If you want to use the latest development version there is also a
+[PPA with daily builds](https://code.launchpad.net/~peek-developers/+archive/ubuntu/daily)
+available. Use the repository `ppa:peek-developers/daily` in the above commands.
+
 ### Debian
-There are no official Debian packages, yet, but you can easily create your own
-.deb package for Peek. First, install the build dependencies:
+There are official Debian packages for Debian 11 ("Bullseye") and Debian 10 ("Buster") via
+main repository and packages for Debian 9 ("Stretch") via
+[`stretch-backports`](https://packages.debian.org/stretch-backports/peek)
+repository. Please refer to [Debian Backports Website](https://backports.debian.org/)
+for detailed usage of `stretch-backports` repository.
 
-    sudo apt install cmake valac libgtk-3-dev libkeybinder-3.0-dev libxml2-utils gettext txt2man
+After enabling `stretch-backports` for Debian 9 (Debian 10 or Debian 11 or `Sid` don't need
+any tweaks at all), installation can be done by simply typing:
 
-Then build Peek and package it:
-
-    git clone https://github.com/phw/peek.git
-    mkdir peek/build
-    cd peek/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -DGSETTINGS_COMPILE=OFF ..
-    make package
-
-This will create the package `peek-x.y.z-Linux.deb` (where `x.y.z` is the
-current version). You can install it with dpkg:
-
-    sudo dpkg -i peek-*-Linux.deb
+    sudo apt install peek
 
 ### Fedora
-For Fedora 25 add this repository:
+**Note: Fedora by default does not provide the required `ffmpeg` package in its
+repositories. For this reason it is recommended for Fedora users to install Peek
+with Flatpak, see above. If you prefer to install Peek from the repositories
+you should install `ffmpeg` separately as described below.**
 
-    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_25/home:phiwo:peek.repo
-
-For Fedora 26 add this repository:
-
-    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:/phiwo:/peek/Fedora_26/home:phiwo:peek.repo
-
-Then install Peek with:
+Peek is available in the default repositories (Fedora 29 and later):
 
     sudo dnf install peek
 
@@ -190,10 +194,23 @@ package also available from RPM Fusion free:
     sudo dnf install gstreamer1-plugins-ugly
 
 ### Solus
+Solus users can simply install with:
 
-For Solus users just run:
+    sudo eopkg it peek
 
-	sudo eopkg install peek
+### Arch Linux
+Arch Linux users can simply install with:
+
+    sudo pacman -S peek
+
+For GNOME Shell recording there are some optional packages you can choose from:
+
+    gst-plugins-good: Recording under Gnome Shell
+    gst-plugins-ugly: MP4 output under Gnome Shell
+    gifski: High quality GIF animations with thousands of colors
+
+If you have a package manager for AUR (or fetch from AUR manually) the git
+version is available [here](https://aur.archlinux.org/packages/peek-git)
 
 
 ### Other distributions
@@ -201,23 +218,21 @@ See the [Repology package list](https://repology.org/metapackage/peek/packages)
 for a list of Peek packages for various distributions.
 
 ### From source
-You can build and install Peek using CMake:
+You can build and install Peek using Meson with Ninja:
 
     git clone https://github.com/phw/peek.git
-    mkdir peek/build
-    cd peek/build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-    make
+    cd peek
+    meson --prefix=/usr/local builddir
+    cd builddir
+    ninja
 
     # Run directly from source
-    ./peek
+    ./src/peek
 
     # Install system-wide
-    sudo make install
+    sudo ninja install
 
-You can uninstall Peek again by running `sudo make uninstall` from within the
-build directory.
-
+*Note: `ninja` might be called `ninja-build` on some distributions.*
 
 ## Frequently Asked Questions
 ### How can I capture mouse clicks and/or keystrokes?
@@ -245,7 +260,7 @@ GIF files. For best results:
   cases you can even get good results with lower framerates.
 - If you have [gifski](https://gif.ski/) installed you can adjust the GIF
   quality in the preferences. A lower quality gives a smaller file size at the
-  expense of visual quality (see above).  
+  expense of visual quality (see above).
 - Avoid too much change. If there is heavy animation the frames will differ
   a lot.
 - Record small areas or use the downsample option to scale the image. The GIF
@@ -269,13 +284,33 @@ preferred output format in the preferences. Both are well supported by modern
 browsers, even though they are still not as universally supported by tools and
 online services as GIFs.
 
+### What is the cause for "Could not start GNOME Shell recorder" errors?
+
+This usually indicates an error while starting the built-in GNOME shell
+recorder. Unfortunately Peek does not receive any error details, to find out
+more about this issues look at the GNOME Shell log output in `journalctl`.
+
+A common cause for this is that the GNOME Shell recorder is already running,
+either because it was started via the GNOME Shell keyboard shortcut or by
+another application.
+
+If this error is shown when trying to record MP4 a common cause is that you are
+missing the [GStreamer ugly](https://gstreamer.freedesktop.org/modules/gst-plugins-ugly.html)
+plugins, which provide MP4 encoding. Please refer to the documentation of your
+distribution on how to install these.
+Do note that you have to logout and login for Peek to recognize the new
+installed libraries if you are running the Wayland display server.
+
+See also issue [#287](https://github.com/phw/peek/issues/287) for related discussion.
+
 ### Why can't I interact with the UI elements inside the recording area?
 You absolutely should be able to click the UI elements inside the area you are
-recording. If you use i3 you should stack Peek with the window you intend to record
-or make sure all windows are floating and uncheck "Always on top" from the Peek settings.  
-If you want to be able to control the area when recording in i3 you can move Peek
-to the Scratchpad it will keep recording the area once you hide the window.
-If this does not work for you on any other window manager please open an [issue on GitHub](https://github.com/phw/peek/issues).
+recording. If you use i3 you should stack Peek with the window you intend to
+record or make sure all windows are floating and uncheck "Always on top" from
+the Peek settings. If you want to be able to control the area when recording
+in i3 you can move Peek to the Scratchpad it will keep recording the area once
+you hide the window. If this does not work for you on any other window manager
+please open an [issue on GitHub](https://github.com/phw/peek/issues).
 
 ### My recorded GIFs flicker, what is wrong?
 Some users have experienced recorded windows flicker or other strange visual
@@ -313,7 +348,7 @@ itself is used to obtain the recording coordinates. That means, for now, there
 cannot be any fully native Wayland support without special support for this
 use case by the compositor.
 
-It is, however, possible to use Peek in a GNOME Shell Wayland session using
+However, it is possible to use Peek in a GNOME Shell Wayland session using
 XWayland by launching Peek with the X11 backend:
 
     GDK_BACKEND=x11 peek
@@ -330,9 +365,9 @@ Or you can help in development and translation.
 ### Development
 You are welcome to contribute code and provide pull requests for Peek. The
 easiest way to start is looking at the open issues tagged with
-[good first issue](https://github.com/phw/peek/labels/good%20first%20issue). Those are
-open issues which are not too difficult to solve and can be started without
-too much knowledge about the code.
+[good first issue](https://github.com/phw/peek/labels/good%20first%20issue).
+Those are open issues which are not too difficult to solve and can be started
+without too much knowledge about the code.
 
 Another good starting point are issues tagged with
 [help wanted](https://github.com/phw/peek/labels/help%20wanted). Those issues are
@@ -370,4 +405,4 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Peek.  If not, see <http://www.gnu.org/licenses/>.
+along with Peek.  If not, see <https://www.gnu.org/licenses/>.

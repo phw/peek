@@ -9,23 +9,15 @@ refer to the installation instructions in README.md.
 
 From inside the Peek source folder run:
 
-    mkdir -p build
-    cd build
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-
-Or you can build with [Ninja](https://ninja-build.org/):
-
-    cmake -DCMAKE_INSTALL_PREFIX=/usr -GNinja ..
+    meson --prefix=/usr builddir
+    cd builddir
     ninja
 
 `ninja` might be called `ninja-build` on some distributions.
 
-### Build and run tests
+### Run tests
 
-    cmake -DBUILD_TESTS=ON ..
-    make
-    make test
+    ninja test
 
 ### Running Peek with debug output
 
@@ -33,8 +25,8 @@ Or you can build with [Ninja](https://ninja-build.org/):
 
 ### Update translations
 
-    make update-po
-    make peek.pot-update
+    ninja peek-update-po
+    ninja peek-pot
 
 
 ## Packaging
@@ -42,29 +34,20 @@ Or you can build with [Ninja](https://ninja-build.org/):
 ### Debian package
 
 #### Build requirements
- - cmake (>= 2.8.8)
+ - meson (>= 0.47.0)
  - valac (>= 0.22)
- - libgtk-3-dev (>= 3.14)
+ - libgtk-3-dev (>= 3.20)
  - libkeybinder-3.0-dev
  - libxml2-utils
  - gettext (>= 0.19 for localized .desktop entry)
  - txt2man (optional for building man page)
- - gzip
+ - gzip (optional for building man page)
 
 #### Runtime requirements
- - libgtk-3-0 (>= 3.14)
+ - libgtk-3-0 (>= 3.20)
  - libglib2.0 (>= 2.38)
  - libkeybinder-3.0-0
- - ffmpeg
-
-#### Generating the package
-A Debian package can be created with cmake on any system:
-
-    cmake \
-      -DCMAKE_INSTALL_PREFIX=/usr \
-      -DCMAKE_BUILD_TYPE=Release \
-      -DGSETTINGS_COMPILE=OFF ..
-    make package
+ - ffmpeg >= 3
 
 ### Flatpak
 

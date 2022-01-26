@@ -1,5 +1,5 @@
 /*
-Peek Copyright (c) 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright (c) 2015-2020 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 This file is part of Peek.
 
@@ -33,31 +33,49 @@ namespace Peek.Ui {
     public string save_folder { get; set; }
 
     [GtkChild]
-    private HeaderBar headerbar;
+    private unowned HeaderBar headerbar;
 
     [GtkChild]
-    private Widget recording_view;
+    private unowned Widget recording_view;
 
     [GtkChild]
-    private Button record_button;
+    private unowned Button record_button;
 
     [GtkChild]
-    private Button stop_button;
+    private unowned Button stop_button;
 
     [GtkChild]
-    private Popover pop_format;
+    private unowned Popover pop_format;
 
     [GtkChild]
-    private MenuButton pop_format_menu;
+    private unowned RadioButton gif_button;
 
     [GtkChild]
-    private Label size_indicator;
+    private unowned RadioButton apng_button;
 
     [GtkChild]
-    private Label delay_indicator;
+    private unowned RadioButton webm_button;
 
     [GtkChild]
-    private Label shortcut_label;
+    private unowned RadioButton mp4_button;
+
+    [GtkChild]
+    private unowned MenuButton pop_format_menu;
+
+    [GtkChild]
+    private unowned Label size_indicator;
+
+    [GtkChild]
+    private unowned Label delay_indicator;
+
+    [GtkChild]
+    private unowned Label shortcut_label;
+
+    [GtkChild]
+    private unowned ToggleButton pop_menu_button;
+
+    [GtkChild]
+    private unowned Popover pop_menu;
 
     private uint start_recording_event_source = 0;
     private uint size_indicator_timeout = 0;
@@ -74,7 +92,7 @@ namespace Peek.Ui {
 
     private GLib.Settings settings;
 
-    private const int SMALL_WINDOW_SIZE = 300;
+    private const int SMALL_WINDOW_SIZE = 400;
 
     public ApplicationWindow (Peek.Application application,
       ScreenRecorder recorder) {
@@ -116,11 +134,6 @@ namespace Peek.Ui {
       application.start_recording.connect (prepare_start_recording);
 
       application.stop_recording.connect (prepare_stop_recording);
-
-      // Update record button label when recording format changes
-      this.recorder.config.notify["output-format"].connect ((pspec) => {
-        update_format_label ();
-      });
 
       // Bind settings
       settings = Peek.Application.get_app_settings ();
@@ -177,6 +190,11 @@ namespace Peek.Ui {
         this, "save_folder",
         SettingsBindFlags.DEFAULT);
 
+      // Update record button label when recording format changes
+      this.recorder.config.notify["output-format"].connect ((pspec) => {
+        update_format_label ();
+      });
+
       // Configure window
       this.set_keep_above (true);
       this.load_geometry ();
@@ -184,6 +202,7 @@ namespace Peek.Ui {
 
       this.show.connect (() => {
         show_size_indicator ();
+        update_format_label ();
       });
 
       stop_button_label = stop_button.label;
@@ -261,7 +280,7 @@ namespace Peek.Ui {
       return false;
     }
 
-    //set format
+    // Set file format
     private string get_format_name (OutputFormat format) {
       switch (format) {
         case OutputFormat.APNG: return _ ("APNG");
@@ -274,26 +293,45 @@ namespace Peek.Ui {
 
     private void select_format (OutputFormat format) {
       recorder.config.output_format = format;
-      update_format_label ();
     }
 
     private void update_format_label () {
       var format_name = get_format_name (recorder.config.output_format);
       record_button.set_label (_ ("Record as %s").printf (format_name));
+
+      switch (recorder.config.output_format) {
+        case OutputFormat.GIF:
+          gif_button.set_active (true);
+          break;
+        case OutputFormat.APNG:
+          apng_button.set_active (true);
+          break;
+        case OutputFormat.WEBM:
+          webm_button.set_active (true);
+          break;
+        case OutputFormat.MP4:
+          mp4_button.set_active (true);
+          break;
+      }
+
+      var area = get_recording_area ();
+      update_ui_size (area);
       pop_format.hide ();
     }
 
     private void update_time () {
-      headerbar.set_title (Utils.format_time (0));
+      var title = new Gtk.Label (Utils.format_time (0));
+      title.show ();
+      headerbar.set_custom_title (title);
       time_indicator_timeout = Timeout.add_full (GLib.Priority.LOW, 500, () => {
         if (is_recording && !this.is_postprocessing) {
           var seconds = recorder.elapsed_seconds;
-          headerbar.set_title (Utils.format_time (seconds));
+          title.label = Utils.format_time (seconds);
           return true;
         }
 
         time_indicator_timeout = 0;
-        headerbar.set_title ("");
+        headerbar.set_custom_title (null);
         return false;
       });
     }
@@ -333,25 +371,37 @@ namespace Peek.Ui {
       show_size_indicator ();
     }
 
+    public RecordingArea get_recording_area () {
+      return RecordingArea.create_for_widget (recording_view);
+    }
+
+    public void resize_recording_area (int width, int height) {
+      if (is_recording) {
+        return;
+      }
+
+      int window_width;
+      int window_height;
+      get_size (out window_width, out window_height);
+      var area = this.get_recording_area ();
+
+      // Update the UI elements to reflect the future window size
+      update_ui_size (RecordingArea () {
+        width = width,
+        height = height
+      });
+
+      // Resize the window so that the recording areas results in the requested size.
+      this.resize (
+        width + (window_width - area.width),
+        height + (window_height - area.height));
+    }
+
     private void show_size_indicator () {
       if (this.get_realized ()) {
         update_input_shape ();
         var area = get_recording_area ();
-
-        // Set the scale of shortcut_label
-        Pango.AttrList attrs = new Pango.AttrList ();
-
-        if (area.width < SMALL_WINDOW_SIZE) {
-          GtkHelper.hide_button_label (record_button);
-          GtkHelper.hide_button_label (stop_button);
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL));
-        } else {
-          GtkHelper.show_button_label (record_button);
-          GtkHelper.show_button_label (stop_button);
-          attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE));
-        }
-
-        shortcut_label.attributes = attrs;
+        update_ui_size (area);
 
         if (!is_recording) {
           // Shortcut recording hint
@@ -388,24 +438,34 @@ namespace Peek.Ui {
       }
     }
 
-    [GtkCallback]
-    private void on_gif_button_clicked (Button source) {
-      select_format (OutputFormat.GIF);
+    private void update_ui_size (RecordingArea area) {
+      // Set the scale of shortcut_label
+      Pango.AttrList attrs = new Pango.AttrList ();
+
+      if (area.width < SMALL_WINDOW_SIZE) {
+        GtkHelper.hide_button_label (record_button);
+        GtkHelper.hide_button_label (stop_button);
+        attrs.insert (Pango.attr_scale_new (Pango.Scale.SMALL));
+      } else {
+        GtkHelper.show_button_label (record_button);
+        GtkHelper.show_button_label (stop_button);
+        attrs.insert (Pango.attr_scale_new (Pango.Scale.LARGE));
+      }
+
+      shortcut_label.attributes = attrs;
     }
 
     [GtkCallback]
-    private void on_apng_button_clicked (Button source) {
-      select_format (OutputFormat.APNG);
-    }
-
-    [GtkCallback]
-    private void on_webm_button_clicked (Button source) {
-      select_format (OutputFormat.WEBM);
-    }
-
-    [GtkCallback]
-    private void on_mp4_button_clicked (Button source) {
-      select_format (OutputFormat.MP4);
+    private void on_format_selection_toggled () {
+      if (gif_button.get_active ()) {
+        select_format (OutputFormat.GIF);
+      } else if (apng_button.get_active ()) {
+        select_format (OutputFormat.APNG);
+      } else if (webm_button.get_active ()) {
+        select_format (OutputFormat.WEBM);
+      } else if (mp4_button.get_active ()) {
+        select_format (OutputFormat.MP4);
+      }
     }
 
     [GtkCallback]
@@ -416,6 +476,30 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_stop_button_clicked (Button source) {
       prepare_stop_recording ();
+    }
+
+    [GtkCallback]
+    private void on_new_window_button_clicked (Button source) {
+      pop_menu.hide ();
+      this.application.activate_action ("new-window", null);
+    }
+
+    [GtkCallback]
+    private void on_set_window_size_button_clicked (Button source) {
+      pop_menu.hide ();
+      this.application.activate_action ("set-window-size", null);
+    }
+
+    [GtkCallback]
+    private void on_preferences_button_clicked (Button source) {
+      pop_menu.hide ();
+      PreferencesDialog.present_single_instance (this);
+    }
+
+    [GtkCallback]
+    private void on_about_button_clicked (Button source) {
+      pop_menu.hide ();
+      AboutDialog.present_single_instance (this);
     }
 
     private void prepare_start_recording () {
@@ -535,12 +619,14 @@ namespace Peek.Ui {
         shortcut_label.opacity = 0.0;
         pop_format_menu.hide ();
         record_button.hide ();
+        pop_menu_button.set_sensitive (false);
         if (get_window_width () >= SMALL_WINDOW_SIZE) {
           stop_button.set_label (stop_button_label);
         }
 
         stop_button.sensitive = true;
         stop_button.show ();
+        SetWindowSizeDialog.close_instance ();
         freeze_window_size ();
         set_keep_above (true);
       }
@@ -554,6 +640,7 @@ namespace Peek.Ui {
       stop_button.hide ();
       pop_format_menu.show ();
       record_button.show ();
+      pop_menu_button.set_sensitive (true);
       unfreeze_window_size ();
       hide_spinner ();
 
@@ -582,21 +669,16 @@ namespace Peek.Ui {
       var recording_view_region = GtkHelper.create_region_from_widget (recording_view);
       window_region.subtract (recording_view_region);
 
-      //popover menu
+      // Format popover
       if (pop_format.visible) {
-        var pop_style = pop_format.get_style_context ();
-        if (DesktopIntegration.get_theme_name () == "Ambiance") {
-          pop_style.add_class (Gtk.STYLE_CLASS_TITLEBAR);
-        }
         var pop_format_region = GtkHelper.create_region_from_widget (pop_format);
         window_region.union (pop_format_region);
       }
 
-      // The fallback app menu overlaps the recording area
-      var fallback_app_menu = get_fallback_app_menu ();
-      if (fallback_app_menu != null && fallback_app_menu.visible) {
-        var app_menu_region = GtkHelper.create_region_from_widget (fallback_app_menu);
-        window_region.union (app_menu_region);
+      // Menu popover
+      if (pop_menu.visible) {
+        var pop_menu_region = GtkHelper.create_region_from_widget (pop_menu);
+        window_region.union (pop_menu_region);
       }
 
       this.input_shape_combine_region (window_region);
@@ -609,24 +691,6 @@ namespace Peek.Ui {
           this.shape_combine_region (null);
         }
       }
-    }
-
-    private Widget? get_fallback_app_menu () {
-      if (this.application.prefers_app_menu ()) {
-        return null;
-      }
-
-      Widget fallback_app_menu = null;
-
-      this.forall ((child)  => {
-        if (child is Gtk.Popover) {
-          if (child.get_name () == (null)) {
-            fallback_app_menu = child;
-          }
-        }
-      });
-
-      return fallback_app_menu;
     }
 
     private void freeze_window_size () {
@@ -656,10 +720,6 @@ namespace Peek.Ui {
       this.set_size_request (0, 0);
       this.set_default_size (width, height);
       this.resizable = true;
-    }
-
-    private RecordingArea get_recording_area () {
-      return RecordingArea.create_for_widget (recording_view);
     }
 
     private void show_file_chooser () {

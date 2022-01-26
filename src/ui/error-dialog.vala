@@ -36,13 +36,13 @@ namespace Peek.Ui {
     }
 
     [GtkChild]
-    private Label error_summary;
+    private unowned Label error_summary;
 
     [GtkChild]
-    private TextBuffer error_details;
+    private unowned TextBuffer error_details;
 
     [GtkChild]
-    private Expander error_details_container;
+    private unowned Expander error_details_container;
 
     private Error? error = null;
 
@@ -97,14 +97,50 @@ namespace Peek.Ui {
       return url.str;
     }
 
+    private static string get_ffmpeg_version () {
+      string[] args = {
+        "ffmpeg", "-version"
+      };
+
+      int status;
+      string output;
+
+      try {
+        Process.spawn_sync (null, args, null,
+          SpawnFlags.SEARCH_PATH,
+          null, out output, null, out status);
+        return output.strip();
+      } catch (SpawnError e) {
+        debug ("Error: %s", e.message);
+        return e.message.strip();
+      }
+    }
+
     private string get_issue_body () {
       var body = new StringBuilder ();
+      // Instructions for the user
+      body.append_printf ("<!--\n");
+      body.append_printf ("Please read the FAQs (https://github.com/phw/peek#frequently-asked-questions) before reporting this issue.\n");
+      body.append_printf ("If the FAQs do not answer your problem, describe the issue you have with as much details as possible.\n");
+      body.append_printf ("-->\n\n");
+
+      // System details
       body.append_printf ("Peek: %s\n", Config.VERSION);
       body.append_printf ("GTK: %i.%i.%i\n", Gtk.MAJOR_VERSION, Gtk.MINOR_VERSION, Gtk.MICRO_VERSION);
       body.append_printf ("GLib: %u.%u.%u\n", GLib.Version.MAJOR, GLib.Version.MINOR, GLib.Version.MICRO);
+      body.append_printf ("Desktop: %s\n", Environment.get_variable ("XDG_CURRENT_DESKTOP") ?? "Unknown");
+      body.append_printf ("Display server: %s\n", DesktopIntegration.is_wayland_backend () ? "Wayland" : "X");
+      body.append_printf ("FFmpeg version:\n```\n%s\n```\n", get_ffmpeg_version ());
+      body.append_printf ("\n");
 
+      // Configuration details
+      var settings = Application.get_app_settings ();
+      body.append_printf ("Output format: %s\n", settings.get_string ("recording-output-format"));
+      body.append_printf ("gifski enabled: %s\n", settings.get_boolean ("recording-gifski-enabled") ? "true" : "false");
+
+      // Error details
       if (error != null) {
-        body.append_printf ("\nDetails:\n```\n%s\n```", error_details.text);
+        body.append_printf ("\nError details:\n```\n%s\n```", error_details.text);
       }
 
       return body.str;

@@ -40,7 +40,7 @@ namespace Peek.Recording {
       }
     }
 
-    public BaseScreenRecorder () {
+    protected BaseScreenRecorder () {
       config = new RecordingConfig ();
     }
 

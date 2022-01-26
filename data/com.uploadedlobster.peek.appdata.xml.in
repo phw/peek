@@ -5,9 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Peek</name>
-  <summary>
-    Simple screen recorder with an easy to use interface
-  </summary>
+  <summary>Simple screen recorder with an easy to use interface</summary>
 
   <description>
     <p>
@@ -81,7 +79,12 @@
   <developer_name>Philipp Wolfer</developer_name>
   <update_contact>ph.wolfer@gmail.com</update_contact>
 
+  <content_rating type="oars-1.1" />
+
   <releases>
+    <release version="1.5.1" date="2020-02-19" />
+    <release version="1.5.0" date="2020-02-18" />
+    <release version="1.4.0" date="2019-09-24" />
     <release version="1.3.1" date="2018-03-29" />
     <release version="1.3.0" date="2018-03-25" />
     <release version="1.2.2" date="2018-01-28" />

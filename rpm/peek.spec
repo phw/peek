@@ -1,5 +1,5 @@
 Name:           peek
-Version:        1.3.1
+Version:        1.5.1
 Release:        1%{?dist}
 Summary:        Simple screen recorder with an easy to use interface
 
@@ -7,16 +7,18 @@ License:        GPLv3
 URL:            https://github.com/phw/peek
 Source0:        https://github.com/phw/peek/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
+BuildRequires:  gcc
 BuildRequires:  cmake
+BuildRequires:  vala
 BuildRequires:  vala-devel
 BuildRequires:  gettext
-BuildRequires:  pkgconfig(gtk+-3.0) >= 3.14
+BuildRequires:  pkgconfig(gtk+-3.0) >= 3.20
 BuildRequires:  pkgconfig(keybinder-3.0)
 BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 BuildRequires:  txt2man
 BuildRequires:  gzip
-Requires:       ffmpeg
+Requires:       ffmpeg >= 3
 Requires:       gstreamer1-plugins-good >= 1.2
 Recommends:     gstreamer1-plugins-ugly
 Suggests:       gifski

@@ -1,7 +1,8 @@
 /*
-Peek Copyright (c) 2017-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
-
 This file is part of Peek.
+
+Copyright (c) 2017-2018, 2021 by Philipp Wolfer <ph.wolfer@gmail.com>
+Copyright (c) 2021 Andreas Dangel <andreas.dangel@adangel.org>
 
 This software is licensed under the GNU General Public License
 (version 3 or later). See the LICENSE file in this distribution.
@@ -9,7 +10,8 @@ This software is licensed under the GNU General Public License
 
 #if ! DISABLE_GNOME_SHELL
 
-using Gnome.Shell;
+using Gnome;
+using Gnome.ShellNS;
 using Peek.PostProcessing;
 
 namespace Peek.Recording {
@@ -65,8 +67,16 @@ namespace Peek.Recording {
         if (success) {
           stdout.printf ("Recording to file %s\n", temp_file);
         } else {
-          var message = "Could not start recording, already an active recording using org.gnome.Shell.Screencast?";
-          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message);
+          var message = new StringBuilder ();
+          message.append("Could not start GNOME Shell recorder.\n\n");
+          if (config.output_format == OutputFormat.MP4) {
+            message.append("Make sure you have the GStreamer ugly plugins installed for MP4 recording.");
+          } else {
+            message.append("Missing codec or another active screen recording using org.gnome.Shell.Screencast?");
+          }
+
+          message.append("\n\nPlease see the FAQ at https://github.com/phw/peek#what-is-the-cause-for-could-not-start-gnome-shell-recorder-errors");
+          throw new RecordingError.INITIALIZING_RECORDING_FAILED (message.str);
         }
       } catch (DBusError e) {
         throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
@@ -91,6 +101,12 @@ namespace Peek.Recording {
           BusType.SESSION,
           "org.freedesktop.DBus",
           "/org/freedesktop/DBus");
+        try {
+          // The service might need to get started before being available
+          dbus.start_service_by_name (DBUS_NAME, 0);
+        } catch (DBusError e) {
+          return false;
+        }
         return dbus.name_has_owner (DBUS_NAME);
       } catch (DBusError e) {
         stderr.printf ("Error: %s\n", e.message);
@@ -98,6 +114,23 @@ namespace Peek.Recording {
       } catch (IOError e) {
         stderr.printf ("Error: %s\n", e.message);
         throw new PeekError.SCREEN_RECORDER_ERROR (e.message);
+      }
+    }
+
+    private static bool is_gnome_40_or_higher () throws RecordingError {
+      if (!DesktopIntegration.is_gnome ()) {
+        return false;
+      }
+
+      try {
+        Gnome.Shell gnomeShell = Bus.get_proxy_sync (
+          BusType.SESSION,
+          "org.gnome.Shell",
+          "/org/gnome/Shell");
+        return int.parse (gnomeShell.shell_version.split ( "." )[0] ) >= 40;
+      } catch (IOError e) {
+        stderr.printf ("Error: %s\n", e.message);
+        throw new RecordingError.INITIALIZING_RECORDING_FAILED (e.message);
       }
     }
 
@@ -129,13 +162,20 @@ namespace Peek.Recording {
       }
     }
 
-    private string build_gst_pipeline (RecordingArea area) {
+    private string build_gst_pipeline (RecordingArea area) throws RecordingError {
 
       // Default pipeline is for GNOME Shell up to 2.22:
       // "vp8enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux"
       // GNOME Shell 3.24 will use vp9enc with same settings.
       // See https://gitlab.gnome.org/GNOME/gnome-shell/blob/master/src/shell-recorder.c#L149
+      // Gnome Shell 40:
+      // https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/dbusServices/screencast/screencastService.js#L26
+      // https://gitlab.gnome.org/GNOME/gnome-shell/-/commit/51bf7ec17617a9ed056dd563afdb98e17da07373
       var pipeline = new StringBuilder ();
+
+      if (is_gnome_40_or_higher ()) {
+        pipeline.append ("videoconvert chroma-mode=GST_VIDEO_CHROMA_MODE_NONE dither=GST_VIDEO_DITHER_NONE matrix-mode=GST_VIDEO_MATRIX_MODE_OUTPUT_ONLY n-threads=%T ! queue ! ");
+      }
 
       if (config.downsample > 1) {
         int width = area.width / config.downsample;
@@ -151,12 +191,18 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! ");
-        pipeline.append ("queue ! webmmux");
+        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! ");
+        if (config.capture_sound) {
+          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! vorbisenc ! ");
+        }
+        pipeline.append ("queue ! mux. webmmux name=mux");
       } else if (config.output_format == OutputFormat.MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
-        pipeline.append ("video/x-h264, profile=baseline ! ");
-        pipeline.append ("queue ! mp4mux");
+        pipeline.append ("video/x-h264, profile=baseline ! queue !");
+        if (config.capture_sound) {
+          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! lamemp3enc ! ");
+        }
+        pipeline.append ("queue ! mux. mp4mux name=mux");
       } else {
         // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.
@@ -167,6 +213,7 @@ namespace Peek.Recording {
       }
 
       debug ("Using GStreamer pipeline %s", pipeline.str);
+      debug ("Debug with gst-launch-1.0 --gst-debug=3 ximagesrc %s ! filesink location=screencast", pipeline.str);
       return pipeline.str;
     }
 

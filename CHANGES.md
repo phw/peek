@@ -1,3 +1,42 @@
+# Version 1.5.2 - 2020-??-??
+- fix: Fix format selection popover updating on format change
+
+# Version 1.5.1 - 2020-02-19
+- build: Fixed building with CMake
+
+# Version 1.5.0 - 2020-02-18
+- feat: Dialog to set recording area size (#246, #519)
+- feat: Use radio buttons for format selection to easily show selected format
+- fix: Show error dialog on startup if recording backend is unavailable (#539)
+- fix: Fix missing title in taskbar on KDE Plasma (#349)
+- fix: Changing output format in small UI mode resizes the window
+- fix: Disable menu during recording
+- i18n: New translations for Finnish and Hebrew
+- i18n: Updated translations for Basque, Chinese (Simplified),
+  Chinese (Traditional), Croatian, Czech, Dutch, French, German, Indonesian,
+  Lithuanian, Norwegian Bokmål, Portuguese (Brazil), Spanish and Swedish
+
+# Version 1.4.0 - 2019-09-24
+- feat: Move app menu into application Window (#391, #438)
+- feat: New application icon following new GNOME icon guidelines (#114, #390)
+- feat: Set window type hint to UTILITY (ensures window gets opened as floating
+  on tiling window managers)
+- feat: Show shortcut hint in main window (#234, #285)
+- feat: Added Recorder, Video and AudioVideo to desktop files categories (#340)
+- feat: Improved the error message shown on GNOME Shell recording issues
+- feat: Provide more details in error reports
+- fix: Fixed double free error after ffmpeg recording (#419)
+- fix: Fixed building with Vala 0.46.1 (#501)
+- misc: Raised minimum Gtk version to 3.20
+- i18n: Updated translations for Basque, Chinese (simplified),
+  Chinese (traditional), Czech, Dutch, Esperanto, French, German, Italian,
+  Japanese, Lithuanian, Norwegian Bokmål, Polish, Portuguese (Brazil),
+  Portuguese (Portugal), Russian, Serbian, Spanish, Swedish, Turkish, Ukrainian
+- i18n: New translations for Japanese and Turkish
+- build: New Meson based build (old CMake build is deprecated and will be
+  removed in release 1.5)
+- build: Autogenerate po/LINGUAS
+
 # Version 1.3.1 - 2018-03-29
 - fix: Use yuv420p for VP9 encoding (#299)
 - fix: Disable animations and transitions on recording view overlays (#208)

@@ -1,15 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Philipp\ Wolfer\ <ph.wolfer@gmail.com>
 # This file is distributed under the same license as the peek package.
-# 
+#
 # Translators:
 # Tomáš Průcha <pruchatomas@gmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
-"POT-Creation-Date: 2018-04-12 11:25+0200\n"
-"PO-Revision-Date: 2018-01-24 15:53+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-11 17:10+0100\n"
+"PO-Revision-Date: 2020-06-18 10:41+0000\n"
 "Last-Translator: Tomáš Průcha <pruchatomas@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/peek/translations/"
 "cs/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.19-dev\n"
+"X-Generator: Weblate 4.1.1-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -48,25 +48,30 @@ msgstr "Přepnout nahrávání ve všech běžících instancích"
 msgid "Start Peek without the header bar"
 msgstr "Spustit Peek bez záhlaví okna"
 
-#: src/application.vala:96 data/com.uploadedlobster.peek.desktop.in:3
+#: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
 msgid "Peek"
 msgstr "Peek"
 
-#: src/application.vala:248
-msgid "Unable to create default screen recorder.\n"
-msgstr "Nelze vytvořit výchozí obrazovku nahrávání.\n"
-
-#: src/application.vala:261
+#: src/application.vala:250
 #, c-format
-msgid "Unable to initialize backend %s.\n"
-msgstr "Nelze zavést backend %s.\n"
+msgid "Unable to initialize default recording backend: %s"
+msgstr "Nelze zavést výchozí nahrávací backend: %s"
 
-#: src/application.vala:378
+#: src/application.vala:266
+#, c-format
+msgid "Unable to initialize recording backend %s: %s"
+msgstr "Nelze zavést nahrávací backend %s: %s"
+
+#: src/application.vala:337
+msgid "Recording backend unavailable"
+msgstr "Nahrávací backend nedostupný"
+
+#: src/application.vala:341
 msgid "Native Wayland backend is unsupported"
 msgstr "Nativní Wayland backend není podporován"
 
-#: src/application.vala:380
+#: src/application.vala:342
 msgid ""
 "You are running Peek natively on Wayland, this is currently unsupported. "
 "Please start Peek using XWayland by setting <tt>GDK_BACKEND=x11</tt>.\n"
@@ -80,154 +85,178 @@ msgstr ""
 "Pro detaily zobrazte Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ o Wayland podpoře</a>."
 
-#: src/ui/application-window.vala:104
+#: src/recording/screen-recorder-factory.vala:26
+msgid "Peek requires FFmpeg or running GNOME Shell session."
+msgstr "Peek vyžaduje FFmpeg nebo běžící GNOME Shell sezení."
+
+#: src/recording/screen-recorder-factory.vala:47
+msgid "FFmpeg executable not found."
+msgstr "FFmpeg nenalezen."
+
+#: src/ui/application-window.vala:122
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr "Během nahrávání došlo k neočekávané chybě. Záznam byl zrušen."
 
-#: src/ui/application-window.vala:230
+#: src/ui/application-window.vala:249
 msgid "Rendering animation…"
 msgstr "Vykreslování animace…"
 
-#: src/ui/application-window.vala:231
+#: src/ui/application-window.vala:250
 msgid "Peek will close when rendering is finished."
 msgstr "Peek se zavře po dokončení vykreslování."
 
-#: src/ui/application-window.vala:267 ui/application-window.ui:256
+#: src/ui/application-window.vala:286 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:268 ui/application-window.ui:239
+#: src/ui/application-window.vala:287 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
 
-#: src/ui/application-window.vala:269 ui/application-window.ui:290
+#: src/ui/application-window.vala:288 ui/application-window.ui:387
 #: ui/preferences.ui:226
 msgid "MP4"
 msgstr "MP4"
 
-#: src/ui/application-window.vala:270 ui/application-window.ui:273
+#: src/ui/application-window.vala:289 ui/application-window.ui:370
 #: ui/preferences.ui:225
 msgid "WebM"
 msgstr "WebM"
 
-#: src/ui/application-window.vala:282
+#: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
 msgstr "Nahrávat jako %s"
 
-#: src/ui/application-window.vala:364
+#: src/ui/application-window.vala:414
 #, c-format
 msgid "Start / Stop: %s"
-msgstr ""
+msgstr "Spustit / Zastavit: %s"
 
-#: src/ui/application-window.vala:484
+#: src/ui/application-window.vala:568
 msgid "Rendering…"
 msgstr "Vykreslování…"
 
-#: src/ui/application-window.vala:524
+#: src/ui/application-window.vala:608
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Záznam nemohl být spuštěn kvůli neočekávané chybě."
 
-#: src/ui/application-window.vala:668 src/ui/application-window.vala:673
+#: src/ui/application-window.vala:728 src/ui/application-window.vala:733
 msgid "Save animation"
 msgstr "Uložení animace"
 
-#: src/ui/application-window.vala:669 src/ui/application-window.vala:676
+#: src/ui/application-window.vala:729 src/ui/application-window.vala:736
 msgid "_Save"
 msgstr "_Uložit"
 
-#: src/ui/application-window.vala:670 src/ui/application-window.vala:674
+#: src/ui/application-window.vala:730 src/ui/application-window.vala:734
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: src/ui/application-window.vala:741
+#: src/ui/application-window.vala:801
 msgid "The file could not be saved to the selected location."
 msgstr "Soubor nelze uložit do vybraného umístění."
 
-#: src/ui/application-window.vala:768
+#: src/ui/application-window.vala:828
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animace uložena jako „%s“"
 
-#: src/ui/application-window.vala:778
+#. Unity does not allow actions on notifications, so we disable
+#. notification actions there.
+#: src/ui/application-window.vala:838
 msgid "Click here to show the saved file in your file manager."
 msgstr "Klikněte zde pro zobrazení uloženého souboru."
 
-#: src/ui/application-window.vala:780
+#: src/ui/application-window.vala:840
 msgid "Show in file manager"
 msgstr "Zobrazit ve správci souborů"
 
-#: src/ui/preferences-dialog.vala:182
+#. Display the configured shortcut to the user
+#: src/ui/preferences-dialog.vala:189
 msgid "deactivated"
 msgstr "deaktivováno"
 
-#: src/ui/preferences-dialog.vala:193 src/ui/preferences-dialog.vala:209
+#. Add a button to change the keyboard shortcut
+#: src/ui/preferences-dialog.vala:200 src/ui/preferences-dialog.vala:216
 msgid "Change"
 msgstr "Změnit"
 
-#: src/ui/preferences-dialog.vala:206
+#: src/ui/preferences-dialog.vala:213
 msgid "Press keys…"
 msgstr "Stiskněte klávesy…"
 
-#: ui/about.ui:37 data/com.uploadedlobster.peek.desktop.in:5
+#: ui/about.ui.in:37 data/com.uploadedlobster.peek.desktop.in:5
 msgid "Animated GIF recorder"
 msgstr "Nahrává dění na obrazovce do formátu GIF"
 
 #. Please add your name to the list of translators if you want to be credited for the translations you have done.
-#: ui/about.ui:40
+#: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Tomáš Průcha <pruchatomas@gmail.com>"
+msgstr "Tomáš Průcha"
 
-#: ui/application-window.ui:33 ui/application-window.ui:162
+#: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
 msgstr "Spustit nahrávání"
 
-#: ui/application-window.ui:152
-msgid "_Record"
-msgstr "_Nahrávat"
+#: ui/application-window.ui:54
+msgid "New window"
+msgstr "Nové okno"
 
-#: ui/application-window.ui:178
+#: ui/application-window.ui:68 ui/set-window-size-dialog.ui:23
+msgid "Set window size"
+msgstr "Nastavit velikost okna"
+
+#: ui/application-window.ui:93
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: ui/application-window.ui:107
+msgid "About Peek"
+msgstr "O aplikaci"
+
+#: ui/application-window.ui:149
 msgid "_Stop"
 msgstr "_Zastavit"
 
-#: ui/application-window.ui:188
+#: ui/application-window.ui:159
 msgid "Stop recording"
 msgstr "Zastavit nahrávání"
+
+#: ui/application-window.ui:175
+msgid "_Record"
+msgstr "_Nahrávat"
 
 #: ui/error-dialog.ui:8
 msgid "Recording error"
 msgstr "Chyba nahrávání"
 
-#: ui/error-dialog.ui:25
+#: ui/error-dialog.ui:28
 msgid "Report issue"
 msgstr "Nahlásit problém"
 
-#: ui/error-dialog.ui:39
+#: ui/error-dialog.ui:42
 msgid "Close"
 msgstr "Zavřít"
 
-#: ui/error-dialog.ui:107
+#: ui/error-dialog.ui:87
+msgid ""
+"Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
+"questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
+"your issue please report it and provide as much details as possible on what "
+"you were doing when the issue occurred."
+msgstr ""
+"Přečtěte si prosím často kladené otázky <a href=\"https://github.com/phw/"
+"peek#frequently-asked-questions\">FAQs</a> před reportováním tohoto "
+"problému. Pokud jej zde nenaleznete, popište co nejdetailněji postup "
+"navození a následně report odešlete."
+
+#: ui/error-dialog.ui:126
 msgid "Show details"
 msgstr "Ukázat detaily"
-
-#: ui/gtk/menus.ui:7
-msgid "New _window"
-msgstr "_Nové okno"
-
-#: ui/gtk/menus.ui:14
-msgid "_Preferences"
-msgstr "_Předvolby"
-
-#: ui/gtk/menus.ui:21
-msgid "_About"
-msgstr "_O aplikaci"
-
-#: ui/gtk/menus.ui:25
-msgid "_Quit"
-msgstr "_Ukončit"
 
 #: ui/preferences.ui:77
 msgid "User interface"
@@ -255,7 +284,7 @@ msgstr "Výstupní formát"
 
 #: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
 msgid "Use gifski for high quality GIFs"
-msgstr "Použijte „gifski“ pro vysoce kvalitní GIF"
+msgstr "Použít „gifski“ pro vysoce kvalitní GIF"
 
 #: ui/preferences.ui:276
 msgid "GIF quality"
@@ -277,9 +306,29 @@ msgstr "Zpoždění (v sekundách) před spuštěním nahrávání"
 msgid "Capture mouse cursor"
 msgstr "Zachytit kurzor myši"
 
-#: ui/preferences.ui:474
+#: ui/preferences.ui:458
+msgid "Capture sound from default PULSE device"
+msgstr ""
+
+#: ui/preferences.ui:489
 msgid "Peek preferences"
 msgstr "Předvolby programu Peek"
+
+#: ui/set-window-size-dialog.ui:27
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: ui/set-window-size-dialog.ui:36
+msgid "Set size"
+msgstr "Nastavit velikost"
+
+#: ui/set-window-size-dialog.ui:89
+msgid "Width"
+msgstr "Šířka"
+
+#: ui/set-window-size-dialog.ui:127
+msgid "Height"
+msgstr "Výška"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
@@ -289,16 +338,12 @@ msgstr "Nahrávat dění na obrazovce do formátu GIF"
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
 msgstr "záznam obrazovky;nahrávání obrazovky;snímání obrazovky;GIF;WebM;APNG;"
 
-#: data/com.uploadedlobster.peek.desktop.in:8
-msgid "com.uploadedlobster.peek"
-msgstr "com.uploadedlobster.peek"
-
 #: data/com.uploadedlobster.peek.appdata.xml.in:8
 msgid "Simple screen recorder with an easy to use interface"
 msgstr ""
 "Program pro nahrávání dění na obrazovce se snadno použitelným rozhraním"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:13
+#: data/com.uploadedlobster.peek.appdata.xml.in:11
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -314,39 +359,39 @@ msgstr ""
 "optimalizován pro generaci animovaných GIF souborů, ale můžete také nahrávat "
 "přímo do formátu WebM nebo MP4."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:22
+#: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
 msgstr "Funkce:"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:24
+#: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
 msgstr "Vyberte oblast obrazovky pro nahrávání"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:25
+#: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
 msgstr "Uložit nahrané video jako optimalizovaný animovaný GIF"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:26
+#: data/com.uploadedlobster.peek.appdata.xml.in:24
 msgid "Record directly to WebM or MP4 format"
 msgstr "Nahrávat přímo do formátu WebM nebo MP4"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:27
+#: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
 msgstr "Jednoduché uživatelské rozhraní optimalizované pro daný úkol"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:28
+#: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Automatically downscale recorded videos"
 msgstr "Automaticky podvzorkovat nahraná videa"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:29
+#: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Support for HiDPI screens"
 msgstr "Podpora pro HiDPI obrazovky"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:30
+#: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Pracuje uvnitř sezení GNOME Shell Wayland (s použitím XWayland)"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:32
+#: data/com.uploadedlobster.peek.appdata.xml.in:30
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
@@ -357,19 +402,19 @@ msgstr ""
 "na vytváření malých nahrávek zvolené části obrazovky do formátů GIF, WebM "
 "nebo MP4 bez zvuku."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:43
+#: data/com.uploadedlobster.peek.appdata.xml.in:41
 msgid "The main window to select the recording area"
 msgstr "Hlavní okno pro výběr oblasti nahrávání"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:47
+#: data/com.uploadedlobster.peek.appdata.xml.in:45
 msgid "Peek's preferences dialog"
 msgstr "Předvolby programu Peek"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:51
+#: data/com.uploadedlobster.peek.appdata.xml.in:49
 msgid "Peek is recording itself"
 msgstr "Peek nahrává sám sebe"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:81
+#: data/com.uploadedlobster.peek.appdata.xml.in:79
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
@@ -389,7 +434,7 @@ msgid ""
 "Default file name used. Can include date format specifiers. The extension "
 "will be added automatically."
 msgstr ""
-"Použitý výchozí název souboru může obsahovat datum.  Přípona souboru bude "
+"Použitý výchozí název souboru může obsahovat datum. Přípona souboru bude "
 "přidána automaticky."
 
 #: data/com.uploadedlobster.peek.gschema.xml:23
@@ -417,12 +462,25 @@ msgid "Whether to capture the mouse cursor"
 msgstr "Zda se má zachytit kurzor myši"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
+msgid "Whether to capture sound from default PULSE input device"
+msgstr ""
+
+#: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Size and position of the last open main window"
 msgstr "Velikost a pozice naposledy otevřeného okna"
 
-#: data/com.uploadedlobster.peek.gschema.xml:79
+#: data/com.uploadedlobster.peek.gschema.xml:83
 msgid "Path where last video got saved"
 msgstr "Cesta naposledy uloženého videa"
+
+#~ msgid "com.uploadedlobster.peek"
+#~ msgstr "com.uploadedlobster.peek"
+
+#~ msgid "Unable to create default screen recorder.\n"
+#~ msgstr "Nelze vytvořit výchozí obrazovku nahrávání.\n"
+
+#~ msgid "_Quit"
+#~ msgstr "_Ukončit"
 
 #, fuzzy
 #~ msgid "Show notification after saving"
