@@ -91,6 +91,7 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 Peek is available in official package repositories for the following
 distributions:
 
+- [Alpine Linux](https://pkgs.alpinelinux.org/packages?name=peek)
 - [Arch Linux](https://www.archlinux.org/packages/community/x86_64/peek/)
 - [Debian](https://tracker.debian.org/pkg/peek)
 - [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
