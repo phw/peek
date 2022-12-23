@@ -490,7 +490,7 @@ msgstr "Pfad, in dem das letzte Video gespeichert wurde"
 #~ msgid "com.uploadedlobster.peek"
 #~ msgstr "com.uploadedlobster.peek"
 
-#~ msgid "Unable to create screen recorder.\n"
+#~ msgid "Unable to create default screen recorder.\n"
 #~ msgstr "Standard-Bildschirmrekorder konnte nicht erstellt werden.\n"
 
 #~ msgid "_Quit"
