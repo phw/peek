@@ -318,7 +318,7 @@ msgstr "Mauszeiger aufnehmen"
 
 #: ui/preferences.ui:458
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Ton vom Standard PULSE-Gerät aufnehmen"
 
 #: ui/preferences.ui:489
 msgid "Peek preferences"
@@ -477,7 +477,7 @@ msgstr "Legt fest, ob der Mauszeiger aufgenommen wird"
 
 #: data/com.uploadedlobster.peek.gschema.xml:75
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Legt fest, ob der Ton vom Standard PULSE-Inputgerät aufgenommen wird"
 
 #: data/com.uploadedlobster.peek.gschema.xml:79
 msgid "Size and position of the last open main window"
@@ -490,7 +490,7 @@ msgstr "Pfad, in dem das letzte Video gespeichert wurde"
 #~ msgid "com.uploadedlobster.peek"
 #~ msgstr "com.uploadedlobster.peek"
 
-#~ msgid "Unable to create default screen recorder.\n"
+#~ msgid "Unable to create screen recorder.\n"
 #~ msgstr "Standard-Bildschirmrekorder konnte nicht erstellt werden.\n"
 
 #~ msgid "_Quit"
