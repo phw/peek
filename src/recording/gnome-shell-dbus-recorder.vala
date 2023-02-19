@@ -92,7 +92,7 @@ namespace Peek.Recording {
     public static bool is_available () throws PeekError {
       // In theory the dbus service can be installed, but it will only work
       // if GNOME Shell is running.
-      if (!DesktopIntegration.is_gnome ()) {
+      if (!DesktopIntegration.is_gnome_shell ()) {
         return false;
       }
 

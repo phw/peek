@@ -136,6 +136,10 @@ namespace Peek {
       return xdg_current_desktop_contains ("GNOME");
     }
 
+    public static bool is_gnome_shell () {
+      return is_gnome() && ! xdg_current_desktop_contains ("Flashback");
+    }
+
     public static bool is_cinnamon () {
       return xdg_current_desktop_contains ("X-Cinnamon");
     }
