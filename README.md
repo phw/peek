@@ -95,7 +95,7 @@ distributions:
 - [Debian](https://tracker.debian.org/pkg/peek)
 - [Fedora](https://koji.fedoraproject.org/koji/packageinfo?packageID=28880)
 - [Gentoo](https://packages.gentoo.org/packages/media-video/peek)
-- [NixOS](https://nixos.org/nixos/packages.html?channel=nixos-unstable&query=%5Epeek)
+- [NixOS](https://search.nixos.org/packages?channel=unstable&query=peek)
 - [OpenSUSE Tumbleweed](https://software.opensuse.org/package/peek)
 - [Parabola](https://www.parabola.nu/packages/?q=peek)
 - [Solus](https://dev.getsol.us/source/peek/)
