@@ -191,16 +191,16 @@ namespace Peek.Recording {
       }
 
       if (config.output_format == OutputFormat.WEBM) {
-        pipeline.append ("vp9enc min_quantizer=10 max_quantizer=50 cq_level=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! ");
+        pipeline.append ("vp8enc cpu-used=16 max-quantizer=17 deadline=1 keyframe-mode=disabled threads=%T static-threshold=1000 buffer-size=20000 ! ");
         if (config.capture_sound) {
-          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! vorbisenc ! ");
+          pipeline.append ("queue ! mux. pulsesrc ! queue ! audioconvert ! vorbisenc ! ");
         }
         pipeline.append ("queue ! mux. webmmux name=mux");
       } else if (config.output_format == OutputFormat.MP4) {
         pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
-        pipeline.append ("video/x-h264, profile=baseline ! queue !");
+        pipeline.append ("video/x-h264, profile=baseline !");
         if (config.capture_sound) {
-          pipeline.append ("mux. pulsesrc ! queue ! audioconvert ! lamemp3enc ! ");
+          pipeline.append ("queue ! mux. pulsesrc ! queue ! audioconvert ! lamemp3enc ! ");
         }
         pipeline.append ("queue ! mux. mp4mux name=mux");
       } else {
@@ -208,7 +208,7 @@ namespace Peek.Recording {
         // gstreamer1.0-plugins-ugly and not always available.
         // Being near lossless here is important to avoid color distortions and
         // dirty frames in the final GIF.
-        pipeline.append ("vp9enc min_quantizer=0 max_quantizer=0 cq_level=0 cpu-used=5 deadline=1000000 threads=%T ! ");
+        pipeline.append ("vp8enc cpu-used=16 min-quantizer=0 max-quantizer=0 deadline=1 keyframe-mode=disabled threads=%T static-threshold=1000 buffer-size=20000 ! ");
         pipeline.append ("queue ! webmmux");
       }
 
