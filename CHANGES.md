@@ -1,5 +1,16 @@
-# Version 1.5.2 - 2020-??-??
+# Version 1.6.0 - unreleased
+- feat: Add support for GNOME 40+ (#910)
+- feat: Add sound capture settings
+- feat: Removed issue submission from error dialog
+- feat: Removed MP4 recording option due to maintenance and performance issues
+- fix: Fix desktop integration for GNOME Flashback (#1202)
 - fix: Fix format selection popover updating on format change
+- i18n: New translations for Hungarian, Malayalam, Portuguese and Slovak
+- i18n: Updated translations for Basque, Chinese (Traditional), Croatian,
+  Czech, Dutch, Esperanto, Finnish, French, German, Hebrew, Indonesian, Italian,
+  Lithuanian, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese
+  (Portugal), Russian, Serbian, Spanish, Swedish, Turkish and Ukrainian
+- build: cmake builds are no longer supported, use meson
 
 # Version 1.5.1 - 2020-02-19
 - build: Fixed building with CMake
