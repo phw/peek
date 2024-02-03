@@ -169,7 +169,7 @@ namespace Peek.Ui {
     [GtkCallback]
     private void on_output_format_changed () {
       recording_gifski_settings.sensitive = is_format (OutputFormat.GIF);
-      recording_capture_sound.sensitive = is_format (OutputFormat.MP4) || is_format (OutputFormat.WEBM);
+      recording_capture_sound.sensitive = is_format (OutputFormat.WEBM);
     }
 
     [GtkCallback]

@@ -10,11 +10,11 @@ DESCRIPTION
   UI features of your own apps or for showing a bug in bug reports. With Peek
   you simply place the Peek window over the area you want to record and press
   "Record". Peek is optimized for generating animated GIFs, but you can also
-  directly record to WebM or MP4 if you prefer.
+  directly record to WebM if you prefer.
 
   Peek is not a general purpose screencast app with extended features but rather
   focuses on the single task of creating small, silent screencasts of an area of
-  the screen for creating GIF animations or silent WebM or MP4 videos.
+  the screen for creating GIF animations or silent WebM videos.
 
 OPTIONS
   -h, --help                 Show help options

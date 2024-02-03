@@ -55,10 +55,6 @@ namespace Peek.Recording {
 
         int width = area.width;
         int height = area.height;
-        if (config.output_format == OutputFormat.MP4) {
-          width = Utils.make_even (width);
-          height = Utils.make_even (height);
-        }
 
         screencast.screencast_area (
           area.left, area.top, width, height,
@@ -69,11 +65,7 @@ namespace Peek.Recording {
         } else {
           var message = new StringBuilder ();
           message.append("Could not start GNOME Shell recorder.\n\n");
-          if (config.output_format == OutputFormat.MP4) {
-            message.append("Make sure you have the GStreamer ugly plugins installed for MP4 recording.");
-          } else {
-            message.append("Missing codec or another active screen recording using org.gnome.Shell.Screencast?");
-          }
+          message.append("Missing codec or another active screen recording using org.gnome.Shell.Screencast?");
 
           message.append("\n\nPlease see the FAQ at https://github.com/phw/peek#what-is-the-cause-for-could-not-start-gnome-shell-recorder-errors");
           throw new RecordingError.INITIALIZING_RECORDING_FAILED (message.str);
@@ -180,12 +172,6 @@ namespace Peek.Recording {
       if (config.downsample > 1) {
         int width = area.width / config.downsample;
         int height = area.height / config.downsample;
-
-        if (config.output_format == OutputFormat.MP4) {
-          width = Utils.make_even (width);
-          height = Utils.make_even (height);
-        }
-
         pipeline.append_printf (
           "videoscale ! video/x-raw,width=%i,height=%i ! ", width, height);
       }
@@ -196,13 +182,6 @@ namespace Peek.Recording {
           pipeline.append ("queue ! mux. pulsesrc ! queue ! audioconvert ! vorbisenc ! ");
         }
         pipeline.append ("queue ! mux. webmmux name=mux");
-      } else if (config.output_format == OutputFormat.MP4) {
-        pipeline.append ("x264enc speed-preset=fast threads=%T ! ");
-        pipeline.append ("video/x-h264, profile=baseline !");
-        if (config.capture_sound) {
-          pipeline.append ("queue ! mux. pulsesrc ! queue ! audioconvert ! lamemp3enc ! ");
-        }
-        pipeline.append ("queue ! mux. mp4mux name=mux");
       } else {
         // We could use lossless x264 here, but x264enc is part of
         // gstreamer1.0-plugins-ugly and not always available.

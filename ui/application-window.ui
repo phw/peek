@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 
+<!-- Generated with glade 3.22.1
 
 Copyright (C) Philipp Wolfer <ph.wolfer@gmail.com>
 
@@ -380,23 +380,6 @@ Author: Philipp Wolfer <ph.wolfer@gmail.com>
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkRadioButton" id="mp4_button">
-            <property name="label" translatable="yes">MP4</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">False</property>
-            <property name="active">True</property>
-            <property name="draw_indicator">True</property>
-            <property name="group">gif_button</property>
-            <signal name="toggled" handler="on_format_selection_toggled" swapped="no"/>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
           </packing>
         </child>
       </object>
