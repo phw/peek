@@ -9,7 +9,7 @@ refer to the installation instructions in README.md.
 
 From inside the Peek source folder run:
 
-    meson --prefix=/usr builddir
+    meson setup --prefix=/usr builddir
     cd builddir
     ninja
 
