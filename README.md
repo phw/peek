@@ -5,7 +5,9 @@
 [![Build Status](https://travis-ci.org/phw/peek.svg?branch=master)](https://travis-ci.org/phw/peek)
 [![Translation Status](https://hosted.weblate.org/widgets/peek/-/svg-badge.svg)](https://hosted.weblate.org/engage/peek/?utm_source=widget)
 
-**IMPORTANT: The Peek project has been declared deprecated, please read [the announcement](https://github.com/phw/peek/issues/1191).**
+> [!IMPORTANT]
+> The Peek project has been declared deprecated, please read [the announcement](https://github.com/phw/peek/issues/1191).
+> No new features will be developed and issue reporting will be closed soon.
 
 ![Peek recording itself](https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif)
 
@@ -56,12 +58,11 @@ for the specific use case of recording screen areas, e.g. for easily showing UI
 features of your own apps or for showing a bug in bug reports. With Peek, you
 simply place the Peek window over the area you want to record and press
 "Record". Peek is optimized for generating animated GIFs, but you can also
-directly record to WebM or MP4 if you prefer.
+directly record to WebM if you prefer.
 
 Peek is not a general purpose screencast app with extended features but
 rather focuses on the single task of creating small, silent screencasts of
-an area of the screen for creating GIF animations or silent WebM or MP4
-videos.
+an area of the screen for creating GIF animations or silent WebM videos.
 
 Peek runs on X11 or inside a GNOME Shell Wayland session using XWayland.
 Support for more Wayland desktops might be added in the future (see FAQs below).
@@ -75,7 +76,6 @@ Support for more Wayland desktops might be added in the future (see FAQs below).
 - [libkeybinder3](https://github.com/kupferlauncher/keybinder)
 - FFmpeg >= 3
 - GStreamer 'Good' plugins (for recording on GNOME Shell)
-- GStreamer 'Ugly' plugins (for MP4 recording on GNOME Shell)
 - [gifski](https://gif.ski/) (optional but recommended for improved GIF quality)
 
 ### Development
@@ -191,11 +191,6 @@ Once the repository is enabled install FFmpeg with:
 
     sudo dnf install ffmpeg
 
-For MP4 recording on GNOME Shell you also need the `gstreamer1-plugins-ugly`
-package also available from RPM Fusion free:
-
-    sudo dnf install gstreamer1-plugins-ugly
-
 ### Solus
 Solus users can simply install with:
 
@@ -209,7 +204,6 @@ Arch Linux users can simply install with:
 For GNOME Shell recording there are some optional packages you can choose from:
 
     gst-plugins-good: Recording under Gnome Shell
-    gst-plugins-ugly: MP4 output under Gnome Shell
     gifski: High quality GIF animations with thousands of colors
 
 If you have a package manager for AUR (or fetch from AUR manually) the git
@@ -271,7 +265,7 @@ GIF files. For best results:
 - Avoid too many colors, since GIF is limited to a 256 color palette per frame.
   This one is not so much about file size but more about visual quality.
 - If the above suggestions are not suitable for your use case, consider using
-  WebM or MP4 format (see below).
+  WebM format (see below).
 
 ### If GIF is so bad why use it at all?
 While GIF is a very old format, it has seen some rise in usage again in recent
@@ -282,10 +276,13 @@ cases for Peek are recording small user interactions for showing UI features
 of an app you developed, for making short tutorials or for reporting bugs.
 
 ### What about WebM or MP4? Those are well supported on the web.
-Peek allows you to record in both WebM and MP4 format, just choose your
-preferred output format in the preferences. Both are well supported by modern
-browsers, even though they are still not as universally supported by tools and
-online services as GIFs.
+Peek allows you to record in WebM format, just choose your preferred output
+format in the preferences. WebM is well supported by modern browsers, even
+though they are still not as universally supported by tools and online services
+as GIFs.
+
+> [!NOTE] Support for MP4 was available till version 1.5.1 but was removed
+> from later versions.
 
 ### What is the cause for "Could not start GNOME Shell recorder" errors?
 
@@ -395,7 +392,7 @@ for your language. The translator credits are shown in Peek's About dialog.
 
 
 ## License
-Peek Copyright © 2015-2018 by Philipp Wolfer <ph.wolfer@gmail.com>
+Peek Copyright © 2015-2024 by Philipp Wolfer <ph.wolfer@gmail.com>
 
 Peek is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
