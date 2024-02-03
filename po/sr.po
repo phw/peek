@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-11 17:10+0100\n"
+"POT-Creation-Date: 2024-02-03 19:49+0100\n"
 "PO-Revision-Date: 2021-01-07 10:29+0000\n"
 "Last-Translator: Burek <jokxa@hotmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/peek/"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.4.1-dev\n"
 
 #: src/application.vala:63
@@ -95,33 +95,28 @@ msgstr "Пик захтева ФФмпег или већ покренуту ГН
 msgid "FFmpeg executable not found."
 msgstr "Извршна датотека ФФмпег није пронађена."
 
-#: src/ui/application-window.vala:122
+#: src/ui/application-window.vala:119
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 "Неочеивакана грешка се догодила приликом снимања. Снимање је прекинуто."
 
-#: src/ui/application-window.vala:249
+#: src/ui/application-window.vala:250
 msgid "Rendering animation…"
 msgstr "Исцртавам анимацију…"
 
-#: src/ui/application-window.vala:250
+#: src/ui/application-window.vala:251
 msgid "Peek will close when rendering is finished."
 msgstr "Виркало ће се затворити након што се исцртавање заврши."
 
-#: src/ui/application-window.vala:286 ui/application-window.ui:353
+#: src/ui/application-window.vala:287 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:287 ui/application-window.ui:337
+#: src/ui/application-window.vala:288 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
-
-#: src/ui/application-window.vala:288 ui/application-window.ui:387
-#: ui/preferences.ui:226
-msgid "MP4"
-msgstr "MP4"
 
 #: src/ui/application-window.vala:289 ui/application-window.ui:370
 #: ui/preferences.ui:225
@@ -133,61 +128,61 @@ msgstr "WebM видео"
 msgid "Record as %s"
 msgstr "Снимај као %s"
 
-#: src/ui/application-window.vala:414
+#: src/ui/application-window.vala:411
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Покрени/заустави: %s"
 
-#: src/ui/application-window.vala:568
+#: src/ui/application-window.vala:563
 msgid "Rendering…"
 msgstr "Исцртавам…"
 
-#: src/ui/application-window.vala:608
+#: src/ui/application-window.vala:603
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Снимање није започето због неочекиване грешке."
 
-#: src/ui/application-window.vala:728 src/ui/application-window.vala:733
+#: src/ui/application-window.vala:723 src/ui/application-window.vala:728
 msgid "Save animation"
 msgstr "Сачувај анимацију"
 
-#: src/ui/application-window.vala:729 src/ui/application-window.vala:736
+#: src/ui/application-window.vala:724 src/ui/application-window.vala:731
 msgid "_Save"
 msgstr "_Сачувај"
 
-#: src/ui/application-window.vala:730 src/ui/application-window.vala:734
+#: src/ui/application-window.vala:725 src/ui/application-window.vala:729
 msgid "_Cancel"
 msgstr "_Откажи"
 
-#: src/ui/application-window.vala:801
+#: src/ui/application-window.vala:796
 msgid "The file could not be saved to the selected location."
 msgstr "Нисам могао да сачувам датотеку у изабрано место."
 
-#: src/ui/application-window.vala:828
+#: src/ui/application-window.vala:823
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Анимација је сачувана као „%s“"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:838
+#: src/ui/application-window.vala:833
 msgid "Click here to show the saved file in your file manager."
 msgstr "Кликните овде да видите сачувану датотеку у вашем управнику датотека."
 
-#: src/ui/application-window.vala:840
+#: src/ui/application-window.vala:835
 msgid "Show in file manager"
 msgstr "Прикажи у управнику датотека"
 
 #. Display the configured shortcut to the user
-#: src/ui/preferences-dialog.vala:189
+#: src/ui/preferences-dialog.vala:195
 msgid "deactivated"
 msgstr "непокренуто"
 
 #. Add a button to change the keyboard shortcut
-#: src/ui/preferences-dialog.vala:200 src/ui/preferences-dialog.vala:216
+#: src/ui/preferences-dialog.vala:206 src/ui/preferences-dialog.vala:222
 msgid "Change"
 msgstr "Промени"
 
-#: src/ui/preferences-dialog.vala:213
+#: src/ui/preferences-dialog.vala:219
 msgid "Press keys…"
 msgstr "Притисни тастере…"
 
@@ -237,15 +232,11 @@ msgstr "_Снимај"
 msgid "Recording error"
 msgstr "Грешка при снимању"
 
-#: ui/error-dialog.ui:28
-msgid "Report issue"
-msgstr "Пријави проблем"
-
-#: ui/error-dialog.ui:42
+#: ui/error-dialog.ui:25
 msgid "Close"
 msgstr "Затвори"
 
-#: ui/error-dialog.ui:87
+#: ui/error-dialog.ui:70
 msgid ""
 "Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
 "questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
@@ -257,7 +248,7 @@ msgstr ""
 "око вашег проблема, молимо пријавите и детаљно опишите како је проблем "
 "настао."
 
-#: ui/error-dialog.ui:126
+#: ui/error-dialog.ui:109
 msgid "Show details"
 msgstr "Прикажи појединости"
 
@@ -285,35 +276,35 @@ msgstr "Снимање"
 msgid "Output format"
 msgstr "Излазни формат"
 
-#: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:250 data/com.uploadedlobster.peek.gschema.xml:45
 msgid "Use gifski for high quality GIFs"
 msgstr "Користи gifski за високо квалитетне GIF-ове"
 
-#: ui/preferences.ui:276
+#: ui/preferences.ui:275
 msgid "GIF quality"
 msgstr "Квалитет GIF-а"
 
-#: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
+#: ui/preferences.ui:325 data/com.uploadedlobster.peek.gschema.xml:60
 msgid "Framerate"
 msgstr "Проток кадрова"
 
-#: ui/preferences.ui:368
+#: ui/preferences.ui:367
 msgid "Resolution downsampling"
 msgstr "Смањивање узорка резолуције"
 
-#: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
+#: ui/preferences.ui:409 data/com.uploadedlobster.peek.gschema.xml:55
 msgid "Delay in seconds before recording starts"
 msgstr "Пауза пре почетка снимања, у секундама"
 
-#: ui/preferences.ui:443
+#: ui/preferences.ui:442
 msgid "Capture mouse cursor"
 msgstr "Сними показивач миша"
 
-#: ui/preferences.ui:458
+#: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
 msgstr ""
 
-#: ui/preferences.ui:489
+#: ui/preferences.ui:488
 msgid "Peek preferences"
 msgstr "Поставке Виркала"
 
@@ -350,13 +341,14 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Једноставан снимач екрана са лако употребљивим интерфејсом"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
+#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
 "showing UI features of your own apps or for showing a bug in bug reports. "
 "With Peek you simply place the Peek window over the area you want to record "
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
-"you can also directly record to WebM or MP4 if you prefer."
+"you can also directly record to WebM if you prefer."
 msgstr ""
 "Виркало чини снимање одређених делова екрана веома лаким. Направљен је за "
 "прецизно снимање одређених делова екрана као што је то потребно приликом "
@@ -379,7 +371,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Чување снимљеног видеа као оптимизовани анимирани GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-msgid "Record directly to WebM or MP4 format"
+#, fuzzy
+msgid "Record directly to WebM format"
 msgstr "Директно снимање у WebM или MP4 формат"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
@@ -399,30 +392,30 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Ради унудар Вејленд сесије Гномове шкољке (преко XWayland-a)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
+#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
-"an area of the screen for creating GIF animations or silent WebM or MP4 "
-"videos."
+"an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
 "Виркало није опште наменско решење за снимање радне површине, са напредним "
 "могућностима, већ се усредсређује на одређени циљ а то је стварање малих, "
 "тихих снимака одређених делова екрана зарад стварања GIF анимација или тихих "
 "WebM или MP4 видео записа."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:41
+#: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
 msgstr "Главни прозор за бирање површине која ће се снимати"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:45
+#: data/com.uploadedlobster.peek.appdata.xml.in:44
 msgid "Peek's preferences dialog"
 msgstr "Прозорче поставки Виркала"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:49
+#: data/com.uploadedlobster.peek.appdata.xml.in:48
 msgid "Peek is recording itself"
 msgstr "Виркало снима само себе"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:79
+#: data/com.uploadedlobster.peek.appdata.xml.in:78
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
@@ -454,33 +447,39 @@ msgstr "Користи тамну варијанту теме"
 msgid "Global keybinding to toggle recording"
 msgstr "Општа пречица на тастатури за промену стања снимања"
 
-#: data/com.uploadedlobster.peek.gschema.xml:43
+#: data/com.uploadedlobster.peek.gschema.xml:41
 msgid "Output file format"
 msgstr "Излазни формат датотеке"
 
-#: data/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:50
 msgid "Quality setting for the gifski GIF encoder"
 msgstr "Подешавање квалитета за gifski GIF"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:65
 msgid "Resolution downsampling factor"
 msgstr "Чинилац смањивања узорка резолуције"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:69
 msgid "Whether to capture the mouse cursor"
 msgstr "Да ли да се снима показивач миша"
 
-#: data/com.uploadedlobster.peek.gschema.xml:75
+#: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:79
+#: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
 msgstr "Величина и положај последње отвореног главног прозора"
 
-#: data/com.uploadedlobster.peek.gschema.xml:83
+#: data/com.uploadedlobster.peek.gschema.xml:81
 msgid "Path where last video got saved"
 msgstr "Путања где је сачуван последњи видео"
+
+#~ msgid "MP4"
+#~ msgstr "MP4"
+
+#~ msgid "Report issue"
+#~ msgstr "Пријави проблем"
 
 #~ msgid "com.uploadedlobster.peek"
 #~ msgstr "com.uploadedlobster.peek"

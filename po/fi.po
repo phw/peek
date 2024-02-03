@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-11 17:10+0100\n"
+"POT-Creation-Date: 2024-02-03 19:49+0100\n"
 "PO-Revision-Date: 2021-07-02 01:36+0000\n"
 "Last-Translator: Oi Suomi On <oisuomion@protonmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/peek/"
@@ -94,33 +94,28 @@ msgstr "Peek vaatii FFmpegin tai käynnissä olevan GNOME Shell -istunnon."
 msgid "FFmpeg executable not found."
 msgstr "FFmpeg:in suoritustiedostoa ei löytynyt."
 
-#: src/ui/application-window.vala:122
+#: src/ui/application-window.vala:119
 msgid "An unexpected error occurred during recording. Recording was aborted."
 msgstr ""
 "Tallentamisen aikana ilmeni odottamaton virhe. Tallentaminen keskeytettiin."
 
-#: src/ui/application-window.vala:249
+#: src/ui/application-window.vala:250
 msgid "Rendering animation…"
 msgstr "Renderöidään animaatiota…"
 
-#: src/ui/application-window.vala:250
+#: src/ui/application-window.vala:251
 msgid "Peek will close when rendering is finished."
 msgstr "Peek sulkeutuu, kun renderöinti valmistuu."
 
-#: src/ui/application-window.vala:286 ui/application-window.ui:353
+#: src/ui/application-window.vala:287 ui/application-window.ui:353
 #: ui/preferences.ui:224
 msgid "APNG"
 msgstr "APNG"
 
-#: src/ui/application-window.vala:287 ui/application-window.ui:337
+#: src/ui/application-window.vala:288 ui/application-window.ui:337
 #: ui/preferences.ui:223
 msgid "GIF"
 msgstr "GIF"
-
-#: src/ui/application-window.vala:288 ui/application-window.ui:387
-#: ui/preferences.ui:226
-msgid "MP4"
-msgstr "MP4"
 
 #: src/ui/application-window.vala:289 ui/application-window.ui:370
 #: ui/preferences.ui:225
@@ -132,61 +127,61 @@ msgstr "WebM"
 msgid "Record as %s"
 msgstr "Nauhoita %s-muotoon"
 
-#: src/ui/application-window.vala:414
+#: src/ui/application-window.vala:411
 #, c-format
 msgid "Start / Stop: %s"
 msgstr "Käynnistä/pysäytä: %s"
 
-#: src/ui/application-window.vala:568
+#: src/ui/application-window.vala:563
 msgid "Rendering…"
 msgstr "Renderöidään…"
 
-#: src/ui/application-window.vala:608
+#: src/ui/application-window.vala:603
 msgid "Recording could not be started due to an unexpected error."
 msgstr "Tallentamista ei voitu aloittaa odottamattoman virheen takia."
 
-#: src/ui/application-window.vala:728 src/ui/application-window.vala:733
+#: src/ui/application-window.vala:723 src/ui/application-window.vala:728
 msgid "Save animation"
 msgstr "Tallenna animaatio"
 
-#: src/ui/application-window.vala:729 src/ui/application-window.vala:736
+#: src/ui/application-window.vala:724 src/ui/application-window.vala:731
 msgid "_Save"
 msgstr "_Tallenna"
 
-#: src/ui/application-window.vala:730 src/ui/application-window.vala:734
+#: src/ui/application-window.vala:725 src/ui/application-window.vala:729
 msgid "_Cancel"
 msgstr "_Peru"
 
-#: src/ui/application-window.vala:801
+#: src/ui/application-window.vala:796
 msgid "The file could not be saved to the selected location."
 msgstr "Tiedostoa ei voitu tallentaa valittuun sijaintiin."
 
-#: src/ui/application-window.vala:828
+#: src/ui/application-window.vala:823
 #, c-format
 msgid "Animation saved as “%s”"
 msgstr "Animaatio tallennettu nimellä “%s”"
 
 #. Unity does not allow actions on notifications, so we disable
 #. notification actions there.
-#: src/ui/application-window.vala:838
+#: src/ui/application-window.vala:833
 msgid "Click here to show the saved file in your file manager."
 msgstr "Napsauta tästä nähdäksesi tallennetun tiedoston tiedostonhallinnassa."
 
-#: src/ui/application-window.vala:840
+#: src/ui/application-window.vala:835
 msgid "Show in file manager"
 msgstr "Näytä tiedostonhallinnassa"
 
 #. Display the configured shortcut to the user
-#: src/ui/preferences-dialog.vala:189
+#: src/ui/preferences-dialog.vala:195
 msgid "deactivated"
 msgstr "ei käytössä"
 
 #. Add a button to change the keyboard shortcut
-#: src/ui/preferences-dialog.vala:200 src/ui/preferences-dialog.vala:216
+#: src/ui/preferences-dialog.vala:206 src/ui/preferences-dialog.vala:222
 msgid "Change"
 msgstr "Vaihda"
 
-#: src/ui/preferences-dialog.vala:213
+#: src/ui/preferences-dialog.vala:219
 msgid "Press keys…"
 msgstr "Paina näppäimiä…"
 
@@ -236,15 +231,11 @@ msgstr "_Nauhoita"
 msgid "Recording error"
 msgstr "Nauhoitusvirhe"
 
-#: ui/error-dialog.ui:28
-msgid "Report issue"
-msgstr "Ilmoita ongelmasta"
-
-#: ui/error-dialog.ui:42
+#: ui/error-dialog.ui:25
 msgid "Close"
 msgstr "Sulje"
 
-#: ui/error-dialog.ui:87
+#: ui/error-dialog.ui:70
 msgid ""
 "Please read the <a href=\"https://github.com/phw/peek#frequently-asked-"
 "questions\">FAQs</a> before reporting this issue. If the FAQs do not answer "
@@ -257,7 +248,7 @@ msgstr ""
 "mahdollisimman paljon yksityiskohtaista tietoa. Kerro myös mitä olit juuri "
 "silloin ohjelmalla tekemässä tuon ongelman ilmetessä."
 
-#: ui/error-dialog.ui:126
+#: ui/error-dialog.ui:109
 msgid "Show details"
 msgstr "Näytä tiedot"
 
@@ -285,35 +276,35 @@ msgstr "Nauhoittaminen"
 msgid "Output format"
 msgstr "Muoto"
 
-#: ui/preferences.ui:251 data/com.uploadedlobster.peek.gschema.xml:47
+#: ui/preferences.ui:250 data/com.uploadedlobster.peek.gschema.xml:45
 msgid "Use gifski for high quality GIFs"
 msgstr "Käytä gifski:tä korkealaatuisia GIF-tiedostoja varten"
 
-#: ui/preferences.ui:276
+#: ui/preferences.ui:275
 msgid "GIF quality"
 msgstr "GIF-laatu"
 
-#: ui/preferences.ui:326 data/com.uploadedlobster.peek.gschema.xml:62
+#: ui/preferences.ui:325 data/com.uploadedlobster.peek.gschema.xml:60
 msgid "Framerate"
 msgstr "Kuvanopeus"
 
-#: ui/preferences.ui:368
+#: ui/preferences.ui:367
 msgid "Resolution downsampling"
 msgstr "Kuvatarkkuuden alasajo"
 
-#: ui/preferences.ui:410 data/com.uploadedlobster.peek.gschema.xml:57
+#: ui/preferences.ui:409 data/com.uploadedlobster.peek.gschema.xml:55
 msgid "Delay in seconds before recording starts"
 msgstr "Viive sekunneissa ennen nauhoittamisen aloittamista"
 
-#: ui/preferences.ui:443
+#: ui/preferences.ui:442
 msgid "Capture mouse cursor"
 msgstr "Nauhoita hiiren osoitin"
 
-#: ui/preferences.ui:458
+#: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
 msgstr ""
 
-#: ui/preferences.ui:489
+#: ui/preferences.ui:488
 msgid "Peek preferences"
 msgstr "Peekin asetukset"
 
@@ -346,13 +337,14 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Yksinkertainen näyttönauhoitin helppokäyttöisellä käyttöliittymällä"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
+#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
 "showing UI features of your own apps or for showing a bug in bug reports. "
 "With Peek you simply place the Peek window over the area you want to record "
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
-"you can also directly record to WebM or MP4 if you prefer."
+"you can also directly record to WebM if you prefer."
 msgstr ""
 "Peek mahdollistaa helpon tavan luoda lyhyitä videomaisia kaappauksia "
 "kuvaruudulla pyörivistä tapahtumista. Tämä ohjelma rakennettiin varta vasten "
@@ -376,7 +368,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Tallenna nauhoitettu video optimoituna GIF-animaationa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-msgid "Record directly to WebM or MP4 format"
+#, fuzzy
+msgid "Record directly to WebM format"
 msgstr "Nauhoita suoraan WebM- tai MP4-muotoihin"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
@@ -396,30 +389,30 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Toimii Gnome Shell Wayland -istunnossa (käyttäen XWaylandia)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
+#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
-"an area of the screen for creating GIF animations or silent WebM or MP4 "
-"videos."
+"an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
 "Peek ei ole yleiskäyttöön tarkoitettu ruudunkaappausohjelma joka sisältää "
 "lisäominaisuuksia, vaan enemmänkin se keskittyy yhteen ripeään tehtävään "
 "luodakseen pieniä, äänettömiä liikkuvan kuvan kaappauksia GIF-muodossa "
 "tietystä osasta näyttöruutuasi, taikka mykkiä WebM- tai MP4-videoita."
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:41
+#: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
 msgstr "Pääikkuna jolla määritetään tallennettava alue"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:45
+#: data/com.uploadedlobster.peek.appdata.xml.in:44
 msgid "Peek's preferences dialog"
 msgstr "Peekin asetusikkuna"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:49
+#: data/com.uploadedlobster.peek.appdata.xml.in:48
 msgid "Peek is recording itself"
 msgstr "Peek nauhoittaa itseään"
 
-#: data/com.uploadedlobster.peek.appdata.xml.in:79
+#: data/com.uploadedlobster.peek.appdata.xml.in:78
 msgid "Philipp Wolfer"
 msgstr "Philipp Wolfer"
 
@@ -451,33 +444,39 @@ msgstr "Suosi tummaa teemaa"
 msgid "Global keybinding to toggle recording"
 msgstr "Yleinen näppäinsidos tallennuksen aloittamiseksi"
 
-#: data/com.uploadedlobster.peek.gschema.xml:43
+#: data/com.uploadedlobster.peek.gschema.xml:41
 msgid "Output file format"
 msgstr "Tuotettavan tiedoston muoto"
 
-#: data/com.uploadedlobster.peek.gschema.xml:52
+#: data/com.uploadedlobster.peek.gschema.xml:50
 msgid "Quality setting for the gifski GIF encoder"
 msgstr "Laatuasetus gifski GIF-enkooderille"
 
-#: data/com.uploadedlobster.peek.gschema.xml:67
+#: data/com.uploadedlobster.peek.gschema.xml:65
 msgid "Resolution downsampling factor"
 msgstr "Tarkkuuden alasajon määritys"
 
-#: data/com.uploadedlobster.peek.gschema.xml:71
+#: data/com.uploadedlobster.peek.gschema.xml:69
 msgid "Whether to capture the mouse cursor"
 msgstr "Nauhoitetaanko hiiren osoitin"
 
-#: data/com.uploadedlobster.peek.gschema.xml:75
+#: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
 msgstr ""
 
-#: data/com.uploadedlobster.peek.gschema.xml:79
+#: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
 msgstr "Viimeisen avonaisen pääikkunan koko ja paikka"
 
-#: data/com.uploadedlobster.peek.gschema.xml:83
+#: data/com.uploadedlobster.peek.gschema.xml:81
 msgid "Path where last video got saved"
 msgstr "Polku mihin viimeisin video tallennettiin"
+
+#~ msgid "MP4"
+#~ msgstr "MP4"
+
+#~ msgid "Report issue"
+#~ msgstr "Ilmoita ongelmasta"
 
 #~ msgid "com.uploadedlobster.peek"
 #~ msgstr "com.uploadedlobster.peek"
