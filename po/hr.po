@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-07-21 21:41+0000\n"
+"PO-Revision-Date: 2024-02-04 19:01+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
 "translations/hr/>\n"
@@ -16,9 +16,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -302,7 +302,7 @@ msgstr "Uključi kursor miša u snimku"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Snimi zvuk od standardnog PULSE uređaja"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -337,7 +337,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Program za snimanje ekrana s jednostavnim sučeljem"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -346,13 +345,13 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek olakšava stvaranje kratkih videa za područja ekrana. Izgrađen je baš za "
-"snimanje područja ekrana, primjerice za jednostavno prikazivanje funkcija "
-"korisničkog sučelja vlastitih programa ili za prikazivanje greške u "
+"Peek olakšava stvaranje kratkih videa za snimanja područja ekrana. Izgrađen "
+"je baš za snimanje područja ekrana, primjerice za jednostavno prikazivanje "
+"funkcija korisničkog sučelja vlastitih programa ili za prikazivanje greške u "
 "izvještajima o greškama. S Peekom jednostavno stavi Peek prozor preko "
 "područja koje želiš snimiti i pritisni „Snimi”. Peek je optimiran za "
 "generiranje animiranih GIF-ova, ali ako ti je draže, možeš snimati i izravno "
-"u WebM ili MP4 format."
+"u WebM format."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -367,9 +366,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Spremi snimljeni video kao optimiran animirani GIF"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Snimaj direktno u WebM ili MP4 format"
+msgstr "Snimaj direktno u WebM format"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -388,7 +386,6 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Radi unutar GNOME Shell Wayland sesije (koristi XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
@@ -396,8 +393,7 @@ msgid ""
 msgstr ""
 "Peek nije program opće namjene za generiranje kratkih videa s proširenim "
 "funkcijama, već se jedino fokusira na stvaranja malih bezvučnih videa "
-"odabranih područja ekrana, u obliku GIF animacija ili bezvučnih WebM/MP4 "
-"video zapisa."
+"odabranih područja ekrana, u obliku GIF animacija ili bezvučnih WebM videa."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -457,11 +453,11 @@ msgstr "Faktor reduciranja rezolucije"
 
 #: data/com.uploadedlobster.peek.gschema.xml:69
 msgid "Whether to capture the mouse cursor"
-msgstr "Treba li uključiti kursor miša u snimku"
+msgstr "Da li uključiti kursor miša u snimku"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Da li snimati zvuk od standardnog PULSE uređaja"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
