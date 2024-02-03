@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-09-16 14:16+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"PO-Revision-Date: 2024-02-04 19:01+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/peek/translations/"
 "nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -301,7 +301,7 @@ msgstr "Cursor vastleggen"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Geluid opvangen van het standaard PULSE-apparaat"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -336,7 +336,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Simpele, eenvoudig te bedienen schermopnametoepassing"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -365,9 +364,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Sla een opname op als een geoptimaliseerd, bewegend gif-bestand"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Neem direct op naar webm- of mp4-formaat"
+msgstr "Neem direct op naar webm-formaat"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -386,7 +384,6 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Werkt in GNOME Shell op Wayland (met behulp van XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
@@ -394,8 +391,8 @@ msgid ""
 msgstr ""
 "Peek is niet zomaar een screencasttoepassing met uitgebreide mogelijkheden: "
 "Peek legt de nadruk op het maken van kleine, stille screencasts van een "
-"gedeelte van het scherm voor het maken van gif-animaties of stille webm- of "
-"mp4-video's."
+"gedeelte van het scherm voor het maken van gif-animaties of stille webm-"
+"video's."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -459,7 +456,7 @@ msgstr "Of de muiscursor moet worden vastgelegd"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Of er geluid moet worden opgenomen van het standaard PULSE-apparaat"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
