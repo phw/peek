@@ -281,7 +281,8 @@ format in the preferences. WebM is well supported by modern browsers, even
 though they are still not as universally supported by tools and online services
 as GIFs.
 
-> [!NOTE] Support for MP4 was available till version 1.5.1 but was removed
+> [!NOTE]
+> Support for MP4 was available till version 1.5.1 but was removed
 > from later versions.
 
 ### What is the cause for "Could not start GNOME Shell recorder" errors?
