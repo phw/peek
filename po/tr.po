@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
 "PO-Revision-Date: 2024-02-04 19:01+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/peek/"
 "translations/tr/>\n"
 "Language: tr\n"
@@ -301,7 +301,7 @@ msgstr "Fare imlecini yakala"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Öntanımlı PULSE aygıtından ses yakala"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -336,7 +336,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Kullanımı kolay bir arayüze sahip basit ekran kaydedici"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -350,8 +349,8 @@ msgstr ""
 "yaparken kolayca ekranı kaydetme üzerine tasarlanmıştır ve özel bir amaca "
 "hizmet etmektedir. Peek penceresini kaydetmek istediğiniz yere sürükleyip "
 "\"Kayıt\" düğmesine basarak kolayca kayıt yapabilirsiniz. Peek animasyonlu "
-"GIF oluşturmak için özel olarak optimize edilmiştir fakat doğrudan WebM veya "
-"MP4 biçiminde de kayıt yapabilirsiniz."
+"GIF oluşturmak için özel olarak tasarlanmıştır fakat doğrudan WebM biçiminde "
+"de kayıt yapabilirsiniz."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -366,9 +365,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Oluşturulmuş videoyu optimize edilmiş GIF olarak kaydet"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Doğrudan WebM veya MP4 biçiminde kaydedin"
+msgstr "Doğrudan WebM biçiminde kaydet"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -387,7 +385,6 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "GNOME Shell Wayland oturumu içerisinde çalışır (XWayland kullanarak)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
@@ -395,8 +392,8 @@ msgid ""
 msgstr ""
 "Peek, genişletilmiş özelliklere sahip genel amaçlı bir ekran kayıt "
 "uygulaması değildir, GIF animasyonları oluşturmak için ekranın bir alanının "
-"küçük, sessiz kayıtları veya sessiz WebM veya MP4 videoları oluşturma "
-"görevine odaklanmaktadır."
+"küçük, sessiz kayıtları veya sessiz WebM videoları oluşturma görevine "
+"odaklanmaktadır."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -460,7 +457,7 @@ msgstr "Fare imlecininin kaydedilip kaydedilmeyeceği"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Öntanımlı PULSE giriş aygıtından sesin kaydedilip kaydedilmeyeceği"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
