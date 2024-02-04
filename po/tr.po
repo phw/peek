@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2021-01-23 06:32+0000\n"
-"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"PO-Revision-Date: 2024-02-04 19:01+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/peek/"
 "translations/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -55,7 +55,7 @@ msgstr "Peek"
 #: src/application.vala:250
 #, c-format
 msgid "Unable to initialize default recording backend: %s"
-msgstr "Varsayılan kayıt altyapısı başlatılamadı: %s"
+msgstr "Öntanımlı kayıt altyapısı başlatılamadı: %s"
 
 #: src/application.vala:266
 #, c-format
@@ -123,7 +123,7 @@ msgstr "WebM"
 #: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
-msgstr "%s olarak Kaydet"
+msgstr "%s Olarak Kaydet"
 
 #: src/ui/application-window.vala:411
 #, c-format
@@ -148,7 +148,7 @@ msgstr "_Kaydet"
 
 #: src/ui/application-window.vala:725 src/ui/application-window.vala:729
 msgid "_Cancel"
-msgstr "_İptal"
+msgstr "İ_ptal"
 
 #: src/ui/application-window.vala:796
 msgid "The file could not be saved to the selected location."
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ui/error-dialog.ui:109
 msgid "Show details"
-msgstr "Detayları göster"
+msgstr "Ayrıntıları göster"
 
 #: ui/preferences.ui:77
 msgid "User interface"
