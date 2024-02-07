@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-08-30 19:37+0000\n"
-"Last-Translator: Scoopity Whoop <Scoo0p@yandex.com>\n"
+"PO-Revision-Date: 2024-02-08 08:01+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/peek/"
 "translations/es/>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -313,7 +313,7 @@ msgstr "Capturar el cursor del ratón"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Grabar sonido desde un dispositivo PULSE estándar"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -348,7 +348,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Grabador de pantalla simple con una interfaz fácil de usar"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -357,13 +356,14 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek facilita la creación de videos cortos de un área de pantalla. Fue "
-"diseñado para grabar áreas especificas, por ejemplo, para mostrar "
-"características de UI de sus aplicaciones o mostrar errores en informes. Con "
-"Peek, usted puede obtener videos simplemente colocando la ventana de Peek "
-"sobre el área que quiere grabar y pulse \"Grabar\". Peek está optimizado "
-"para generar GIFs animados, pero también puede grabar directamente en WebM o "
-"MP4 si lo prefiere."
+"Peek facilita la creación de capturas de pantalla breves de un área de la "
+"pantalla. Fue creado para el caso de uso específico de grabar áreas de la "
+"pantalla, por ejemplo, para mostrar fácilmente las funciones de la interfaz "
+"de usuario de sus propias aplicaciones o para mostrar un error en los "
+"informes de errores. Con Peek simplemente colocas la ventana de Peek sobre "
+"el área que deseas grabar y presionas \"Grabar\". Peek está optimizado para "
+"generar GIF animados, pero también puedes grabar directamente en WebM si lo "
+"prefieres."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -378,9 +378,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Guardar vídeo como un GIF animado optimizado"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Grabar directamente en formato WebM o MP4"
+msgstr "Graba directamente en formato WebM"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -400,16 +399,15 @@ msgstr ""
 "Funciona dentro de una sesión de GNOME Shell en Wayland (mediante XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
-"Peek no es una aplicación avanzada para grabar videos, al contrario, Peek se "
-"enfoca en la única tarea de crear pequeños videos sin sonido del área de "
-"pantalla que usted necesite para crear animaciones GIF, o videos sin sonido "
-"WebM o MP4."
+"Peek no es sólo una aplicación de captura de pantalla con amplias "
+"capacidades: Peek se centra en crear capturas de pantalla pequeñas y "
+"silenciosas de una parte de la pantalla para crear animaciones GIF o vídeos "
+"WebM silenciosos."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -474,6 +472,8 @@ msgstr "Capturar el cursor del ratón"
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
 msgstr ""
+"Ya sea para capturar sonido desde el dispositivo de entrada PULSE "
+"predeterminado"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
