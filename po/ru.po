@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-02-08 08:01+0000\n"
+"PO-Revision-Date: 2024-02-09 09:02+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
@@ -125,7 +125,7 @@ msgstr "WebM"
 #: src/ui/application-window.vala:300
 #, c-format
 msgid "Record as %s"
-msgstr "Записать как %s"
+msgstr "Записать в %s"
 
 #: src/ui/application-window.vala:411
 #, c-format
@@ -257,7 +257,7 @@ msgstr "Пользовательский интерфейс"
 
 #: ui/preferences.ui:90 data/com.uploadedlobster.peek.gschema.xml:7
 msgid "Open file manager after saving"
-msgstr "Открыть файловый менеджер после сохранения"
+msgstr "Открывать диспетчер файл после сохранения"
 
 #: ui/preferences.ui:106 data/com.uploadedlobster.peek.gschema.xml:11
 msgid "Show desktop notification after saving"
@@ -336,7 +336,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Простой рекордер экрана с удобным интерфейсом"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -345,12 +344,12 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek облегчает создание скринкастов областей экрана. Он был создан "
-"специально для записи частей экрана, например, для демонстрации возможностей "
-"ваших собственных приложений или создания сообщений об ошибках. Просто "
-"поместите окно Peek над той областью, которую хотите записать, и нажмите "
-"«Запись». Peek лучше всего записывает анимированные GIF, но также может "
-"записывать напрямую в WebM или MP4."
+"Peek облегчает запись определённых областей экрана. Он был создан специально "
+"для случаев, когда, например, необходимо продемонстрировать возможности "
+"ваших собственных приложений или показать сценарий ошибки в баг-репорте. "
+"Просто поместите окно Peek над той областью, которую хотите сохранить, и "
+"нажмите «Записать». Peek лучше всего сохраняет анимированные GIF, но также "
+"он может создавать видео в формате WebM."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -385,15 +384,14 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Работает в GNOME Shell на Wayland (при помощи XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
-"Peek не является многофункциональным приложением для записи скринкастов, а "
-"помогает решить единственную задачу записи GIF-анимации или беззвучных видео "
-"WebM или MP4."
+"Peek не является полнофункциональным приложением для записи экрана, оно лишь "
+"помогает решить единственную задачу — создание GIF-анимаций или беззвучных "
+"видео WebM."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -457,7 +455,7 @@ msgstr "Записывать ли курсор мыши"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Захватывать ли звук со стандартного устройства ввода PULSE"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
