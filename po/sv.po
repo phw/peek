@@ -8,10 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-10-23 23:26+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2024-02-08 08:01+0000\n"
+"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.1\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -300,7 +300,7 @@ msgstr "Spela in muspekaren"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Fånga ljud från standard PULSE-enhet"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -364,9 +364,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Spara videon som optimerad, animerad GIF-fil"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Spela in direkt i WebM- eller MP4-formatet"
+msgstr "Spela in direkt till WebM-format"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -456,7 +455,7 @@ msgstr "Om muspekaren skall spelas in"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Huruvida ljud ska spelas in från standard PULSE-inmatningsenhet"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
