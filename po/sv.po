@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-02-09 09:02+0000\n"
+"PO-Revision-Date: 2024-02-13 22:58+0000\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/peek/"
 "translations/sv/>\n"
@@ -264,7 +264,7 @@ msgstr "Visa skrivbordsavisering efter sparande"
 
 #: ui/preferences.ui:131
 msgid "Start / stop recording"
-msgstr "Starta inspelning"
+msgstr "Starta/Stopp inspelning"
 
 #: ui/preferences.ui:185
 msgid "Recording"
@@ -335,7 +335,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Enkel skärminspelare med ett användarvänligt gränssnitt"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -384,7 +383,6 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Fungerar i en GNOME Wayland-session (med hjälp av XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
