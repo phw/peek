@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-02-04 19:01+0000\n"
+"PO-Revision-Date: 2024-02-24 17:01+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/peek/"
 "translations/hr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -298,7 +298,7 @@ msgstr "Odgoda u sekundama prije početka snimanja"
 
 #: ui/preferences.ui:442
 msgid "Capture mouse cursor"
-msgstr "Uključi kursor miša u snimku"
+msgstr "Snimi kursor miša"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
