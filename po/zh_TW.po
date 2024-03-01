@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-07-18 15:41+0000\n"
-"Last-Translator: WhiredPlanck <fungdaat31@outlook.com>\n"
+"PO-Revision-Date: 2024-03-02 22:01+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "peek/translations/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -193,7 +193,8 @@ msgid "translator-credits"
 msgstr ""
 "coin3x\n"
 "pan93412\n"
-"WhiredPlanck"
+"WhiredPlanck\n"
+"Kisaragi Hiu"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -300,7 +301,7 @@ msgstr "擷取滑鼠游標"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "從 PulseAudio 預設裝置擷取聲音"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -335,7 +336,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "簡單易用的螢幕錄影軟體"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -344,10 +344,10 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek 讓錄製一部分的螢幕截取變得更加容易。這是專門被設計來錄製部分螢幕區塊的，"
-"例如在示範軟體操作或者重現 bug 狀況時就能派上用場。有了 Peek，您只要把 Peek "
-"的視窗放置在您想錄影的區塊，然後按下「錄影」即可。Peek 已針對產生 GIF 動畫進"
-"行優化，不過需要的話也能直接錄製 WebM 或者 MP4 格式。"
+"Peek 讓建立螢幕區域的螢幕錄影變得容易。它是為錄製螢幕部分區域的用途專門設計的"
+"，適合用來展現您的應用程式的功能，或是為臭蟲回報添加影片示範。只要將 Peek "
+"的視窗放置在您想錄影的區域上，然後按下「錄影」即可。Peek 有為產生動態 GIF "
+"進行優化，不過需要的話也能直接錄製 WebM 格式。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -362,9 +362,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "可將錄製的影片儲存為經最佳化的 GIF 動畫"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "可直接錄製成 WebM 或 MP4 格式"
+msgstr "可直接錄製成 WebM 格式"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -383,14 +382,12 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "支援 GNOME Shell Wayland 模式（透過 XWayland）"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
-msgstr ""
-"Peek 並不是專門用來錄影的應用程式，Peek 專注在錄製螢幕區塊並輸出成 GIF 動畫或"
-"無聲的 WebM、MP4 影片。"
+msgstr "Peek 並不適合一般的螢幕錄影用途，而是專門用來錄製螢幕區域並輸出成 GIF "
+"動畫或無聲的 WebM 影片。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -450,7 +447,7 @@ msgstr "是否一併錄製滑鼠游標"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "是否要從預設 PulseAudio 輸入裝置擷取聲音"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
