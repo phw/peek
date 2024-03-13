@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2021-10-14 22:36+0000\n"
-"Last-Translator: Bayu Aditya H. <b@yuah.web.id>\n"
+"PO-Revision-Date: 2024-03-14 04:01+0000\n"
+"Last-Translator: AlihBahasa <AlihBahasa@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/peek/"
 "translations/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -302,7 +302,7 @@ msgstr "Tangkap kursor tetikus"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Ambil suara dari perangkat bawaan PULSE"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -460,7 +460,7 @@ msgstr "Apakah akan merekam kursor mouse"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Baik itu untuk mengambil suara dari perangkat masukan bawaan PULSE"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
