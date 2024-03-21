@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-02-09 09:02+0000\n"
+"PO-Revision-Date: 2024-03-22 10:02+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -48,7 +48,7 @@ msgstr "Переключить состояние записи во всех з�
 
 #: src/application.vala:84
 msgid "Start Peek without the header bar"
-msgstr "Запускать Peek без заголовка"
+msgstr "Запускать Peek без панели заголовка"
 
 #: src/application.vala:94 data/com.uploadedlobster.peek.desktop.in:3
 #: data/com.uploadedlobster.peek.appdata.xml.in:7
@@ -193,7 +193,9 @@ msgstr "Съёмка анимированных GIF"
 #: ui/about.ui.in:40
 msgctxt "Translator credits in about dialog"
 msgid "translator-credits"
-msgstr "Victor Kropp <victor.kropp@gmail.com>"
+msgstr ""
+"Victor Kropp <victor.kropp@gmail.com>\n"
+"Andrei Stepanov <adem4ik@gmail.com>"
 
 #: ui/application-window.ui:33 ui/application-window.ui:185
 msgid "Start recording"
@@ -407,7 +409,7 @@ msgstr "Peek записывает сам себя"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:78
 msgid "Philipp Wolfer"
-msgstr "Philipp Wolfer"
+msgstr "Филипп Вольфер"
 
 #: data/com.uploadedlobster.peek.gschema.xml:15
 msgid ""
