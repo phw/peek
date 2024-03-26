@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-03-22 10:02+0000\n"
+"PO-Revision-Date: 2024-03-27 05:01+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/peek/"
 "translations/ru/>\n"
@@ -275,7 +275,7 @@ msgstr "Запись"
 
 #: ui/preferences.ui:208
 msgid "Output format"
-msgstr "Формат выходного файла"
+msgstr "Выходной формат"
 
 #: ui/preferences.ui:250 data/com.uploadedlobster.peek.gschema.xml:45
 msgid "Use gifski for high quality GIFs"
