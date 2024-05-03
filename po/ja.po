@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2020-02-10 06:52+0000\n"
+"PO-Revision-Date: 2024-05-04 09:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/peek/"
 "translations/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -25,7 +25,7 @@ msgstr "プログラムのバージョンを表示して終了します"
 
 #: src/application.vala:67
 msgid "Select the recording backend (gnome-shell, ffmpeg)"
-msgstr "録画に使用するバックエンド（gnome-shell、ffmpeg）を選択します"
+msgstr "録画に使用するバックエンド (gnome-shell、ffmpeg) を選択します"
 
 #: src/application.vala:68
 msgid "BACKEND"
@@ -78,17 +78,16 @@ msgid ""
 "For Details see the Peek <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>FAQ about Wayland support</a>."
 msgstr ""
-"Peek をネイティブな Wayland 上で実行しています。これは現在サポートされていま"
-"せん。<tt>GDK_BACKEND=x11</tt> を設定し、XWayland を使用して Peek を起動して"
-"ください。\n"
+"Peek をネイティブな Wayland "
+"上で実行しています。これは現在サポートされていません。<tt>GDK_BACKEND=x11</"
+"tt> を設定することで XWayland を使用して、Peek を起動してください。\n"
 "\n"
 "詳細については Peek の <a href='https://github.com/phw/peek#why-no-native-"
 "wayland-support'>Wayland に関する FAQ</a> をお読みください。"
 
 #: src/recording/screen-recorder-factory.vala:26
 msgid "Peek requires FFmpeg or running GNOME Shell session."
-msgstr ""
-"Peek の実行には、FFmpeg か、実行中の GNOME シェルセッションが必要です。"
+msgstr "Peek の実行には、FFmpeg か、実行中の GNOME Shell セッションが必要です。"
 
 #: src/recording/screen-recorder-factory.vala:47
 msgid "FFmpeg executable not found."
@@ -153,7 +152,7 @@ msgstr "キャンセル(_C)"
 
 #: src/ui/application-window.vala:796
 msgid "The file could not be saved to the selected location."
-msgstr "ファイルを選択された場所に保存することができませんでした。"
+msgstr "ファイルを選択された場所に保存できませんでした。"
 
 #: src/ui/application-window.vala:823
 #, c-format
@@ -164,9 +163,8 @@ msgstr "アニメーションは \"%s\" という名前で保存されました"
 #. notification actions there.
 #: src/ui/application-window.vala:833
 msgid "Click here to show the saved file in your file manager."
-msgstr ""
-"ファイルマネージャーで保存されたファイルを表示するにはここをクリックしてくだ"
-"さい。"
+msgstr "保存されたファイルをファイルマネージャーで表示するには、ここをクリックしてく"
+"ださい。"
 
 #: src/ui/application-window.vala:835
 msgid "Show in file manager"
@@ -214,7 +212,7 @@ msgstr "設定"
 
 #: ui/application-window.ui:107
 msgid "About Peek"
-msgstr "このアプリケーションについて"
+msgstr "Peek について"
 
 #: ui/application-window.ui:149
 msgid "_Stop"
@@ -302,7 +300,7 @@ msgstr "マウスカーソルをキャプチャー"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "デフォルトの PULSE デバイスからの音を録音"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -326,7 +324,7 @@ msgstr "高さ"
 
 #: data/com.uploadedlobster.peek.desktop.in:6
 msgid "Record short animated GIF images from your screen"
-msgstr "スクリーンから短いアニメーション GIF イメージを録画します"
+msgstr "スクリーンから短いアニメーション GIF 画像を録画します"
 
 #: data/com.uploadedlobster.peek.desktop.in:7
 msgid "screencast;screen recorder;screen capture;GIF;WebM;APNG;"
@@ -339,7 +337,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "使いやすいインターフェースを備えたシンプルなスクリーンレコーダー"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -348,12 +345,13 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek は、指定した画面領域の短いスクリーンキャストを簡単に作成することができま"
-"す。特定の用途（アプリの UI や機能に関する説明、バグ報告など）で画面領域を録"
-"画するために Peek は作成されました。Peek の使い方はシンプルで、録画したい領域"
-"に Peek のウィンドウを移動させて「録画」を押すだけです。Peek はアニメーショ"
-"ン GIF を生成するのに最適化されていますが、WebM や MP4 で直接録画することもで"
-"きます。"
+"Peek "
+"は、指定した画面領域の短いスクリーンキャストを簡単に作成することができます。"
+"特定の用途 (ご自身が開発するアプリの UI 機能の紹介、バグ報告など) "
+"で画面領域を録画するために、Peek は開発されました。Peek "
+"の使い方はシンプルで、録画したい領域に Peek のウィンドウを移動させて\"録画"
+"\"を押すだけです。Peek はアニメーション GIF の生成に最適化されていますが、"
+"必要であれば WebM や MP4 で直接録画することもできます。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -361,16 +359,15 @@ msgstr "機能:"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:22
 msgid "Select a screen region to record"
-msgstr "録画する画面領域を選択します"
+msgstr "録画する画面領域の選択"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:23
 msgid "Save recorded video as an optimized animated GIF"
-msgstr "録画されたビデオを最適化されたアニメーション GIF として保存します"
+msgstr "録画されたビデオを最適化されたアニメーション GIF として保存"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "WebM や MP4 形式に直接録画します"
+msgstr "WebM 形式での録画"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -378,7 +375,7 @@ msgstr "タスクに最適化されたシンプルなユーザーインターフ
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:26
 msgid "Automatically downscale recorded videos"
-msgstr "録画されたビデオを自動的にダウンスケールします"
+msgstr "録画されたビデオを自動的にダウンスケール"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:27
 msgid "Support for HiDPI screens"
@@ -386,19 +383,17 @@ msgstr "HiDPI スクリーンをサポート"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:28
 msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
-msgstr "XWayland を使用して GNOME Shell Wayland セッション内で動作します"
+msgstr "GNOME Shell Wayland セッション内で動作 (XWayland を使用)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
-"Peek は拡張された機能を持った汎用目的のスクリーンキャストアプリではなく、むし"
-"ろ GIF アニメーションや無音の WebM/MP4 ビデオを作成するという目的で画面領域の"
-"小さくて無音のスクリーンキャストを作成するという単一のタスクに焦点を当ててい"
-"ます。"
+"Peek は拡張機能を持った汎用のスクリーンキャストアプリではなく、むしろ、GIF "
+"アニメーションや無音の WebM ビデオを作成することを念頭に短い無音のスクリーン"
+"キャストを作成するという、単一のタスクに焦点を当てています。"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -410,7 +405,7 @@ msgstr "Peek の設定ダイアログ"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:48
 msgid "Peek is recording itself"
-msgstr "Peek が Peek 自身を録画しています"
+msgstr "Peek で Peek を録画"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:78
 msgid "Philipp Wolfer"
@@ -420,8 +415,7 @@ msgstr "Philipp Wolfer"
 msgid ""
 "Time in milliseconds for which the recording area size is displayed after "
 "resizing stops."
-msgstr ""
-"サイズ調整が終わったあと録画領域のサイズが表示されるまでの時間（ミリ秒）。"
+msgstr "サイズ調整が終わった後、録画領域のサイズが表示されるまでの時間 (ミリ秒)。"
 
 #: data/com.uploadedlobster.peek.gschema.xml:18
 msgid "\"Peek %Y-%m-%d %H-%M\""
@@ -461,7 +455,7 @@ msgstr "マウスカーソルをキャプチャーするかどうか"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "デフォルトの PULSE 入力デバイスからの音を録音するかどうか"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
