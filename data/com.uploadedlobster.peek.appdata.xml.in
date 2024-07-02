@@ -49,13 +49,6 @@
     </screenshot>
   </screenshots>
 
-  <categories>
-    <category>Graphics</category>
-    <category>Utility</category>
-    <category>GNOME</category>
-    <category>GTK</category>
-  </categories>
-
   <kudos>
     <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
@@ -63,13 +56,15 @@
     <kudo>Notifications</kudo>
   </kudos>
 
-  <url type="homepage">http://peek.uploadedlobster.com</url>
+  <url type="homepage">https://github.com/phw/peek</url>
   <!-- <url type="help">http://peek.uploadedlobster.com</url> -->
   <url type="faq">https://github.com/phw/peek#frequently-asked-questions</url>
   <url type="bugtracker">https://github.com/phw/peek/issues</url>
+  <url type="vcs-browser">https://github.com/phw/peek</url>
   <!-- <url type="translate">https://hosted.weblate.org/projects/peek/translations/</url> -->
 
   <translation type="gettext">peek</translation>
+  <launchable type="desktop-id">com.uploadedlobster.peek.desktop</launchable>
 
   <provides>
     <binary>peek</binary>
