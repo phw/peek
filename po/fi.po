@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: peek\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2021-07-02 01:36+0000\n"
-"Last-Translator: Oi Suomi On <oisuomion@protonmail.com>\n"
+"PO-Revision-Date: 2024-10-21 05:35+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/peek/"
 "translations/fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 5.8-rc\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -302,7 +302,7 @@ msgstr "Nauhoita hiiren osoitin"
 
 #: ui/preferences.ui:457
 msgid "Capture sound from default PULSE device"
-msgstr ""
+msgstr "Kaappaa ääni oletusarvoisesta PULSE-laitteesta"
 
 #: ui/preferences.ui:488
 msgid "Peek preferences"
@@ -337,7 +337,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Yksinkertainen näyttönauhoitin helppokäyttöisellä käyttöliittymällä"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -353,7 +352,7 @@ msgstr ""
 "bugiraportteihin. Peekin avulla asetat yksinkertaisesti vain ikkunan sen "
 "alueen päälle jonka haluat kaapattavaksi tallenteeksi, painaen sen jälkeen "
 "\"Tallenna\". Peek on optimoitu tuottamaan liikkuvia GIF-kuvatiedostoja, "
-"mutta voit myös tallentaa suoraan WebM- tai MP4-muotoihin mikäli niin haluat."
+"mutta voit myös tallentaa suoraan WebM-muotoon, jos niin haluat."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -368,9 +367,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Tallenna nauhoitettu video optimoituna GIF-animaationa"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Nauhoita suoraan WebM- tai MP4-muotoihin"
+msgstr "Nauhoita suoraan WebM-muotoon"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -389,16 +387,15 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Toimii Gnome Shell Wayland -istunnossa (käyttäen XWaylandia)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
 "Peek ei ole yleiskäyttöön tarkoitettu ruudunkaappausohjelma joka sisältää "
-"lisäominaisuuksia, vaan enemmänkin se keskittyy yhteen ripeään tehtävään "
-"luodakseen pieniä, äänettömiä liikkuvan kuvan kaappauksia GIF-muodossa "
-"tietystä osasta näyttöruutuasi, taikka mykkiä WebM- tai MP4-videoita."
+"lisäominaisuuksia, vaan se keskittyy yhteen ripeään tehtävään luodakseen "
+"pieniä, äänettömiä liikkuvan kuvan näyttötallenteita GIF-muodossa tai mykkiä "
+"WebM-videoita."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
@@ -462,7 +459,7 @@ msgstr "Nauhoitetaanko hiiren osoitin"
 
 #: data/com.uploadedlobster.peek.gschema.xml:73
 msgid "Whether to capture sound from default PULSE input device"
-msgstr ""
+msgstr "Kaapataanko ääni oletusarvoisesta PULSE-sisääntulolaitteesta"
 
 #: data/com.uploadedlobster.peek.gschema.xml:77
 msgid "Size and position of the last open main window"
