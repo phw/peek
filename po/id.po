@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: peek\n"
 "Report-Msgid-Bugs-To: ph.wolfer@gmail.com\n"
 "POT-Creation-Date: 2024-02-03 19:49+0100\n"
-"PO-Revision-Date: 2024-03-14 04:01+0000\n"
-"Last-Translator: AlihBahasa <AlihBahasa@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-01-16 00:00+0000\n"
+"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/peek/"
 "translations/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: src/application.vala:63
 msgid "Show the version of the program and exit"
@@ -337,7 +337,6 @@ msgid "Simple screen recorder with an easy to use interface"
 msgstr "Perekam layar sederhana dengan antarmuka yang mudah digunakan"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:11
-#, fuzzy
 msgid ""
 "Peek makes it easy to create short screencasts of a screen area. It was "
 "built for the specific use case of recording screen areas, e.g. for easily "
@@ -346,13 +345,13 @@ msgid ""
 "and press \"Record\". Peek is optimized for generating animated GIFs, but "
 "you can also directly record to WebM if you prefer."
 msgstr ""
-"Peek membuatnya mudah untuk membuat layar pendek dari area layar. Itu "
-"tadidibuat untuk kasus penggunaan khusus area layar perekaman, mis. untuk "
-"mudahMenampilkan fitur UI aplikasi Anda sendiri atau untuk menampilkan bug "
-"dalam laporan bug.Dengan Peek kamu cukup letakkan jendela Peek di atas area "
-"yang ingin kamu rekamdan tekan \"Rekam\". Peek dioptimalkan untuk "
-"menghasilkan animasi GIF, tetapiAnda juga dapat langsung merekam ke WebM "
-"atau MP4 jika Anda mau."
+"Peek memudahkan untuk membuat screencast singkat dari area layar. Aplikasi "
+"ini dibuat untuk kasus penggunaan khusus merekam area layar, misalnya untuk "
+"menampilkan fitur UI aplikasi Anda dengan mudah atau untuk menunjukkan bug "
+"dalam laporan bug. Dengan Peek, Anda cukup menempatkan jendela Peek di atas "
+"area yang ingin Anda rekam dan tekan \"Rekam\". Peek dioptimalkan untuk "
+"menghasilkan GIF animasi, tetapi Anda juga dapat langsung merekam ke WebM "
+"jika Anda mau."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:20
 msgid "Features:"
@@ -367,9 +366,8 @@ msgid "Save recorded video as an optimized animated GIF"
 msgstr "Simpan video terekam sebagai sebuah animasi GIF yang teroptimasi"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:24
-#, fuzzy
 msgid "Record directly to WebM format"
-msgstr "Rekam langsung menjadi format WebM or MP4"
+msgstr "Rekam langsung ke format WebM"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:25
 msgid "Simple user interface optimized for the task"
@@ -388,15 +386,14 @@ msgid "Works inside a GNOME Shell Wayland session (using XWayland)"
 msgstr "Bekerja di dalam sesi GNOME Shell Wayland (menggunakan XWayland)"
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:30
-#, fuzzy
 msgid ""
 "Peek is not a general purpose screencast app with extended features but "
 "rather focuses on the single task of creating small, silent screencasts of "
 "an area of the screen for creating GIF animations or silent WebM videos."
 msgstr ""
-"Peek bukan aplikasi screencast yang umum dengan fitur yang diperluas "
-"tetapiAgak fokus pada satu tugas untuk menciptakan screencasts kecil dan "
-"sunyiarea layar untuk membuat animasi GIF atau WebM atau MP4video."
+"Peek bukanlah aplikasi screencast tujuan umum dengan fitur yang diperluas, "
+"melainkan berfokus pada tugas tunggal untuk membuat screencast kecil dan "
+"senyap pada area layar untuk membuat animasi GIF atau video WebM senyap."
 
 #: data/com.uploadedlobster.peek.appdata.xml.in:40
 msgid "The main window to select the recording area"
