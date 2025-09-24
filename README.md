@@ -6,7 +6,7 @@
 
 > [!IMPORTANT]
 > The Peek project has been declared deprecated, please read [the announcement](https://github.com/phw/peek/issues/1191).
-> No new features will be developed and issue reporting will be closed soon.
+> No new features will be developed and issue reporting has been closed.
 
 ![Peek recording itself](https://raw.githubusercontent.com/phw/peek/master/data/screenshots/peek-recording-itself.gif)
 
